@@ -1,0 +1,86 @@
+{
+ "_issue": "LD-272",
+ "_residue": "the one file_token below is PERMANENT — no open-API verb purges drive media. It is ledgered, not swept",
+ "_verdict": "OK",
+ "_what": "the Base relational round trip, live: a two-table link built and populated, read with resolution off and on, a TARGET RECORD deleted (one-way dangles, two-way self-heals), one attachment hash-verified, then the TARGET TABLE deleted and the free column-level detector read off the schema the read already had",
+ "observations": {
+  "byte_identity": {
+   "authored_link_columns": [
+    "ld272-one-way",
+    "ld272-two-way"
+   ],
+   "differing_columns": [
+    "Table-ld272-two-way",
+    "ld272-one-way",
+    "ld272-two-way"
+   ],
+   "link_columns": [
+    "Table-ld272-two-way",
+    "ld272-one-way",
+    "ld272-two-way"
+   ],
+   "off_bytes": 517,
+   "off_reads_identical": true,
+   "resolution_disclosed_calls": 2,
+   "resolution_tables": [
+    "tblkco15W2dLasTx",
+    "tblaPImmOls1N1dS"
+   ]
+  },
+  "media": {
+   "bytes": 55,
+   "cell_tokens": [
+    "Exampleb46e7dfd8a1407ffa2da"
+   ],
+   "downloaded_sha256": "4cfddc7aec75df6a6bb7842d72feac70d58c23c1d938529e2c99413a28a2d343",
+   "ledgered": true,
+   "parent_node_is_the_disposable": true,
+   "parent_type": "bitable_file",
+   "uploaded_sha256": "4cfddc7aec75df6a6bb7842d72feac70d58c23c1d938529e2c99413a28a2d343",
+   "verified": "4cfddc7aec75df6a6bb7842d72feac70d58c23c1d938529e2c99413a28a2d343"
+  },
+  "record_delete": {
+   "dangling_marker": "[dangling Base link: recahyDDsJLC6o — the linked record no longer exists in the target table]",
+   "dead_record_id": "recahyDDsJLC6o",
+   "one_way_ids": [
+    "recqnhVBOLu4RE",
+    "recahyDDsJLC6o"
+   ],
+   "one_way_rendered": "[dangling Base link: recahyDDsJLC6o — the linked record no longer exists in the target table], ld272-beta",
+   "one_way_state": "dangling",
+   "read_completed": true,
+   "surviving_record_id": "recqnhVBOLu4RE",
+   "surviving_state": "resolved",
+   "two_way_ids": [
+    "recqnhVBOLu4RE"
+   ],
+   "two_way_rendered": "ld272-beta"
+  },
+  "table_delete": {
+   "dangling_columns": [
+    "ld272-one-way"
+   ],
+   "deleted_table_id": "tblkco15W2dLasTx",
+   "detector_extra_calls": 0,
+   "link_columns_surviving": [
+    "ld272-one-way"
+   ],
+   "one_way_survived": true,
+   "records_search_still_answers": 11,
+   "states": {
+    "ld272-one-way": "target-table-missing"
+   },
+   "table_is_gone": true,
+   "two_way_survived": false
+  },
+  "targets": {
+   "app_token": "Example0b9f7d9cc18ee4797873",
+   "parent_nodes": [
+    "Example0b9f7d9cc18ee4797873"
+   ],
+   "write_targets": [
+    "Example0b9f7d9cc18ee4797873"
+   ]
+  }
+ }
+}

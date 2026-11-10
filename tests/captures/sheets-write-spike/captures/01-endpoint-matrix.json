@@ -1,0 +1,619 @@
+{
+  "probe": "01_endpoint_matrix",
+  "sheet_id": "154e99",
+  "steps": [
+    {
+      "label": "values_put",
+      "method": "PUT",
+      "code": 0,
+      "revision": 1,
+      "msg": "success"
+    },
+    {
+      "label": "values_batch_update",
+      "method": "POST",
+      "code": 0,
+      "revision": 2,
+      "msg": "success"
+    },
+    {
+      "label": "values_append",
+      "method": "POST",
+      "code": 0,
+      "revision": 3,
+      "msg": "success"
+    },
+    {
+      "label": "values_prepend",
+      "method": "POST",
+      "code": 0,
+      "revision": 4,
+      "msg": "success"
+    },
+    {
+      "label": "style_put",
+      "method": "PUT",
+      "code": 90202,
+      "revision": null,
+      "msg": "wrong range=154e99!B2"
+    },
+    {
+      "label": "styles_batch_update",
+      "method": "PUT",
+      "code": 0,
+      "revision": 5,
+      "msg": "success"
+    },
+    {
+      "label": "merge_cells",
+      "method": "POST",
+      "code": 0,
+      "revision": null,
+      "msg": "success"
+    },
+    {
+      "label": "unmerge_cells",
+      "method": "POST",
+      "code": 0,
+      "revision": null,
+      "msg": "success"
+    },
+    {
+      "label": "insert_dimension_ROWS",
+      "method": "POST",
+      "code": 0,
+      "revision": null,
+      "msg": "success"
+    },
+    {
+      "label": "insert_dimension_COLUMNS",
+      "method": "POST",
+      "code": 0,
+      "revision": null,
+      "msg": "success"
+    },
+    {
+      "label": "add_dimension_ROWS",
+      "method": "POST",
+      "code": 0,
+      "revision": null,
+      "msg": "success"
+    },
+    {
+      "label": "delete_dimension_ROWS",
+      "method": "DELETE",
+      "code": 0,
+      "revision": null,
+      "msg": "success"
+    },
+    {
+      "label": "delete_dimension_COLUMNS",
+      "method": "DELETE",
+      "code": 0,
+      "revision": null,
+      "msg": "success"
+    },
+    {
+      "label": "sheets_batch_update_add",
+      "method": "POST",
+      "code": 0,
+      "revision": null,
+      "msg": "success"
+    },
+    {
+      "label": "sheets_batch_update_copy",
+      "method": "POST",
+      "code": 0,
+      "revision": null,
+      "msg": "success"
+    },
+    {
+      "label": "sheets_batch_update_delete",
+      "method": "POST",
+      "code": 0,
+      "revision": null,
+      "msg": "success"
+    }
+  ],
+  "total_calls": 19,
+  "captures": {
+    "values_put": {
+      "label": "values_put",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Example0e7c15c322aeef5d5867/values",
+      "request_body": {
+        "valueRange": {
+          "range": "154e99!A1:C3",
+          "values": [
+            [
+              "h1",
+              "h2",
+              "h3"
+            ],
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              4,
+              5,
+              6
+            ]
+          ]
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "response": {
+        "code": 0,
+        "data": {
+          "revision": 1,
+          "spreadsheetToken": "Example0e7c15c322aeef5d5867",
+          "updatedCells": 9,
+          "updatedColumns": 3,
+          "updatedRange": "154e99!A1:C3",
+          "updatedRows": 3
+        },
+        "msg": "success"
+      }
+    },
+    "values_batch_update": {
+      "label": "values_batch_update",
+      "method": "POST",
+      "path": "/open-apis/sheets/v2/spreadsheets/Example0e7c15c322aeef5d5867/values_batch_update",
+      "request_body": {
+        "valueRanges": [
+          {
+            "range": "154e99!E1:F1",
+            "values": [
+              [
+                "batchA",
+                "batchB"
+              ]
+            ]
+          },
+          {
+            "range": "154e99!E2:F2",
+            "values": [
+              [
+                "batchC",
+                "batchD"
+              ]
+            ]
+          }
+        ]
+      },
+      "http_status": 200,
+      "code": 0,
+      "response": {
+        "code": 0,
+        "data": {
+          "responses": [
+            {
+              "spreadsheetToken": "Example0e7c15c322aeef5d5867",
+              "updatedCells": 2,
+              "updatedColumns": 2,
+              "updatedRange": "154e99!E1:F1",
+              "updatedRows": 1
+            },
+            {
+              "spreadsheetToken": "Example0e7c15c322aeef5d5867",
+              "updatedCells": 2,
+              "updatedColumns": 2,
+              "updatedRange": "154e99!E2:F2",
+              "updatedRows": 1
+            }
+          ],
+          "revision": 2,
+          "spreadsheetToken": "Example0e7c15c322aeef5d5867"
+        },
+        "msg": "success"
+      }
+    },
+    "values_append": {
+      "label": "values_append",
+      "method": "POST",
+      "path": "/open-apis/sheets/v2/spreadsheets/Example0e7c15c322aeef5d5867/values_append",
+      "request_body": {
+        "valueRange": {
+          "range": "154e99!A1:C1",
+          "values": [
+            [
+              "appended",
+              "row",
+              "here"
+            ]
+          ]
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "response": {
+        "code": 0,
+        "data": {
+          "revision": 3,
+          "spreadsheetToken": "Example0e7c15c322aeef5d5867",
+          "tableRange": "154e99!A4:C4",
+          "updates": {
+            "revision": 3,
+            "spreadsheetToken": "Example0e7c15c322aeef5d5867",
+            "updatedCells": 3,
+            "updatedColumns": 3,
+            "updatedRange": "154e99!A4:C4",
+            "updatedRows": 1
+          }
+        },
+        "msg": "success"
+      }
+    },
+    "values_prepend": {
+      "label": "values_prepend",
+      "method": "POST",
+      "path": "/open-apis/sheets/v2/spreadsheets/Example0e7c15c322aeef5d5867/values_prepend",
+      "request_body": {
+        "valueRange": {
+          "range": "154e99!A1:C1",
+          "values": [
+            [
+              "prepended",
+              "row",
+              "here"
+            ]
+          ]
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "response": {
+        "code": 0,
+        "data": {
+          "revision": 4,
+          "spreadsheetToken": "Example0e7c15c322aeef5d5867",
+          "tableRange": "154e99!A1:C1",
+          "updates": {
+            "revision": 4,
+            "spreadsheetToken": "Example0e7c15c322aeef5d5867",
+            "updatedCells": 3,
+            "updatedColumns": 3,
+            "updatedRange": "154e99!A1:C1",
+            "updatedRows": 1
+          }
+        },
+        "msg": "success"
+      }
+    },
+    "style_put": {
+      "label": "style_put",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Example0e7c15c322aeef5d5867/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "154e99!B2",
+          "style": {
+            "font": {
+              "bold": true
+            },
+            "backColor": "#FFFF00"
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 90202,
+      "response": {
+        "code": 90202,
+        "data": {},
+        "msg": "wrong range=154e99!B2"
+      }
+    },
+    "styles_batch_update": {
+      "label": "styles_batch_update",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Example0e7c15c322aeef5d5867/styles_batch_update",
+      "request_body": {
+        "data": [
+          {
+            "ranges": [
+              "154e99!A1:C1"
+            ],
+            "style": {
+              "font": {
+                "bold": true
+              },
+              "backColor": "#D9EAD3"
+            }
+          },
+          {
+            "ranges": [
+              "154e99!A2:C2"
+            ],
+            "style": {
+              "font": {
+                "italic": true
+              },
+              "foreColor": "#FF0000"
+            }
+          }
+        ]
+      },
+      "http_status": 200,
+      "code": 0,
+      "response": {
+        "code": 0,
+        "data": {
+          "responses": [
+            {
+              "spreadsheetToken": "Example0e7c15c322aeef5d5867",
+              "updatedCells": 3,
+              "updatedColumns": 3,
+              "updatedRange": "154e99!A1:C1",
+              "updatedRows": 1
+            },
+            {
+              "spreadsheetToken": "Example0e7c15c322aeef5d5867",
+              "updatedCells": 3,
+              "updatedColumns": 3,
+              "updatedRange": "154e99!A2:C2",
+              "updatedRows": 1
+            }
+          ],
+          "revision": 5,
+          "spreadsheetToken": "Example0e7c15c322aeef5d5867",
+          "totalUpdatedCells": 6,
+          "totalUpdatedColumns": 6,
+          "totalUpdatedRows": 2
+        },
+        "msg": "success"
+      }
+    },
+    "merge_cells": {
+      "label": "merge_cells",
+      "method": "POST",
+      "path": "/open-apis/sheets/v2/spreadsheets/Example0e7c15c322aeef5d5867/merge_cells",
+      "request_body": {
+        "range": "154e99!A5:C5",
+        "mergeType": "MERGE_ALL"
+      },
+      "http_status": 200,
+      "code": 0,
+      "response": {
+        "code": 0,
+        "data": {
+          "spreadsheetToken": "Example0e7c15c322aeef5d5867"
+        },
+        "msg": "success"
+      }
+    },
+    "unmerge_cells": {
+      "label": "unmerge_cells",
+      "method": "POST",
+      "path": "/open-apis/sheets/v2/spreadsheets/Example0e7c15c322aeef5d5867/unmerge_cells",
+      "request_body": {
+        "range": "154e99!A5:C5"
+      },
+      "http_status": 200,
+      "code": 0,
+      "response": {
+        "code": 0,
+        "data": {
+          "spreadsheetToken": "Example0e7c15c322aeef5d5867"
+        },
+        "msg": "success"
+      }
+    },
+    "insert_dimension_ROWS": {
+      "label": "insert_dimension_ROWS",
+      "method": "POST",
+      "path": "/open-apis/sheets/v2/spreadsheets/Example0e7c15c322aeef5d5867/insert_dimension_range",
+      "request_body": {
+        "dimension": {
+          "sheetId": "154e99",
+          "majorDimension": "ROWS",
+          "startIndex": 10,
+          "endIndex": 12
+        },
+        "inheritStyle": "BEFORE"
+      },
+      "http_status": 200,
+      "code": 0,
+      "response": {
+        "code": 0,
+        "data": {},
+        "msg": "success"
+      }
+    },
+    "insert_dimension_COLUMNS": {
+      "label": "insert_dimension_COLUMNS",
+      "method": "POST",
+      "path": "/open-apis/sheets/v2/spreadsheets/Example0e7c15c322aeef5d5867/insert_dimension_range",
+      "request_body": {
+        "dimension": {
+          "sheetId": "154e99",
+          "majorDimension": "COLUMNS",
+          "startIndex": 8,
+          "endIndex": 9
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "response": {
+        "code": 0,
+        "data": {},
+        "msg": "success"
+      }
+    },
+    "add_dimension_ROWS": {
+      "label": "add_dimension_ROWS",
+      "method": "POST",
+      "path": "/open-apis/sheets/v2/spreadsheets/Example0e7c15c322aeef5d5867/dimension_range",
+      "request_body": {
+        "dimension": {
+          "sheetId": "154e99",
+          "majorDimension": "ROWS",
+          "length": 3
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "response": {
+        "code": 0,
+        "data": {
+          "addCount": 3,
+          "majorDimension": "ROWS"
+        },
+        "msg": "success"
+      }
+    },
+    "delete_dimension_ROWS": {
+      "label": "delete_dimension_ROWS",
+      "method": "DELETE",
+      "path": "/open-apis/sheets/v2/spreadsheets/Example0e7c15c322aeef5d5867/dimension_range",
+      "request_body": {
+        "dimension": {
+          "sheetId": "154e99",
+          "majorDimension": "ROWS",
+          "startIndex": 15,
+          "endIndex": 16
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "response": {
+        "code": 0,
+        "data": {
+          "delCount": 2,
+          "majorDimension": "ROWS"
+        },
+        "msg": "success"
+      }
+    },
+    "delete_dimension_COLUMNS": {
+      "label": "delete_dimension_COLUMNS",
+      "method": "DELETE",
+      "path": "/open-apis/sheets/v2/spreadsheets/Example0e7c15c322aeef5d5867/dimension_range",
+      "request_body": {
+        "dimension": {
+          "sheetId": "154e99",
+          "majorDimension": "COLUMNS",
+          "startIndex": 9,
+          "endIndex": 10
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "response": {
+        "code": 0,
+        "data": {
+          "delCount": 2,
+          "majorDimension": "COLUMNS"
+        },
+        "msg": "success"
+      }
+    },
+    "sheets_batch_update_add": {
+      "label": "sheets_batch_update_add",
+      "method": "POST",
+      "path": "/open-apis/sheets/v2/spreadsheets/Example0e7c15c322aeef5d5867/sheets_batch_update",
+      "request_body": {
+        "requests": [
+          {
+            "addSheet": {
+              "properties": {
+                "title": "AddedTab",
+                "index": 1
+              }
+            }
+          }
+        ]
+      },
+      "http_status": 200,
+      "code": 0,
+      "response": {
+        "code": 0,
+        "data": {
+          "replies": [
+            {
+              "addSheet": {
+                "properties": {
+                  "index": 1,
+                  "sheetId": "2SMeha",
+                  "title": "AddedTab"
+                }
+              }
+            }
+          ]
+        },
+        "msg": "success"
+      },
+      "added_sheet_id": "2SMeha"
+    },
+    "sheets_batch_update_copy": {
+      "label": "sheets_batch_update_copy",
+      "method": "POST",
+      "path": "/open-apis/sheets/v2/spreadsheets/Example0e7c15c322aeef5d5867/sheets_batch_update",
+      "request_body": {
+        "requests": [
+          {
+            "copySheet": {
+              "source": {
+                "sheetId": "154e99"
+              },
+              "destination": {
+                "title": "CopiedTab"
+              }
+            }
+          }
+        ]
+      },
+      "http_status": 200,
+      "code": 0,
+      "response": {
+        "code": 0,
+        "data": {
+          "replies": [
+            {
+              "copySheet": {
+                "properties": {
+                  "index": 1,
+                  "sheetId": "2SVZvO",
+                  "title": "CopiedTab"
+                }
+              }
+            }
+          ]
+        },
+        "msg": "success"
+      }
+    },
+    "sheets_batch_update_delete": {
+      "label": "sheets_batch_update_delete",
+      "method": "POST",
+      "path": "/open-apis/sheets/v2/spreadsheets/Example0e7c15c322aeef5d5867/sheets_batch_update",
+      "request_body": {
+        "requests": [
+          {
+            "deleteSheet": {
+              "sheetId": "2SMeha"
+            }
+          }
+        ]
+      },
+      "http_status": 200,
+      "code": 0,
+      "response": {
+        "code": 0,
+        "data": {
+          "replies": [
+            {
+              "deleteSheet": {
+                "result": true,
+                "sheetId": "2SMeha"
+              }
+            }
+          ]
+        },
+        "msg": "success"
+      }
+    }
+  }
+}

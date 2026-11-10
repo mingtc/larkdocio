@@ -1,0 +1,84 @@
+[
+  {
+    "block_id": "root",
+    "parent_id": "doc",
+    "block_type": 1,
+    "page": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Doc Title"
+          }
+        }
+      ]
+    },
+    "children": [
+      "lh1"
+    ]
+  },
+  {
+    "block_id": "lh1",
+    "parent_id": "root",
+    "block_type": 3,
+    "heading1": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Section"
+          }
+        }
+      ]
+    },
+    "children": [
+      "lhi1",
+      "lhi2"
+    ]
+  },
+  {
+    "block_id": "lhi1",
+    "parent_id": "lh1",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "First"
+          }
+        }
+      ]
+    },
+    "children": [
+      "lhi1a"
+    ]
+  },
+  {
+    "block_id": "lhi1a",
+    "parent_id": "lhi1",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "First nested"
+          }
+        }
+      ]
+    },
+    "children": []
+  },
+  {
+    "block_id": "lhi2",
+    "parent_id": "lh1",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Second"
+          }
+        }
+      ]
+    },
+    "children": []
+  }
+]

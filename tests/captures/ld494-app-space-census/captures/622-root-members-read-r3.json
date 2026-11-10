@@ -1,0 +1,20 @@
+{
+  "_probe": "LD-494 AC6 addendum — root-folder member READ, R3 — type=file (the nearest LISTED value; a folder is not a file, so a code 0 here would be an answer about the wrong object and is read as such)",
+  "_method": "GET",
+  "_route_as_sent": "GET /open-apis/drive/v1/permissions/nodlgExampleee5c77c8ba65b63/members?type=file",
+  "_target_token": "nodlgExampleee5c77c8ba65b63",
+  "_target_type": "folder",
+  "_http_status": 400,
+  "_lark_code": 1063001,
+  "_lark_msg": "Invalid parameter",
+  "_body_verbatim": {
+    "code": 1063001,
+    "msg": "Invalid parameter",
+    "error": {
+      "log_id": "20260817092555E0A056BE5D3689700620"
+    }
+  },
+  "_member_count": 0,
+  "_verdict": "ORACLE UNAVAILABLE — refused",
+  "_d59_scope": "One tenant, one app, 2026-08-17, tenant_access_token (the WRITE pair), this route, this spelling."
+}

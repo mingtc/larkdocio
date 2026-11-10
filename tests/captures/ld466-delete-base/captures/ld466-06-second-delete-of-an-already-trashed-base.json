@@ -1,0 +1,17 @@
+{
+  "_probe": "ld466-06-second-delete-of-an-already-trashed-base",
+  "_endpoint": "DELETE /open-apis/drive/v1/files/:file_token?type=bitable",
+  "_method": "DELETE",
+  "_http_status": 404,
+  "_lark_code": 1061007,
+  "_lark_msg": "file has been delete.",
+  "_verdict": "DENIED_OR_ERROR",
+  "_note": "question (d): a teardown needs ONE answer to 'is it gone'. If this is the sheets surface's FILE_ALREADY_DELETED_CODE (1061007) then the shipped spreadsheet_is_gone oracle already spans it and no second code is needed",
+  "response": {
+    "code": 1061007,
+    "msg": "file has been delete.",
+    "error": {
+      "log_id": "2026081500420521598A617A2F6BE64E80"
+    }
+  }
+}

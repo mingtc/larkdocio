@@ -1,0 +1,83 @@
+[
+  {
+    "block_id": "root",
+    "parent_id": "doc",
+    "block_type": 1,
+    "page": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Doc Title"
+          }
+        }
+      ]
+    },
+    "children": [
+      "d7",
+      "d8",
+      "d9"
+    ]
+  },
+  {
+    "block_id": "d7",
+    "parent_id": "root",
+    "block_type": 9,
+    "heading7": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "C# vs #hashtag"
+          }
+        }
+      ]
+    },
+    "children": []
+  },
+  {
+    "block_id": "d8",
+    "parent_id": "root",
+    "block_type": 10,
+    "heading8": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Deep section"
+          }
+        }
+      ]
+    },
+    "children": [
+      "d8c"
+    ]
+  },
+  {
+    "block_id": "d8c",
+    "parent_id": "d8",
+    "block_type": 2,
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "body under a level-8 heading"
+          }
+        }
+      ]
+    },
+    "children": []
+  },
+  {
+    "block_id": "d9",
+    "parent_id": "root",
+    "block_type": 11,
+    "heading9": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "# not a marker"
+          }
+        }
+      ]
+    },
+    "children": []
+  }
+]

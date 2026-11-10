@@ -1,0 +1,32 @@
+{
+  "_probe": "p1",
+  "_endpoint": "(local)",
+  "_method": "N/A",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": null,
+  "_verdict": "OK",
+  "_note": "P1 disposable ledger",
+  "response": {
+    "code": 0,
+    "data": {
+      "created": [
+        {
+          "kind": "docx",
+          "id": "Example4a927dea726487bbb77b"
+        }
+      ],
+      "deleted": [
+        {
+          "kind": "docx",
+          "id": "Example4a927dea726487bbb77b"
+        }
+      ],
+      "notes": [
+        "delete auto-provisioned base Examplec8af798413375ff9bc09: code=1061003 msg=not found.",
+        "delete docx Example4a927dea726487bbb77b: code=0"
+      ],
+      "orphan_count": 0
+    }
+  }
+}

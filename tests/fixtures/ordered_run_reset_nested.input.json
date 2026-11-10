@@ -1,0 +1,115 @@
+[
+  {
+    "block_id": "root",
+    "parent_id": "doc",
+    "block_type": 1,
+    "page": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Doc Title"
+          }
+        }
+      ]
+    },
+    "children": [
+      "orn"
+    ]
+  },
+  {
+    "block_id": "orn",
+    "parent_id": "root",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Parent"
+          }
+        }
+      ]
+    },
+    "children": [
+      "oa",
+      "ob",
+      "sep",
+      "oc",
+      "od"
+    ]
+  },
+  {
+    "block_id": "oa",
+    "parent_id": "orn",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "one"
+          }
+        }
+      ]
+    },
+    "children": []
+  },
+  {
+    "block_id": "ob",
+    "parent_id": "orn",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "two"
+          }
+        }
+      ]
+    },
+    "children": []
+  },
+  {
+    "block_id": "sep",
+    "parent_id": "orn",
+    "block_type": 2,
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "interruption"
+          }
+        }
+      ]
+    },
+    "children": []
+  },
+  {
+    "block_id": "oc",
+    "parent_id": "orn",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "reset one"
+          }
+        }
+      ]
+    },
+    "children": []
+  },
+  {
+    "block_id": "od",
+    "parent_id": "orn",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "reset two"
+          }
+        }
+      ]
+    },
+    "children": []
+  }
+]

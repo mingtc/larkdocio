@@ -1,0 +1,47 @@
+{
+  "issue": "LD-601",
+  "subject_document_id": "Examplebe2270e20bfe6e6fff4c",
+  "before": {
+    "r1": true,
+    "r2": true,
+    "r3": true,
+    "r4": true,
+    "r5": true
+  },
+  "after": {
+    "r1": true,
+    "r2": false,
+    "r3": false,
+    "r4": false,
+    "r5": false
+  },
+  "still_resolving_after_the_delete": [
+    "r1"
+  ],
+  "docx_close_out": {
+    "ledger_count": 1,
+    "orphans": [],
+    "clean": [
+      {
+        "document_id": "Examplebe2270e20bfe6e6fff4c",
+        "title": "larkdocio-LD-601-removal-routes 1788170767",
+        "delete_code": 0,
+        "recheck_code": 1770003
+      }
+    ],
+    "indeterminate": [],
+    "all_clean": true
+  },
+  "base_orphans_named": [],
+  "ledger": [
+    {
+      "document_id": "Examplebe2270e20bfe6e6fff4c",
+      "title": "larkdocio-LD-601-removal-routes 1788170767",
+      "created_at": "2026-08-31T10:06:08Z",
+      "deleted": true,
+      "delete_code": 0,
+      "deleted_at": "2026-08-31T10:06:13Z"
+    }
+  ],
+  "captured_at": "2026-08-31T18:06:16+0800"
+}

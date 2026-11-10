@@ -1,0 +1,70 @@
+{
+  "_probe": "01 — filter range at A1:B6; column B kept only 'keep'; the sheet's rows 3 and 5 held 'drop'",
+  "request": {
+    "method": "GET",
+    "path": "/open-apis/sheets/v3/spreadsheets/{spreadsheet_token}/sheets/{sheet_id}/filter"
+  },
+  "grid_written": [
+    [
+      "Name",
+      "Status"
+    ],
+    [
+      "r1",
+      "keep"
+    ],
+    [
+      "r2",
+      "drop"
+    ],
+    [
+      "r3",
+      "keep"
+    ],
+    [
+      "r4",
+      "drop"
+    ],
+    [
+      "r5",
+      "keep"
+    ]
+  ],
+  "filter_created_with": {
+    "range": "8e26a5!A1:B6",
+    "col": "B",
+    "condition": {
+      "filter_type": "multiValue",
+      "compare_type": "equal",
+      "expected": [
+        "keep"
+      ]
+    }
+  },
+  "response": {
+    "code": 0,
+    "data": {
+      "sheet_filter_info": {
+        "filter_infos": [
+          {
+            "col": "B",
+            "conditions": [
+              {
+                "expected": [
+                  "keep"
+                ],
+                "filter_type": "multiValue"
+              }
+            ]
+          }
+        ],
+        "filtered_out_rows": [
+          3,
+          5
+        ],
+        "range": "8e26a5!A1:B6"
+      }
+    },
+    "msg": "success"
+  }
+}

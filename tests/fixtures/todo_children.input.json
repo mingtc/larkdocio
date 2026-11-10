@@ -1,0 +1,54 @@
+[
+  {
+    "block_id": "root",
+    "parent_id": "doc",
+    "block_type": 1,
+    "page": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Doc Title"
+          }
+        }
+      ]
+    },
+    "children": [
+      "t1"
+    ]
+  },
+  {
+    "block_id": "t1",
+    "parent_id": "root",
+    "block_type": 17,
+    "todo": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Parent task"
+          }
+        }
+      ]
+    },
+    "children": [
+      "t1c1"
+    ]
+  },
+  {
+    "block_id": "t1c1",
+    "parent_id": "t1",
+    "block_type": 17,
+    "todo": {
+      "style": {
+        "done": true
+      },
+      "elements": [
+        {
+          "text_run": {
+            "content": "Nested done task"
+          }
+        }
+      ]
+    },
+    "children": []
+  }
+]

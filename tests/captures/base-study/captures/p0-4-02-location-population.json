@@ -1,0 +1,57 @@
+{
+  "_probe": "p4",
+  "_endpoint": ".../tables/tblwtQsB0m6CfKek/records",
+  "_method": "POST",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": null,
+  "_verdict": "OK",
+  "_note": "which Location literals the API accepts, and whether Lark geocodes them server-side",
+  "response": {
+    "code": 0,
+    "data": {
+      "lng_lat_string": {
+        "request_value": "103.8198,1.3521",
+        "code": 0,
+        "msg": "success",
+        "error": null,
+        "echo": {
+          "Loc": "103.8198,1.3521",
+          "多行文本": "loc-lng_lat_string"
+        }
+      },
+      "lat_lng_string": {
+        "request_value": "1.3521,103.8198",
+        "code": 1255002,
+        "msg": "Something went wrong. Please contact technical support at https://applink.feishu.cn/client/helpdesk/open?id=6626260912531570952",
+        "error": {
+          "log_id": "2026080303382464C5C728E6D7F6C1AA64"
+        },
+        "echo": null
+      },
+      "address_string": {
+        "request_value": "Marina Bay Sands, Singapore",
+        "code": 1254001,
+        "msg": "WrongRequestBody",
+        "error": {
+          "message": "Invalid request parameter: '[0].fields.Loc'. Correct format : the value of 'Location' must be a string like \"123.456,789.012\". Please check and modify accordingly.",
+          "log_id": "20260803033825AC37FBF7DA32DC919813"
+        },
+        "echo": null
+      },
+      "object_full_address": {
+        "request_value": {
+          "full_address": "Marina Bay Sands, Singapore",
+          "location": "103.8198,1.3521"
+        },
+        "code": 1254001,
+        "msg": "WrongRequestBody",
+        "error": {
+          "message": "Invalid request parameter: '[0].fields.Loc'. Correct format : the value of 'Location' must be a string like \"123.456,789.012\". Please check and modify accordingly.",
+          "log_id": "20260803033826B892CA0140DF7524E1A4"
+        },
+        "echo": null
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "S": {
+    "markdown": "# Release checklist\n\n<!-- lark:block:s01 -->\n## Scope\n\n<!-- lark:block:s02 -->\nThis release covers the reader hardening work only. The writer changes that were originally planned for this release have been moved out, because the review found that they were not ready and would have needed another round of testing that there was simply not enough time for in this particular window.\n\n<!-- lark:block:s03 -->\nThe rollout is staged: early consumers first, then the wider set.\n\n<!-- lark:block:s04 -->\n## Open items\n\n<!-- lark:block:s05 -->\n- Confirm the changelog entry with the maintainer\n- Re-run the download canary against the scratch document\n- Decide whether the deprecation note ships in this release or the next one\n\n<!-- lark:block:s06 -->\nNobody has yet confirmed which machine runs the checks during the rollout window, which is the one item that could actually block the release.\n\n<!-- lark:block:s07 -->\n## Status\n\n<!-- lark:block:s08 -->\n| Item | Owner | Status |\n| --- | --- | --- |\n| Reader hardening | Maintainer | Done |\n| Changelog | Maintainer | In review |\n| Canary rerun | Maintainer | Not started |\n",
+    "block_ids": [
+      "s01",
+      "s02",
+      "s03",
+      "s04",
+      "s05",
+      "s06",
+      "s07",
+      "s08"
+    ],
+    "opaque_block_ids": [
+      "s08"
+    ]
+  },
+  "C": {
+    "markdown": "# Release checklist\n\n<!-- lark:block:s01 -->\n## Scope\n\n<!-- lark:block:s02 -->\nThis release covers the reader hardening work only. The writer changes that were originally planned for this release have been moved out, because the review found that they were not ready and would have needed another round of testing that there was simply not enough time for in this particular window.\n\n<!-- lark:block:s03 -->\nThe rollout is staged: early consumers first, then the wider set.\n\n<!-- lark:block:s04 -->\n## Open items\n\n<!-- lark:block:s05 -->\n- Confirm the changelog entry with the maintainer\n- Re-run the download canary against the scratch document\n- Decide whether the deprecation note ships in this release or the next one\n\n<!-- lark:block:s06 -->\nNobody has yet confirmed which machine runs the checks during the rollout window, which is the one item that could actually block the release.\n\n<!-- lark:block:s07b -->\nThe numbers below are provisional. <!-- source: the local test log -->\n\n<!-- lark:block:s07 -->\n## Status\n\n<!-- lark:block:s08 -->\n| Item | Owner | Status |\n| --- | --- | --- |\n| Reader hardening | Maintainer | Done |\n| Changelog | Maintainer | In review |\n| Canary rerun | Maintainer | Not started |\n",
+    "block_ids": [
+      "s01",
+      "s02",
+      "s03",
+      "s04",
+      "s05",
+      "s06",
+      "s07b",
+      "s07",
+      "s08"
+    ],
+    "opaque_block_ids": [
+      "s08"
+    ]
+  },
+  "L": {
+    "markdown": "# Sample project review — first stage\n\n<!-- lark:block:l01 -->\n## Summary\n\n<!-- lark:block:l02 -->\nThe first stage was dominated by the reader work, which landed on time and is now consumed by two consumer projects.\n\n<!-- lark:block:l03 -->\nThe remaining risk sits almost entirely in the writer surface, where the review found that the plan-gated apply engine still refuses several shapes that consumers ask for regularly.\n\n<!-- lark:block:l04 -->\n## Reliability\n\n<!-- lark:block:l05 -->\nThere were three failed test runs, none of them in a release, and all three traced back to the same missing field-level permission scope.\n\n<!-- lark:block:l06 -->\nThe follow-up work has been to make the failure legible rather than to widen any scope, because a grant is a console action and not something the library may take upon itself.\n\n<!-- lark:block:l07 -->\n## Throughput\n\n<!-- lark:block:l08 -->\nCycle time improved once the board moves became scripted, which removed the class of drift where the folder and the log disagreed about an issue's state.\n\n<!-- lark:block:l09 -->\nThe remaining drag is review latency on the larger tranches, where a single reviewer has to hold a lot of context at once.\n\n<!-- lark:block:l10 -->\n## Consumers\n\n<!-- lark:block:l11 -->\nThe reference consumer vendors a built wheel and pins a local file requirement, so a release reaches it only when it chooses to refresh.\n\n<!-- lark:block:l12 -->\nThat has been a good trade: nothing ships to a consumer by surprise, and the refresh step is the one place where compatibility gets checked.\n\n<!-- lark:block:l13 -->\n## Resources\n\n<!-- lark:block:l14 -->\nDisk use was flat. The only new space went to the sandbox used for the live write gates, which is small and is torn down after each run.\n\n<!-- lark:block:l15 -->\nThe one avoidable cost was rework caused by a misdiagnosis that took roughly a week before the real cause was found.\n\n<!-- lark:block:l16 -->\n## Second stage\n\n<!-- lark:block:l17 -->\nThe second stage is planned around the round-trip editing work, which is the capability consumers ask for most often and cannot currently express.\n\n<!-- lark:block:l18 -->\nEverything else is sequenced behind it, on the view that a half-built round-trip would be worse than none at all.\n\n<!-- lark:block:l19 -->\n### Risks\n\n<!-- lark:block:l20 -->\n- Review latency on large tranches\n- A single reviewer holding all the context\n- The round-trip work slipping into the following stage\n\n<!-- lark:block:l21 -->\nThe risks above are ordered by how likely they are to actually bite, not by how uncomfortable they are to talk about.\n\n<!-- lark:block:l22 -->\n### Numbers\n\n<!-- lark:block:l23 -->\n| Metric | Stage 1 | Target |\n| --- | --- | --- |\n| Failed runs | 3 | 0 |\n| Median cycle time | 4.1 days | 3 days |\n| Consumer refreshes | 6 | 6 |\n\n<!-- lark:block:l24 -->\nThe cycle-time figure excludes the two issues that were parked for a maintainer decision, since holding time is not review time.\n\n<!-- lark:block:l25 -->\n### Decisions needed\n\n<!-- lark:block:l26 -->\nA decision is needed on whether the round-trip work ships behind a flag or as the default shape, and that decision gates the sequencing of everything after it.\n",
+    "block_ids": [
+      "l01",
+      "l02",
+      "l03",
+      "l04",
+      "l05",
+      "l06",
+      "l07",
+      "l08",
+      "l09",
+      "l10",
+      "l11",
+      "l12",
+      "l13",
+      "l14",
+      "l15",
+      "l16",
+      "l17",
+      "l18",
+      "l19",
+      "l20",
+      "l21",
+      "l22",
+      "l23",
+      "l24",
+      "l25",
+      "l26"
+    ],
+    "opaque_block_ids": [
+      "l23"
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "probe": "LD-436 probe 04 — openability + teardown",
+  "target_policy": "objects created by this harness only (D-12); the canary, the write scratch doc, the zoos, the Scratch Base and the consumer's production Base are never touched (D-08)",
+  "redaction": "Authorization never captured; uploaded file BYTES never captured (name/size/sha256 only); signed-link keys (url/tmp_url) scrubbed to a shape note before any body reaches disk",
+  "observed": {
+    "unauthenticated_permalink_GET": {
+      "bitable_image": {
+        "status": 302,
+        "location_path_head": "https://accounts-sg.larksuite.com/accounts/page/login"
+      },
+      "bitable_file": {
+        "status": 302,
+        "location_path_head": "https://accounts-sg.larksuite.com/accounts/page/login"
+      }
+    },
+    "base_delete": {
+      "app_token": "Example124cc4a0685df35f8846",
+      "deleted": true,
+      "last_code": 0
+    },
+    "close_out": [],
+    "media_residue_ledger": [
+      {
+        "kind": "media",
+        "file_token": "Example406b7cbfc415633680f8",
+        "parent_type": "bitable_image",
+        "app_token": "Example124cc4a0685df35f8846",
+        "created_at": "2026-08-12T14:43:40.449264+00:00",
+        "deleted": false
+      },
+      {
+        "kind": "media",
+        "file_token": "Exampleff109b60c3cf18ac9bca",
+        "parent_type": "bitable_file",
+        "app_token": "Example124cc4a0685df35f8846",
+        "created_at": "2026-08-12T14:43:40.809126+00:00",
+        "deleted": false
+      }
+    ],
+    "drive_file_arm6": {
+      "token": "Examplec5f4ccd9f9ed94b9356f",
+      "deleted": "code 0 at probe 03 (a drive file CAN be deleted)"
+    }
+  },
+  "steps_index": []
+}

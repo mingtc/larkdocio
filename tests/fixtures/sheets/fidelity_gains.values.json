@@ -1,0 +1,16 @@
+{
+  "sheet_id": "gains",
+  "title": "Format Fidelity Gains",
+  "merges": [],
+  "values": [
+    ["Task", "Labels", "Amount"],
+    ["Design", "Red,Green", "$1,234.56"],
+    ["Build", "Blue", "42"]
+  ],
+  "fidelity": {
+    "A1": {"bold": true},
+    "B1": {"bold": true},
+    "C1": {"bold": true},
+    "B2": {"bold": true, "italic": true}
+  }
+}

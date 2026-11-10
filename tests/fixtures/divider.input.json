@@ -1,0 +1,25 @@
+[
+  {
+    "block_id": "root",
+    "parent_id": "doc",
+    "block_type": 1,
+    "page": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Doc Title"
+          }
+        }
+      ]
+    },
+    "children": [
+      "d1"
+    ]
+  },
+  {
+    "block_id": "d1",
+    "parent_id": "root",
+    "block_type": 22,
+    "divider": {}
+  }
+]

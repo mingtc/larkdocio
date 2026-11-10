@@ -1,0 +1,45 @@
+{
+  "probe": "Q2-application-scopes-READ",
+  "method": "GET",
+  "path": "/open-apis/application/v6/applications/cli_example000000001/app_versions",
+  "params": [
+    [
+      "lang",
+      "en_us"
+    ],
+    [
+      "page_size",
+      "1"
+    ]
+  ],
+  "note": "candidate 1: an app VERSION carries the scope set that version requested",
+  "http_status": 400,
+  "response_headers": {
+    "content-type": "application/json; charset=utf-8",
+    "x-tt-logid": "20260730154611D79374DECC6D0C8C8664",
+    "x-request-id": "20260730154611D79374DECC6D0C8C8664"
+  },
+  "response": {
+    "code": 99991672,
+    "msg": "Access denied. One of the following scopes is required: [application:application:self_manage, application:application.app_version:readonly]",
+    "error": {
+      "log_id": "20260730154611D79374DECC6D0C8C8664",
+      "helps": [
+        {
+          "url": "https://open.larksuite.com/app/cli_example000000001/auth?q=application:application:self_manage,application:application.app_version:readonly&op_from=openapi&token_type=tenant",
+          "description": "Learn more about scopes and how to add them: [application:application:self_manage,application:application.app_version:readonly]"
+        }
+      ],
+      "permission_violations": [
+        {
+          "type": "action_scope_required",
+          "subject": "application:application:self_manage"
+        },
+        {
+          "subject": "application:application.app_version:readonly",
+          "type": "action_scope_required"
+        }
+      ]
+    }
+  }
+}

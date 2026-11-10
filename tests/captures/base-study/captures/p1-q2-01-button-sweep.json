@@ -1,0 +1,712 @@
+{
+  "_probe": "q2-field-authoring",
+  "steps": [
+    {
+      "_probe": "q2-field-authoring",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/tables",
+      "_method": "POST",
+      "_http_status": 200,
+      "_lark_code": 0,
+      "_lark_msg": "success",
+      "_verdict": "OK",
+      "_note": "create probe table p1a-Author :: body={\"table\": {\"name\": \"p1a-Author\", \"fields\": [{\"field_name\": \"Title\", \"type\": 1}]}}",
+      "response": {
+        "code": 0,
+        "data": {
+          "default_view_id": "vewiFbggQj",
+          "field_id_list": [
+            "fldlC2hDHR"
+          ],
+          "table_id": "tblPmnNKQ52JExJL"
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "_probe": "q2-field-authoring",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/tables/tblPmnNKQ52JExJL/records",
+      "_method": "POST",
+      "_http_status": 200,
+      "_lark_code": 0,
+      "_lark_msg": "success",
+      "_verdict": "OK",
+      "_note": "create record :: body={\"fields\": {\"Title\": \"ctl\"}}",
+      "response": {
+        "code": 0,
+        "data": {
+          "record": {
+            "fields": {
+              "Title": "ctl"
+            },
+            "id": "recvrvrygNhojH",
+            "record_id": "recvrvrygNhojH"
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "_probe": "q2-field-authoring",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/tables/tblPmnNKQ52JExJL/records/recvrvrygNhojH",
+      "_method": "PUT",
+      "_http_status": 200,
+      "_lark_code": 0,
+      "_lark_msg": "success",
+      "_verdict": "OK",
+      "_note": "PUT record Title='ctl2' :: body={\"fields\": {\"Title\": \"ctl2\"}}",
+      "response": {
+        "code": 0,
+        "data": {
+          "record": {
+            "fields": {
+              "Title": "ctl2"
+            },
+            "id": "recvrvrygNhojH",
+            "record_id": "recvrvrygNhojH"
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "_probe": "q2-field-authoring",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/tables/tblPmnNKQ52JExJL/records/{r}",
+      "_method": "PUT",
+      "_http_status": 200,
+      "_lark_code": 0,
+      "_lark_msg": null,
+      "_verdict": "OK",
+      "_note": "POSITIVE CONTROL: known-good Text write moved revision 1->2, bumped=True",
+      "response": {
+        "code": 0
+      }
+    },
+    {
+      "_probe": "q2-field-authoring",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/tables/tblPmnNKQ52JExJL/fields",
+      "_method": "POST",
+      "_http_status": 400,
+      "_lark_code": 99992402,
+      "_lark_msg": "field validation failed",
+      "_verdict": "DENIED_OR_ERROR",
+      "_note": "create ui_type=Button type=24 :: body={\"field_name\": \"btn1\", \"type\": 24, \"ui_type\": \"Button\"}",
+      "response": {
+        "code": 99992402,
+        "msg": "field validation failed",
+        "error": {
+          "log_id": "20260803100416B850DE3F2A086F6ED36C",
+          "field_violations": [
+            {
+              "field": "type",
+              "value": "24",
+              "description": "type is optional, options: [1,2,3,4,5,7,11,13,15,17,18,20,21,22,23,1001,1002,1003,1004,1005]"
+            },
+            {
+              "field": "ui_type",
+              "value": "Button",
+              "description": "ui_type is optional, options: [Text,Barcode,Number,Progress,Currency,Rating,SingleSelect,MultiSelect,DateTime,Checkbox,User,GroupChat,Phone,Url,Attachment,SingleLink,Formula,DuplexLink,Location,CreatedTime,ModifiedTime,CreatedUser,ModifiedUser,AutoNumber]"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "_probe": "q2-field-authoring",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/tables/tblPmnNKQ52JExJL/fields",
+      "_method": "POST",
+      "_http_status": 400,
+      "_lark_code": 99992402,
+      "_lark_msg": "field validation failed",
+      "_verdict": "DENIED_OR_ERROR",
+      "_note": "create ui_type=Button type=25 :: body={\"field_name\": \"btn2\", \"type\": 25, \"ui_type\": \"Button\"}",
+      "response": {
+        "code": 99992402,
+        "msg": "field validation failed",
+        "error": {
+          "log_id": "202608031004175541F3865EDF21B2D7D7",
+          "field_violations": [
+            {
+              "field": "type",
+              "value": "25",
+              "description": "type is optional, options: [1,2,3,4,5,7,11,13,15,17,18,20,21,22,23,1001,1002,1003,1004,1005]"
+            },
+            {
+              "field": "ui_type",
+              "value": "Button",
+              "description": "ui_type is optional, options: [Text,Barcode,Number,Progress,Currency,Rating,SingleSelect,MultiSelect,DateTime,Checkbox,User,GroupChat,Phone,Url,Attachment,SingleLink,Formula,DuplexLink,Location,CreatedTime,ModifiedTime,CreatedUser,ModifiedUser,AutoNumber]"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "_probe": "q2-field-authoring",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/tables/tblPmnNKQ52JExJL/fields",
+      "_method": "POST",
+      "_http_status": 400,
+      "_lark_code": 99992402,
+      "_lark_msg": "field validation failed",
+      "_verdict": "DENIED_OR_ERROR",
+      "_note": "create ui_type=Button type=26 :: body={\"field_name\": \"btn3\", \"type\": 26, \"ui_type\": \"Button\"}",
+      "response": {
+        "code": 99992402,
+        "msg": "field validation failed",
+        "error": {
+          "log_id": "20260803100418E688482A57A78B56AF80",
+          "field_violations": [
+            {
+              "field": "type",
+              "value": "26",
+              "description": "type is optional, options: [1,2,3,4,5,7,11,13,15,17,18,20,21,22,23,1001,1002,1003,1004,1005]"
+            },
+            {
+              "field": "ui_type",
+              "value": "Button",
+              "description": "ui_type is optional, options: [Text,Barcode,Number,Progress,Currency,Rating,SingleSelect,MultiSelect,DateTime,Checkbox,User,GroupChat,Phone,Url,Attachment,SingleLink,Formula,DuplexLink,Location,CreatedTime,ModifiedTime,CreatedUser,ModifiedUser,AutoNumber]"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "_probe": "q2-field-authoring",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/tables/tblPmnNKQ52JExJL/fields",
+      "_method": "POST",
+      "_http_status": 400,
+      "_lark_code": 99992402,
+      "_lark_msg": "field validation failed",
+      "_verdict": "DENIED_OR_ERROR",
+      "_note": "create ui_type=Button type=27 :: body={\"field_name\": \"btn4\", \"type\": 27, \"ui_type\": \"Button\"}",
+      "response": {
+        "code": 99992402,
+        "msg": "field validation failed",
+        "error": {
+          "log_id": "20260803100420D006BE8EEC4CCF592890",
+          "field_violations": [
+            {
+              "field": "type",
+              "value": "27",
+              "description": "type is optional, options: [1,2,3,4,5,7,11,13,15,17,18,20,21,22,23,1001,1002,1003,1004,1005]"
+            },
+            {
+              "field": "ui_type",
+              "value": "Button",
+              "description": "ui_type is optional, options: [Text,Barcode,Number,Progress,Currency,Rating,SingleSelect,MultiSelect,DateTime,Checkbox,User,GroupChat,Phone,Url,Attachment,SingleLink,Formula,DuplexLink,Location,CreatedTime,ModifiedTime,CreatedUser,ModifiedUser,AutoNumber]"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "_probe": "q2-field-authoring",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/tables/tblPmnNKQ52JExJL/fields",
+      "_method": "POST",
+      "_http_status": 400,
+      "_lark_code": 99992402,
+      "_lark_msg": "field validation failed",
+      "_verdict": "DENIED_OR_ERROR",
+      "_note": "create ui_type=Button type=28 :: body={\"field_name\": \"btn5\", \"type\": 28, \"ui_type\": \"Button\"}",
+      "response": {
+        "code": 99992402,
+        "msg": "field validation failed",
+        "error": {
+          "log_id": "20260803100421914B64C900F8676C8535",
+          "field_violations": [
+            {
+              "value": "28",
+              "description": "type is optional, options: [1,2,3,4,5,7,11,13,15,17,18,20,21,22,23,1001,1002,1003,1004,1005]",
+              "field": "type"
+            },
+            {
+              "field": "ui_type",
+              "value": "Button",
+              "description": "ui_type is optional, options: [Text,Barcode,Number,Progress,Currency,Rating,SingleSelect,MultiSelect,DateTime,Checkbox,User,GroupChat,Phone,Url,Attachment,SingleLink,Formula,DuplexLink,Location,CreatedTime,ModifiedTime,CreatedUser,ModifiedUser,AutoNumber]"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "_probe": "q2-field-authoring",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/tables/tblPmnNKQ52JExJL/fields",
+      "_method": "POST",
+      "_http_status": 400,
+      "_lark_code": 99992402,
+      "_lark_msg": "field validation failed",
+      "_verdict": "DENIED_OR_ERROR",
+      "_note": "create ui_type=Button type=29 :: body={\"field_name\": \"btn6\", \"type\": 29, \"ui_type\": \"Button\"}",
+      "response": {
+        "code": 99992402,
+        "msg": "field validation failed",
+        "error": {
+          "log_id": "2026080310042262C1C75070772E61A18F",
+          "field_violations": [
+            {
+              "value": "29",
+              "description": "type is optional, options: [1,2,3,4,5,7,11,13,15,17,18,20,21,22,23,1001,1002,1003,1004,1005]",
+              "field": "type"
+            },
+            {
+              "field": "ui_type",
+              "value": "Button",
+              "description": "ui_type is optional, options: [Text,Barcode,Number,Progress,Currency,Rating,SingleSelect,MultiSelect,DateTime,Checkbox,User,GroupChat,Phone,Url,Attachment,SingleLink,Formula,DuplexLink,Location,CreatedTime,ModifiedTime,CreatedUser,ModifiedUser,AutoNumber]"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "_probe": "q2-field-authoring",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/tables/tblPmnNKQ52JExJL/fields",
+      "_method": "POST",
+      "_http_status": 400,
+      "_lark_code": 99992402,
+      "_lark_msg": "field validation failed",
+      "_verdict": "DENIED_OR_ERROR",
+      "_note": "create ui_type=Button type=30 :: body={\"field_name\": \"btn7\", \"type\": 30, \"ui_type\": \"Button\"}",
+      "response": {
+        "code": 99992402,
+        "msg": "field validation failed",
+        "error": {
+          "field_violations": [
+            {
+              "field": "type",
+              "value": "30",
+              "description": "type is optional, options: [1,2,3,4,5,7,11,13,15,17,18,20,21,22,23,1001,1002,1003,1004,1005]"
+            },
+            {
+              "description": "ui_type is optional, options: [Text,Barcode,Number,Progress,Currency,Rating,SingleSelect,MultiSelect,DateTime,Checkbox,User,GroupChat,Phone,Url,Attachment,SingleLink,Formula,DuplexLink,Location,CreatedTime,ModifiedTime,CreatedUser,ModifiedUser,AutoNumber]",
+              "field": "ui_type",
+              "value": "Button"
+            }
+          ],
+          "log_id": "202608031004235C3F2271076BA92BFB67"
+        }
+      }
+    },
+    {
+      "_probe": "q2-field-authoring",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/tables/tblPmnNKQ52JExJL/fields",
+      "_method": "POST",
+      "_http_status": 400,
+      "_lark_code": 99992402,
+      "_lark_msg": "field validation failed",
+      "_verdict": "DENIED_OR_ERROR",
+      "_note": "create ui_type=Button type=31 :: body={\"field_name\": \"btn8\", \"type\": 31, \"ui_type\": \"Button\"}",
+      "response": {
+        "code": 99992402,
+        "msg": "field validation failed",
+        "error": {
+          "log_id": "20260803100424420CCC936F8E4D86522F",
+          "field_violations": [
+            {
+              "field": "type",
+              "value": "31",
+              "description": "type is optional, options: [1,2,3,4,5,7,11,13,15,17,18,20,21,22,23,1001,1002,1003,1004,1005]"
+            },
+            {
+              "field": "ui_type",
+              "value": "Button",
+              "description": "ui_type is optional, options: [Text,Barcode,Number,Progress,Currency,Rating,SingleSelect,MultiSelect,DateTime,Checkbox,User,GroupChat,Phone,Url,Attachment,SingleLink,Formula,DuplexLink,Location,CreatedTime,ModifiedTime,CreatedUser,ModifiedUser,AutoNumber]"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "_probe": "q2-field-authoring",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/tables/tblPmnNKQ52JExJL/fields",
+      "_method": "POST",
+      "_http_status": 400,
+      "_lark_code": 99992402,
+      "_lark_msg": "field validation failed",
+      "_verdict": "DENIED_OR_ERROR",
+      "_note": "create ui_type=Button type=32 :: body={\"field_name\": \"btn9\", \"type\": 32, \"ui_type\": \"Button\"}",
+      "response": {
+        "code": 99992402,
+        "msg": "field validation failed",
+        "error": {
+          "log_id": "20260803100426338CA79476092B8787FB",
+          "field_violations": [
+            {
+              "description": "type is optional, options: [1,2,3,4,5,7,11,13,15,17,18,20,21,22,23,1001,1002,1003,1004,1005]",
+              "field": "type",
+              "value": "32"
+            },
+            {
+              "field": "ui_type",
+              "value": "Button",
+              "description": "ui_type is optional, options: [Text,Barcode,Number,Progress,Currency,Rating,SingleSelect,MultiSelect,DateTime,Checkbox,User,GroupChat,Phone,Url,Attachment,SingleLink,Formula,DuplexLink,Location,CreatedTime,ModifiedTime,CreatedUser,ModifiedUser,AutoNumber]"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "_probe": "q2-field-authoring",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/tables/tblPmnNKQ52JExJL/fields",
+      "_method": "POST",
+      "_http_status": 400,
+      "_lark_code": 99992402,
+      "_lark_msg": "field validation failed",
+      "_verdict": "DENIED_OR_ERROR",
+      "_note": "create ui_type=Button type=99 :: body={\"field_name\": \"btn10\", \"type\": 99, \"ui_type\": \"Button\"}",
+      "response": {
+        "code": 99992402,
+        "msg": "field validation failed",
+        "error": {
+          "field_violations": [
+            {
+              "field": "type",
+              "value": "99",
+              "description": "type is optional, options: [1,2,3,4,5,7,11,13,15,17,18,20,21,22,23,1001,1002,1003,1004,1005]"
+            },
+            {
+              "field": "ui_type",
+              "value": "Button",
+              "description": "ui_type is optional, options: [Text,Barcode,Number,Progress,Currency,Rating,SingleSelect,MultiSelect,DateTime,Checkbox,User,GroupChat,Phone,Url,Attachment,SingleLink,Formula,DuplexLink,Location,CreatedTime,ModifiedTime,CreatedUser,ModifiedUser,AutoNumber]"
+            }
+          ],
+          "log_id": "20260803100427D79374DECC6D0C403CBB"
+        }
+      }
+    },
+    {
+      "_probe": "q2-field-authoring",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/tables/tblPmnNKQ52JExJL/fields",
+      "_method": "POST",
+      "_http_status": 400,
+      "_lark_code": 99992402,
+      "_lark_msg": "field validation failed",
+      "_verdict": "DENIED_OR_ERROR",
+      "_note": "create ui_type=Button type=1006 :: body={\"field_name\": \"btn11\", \"type\": 1006, \"ui_type\": \"Button\"}",
+      "response": {
+        "code": 99992402,
+        "msg": "field validation failed",
+        "error": {
+          "log_id": "20260803100428B1692D7E10559156339C",
+          "field_violations": [
+            {
+              "field": "type",
+              "value": "1006",
+              "description": "type is optional, options: [1,2,3,4,5,7,11,13,15,17,18,20,21,22,23,1001,1002,1003,1004,1005]"
+            },
+            {
+              "field": "ui_type",
+              "value": "Button",
+              "description": "ui_type is optional, options: [Text,Barcode,Number,Progress,Currency,Rating,SingleSelect,MultiSelect,DateTime,Checkbox,User,GroupChat,Phone,Url,Attachment,SingleLink,Formula,DuplexLink,Location,CreatedTime,ModifiedTime,CreatedUser,ModifiedUser,AutoNumber]"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "_probe": "q2-field-authoring",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/tables/tblPmnNKQ52JExJL/fields",
+      "_method": "POST",
+      "_http_status": 400,
+      "_lark_code": 99992402,
+      "_lark_msg": "field validation failed",
+      "_verdict": "DENIED_OR_ERROR",
+      "_note": "create ui_type=Button type=1007 :: body={\"field_name\": \"btn12\", \"type\": 1007, \"ui_type\": \"Button\"}",
+      "response": {
+        "code": 99992402,
+        "msg": "field validation failed",
+        "error": {
+          "log_id": "202608031004295C6D7CBA1FD2ADA078EC",
+          "field_violations": [
+            {
+              "field": "type",
+              "value": "1007",
+              "description": "type is optional, options: [1,2,3,4,5,7,11,13,15,17,18,20,21,22,23,1001,1002,1003,1004,1005]"
+            },
+            {
+              "field": "ui_type",
+              "value": "Button",
+              "description": "ui_type is optional, options: [Text,Barcode,Number,Progress,Currency,Rating,SingleSelect,MultiSelect,DateTime,Checkbox,User,GroupChat,Phone,Url,Attachment,SingleLink,Formula,DuplexLink,Location,CreatedTime,ModifiedTime,CreatedUser,ModifiedUser,AutoNumber]"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "_probe": "q2-field-authoring",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/tables/tblPmnNKQ52JExJL/fields",
+      "_method": "POST",
+      "_http_status": 400,
+      "_lark_code": 99992402,
+      "_lark_msg": "field validation failed",
+      "_verdict": "DENIED_OR_ERROR",
+      "_note": "create ui_type=Button type=3001 :: body={\"field_name\": \"btn13\", \"type\": 3001, \"ui_type\": \"Button\"}",
+      "response": {
+        "code": 99992402,
+        "msg": "field validation failed",
+        "error": {
+          "log_id": "20260803100431B3135FBA28234C5A4F35",
+          "field_violations": [
+            {
+              "value": "3001",
+              "description": "type is optional, options: [1,2,3,4,5,7,11,13,15,17,18,20,21,22,23,1001,1002,1003,1004,1005]",
+              "field": "type"
+            },
+            {
+              "description": "ui_type is optional, options: [Text,Barcode,Number,Progress,Currency,Rating,SingleSelect,MultiSelect,DateTime,Checkbox,User,GroupChat,Phone,Url,Attachment,SingleLink,Formula,DuplexLink,Location,CreatedTime,ModifiedTime,CreatedUser,ModifiedUser,AutoNumber]",
+              "field": "ui_type",
+              "value": "Button"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "_probe": "q2-field-authoring",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/tables/tblPmnNKQ52JExJL/fields",
+      "_method": "POST",
+      "_http_status": 400,
+      "_lark_code": 99992402,
+      "_lark_msg": "field validation failed",
+      "_verdict": "DENIED_OR_ERROR",
+      "_note": "create ui_type=Button type=4001 :: body={\"field_name\": \"btn14\", \"type\": 4001, \"ui_type\": \"Button\"}",
+      "response": {
+        "code": 99992402,
+        "msg": "field validation failed",
+        "error": {
+          "log_id": "20260803100432D872FCAAF465BE5635C1",
+          "field_violations": [
+            {
+              "field": "type",
+              "value": "4001",
+              "description": "type is optional, options: [1,2,3,4,5,7,11,13,15,17,18,20,21,22,23,1001,1002,1003,1004,1005]"
+            },
+            {
+              "field": "ui_type",
+              "value": "Button",
+              "description": "ui_type is optional, options: [Text,Barcode,Number,Progress,Currency,Rating,SingleSelect,MultiSelect,DateTime,Checkbox,User,GroupChat,Phone,Url,Attachment,SingleLink,Formula,DuplexLink,Location,CreatedTime,ModifiedTime,CreatedUser,ModifiedUser,AutoNumber]"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "_probe": "q2-field-authoring",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/tables/tblPmnNKQ52JExJL/fields",
+      "_method": "POST",
+      "_http_status": 400,
+      "_lark_code": 99992402,
+      "_lark_msg": "field validation failed",
+      "_verdict": "DENIED_OR_ERROR",
+      "_note": "create type=25 NO ui_type :: body={\"field_name\": \"bare15\", \"type\": 25}",
+      "response": {
+        "code": 99992402,
+        "msg": "field validation failed",
+        "error": {
+          "log_id": "20260803100433FC3F900C78FB7041E671",
+          "field_violations": [
+            {
+              "value": "25",
+              "description": "type is optional, options: [1,2,3,4,5,7,11,13,15,17,18,20,21,22,23,1001,1002,1003,1004,1005]",
+              "field": "type"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "_probe": "q2-field-authoring",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/tables/tblPmnNKQ52JExJL/fields",
+      "_method": "POST",
+      "_http_status": 400,
+      "_lark_code": 99992402,
+      "_lark_msg": "field validation failed",
+      "_verdict": "DENIED_OR_ERROR",
+      "_note": "create type=26 NO ui_type :: body={\"field_name\": \"bare16\", \"type\": 26}",
+      "response": {
+        "code": 99992402,
+        "msg": "field validation failed",
+        "error": {
+          "log_id": "202608031004347EE38C3F21C00C5A0623",
+          "field_violations": [
+            {
+              "field": "type",
+              "value": "26",
+              "description": "type is optional, options: [1,2,3,4,5,7,11,13,15,17,18,20,21,22,23,1001,1002,1003,1004,1005]"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "_probe": "q2-field-authoring",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/tables/tblPmnNKQ52JExJL/fields",
+      "_method": "POST",
+      "_http_status": 400,
+      "_lark_code": 99992402,
+      "_lark_msg": "field validation failed",
+      "_verdict": "DENIED_OR_ERROR",
+      "_note": "create type=27 NO ui_type :: body={\"field_name\": \"bare17\", \"type\": 27}",
+      "response": {
+        "code": 99992402,
+        "msg": "field validation failed",
+        "error": {
+          "log_id": "20260803100435DA5D16897E8FB95DCF03",
+          "field_violations": [
+            {
+              "field": "type",
+              "value": "27",
+              "description": "type is optional, options: [1,2,3,4,5,7,11,13,15,17,18,20,21,22,23,1001,1002,1003,1004,1005]"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "_probe": "q2-field-authoring",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/tables/tblPmnNKQ52JExJL/fields",
+      "_method": "POST",
+      "_http_status": 400,
+      "_lark_code": 99992402,
+      "_lark_msg": "field validation failed",
+      "_verdict": "DENIED_OR_ERROR",
+      "_note": "create type=28 NO ui_type :: body={\"field_name\": \"bare18\", \"type\": 28}",
+      "response": {
+        "code": 99992402,
+        "msg": "field validation failed",
+        "error": {
+          "log_id": "202608031004370747ED4FEE99B537DAA7",
+          "field_violations": [
+            {
+              "value": "28",
+              "description": "type is optional, options: [1,2,3,4,5,7,11,13,15,17,18,20,21,22,23,1001,1002,1003,1004,1005]",
+              "field": "type"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "_probe": "q2-field-authoring",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/tables/tblPmnNKQ52JExJL/fields",
+      "_method": "POST",
+      "_http_status": 400,
+      "_lark_code": 99992402,
+      "_lark_msg": "field validation failed",
+      "_verdict": "DENIED_OR_ERROR",
+      "_note": "create ui_type='button' type=1 :: body={\"field_name\": \"bv19\", \"type\": 1, \"ui_type\": \"button\"}",
+      "response": {
+        "code": 99992402,
+        "msg": "field validation failed",
+        "error": {
+          "log_id": "2026080310043896C8C0E4F4025E79A3DA",
+          "field_violations": [
+            {
+              "field": "ui_type",
+              "value": "button",
+              "description": "ui_type is optional, options: [Text,Barcode,Number,Progress,Currency,Rating,SingleSelect,MultiSelect,DateTime,Checkbox,User,GroupChat,Phone,Url,Attachment,SingleLink,Formula,DuplexLink,Location,CreatedTime,ModifiedTime,CreatedUser,ModifiedUser,AutoNumber]"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "_probe": "q2-field-authoring",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/tables/tblPmnNKQ52JExJL/fields",
+      "_method": "POST",
+      "_http_status": 400,
+      "_lark_code": 99992402,
+      "_lark_msg": "field validation failed",
+      "_verdict": "DENIED_OR_ERROR",
+      "_note": "create ui_type='BUTTON' type=1 :: body={\"field_name\": \"bv20\", \"type\": 1, \"ui_type\": \"BUTTON\"}",
+      "response": {
+        "code": 99992402,
+        "msg": "field validation failed",
+        "error": {
+          "field_violations": [
+            {
+              "description": "ui_type is optional, options: [Text,Barcode,Number,Progress,Currency,Rating,SingleSelect,MultiSelect,DateTime,Checkbox,User,GroupChat,Phone,Url,Attachment,SingleLink,Formula,DuplexLink,Location,CreatedTime,ModifiedTime,CreatedUser,ModifiedUser,AutoNumber]",
+              "field": "ui_type",
+              "value": "BUTTON"
+            }
+          ],
+          "log_id": "20260803100439E9B6DD85216F174B0355"
+        }
+      }
+    },
+    {
+      "_probe": "q2-field-authoring",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/tables/tblPmnNKQ52JExJL/fields",
+      "_method": "POST",
+      "_http_status": 400,
+      "_lark_code": 99992402,
+      "_lark_msg": "field validation failed",
+      "_verdict": "DENIED_OR_ERROR",
+      "_note": "create ui_type='Btn' type=1 :: body={\"field_name\": \"bv21\", \"type\": 1, \"ui_type\": \"Btn\"}",
+      "response": {
+        "code": 99992402,
+        "msg": "field validation failed",
+        "error": {
+          "log_id": "20260803100440715220DCB19F4E472C5F",
+          "field_violations": [
+            {
+              "value": "Btn",
+              "description": "ui_type is optional, options: [Text,Barcode,Number,Progress,Currency,Rating,SingleSelect,MultiSelect,DateTime,Checkbox,User,GroupChat,Phone,Url,Attachment,SingleLink,Formula,DuplexLink,Location,CreatedTime,ModifiedTime,CreatedUser,ModifiedUser,AutoNumber]",
+              "field": "ui_type"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "_probe": "q2-field-authoring",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/tables/tblPmnNKQ52JExJL/fields",
+      "_method": "POST",
+      "_http_status": 400,
+      "_lark_code": 99992402,
+      "_lark_msg": "field validation failed",
+      "_verdict": "DENIED_OR_ERROR",
+      "_note": "create ui_type='ActionButton' type=1 :: body={\"field_name\": \"bv22\", \"type\": 1, \"ui_type\": \"ActionButton\"}",
+      "response": {
+        "code": 99992402,
+        "msg": "field validation failed",
+        "error": {
+          "log_id": "202608031004419365ACAE078CDE45331D",
+          "field_violations": [
+            {
+              "description": "ui_type is optional, options: [Text,Barcode,Number,Progress,Currency,Rating,SingleSelect,MultiSelect,DateTime,Checkbox,User,GroupChat,Phone,Url,Attachment,SingleLink,Formula,DuplexLink,Location,CreatedTime,ModifiedTime,CreatedUser,ModifiedUser,AutoNumber]",
+              "field": "ui_type",
+              "value": "ActionButton"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "_probe": "q2-field-authoring",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/tables/tblPmnNKQ52JExJL/fields",
+      "_method": "POST",
+      "_http_status": 400,
+      "_lark_code": 99992402,
+      "_lark_msg": "field validation failed",
+      "_verdict": "DENIED_OR_ERROR",
+      "_note": "create Button with property{} :: body={\"field_name\": \"btnp\", \"type\": 24, \"ui_type\": \"Button\", \"property\": {}}",
+      "response": {
+        "code": 99992402,
+        "msg": "field validation failed",
+        "error": {
+          "log_id": "20260803100443DE3D8860C630A734D841",
+          "field_violations": [
+            {
+              "field": "type",
+              "value": "24",
+              "description": "type is optional, options: [1,2,3,4,5,7,11,13,15,17,18,20,21,22,23,1001,1002,1003,1004,1005]"
+            },
+            {
+              "field": "ui_type",
+              "value": "Button",
+              "description": "ui_type is optional, options: [Text,Barcode,Number,Progress,Currency,Rating,SingleSelect,MultiSelect,DateTime,Checkbox,User,GroupChat,Phone,Url,Attachment,SingleLink,Formula,DuplexLink,Location,CreatedTime,ModifiedTime,CreatedUser,ModifiedUser,AutoNumber]"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

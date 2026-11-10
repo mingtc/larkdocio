@@ -1,0 +1,30 @@
+{
+  "n": 707,
+  "label": "LD420 leg1 B grant FULL ACCESS to the resolved grantee the echo not the finding",
+  "credential_pair": "WRITE",
+  "request": {
+    "method": "POST",
+    "path": "/open-apis/drive/v1/permissions/Example96b1f1037377879d8dd5/members?type=docx&need_notification=false",
+    "body": {
+      "member_type": "openid",
+      "member_id": "ou_exampleowner00000000000000000001",
+      "perm": "full_access"
+    },
+    "headers": [
+      "Authorization: Bearer <redacted>"
+    ]
+  },
+  "http_status": 200,
+  "response": {
+    "code": 0,
+    "data": {
+      "member": {
+        "member_id": "ou_exampleowner00000000000000000001",
+        "member_type": "openid",
+        "perm": "full_access",
+        "perm_type": "container"
+      }
+    },
+    "msg": "Success"
+  }
+}

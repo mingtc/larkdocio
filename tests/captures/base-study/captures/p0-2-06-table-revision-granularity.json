@@ -1,0 +1,20 @@
+{
+  "_probe": "p2",
+  "_endpoint": "GET .../tables (revision) around field/batch ops",
+  "_method": "GET",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": null,
+  "_verdict": "OK",
+  "_note": "does table.revision bump on a FIELD change and on a batch_update (once, or N times)? — pins STALE_BASE",
+  "response": {
+    "code": 0,
+    "data": {
+      "before_field_create": 12,
+      "after_field_create": 13,
+      "after_batch_update_of_3_records": 14,
+      "after_field_delete": 15,
+      "app_revision_now": 2
+    }
+  }
+}

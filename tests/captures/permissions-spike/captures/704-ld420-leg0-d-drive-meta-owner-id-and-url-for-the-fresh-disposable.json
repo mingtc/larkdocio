@@ -1,0 +1,45 @@
+{
+  "n": 704,
+  "label": "LD420 leg0 D drive meta owner id and url for the fresh disposable",
+  "credential_pair": "WRITE",
+  "request": {
+    "method": "POST",
+    "path": "/open-apis/drive/v1/metas/batch_query",
+    "body": {
+      "request_docs": [
+        {
+          "doc_token": "Example96b1f1037377879d8dd5",
+          "doc_type": "docx"
+        }
+      ],
+      "with_url": true
+    },
+    "headers": [
+      "Authorization: Bearer <redacted>"
+    ]
+  },
+  "http_status": 200,
+  "response": {
+    "code": 0,
+    "data": {
+      "metas": [
+        {
+          "create_time": "1786488465",
+          "doc_token": "Example96b1f1037377879d8dd5",
+          "doc_type": "docx",
+          "latest_modify_time": "1786488465",
+          "latest_modify_user": "ou_examplebot0000000000000000000001",
+          "owner_id": "ou_examplebot0000000000000000000001",
+          "request_doc_info": {
+            "doc_token": "Example96b1f1037377879d8dd5",
+            "doc_type": "docx"
+          },
+          "sec_label_name": "",
+          "title": "LD-420 permissions spike — leg 0/1 disposable",
+          "url": "https://your-domain.larksuite.com/docx/Example96b1f1037377879d8dd5"
+        }
+      ]
+    },
+    "msg": "Success"
+  }
+}

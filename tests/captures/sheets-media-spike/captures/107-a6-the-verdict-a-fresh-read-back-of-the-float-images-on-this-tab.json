@@ -1,0 +1,32 @@
+{
+  "n": 107,
+  "probe": "LD-435 AC1/AC2 arm A — sheet_image + float images",
+  "label": "A6 THE VERDICT a fresh read-back of the float images on this tab",
+  "credential_pair": "WRITE",
+  "request": {
+    "method": "GET",
+    "path": "/open-apis/sheets/v3/spreadsheets/Exampleb31ebb6e3fd2fe5eddf0/sheets/61a0cd/float_images/query",
+    "body": null,
+    "headers": [
+      "Authorization: Bearer <redacted>"
+    ]
+  },
+  "http_status": 200,
+  "response": {
+    "code": 0,
+    "data": {
+      "items": [
+        {
+          "float_image_id": "N1c3GER4am",
+          "float_image_token": "Example78521b01c50869b8aa83",
+          "height": 120,
+          "offset_x": 0,
+          "offset_y": 0,
+          "range": "61a0cd!A1:A1",
+          "width": 120
+        }
+      ]
+    },
+    "msg": "success"
+  }
+}

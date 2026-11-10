@@ -1,0 +1,49 @@
+{
+  "probe": "R1-search-owner-exact-READ",
+  "method": "POST",
+  "path": "/open-apis/directory/v1/employees/search",
+  "params": [
+    [
+      "employee_id_type",
+      "open_id"
+    ],
+    [
+      "department_id_type",
+      "open_department_id"
+    ]
+  ],
+  "body": {
+    "query": "Example User",
+    "page_request": {
+      "page_size": 10
+    },
+    "required_fields": [
+      "base_info"
+    ]
+  },
+  "http_status": 400,
+  "response_headers": {
+    "content-type": "application/json; charset=utf-8",
+    "x-tt-logid": "20260730124311AFADB68910B72B7AAB11",
+    "x-request-id": "20260730124311AFADB68910B72B7AAB11"
+  },
+  "response": {
+    "code": 99991672,
+    "msg": "Access denied. One of the following scopes is required: [directory:employee:search]",
+    "error": {
+      "log_id": "20260730124311AFADB68910B72B7AAB11",
+      "permission_violations": [
+        {
+          "type": "action_scope_required",
+          "subject": "directory:employee:search"
+        }
+      ],
+      "helps": [
+        {
+          "url": "https://open.larksuite.com/app/cli_example000000001/auth?q=directory:employee:search&op_from=openapi&token_type=tenant",
+          "description": "Learn more about scopes and how to add them: [directory:employee:search]"
+        }
+      ]
+    }
+  }
+}

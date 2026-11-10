@@ -1,0 +1,4104 @@
+{
+ "probe": "LD-187 updateSheet index / title / hidden",
+ "at": "2026-07-31T18:17:10.290239+00:00",
+ "steps": [
+  {
+   "label": "0) addSheet 'Beta'",
+   "method": "POST",
+   "path": "/open-apis/sheets/v2/spreadsheets/Examplef7930875ae592bf7fa69/sheets_batch_update",
+   "request_body": {
+    "requests": [
+     {
+      "addSheet": {
+       "properties": {
+        "title": "Beta"
+       }
+      }
+     }
+    ]
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "replies": [
+      {
+       "addSheet": {
+        "properties": {
+         "sheetId": "2swukM",
+         "title": "Beta"
+        }
+       }
+      }
+     ]
+    },
+    "msg": "success"
+   }
+  },
+  {
+   "label": "0) addSheet 'Gamma'",
+   "method": "POST",
+   "path": "/open-apis/sheets/v2/spreadsheets/Examplef7930875ae592bf7fa69/sheets_batch_update",
+   "request_body": {
+    "requests": [
+     {
+      "addSheet": {
+       "properties": {
+        "title": "Gamma"
+       }
+      }
+     }
+    ]
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "replies": [
+      {
+       "addSheet": {
+        "properties": {
+         "sheetId": "2szEoE",
+         "title": "Gamma"
+        }
+       }
+      }
+     ]
+    },
+    "msg": "success"
+   }
+  },
+  {
+   "label": "0) addSheet 'Delta'",
+   "method": "POST",
+   "path": "/open-apis/sheets/v2/spreadsheets/Examplef7930875ae592bf7fa69/sheets_batch_update",
+   "request_body": {
+    "requests": [
+     {
+      "addSheet": {
+       "properties": {
+        "title": "Delta"
+       }
+      }
+     }
+    ]
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "replies": [
+      {
+       "addSheet": {
+        "properties": {
+         "sheetId": "2sCs5a",
+         "title": "Delta"
+        }
+       }
+      }
+     ]
+    },
+    "msg": "success"
+   }
+  },
+  {
+   "label": "BASELINE (4 tabs)",
+   "method": "GET",
+   "path": "metainfo+sheets/query",
+   "request_body": null,
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "properties": {
+      "ownerUser": 9000000000000000004,
+      "revision": 4,
+      "sheetCount": 4,
+      "title": "larkdocio-harness-DISPOSABLE-1785521830-58648"
+     },
+     "sheets": [
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 0,
+       "rowCount": 200,
+       "sheetId": "2sCs5a",
+       "title": "Delta"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 1,
+       "rowCount": 200,
+       "sheetId": "2szEoE",
+       "title": "Gamma"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 2,
+       "rowCount": 200,
+       "sheetId": "2swukM",
+       "title": "Beta"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 3,
+       "rowCount": 200,
+       "sheetId": "4b399c",
+       "title": "Sheet1"
+      }
+     ],
+     "spreadsheetToken": "Examplef7930875ae592bf7fa69"
+    },
+    "msg": "success"
+   },
+   "observed": {
+    "revision": 4,
+    "metainfo_sheets": [
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 0,
+      "rowCount": 200,
+      "sheetId": "2sCs5a",
+      "title": "Delta"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 1,
+      "rowCount": 200,
+      "sheetId": "2szEoE",
+      "title": "Gamma"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 2,
+      "rowCount": 200,
+      "sheetId": "2swukM",
+      "title": "Beta"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 3,
+      "rowCount": 200,
+      "sheetId": "4b399c",
+      "title": "Sheet1"
+     }
+    ],
+    "v3_sheets": [
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 0,
+      "resource_type": "sheet",
+      "sheet_id": "2sCs5a",
+      "title": "Delta"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 1,
+      "resource_type": "sheet",
+      "sheet_id": "2szEoE",
+      "title": "Gamma"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 2,
+      "resource_type": "sheet",
+      "sheet_id": "2swukM",
+      "title": "Beta"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 3,
+      "resource_type": "sheet",
+      "sheet_id": "4b399c",
+      "title": "Sheet1"
+     }
+    ]
+   }
+  },
+  {
+   "label": "A) index=0 on the LAST tab (Delta) — target-or-delta",
+   "method": "POST",
+   "path": "/open-apis/sheets/v2/spreadsheets/Examplef7930875ae592bf7fa69/sheets_batch_update",
+   "request_body": {
+    "requests": [
+     {
+      "updateSheet": {
+       "properties": {
+        "sheetId": "2sCs5a",
+        "index": 0
+       }
+      }
+     }
+    ]
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "replies": [
+      {
+       "updateSheet": {
+        "properties": {
+         "index": 0,
+         "sheetId": "2sCs5a",
+         "title": ""
+        }
+       }
+      }
+     ]
+    },
+    "msg": "success"
+   }
+  },
+  {
+   "label": "state AFTER index=0 on Delta",
+   "method": "GET",
+   "path": "metainfo+sheets/query",
+   "request_body": null,
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "properties": {
+      "ownerUser": 9000000000000000004,
+      "revision": 4,
+      "sheetCount": 4,
+      "title": "larkdocio-harness-DISPOSABLE-1785521830-58648"
+     },
+     "sheets": [
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 0,
+       "rowCount": 200,
+       "sheetId": "2sCs5a",
+       "title": "Delta"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 1,
+       "rowCount": 200,
+       "sheetId": "2szEoE",
+       "title": "Gamma"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 2,
+       "rowCount": 200,
+       "sheetId": "2swukM",
+       "title": "Beta"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 3,
+       "rowCount": 200,
+       "sheetId": "4b399c",
+       "title": "Sheet1"
+      }
+     ],
+     "spreadsheetToken": "Examplef7930875ae592bf7fa69"
+    },
+    "msg": "success"
+   },
+   "observed": {
+    "revision": 4,
+    "metainfo_sheets": [
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 0,
+      "rowCount": 200,
+      "sheetId": "2sCs5a",
+      "title": "Delta"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 1,
+      "rowCount": 200,
+      "sheetId": "2szEoE",
+      "title": "Gamma"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 2,
+      "rowCount": 200,
+      "sheetId": "2swukM",
+      "title": "Beta"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 3,
+      "rowCount": 200,
+      "sheetId": "4b399c",
+      "title": "Sheet1"
+     }
+    ],
+    "v3_sheets": [
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 0,
+      "resource_type": "sheet",
+      "sheet_id": "2sCs5a",
+      "title": "Delta"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 1,
+      "resource_type": "sheet",
+      "sheet_id": "2szEoE",
+      "title": "Gamma"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 2,
+      "resource_type": "sheet",
+      "sheet_id": "2swukM",
+      "title": "Beta"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 3,
+      "resource_type": "sheet",
+      "sheet_id": "4b399c",
+      "title": "Sheet1"
+     }
+    ]
+   }
+  },
+  {
+   "label": "B) index=0 on Delta — its OWN current index (a no-op)",
+   "method": "POST",
+   "path": "/open-apis/sheets/v2/spreadsheets/Examplef7930875ae592bf7fa69/sheets_batch_update",
+   "request_body": {
+    "requests": [
+     {
+      "updateSheet": {
+       "properties": {
+        "sheetId": "2sCs5a",
+        "index": 0
+       }
+      }
+     }
+    ]
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "replies": [
+      {
+       "updateSheet": {
+        "properties": {
+         "index": 0,
+         "sheetId": "2sCs5a",
+         "title": ""
+        }
+       }
+      }
+     ]
+    },
+    "msg": "success"
+   }
+  },
+  {
+   "label": "state AFTER the no-op reorder",
+   "method": "GET",
+   "path": "metainfo+sheets/query",
+   "request_body": null,
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "properties": {
+      "ownerUser": 9000000000000000004,
+      "revision": 4,
+      "sheetCount": 4,
+      "title": "larkdocio-harness-DISPOSABLE-1785521830-58648"
+     },
+     "sheets": [
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 0,
+       "rowCount": 200,
+       "sheetId": "2sCs5a",
+       "title": "Delta"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 1,
+       "rowCount": 200,
+       "sheetId": "2szEoE",
+       "title": "Gamma"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 2,
+       "rowCount": 200,
+       "sheetId": "2swukM",
+       "title": "Beta"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 3,
+       "rowCount": 200,
+       "sheetId": "4b399c",
+       "title": "Sheet1"
+      }
+     ],
+     "spreadsheetToken": "Examplef7930875ae592bf7fa69"
+    },
+    "msg": "success"
+   },
+   "observed": {
+    "revision": 4,
+    "metainfo_sheets": [
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 0,
+      "rowCount": 200,
+      "sheetId": "2sCs5a",
+      "title": "Delta"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 1,
+      "rowCount": 200,
+      "sheetId": "2szEoE",
+      "title": "Gamma"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 2,
+      "rowCount": 200,
+      "sheetId": "2swukM",
+      "title": "Beta"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 3,
+      "rowCount": 200,
+      "sheetId": "4b399c",
+      "title": "Sheet1"
+     }
+    ],
+    "v3_sheets": [
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 0,
+      "resource_type": "sheet",
+      "sheet_id": "2sCs5a",
+      "title": "Delta"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 1,
+      "resource_type": "sheet",
+      "sheet_id": "2szEoE",
+      "title": "Gamma"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 2,
+      "resource_type": "sheet",
+      "sheet_id": "2swukM",
+      "title": "Beta"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 3,
+      "resource_type": "sheet",
+      "sheet_id": "4b399c",
+      "title": "Sheet1"
+     }
+    ]
+   }
+  },
+  {
+   "label": "C) index=2 on Delta — the middle",
+   "method": "POST",
+   "path": "/open-apis/sheets/v2/spreadsheets/Examplef7930875ae592bf7fa69/sheets_batch_update",
+   "request_body": {
+    "requests": [
+     {
+      "updateSheet": {
+       "properties": {
+        "sheetId": "2sCs5a",
+        "index": 2
+       }
+      }
+     }
+    ]
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "replies": [
+      {
+       "updateSheet": {
+        "properties": {
+         "index": 2,
+         "sheetId": "2sCs5a",
+         "title": ""
+        }
+       }
+      }
+     ]
+    },
+    "msg": "success"
+   }
+  },
+  {
+   "label": "state AFTER index=2 on Delta",
+   "method": "GET",
+   "path": "metainfo+sheets/query",
+   "request_body": null,
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "properties": {
+      "ownerUser": 9000000000000000004,
+      "revision": 5,
+      "sheetCount": 4,
+      "title": "larkdocio-harness-DISPOSABLE-1785521830-58648"
+     },
+     "sheets": [
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 0,
+       "rowCount": 200,
+       "sheetId": "2szEoE",
+       "title": "Gamma"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 1,
+       "rowCount": 200,
+       "sheetId": "2swukM",
+       "title": "Beta"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 2,
+       "rowCount": 200,
+       "sheetId": "2sCs5a",
+       "title": "Delta"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 3,
+       "rowCount": 200,
+       "sheetId": "4b399c",
+       "title": "Sheet1"
+      }
+     ],
+     "spreadsheetToken": "Examplef7930875ae592bf7fa69"
+    },
+    "msg": "success"
+   },
+   "observed": {
+    "revision": 5,
+    "metainfo_sheets": [
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 0,
+      "rowCount": 200,
+      "sheetId": "2szEoE",
+      "title": "Gamma"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 1,
+      "rowCount": 200,
+      "sheetId": "2swukM",
+      "title": "Beta"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 2,
+      "rowCount": 200,
+      "sheetId": "2sCs5a",
+      "title": "Delta"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 3,
+      "rowCount": 200,
+      "sheetId": "4b399c",
+      "title": "Sheet1"
+     }
+    ],
+    "v3_sheets": [
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 0,
+      "resource_type": "sheet",
+      "sheet_id": "2szEoE",
+      "title": "Gamma"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 1,
+      "resource_type": "sheet",
+      "sheet_id": "2swukM",
+      "title": "Beta"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 2,
+      "resource_type": "sheet",
+      "sheet_id": "2sCs5a",
+      "title": "Delta"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 3,
+      "resource_type": "sheet",
+      "sheet_id": "4b399c",
+      "title": "Sheet1"
+     }
+    ]
+   }
+  },
+  {
+   "label": "D) index=3 on Beta — the LAST legal index",
+   "method": "POST",
+   "path": "/open-apis/sheets/v2/spreadsheets/Examplef7930875ae592bf7fa69/sheets_batch_update",
+   "request_body": {
+    "requests": [
+     {
+      "updateSheet": {
+       "properties": {
+        "sheetId": "2swukM",
+        "index": 3
+       }
+      }
+     }
+    ]
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "replies": [
+      {
+       "updateSheet": {
+        "properties": {
+         "index": 3,
+         "sheetId": "2swukM",
+         "title": ""
+        }
+       }
+      }
+     ]
+    },
+    "msg": "success"
+   }
+  },
+  {
+   "label": "state AFTER index=3 on Beta",
+   "method": "GET",
+   "path": "metainfo+sheets/query",
+   "request_body": null,
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "properties": {
+      "ownerUser": 9000000000000000004,
+      "revision": 6,
+      "sheetCount": 4,
+      "title": "larkdocio-harness-DISPOSABLE-1785521830-58648"
+     },
+     "sheets": [
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 0,
+       "rowCount": 200,
+       "sheetId": "2szEoE",
+       "title": "Gamma"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 1,
+       "rowCount": 200,
+       "sheetId": "2sCs5a",
+       "title": "Delta"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 2,
+       "rowCount": 200,
+       "sheetId": "4b399c",
+       "title": "Sheet1"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 3,
+       "rowCount": 200,
+       "sheetId": "2swukM",
+       "title": "Beta"
+      }
+     ],
+     "spreadsheetToken": "Examplef7930875ae592bf7fa69"
+    },
+    "msg": "success"
+   },
+   "observed": {
+    "revision": 6,
+    "metainfo_sheets": [
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 0,
+      "rowCount": 200,
+      "sheetId": "2szEoE",
+      "title": "Gamma"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 1,
+      "rowCount": 200,
+      "sheetId": "2sCs5a",
+      "title": "Delta"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 2,
+      "rowCount": 200,
+      "sheetId": "4b399c",
+      "title": "Sheet1"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 3,
+      "rowCount": 200,
+      "sheetId": "2swukM",
+      "title": "Beta"
+     }
+    ],
+    "v3_sheets": [
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 0,
+      "resource_type": "sheet",
+      "sheet_id": "2szEoE",
+      "title": "Gamma"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 1,
+      "resource_type": "sheet",
+      "sheet_id": "2sCs5a",
+      "title": "Delta"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 2,
+      "resource_type": "sheet",
+      "sheet_id": "4b399c",
+      "title": "Sheet1"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 3,
+      "resource_type": "sheet",
+      "sheet_id": "2swukM",
+      "title": "Beta"
+     }
+    ]
+   }
+  },
+  {
+   "label": "E) index=4 on Beta — ONE PAST the last legal index",
+   "method": "POST",
+   "path": "/open-apis/sheets/v2/spreadsheets/Examplef7930875ae592bf7fa69/sheets_batch_update",
+   "request_body": {
+    "requests": [
+     {
+      "updateSheet": {
+       "properties": {
+        "sheetId": "2swukM",
+        "index": 4
+       }
+      }
+     }
+    ]
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "replies": [
+      {
+       "updateSheet": {
+        "properties": {
+         "index": 4,
+         "sheetId": "2swukM",
+         "title": ""
+        }
+       }
+      }
+     ]
+    },
+    "msg": "success"
+   }
+  },
+  {
+   "label": "F) index=99 on Beta — far out of range",
+   "method": "POST",
+   "path": "/open-apis/sheets/v2/spreadsheets/Examplef7930875ae592bf7fa69/sheets_batch_update",
+   "request_body": {
+    "requests": [
+     {
+      "updateSheet": {
+       "properties": {
+        "sheetId": "2swukM",
+        "index": 99
+       }
+      }
+     }
+    ]
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "replies": [
+      {
+       "updateSheet": {
+        "properties": {
+         "index": 4,
+         "sheetId": "2swukM",
+         "title": ""
+        }
+       }
+      }
+     ]
+    },
+    "msg": "success"
+   }
+  },
+  {
+   "label": "G) index=-1 on Beta — negative",
+   "method": "POST",
+   "path": "/open-apis/sheets/v2/spreadsheets/Examplef7930875ae592bf7fa69/sheets_batch_update",
+   "request_body": {
+    "requests": [
+     {
+      "updateSheet": {
+       "properties": {
+        "sheetId": "2swukM",
+        "index": -1
+       }
+      }
+     }
+    ]
+   },
+   "http_status": 200,
+   "code": 90204,
+   "msg": "invalid parameter: Requests[0].UpdateSheet.Properties.Index",
+   "response": {
+    "code": 90204,
+    "data": {},
+    "msg": "invalid parameter: Requests[0].UpdateSheet.Properties.Index"
+   }
+  },
+  {
+   "label": "state AFTER the out-of-range attempts",
+   "method": "GET",
+   "path": "metainfo+sheets/query",
+   "request_body": null,
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "properties": {
+      "ownerUser": 9000000000000000004,
+      "revision": 8,
+      "sheetCount": 4,
+      "title": "larkdocio-harness-DISPOSABLE-1785521830-58648"
+     },
+     "sheets": [
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 0,
+       "rowCount": 200,
+       "sheetId": "2szEoE",
+       "title": "Gamma"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 1,
+       "rowCount": 200,
+       "sheetId": "2sCs5a",
+       "title": "Delta"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 2,
+       "rowCount": 200,
+       "sheetId": "4b399c",
+       "title": "Sheet1"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 3,
+       "rowCount": 200,
+       "sheetId": "2swukM",
+       "title": "Beta"
+      }
+     ],
+     "spreadsheetToken": "Examplef7930875ae592bf7fa69"
+    },
+    "msg": "success"
+   },
+   "observed": {
+    "revision": 8,
+    "metainfo_sheets": [
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 0,
+      "rowCount": 200,
+      "sheetId": "2szEoE",
+      "title": "Gamma"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 1,
+      "rowCount": 200,
+      "sheetId": "2sCs5a",
+      "title": "Delta"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 2,
+      "rowCount": 200,
+      "sheetId": "4b399c",
+      "title": "Sheet1"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 3,
+      "rowCount": 200,
+      "sheetId": "2swukM",
+      "title": "Beta"
+     }
+    ],
+    "v3_sheets": [
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 0,
+      "resource_type": "sheet",
+      "sheet_id": "2szEoE",
+      "title": "Gamma"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 1,
+      "resource_type": "sheet",
+      "sheet_id": "2sCs5a",
+      "title": "Delta"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 2,
+      "resource_type": "sheet",
+      "sheet_id": "4b399c",
+      "title": "Sheet1"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 3,
+      "resource_type": "sheet",
+      "sheet_id": "2swukM",
+      "title": "Beta"
+     }
+    ]
+   }
+  },
+  {
+   "label": "H) title='Delta-renamed' on Delta — a plain retitle",
+   "method": "POST",
+   "path": "/open-apis/sheets/v2/spreadsheets/Examplef7930875ae592bf7fa69/sheets_batch_update",
+   "request_body": {
+    "requests": [
+     {
+      "updateSheet": {
+       "properties": {
+        "sheetId": "2sCs5a",
+        "title": "Delta-renamed"
+       }
+      }
+     }
+    ]
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "replies": [
+      {
+       "updateSheet": {
+        "properties": {
+         "sheetId": "2sCs5a",
+         "title": "Delta-renamed"
+        }
+       }
+      }
+     ]
+    },
+    "msg": "success"
+   }
+  },
+  {
+   "label": "state AFTER the retitle",
+   "method": "GET",
+   "path": "metainfo+sheets/query",
+   "request_body": null,
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "properties": {
+      "ownerUser": 9000000000000000004,
+      "revision": 9,
+      "sheetCount": 4,
+      "title": "larkdocio-harness-DISPOSABLE-1785521830-58648"
+     },
+     "sheets": [
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 0,
+       "rowCount": 200,
+       "sheetId": "2szEoE",
+       "title": "Gamma"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 1,
+       "rowCount": 200,
+       "sheetId": "2sCs5a",
+       "title": "Delta-renamed"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 2,
+       "rowCount": 200,
+       "sheetId": "4b399c",
+       "title": "Sheet1"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 3,
+       "rowCount": 200,
+       "sheetId": "2swukM",
+       "title": "Beta"
+      }
+     ],
+     "spreadsheetToken": "Examplef7930875ae592bf7fa69"
+    },
+    "msg": "success"
+   },
+   "observed": {
+    "revision": 9,
+    "metainfo_sheets": [
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 0,
+      "rowCount": 200,
+      "sheetId": "2szEoE",
+      "title": "Gamma"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 1,
+      "rowCount": 200,
+      "sheetId": "2sCs5a",
+      "title": "Delta-renamed"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 2,
+      "rowCount": 200,
+      "sheetId": "4b399c",
+      "title": "Sheet1"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 3,
+      "rowCount": 200,
+      "sheetId": "2swukM",
+      "title": "Beta"
+     }
+    ],
+    "v3_sheets": [
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 0,
+      "resource_type": "sheet",
+      "sheet_id": "2szEoE",
+      "title": "Gamma"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 1,
+      "resource_type": "sheet",
+      "sheet_id": "2sCs5a",
+      "title": "Delta-renamed"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 2,
+      "resource_type": "sheet",
+      "sheet_id": "4b399c",
+      "title": "Sheet1"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 3,
+      "resource_type": "sheet",
+      "sheet_id": "2swukM",
+      "title": "Beta"
+     }
+    ]
+   }
+  },
+  {
+   "label": "I) title='Gamma' on Beta — a DUPLICATE of another tab's title",
+   "method": "POST",
+   "path": "/open-apis/sheets/v2/spreadsheets/Examplef7930875ae592bf7fa69/sheets_batch_update",
+   "request_body": {
+    "requests": [
+     {
+      "updateSheet": {
+       "properties": {
+        "sheetId": "2swukM",
+        "title": "Gamma"
+       }
+      }
+     }
+    ]
+   },
+   "http_status": 200,
+   "code": 90210,
+   "msg": "sheetTitle already exist in snapshot",
+   "response": {
+    "code": 90210,
+    "data": {},
+    "msg": "sheetTitle already exist in snapshot"
+   }
+  },
+  {
+   "label": "state AFTER the duplicate-title attempt",
+   "method": "GET",
+   "path": "metainfo+sheets/query",
+   "request_body": null,
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "properties": {
+      "ownerUser": 9000000000000000004,
+      "revision": 9,
+      "sheetCount": 4,
+      "title": "larkdocio-harness-DISPOSABLE-1785521830-58648"
+     },
+     "sheets": [
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 0,
+       "rowCount": 200,
+       "sheetId": "2szEoE",
+       "title": "Gamma"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 1,
+       "rowCount": 200,
+       "sheetId": "2sCs5a",
+       "title": "Delta-renamed"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 2,
+       "rowCount": 200,
+       "sheetId": "4b399c",
+       "title": "Sheet1"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 3,
+       "rowCount": 200,
+       "sheetId": "2swukM",
+       "title": "Beta"
+      }
+     ],
+     "spreadsheetToken": "Examplef7930875ae592bf7fa69"
+    },
+    "msg": "success"
+   },
+   "observed": {
+    "revision": 9,
+    "metainfo_sheets": [
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 0,
+      "rowCount": 200,
+      "sheetId": "2szEoE",
+      "title": "Gamma"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 1,
+      "rowCount": 200,
+      "sheetId": "2sCs5a",
+      "title": "Delta-renamed"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 2,
+      "rowCount": 200,
+      "sheetId": "4b399c",
+      "title": "Sheet1"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 3,
+      "rowCount": 200,
+      "sheetId": "2swukM",
+      "title": "Beta"
+     }
+    ],
+    "v3_sheets": [
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 0,
+      "resource_type": "sheet",
+      "sheet_id": "2szEoE",
+      "title": "Gamma"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 1,
+      "resource_type": "sheet",
+      "sheet_id": "2sCs5a",
+      "title": "Delta-renamed"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 2,
+      "resource_type": "sheet",
+      "sheet_id": "4b399c",
+      "title": "Sheet1"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 3,
+      "resource_type": "sheet",
+      "sheet_id": "2swukM",
+      "title": "Beta"
+     }
+    ]
+   }
+  },
+  {
+   "label": "J) title='gamma' on Beta — differs from 'Gamma' by CASE ONLY",
+   "method": "POST",
+   "path": "/open-apis/sheets/v2/spreadsheets/Examplef7930875ae592bf7fa69/sheets_batch_update",
+   "request_body": {
+    "requests": [
+     {
+      "updateSheet": {
+       "properties": {
+        "sheetId": "2swukM",
+        "title": "gamma"
+       }
+      }
+     }
+    ]
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "replies": [
+      {
+       "updateSheet": {
+        "properties": {
+         "sheetId": "2swukM",
+         "title": "gamma"
+        }
+       }
+      }
+     ]
+    },
+    "msg": "success"
+   }
+  },
+  {
+   "label": "state AFTER the case-only attempt",
+   "method": "GET",
+   "path": "metainfo+sheets/query",
+   "request_body": null,
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "properties": {
+      "ownerUser": 9000000000000000004,
+      "revision": 10,
+      "sheetCount": 4,
+      "title": "larkdocio-harness-DISPOSABLE-1785521830-58648"
+     },
+     "sheets": [
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 0,
+       "rowCount": 200,
+       "sheetId": "2szEoE",
+       "title": "Gamma"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 1,
+       "rowCount": 200,
+       "sheetId": "2sCs5a",
+       "title": "Delta-renamed"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 2,
+       "rowCount": 200,
+       "sheetId": "4b399c",
+       "title": "Sheet1"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 3,
+       "rowCount": 200,
+       "sheetId": "2swukM",
+       "title": "gamma"
+      }
+     ],
+     "spreadsheetToken": "Examplef7930875ae592bf7fa69"
+    },
+    "msg": "success"
+   },
+   "observed": {
+    "revision": 10,
+    "metainfo_sheets": [
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 0,
+      "rowCount": 200,
+      "sheetId": "2szEoE",
+      "title": "Gamma"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 1,
+      "rowCount": 200,
+      "sheetId": "2sCs5a",
+      "title": "Delta-renamed"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 2,
+      "rowCount": 200,
+      "sheetId": "4b399c",
+      "title": "Sheet1"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 3,
+      "rowCount": 200,
+      "sheetId": "2swukM",
+      "title": "gamma"
+     }
+    ],
+    "v3_sheets": [
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 0,
+      "resource_type": "sheet",
+      "sheet_id": "2szEoE",
+      "title": "Gamma"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 1,
+      "resource_type": "sheet",
+      "sheet_id": "2sCs5a",
+      "title": "Delta-renamed"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 2,
+      "resource_type": "sheet",
+      "sheet_id": "4b399c",
+      "title": "Sheet1"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 3,
+      "resource_type": "sheet",
+      "sheet_id": "2swukM",
+      "title": "gamma"
+     }
+    ]
+   }
+  },
+  {
+   "label": "K) title='' on Beta — the EMPTY title",
+   "method": "POST",
+   "path": "/open-apis/sheets/v2/spreadsheets/Examplef7930875ae592bf7fa69/sheets_batch_update",
+   "request_body": {
+    "requests": [
+     {
+      "updateSheet": {
+       "properties": {
+        "sheetId": "2swukM",
+        "title": ""
+       }
+      }
+     }
+    ]
+   },
+   "http_status": 200,
+   "code": 90207,
+   "msg": "sheetTitle should not be empty",
+   "response": {
+    "code": 90207,
+    "data": {},
+    "msg": "sheetTitle should not be empty"
+   }
+  },
+  {
+   "label": "state AFTER the empty-title attempt",
+   "method": "GET",
+   "path": "metainfo+sheets/query",
+   "request_body": null,
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "properties": {
+      "ownerUser": 9000000000000000004,
+      "revision": 10,
+      "sheetCount": 4,
+      "title": "larkdocio-harness-DISPOSABLE-1785521830-58648"
+     },
+     "sheets": [
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 0,
+       "rowCount": 200,
+       "sheetId": "2szEoE",
+       "title": "Gamma"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 1,
+       "rowCount": 200,
+       "sheetId": "2sCs5a",
+       "title": "Delta-renamed"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 2,
+       "rowCount": 200,
+       "sheetId": "4b399c",
+       "title": "Sheet1"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 3,
+       "rowCount": 200,
+       "sheetId": "2swukM",
+       "title": "gamma"
+      }
+     ],
+     "spreadsheetToken": "Examplef7930875ae592bf7fa69"
+    },
+    "msg": "success"
+   },
+   "observed": {
+    "revision": 10,
+    "metainfo_sheets": [
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 0,
+      "rowCount": 200,
+      "sheetId": "2szEoE",
+      "title": "Gamma"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 1,
+      "rowCount": 200,
+      "sheetId": "2sCs5a",
+      "title": "Delta-renamed"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 2,
+      "rowCount": 200,
+      "sheetId": "4b399c",
+      "title": "Sheet1"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 3,
+      "rowCount": 200,
+      "sheetId": "2swukM",
+      "title": "gamma"
+     }
+    ],
+    "v3_sheets": [
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 0,
+      "resource_type": "sheet",
+      "sheet_id": "2szEoE",
+      "title": "Gamma"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 1,
+      "resource_type": "sheet",
+      "sheet_id": "2sCs5a",
+      "title": "Delta-renamed"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 2,
+      "resource_type": "sheet",
+      "sheet_id": "4b399c",
+      "title": "Sheet1"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 3,
+      "resource_type": "sheet",
+      "sheet_id": "2swukM",
+      "title": "gamma"
+     }
+    ]
+   }
+  },
+  {
+   "label": "L) title=100 chars on Beta — the documented length limit",
+   "method": "POST",
+   "path": "/open-apis/sheets/v2/spreadsheets/Examplef7930875ae592bf7fa69/sheets_batch_update",
+   "request_body": {
+    "requests": [
+     {
+      "updateSheet": {
+       "properties": {
+        "sheetId": "2swukM",
+        "title": "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL"
+       }
+      }
+     }
+    ]
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "replies": [
+      {
+       "updateSheet": {
+        "properties": {
+         "sheetId": "2swukM",
+         "title": "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL"
+        }
+       }
+      }
+     ]
+    },
+    "msg": "success"
+   }
+  },
+  {
+   "label": "M) title=101 chars on Beta — ONE past the limit",
+   "method": "POST",
+   "path": "/open-apis/sheets/v2/spreadsheets/Examplef7930875ae592bf7fa69/sheets_batch_update",
+   "request_body": {
+    "requests": [
+     {
+      "updateSheet": {
+       "properties": {
+        "sheetId": "2swukM",
+        "title": "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL"
+       }
+      }
+     }
+    ]
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "replies": [
+      {
+       "updateSheet": {
+        "properties": {
+         "sheetId": "2swukM",
+         "title": "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL"
+        }
+       }
+      }
+     ]
+    },
+    "msg": "success"
+   }
+  },
+  {
+   "label": "state AFTER the length attempts",
+   "method": "GET",
+   "path": "metainfo+sheets/query",
+   "request_body": null,
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "properties": {
+      "ownerUser": 9000000000000000004,
+      "revision": 12,
+      "sheetCount": 4,
+      "title": "larkdocio-harness-DISPOSABLE-1785521830-58648"
+     },
+     "sheets": [
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 0,
+       "rowCount": 200,
+       "sheetId": "2szEoE",
+       "title": "Gamma"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 1,
+       "rowCount": 200,
+       "sheetId": "2sCs5a",
+       "title": "Delta-renamed"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 2,
+       "rowCount": 200,
+       "sheetId": "4b399c",
+       "title": "Sheet1"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 3,
+       "rowCount": 200,
+       "sheetId": "2swukM",
+       "title": "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL"
+      }
+     ],
+     "spreadsheetToken": "Examplef7930875ae592bf7fa69"
+    },
+    "msg": "success"
+   },
+   "observed": {
+    "revision": 12,
+    "metainfo_sheets": [
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 0,
+      "rowCount": 200,
+      "sheetId": "2szEoE",
+      "title": "Gamma"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 1,
+      "rowCount": 200,
+      "sheetId": "2sCs5a",
+      "title": "Delta-renamed"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 2,
+      "rowCount": 200,
+      "sheetId": "4b399c",
+      "title": "Sheet1"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 3,
+      "rowCount": 200,
+      "sheetId": "2swukM",
+      "title": "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL"
+     }
+    ],
+    "v3_sheets": [
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 0,
+      "resource_type": "sheet",
+      "sheet_id": "2szEoE",
+      "title": "Gamma"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 1,
+      "resource_type": "sheet",
+      "sheet_id": "2sCs5a",
+      "title": "Delta-renamed"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 2,
+      "resource_type": "sheet",
+      "sheet_id": "4b399c",
+      "title": "Sheet1"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 3,
+      "resource_type": "sheet",
+      "sheet_id": "2swukM",
+      "title": "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL"
+     }
+    ]
+   }
+  },
+  {
+   "label": "N) title='Beta' on Beta — restore",
+   "method": "POST",
+   "path": "/open-apis/sheets/v2/spreadsheets/Examplef7930875ae592bf7fa69/sheets_batch_update",
+   "request_body": {
+    "requests": [
+     {
+      "updateSheet": {
+       "properties": {
+        "sheetId": "2swukM",
+        "title": "Beta"
+       }
+      }
+     }
+    ]
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "replies": [
+      {
+       "updateSheet": {
+        "properties": {
+         "sheetId": "2swukM",
+         "title": "Beta"
+        }
+       }
+      }
+     ]
+    },
+    "msg": "success"
+   }
+  },
+  {
+   "label": "O) hidden=true on Gamma",
+   "method": "POST",
+   "path": "/open-apis/sheets/v2/spreadsheets/Examplef7930875ae592bf7fa69/sheets_batch_update",
+   "request_body": {
+    "requests": [
+     {
+      "updateSheet": {
+       "properties": {
+        "sheetId": "2szEoE",
+        "hidden": true
+       }
+      }
+     }
+    ]
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "replies": [
+      {
+       "updateSheet": {
+        "properties": {
+         "hidden": true,
+         "sheetId": "2szEoE",
+         "title": ""
+        }
+       }
+      }
+     ]
+    },
+    "msg": "success"
+   }
+  },
+  {
+   "label": "state AFTER hiding Gamma",
+   "method": "GET",
+   "path": "metainfo+sheets/query",
+   "request_body": null,
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "properties": {
+      "ownerUser": 9000000000000000004,
+      "revision": 14,
+      "sheetCount": 4,
+      "title": "larkdocio-harness-DISPOSABLE-1785521830-58648"
+     },
+     "sheets": [
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 0,
+       "rowCount": 200,
+       "sheetId": "2szEoE",
+       "title": "Gamma"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 1,
+       "rowCount": 200,
+       "sheetId": "2sCs5a",
+       "title": "Delta-renamed"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 2,
+       "rowCount": 200,
+       "sheetId": "4b399c",
+       "title": "Sheet1"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 3,
+       "rowCount": 200,
+       "sheetId": "2swukM",
+       "title": "Beta"
+      }
+     ],
+     "spreadsheetToken": "Examplef7930875ae592bf7fa69"
+    },
+    "msg": "success"
+   },
+   "observed": {
+    "revision": 14,
+    "metainfo_sheets": [
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 0,
+      "rowCount": 200,
+      "sheetId": "2szEoE",
+      "title": "Gamma"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 1,
+      "rowCount": 200,
+      "sheetId": "2sCs5a",
+      "title": "Delta-renamed"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 2,
+      "rowCount": 200,
+      "sheetId": "4b399c",
+      "title": "Sheet1"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 3,
+      "rowCount": 200,
+      "sheetId": "2swukM",
+      "title": "Beta"
+     }
+    ],
+    "v3_sheets": [
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": true,
+      "index": 0,
+      "resource_type": "sheet",
+      "sheet_id": "2szEoE",
+      "title": "Gamma"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 1,
+      "resource_type": "sheet",
+      "sheet_id": "2sCs5a",
+      "title": "Delta-renamed"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 2,
+      "resource_type": "sheet",
+      "sheet_id": "4b399c",
+      "title": "Sheet1"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 3,
+      "resource_type": "sheet",
+      "sheet_id": "2swukM",
+      "title": "Beta"
+     }
+    ]
+   }
+  },
+  {
+   "label": "P) hidden=true on Gamma AGAIN (already hidden)",
+   "method": "POST",
+   "path": "/open-apis/sheets/v2/spreadsheets/Examplef7930875ae592bf7fa69/sheets_batch_update",
+   "request_body": {
+    "requests": [
+     {
+      "updateSheet": {
+       "properties": {
+        "sheetId": "2szEoE",
+        "hidden": true
+       }
+      }
+     }
+    ]
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "replies": [
+      {
+       "updateSheet": {
+        "properties": {
+         "hidden": true,
+         "sheetId": "2szEoE",
+         "title": ""
+        }
+       }
+      }
+     ]
+    },
+    "msg": "success"
+   }
+  },
+  {
+   "label": "Q) hidden=false on Gamma — show",
+   "method": "POST",
+   "path": "/open-apis/sheets/v2/spreadsheets/Examplef7930875ae592bf7fa69/sheets_batch_update",
+   "request_body": {
+    "requests": [
+     {
+      "updateSheet": {
+       "properties": {
+        "sheetId": "2szEoE",
+        "hidden": false
+       }
+      }
+     }
+    ]
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "replies": [
+      {
+       "updateSheet": {
+        "properties": {
+         "hidden": false,
+         "sheetId": "2szEoE",
+         "title": ""
+        }
+       }
+      }
+     ]
+    },
+    "msg": "success"
+   }
+  },
+  {
+   "label": "R) hidden=false on Gamma AGAIN (already visible)",
+   "method": "POST",
+   "path": "/open-apis/sheets/v2/spreadsheets/Examplef7930875ae592bf7fa69/sheets_batch_update",
+   "request_body": {
+    "requests": [
+     {
+      "updateSheet": {
+       "properties": {
+        "sheetId": "2szEoE",
+        "hidden": false
+       }
+      }
+     }
+    ]
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "replies": [
+      {
+       "updateSheet": {
+        "properties": {
+         "hidden": false,
+         "sheetId": "2szEoE",
+         "title": ""
+        }
+       }
+      }
+     ]
+    },
+    "msg": "success"
+   }
+  },
+  {
+   "label": "state AFTER the hide/show idempotence run",
+   "method": "GET",
+   "path": "metainfo+sheets/query",
+   "request_body": null,
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "properties": {
+      "ownerUser": 9000000000000000004,
+      "revision": 16,
+      "sheetCount": 4,
+      "title": "larkdocio-harness-DISPOSABLE-1785521830-58648"
+     },
+     "sheets": [
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 0,
+       "rowCount": 200,
+       "sheetId": "2szEoE",
+       "title": "Gamma"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 1,
+       "rowCount": 200,
+       "sheetId": "2sCs5a",
+       "title": "Delta-renamed"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 2,
+       "rowCount": 200,
+       "sheetId": "4b399c",
+       "title": "Sheet1"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 3,
+       "rowCount": 200,
+       "sheetId": "2swukM",
+       "title": "Beta"
+      }
+     ],
+     "spreadsheetToken": "Examplef7930875ae592bf7fa69"
+    },
+    "msg": "success"
+   },
+   "observed": {
+    "revision": 16,
+    "metainfo_sheets": [
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 0,
+      "rowCount": 200,
+      "sheetId": "2szEoE",
+      "title": "Gamma"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 1,
+      "rowCount": 200,
+      "sheetId": "2sCs5a",
+      "title": "Delta-renamed"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 2,
+      "rowCount": 200,
+      "sheetId": "4b399c",
+      "title": "Sheet1"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 3,
+      "rowCount": 200,
+      "sheetId": "2swukM",
+      "title": "Beta"
+     }
+    ],
+    "v3_sheets": [
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 0,
+      "resource_type": "sheet",
+      "sheet_id": "2szEoE",
+      "title": "Gamma"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 1,
+      "resource_type": "sheet",
+      "sheet_id": "2sCs5a",
+      "title": "Delta-renamed"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 2,
+      "resource_type": "sheet",
+      "sheet_id": "4b399c",
+      "title": "Sheet1"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 3,
+      "resource_type": "sheet",
+      "sheet_id": "2swukM",
+      "title": "Beta"
+     }
+    ]
+   }
+  },
+  {
+   "label": "S0) hidden=true on 2szEoE — hiding toward ALL-hidden",
+   "method": "POST",
+   "path": "/open-apis/sheets/v2/spreadsheets/Examplef7930875ae592bf7fa69/sheets_batch_update",
+   "request_body": {
+    "requests": [
+     {
+      "updateSheet": {
+       "properties": {
+        "sheetId": "2szEoE",
+        "hidden": true
+       }
+      }
+     }
+    ]
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "replies": [
+      {
+       "updateSheet": {
+        "properties": {
+         "hidden": true,
+         "sheetId": "2szEoE",
+         "title": ""
+        }
+       }
+      }
+     ]
+    },
+    "msg": "success"
+   }
+  },
+  {
+   "label": "S1) hidden=true on 2sCs5a — hiding toward ALL-hidden",
+   "method": "POST",
+   "path": "/open-apis/sheets/v2/spreadsheets/Examplef7930875ae592bf7fa69/sheets_batch_update",
+   "request_body": {
+    "requests": [
+     {
+      "updateSheet": {
+       "properties": {
+        "sheetId": "2sCs5a",
+        "hidden": true
+       }
+      }
+     }
+    ]
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "replies": [
+      {
+       "updateSheet": {
+        "properties": {
+         "hidden": true,
+         "sheetId": "2sCs5a",
+         "title": ""
+        }
+       }
+      }
+     ]
+    },
+    "msg": "success"
+   }
+  },
+  {
+   "label": "S2) hidden=true on 4b399c — hiding toward ALL-hidden",
+   "method": "POST",
+   "path": "/open-apis/sheets/v2/spreadsheets/Examplef7930875ae592bf7fa69/sheets_batch_update",
+   "request_body": {
+    "requests": [
+     {
+      "updateSheet": {
+       "properties": {
+        "sheetId": "4b399c",
+        "hidden": true
+       }
+      }
+     }
+    ]
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "replies": [
+      {
+       "updateSheet": {
+        "properties": {
+         "hidden": true,
+         "sheetId": "4b399c",
+         "title": ""
+        }
+       }
+      }
+     ]
+    },
+    "msg": "success"
+   }
+  },
+  {
+   "label": "S3) hidden=true on 2swukM — hiding toward ALL-hidden",
+   "method": "POST",
+   "path": "/open-apis/sheets/v2/spreadsheets/Examplef7930875ae592bf7fa69/sheets_batch_update",
+   "request_body": {
+    "requests": [
+     {
+      "updateSheet": {
+       "properties": {
+        "sheetId": "2swukM",
+        "hidden": true
+       }
+      }
+     }
+    ]
+   },
+   "http_status": 200,
+   "code": 95201,
+   "msg": "server error",
+   "response": {
+    "code": 95201,
+    "data": {},
+    "msg": "server error"
+   }
+  },
+  {
+   "label": "state AFTER the hide-ALL attempt",
+   "method": "GET",
+   "path": "metainfo+sheets/query",
+   "request_body": null,
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "properties": {
+      "ownerUser": 9000000000000000004,
+      "revision": 19,
+      "sheetCount": 4,
+      "title": "larkdocio-harness-DISPOSABLE-1785521830-58648"
+     },
+     "sheets": [
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 0,
+       "rowCount": 200,
+       "sheetId": "2szEoE",
+       "title": "Gamma"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 1,
+       "rowCount": 200,
+       "sheetId": "2sCs5a",
+       "title": "Delta-renamed"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 2,
+       "rowCount": 200,
+       "sheetId": "4b399c",
+       "title": "Sheet1"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 3,
+       "rowCount": 200,
+       "sheetId": "2swukM",
+       "title": "Beta"
+      }
+     ],
+     "spreadsheetToken": "Examplef7930875ae592bf7fa69"
+    },
+    "msg": "success"
+   },
+   "observed": {
+    "revision": 19,
+    "metainfo_sheets": [
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 0,
+      "rowCount": 200,
+      "sheetId": "2szEoE",
+      "title": "Gamma"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 1,
+      "rowCount": 200,
+      "sheetId": "2sCs5a",
+      "title": "Delta-renamed"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 2,
+      "rowCount": 200,
+      "sheetId": "4b399c",
+      "title": "Sheet1"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 3,
+      "rowCount": 200,
+      "sheetId": "2swukM",
+      "title": "Beta"
+     }
+    ],
+    "v3_sheets": [
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": true,
+      "index": 0,
+      "resource_type": "sheet",
+      "sheet_id": "2szEoE",
+      "title": "Gamma"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": true,
+      "index": 1,
+      "resource_type": "sheet",
+      "sheet_id": "2sCs5a",
+      "title": "Delta-renamed"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": true,
+      "index": 2,
+      "resource_type": "sheet",
+      "sheet_id": "4b399c",
+      "title": "Sheet1"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 3,
+      "resource_type": "sheet",
+      "sheet_id": "2swukM",
+      "title": "Beta"
+     }
+    ]
+   }
+  },
+  {
+   "label": "T) hidden=false on 2szEoE — restore",
+   "method": "POST",
+   "path": "/open-apis/sheets/v2/spreadsheets/Examplef7930875ae592bf7fa69/sheets_batch_update",
+   "request_body": {
+    "requests": [
+     {
+      "updateSheet": {
+       "properties": {
+        "sheetId": "2szEoE",
+        "hidden": false
+       }
+      }
+     }
+    ]
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "replies": [
+      {
+       "updateSheet": {
+        "properties": {
+         "hidden": false,
+         "sheetId": "2szEoE",
+         "title": ""
+        }
+       }
+      }
+     ]
+    },
+    "msg": "success"
+   }
+  },
+  {
+   "label": "T) hidden=false on 2sCs5a — restore",
+   "method": "POST",
+   "path": "/open-apis/sheets/v2/spreadsheets/Examplef7930875ae592bf7fa69/sheets_batch_update",
+   "request_body": {
+    "requests": [
+     {
+      "updateSheet": {
+       "properties": {
+        "sheetId": "2sCs5a",
+        "hidden": false
+       }
+      }
+     }
+    ]
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "replies": [
+      {
+       "updateSheet": {
+        "properties": {
+         "hidden": false,
+         "sheetId": "2sCs5a",
+         "title": ""
+        }
+       }
+      }
+     ]
+    },
+    "msg": "success"
+   }
+  },
+  {
+   "label": "T) hidden=false on 4b399c — restore",
+   "method": "POST",
+   "path": "/open-apis/sheets/v2/spreadsheets/Examplef7930875ae592bf7fa69/sheets_batch_update",
+   "request_body": {
+    "requests": [
+     {
+      "updateSheet": {
+       "properties": {
+        "sheetId": "4b399c",
+        "hidden": false
+       }
+      }
+     }
+    ]
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "replies": [
+      {
+       "updateSheet": {
+        "properties": {
+         "hidden": false,
+         "sheetId": "4b399c",
+         "title": ""
+        }
+       }
+      }
+     ]
+    },
+    "msg": "success"
+   }
+  },
+  {
+   "label": "U) reorder AND retitle in ONE batch (two updateSheet elements)",
+   "method": "POST",
+   "path": "/open-apis/sheets/v2/spreadsheets/Examplef7930875ae592bf7fa69/sheets_batch_update",
+   "request_body": {
+    "requests": [
+     {
+      "updateSheet": {
+       "properties": {
+        "sheetId": "2swukM",
+        "index": 0
+       }
+      }
+     },
+     {
+      "updateSheet": {
+       "properties": {
+        "sheetId": "2swukM",
+        "title": "Beta-2"
+       }
+      }
+     }
+    ]
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "replies": [
+      {
+       "updateSheet": {
+        "properties": {
+         "index": 0,
+         "sheetId": "2swukM",
+         "title": ""
+        }
+       }
+      },
+      {
+       "updateSheet": {
+        "properties": {
+         "sheetId": "2swukM",
+         "title": "Beta-2"
+        }
+       }
+      }
+     ]
+    },
+    "msg": "success"
+   }
+  },
+  {
+   "label": "state AFTER the one-batch pair",
+   "method": "GET",
+   "path": "metainfo+sheets/query",
+   "request_body": null,
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "properties": {
+      "ownerUser": 9000000000000000004,
+      "revision": 24,
+      "sheetCount": 4,
+      "title": "larkdocio-harness-DISPOSABLE-1785521830-58648"
+     },
+     "sheets": [
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 0,
+       "rowCount": 200,
+       "sheetId": "2swukM",
+       "title": "Beta-2"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 1,
+       "rowCount": 200,
+       "sheetId": "2szEoE",
+       "title": "Gamma"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 2,
+       "rowCount": 200,
+       "sheetId": "2sCs5a",
+       "title": "Delta-renamed"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 3,
+       "rowCount": 200,
+       "sheetId": "4b399c",
+       "title": "Sheet1"
+      }
+     ],
+     "spreadsheetToken": "Examplef7930875ae592bf7fa69"
+    },
+    "msg": "success"
+   },
+   "observed": {
+    "revision": 24,
+    "metainfo_sheets": [
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 0,
+      "rowCount": 200,
+      "sheetId": "2swukM",
+      "title": "Beta-2"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 1,
+      "rowCount": 200,
+      "sheetId": "2szEoE",
+      "title": "Gamma"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 2,
+      "rowCount": 200,
+      "sheetId": "2sCs5a",
+      "title": "Delta-renamed"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 3,
+      "rowCount": 200,
+      "sheetId": "4b399c",
+      "title": "Sheet1"
+     }
+    ],
+    "v3_sheets": [
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 0,
+      "resource_type": "sheet",
+      "sheet_id": "2swukM",
+      "title": "Beta-2"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 1,
+      "resource_type": "sheet",
+      "sheet_id": "2szEoE",
+      "title": "Gamma"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 2,
+      "resource_type": "sheet",
+      "sheet_id": "2sCs5a",
+      "title": "Delta-renamed"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 3,
+      "resource_type": "sheet",
+      "sheet_id": "4b399c",
+      "title": "Sheet1"
+     }
+    ]
+   }
+  },
+  {
+   "label": "V) index AND title in ONE updateSheet element",
+   "method": "POST",
+   "path": "/open-apis/sheets/v2/spreadsheets/Examplef7930875ae592bf7fa69/sheets_batch_update",
+   "request_body": {
+    "requests": [
+     {
+      "updateSheet": {
+       "properties": {
+        "sheetId": "2swukM",
+        "index": 2,
+        "title": "Beta-3"
+       }
+      }
+     }
+    ]
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "replies": [
+      {
+       "updateSheet": {
+        "properties": {
+         "index": 2,
+         "sheetId": "2swukM",
+         "title": "Beta-3"
+        }
+       }
+      }
+     ]
+    },
+    "msg": "success"
+   }
+  },
+  {
+   "label": "state AFTER the single-element pair",
+   "method": "GET",
+   "path": "metainfo+sheets/query",
+   "request_body": null,
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "properties": {
+      "ownerUser": 9000000000000000004,
+      "revision": 25,
+      "sheetCount": 4,
+      "title": "larkdocio-harness-DISPOSABLE-1785521830-58648"
+     },
+     "sheets": [
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 0,
+       "rowCount": 200,
+       "sheetId": "2szEoE",
+       "title": "Gamma"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 1,
+       "rowCount": 200,
+       "sheetId": "2sCs5a",
+       "title": "Delta-renamed"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 2,
+       "rowCount": 200,
+       "sheetId": "2swukM",
+       "title": "Beta-3"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 3,
+       "rowCount": 200,
+       "sheetId": "4b399c",
+       "title": "Sheet1"
+      }
+     ],
+     "spreadsheetToken": "Examplef7930875ae592bf7fa69"
+    },
+    "msg": "success"
+   },
+   "observed": {
+    "revision": 25,
+    "metainfo_sheets": [
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 0,
+      "rowCount": 200,
+      "sheetId": "2szEoE",
+      "title": "Gamma"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 1,
+      "rowCount": 200,
+      "sheetId": "2sCs5a",
+      "title": "Delta-renamed"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 2,
+      "rowCount": 200,
+      "sheetId": "2swukM",
+      "title": "Beta-3"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 3,
+      "rowCount": 200,
+      "sheetId": "4b399c",
+      "title": "Sheet1"
+     }
+    ],
+    "v3_sheets": [
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 0,
+      "resource_type": "sheet",
+      "sheet_id": "2szEoE",
+      "title": "Gamma"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 1,
+      "resource_type": "sheet",
+      "sheet_id": "2sCs5a",
+      "title": "Delta-renamed"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 2,
+      "resource_type": "sheet",
+      "sheet_id": "2swukM",
+      "title": "Beta-3"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 3,
+      "resource_type": "sheet",
+      "sheet_id": "4b399c",
+      "title": "Sheet1"
+     }
+    ]
+   }
+  }
+ ],
+ "spreadsheet_token": "Examplef7930875ae592bf7fa69",
+ "first_sheet_id": "4b399c",
+ "BASELINE_ORDER": [
+  [
+   0,
+   "2sCs5a",
+   "Delta",
+   false
+  ],
+  [
+   1,
+   "2szEoE",
+   "Gamma",
+   false
+  ],
+  [
+   2,
+   "2swukM",
+   "Beta",
+   false
+  ],
+  [
+   3,
+   "4b399c",
+   "Sheet1",
+   false
+  ]
+ ],
+ "INDEX_TO_FIRST": {
+  "order": [
+   [
+    0,
+    "2sCs5a",
+    "Delta",
+    false
+   ],
+   [
+    1,
+    "2szEoE",
+    "Gamma",
+    false
+   ],
+   [
+    2,
+    "2swukM",
+    "Beta",
+    false
+   ],
+   [
+    3,
+    "4b399c",
+    "Sheet1",
+    false
+   ]
+  ],
+  "moved": "2sCs5a",
+  "asked_index": 0
+ },
+ "INDEX_NOOP": {
+  "asked_index": 0,
+  "order": [
+   [
+    0,
+    "2sCs5a",
+    "Delta",
+    false
+   ],
+   [
+    1,
+    "2szEoE",
+    "Gamma",
+    false
+   ],
+   [
+    2,
+    "2swukM",
+    "Beta",
+    false
+   ],
+   [
+    3,
+    "4b399c",
+    "Sheet1",
+    false
+   ]
+  ],
+  "revision_before": 4,
+  "revision_after": 4,
+  "revision_moved": false
+ },
+ "INDEX_TO_MIDDLE": {
+  "asked_index": 2,
+  "order": [
+   [
+    0,
+    "2szEoE",
+    "Gamma",
+    false
+   ],
+   [
+    1,
+    "2swukM",
+    "Beta",
+    false
+   ],
+   [
+    2,
+    "2sCs5a",
+    "Delta",
+    false
+   ],
+   [
+    3,
+    "4b399c",
+    "Sheet1",
+    false
+   ]
+  ]
+ },
+ "INDEX_TO_LAST": {
+  "asked_index": 3,
+  "tab_count": 4,
+  "order": [
+   [
+    0,
+    "2szEoE",
+    "Gamma",
+    false
+   ],
+   [
+    1,
+    "2sCs5a",
+    "Delta",
+    false
+   ],
+   [
+    2,
+    "4b399c",
+    "Sheet1",
+    false
+   ],
+   [
+    3,
+    "2swukM",
+    "Beta",
+    false
+   ]
+  ]
+ },
+ "INDEX_OUT_OF_RANGE": {
+  "tab_count": 4,
+  "at_count": {
+   "asked": 4,
+   "code": 0,
+   "msg": "success"
+  },
+  "far": {
+   "asked": 99,
+   "code": 0,
+   "msg": "success"
+  },
+  "negative": {
+   "asked": -1,
+   "code": 90204,
+   "msg": "invalid parameter: Requests[0].UpdateSheet.Properties.Index"
+  },
+  "order_after": [
+   [
+    0,
+    "2szEoE",
+    "Gamma",
+    false
+   ],
+   [
+    1,
+    "2sCs5a",
+    "Delta",
+    false
+   ],
+   [
+    2,
+    "4b399c",
+    "Sheet1",
+    false
+   ],
+   [
+    3,
+    "2swukM",
+    "Beta",
+    false
+   ]
+  ]
+ },
+ "RETITLE_PLAIN": {
+  "reply": [
+   {
+    "updateSheet": {
+     "properties": {
+      "sheetId": "2sCs5a",
+      "title": "Delta-renamed"
+     }
+    }
+   }
+  ],
+  "order": [
+   [
+    0,
+    "2szEoE",
+    "Gamma",
+    false
+   ],
+   [
+    1,
+    "2sCs5a",
+    "Delta-renamed",
+    false
+   ],
+   [
+    2,
+    "4b399c",
+    "Sheet1",
+    false
+   ],
+   [
+    3,
+    "2swukM",
+    "Beta",
+    false
+   ]
+  ],
+  "sheet_id_survived": true
+ },
+ "RETITLE_DUPLICATE": {
+  "code": 90210,
+  "msg": "sheetTitle already exist in snapshot",
+  "response": {
+   "code": 90210,
+   "data": {},
+   "msg": "sheetTitle already exist in snapshot"
+  },
+  "order_after": [
+   [
+    0,
+    "2szEoE",
+    "Gamma",
+    false
+   ],
+   [
+    1,
+    "2sCs5a",
+    "Delta-renamed",
+    false
+   ],
+   [
+    2,
+    "4b399c",
+    "Sheet1",
+    false
+   ],
+   [
+    3,
+    "2swukM",
+    "Beta",
+    false
+   ]
+  ]
+ },
+ "RETITLE_CASE_ONLY": {
+  "code": 0,
+  "msg": "success",
+  "order_after": [
+   [
+    0,
+    "2szEoE",
+    "Gamma",
+    false
+   ],
+   [
+    1,
+    "2sCs5a",
+    "Delta-renamed",
+    false
+   ],
+   [
+    2,
+    "4b399c",
+    "Sheet1",
+    false
+   ],
+   [
+    3,
+    "2swukM",
+    "gamma",
+    false
+   ]
+  ]
+ },
+ "RETITLE_EMPTY": {
+  "code": 90207,
+  "msg": "sheetTitle should not be empty",
+  "response": {
+   "code": 90207,
+   "data": {},
+   "msg": "sheetTitle should not be empty"
+  },
+  "order_after": [
+   [
+    0,
+    "2szEoE",
+    "Gamma",
+    false
+   ],
+   [
+    1,
+    "2sCs5a",
+    "Delta-renamed",
+    false
+   ],
+   [
+    2,
+    "4b399c",
+    "Sheet1",
+    false
+   ],
+   [
+    3,
+    "2swukM",
+    "gamma",
+    false
+   ]
+  ]
+ },
+ "RETITLE_LENGTH": {
+  "at_100": {
+   "code": 0,
+   "msg": "success"
+  },
+  "at_101": {
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "replies": [
+      {
+       "updateSheet": {
+        "properties": {
+         "sheetId": "2swukM",
+         "title": "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL"
+        }
+       }
+      }
+     ]
+    },
+    "msg": "success"
+   }
+  },
+  "titles_after": [
+   "Gamma",
+   "Delta-renamed",
+   "Sheet1",
+   "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL"
+  ],
+  "title_lengths_after": [
+   5,
+   13,
+   6,
+   101
+  ]
+ },
+ "HIDE_ONE": {
+  "code": 0,
+  "reply": [
+   {
+    "updateSheet": {
+     "properties": {
+      "hidden": true,
+      "sheetId": "2szEoE",
+      "title": ""
+     }
+    }
+   }
+  ],
+  "v3_hidden": {
+   "2szEoE": true,
+   "2sCs5a": false,
+   "4b399c": false,
+   "2swukM": false
+  },
+  "metainfo_keys": [
+   "columnCount",
+   "frozenColCount",
+   "frozenRowCount",
+   "index",
+   "rowCount",
+   "sheetId",
+   "title"
+  ],
+  "metainfo_reports_hidden": false
+ },
+ "HIDDEN_TAB_STILL_READABLE": {
+  "values": [
+   [
+    "hidden-1"
+   ],
+   [
+    "hidden-2"
+   ]
+  ]
+ },
+ "HIDE_SHOW_IDEMPOTENCE": {
+  "repeat_hide": {
+   "code": 0,
+   "msg": "success"
+  },
+  "show": {
+   "code": 0,
+   "msg": "success"
+  },
+  "repeat_show": {
+   "code": 0,
+   "msg": "success"
+  },
+  "revisions": [
+   15,
+   15,
+   16,
+   16
+  ],
+  "v3_hidden": {
+   "2szEoE": false,
+   "2sCs5a": false,
+   "4b399c": false,
+   "2swukM": false
+  }
+ },
+ "HIDE_ALL": {
+  "attempts": [
+   {
+    "sheet_id": "2szEoE",
+    "code": 0,
+    "msg": "success",
+    "response": null
+   },
+   {
+    "sheet_id": "2sCs5a",
+    "code": 0,
+    "msg": "success",
+    "response": null
+   },
+   {
+    "sheet_id": "4b399c",
+    "code": 0,
+    "msg": "success",
+    "response": null
+   },
+   {
+    "sheet_id": "2swukM",
+    "code": 95201,
+    "msg": "server error",
+    "response": {
+     "code": 95201,
+     "data": {},
+     "msg": "server error"
+    }
+   }
+  ],
+  "v3_hidden_after": {
+   "2szEoE": true,
+   "2sCs5a": true,
+   "4b399c": true,
+   "2swukM": false
+  },
+  "visible_left": [
+   "2swukM"
+  ]
+ },
+ "ONE_BATCH_PAIR": {
+  "code": 0,
+  "reply_count": 2,
+  "order": [
+   [
+    0,
+    "2swukM",
+    "Beta-2",
+    false
+   ],
+   [
+    1,
+    "2szEoE",
+    "Gamma",
+    false
+   ],
+   [
+    2,
+    "2sCs5a",
+    "Delta-renamed",
+    false
+   ],
+   [
+    3,
+    "4b399c",
+    "Sheet1",
+    false
+   ]
+  ]
+ },
+ "ONE_ELEMENT_BOTH_FIELDS": {
+  "code": 0,
+  "msg": "success",
+  "order": [
+   [
+    0,
+    "2szEoE",
+    "Gamma",
+    false
+   ],
+   [
+    1,
+    "2sCs5a",
+    "Delta-renamed",
+    false
+   ],
+   [
+    2,
+    "2swukM",
+    "Beta-3",
+    false
+   ],
+   [
+    3,
+    "4b399c",
+    "Sheet1",
+    false
+   ]
+  ]
+ },
+ "VALUES_UNMOVED": {
+  "first_tab": [
+   [
+    "a"
+   ],
+   [
+    "b"
+   ],
+   [
+    "c"
+   ]
+  ]
+ }
+}

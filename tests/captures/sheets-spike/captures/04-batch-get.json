@@ -1,0 +1,91 @@
+{
+  "code": 0,
+  "data": {
+    "revision": 34,
+    "spreadsheetToken": "SheetScratchExample00000001",
+    "totalCells": 25,
+    "valueRanges": [
+      {
+        "majorDimension": "ROWS",
+        "range": "444a1c!A1:D3",
+        "revision": 34,
+        "values": [
+          [
+            "Type",
+            "Value",
+            "Notes",
+            "Value (recreated natively)"
+          ],
+          [
+            "plain string",
+            "hello world",
+            null,
+            "hello world"
+          ],
+          [
+            "string with newline",
+            "line one\n line two",
+            "cell has wrap text",
+            "line one\nline two"
+          ]
+        ]
+      },
+      {
+        "majorDimension": "ROWS",
+        "range": "444a1c!A23:B24",
+        "revision": 34,
+        "values": [
+          [
+            "HAND-ADD: @user mention",
+            {
+              "category": "at-user-block",
+              "en_name": "Example User",
+              "link": "https://avatar.example.invalid/photo.png",
+              "mentionNotify": false,
+              "mentionType": 0,
+              "name": "Example User",
+              "not_notify": false,
+              "text": "@Example User",
+              "token": "9000000000000000002",
+              "type": "mention"
+            }
+          ],
+          [
+            "HAND-ADD: doc-link mention",
+            {
+              "link": "https%3A%2F%2Fyour-domain.larksuite.com%2Fdocx%2FDocScratchExample0000000001",
+              "mentionNotify": false,
+              "mentionType": 22,
+              "text": "Larkdocio Scratch",
+              "token": "DocScratchExample0000000001",
+              "type": "mention"
+            }
+          ]
+        ]
+      },
+      {
+        "majorDimension": "ROWS",
+        "range": "7pg9wE!A1:C3",
+        "revision": 34,
+        "values": [
+          [
+            "merged title spanning A1:C1",
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null
+          ],
+          [
+            "vertical merge A3:A5",
+            "b3 beside merge",
+            null
+          ]
+        ]
+      }
+    ]
+  },
+  "msg": "success"
+}

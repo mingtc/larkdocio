@@ -1,0 +1,74 @@
+{
+  "_probe": "02 — filter range OFFSET to A3:B8 so sheet-absolute and range-relative numbering diverge; the hidden data rows are the SHEET's rows 5 and 7",
+  "request": {
+    "method": "GET",
+    "path": "/open-apis/sheets/v3/spreadsheets/{spreadsheet_token}/sheets/{sheet_id}/filter"
+  },
+  "grid_written": [
+    [
+      "OutsideHeader",
+      "OutsideStatus"
+    ],
+    [
+      "x0",
+      "drop"
+    ],
+    [
+      "Name",
+      "Status"
+    ],
+    [
+      "r1",
+      "keep"
+    ],
+    [
+      "r2",
+      "drop"
+    ],
+    [
+      "r3",
+      "keep"
+    ],
+    [
+      "r4",
+      "drop"
+    ],
+    [
+      "r5",
+      "keep"
+    ]
+  ],
+  "verdict": {
+    "filtered_out_rows": [
+      5,
+      7
+    ],
+    "convention": "SHEET-ABSOLUTE, 1-indexed"
+  },
+  "response": {
+    "code": 0,
+    "data": {
+      "sheet_filter_info": {
+        "filter_infos": [
+          {
+            "col": "B",
+            "conditions": [
+              {
+                "expected": [
+                  "keep"
+                ],
+                "filter_type": "multiValue"
+              }
+            ]
+          }
+        ],
+        "filtered_out_rows": [
+          5,
+          7
+        ],
+        "range": "ce58f1!A3:B8"
+      }
+    },
+    "msg": "success"
+  }
+}

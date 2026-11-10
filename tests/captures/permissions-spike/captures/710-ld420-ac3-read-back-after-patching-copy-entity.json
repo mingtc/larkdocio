@@ -1,0 +1,30 @@
+{
+  "n": 710,
+  "label": "LD420 ac3 read back after patching copy_entity",
+  "credential_pair": "WRITE",
+  "request": {
+    "method": "GET",
+    "path": "/open-apis/drive/v2/permissions/Example96b1f1037377879d8dd5/public?type=docx",
+    "body": null,
+    "headers": [
+      "Authorization: Bearer <redacted>"
+    ]
+  },
+  "http_status": 200,
+  "response": {
+    "code": 0,
+    "data": {
+      "permission_public": {
+        "comment_entity": "anyone_can_view",
+        "copy_entity": "anyone_can_view",
+        "external_access_entity": "closed",
+        "link_share_entity": "tenant_readable",
+        "lock_switch": false,
+        "manage_collaborator_entity": "collaborator_can_edit",
+        "security_entity": "anyone_can_edit",
+        "share_entity": "anyone"
+      }
+    },
+    "msg": ""
+  }
+}

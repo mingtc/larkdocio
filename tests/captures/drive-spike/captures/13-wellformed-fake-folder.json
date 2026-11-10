@@ -1,0 +1,20 @@
+{
+  "_probe": "13-wellformed-fake-folder",
+  "_note": "U1 — a well-formed-but-nonexistent folder token (same 27-char shape as a real one), vs round 1's wrong-shape token which gave 1061002 params error",
+  "_read_only": true,
+  "_method": "GET",
+  "_http_status": 400,
+  "_lark_code": 1061002,
+  "_lark_msg": "params error.",
+  "_probe_token_shape": {
+    "len": 27,
+    "synthetic": true
+  },
+  "response": {
+    "code": 1061002,
+    "msg": "params error.",
+    "error": {
+      "log_id": "2026080713284627BEFC41E6ABF0A39F03"
+    }
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "all_pass": true,
+  "cases": {
+    "clean-edit": {
+      "pass": true,
+      "counts": {
+        "preserved": 8
+      },
+      "per_marker": {
+        "s01": "preserved",
+        "s02": "preserved",
+        "s03": "preserved",
+        "s04": "preserved",
+        "s05": "preserved",
+        "s06": "preserved",
+        "s07": "preserved",
+        "s08": "preserved"
+      },
+      "invented": [],
+      "mangled": [],
+      "trial_clean": true
+    },
+    "dropped": {
+      "pass": true,
+      "counts": {
+        "preserved": 7,
+        "dropped": 1
+      },
+      "per_marker": {
+        "s01": "preserved",
+        "s02": "preserved",
+        "s03": "dropped",
+        "s04": "preserved",
+        "s05": "preserved",
+        "s06": "preserved",
+        "s07": "preserved",
+        "s08": "preserved"
+      },
+      "invented": [],
+      "mangled": [],
+      "trial_clean": false
+    },
+    "dropped-after-rewrite-is-AMBIGUOUS": {
+      "pass": true,
+      "counts": {
+        "preserved": 7,
+        "content-absent": 1
+      },
+      "per_marker": {
+        "s01": "preserved",
+        "s02": "preserved",
+        "s03": "content-absent",
+        "s04": "preserved",
+        "s05": "preserved",
+        "s06": "preserved",
+        "s07": "preserved",
+        "s08": "preserved"
+      },
+      "invented": [],
+      "mangled": [],
+      "trial_clean": true
+    },
+    "content-absent": {
+      "pass": true,
+      "counts": {
+        "preserved": 7,
+        "content-absent": 1
+      },
+      "per_marker": {
+        "s01": "preserved",
+        "s02": "preserved",
+        "s03": "preserved",
+        "s04": "preserved",
+        "s05": "preserved",
+        "s06": "content-absent",
+        "s07": "preserved",
+        "s08": "preserved"
+      },
+      "invented": [],
+      "mangled": [],
+      "trial_clean": true
+    },
+    "duplicated": {
+      "pass": true,
+      "counts": {
+        "preserved": 7,
+        "duplicated": 1
+      },
+      "per_marker": {
+        "s01": "preserved",
+        "s02": "preserved",
+        "s03": "duplicated",
+        "s04": "preserved",
+        "s05": "preserved",
+        "s06": "preserved",
+        "s07": "preserved",
+        "s08": "preserved"
+      },
+      "invented": [],
+      "mangled": [],
+      "trial_clean": false
+    },
+    "relocated": {
+      "pass": true,
+      "counts": {
+        "preserved": 6,
+        "relocated": 2
+      },
+      "per_marker": {
+        "s01": "preserved",
+        "s02": "relocated",
+        "s03": "relocated",
+        "s04": "preserved",
+        "s05": "preserved",
+        "s06": "preserved",
+        "s07": "preserved",
+        "s08": "preserved"
+      },
+      "invented": [],
+      "mangled": [],
+      "trial_clean": false
+    },
+    "invented": {
+      "pass": true,
+      "counts": {
+        "preserved": 7,
+        "orphaned": 1,
+        "invented": 1
+      },
+      "per_marker": {
+        "s01": "preserved",
+        "s02": "preserved",
+        "s03": "preserved",
+        "s04": "preserved",
+        "s05": "preserved",
+        "s06": "preserved",
+        "s07": "orphaned",
+        "s08": "preserved"
+      },
+      "invented": [
+        "s99"
+      ],
+      "mangled": [],
+      "trial_clean": false
+    },
+    "mangled": {
+      "pass": true,
+      "counts": {
+        "preserved": 7,
+        "mangled": 1
+      },
+      "per_marker": {
+        "s01": "preserved",
+        "s02": "preserved",
+        "s03": "preserved",
+        "s04": "preserved",
+        "s05": "mangled",
+        "s06": "preserved",
+        "s07": "preserved",
+        "s08": "preserved"
+      },
+      "invented": [],
+      "mangled": [
+        "<!--lark:block:s05-->"
+      ],
+      "trial_clean": false
+    },
+    "orphaned": {
+      "pass": true,
+      "counts": {
+        "preserved": 7,
+        "orphaned": 1
+      },
+      "per_marker": {
+        "s01": "preserved",
+        "s02": "preserved",
+        "s03": "orphaned",
+        "s04": "preserved",
+        "s05": "preserved",
+        "s06": "preserved",
+        "s07": "preserved",
+        "s08": "preserved"
+      },
+      "invented": [],
+      "mangled": [],
+      "trial_clean": false
+    }
+  }
+}

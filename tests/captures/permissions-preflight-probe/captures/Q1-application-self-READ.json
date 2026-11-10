@@ -1,0 +1,41 @@
+{
+  "probe": "Q1-application-self-READ",
+  "method": "GET",
+  "path": "/open-apis/application/v6/applications/cli_example000000001",
+  "params": [
+    [
+      "lang",
+      "en_us"
+    ]
+  ],
+  "note": "candidate 1: read the app's own record, which would carry its effective scopes",
+  "http_status": 400,
+  "response_headers": {
+    "content-type": "application/json; charset=utf-8",
+    "x-tt-logid": "202607301546095F043DE688E069A9F207",
+    "x-request-id": "202607301546095F043DE688E069A9F207"
+  },
+  "response": {
+    "code": 99991672,
+    "msg": "Access denied. One of the following scopes is required: [admin:app.info:readonly, application:application:self_manage]",
+    "error": {
+      "helps": [
+        {
+          "url": "https://open.larksuite.com/app/cli_example000000001/auth?q=admin:app.info:readonly,application:application:self_manage&op_from=openapi&token_type=tenant",
+          "description": "Learn more about scopes and how to add them: [admin:app.info:readonly,application:application:self_manage]"
+        }
+      ],
+      "log_id": "202607301546095F043DE688E069A9F207",
+      "permission_violations": [
+        {
+          "type": "action_scope_required",
+          "subject": "admin:app.info:readonly"
+        },
+        {
+          "type": "action_scope_required",
+          "subject": "application:application:self_manage"
+        }
+      ]
+    }
+  }
+}

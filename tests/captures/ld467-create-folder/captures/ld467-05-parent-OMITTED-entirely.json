@@ -1,0 +1,23 @@
+{
+  "_probe": "05-parent-OMITTED-entirely",
+  "_endpoint": "/open-apis/drive/v1/files/create_folder",
+  "_method": "POST",
+  "_http_status": 400,
+  "_lark_code": 99992402,
+  "_lark_msg": "field validation failed",
+  "_verdict": "DENIED_OR_ERROR",
+  "_note": "AC1: what happens with no folder_token key at all",
+  "response": {
+    "code": 99992402,
+    "msg": "field validation failed",
+    "error": {
+      "field_violations": [
+        {
+          "field": "folder_token",
+          "description": "folder_token is required"
+        }
+      ],
+      "log_id": "20260815022426304E9BAB6EDAFFF31645"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "n": 10,
+  "label": "leg1 list versions on a NEVER-VERSIONED doc (empty vs denial)",
+  "credential_pair": "READ",
+  "request": {
+    "method": "GET",
+    "path": "/open-apis/drive/v1/files/Example32b94e66a5ef64e659d2/versions?obj_type=docx&page_size=10",
+    "body": null,
+    "headers": [
+      "Authorization: Bearer <redacted>"
+    ]
+  },
+  "http_status": 200,
+  "seconds": 0.103,
+  "response": {
+    "code": 0,
+    "data": {
+      "has_more": false,
+      "items": []
+    },
+    "msg": "Success"
+  }
+}

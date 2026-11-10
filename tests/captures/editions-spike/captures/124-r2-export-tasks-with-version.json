@@ -1,0 +1,27 @@
+{
+  "n": 124,
+  "label": "r2 export_tasks with_version",
+  "credential_pair": "WRITE",
+  "request": {
+    "method": "POST",
+    "path": "/open-apis/drive/v1/export_tasks",
+    "body": {
+      "file_extension": "docx",
+      "token": "Example923c2c2d4498ddcbef50",
+      "type": "docx",
+      "version": "KV6o4h"
+    },
+    "headers": [
+      "Authorization: Bearer <redacted>"
+    ]
+  },
+  "http_status": 200,
+  "seconds": 0.118,
+  "response": {
+    "code": 0,
+    "data": {
+      "ticket": "7672544134587109083"
+    },
+    "msg": "success"
+  }
+}

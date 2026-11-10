@@ -1,0 +1,939 @@
+{
+ "probe": "LD-185 PUT dimension_range index convention",
+ "at": "2026-07-30T07:11:48.104454+00:00",
+ "steps": [
+  {
+   "label": "metainfo BEFORE (does it carry width/height/hidden?)",
+   "method": "GET",
+   "path": "metainfo",
+   "request_body": null,
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "properties": {
+      "ownerUser": 9000000000000000004,
+      "revision": 1,
+      "sheetCount": 1,
+      "title": "larkdocio-harness-DISPOSABLE-1785395508-32820"
+     },
+     "sheets": [
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 0,
+       "rowCount": 200,
+       "sheetId": "1e8212",
+       "title": "Sheet1"
+      }
+     ],
+     "spreadsheetToken": "Example237bc922798d993015c0"
+    },
+    "msg": "success"
+   }
+  },
+  {
+   "label": "v3 sheets/query BEFORE",
+   "method": "GET",
+   "path": "sheets/query",
+   "request_body": null,
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "sheets": [
+      {
+       "grid_properties": {
+        "column_count": 20,
+        "frozen_column_count": 0,
+        "frozen_row_count": 0,
+        "row_count": 200
+       },
+       "hidden": false,
+       "index": 0,
+       "resource_type": "sheet",
+       "sheet_id": "1e8212",
+       "title": "Sheet1"
+      }
+     ]
+    },
+    "msg": "success"
+   }
+  },
+  {
+   "label": "xlsx BEFORE (baseline)",
+   "method": "GET(export)",
+   "observed": {
+    "rows": {
+     "1": {
+      "ht": null,
+      "customHeight": null,
+      "hidden": null
+     },
+     "2": {
+      "ht": null,
+      "customHeight": null,
+      "hidden": null
+     },
+     "3": {
+      "ht": null,
+      "customHeight": null,
+      "hidden": null
+     },
+     "4": {
+      "ht": null,
+      "customHeight": null,
+      "hidden": null
+     },
+     "5": {
+      "ht": null,
+      "customHeight": null,
+      "hidden": null
+     },
+     "6": {
+      "ht": null,
+      "customHeight": null,
+      "hidden": null
+     }
+    },
+    "cols": []
+   }
+  },
+  {
+   "label": "A) ROWS {startIndex:2,endIndex:3} fixedSize=111 — THE CONVENTION PROBE",
+   "method": "PUT",
+   "path": "/open-apis/sheets/v2/spreadsheets/Example237bc922798d993015c0/dimension_range",
+   "request_body": {
+    "dimension": {
+     "sheetId": "1e8212",
+     "majorDimension": "ROWS",
+     "startIndex": 2,
+     "endIndex": 3
+    },
+    "dimensionProperties": {
+     "fixedSize": 111
+    }
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {},
+    "msg": "success"
+   }
+  },
+  {
+   "label": "xlsx AFTER convention probe",
+   "method": "GET(export)",
+   "observed": {
+    "rows": {
+     "1": {
+      "ht": null,
+      "customHeight": null,
+      "hidden": null
+     },
+     "2": {
+      "ht": "82",
+      "customHeight": "true",
+      "hidden": null
+     },
+     "3": {
+      "ht": "82",
+      "customHeight": "true",
+      "hidden": null
+     },
+     "4": {
+      "ht": null,
+      "customHeight": null,
+      "hidden": null
+     },
+     "5": {
+      "ht": null,
+      "customHeight": null,
+      "hidden": null
+     },
+     "6": {
+      "ht": null,
+      "customHeight": null,
+      "hidden": null
+     }
+    },
+    "cols": []
+   }
+  },
+  {
+   "label": "B) ROWS [0,1) fixedSize=122 — FIRST row",
+   "method": "PUT",
+   "path": "/open-apis/sheets/v2/spreadsheets/Example237bc922798d993015c0/dimension_range",
+   "request_body": {
+    "dimension": {
+     "sheetId": "1e8212",
+     "majorDimension": "ROWS",
+     "startIndex": 0,
+     "endIndex": 1
+    },
+    "dimensionProperties": {
+     "fixedSize": 122
+    }
+   },
+   "http_status": 200,
+   "code": 90202,
+   "msg": "invalid dimension range, StartIndex or EndIndex must greater than 0",
+   "response": {
+    "code": 90202,
+    "data": {},
+    "msg": "invalid dimension range, StartIndex or EndIndex must greater than 0"
+   }
+  },
+  {
+   "label": "C) ROWS [5,6) fixedSize=133 — LAST populated row",
+   "method": "PUT",
+   "path": "/open-apis/sheets/v2/spreadsheets/Example237bc922798d993015c0/dimension_range",
+   "request_body": {
+    "dimension": {
+     "sheetId": "1e8212",
+     "majorDimension": "ROWS",
+     "startIndex": 5,
+     "endIndex": 6
+    },
+    "dimensionProperties": {
+     "fixedSize": 133
+    }
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {},
+    "msg": "success"
+   }
+  },
+  {
+   "label": "xlsx AFTER first/last single-row bands",
+   "method": "GET(export)",
+   "observed": {
+    "rows": {
+     "1": {
+      "ht": null,
+      "customHeight": null,
+      "hidden": null
+     },
+     "2": {
+      "ht": "82",
+      "customHeight": "true",
+      "hidden": null
+     },
+     "3": {
+      "ht": "82",
+      "customHeight": "true",
+      "hidden": null
+     },
+     "4": {
+      "ht": null,
+      "customHeight": null,
+      "hidden": null
+     },
+     "5": {
+      "ht": "98",
+      "customHeight": "true",
+      "hidden": null
+     },
+     "6": {
+      "ht": "98",
+      "customHeight": "true",
+      "hidden": null
+     }
+    },
+    "cols": []
+   }
+  },
+  {
+   "label": "D) ROWS [1,2) visible=false — HIDE one row",
+   "method": "PUT",
+   "path": "/open-apis/sheets/v2/spreadsheets/Example237bc922798d993015c0/dimension_range",
+   "request_body": {
+    "dimension": {
+     "sheetId": "1e8212",
+     "majorDimension": "ROWS",
+     "startIndex": 1,
+     "endIndex": 2
+    },
+    "dimensionProperties": {
+     "visible": false
+    }
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {},
+    "msg": "success"
+   }
+  },
+  {
+   "label": "E) ROWS [3,4) visible=false + fixedSize=144 TOGETHER",
+   "method": "PUT",
+   "path": "/open-apis/sheets/v2/spreadsheets/Example237bc922798d993015c0/dimension_range",
+   "request_body": {
+    "dimension": {
+     "sheetId": "1e8212",
+     "majorDimension": "ROWS",
+     "startIndex": 3,
+     "endIndex": 4
+    },
+    "dimensionProperties": {
+     "visible": false,
+     "fixedSize": 144
+    }
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {},
+    "msg": "success"
+   }
+  },
+  {
+   "label": "xlsx AFTER hides",
+   "method": "GET(export)",
+   "observed": {
+    "rows": {
+     "1": {
+      "ht": "20",
+      "customHeight": "true",
+      "hidden": "true"
+     },
+     "2": {
+      "ht": "82",
+      "customHeight": "true",
+      "hidden": "true"
+     },
+     "3": {
+      "ht": "106",
+      "customHeight": "true",
+      "hidden": "true"
+     },
+     "4": {
+      "ht": "106",
+      "customHeight": "true",
+      "hidden": "true"
+     },
+     "5": {
+      "ht": "98",
+      "customHeight": "true",
+      "hidden": null
+     },
+     "6": {
+      "ht": "98",
+      "customHeight": "true",
+      "hidden": null
+     }
+    },
+    "cols": []
+   }
+  },
+  {
+   "label": "F) ROWS [1,2) visible=true — SHOW it back",
+   "method": "PUT",
+   "path": "/open-apis/sheets/v2/spreadsheets/Example237bc922798d993015c0/dimension_range",
+   "request_body": {
+    "dimension": {
+     "sheetId": "1e8212",
+     "majorDimension": "ROWS",
+     "startIndex": 1,
+     "endIndex": 2
+    },
+    "dimensionProperties": {
+     "visible": true
+    }
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {},
+    "msg": "success"
+   }
+  },
+  {
+   "label": "G) ROWS [1,2) visible=true AGAIN — idempotent?",
+   "method": "PUT",
+   "path": "/open-apis/sheets/v2/spreadsheets/Example237bc922798d993015c0/dimension_range",
+   "request_body": {
+    "dimension": {
+     "sheetId": "1e8212",
+     "majorDimension": "ROWS",
+     "startIndex": 1,
+     "endIndex": 2
+    },
+    "dimensionProperties": {
+     "visible": true
+    }
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {},
+    "msg": "success"
+   }
+  },
+  {
+   "label": "xlsx AFTER show round-trip",
+   "method": "GET(export)",
+   "observed": {
+    "rows": {
+     "1": {
+      "ht": null,
+      "customHeight": null,
+      "hidden": null
+     },
+     "2": {
+      "ht": "82",
+      "customHeight": "true",
+      "hidden": null
+     },
+     "3": {
+      "ht": "106",
+      "customHeight": "true",
+      "hidden": "true"
+     },
+     "4": {
+      "ht": "106",
+      "customHeight": "true",
+      "hidden": "true"
+     },
+     "5": {
+      "ht": "98",
+      "customHeight": "true",
+      "hidden": null
+     },
+     "6": {
+      "ht": "98",
+      "customHeight": "true",
+      "hidden": null
+     }
+    },
+    "cols": []
+   }
+  },
+  {
+   "label": "H) ROWS [4,5) fixedSize=0 — hide, no-op, or error?",
+   "method": "PUT",
+   "path": "/open-apis/sheets/v2/spreadsheets/Example237bc922798d993015c0/dimension_range",
+   "request_body": {
+    "dimension": {
+     "sheetId": "1e8212",
+     "majorDimension": "ROWS",
+     "startIndex": 4,
+     "endIndex": 5
+    },
+    "dimensionProperties": {
+     "fixedSize": 0
+    }
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {},
+    "msg": "success"
+   }
+  },
+  {
+   "label": "xlsx AFTER fixedSize=0",
+   "method": "GET(export)",
+   "observed": {
+    "rows": {
+     "1": {
+      "ht": null,
+      "customHeight": null,
+      "hidden": null
+     },
+     "2": {
+      "ht": "82",
+      "customHeight": "true",
+      "hidden": null
+     },
+     "3": {
+      "ht": "106",
+      "customHeight": "true",
+      "hidden": "true"
+     },
+     "4": {
+      "ht": "20",
+      "customHeight": "true",
+      "hidden": "true"
+     },
+     "5": {
+      "ht": null,
+      "customHeight": null,
+      "hidden": null
+     },
+     "6": {
+      "ht": "98",
+      "customHeight": "true",
+      "hidden": null
+     }
+    },
+    "cols": []
+   }
+  },
+  {
+   "label": "I) COLUMNS [1,2) fixedSize=200 — column B width",
+   "method": "PUT",
+   "path": "/open-apis/sheets/v2/spreadsheets/Example237bc922798d993015c0/dimension_range",
+   "request_body": {
+    "dimension": {
+     "sheetId": "1e8212",
+     "majorDimension": "COLUMNS",
+     "startIndex": 1,
+     "endIndex": 2
+    },
+    "dimensionProperties": {
+     "fixedSize": 200
+    }
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {},
+    "msg": "success"
+   }
+  },
+  {
+   "label": "J) COLUMNS [2,3) visible=false — hide column C",
+   "method": "PUT",
+   "path": "/open-apis/sheets/v2/spreadsheets/Example237bc922798d993015c0/dimension_range",
+   "request_body": {
+    "dimension": {
+     "sheetId": "1e8212",
+     "majorDimension": "COLUMNS",
+     "startIndex": 2,
+     "endIndex": 3
+    },
+    "dimensionProperties": {
+     "visible": false
+    }
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {},
+    "msg": "success"
+   }
+  },
+  {
+   "label": "xlsx AFTER column ops",
+   "method": "GET(export)",
+   "observed": {
+    "rows": {
+     "1": {
+      "ht": null,
+      "customHeight": null,
+      "hidden": null
+     },
+     "2": {
+      "ht": "82",
+      "customHeight": "true",
+      "hidden": null
+     },
+     "3": {
+      "ht": "106",
+      "customHeight": "true",
+      "hidden": "true"
+     },
+     "4": {
+      "ht": "20",
+      "customHeight": "true",
+      "hidden": "true"
+     },
+     "5": {
+      "ht": null,
+      "customHeight": null,
+      "hidden": null
+     },
+     "6": {
+      "ht": "98",
+      "customHeight": "true",
+      "hidden": null
+     }
+    },
+    "cols": [
+     {
+      "min": "2",
+      "max": "2",
+      "width": "25",
+      "customWidth": "true",
+      "hidden": "false"
+     },
+     {
+      "min": "2",
+      "max": "2",
+      "width": "25",
+      "customWidth": "true",
+      "hidden": "true"
+     },
+     {
+      "min": "3",
+      "max": "3",
+      "width": "13",
+      "customWidth": "true",
+      "hidden": "false"
+     },
+     {
+      "min": "3",
+      "max": "3",
+      "width": "13",
+      "customWidth": "true",
+      "hidden": "true"
+     },
+     {
+      "min": "1",
+      "max": "1",
+      "width": "25",
+      "customWidth": "true",
+      "hidden": "false"
+     }
+    ]
+   }
+  },
+  {
+   "label": "K) ROWS [4,7) crossing the USED-range edge",
+   "method": "PUT",
+   "path": "/open-apis/sheets/v2/spreadsheets/Example237bc922798d993015c0/dimension_range",
+   "request_body": {
+    "dimension": {
+     "sheetId": "1e8212",
+     "majorDimension": "ROWS",
+     "startIndex": 4,
+     "endIndex": 7
+    },
+    "dimensionProperties": {
+     "fixedSize": 155
+    }
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {},
+    "msg": "success"
+   }
+  },
+  {
+   "label": "L) ROWS past the DECLARED grid (row_count=200)",
+   "method": "PUT",
+   "path": "/open-apis/sheets/v2/spreadsheets/Example237bc922798d993015c0/dimension_range",
+   "request_body": {
+    "dimension": {
+     "sheetId": "1e8212",
+     "majorDimension": "ROWS",
+     "startIndex": 210,
+     "endIndex": 212
+    },
+    "dimensionProperties": {
+     "fixedSize": 166
+    }
+   },
+   "http_status": 200,
+   "code": 90202,
+   "msg": "dimension endIndex wrong, endIndex must less than or equal to sheetMaxRowCount",
+   "response": {
+    "code": 90202,
+    "data": {},
+    "msg": "dimension endIndex wrong, endIndex must less than or equal to sheetMaxRowCount"
+   }
+  },
+  {
+   "label": "xlsx AFTER edge bands",
+   "method": "GET(export)",
+   "observed": {
+    "rows": {
+     "1": {
+      "ht": null,
+      "customHeight": null,
+      "hidden": null
+     },
+     "2": {
+      "ht": "82",
+      "customHeight": "true",
+      "hidden": null
+     },
+     "3": {
+      "ht": "106",
+      "customHeight": "true",
+      "hidden": "true"
+     },
+     "4": {
+      "ht": "114",
+      "customHeight": "true",
+      "hidden": "true"
+     },
+     "5": {
+      "ht": "114",
+      "customHeight": "true",
+      "hidden": null
+     },
+     "6": {
+      "ht": "114",
+      "customHeight": "true",
+      "hidden": null
+     },
+     "7": {
+      "ht": "114",
+      "customHeight": "true",
+      "hidden": null
+     }
+    },
+    "cols": [
+     {
+      "min": "3",
+      "max": "3",
+      "width": "13",
+      "customWidth": "true",
+      "hidden": "false"
+     },
+     {
+      "min": "3",
+      "max": "3",
+      "width": "13",
+      "customWidth": "true",
+      "hidden": "true"
+     },
+     {
+      "min": "1",
+      "max": "1",
+      "width": "25",
+      "customWidth": "true",
+      "hidden": "false"
+     },
+     {
+      "min": "2",
+      "max": "2",
+      "width": "25",
+      "customWidth": "true",
+      "hidden": "false"
+     },
+     {
+      "min": "2",
+      "max": "2",
+      "width": "25",
+      "customWidth": "true",
+      "hidden": "true"
+     }
+    ]
+   }
+  },
+  {
+   "label": "metainfo AFTER (dimension properties visible here?)",
+   "method": "GET",
+   "path": "metainfo",
+   "request_body": null,
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "properties": {
+      "ownerUser": 9000000000000000004,
+      "revision": 11,
+      "sheetCount": 1,
+      "title": "larkdocio-harness-DISPOSABLE-1785395508-32820"
+     },
+     "sheets": [
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 0,
+       "rowCount": 200,
+       "sheetId": "1e8212",
+       "title": "Sheet1"
+      }
+     ],
+     "spreadsheetToken": "Example237bc922798d993015c0"
+    },
+    "msg": "success"
+   }
+  },
+  {
+   "label": "v3 sheets/query AFTER",
+   "method": "GET",
+   "path": "sheets/query",
+   "request_body": null,
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "sheets": [
+      {
+       "grid_properties": {
+        "column_count": 20,
+        "frozen_column_count": 0,
+        "frozen_row_count": 0,
+        "row_count": 200
+       },
+       "hidden": false,
+       "index": 0,
+       "resource_type": "sheet",
+       "sheet_id": "1e8212",
+       "title": "Sheet1"
+      }
+     ]
+    },
+    "msg": "success"
+   }
+  }
+ ],
+ "spreadsheet_token": "Example237bc922798d993015c0",
+ "sheet_id": "1e8212",
+ "baseline_geometry": {
+  "row_count": 200,
+  "column_count": 20,
+  "merges": []
+ },
+ "CONVENTION": {
+  "asked": {
+   "startIndex": 2,
+   "endIndex": 3
+  },
+  "rows_affected": [],
+  "verdict": "UNRECOGNISED — read the capture by hand"
+ },
+ "ENDS": {
+  "ht_122_rows": [],
+  "ht_133_rows": []
+ },
+ "HIDE": {
+  "hidden_rows": [
+   1,
+   2,
+   3,
+   4
+  ],
+  "ht_144_rows": []
+ },
+ "SHOW": {
+  "hidden_rows": [
+   3,
+   4
+  ]
+ },
+ "FIXED_SIZE_ZERO": {
+  "row5": {
+   "ht": null,
+   "customHeight": null,
+   "hidden": null
+  },
+  "hidden_rows": [
+   3,
+   4
+  ]
+ },
+ "COLUMNS": {
+  "cols": [
+   {
+    "min": "2",
+    "max": "2",
+    "width": "25",
+    "customWidth": "true",
+    "hidden": "false"
+   },
+   {
+    "min": "2",
+    "max": "2",
+    "width": "25",
+    "customWidth": "true",
+    "hidden": "true"
+   },
+   {
+    "min": "3",
+    "max": "3",
+    "width": "13",
+    "customWidth": "true",
+    "hidden": "false"
+   },
+   {
+    "min": "3",
+    "max": "3",
+    "width": "13",
+    "customWidth": "true",
+    "hidden": "true"
+   },
+   {
+    "min": "1",
+    "max": "1",
+    "width": "25",
+    "customWidth": "true",
+    "hidden": "false"
+   }
+  ],
+  "hidden_cols": [
+   {
+    "min": "2",
+    "max": "2",
+    "width": "25",
+    "customWidth": "true",
+    "hidden": "true"
+   },
+   {
+    "min": "3",
+    "max": "3",
+    "width": "13",
+    "customWidth": "true",
+    "hidden": "true"
+   }
+  ]
+ },
+ "EDGE": {
+  "declared_row_count": 200,
+  "ht_155_rows": [],
+  "geometry_after": {
+   "row_count": 200,
+   "column_count": 20,
+   "merges": []
+  }
+ },
+ "values_read_still_returns_hidden": [
+  [
+   "r1"
+  ],
+  [
+   "r2"
+  ],
+  [
+   "r3"
+  ],
+  [
+   "r4"
+  ],
+  [
+   "r5"
+  ],
+  [
+   "r6"
+  ]
+ ]
+}

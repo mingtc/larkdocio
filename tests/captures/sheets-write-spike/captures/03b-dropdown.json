@@ -1,0 +1,181 @@
+{
+  "probe": "03b_dropdown",
+  "captures": {
+    "dv_set_valid": {
+      "label": "dataValidation list multi (valid)",
+      "method": "POST",
+      "path": "/open-apis/sheets/v2/spreadsheets/Example2772c3fb45b125b0ad60/dataValidation",
+      "request_body": {
+        "range": "873109!A1:A1",
+        "dataValidationType": "list",
+        "dataValidation": {
+          "conditionValues": [
+            "Red",
+            "Green",
+            "Blue"
+          ],
+          "options": {
+            "multipleValues": true,
+            "highlightValidData": false
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "response": {
+        "code": 0,
+        "data": {},
+        "msg": "success"
+      }
+    },
+    "multi_write": {
+      "label": "multipleValue write",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Example2772c3fb45b125b0ad60/values",
+      "request_body": {
+        "valueRange": {
+          "range": "873109!A1:A1",
+          "values": [
+            [
+              {
+                "type": "multipleValue",
+                "values": [
+                  "Red",
+                  "Green"
+                ]
+              }
+            ]
+          ]
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "response": {
+        "code": 0,
+        "data": {
+          "revision": 2,
+          "spreadsheetToken": "Example2772c3fb45b125b0ad60",
+          "updatedCells": 1,
+          "updatedColumns": 1,
+          "updatedRange": "873109!A1:A1",
+          "updatedRows": 1
+        },
+        "msg": "success"
+      }
+    },
+    "multi_read_UnformattedValue": {
+      "label": "multipleValue read UnformattedValue",
+      "method": "GET",
+      "path": "/open-apis/sheets/v2/spreadsheets/Example2772c3fb45b125b0ad60/values/873109!A1:A1",
+      "request_body": null,
+      "http_status": 200,
+      "code": 0,
+      "response": {
+        "code": 0,
+        "data": {
+          "revision": 2,
+          "spreadsheetToken": "Example2772c3fb45b125b0ad60",
+          "valueRange": {
+            "majorDimension": "ROWS",
+            "range": "873109!A1:A1",
+            "revision": 2,
+            "values": [
+              [
+                "Red,Green"
+              ]
+            ]
+          }
+        },
+        "msg": "success"
+      }
+    },
+    "multi_read_FormattedValue": {
+      "label": "multipleValue read FormattedValue",
+      "method": "GET",
+      "path": "/open-apis/sheets/v2/spreadsheets/Example2772c3fb45b125b0ad60/values/873109!A1:A1",
+      "request_body": null,
+      "http_status": 200,
+      "code": 0,
+      "response": {
+        "code": 0,
+        "data": {
+          "revision": 2,
+          "spreadsheetToken": "Example2772c3fb45b125b0ad60",
+          "valueRange": {
+            "majorDimension": "ROWS",
+            "range": "873109!A1:A1",
+            "revision": 2,
+            "values": [
+              [
+                "Red,Green"
+              ]
+            ]
+          }
+        },
+        "msg": "success"
+      }
+    },
+    "multi_read_ToString": {
+      "label": "multipleValue read ToString",
+      "method": "GET",
+      "path": "/open-apis/sheets/v2/spreadsheets/Example2772c3fb45b125b0ad60/values/873109!A1:A1",
+      "request_body": null,
+      "http_status": 200,
+      "code": 0,
+      "response": {
+        "code": 0,
+        "data": {
+          "revision": 2,
+          "spreadsheetToken": "Example2772c3fb45b125b0ad60",
+          "valueRange": {
+            "majorDimension": "ROWS",
+            "range": "873109!A1:A1",
+            "revision": 2,
+            "values": [
+              [
+                "Red,Green"
+              ]
+            ]
+          }
+        },
+        "msg": "success"
+      }
+    },
+    "dv_get": {
+      "label": "dataValidation get",
+      "method": "GET",
+      "path": "/open-apis/sheets/v2/spreadsheets/Example2772c3fb45b125b0ad60/dataValidation",
+      "request_body": null,
+      "http_status": 200,
+      "code": 0,
+      "response": {
+        "code": 0,
+        "data": {
+          "dataValidations": [
+            {
+              "conditionValues": [
+                "Red",
+                "Green",
+                "Blue"
+              ],
+              "dataValidationType": "list",
+              "options": {
+                "colorValueMap": {},
+                "highlightValidData": false,
+                "multipleValues": true
+              },
+              "ranges": [
+                "873109!A1:A1"
+              ]
+            }
+          ],
+          "revision": 2,
+          "sheetId": "873109",
+          "spreadsheetToken": "Example2772c3fb45b125b0ad60"
+        },
+        "msg": "success"
+      }
+    }
+  },
+  "total_calls": 9
+}

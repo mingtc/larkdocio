@@ -1,0 +1,54 @@
+{
+  "_probe": "p4",
+  "_endpoint": "im/v1/chats + records POST",
+  "_method": "MIXED",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": null,
+  "_verdict": "OK",
+  "_note": "the GroupChat boundary: can this app even enumerate a chat id, and what does a write refuse with?",
+  "response": {
+    "code": 0,
+    "data": {
+      "im_v1_chats_enumeration": {
+        "http": 200,
+        "code": 0,
+        "msg": "success",
+        "n": 1,
+        "error": null
+      },
+      "chat_ids_visible": 1,
+      "write::real_chat_id": {
+        "code": 1254001,
+        "msg": "WrongRequestBody",
+        "error": {
+          "message": "Invalid request parameter: 'fields.Chat[0][0]'. Correct format : the value of 'GroupChat' must be a list of object. Please check and modify accordingly.",
+          "log_id": "2026080303382896C8C0E4F4025E642FA1"
+        },
+        "echo": null
+      },
+      "write::bogus_chat_id": {
+        "code": 1254001,
+        "msg": "WrongRequestBody",
+        "error": {
+          "message": "Invalid request parameter: 'fields.Chat[0][0]'. Correct format : the value of 'GroupChat' must be a list of object. Please check and modify accordingly.",
+          "log_id": "2026080303383022E89DAAC779744A865D"
+        },
+        "echo": null
+      },
+      "write::object_shape": {
+        "code": 0,
+        "msg": "success",
+        "error": null,
+        "echo": {
+          "Chat": [
+            {
+              "id": "<redacted:chat-id>"
+            }
+          ],
+          "多行文本": "chat-object_shape"
+        }
+      }
+    }
+  }
+}

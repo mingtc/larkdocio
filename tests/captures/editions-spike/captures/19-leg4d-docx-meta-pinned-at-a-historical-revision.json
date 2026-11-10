@@ -1,0 +1,35 @@
+{
+  "n": 19,
+  "label": "leg4d docx meta pinned at a HISTORICAL revision",
+  "credential_pair": "WRITE",
+  "request": {
+    "method": "GET",
+    "path": "/open-apis/docx/v1/documents/Example9668460258a2a652cfde?document_revision_id=2",
+    "body": null,
+    "headers": [
+      "Authorization: Bearer <redacted>"
+    ]
+  },
+  "http_status": 200,
+  "seconds": 0.138,
+  "response": {
+    "code": 0,
+    "data": {
+      "document": {
+        "display_setting": {
+          "show_authors": true,
+          "show_comment_count": false,
+          "show_create_time": false,
+          "show_like_count": false,
+          "show_pv": false,
+          "show_related_matters": false,
+          "show_uv": false
+        },
+        "document_id": "Example9668460258a2a652cfde",
+        "revision_id": 3,
+        "title": "larkdocio-LD-404-editions-D 1786403286"
+      }
+    },
+    "msg": "success"
+  }
+}

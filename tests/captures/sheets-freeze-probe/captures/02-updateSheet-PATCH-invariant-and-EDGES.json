@@ -1,0 +1,1091 @@
+{
+ "probe": "LD-186 updateSheet PATCH invariant + refusal edges",
+ "at": "2026-07-30T09:12:47.849827+00:00",
+ "steps": [
+  {
+   "label": "0) addSheet 'Keeper' (so tab 1 can legally be hidden)",
+   "method": "POST",
+   "path": "/open-apis/sheets/v2/spreadsheets/Exampleabcbd5536016b2e1b205/sheets_batch_update",
+   "request_body": {
+    "requests": [
+     {
+      "addSheet": {
+       "properties": {
+        "title": "Keeper"
+       }
+      }
+     }
+    ]
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "replies": [
+      {
+       "addSheet": {
+        "properties": {
+         "sheetId": "4AVkA0",
+         "title": "Keeper"
+        }
+       }
+      }
+     ]
+    },
+    "msg": "success"
+   }
+  },
+  {
+   "label": "A) updateSheet {sheetId, hidden: true} — hide tab 1",
+   "method": "POST",
+   "path": "/open-apis/sheets/v2/spreadsheets/Exampleabcbd5536016b2e1b205/sheets_batch_update",
+   "request_body": {
+    "requests": [
+     {
+      "updateSheet": {
+       "properties": {
+        "sheetId": "8e8887",
+        "hidden": true
+       }
+      }
+     }
+    ]
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "replies": [
+      {
+       "updateSheet": {
+        "properties": {
+         "hidden": true,
+         "sheetId": "8e8887",
+         "title": ""
+        }
+       }
+      }
+     ]
+    },
+    "msg": "success"
+   }
+  },
+  {
+   "label": "state AFTER hide",
+   "method": "GET",
+   "path": "metainfo+sheets/query",
+   "request_body": null,
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "properties": {
+      "ownerUser": 9000000000000000004,
+      "revision": 3,
+      "sheetCount": 2,
+      "title": "larkdocio-harness-DISPOSABLE-1785402767-16355"
+     },
+     "sheets": [
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 0,
+       "rowCount": 200,
+       "sheetId": "4AVkA0",
+       "title": "Keeper"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 1,
+       "rowCount": 200,
+       "sheetId": "8e8887",
+       "title": "Sheet1"
+      }
+     ],
+     "spreadsheetToken": "Exampleabcbd5536016b2e1b205"
+    },
+    "msg": "success"
+   },
+   "observed": {
+    "revision": 3,
+    "metainfo_sheets": [
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 0,
+      "rowCount": 200,
+      "sheetId": "4AVkA0",
+      "title": "Keeper"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 1,
+      "rowCount": 200,
+      "sheetId": "8e8887",
+      "title": "Sheet1"
+     }
+    ],
+    "v3_sheets": [
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 0,
+      "resource_type": "sheet",
+      "sheet_id": "4AVkA0",
+      "title": "Keeper"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": true,
+      "index": 1,
+      "resource_type": "sheet",
+      "sheet_id": "8e8887",
+      "title": "Sheet1"
+     }
+    ]
+   }
+  },
+  {
+   "label": "B) updateSheet {sheetId, frozenRowCount: 2} — freeze the HIDDEN tab",
+   "method": "POST",
+   "path": "/open-apis/sheets/v2/spreadsheets/Exampleabcbd5536016b2e1b205/sheets_batch_update",
+   "request_body": {
+    "requests": [
+     {
+      "updateSheet": {
+       "properties": {
+        "sheetId": "8e8887",
+        "frozenRowCount": 2
+       }
+      }
+     }
+    ]
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "replies": [
+      {
+       "updateSheet": {
+        "properties": {
+         "frozenRowCount": 2,
+         "sheetId": "8e8887",
+         "title": ""
+        }
+       }
+      }
+     ]
+    },
+    "msg": "success"
+   }
+  },
+  {
+   "label": "state AFTER freezing the hidden tab",
+   "method": "GET",
+   "path": "metainfo+sheets/query",
+   "request_body": null,
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "properties": {
+      "ownerUser": 9000000000000000004,
+      "revision": 4,
+      "sheetCount": 2,
+      "title": "larkdocio-harness-DISPOSABLE-1785402767-16355"
+     },
+     "sheets": [
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 0,
+       "rowCount": 200,
+       "sheetId": "4AVkA0",
+       "title": "Keeper"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 2,
+       "index": 1,
+       "rowCount": 200,
+       "sheetId": "8e8887",
+       "title": "Sheet1"
+      }
+     ],
+     "spreadsheetToken": "Exampleabcbd5536016b2e1b205"
+    },
+    "msg": "success"
+   },
+   "observed": {
+    "revision": 4,
+    "metainfo_sheets": [
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 0,
+      "rowCount": 200,
+      "sheetId": "4AVkA0",
+      "title": "Keeper"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 2,
+      "index": 1,
+      "rowCount": 200,
+      "sheetId": "8e8887",
+      "title": "Sheet1"
+     }
+    ],
+    "v3_sheets": [
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 0,
+      "resource_type": "sheet",
+      "sheet_id": "4AVkA0",
+      "title": "Keeper"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 2,
+       "row_count": 200
+      },
+      "hidden": true,
+      "index": 1,
+      "resource_type": "sheet",
+      "sheet_id": "8e8887",
+      "title": "Sheet1"
+     }
+    ]
+   }
+  },
+  {
+   "label": "C) updateSheet {sheetId, hidden: false} — unhide",
+   "method": "POST",
+   "path": "/open-apis/sheets/v2/spreadsheets/Exampleabcbd5536016b2e1b205/sheets_batch_update",
+   "request_body": {
+    "requests": [
+     {
+      "updateSheet": {
+       "properties": {
+        "sheetId": "8e8887",
+        "hidden": false
+       }
+      }
+     }
+    ]
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "replies": [
+      {
+       "updateSheet": {
+        "properties": {
+         "hidden": false,
+         "sheetId": "8e8887",
+         "title": ""
+        }
+       }
+      }
+     ]
+    },
+    "msg": "success"
+   }
+  },
+  {
+   "label": "D) updateSheet {sheetId} ONLY — no property asked for",
+   "method": "POST",
+   "path": "/open-apis/sheets/v2/spreadsheets/Exampleabcbd5536016b2e1b205/sheets_batch_update",
+   "request_body": {
+    "requests": [
+     {
+      "updateSheet": {
+       "properties": {
+        "sheetId": "8e8887"
+       }
+      }
+     }
+    ]
+   },
+   "http_status": 200,
+   "code": 90204,
+   "msg": "request body is wrong",
+   "response": {
+    "code": 90204,
+    "data": {},
+    "msg": "request body is wrong"
+   }
+  },
+  {
+   "label": "state AFTER empty-properties",
+   "method": "GET",
+   "path": "metainfo+sheets/query",
+   "request_body": null,
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "properties": {
+      "ownerUser": 9000000000000000004,
+      "revision": 5,
+      "sheetCount": 2,
+      "title": "larkdocio-harness-DISPOSABLE-1785402767-16355"
+     },
+     "sheets": [
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 0,
+       "rowCount": 200,
+       "sheetId": "4AVkA0",
+       "title": "Keeper"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 2,
+       "index": 1,
+       "rowCount": 200,
+       "sheetId": "8e8887",
+       "title": "Sheet1"
+      }
+     ],
+     "spreadsheetToken": "Exampleabcbd5536016b2e1b205"
+    },
+    "msg": "success"
+   },
+   "observed": {
+    "revision": 5,
+    "metainfo_sheets": [
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 0,
+      "rowCount": 200,
+      "sheetId": "4AVkA0",
+      "title": "Keeper"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 2,
+      "index": 1,
+      "rowCount": 200,
+      "sheetId": "8e8887",
+      "title": "Sheet1"
+     }
+    ],
+    "v3_sheets": [
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 0,
+      "resource_type": "sheet",
+      "sheet_id": "4AVkA0",
+      "title": "Keeper"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 2,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 1,
+      "resource_type": "sheet",
+      "sheet_id": "8e8887",
+      "title": "Sheet1"
+     }
+    ]
+   }
+  },
+  {
+   "label": "E) frozenRowCount: '2' (a string)",
+   "method": "POST",
+   "path": "/open-apis/sheets/v2/spreadsheets/Exampleabcbd5536016b2e1b205/sheets_batch_update",
+   "request_body": {
+    "requests": [
+     {
+      "updateSheet": {
+       "properties": {
+        "sheetId": "8e8887",
+        "frozenRowCount": "2"
+       }
+      }
+     }
+    ]
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "replies": [
+      {
+       "updateSheet": {
+        "properties": {
+         "frozenRowCount": 2,
+         "sheetId": "8e8887",
+         "title": ""
+        }
+       }
+      }
+     ]
+    },
+    "msg": "success"
+   }
+  },
+  {
+   "label": "state AFTER string count",
+   "method": "GET",
+   "path": "metainfo+sheets/query",
+   "request_body": null,
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "properties": {
+      "ownerUser": 9000000000000000004,
+      "revision": 6,
+      "sheetCount": 2,
+      "title": "larkdocio-harness-DISPOSABLE-1785402767-16355"
+     },
+     "sheets": [
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 0,
+       "rowCount": 200,
+       "sheetId": "4AVkA0",
+       "title": "Keeper"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 2,
+       "index": 1,
+       "rowCount": 200,
+       "sheetId": "8e8887",
+       "title": "Sheet1"
+      }
+     ],
+     "spreadsheetToken": "Exampleabcbd5536016b2e1b205"
+    },
+    "msg": "success"
+   },
+   "observed": {
+    "revision": 6,
+    "metainfo_sheets": [
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 0,
+      "rowCount": 200,
+      "sheetId": "4AVkA0",
+      "title": "Keeper"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 2,
+      "index": 1,
+      "rowCount": 200,
+      "sheetId": "8e8887",
+      "title": "Sheet1"
+     }
+    ],
+    "v3_sheets": [
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 0,
+      "resource_type": "sheet",
+      "sheet_id": "4AVkA0",
+      "title": "Keeper"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 2,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 1,
+      "resource_type": "sheet",
+      "sheet_id": "8e8887",
+      "title": "Sheet1"
+     }
+    ]
+   }
+  },
+  {
+   "label": "F) frozenRowCount: true (a bool)",
+   "method": "POST",
+   "path": "/open-apis/sheets/v2/spreadsheets/Exampleabcbd5536016b2e1b205/sheets_batch_update",
+   "request_body": {
+    "requests": [
+     {
+      "updateSheet": {
+       "properties": {
+        "sheetId": "8e8887",
+        "frozenRowCount": true
+       }
+      }
+     }
+    ]
+   },
+   "http_status": 400,
+   "code": 9499,
+   "msg": "Invalid parameter type in json: FrozenRowCount. Invalid parameter value: true. Please check and modify accordingly.",
+   "response": {
+    "code": 9499,
+    "msg": "Invalid parameter type in json: FrozenRowCount. Invalid parameter value: true. Please check and modify accordingly.",
+    "error": {
+     "log_id": "2026073017125501F42B0B4D519FDB8F35"
+    }
+   }
+  },
+  {
+   "label": "state AFTER bool count",
+   "method": "GET",
+   "path": "metainfo+sheets/query",
+   "request_body": null,
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "properties": {
+      "ownerUser": 9000000000000000004,
+      "revision": 6,
+      "sheetCount": 2,
+      "title": "larkdocio-harness-DISPOSABLE-1785402767-16355"
+     },
+     "sheets": [
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 0,
+       "rowCount": 200,
+       "sheetId": "4AVkA0",
+       "title": "Keeper"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 2,
+       "index": 1,
+       "rowCount": 200,
+       "sheetId": "8e8887",
+       "title": "Sheet1"
+      }
+     ],
+     "spreadsheetToken": "Exampleabcbd5536016b2e1b205"
+    },
+    "msg": "success"
+   },
+   "observed": {
+    "revision": 6,
+    "metainfo_sheets": [
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 0,
+      "index": 0,
+      "rowCount": 200,
+      "sheetId": "4AVkA0",
+      "title": "Keeper"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 2,
+      "index": 1,
+      "rowCount": 200,
+      "sheetId": "8e8887",
+      "title": "Sheet1"
+     }
+    ],
+    "v3_sheets": [
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 0,
+      "resource_type": "sheet",
+      "sheet_id": "4AVkA0",
+      "title": "Keeper"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 2,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 1,
+      "resource_type": "sheet",
+      "sheet_id": "8e8887",
+      "title": "Sheet1"
+     }
+    ]
+   }
+  },
+  {
+   "label": "G) freeze rows=2 (first)",
+   "method": "POST",
+   "path": "/open-apis/sheets/v2/spreadsheets/Exampleabcbd5536016b2e1b205/sheets_batch_update",
+   "request_body": {
+    "requests": [
+     {
+      "updateSheet": {
+       "properties": {
+        "sheetId": "8e8887",
+        "frozenRowCount": 2
+       }
+      }
+     }
+    ]
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "replies": [
+      {
+       "updateSheet": {
+        "properties": {
+         "frozenRowCount": 2,
+         "sheetId": "8e8887",
+         "title": ""
+        }
+       }
+      }
+     ]
+    },
+    "msg": "success"
+   }
+  },
+  {
+   "label": "H) freeze rows=2 AGAIN (identical)",
+   "method": "POST",
+   "path": "/open-apis/sheets/v2/spreadsheets/Exampleabcbd5536016b2e1b205/sheets_batch_update",
+   "request_body": {
+    "requests": [
+     {
+      "updateSheet": {
+       "properties": {
+        "sheetId": "8e8887",
+        "frozenRowCount": 2
+       }
+      }
+     }
+    ]
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "replies": [
+      {
+       "updateSheet": {
+        "properties": {
+         "frozenRowCount": 2,
+         "sheetId": "8e8887",
+         "title": ""
+        }
+       }
+      }
+     ]
+    },
+    "msg": "success"
+   }
+  },
+  {
+   "label": "I) freeze cols=1 on the OTHER tab (4AVkA0)",
+   "method": "POST",
+   "path": "/open-apis/sheets/v2/spreadsheets/Exampleabcbd5536016b2e1b205/sheets_batch_update",
+   "request_body": {
+    "requests": [
+     {
+      "updateSheet": {
+       "properties": {
+        "sheetId": "4AVkA0",
+        "frozenColCount": 1
+       }
+      }
+     }
+    ]
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "replies": [
+      {
+       "updateSheet": {
+        "properties": {
+         "frozenColCount": 1,
+         "sheetId": "4AVkA0",
+         "title": ""
+        }
+       }
+      }
+     ]
+    },
+    "msg": "success"
+   }
+  },
+  {
+   "label": "state AFTER freezing the other tab",
+   "method": "GET",
+   "path": "metainfo+sheets/query",
+   "request_body": null,
+   "http_status": 200,
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {
+     "properties": {
+      "ownerUser": 9000000000000000004,
+      "revision": 9,
+      "sheetCount": 2,
+      "title": "larkdocio-harness-DISPOSABLE-1785402767-16355"
+     },
+     "sheets": [
+      {
+       "columnCount": 20,
+       "frozenColCount": 1,
+       "frozenRowCount": 0,
+       "index": 0,
+       "rowCount": 200,
+       "sheetId": "4AVkA0",
+       "title": "Keeper"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 2,
+       "index": 1,
+       "rowCount": 200,
+       "sheetId": "8e8887",
+       "title": "Sheet1"
+      }
+     ],
+     "spreadsheetToken": "Exampleabcbd5536016b2e1b205"
+    },
+    "msg": "success"
+   },
+   "observed": {
+    "revision": 9,
+    "metainfo_sheets": [
+     {
+      "columnCount": 20,
+      "frozenColCount": 1,
+      "frozenRowCount": 0,
+      "index": 0,
+      "rowCount": 200,
+      "sheetId": "4AVkA0",
+      "title": "Keeper"
+     },
+     {
+      "columnCount": 20,
+      "frozenColCount": 0,
+      "frozenRowCount": 2,
+      "index": 1,
+      "rowCount": 200,
+      "sheetId": "8e8887",
+      "title": "Sheet1"
+     }
+    ],
+    "v3_sheets": [
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 1,
+       "frozen_row_count": 0,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 0,
+      "resource_type": "sheet",
+      "sheet_id": "4AVkA0",
+      "title": "Keeper"
+     },
+     {
+      "grid_properties": {
+       "column_count": 20,
+       "frozen_column_count": 0,
+       "frozen_row_count": 2,
+       "row_count": 200
+      },
+      "hidden": false,
+      "index": 1,
+      "resource_type": "sheet",
+      "sheet_id": "8e8887",
+      "title": "Sheet1"
+     }
+    ]
+   }
+  }
+ ],
+ "spreadsheet_token": "Exampleabcbd5536016b2e1b205",
+ "sheet_id": "8e8887",
+ "PATCH_PRESERVES_HIDDEN": {
+  "hidden_before_freeze": [
+   true
+  ],
+  "hidden_after_freeze": [
+   true
+  ],
+  "frozen_after": [
+   2
+  ]
+ },
+ "EMPTY_PROPERTIES": {
+  "revision": 5,
+  "metainfo_sheets": [
+   {
+    "columnCount": 20,
+    "frozenColCount": 0,
+    "frozenRowCount": 0,
+    "index": 0,
+    "rowCount": 200,
+    "sheetId": "4AVkA0",
+    "title": "Keeper"
+   },
+   {
+    "columnCount": 20,
+    "frozenColCount": 0,
+    "frozenRowCount": 2,
+    "index": 1,
+    "rowCount": 200,
+    "sheetId": "8e8887",
+    "title": "Sheet1"
+   }
+  ],
+  "v3_sheets": [
+   {
+    "grid_properties": {
+     "column_count": 20,
+     "frozen_column_count": 0,
+     "frozen_row_count": 0,
+     "row_count": 200
+    },
+    "hidden": false,
+    "index": 0,
+    "resource_type": "sheet",
+    "sheet_id": "4AVkA0",
+    "title": "Keeper"
+   },
+   {
+    "grid_properties": {
+     "column_count": 20,
+     "frozen_column_count": 0,
+     "frozen_row_count": 2,
+     "row_count": 200
+    },
+    "hidden": false,
+    "index": 1,
+    "resource_type": "sheet",
+    "sheet_id": "8e8887",
+    "title": "Sheet1"
+   }
+  ]
+ },
+ "STRING_COUNT": {
+  "revision": 6,
+  "metainfo_sheets": [
+   {
+    "columnCount": 20,
+    "frozenColCount": 0,
+    "frozenRowCount": 0,
+    "index": 0,
+    "rowCount": 200,
+    "sheetId": "4AVkA0",
+    "title": "Keeper"
+   },
+   {
+    "columnCount": 20,
+    "frozenColCount": 0,
+    "frozenRowCount": 2,
+    "index": 1,
+    "rowCount": 200,
+    "sheetId": "8e8887",
+    "title": "Sheet1"
+   }
+  ],
+  "v3_sheets": [
+   {
+    "grid_properties": {
+     "column_count": 20,
+     "frozen_column_count": 0,
+     "frozen_row_count": 0,
+     "row_count": 200
+    },
+    "hidden": false,
+    "index": 0,
+    "resource_type": "sheet",
+    "sheet_id": "4AVkA0",
+    "title": "Keeper"
+   },
+   {
+    "grid_properties": {
+     "column_count": 20,
+     "frozen_column_count": 0,
+     "frozen_row_count": 2,
+     "row_count": 200
+    },
+    "hidden": false,
+    "index": 1,
+    "resource_type": "sheet",
+    "sheet_id": "8e8887",
+    "title": "Sheet1"
+   }
+  ]
+ },
+ "BOOL_COUNT": {
+  "revision": 6,
+  "metainfo_sheets": [
+   {
+    "columnCount": 20,
+    "frozenColCount": 0,
+    "frozenRowCount": 0,
+    "index": 0,
+    "rowCount": 200,
+    "sheetId": "4AVkA0",
+    "title": "Keeper"
+   },
+   {
+    "columnCount": 20,
+    "frozenColCount": 0,
+    "frozenRowCount": 2,
+    "index": 1,
+    "rowCount": 200,
+    "sheetId": "8e8887",
+    "title": "Sheet1"
+   }
+  ],
+  "v3_sheets": [
+   {
+    "grid_properties": {
+     "column_count": 20,
+     "frozen_column_count": 0,
+     "frozen_row_count": 0,
+     "row_count": 200
+    },
+    "hidden": false,
+    "index": 0,
+    "resource_type": "sheet",
+    "sheet_id": "4AVkA0",
+    "title": "Keeper"
+   },
+   {
+    "grid_properties": {
+     "column_count": 20,
+     "frozen_column_count": 0,
+     "frozen_row_count": 2,
+     "row_count": 200
+    },
+    "hidden": false,
+    "index": 1,
+    "resource_type": "sheet",
+    "sheet_id": "8e8887",
+    "title": "Sheet1"
+   }
+  ]
+ },
+ "IDEMPOTENCE": {
+  "rev_before": 6,
+  "rev_after_first": 7,
+  "rev_after_repeat": 8,
+  "repeat_bumped": true
+ },
+ "PER_TAB_INDEPENDENCE": {
+  "4AVkA0": {
+   "frozenRowCount": 0,
+   "frozenColCount": 1
+  },
+  "8e8887": {
+   "frozenRowCount": 2,
+   "frozenColCount": 0
+  }
+ }
+}

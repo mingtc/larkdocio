@@ -1,0 +1,24 @@
+{
+  "_probe": "q0-recon",
+  "_endpoint": "/bitable/v1/apps/BaseScratchExample000000001",
+  "_method": "GET",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": "success",
+  "_verdict": "OK",
+  "_note": "app meta",
+  "response": {
+    "code": 0,
+    "data": {
+      "app": {
+        "app_token": "BaseScratchExample000000001",
+        "formula_type": 2,
+        "is_advanced": false,
+        "name": "Scratch Base",
+        "revision": 1,
+        "time_zone": "Asia/Singapore"
+      }
+    },
+    "msg": "success"
+  }
+}

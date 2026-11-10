@@ -1,0 +1,246 @@
+{
+  "_probe": "06",
+  "_endpoint": ".../tables/tblLAHFqgMhRGuPX/records",
+  "_method": "GET",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": "success",
+  "_verdict": "OK",
+  "_note": "the legacy GET list on populated data — same encoding as search?",
+  "response": {
+    "code": 0,
+    "data": {
+      "has_more": false,
+      "items": [
+        {
+          "fields": {
+            "Attachment": null,
+            "Barcode": null,
+            "Checkbox": null,
+            "Currency": null,
+            "Date": null,
+            "DateTime": null,
+            "Formula": 2,
+            "MultiSelect": null,
+            "Number": null,
+            "Phone": null,
+            "Single option": null,
+            "SingleSelect": null,
+            "Text": null,
+            "Url": null
+          },
+          "id": "rec83DeUomD5Ns",
+          "record_id": "rec83DeUomD5Ns"
+        },
+        {
+          "fields": {
+            "Attachment": null,
+            "Barcode": null,
+            "Checkbox": null,
+            "Currency": null,
+            "Date": null,
+            "DateTime": null,
+            "Formula": 2,
+            "MultiSelect": null,
+            "Number": null,
+            "Phone": null,
+            "Single option": null,
+            "SingleSelect": null,
+            "Text": null,
+            "Url": null
+          },
+          "id": "rec36FpZyaI9IJ",
+          "record_id": "rec36FpZyaI9IJ"
+        },
+        {
+          "fields": {
+            "Attachment": null,
+            "Barcode": null,
+            "Checkbox": null,
+            "Currency": null,
+            "Date": null,
+            "DateTime": null,
+            "Formula": 2,
+            "MultiSelect": null,
+            "Number": null,
+            "Phone": null,
+            "Single option": null,
+            "SingleSelect": null,
+            "Text": null,
+            "Url": null
+          },
+          "id": "rec13JbEjeH2yp",
+          "record_id": "rec13JbEjeH2yp"
+        },
+        {
+          "fields": {
+            "Attachment": null,
+            "Barcode": null,
+            "Checkbox": null,
+            "Currency": null,
+            "Date": null,
+            "DateTime": null,
+            "Formula": 2,
+            "MultiSelect": null,
+            "Number": null,
+            "Phone": null,
+            "Single option": null,
+            "SingleSelect": null,
+            "Text": null,
+            "Url": null
+          },
+          "id": "rec83HuVdrE4w4",
+          "record_id": "rec83HuVdrE4w4"
+        },
+        {
+          "fields": {
+            "Attachment": null,
+            "Barcode": null,
+            "Checkbox": null,
+            "Currency": null,
+            "Date": null,
+            "DateTime": null,
+            "Formula": 2,
+            "MultiSelect": null,
+            "Number": null,
+            "Phone": null,
+            "Single option": null,
+            "SingleSelect": null,
+            "Text": null,
+            "Url": null
+          },
+          "id": "rec42OwVzjF2Cl",
+          "record_id": "rec42OwVzjF2Cl"
+        },
+        {
+          "fields": {
+            "Attachment": null,
+            "Barcode": null,
+            "Checkbox": null,
+            "Currency": null,
+            "Date": null,
+            "DateTime": null,
+            "Formula": 2,
+            "MultiSelect": null,
+            "Number": null,
+            "Phone": null,
+            "Single option": null,
+            "SingleSelect": null,
+            "Text": null,
+            "Url": null
+          },
+          "id": "rec57NuGjlBonk",
+          "record_id": "rec57NuGjlBonk"
+        },
+        {
+          "fields": {
+            "Attachment": null,
+            "Barcode": null,
+            "Checkbox": null,
+            "Currency": null,
+            "Date": null,
+            "DateTime": null,
+            "Formula": 2,
+            "MultiSelect": null,
+            "Number": null,
+            "Phone": null,
+            "Single option": null,
+            "SingleSelect": null,
+            "Text": null,
+            "Url": null
+          },
+          "id": "rec24BiYgrDu4L",
+          "record_id": "rec24BiYgrDu4L"
+        },
+        {
+          "fields": {
+            "Attachment": null,
+            "Barcode": null,
+            "Checkbox": null,
+            "Currency": null,
+            "Date": null,
+            "DateTime": null,
+            "Formula": 2,
+            "MultiSelect": null,
+            "Number": null,
+            "Phone": null,
+            "Single option": null,
+            "SingleSelect": null,
+            "Text": null,
+            "Url": null
+          },
+          "id": "rec90PaLjhVlwj",
+          "record_id": "rec90PaLjhVlwj"
+        },
+        {
+          "fields": {
+            "Attachment": null,
+            "Barcode": null,
+            "Checkbox": null,
+            "Currency": null,
+            "Date": null,
+            "DateTime": null,
+            "Formula": 2,
+            "MultiSelect": null,
+            "Number": null,
+            "Phone": null,
+            "Single option": null,
+            "SingleSelect": null,
+            "Text": null,
+            "Url": null
+          },
+          "id": "rec88EhMqvGfFO",
+          "record_id": "rec88EhMqvGfFO"
+        },
+        {
+          "fields": {
+            "Attachment": null,
+            "Barcode": null,
+            "Checkbox": null,
+            "Currency": null,
+            "Date": null,
+            "DateTime": null,
+            "Formula": 2,
+            "MultiSelect": null,
+            "Number": null,
+            "Phone": null,
+            "Single option": null,
+            "SingleSelect": null,
+            "Text": null,
+            "Url": null
+          },
+          "id": "rec86JaHfnRwvH",
+          "record_id": "rec86JaHfnRwvH"
+        },
+        {
+          "fields": {
+            "Attachment": null,
+            "Barcode": "BC-0001",
+            "Checkbox": true,
+            "Currency": "19.99",
+            "Date": null,
+            "DateTime": 1785061011000,
+            "Formula": 2,
+            "MultiSelect": [
+              "Red",
+              "Green"
+            ],
+            "Number": "42.5",
+            "Phone": "+12025550100",
+            "Single option": null,
+            "SingleSelect": "Alpha",
+            "Text": "THE ROW",
+            "Url": {
+              "link": "https://example.invalid/x",
+              "text": "Example"
+            }
+          },
+          "id": "recvrymubKYG8P",
+          "record_id": "recvrymubKYG8P"
+        }
+      ],
+      "total": 11
+    },
+    "msg": "success"
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "n": 205,
+  "label": "r3 blocks at document_revision_id=54",
+  "credential_pair": "READ",
+  "request": {
+    "method": "GET",
+    "path": "/open-apis/docx/v1/documents/Examplee818404931411bff32a2/blocks?document_revision_id=54&page_size=50",
+    "headers": [
+      "Authorization: Bearer <redacted>"
+    ]
+  },
+  "http_status": 200,
+  "response": {
+    "code": 0,
+    "data": {
+      "has_more": false,
+      "items": [
+        {
+          "block_id": "Examplee818404931411bff32a2",
+          "block_type": 1,
+          "children": [
+            "doxlgExample176b11b20d900f7",
+            "doxlgExample5799d40e35efeef",
+            "doxlgExample6eca36e5d397fde"
+          ],
+          "page": {
+            "elements": [
+              {
+                "text_run": {
+                  "content": "larkdocio-LD-404-r3 1786403552",
+                  "text_element_style": {
+                    "bold": false,
+                    "inline_code": false,
+                    "italic": false,
+                    "strikethrough": false,
+                    "underline": false
+                  }
+                }
+              }
+            ],
+            "style": {
+              "align": 1
+            }
+          },
+          "parent_id": ""
+        },
+        {
+          "block_id": "doxlgExample176b11b20d900f7",
+          "block_type": 2,
+          "parent_id": "Examplee818404931411bff32a2",
+          "text": {
+            "elements": [
+              {
+                "text_run": {
+                  "content": "LD-404 line 3",
+                  "text_element_style": {
+                    "bold": false,
+                    "inline_code": false,
+                    "italic": false,
+                    "strikethrough": false,
+                    "underline": false
+                  }
+                }
+              }
+            ],
+            "style": {
+              "align": 1,
+              "folded": false
+            }
+          }
+        },
+        {
+          "block_id": "doxlgExample5799d40e35efeef",
+          "block_type": 2,
+          "parent_id": "Examplee818404931411bff32a2",
+          "text": {
+            "elements": [
+              {
+                "text_run": {
+                  "content": "LD-404 line 2",
+                  "text_element_style": {
+                    "bold": false,
+                    "inline_code": false,
+                    "italic": false,
+                    "strikethrough": false,
+                    "underline": false
+                  }
+                }
+              }
+            ],
+            "style": {
+              "align": 1,
+              "folded": false
+            }
+          }
+        },
+        {
+          "block_id": "doxlgExample6eca36e5d397fde",
+          "block_type": 2,
+          "parent_id": "Examplee818404931411bff32a2",
+          "text": {
+            "elements": [
+              {
+                "text_run": {
+                  "content": "LD-404 line 1",
+                  "text_element_style": {
+                    "bold": false,
+                    "inline_code": false,
+                    "italic": false,
+                    "strikethrough": false,
+                    "underline": false
+                  }
+                }
+              }
+            ],
+            "style": {
+              "align": 1,
+              "folded": false
+            }
+          }
+        }
+      ]
+    },
+    "msg": "success"
+  }
+}

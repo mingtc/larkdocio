@@ -1,0 +1,114 @@
+{
+  "_probe": "ld403-02",
+  "_endpoint": "PATCH /open-apis/bitable/v1/apps/{a}/tables/{t}/views/{v} — through BaseSchemaClient.update_view(filter_info=view_filter(registry.resolve(...)))",
+  "_method": "4 arms, each the SHIPPED chain end to end, read back and compared with the library's own echoes()",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_verdict": "2 of 4 shipped-path arms were accepted AND echoed their own read-back; the ticked-row arm showed 2 of 13 rows.",
+  "_note": "LD-403 AC4. ld403-01 asked the server what the route takes; this asks whether a caller of THIS library can send it. `serialised_value` is what the shipped serialiser produced — before this issue it produced '[\"True\"]', which the route refuses with 1254001.",
+  "_transport": "the shipped BaseSchemaClient / BaseReadClient for every asserted leg; the raw core only stages the fixture and reads rows back. Paced 1.3 s.",
+  "_disposable": {
+    "title": "larkdocio-DISPOSABLE-1786385738-85298",
+    "app_token": "Example4698cc879f5bc94eac0f",
+    "deleted": "in the harness's finally"
+  },
+  "rows_staged": [
+    {
+      "Check": true
+    },
+    {
+      "Check": false
+    },
+    {
+      "Check": true
+    }
+  ],
+  "arms": [
+    {
+      "arm": "is True",
+      "operator": "is",
+      "values_given": [
+        "True"
+      ],
+      "serialised_value": "[true]",
+      "accepted": true,
+      "persisted": {
+        "condition_omitted": null,
+        "conditions": [
+          {
+            "condition_id": "conXDbhZI4",
+            "field_id": "fldKN3cXBD",
+            "field_type": 7,
+            "operator": "is",
+            "value": "[true]"
+          }
+        ],
+        "conjunction": "and"
+      },
+      "echoes": true,
+      "rows_visible_through_view": 2,
+      "rows_in_table": 13
+    },
+    {
+      "arm": "is False",
+      "operator": "is",
+      "values_given": [
+        "False"
+      ],
+      "serialised_value": "[false]",
+      "accepted": true,
+      "persisted": {
+        "condition_omitted": null,
+        "conditions": [
+          {
+            "condition_id": "con9KUDqee",
+            "field_id": "fldKN3cXBD",
+            "field_type": 7,
+            "operator": "is",
+            "value": "[false]"
+          }
+        ],
+        "conjunction": "and"
+      },
+      "echoes": true,
+      "rows_visible_through_view": 11,
+      "rows_in_table": 13
+    },
+    {
+      "arm": "isNot True",
+      "operator": "isNot",
+      "values_given": [
+        "True"
+      ],
+      "serialised_value": "[true]",
+      "accepted": false,
+      "refusal": "LarkAPIError: update view vewzQYg4op in table tble9YJ6SuxN9pVU failed: Code: 1254001, Msg: The request body is wrong, please modify it. The request body is the wrong shape for this endpoint. The message names the offending path when Lark can identify it — read it before re-shaping. Lark's own detail: Invalid request parameter: 'property.filter_info.conditions[0].field_id.fldKN3cXBD.operator.isNot'. Correct format : the operator type is unsupported. Please check and modify accordingly."
+    },
+    {
+      "arm": "is (True, False)",
+      "operator": "is",
+      "values_given": [
+        "True",
+        "False"
+      ],
+      "serialised_value": "[true, false]",
+      "accepted": true,
+      "persisted": {
+        "condition_omitted": null,
+        "conditions": [
+          {
+            "condition_id": "conRfKVf64",
+            "field_id": "fldKN3cXBD",
+            "field_type": 7,
+            "operator": "is",
+            "value": "[true]"
+          }
+        ],
+        "conjunction": "and"
+      },
+      "echoes": false,
+      "rows_visible_through_view": 2,
+      "rows_in_table": 13
+    }
+  ]
+}

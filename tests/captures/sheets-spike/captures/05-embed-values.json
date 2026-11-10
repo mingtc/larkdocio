@@ -1,0 +1,75 @@
+{
+  "code": 0,
+  "data": {
+    "revision": 4,
+    "spreadsheetToken": "Example38428307171a2bd44d36",
+    "valueRange": {
+      "majorDimension": "ROWS",
+      "range": "EQlPwA!A1:D10",
+      "revision": 4,
+      "values": [
+        [
+          "A1 header",
+          "B1 header",
+          "C1 header",
+          null
+        ],
+        [
+          "A2 data",
+          "B2 data",
+          "C2 data",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "msg": "success"
+}

@@ -1,0 +1,35 @@
+{
+  "n": 103,
+  "label": "r2 head revision AFTER creating a version (inertness)",
+  "credential_pair": "WRITE",
+  "request": {
+    "method": "GET",
+    "path": "/open-apis/docx/v1/documents/Example923c2c2d4498ddcbef50",
+    "body": null,
+    "headers": [
+      "Authorization: Bearer <redacted>"
+    ]
+  },
+  "http_status": 200,
+  "seconds": 0.096,
+  "response": {
+    "code": 0,
+    "data": {
+      "document": {
+        "display_setting": {
+          "show_authors": true,
+          "show_comment_count": false,
+          "show_create_time": false,
+          "show_like_count": false,
+          "show_pv": false,
+          "show_related_matters": false,
+          "show_uv": false
+        },
+        "document_id": "Example923c2c2d4498ddcbef50",
+        "revision_id": 2,
+        "title": "larkdocio-LD-404-r2 1786403459"
+      }
+    },
+    "msg": "success"
+  }
+}

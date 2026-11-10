@@ -1,0 +1,38 @@
+[
+  {
+    "block_id": "root",
+    "parent_id": "doc",
+    "block_type": 1,
+    "page": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Doc Title"
+          }
+        }
+      ]
+    },
+    "children": [
+      "t"
+    ]
+  },
+  {
+    "block_id": "t",
+    "parent_id": "root",
+    "block_type": 2,
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "inline "
+          }
+        },
+        {
+          "equation": {
+            "content": "x^2"
+          }
+        }
+      ]
+    }
+  }
+]

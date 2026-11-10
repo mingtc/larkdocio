@@ -1,0 +1,30 @@
+{
+  "probe": "B3-SECOND-USER-email-DECISIVE",
+  "method": "POST",
+  "path": "/open-apis/contact/v3/users/batch_get_id",
+  "params": [
+    [
+      "user_id_type",
+      "open_id"
+    ]
+  ],
+  "body": {
+    "emails": [
+      "<SECOND-USER-EMAIL-REDACTED>@example.com"
+    ]
+  },
+  "http_status": 200,
+  "response": {
+    "code": 0,
+    "data": {
+      "user_list": [
+        {
+          "email": "<SECOND-USER-EMAIL-REDACTED>@example.com",
+          "user_id": "ou_examplesecond0000000000000000001"
+        }
+      ]
+    },
+    "msg": "success"
+  },
+  "_sanitization": "In this public copy every identifier is a placeholder: the second user's address is redacted, and the open_id it resolved to is replaced by a fake (the response carries no display name) (tests/captures/README.md). The input was a real user's address on the tenant this was measured on; the measurement is the shape of the answer, which this copy keeps."
+}

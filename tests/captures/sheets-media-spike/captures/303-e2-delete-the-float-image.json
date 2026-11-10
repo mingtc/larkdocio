@@ -1,0 +1,20 @@
+{
+  "n": 303,
+  "probe": "LD-435 arms E — bytes back, removal, teardown",
+  "label": "E2 delete the float image",
+  "credential_pair": "WRITE",
+  "request": {
+    "method": "DELETE",
+    "path": "/open-apis/sheets/v3/spreadsheets/Exampleb31ebb6e3fd2fe5eddf0/sheets/61a0cd/float_images/N1c3GER4am",
+    "body": null,
+    "headers": [
+      "Authorization: Bearer <redacted>"
+    ]
+  },
+  "http_status": 200,
+  "response": {
+    "code": 0,
+    "data": {},
+    "msg": "success"
+  }
+}

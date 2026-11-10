@@ -1,0 +1,32 @@
+{
+  "_probe": "12-pagination-continuation",
+  "_note": "U2 — page_token continuation mechanism, exercised with page_size=2 on the existing tree (nothing created)",
+  "_read_only": true,
+  "_method": "GET",
+  "natural_pagination_at_page_size_50": null,
+  "page1": {
+    "code": 0,
+    "n": 2,
+    "has_more": true,
+    "next_page_token_present": true
+  },
+  "page1_tokens": [
+    "<tok:ex85cfa3>",
+    "<tok:exd95cba>"
+  ],
+  "page2": {
+    "code": 0,
+    "n": 2,
+    "has_more": false,
+    "next_page_token_present": false
+  },
+  "page2_tokens": [
+    "<tok:exa7c05c>",
+    "<tok:exf2eff8>"
+  ],
+  "overlap_between_pages": [],
+  "next_page_token_shape": {
+    "len": 135,
+    "is_numeric": false
+  }
+}

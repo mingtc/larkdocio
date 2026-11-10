@@ -1,0 +1,3049 @@
+{
+  "probe": "harvest-docx-zoo",
+  "surface": "docx-zoo",
+  "file_type": "docx",
+  "file_token": "DocCommentZooExample0000001",
+  "started_at": "2026-07-29T09:14:56.346517+00:00",
+  "app_fingerprint_write": "ex9fa8801d8f",
+  "list_pages": [
+    {
+      "http_status": 200,
+      "code": 0,
+      "msg": "Success",
+      "request_page_token": null
+    }
+  ],
+  "list_items_verbatim": [
+    {
+      "comment_id": "7667754726531878624",
+      "create_time": 1785288268,
+      "extra": {
+        "content_anchor_id": "Example913189730f710c82e3a5"
+      },
+      "is_solved": false,
+      "is_whole": false,
+      "quote": "Simple Open Comment",
+      "reply_list": {
+        "replies": [
+          {
+            "content": {
+              "elements": [
+                {
+                  "docs_link": null,
+                  "person": null,
+                  "text_run": {
+                    "text": "Simple Open Comment"
+                  },
+                  "type": "text_run"
+                }
+              ]
+            },
+            "create_time": 1785288268,
+            "extra": {
+              "image_list": []
+            },
+            "reply_id": "7667754726552784605",
+            "update_time": 1785288268,
+            "user_id": "ou_exampleowner00000000000000000001"
+          }
+        ]
+      },
+      "solver_user_id": null,
+      "update_time": 1785288268,
+      "user_id": "ou_exampleowner00000000000000000001"
+    },
+    {
+      "comment_id": "7667754810224938728",
+      "create_time": 1785288287,
+      "extra": {
+        "content_anchor_id": "Example276015cba8efe64d31a3"
+      },
+      "is_solved": true,
+      "is_whole": false,
+      "quote": "Resolved Comment",
+      "reply_list": {
+        "replies": [
+          {
+            "content": {
+              "elements": [
+                {
+                  "docs_link": null,
+                  "person": null,
+                  "text_run": {
+                    "text": "Resolved Comment"
+                  },
+                  "type": "text_run"
+                }
+              ]
+            },
+            "create_time": 1785288287,
+            "extra": {
+              "image_list": []
+            },
+            "reply_id": "7667754810241732328",
+            "update_time": 1785288287,
+            "user_id": "ou_exampleowner00000000000000000001"
+          }
+        ]
+      },
+      "solver_user_id": "ou_exampleowner00000000000000000001",
+      "update_time": 1785288314,
+      "user_id": "ou_exampleowner00000000000000000001"
+    },
+    {
+      "comment_id": "7667755056904572640",
+      "create_time": 1785288345,
+      "extra": {
+        "content_anchor_id": "Exampled120510db14b7453214c"
+      },
+      "is_solved": false,
+      "is_whole": false,
+      "quote": "Comment thread with multiple replies",
+      "reply_list": {
+        "replies": [
+          {
+            "content": {
+              "elements": [
+                {
+                  "docs_link": null,
+                  "person": null,
+                  "text_run": {
+                    "text": "Comment thread with multiple replies"
+                  },
+                  "type": "text_run"
+                }
+              ]
+            },
+            "create_time": 1785288345,
+            "extra": {
+              "image_list": []
+            },
+            "reply_id": "7667755056921382619",
+            "update_time": 1785288345,
+            "user_id": "ou_exampleowner00000000000000000001"
+          },
+          {
+            "content": {
+              "elements": [
+                {
+                  "docs_link": null,
+                  "person": null,
+                  "text_run": {
+                    "text": "Reply 1"
+                  },
+                  "type": "text_run"
+                }
+              ]
+            },
+            "create_time": 1785288349,
+            "extra": {
+              "image_list": []
+            },
+            "reply_id": "7667755075359477472",
+            "update_time": 1785288349,
+            "user_id": "ou_exampleowner00000000000000000001"
+          },
+          {
+            "content": {
+              "elements": [
+                {
+                  "docs_link": null,
+                  "person": null,
+                  "text_run": {
+                    "text": "Reply 2"
+                  },
+                  "type": "text_run"
+                }
+              ]
+            },
+            "create_time": 1785288352,
+            "extra": {
+              "image_list": []
+            },
+            "reply_id": "7667755086113722075",
+            "update_time": 1785288352,
+            "user_id": "ou_exampleowner00000000000000000001"
+          },
+          {
+            "content": {
+              "elements": [
+                {
+                  "docs_link": null,
+                  "person": null,
+                  "text_run": {
+                    "text": "Reply 3"
+                  },
+                  "type": "text_run"
+                }
+              ]
+            },
+            "create_time": 1785288355,
+            "extra": {
+              "image_list": []
+            },
+            "reply_id": "7667755099011190496",
+            "update_time": 1785288355,
+            "user_id": "ou_exampleowner00000000000000000001"
+          }
+        ]
+      },
+      "solver_user_id": null,
+      "update_time": 1785288355,
+      "user_id": "ou_exampleowner00000000000000000001"
+    },
+    {
+      "comment_id": "7667755191499755240",
+      "create_time": 1785288376,
+      "extra": {
+        "content_anchor_id": "Example11de0c7aa51fe8309b95"
+      },
+      "is_solved": false,
+      "is_whole": false,
+      "quote": "Comment with a Like",
+      "reply_list": {
+        "replies": [
+          {
+            "content": {
+              "elements": [
+                {
+                  "docs_link": null,
+                  "person": null,
+                  "text_run": {
+                    "text": "Comment with a Like"
+                  },
+                  "type": "text_run"
+                }
+              ]
+            },
+            "create_time": 1785288376,
+            "extra": {
+              "image_list": []
+            },
+            "reply_id": "7667755191516532448",
+            "update_time": 1785288376,
+            "user_id": "ou_exampleowner00000000000000000001"
+          }
+        ]
+      },
+      "solver_user_id": null,
+      "update_time": 1785288376,
+      "user_id": "ou_exampleowner00000000000000000001"
+    },
+    {
+      "comment_id": "7667755630672793311",
+      "create_time": 1785288478,
+      "extra": {
+        "content_anchor_id": "Example1f67e18ba055e40eb687"
+      },
+      "is_solved": false,
+      "is_whole": false,
+      "quote": "Edited Comment",
+      "reply_list": {
+        "replies": [
+          {
+            "content": {
+              "elements": [
+                {
+                  "docs_link": null,
+                  "person": null,
+                  "text_run": {
+                    "text": "Edited Comment (original is no longer visible)"
+                  },
+                  "type": "text_run"
+                }
+              ]
+            },
+            "create_time": 1785288478,
+            "extra": {
+              "image_list": []
+            },
+            "reply_id": "7667755630689537759",
+            "update_time": 1785288496,
+            "user_id": "ou_exampleowner00000000000000000001"
+          }
+        ]
+      },
+      "solver_user_id": null,
+      "update_time": 1785288496,
+      "user_id": "ou_exampleowner00000000000000000001"
+    },
+    {
+      "comment_id": "7667755822109167325",
+      "create_time": 1785288529,
+      "extra": {
+        "content_anchor_id": "Example7e30112c406cb09c2ee9"
+      },
+      "is_solved": false,
+      "is_whole": false,
+      "quote": "Comment with Image Embedded",
+      "reply_list": {
+        "replies": [
+          {
+            "content": {
+              "elements": [
+                {
+                  "docs_link": null,
+                  "person": null,
+                  "text_run": {
+                    "text": "Comment with Image Embedded"
+                  },
+                  "type": "text_run"
+                }
+              ]
+            },
+            "create_time": 1785288529,
+            "extra": {
+              "image_list": [
+                "Example275b62835dfea3441291"
+              ]
+            },
+            "reply_id": "7667755822125944544",
+            "update_time": 1785288529,
+            "user_id": "ou_exampleowner00000000000000000001"
+          }
+        ]
+      },
+      "solver_user_id": null,
+      "update_time": 1785288530,
+      "user_id": "ou_exampleowner00000000000000000001"
+    }
+  ],
+  "comment_count": 6,
+  "labels": {
+    "7667754726531878624": "Simple",
+    "7667754810224938728": "Resolved",
+    "7667755056904572640": "Thread",
+    "7667755191499755240": "Like",
+    "7667755630672793311": "Edited",
+    "7667755822109167325": "Image"
+  },
+  "examples": {
+    "Simple": {
+      "example": "Simple",
+      "surface": "docx-zoo",
+      "file_type": "docx",
+      "comment_id": "7667754726531878624",
+      "list_item": {
+        "comment_id": "7667754726531878624",
+        "create_time": 1785288268,
+        "extra": {
+          "content_anchor_id": "Example913189730f710c82e3a5"
+        },
+        "is_solved": false,
+        "is_whole": false,
+        "quote": "Simple Open Comment",
+        "reply_list": {
+          "replies": [
+            {
+              "content": {
+                "elements": [
+                  {
+                    "docs_link": null,
+                    "person": null,
+                    "text_run": {
+                      "text": "Simple Open Comment"
+                    },
+                    "type": "text_run"
+                  }
+                ]
+              },
+              "create_time": 1785288268,
+              "extra": {
+                "image_list": []
+              },
+              "reply_id": "7667754726552784605",
+              "update_time": 1785288268,
+              "user_id": "ou_exampleowner00000000000000000001"
+            }
+          ]
+        },
+        "solver_user_id": null,
+        "update_time": 1785288268,
+        "user_id": "ou_exampleowner00000000000000000001"
+      },
+      "shapes": {
+        "get_one": {
+          "label": "get-one",
+          "method": "GET",
+          "path": "drive/v1/files/{tok}/comments/{cid}",
+          "request_body": null,
+          "http_status": 404,
+          "code": 1069307,
+          "msg": "not exist",
+          "response": {
+            "code": 1069307,
+            "msg": "not exist",
+            "error": {
+              "log_id": "20260729171440E9EC4DB4A6CFCF22371E"
+            }
+          }
+        },
+        "batch_query_need_relation_false": {
+          "label": "batch_query need_relation=false",
+          "method": "POST",
+          "path": "drive/v1/files/{tok}/comments/batch_query",
+          "request_body": {
+            "comment_ids": [
+              "7667754726531878624"
+            ]
+          },
+          "http_status": 200,
+          "code": 0,
+          "msg": "Success",
+          "response": {
+            "code": 0,
+            "data": {
+              "items": [
+                {
+                  "comment_id": "7667754726531878624",
+                  "create_time": 1785288268,
+                  "extra": {
+                    "content_anchor_id": "Example913189730f710c82e3a5"
+                  },
+                  "has_more": false,
+                  "is_solved": false,
+                  "is_whole": false,
+                  "page_token": "",
+                  "quote": "Simple Open Comment",
+                  "reply_list": {
+                    "replies": [
+                      {
+                        "content": {
+                          "elements": [
+                            {
+                              "docs_link": null,
+                              "person": null,
+                              "text_run": {
+                                "text": "Simple Open Comment"
+                              },
+                              "type": "text_run"
+                            }
+                          ]
+                        },
+                        "create_time": 1785288268,
+                        "extra": {
+                          "image_list": []
+                        },
+                        "reply_id": "7667754726552784605",
+                        "update_time": 1785288268,
+                        "user_id": "ou_exampleowner00000000000000000001"
+                      }
+                    ]
+                  },
+                  "solver_user_id": null,
+                  "update_time": 1785288268,
+                  "user_id": "ou_exampleowner00000000000000000001"
+                }
+              ]
+            },
+            "msg": "Success"
+          }
+        },
+        "batch_query_need_relation_true": {
+          "label": "batch_query need_relation=true",
+          "method": "POST",
+          "path": "drive/v1/files/{tok}/comments/batch_query",
+          "request_body": {
+            "comment_ids": [
+              "7667754726531878624"
+            ]
+          },
+          "http_status": 200,
+          "code": 0,
+          "msg": "Success",
+          "response": {
+            "code": 0,
+            "data": {
+              "items": [
+                {
+                  "comment_id": "7667754726531878624",
+                  "create_time": 1785288268,
+                  "extra": {
+                    "content_anchor_id": "Example913189730f710c82e3a5"
+                  },
+                  "has_more": false,
+                  "is_solved": false,
+                  "is_whole": false,
+                  "page_token": "",
+                  "quote": "Simple Open Comment",
+                  "reply_list": {
+                    "replies": [
+                      {
+                        "content": {
+                          "elements": [
+                            {
+                              "docs_link": null,
+                              "person": null,
+                              "text_run": {
+                                "text": "Simple Open Comment"
+                              },
+                              "type": "text_run"
+                            }
+                          ]
+                        },
+                        "create_time": 1785288268,
+                        "extra": {
+                          "image_list": []
+                        },
+                        "reply_id": "7667754726552784605",
+                        "update_time": 1785288268,
+                        "user_id": "ou_exampleowner00000000000000000001"
+                      }
+                    ]
+                  },
+                  "solver_user_id": null,
+                  "update_time": 1785288268,
+                  "user_id": "ou_exampleowner00000000000000000001"
+                }
+              ]
+            },
+            "msg": "Success"
+          }
+        },
+        "replies_list": {
+          "label": "replies-list",
+          "method": "GET",
+          "path": "drive/v1/files/{tok}/comments/{cid}/replies",
+          "request_body": null,
+          "http_status": 200,
+          "code": 0,
+          "msg": "Success",
+          "response": {
+            "code": 0,
+            "data": {
+              "has_more": false,
+              "items": [
+                {
+                  "content": {
+                    "elements": [
+                      {
+                        "docs_link": null,
+                        "person": null,
+                        "text_run": {
+                          "text": "Simple Open Comment"
+                        },
+                        "type": "text_run"
+                      }
+                    ]
+                  },
+                  "create_time": 1785288268,
+                  "extra": {
+                    "image_list": []
+                  },
+                  "reply_id": "7667754726552784605",
+                  "update_time": 1785288268,
+                  "user_id": "ou_exampleowner00000000000000000001"
+                }
+              ],
+              "page_token": "0"
+            },
+            "msg": "Success"
+          }
+        }
+      },
+      "shape_row": {
+        "list_keys": [
+          "comment_id",
+          "create_time",
+          "extra",
+          "is_solved",
+          "is_whole",
+          "quote",
+          "reply_list",
+          "solver_user_id",
+          "update_time",
+          "user_id"
+        ],
+        "get_one_code": 1069307,
+        "get_one_keys": [],
+        "batch_query_keys": [
+          "comment_id",
+          "create_time",
+          "extra",
+          "has_more",
+          "is_solved",
+          "is_whole",
+          "page_token",
+          "quote",
+          "reply_list",
+          "solver_user_id",
+          "update_time",
+          "user_id"
+        ],
+        "batch_query_need_relation_keys": [
+          "comment_id",
+          "create_time",
+          "extra",
+          "has_more",
+          "is_solved",
+          "is_whole",
+          "page_token",
+          "quote",
+          "reply_list",
+          "solver_user_id",
+          "update_time",
+          "user_id"
+        ],
+        "replies_list_code": 0,
+        "list_has_is_whole": true,
+        "batch_query_has_is_whole": true,
+        "list_has_is_solved": true,
+        "batch_query_has_is_solved": true,
+        "list_has_solved_time": false,
+        "batch_query_has_solved_time": false,
+        "list_has_solver_user_id": true,
+        "batch_query_has_solver_user_id": true,
+        "list_has_quote": true,
+        "batch_query_has_quote": true,
+        "list_has_extra": true,
+        "batch_query_has_extra": true,
+        "list_has_has_more": false,
+        "batch_query_has_has_more": true,
+        "list_has_page_token": false,
+        "batch_query_has_page_token": true
+      },
+      "amplifier": {
+        "reaction_key_anywhere": [],
+        "reply_element_types": [
+          "text_run"
+        ],
+        "reply_element_populated_keys": [
+          "text_run"
+        ],
+        "reply_extra_in_list": [
+          {
+            "image_list": []
+          }
+        ],
+        "reply_extra_in_replies_list": [
+          {
+            "image_list": []
+          }
+        ],
+        "comment_create_time": 1785288268,
+        "comment_update_time": 1785288268,
+        "comment_edited_by_times": false,
+        "reply_times": [
+          {
+            "reply_id": "7667754726552784605",
+            "create_time": 1785288268,
+            "update_time": 1785288268,
+            "edited_by_times": false
+          }
+        ],
+        "is_solved": false,
+        "solved_time_present": false,
+        "solver_user_id": null,
+        "comment_extra": {
+          "content_anchor_id": "Example913189730f710c82e3a5"
+        }
+      }
+    },
+    "Resolved": {
+      "example": "Resolved",
+      "surface": "docx-zoo",
+      "file_type": "docx",
+      "comment_id": "7667754810224938728",
+      "list_item": {
+        "comment_id": "7667754810224938728",
+        "create_time": 1785288287,
+        "extra": {
+          "content_anchor_id": "Example276015cba8efe64d31a3"
+        },
+        "is_solved": true,
+        "is_whole": false,
+        "quote": "Resolved Comment",
+        "reply_list": {
+          "replies": [
+            {
+              "content": {
+                "elements": [
+                  {
+                    "docs_link": null,
+                    "person": null,
+                    "text_run": {
+                      "text": "Resolved Comment"
+                    },
+                    "type": "text_run"
+                  }
+                ]
+              },
+              "create_time": 1785288287,
+              "extra": {
+                "image_list": []
+              },
+              "reply_id": "7667754810241732328",
+              "update_time": 1785288287,
+              "user_id": "ou_exampleowner00000000000000000001"
+            }
+          ]
+        },
+        "solver_user_id": "ou_exampleowner00000000000000000001",
+        "update_time": 1785288314,
+        "user_id": "ou_exampleowner00000000000000000001"
+      },
+      "shapes": {
+        "get_one": {
+          "label": "get-one",
+          "method": "GET",
+          "path": "drive/v1/files/{tok}/comments/{cid}",
+          "request_body": null,
+          "http_status": 404,
+          "code": 1069307,
+          "msg": "not exist",
+          "response": {
+            "code": 1069307,
+            "msg": "not exist",
+            "error": {
+              "log_id": "2026072917144273690D7024CF4088DD30"
+            }
+          }
+        },
+        "batch_query_need_relation_false": {
+          "label": "batch_query need_relation=false",
+          "method": "POST",
+          "path": "drive/v1/files/{tok}/comments/batch_query",
+          "request_body": {
+            "comment_ids": [
+              "7667754810224938728"
+            ]
+          },
+          "http_status": 200,
+          "code": 0,
+          "msg": "Success",
+          "response": {
+            "code": 0,
+            "data": {
+              "items": [
+                {
+                  "comment_id": "7667754810224938728",
+                  "create_time": 1785288287,
+                  "extra": {
+                    "content_anchor_id": "Example276015cba8efe64d31a3"
+                  },
+                  "has_more": false,
+                  "is_solved": true,
+                  "is_whole": false,
+                  "page_token": "",
+                  "quote": "Resolved Comment",
+                  "reply_list": {
+                    "replies": [
+                      {
+                        "content": {
+                          "elements": [
+                            {
+                              "docs_link": null,
+                              "person": null,
+                              "text_run": {
+                                "text": "Resolved Comment"
+                              },
+                              "type": "text_run"
+                            }
+                          ]
+                        },
+                        "create_time": 1785288287,
+                        "extra": {
+                          "image_list": []
+                        },
+                        "reply_id": "7667754810241732328",
+                        "update_time": 1785288287,
+                        "user_id": "ou_exampleowner00000000000000000001"
+                      }
+                    ]
+                  },
+                  "solver_user_id": "ou_exampleowner00000000000000000001",
+                  "update_time": 1785288314,
+                  "user_id": "ou_exampleowner00000000000000000001"
+                }
+              ]
+            },
+            "msg": "Success"
+          }
+        },
+        "batch_query_need_relation_true": {
+          "label": "batch_query need_relation=true",
+          "method": "POST",
+          "path": "drive/v1/files/{tok}/comments/batch_query",
+          "request_body": {
+            "comment_ids": [
+              "7667754810224938728"
+            ]
+          },
+          "http_status": 200,
+          "code": 0,
+          "msg": "Success",
+          "response": {
+            "code": 0,
+            "data": {
+              "items": [
+                {
+                  "comment_id": "7667754810224938728",
+                  "create_time": 1785288287,
+                  "extra": {
+                    "content_anchor_id": "Example276015cba8efe64d31a3"
+                  },
+                  "has_more": false,
+                  "is_solved": true,
+                  "is_whole": false,
+                  "page_token": "",
+                  "quote": "Resolved Comment",
+                  "reply_list": {
+                    "replies": [
+                      {
+                        "content": {
+                          "elements": [
+                            {
+                              "docs_link": null,
+                              "person": null,
+                              "text_run": {
+                                "text": "Resolved Comment"
+                              },
+                              "type": "text_run"
+                            }
+                          ]
+                        },
+                        "create_time": 1785288287,
+                        "extra": {
+                          "image_list": []
+                        },
+                        "reply_id": "7667754810241732328",
+                        "update_time": 1785288287,
+                        "user_id": "ou_exampleowner00000000000000000001"
+                      }
+                    ]
+                  },
+                  "solver_user_id": "ou_exampleowner00000000000000000001",
+                  "update_time": 1785288314,
+                  "user_id": "ou_exampleowner00000000000000000001"
+                }
+              ]
+            },
+            "msg": "Success"
+          }
+        },
+        "replies_list": {
+          "label": "replies-list",
+          "method": "GET",
+          "path": "drive/v1/files/{tok}/comments/{cid}/replies",
+          "request_body": null,
+          "http_status": 200,
+          "code": 0,
+          "msg": "Success",
+          "response": {
+            "code": 0,
+            "data": {
+              "has_more": false,
+              "items": [
+                {
+                  "content": {
+                    "elements": [
+                      {
+                        "docs_link": null,
+                        "person": null,
+                        "text_run": {
+                          "text": "Resolved Comment"
+                        },
+                        "type": "text_run"
+                      }
+                    ]
+                  },
+                  "create_time": 1785288287,
+                  "extra": {
+                    "image_list": []
+                  },
+                  "reply_id": "7667754810241732328",
+                  "update_time": 1785288287,
+                  "user_id": "ou_exampleowner00000000000000000001"
+                }
+              ],
+              "page_token": "0"
+            },
+            "msg": "Success"
+          }
+        }
+      },
+      "shape_row": {
+        "list_keys": [
+          "comment_id",
+          "create_time",
+          "extra",
+          "is_solved",
+          "is_whole",
+          "quote",
+          "reply_list",
+          "solver_user_id",
+          "update_time",
+          "user_id"
+        ],
+        "get_one_code": 1069307,
+        "get_one_keys": [],
+        "batch_query_keys": [
+          "comment_id",
+          "create_time",
+          "extra",
+          "has_more",
+          "is_solved",
+          "is_whole",
+          "page_token",
+          "quote",
+          "reply_list",
+          "solver_user_id",
+          "update_time",
+          "user_id"
+        ],
+        "batch_query_need_relation_keys": [
+          "comment_id",
+          "create_time",
+          "extra",
+          "has_more",
+          "is_solved",
+          "is_whole",
+          "page_token",
+          "quote",
+          "reply_list",
+          "solver_user_id",
+          "update_time",
+          "user_id"
+        ],
+        "replies_list_code": 0,
+        "list_has_is_whole": true,
+        "batch_query_has_is_whole": true,
+        "list_has_is_solved": true,
+        "batch_query_has_is_solved": true,
+        "list_has_solved_time": false,
+        "batch_query_has_solved_time": false,
+        "list_has_solver_user_id": true,
+        "batch_query_has_solver_user_id": true,
+        "list_has_quote": true,
+        "batch_query_has_quote": true,
+        "list_has_extra": true,
+        "batch_query_has_extra": true,
+        "list_has_has_more": false,
+        "batch_query_has_has_more": true,
+        "list_has_page_token": false,
+        "batch_query_has_page_token": true
+      },
+      "amplifier": {
+        "reaction_key_anywhere": [],
+        "reply_element_types": [
+          "text_run"
+        ],
+        "reply_element_populated_keys": [
+          "text_run"
+        ],
+        "reply_extra_in_list": [
+          {
+            "image_list": []
+          }
+        ],
+        "reply_extra_in_replies_list": [
+          {
+            "image_list": []
+          }
+        ],
+        "comment_create_time": 1785288287,
+        "comment_update_time": 1785288314,
+        "comment_edited_by_times": true,
+        "reply_times": [
+          {
+            "reply_id": "7667754810241732328",
+            "create_time": 1785288287,
+            "update_time": 1785288287,
+            "edited_by_times": false
+          }
+        ],
+        "is_solved": true,
+        "solved_time_present": false,
+        "solver_user_id": "ou_exampleowner00000000000000000001",
+        "comment_extra": {
+          "content_anchor_id": "Example276015cba8efe64d31a3"
+        }
+      }
+    },
+    "Thread": {
+      "example": "Thread",
+      "surface": "docx-zoo",
+      "file_type": "docx",
+      "comment_id": "7667755056904572640",
+      "list_item": {
+        "comment_id": "7667755056904572640",
+        "create_time": 1785288345,
+        "extra": {
+          "content_anchor_id": "Exampled120510db14b7453214c"
+        },
+        "is_solved": false,
+        "is_whole": false,
+        "quote": "Comment thread with multiple replies",
+        "reply_list": {
+          "replies": [
+            {
+              "content": {
+                "elements": [
+                  {
+                    "docs_link": null,
+                    "person": null,
+                    "text_run": {
+                      "text": "Comment thread with multiple replies"
+                    },
+                    "type": "text_run"
+                  }
+                ]
+              },
+              "create_time": 1785288345,
+              "extra": {
+                "image_list": []
+              },
+              "reply_id": "7667755056921382619",
+              "update_time": 1785288345,
+              "user_id": "ou_exampleowner00000000000000000001"
+            },
+            {
+              "content": {
+                "elements": [
+                  {
+                    "docs_link": null,
+                    "person": null,
+                    "text_run": {
+                      "text": "Reply 1"
+                    },
+                    "type": "text_run"
+                  }
+                ]
+              },
+              "create_time": 1785288349,
+              "extra": {
+                "image_list": []
+              },
+              "reply_id": "7667755075359477472",
+              "update_time": 1785288349,
+              "user_id": "ou_exampleowner00000000000000000001"
+            },
+            {
+              "content": {
+                "elements": [
+                  {
+                    "docs_link": null,
+                    "person": null,
+                    "text_run": {
+                      "text": "Reply 2"
+                    },
+                    "type": "text_run"
+                  }
+                ]
+              },
+              "create_time": 1785288352,
+              "extra": {
+                "image_list": []
+              },
+              "reply_id": "7667755086113722075",
+              "update_time": 1785288352,
+              "user_id": "ou_exampleowner00000000000000000001"
+            },
+            {
+              "content": {
+                "elements": [
+                  {
+                    "docs_link": null,
+                    "person": null,
+                    "text_run": {
+                      "text": "Reply 3"
+                    },
+                    "type": "text_run"
+                  }
+                ]
+              },
+              "create_time": 1785288355,
+              "extra": {
+                "image_list": []
+              },
+              "reply_id": "7667755099011190496",
+              "update_time": 1785288355,
+              "user_id": "ou_exampleowner00000000000000000001"
+            }
+          ]
+        },
+        "solver_user_id": null,
+        "update_time": 1785288355,
+        "user_id": "ou_exampleowner00000000000000000001"
+      },
+      "shapes": {
+        "get_one": {
+          "label": "get-one",
+          "method": "GET",
+          "path": "drive/v1/files/{tok}/comments/{cid}",
+          "request_body": null,
+          "http_status": 404,
+          "code": 1069307,
+          "msg": "not exist",
+          "response": {
+            "code": 1069307,
+            "msg": "not exist",
+            "error": {
+              "log_id": "20260729171445763702459470982880F4"
+            }
+          }
+        },
+        "batch_query_need_relation_false": {
+          "label": "batch_query need_relation=false",
+          "method": "POST",
+          "path": "drive/v1/files/{tok}/comments/batch_query",
+          "request_body": {
+            "comment_ids": [
+              "7667755056904572640"
+            ]
+          },
+          "http_status": 200,
+          "code": 0,
+          "msg": "Success",
+          "response": {
+            "code": 0,
+            "data": {
+              "items": [
+                {
+                  "comment_id": "7667755056904572640",
+                  "create_time": 1785288345,
+                  "extra": {
+                    "content_anchor_id": "Exampled120510db14b7453214c"
+                  },
+                  "has_more": false,
+                  "is_solved": false,
+                  "is_whole": false,
+                  "page_token": "",
+                  "quote": "Comment thread with multiple replies",
+                  "reply_list": {
+                    "replies": [
+                      {
+                        "content": {
+                          "elements": [
+                            {
+                              "docs_link": null,
+                              "person": null,
+                              "text_run": {
+                                "text": "Comment thread with multiple replies"
+                              },
+                              "type": "text_run"
+                            }
+                          ]
+                        },
+                        "create_time": 1785288345,
+                        "extra": {
+                          "image_list": []
+                        },
+                        "reply_id": "7667755056921382619",
+                        "update_time": 1785288345,
+                        "user_id": "ou_exampleowner00000000000000000001"
+                      },
+                      {
+                        "content": {
+                          "elements": [
+                            {
+                              "docs_link": null,
+                              "person": null,
+                              "text_run": {
+                                "text": "Reply 1"
+                              },
+                              "type": "text_run"
+                            }
+                          ]
+                        },
+                        "create_time": 1785288349,
+                        "extra": {
+                          "image_list": []
+                        },
+                        "reply_id": "7667755075359477472",
+                        "update_time": 1785288349,
+                        "user_id": "ou_exampleowner00000000000000000001"
+                      },
+                      {
+                        "content": {
+                          "elements": [
+                            {
+                              "docs_link": null,
+                              "person": null,
+                              "text_run": {
+                                "text": "Reply 2"
+                              },
+                              "type": "text_run"
+                            }
+                          ]
+                        },
+                        "create_time": 1785288352,
+                        "extra": {
+                          "image_list": []
+                        },
+                        "reply_id": "7667755086113722075",
+                        "update_time": 1785288352,
+                        "user_id": "ou_exampleowner00000000000000000001"
+                      },
+                      {
+                        "content": {
+                          "elements": [
+                            {
+                              "docs_link": null,
+                              "person": null,
+                              "text_run": {
+                                "text": "Reply 3"
+                              },
+                              "type": "text_run"
+                            }
+                          ]
+                        },
+                        "create_time": 1785288355,
+                        "extra": {
+                          "image_list": []
+                        },
+                        "reply_id": "7667755099011190496",
+                        "update_time": 1785288355,
+                        "user_id": "ou_exampleowner00000000000000000001"
+                      }
+                    ]
+                  },
+                  "solver_user_id": null,
+                  "update_time": 1785288355,
+                  "user_id": "ou_exampleowner00000000000000000001"
+                }
+              ]
+            },
+            "msg": "Success"
+          }
+        },
+        "batch_query_need_relation_true": {
+          "label": "batch_query need_relation=true",
+          "method": "POST",
+          "path": "drive/v1/files/{tok}/comments/batch_query",
+          "request_body": {
+            "comment_ids": [
+              "7667755056904572640"
+            ]
+          },
+          "http_status": 200,
+          "code": 0,
+          "msg": "Success",
+          "response": {
+            "code": 0,
+            "data": {
+              "items": [
+                {
+                  "comment_id": "7667755056904572640",
+                  "create_time": 1785288345,
+                  "extra": {
+                    "content_anchor_id": "Exampled120510db14b7453214c"
+                  },
+                  "has_more": false,
+                  "is_solved": false,
+                  "is_whole": false,
+                  "page_token": "",
+                  "quote": "Comment thread with multiple replies",
+                  "reply_list": {
+                    "replies": [
+                      {
+                        "content": {
+                          "elements": [
+                            {
+                              "docs_link": null,
+                              "person": null,
+                              "text_run": {
+                                "text": "Comment thread with multiple replies"
+                              },
+                              "type": "text_run"
+                            }
+                          ]
+                        },
+                        "create_time": 1785288345,
+                        "extra": {
+                          "image_list": []
+                        },
+                        "reply_id": "7667755056921382619",
+                        "update_time": 1785288345,
+                        "user_id": "ou_exampleowner00000000000000000001"
+                      },
+                      {
+                        "content": {
+                          "elements": [
+                            {
+                              "docs_link": null,
+                              "person": null,
+                              "text_run": {
+                                "text": "Reply 1"
+                              },
+                              "type": "text_run"
+                            }
+                          ]
+                        },
+                        "create_time": 1785288349,
+                        "extra": {
+                          "image_list": []
+                        },
+                        "reply_id": "7667755075359477472",
+                        "update_time": 1785288349,
+                        "user_id": "ou_exampleowner00000000000000000001"
+                      },
+                      {
+                        "content": {
+                          "elements": [
+                            {
+                              "docs_link": null,
+                              "person": null,
+                              "text_run": {
+                                "text": "Reply 2"
+                              },
+                              "type": "text_run"
+                            }
+                          ]
+                        },
+                        "create_time": 1785288352,
+                        "extra": {
+                          "image_list": []
+                        },
+                        "reply_id": "7667755086113722075",
+                        "update_time": 1785288352,
+                        "user_id": "ou_exampleowner00000000000000000001"
+                      },
+                      {
+                        "content": {
+                          "elements": [
+                            {
+                              "docs_link": null,
+                              "person": null,
+                              "text_run": {
+                                "text": "Reply 3"
+                              },
+                              "type": "text_run"
+                            }
+                          ]
+                        },
+                        "create_time": 1785288355,
+                        "extra": {
+                          "image_list": []
+                        },
+                        "reply_id": "7667755099011190496",
+                        "update_time": 1785288355,
+                        "user_id": "ou_exampleowner00000000000000000001"
+                      }
+                    ]
+                  },
+                  "solver_user_id": null,
+                  "update_time": 1785288355,
+                  "user_id": "ou_exampleowner00000000000000000001"
+                }
+              ]
+            },
+            "msg": "Success"
+          }
+        },
+        "replies_list": {
+          "label": "replies-list",
+          "method": "GET",
+          "path": "drive/v1/files/{tok}/comments/{cid}/replies",
+          "request_body": null,
+          "http_status": 200,
+          "code": 0,
+          "msg": "Success",
+          "response": {
+            "code": 0,
+            "data": {
+              "has_more": false,
+              "items": [
+                {
+                  "content": {
+                    "elements": [
+                      {
+                        "docs_link": null,
+                        "person": null,
+                        "text_run": {
+                          "text": "Comment thread with multiple replies"
+                        },
+                        "type": "text_run"
+                      }
+                    ]
+                  },
+                  "create_time": 1785288345,
+                  "extra": {
+                    "image_list": []
+                  },
+                  "reply_id": "7667755056921382619",
+                  "update_time": 1785288345,
+                  "user_id": "ou_exampleowner00000000000000000001"
+                },
+                {
+                  "content": {
+                    "elements": [
+                      {
+                        "docs_link": null,
+                        "person": null,
+                        "text_run": {
+                          "text": "Reply 1"
+                        },
+                        "type": "text_run"
+                      }
+                    ]
+                  },
+                  "create_time": 1785288349,
+                  "extra": {
+                    "image_list": []
+                  },
+                  "reply_id": "7667755075359477472",
+                  "update_time": 1785288349,
+                  "user_id": "ou_exampleowner00000000000000000001"
+                },
+                {
+                  "content": {
+                    "elements": [
+                      {
+                        "docs_link": null,
+                        "person": null,
+                        "text_run": {
+                          "text": "Reply 2"
+                        },
+                        "type": "text_run"
+                      }
+                    ]
+                  },
+                  "create_time": 1785288352,
+                  "extra": {
+                    "image_list": []
+                  },
+                  "reply_id": "7667755086113722075",
+                  "update_time": 1785288352,
+                  "user_id": "ou_exampleowner00000000000000000001"
+                },
+                {
+                  "content": {
+                    "elements": [
+                      {
+                        "docs_link": null,
+                        "person": null,
+                        "text_run": {
+                          "text": "Reply 3"
+                        },
+                        "type": "text_run"
+                      }
+                    ]
+                  },
+                  "create_time": 1785288355,
+                  "extra": {
+                    "image_list": []
+                  },
+                  "reply_id": "7667755099011190496",
+                  "update_time": 1785288355,
+                  "user_id": "ou_exampleowner00000000000000000001"
+                }
+              ],
+              "page_token": "0"
+            },
+            "msg": "Success"
+          }
+        }
+      },
+      "shape_row": {
+        "list_keys": [
+          "comment_id",
+          "create_time",
+          "extra",
+          "is_solved",
+          "is_whole",
+          "quote",
+          "reply_list",
+          "solver_user_id",
+          "update_time",
+          "user_id"
+        ],
+        "get_one_code": 1069307,
+        "get_one_keys": [],
+        "batch_query_keys": [
+          "comment_id",
+          "create_time",
+          "extra",
+          "has_more",
+          "is_solved",
+          "is_whole",
+          "page_token",
+          "quote",
+          "reply_list",
+          "solver_user_id",
+          "update_time",
+          "user_id"
+        ],
+        "batch_query_need_relation_keys": [
+          "comment_id",
+          "create_time",
+          "extra",
+          "has_more",
+          "is_solved",
+          "is_whole",
+          "page_token",
+          "quote",
+          "reply_list",
+          "solver_user_id",
+          "update_time",
+          "user_id"
+        ],
+        "replies_list_code": 0,
+        "list_has_is_whole": true,
+        "batch_query_has_is_whole": true,
+        "list_has_is_solved": true,
+        "batch_query_has_is_solved": true,
+        "list_has_solved_time": false,
+        "batch_query_has_solved_time": false,
+        "list_has_solver_user_id": true,
+        "batch_query_has_solver_user_id": true,
+        "list_has_quote": true,
+        "batch_query_has_quote": true,
+        "list_has_extra": true,
+        "batch_query_has_extra": true,
+        "list_has_has_more": false,
+        "batch_query_has_has_more": true,
+        "list_has_page_token": false,
+        "batch_query_has_page_token": true
+      },
+      "amplifier": {
+        "reaction_key_anywhere": [],
+        "reply_element_types": [
+          "text_run",
+          "text_run",
+          "text_run",
+          "text_run"
+        ],
+        "reply_element_populated_keys": [
+          "text_run"
+        ],
+        "reply_extra_in_list": [
+          {
+            "image_list": []
+          },
+          {
+            "image_list": []
+          },
+          {
+            "image_list": []
+          },
+          {
+            "image_list": []
+          }
+        ],
+        "reply_extra_in_replies_list": [
+          {
+            "image_list": []
+          },
+          {
+            "image_list": []
+          },
+          {
+            "image_list": []
+          },
+          {
+            "image_list": []
+          }
+        ],
+        "comment_create_time": 1785288345,
+        "comment_update_time": 1785288355,
+        "comment_edited_by_times": true,
+        "reply_times": [
+          {
+            "reply_id": "7667755056921382619",
+            "create_time": 1785288345,
+            "update_time": 1785288345,
+            "edited_by_times": false
+          },
+          {
+            "reply_id": "7667755075359477472",
+            "create_time": 1785288349,
+            "update_time": 1785288349,
+            "edited_by_times": false
+          },
+          {
+            "reply_id": "7667755086113722075",
+            "create_time": 1785288352,
+            "update_time": 1785288352,
+            "edited_by_times": false
+          },
+          {
+            "reply_id": "7667755099011190496",
+            "create_time": 1785288355,
+            "update_time": 1785288355,
+            "edited_by_times": false
+          }
+        ],
+        "is_solved": false,
+        "solved_time_present": false,
+        "solver_user_id": null,
+        "comment_extra": {
+          "content_anchor_id": "Exampled120510db14b7453214c"
+        }
+      }
+    },
+    "Like": {
+      "example": "Like",
+      "surface": "docx-zoo",
+      "file_type": "docx",
+      "comment_id": "7667755191499755240",
+      "list_item": {
+        "comment_id": "7667755191499755240",
+        "create_time": 1785288376,
+        "extra": {
+          "content_anchor_id": "Example11de0c7aa51fe8309b95"
+        },
+        "is_solved": false,
+        "is_whole": false,
+        "quote": "Comment with a Like",
+        "reply_list": {
+          "replies": [
+            {
+              "content": {
+                "elements": [
+                  {
+                    "docs_link": null,
+                    "person": null,
+                    "text_run": {
+                      "text": "Comment with a Like"
+                    },
+                    "type": "text_run"
+                  }
+                ]
+              },
+              "create_time": 1785288376,
+              "extra": {
+                "image_list": []
+              },
+              "reply_id": "7667755191516532448",
+              "update_time": 1785288376,
+              "user_id": "ou_exampleowner00000000000000000001"
+            }
+          ]
+        },
+        "solver_user_id": null,
+        "update_time": 1785288376,
+        "user_id": "ou_exampleowner00000000000000000001"
+      },
+      "shapes": {
+        "get_one": {
+          "label": "get-one",
+          "method": "GET",
+          "path": "drive/v1/files/{tok}/comments/{cid}",
+          "request_body": null,
+          "http_status": 404,
+          "code": 1069307,
+          "msg": "not exist",
+          "response": {
+            "code": 1069307,
+            "msg": "not exist",
+            "error": {
+              "log_id": "202607291714482096CC5643DC1A2E628B"
+            }
+          }
+        },
+        "batch_query_need_relation_false": {
+          "label": "batch_query need_relation=false",
+          "method": "POST",
+          "path": "drive/v1/files/{tok}/comments/batch_query",
+          "request_body": {
+            "comment_ids": [
+              "7667755191499755240"
+            ]
+          },
+          "http_status": 200,
+          "code": 0,
+          "msg": "Success",
+          "response": {
+            "code": 0,
+            "data": {
+              "items": [
+                {
+                  "comment_id": "7667755191499755240",
+                  "create_time": 1785288376,
+                  "extra": {
+                    "content_anchor_id": "Example11de0c7aa51fe8309b95"
+                  },
+                  "has_more": false,
+                  "is_solved": false,
+                  "is_whole": false,
+                  "page_token": "",
+                  "quote": "Comment with a Like",
+                  "reply_list": {
+                    "replies": [
+                      {
+                        "content": {
+                          "elements": [
+                            {
+                              "docs_link": null,
+                              "person": null,
+                              "text_run": {
+                                "text": "Comment with a Like"
+                              },
+                              "type": "text_run"
+                            }
+                          ]
+                        },
+                        "create_time": 1785288376,
+                        "extra": {
+                          "image_list": []
+                        },
+                        "reply_id": "7667755191516532448",
+                        "update_time": 1785288376,
+                        "user_id": "ou_exampleowner00000000000000000001"
+                      }
+                    ]
+                  },
+                  "solver_user_id": null,
+                  "update_time": 1785288376,
+                  "user_id": "ou_exampleowner00000000000000000001"
+                }
+              ]
+            },
+            "msg": "Success"
+          }
+        },
+        "batch_query_need_relation_true": {
+          "label": "batch_query need_relation=true",
+          "method": "POST",
+          "path": "drive/v1/files/{tok}/comments/batch_query",
+          "request_body": {
+            "comment_ids": [
+              "7667755191499755240"
+            ]
+          },
+          "http_status": 200,
+          "code": 0,
+          "msg": "Success",
+          "response": {
+            "code": 0,
+            "data": {
+              "items": [
+                {
+                  "comment_id": "7667755191499755240",
+                  "create_time": 1785288376,
+                  "extra": {
+                    "content_anchor_id": "Example11de0c7aa51fe8309b95"
+                  },
+                  "has_more": false,
+                  "is_solved": false,
+                  "is_whole": false,
+                  "page_token": "",
+                  "quote": "Comment with a Like",
+                  "reply_list": {
+                    "replies": [
+                      {
+                        "content": {
+                          "elements": [
+                            {
+                              "docs_link": null,
+                              "person": null,
+                              "text_run": {
+                                "text": "Comment with a Like"
+                              },
+                              "type": "text_run"
+                            }
+                          ]
+                        },
+                        "create_time": 1785288376,
+                        "extra": {
+                          "image_list": []
+                        },
+                        "reply_id": "7667755191516532448",
+                        "update_time": 1785288376,
+                        "user_id": "ou_exampleowner00000000000000000001"
+                      }
+                    ]
+                  },
+                  "solver_user_id": null,
+                  "update_time": 1785288376,
+                  "user_id": "ou_exampleowner00000000000000000001"
+                }
+              ]
+            },
+            "msg": "Success"
+          }
+        },
+        "replies_list": {
+          "label": "replies-list",
+          "method": "GET",
+          "path": "drive/v1/files/{tok}/comments/{cid}/replies",
+          "request_body": null,
+          "http_status": 200,
+          "code": 0,
+          "msg": "Success",
+          "response": {
+            "code": 0,
+            "data": {
+              "has_more": false,
+              "items": [
+                {
+                  "content": {
+                    "elements": [
+                      {
+                        "docs_link": null,
+                        "person": null,
+                        "text_run": {
+                          "text": "Comment with a Like"
+                        },
+                        "type": "text_run"
+                      }
+                    ]
+                  },
+                  "create_time": 1785288376,
+                  "extra": {
+                    "image_list": []
+                  },
+                  "reply_id": "7667755191516532448",
+                  "update_time": 1785288376,
+                  "user_id": "ou_exampleowner00000000000000000001"
+                }
+              ],
+              "page_token": "0"
+            },
+            "msg": "Success"
+          }
+        }
+      },
+      "shape_row": {
+        "list_keys": [
+          "comment_id",
+          "create_time",
+          "extra",
+          "is_solved",
+          "is_whole",
+          "quote",
+          "reply_list",
+          "solver_user_id",
+          "update_time",
+          "user_id"
+        ],
+        "get_one_code": 1069307,
+        "get_one_keys": [],
+        "batch_query_keys": [
+          "comment_id",
+          "create_time",
+          "extra",
+          "has_more",
+          "is_solved",
+          "is_whole",
+          "page_token",
+          "quote",
+          "reply_list",
+          "solver_user_id",
+          "update_time",
+          "user_id"
+        ],
+        "batch_query_need_relation_keys": [
+          "comment_id",
+          "create_time",
+          "extra",
+          "has_more",
+          "is_solved",
+          "is_whole",
+          "page_token",
+          "quote",
+          "reply_list",
+          "solver_user_id",
+          "update_time",
+          "user_id"
+        ],
+        "replies_list_code": 0,
+        "list_has_is_whole": true,
+        "batch_query_has_is_whole": true,
+        "list_has_is_solved": true,
+        "batch_query_has_is_solved": true,
+        "list_has_solved_time": false,
+        "batch_query_has_solved_time": false,
+        "list_has_solver_user_id": true,
+        "batch_query_has_solver_user_id": true,
+        "list_has_quote": true,
+        "batch_query_has_quote": true,
+        "list_has_extra": true,
+        "batch_query_has_extra": true,
+        "list_has_has_more": false,
+        "batch_query_has_has_more": true,
+        "list_has_page_token": false,
+        "batch_query_has_page_token": true
+      },
+      "amplifier": {
+        "reaction_key_anywhere": [],
+        "reply_element_types": [
+          "text_run"
+        ],
+        "reply_element_populated_keys": [
+          "text_run"
+        ],
+        "reply_extra_in_list": [
+          {
+            "image_list": []
+          }
+        ],
+        "reply_extra_in_replies_list": [
+          {
+            "image_list": []
+          }
+        ],
+        "comment_create_time": 1785288376,
+        "comment_update_time": 1785288376,
+        "comment_edited_by_times": false,
+        "reply_times": [
+          {
+            "reply_id": "7667755191516532448",
+            "create_time": 1785288376,
+            "update_time": 1785288376,
+            "edited_by_times": false
+          }
+        ],
+        "is_solved": false,
+        "solved_time_present": false,
+        "solver_user_id": null,
+        "comment_extra": {
+          "content_anchor_id": "Example11de0c7aa51fe8309b95"
+        }
+      }
+    },
+    "Edited": {
+      "example": "Edited",
+      "surface": "docx-zoo",
+      "file_type": "docx",
+      "comment_id": "7667755630672793311",
+      "list_item": {
+        "comment_id": "7667755630672793311",
+        "create_time": 1785288478,
+        "extra": {
+          "content_anchor_id": "Example1f67e18ba055e40eb687"
+        },
+        "is_solved": false,
+        "is_whole": false,
+        "quote": "Edited Comment",
+        "reply_list": {
+          "replies": [
+            {
+              "content": {
+                "elements": [
+                  {
+                    "docs_link": null,
+                    "person": null,
+                    "text_run": {
+                      "text": "Edited Comment (original is no longer visible)"
+                    },
+                    "type": "text_run"
+                  }
+                ]
+              },
+              "create_time": 1785288478,
+              "extra": {
+                "image_list": []
+              },
+              "reply_id": "7667755630689537759",
+              "update_time": 1785288496,
+              "user_id": "ou_exampleowner00000000000000000001"
+            }
+          ]
+        },
+        "solver_user_id": null,
+        "update_time": 1785288496,
+        "user_id": "ou_exampleowner00000000000000000001"
+      },
+      "shapes": {
+        "get_one": {
+          "label": "get-one",
+          "method": "GET",
+          "path": "drive/v1/files/{tok}/comments/{cid}",
+          "request_body": null,
+          "http_status": 404,
+          "code": 1069307,
+          "msg": "not exist",
+          "response": {
+            "code": 1069307,
+            "msg": "not exist",
+            "error": {
+              "log_id": "202607291714518BD90E89D33C261E7FC1"
+            }
+          }
+        },
+        "batch_query_need_relation_false": {
+          "label": "batch_query need_relation=false",
+          "method": "POST",
+          "path": "drive/v1/files/{tok}/comments/batch_query",
+          "request_body": {
+            "comment_ids": [
+              "7667755630672793311"
+            ]
+          },
+          "http_status": 200,
+          "code": 0,
+          "msg": "Success",
+          "response": {
+            "code": 0,
+            "data": {
+              "items": [
+                {
+                  "comment_id": "7667755630672793311",
+                  "create_time": 1785288478,
+                  "extra": {
+                    "content_anchor_id": "Example1f67e18ba055e40eb687"
+                  },
+                  "has_more": false,
+                  "is_solved": false,
+                  "is_whole": false,
+                  "page_token": "",
+                  "quote": "Edited Comment",
+                  "reply_list": {
+                    "replies": [
+                      {
+                        "content": {
+                          "elements": [
+                            {
+                              "docs_link": null,
+                              "person": null,
+                              "text_run": {
+                                "text": "Edited Comment (original is no longer visible)"
+                              },
+                              "type": "text_run"
+                            }
+                          ]
+                        },
+                        "create_time": 1785288478,
+                        "extra": {
+                          "image_list": []
+                        },
+                        "reply_id": "7667755630689537759",
+                        "update_time": 1785288496,
+                        "user_id": "ou_exampleowner00000000000000000001"
+                      }
+                    ]
+                  },
+                  "solver_user_id": null,
+                  "update_time": 1785288496,
+                  "user_id": "ou_exampleowner00000000000000000001"
+                }
+              ]
+            },
+            "msg": "Success"
+          }
+        },
+        "batch_query_need_relation_true": {
+          "label": "batch_query need_relation=true",
+          "method": "POST",
+          "path": "drive/v1/files/{tok}/comments/batch_query",
+          "request_body": {
+            "comment_ids": [
+              "7667755630672793311"
+            ]
+          },
+          "http_status": 200,
+          "code": 0,
+          "msg": "Success",
+          "response": {
+            "code": 0,
+            "data": {
+              "items": [
+                {
+                  "comment_id": "7667755630672793311",
+                  "create_time": 1785288478,
+                  "extra": {
+                    "content_anchor_id": "Example1f67e18ba055e40eb687"
+                  },
+                  "has_more": false,
+                  "is_solved": false,
+                  "is_whole": false,
+                  "page_token": "",
+                  "quote": "Edited Comment",
+                  "reply_list": {
+                    "replies": [
+                      {
+                        "content": {
+                          "elements": [
+                            {
+                              "docs_link": null,
+                              "person": null,
+                              "text_run": {
+                                "text": "Edited Comment (original is no longer visible)"
+                              },
+                              "type": "text_run"
+                            }
+                          ]
+                        },
+                        "create_time": 1785288478,
+                        "extra": {
+                          "image_list": []
+                        },
+                        "reply_id": "7667755630689537759",
+                        "update_time": 1785288496,
+                        "user_id": "ou_exampleowner00000000000000000001"
+                      }
+                    ]
+                  },
+                  "solver_user_id": null,
+                  "update_time": 1785288496,
+                  "user_id": "ou_exampleowner00000000000000000001"
+                }
+              ]
+            },
+            "msg": "Success"
+          }
+        },
+        "replies_list": {
+          "label": "replies-list",
+          "method": "GET",
+          "path": "drive/v1/files/{tok}/comments/{cid}/replies",
+          "request_body": null,
+          "http_status": 200,
+          "code": 0,
+          "msg": "Success",
+          "response": {
+            "code": 0,
+            "data": {
+              "has_more": false,
+              "items": [
+                {
+                  "content": {
+                    "elements": [
+                      {
+                        "docs_link": null,
+                        "person": null,
+                        "text_run": {
+                          "text": "Edited Comment (original is no longer visible)"
+                        },
+                        "type": "text_run"
+                      }
+                    ]
+                  },
+                  "create_time": 1785288478,
+                  "extra": {
+                    "image_list": []
+                  },
+                  "reply_id": "7667755630689537759",
+                  "update_time": 1785288496,
+                  "user_id": "ou_exampleowner00000000000000000001"
+                }
+              ],
+              "page_token": "0"
+            },
+            "msg": "Success"
+          }
+        }
+      },
+      "shape_row": {
+        "list_keys": [
+          "comment_id",
+          "create_time",
+          "extra",
+          "is_solved",
+          "is_whole",
+          "quote",
+          "reply_list",
+          "solver_user_id",
+          "update_time",
+          "user_id"
+        ],
+        "get_one_code": 1069307,
+        "get_one_keys": [],
+        "batch_query_keys": [
+          "comment_id",
+          "create_time",
+          "extra",
+          "has_more",
+          "is_solved",
+          "is_whole",
+          "page_token",
+          "quote",
+          "reply_list",
+          "solver_user_id",
+          "update_time",
+          "user_id"
+        ],
+        "batch_query_need_relation_keys": [
+          "comment_id",
+          "create_time",
+          "extra",
+          "has_more",
+          "is_solved",
+          "is_whole",
+          "page_token",
+          "quote",
+          "reply_list",
+          "solver_user_id",
+          "update_time",
+          "user_id"
+        ],
+        "replies_list_code": 0,
+        "list_has_is_whole": true,
+        "batch_query_has_is_whole": true,
+        "list_has_is_solved": true,
+        "batch_query_has_is_solved": true,
+        "list_has_solved_time": false,
+        "batch_query_has_solved_time": false,
+        "list_has_solver_user_id": true,
+        "batch_query_has_solver_user_id": true,
+        "list_has_quote": true,
+        "batch_query_has_quote": true,
+        "list_has_extra": true,
+        "batch_query_has_extra": true,
+        "list_has_has_more": false,
+        "batch_query_has_has_more": true,
+        "list_has_page_token": false,
+        "batch_query_has_page_token": true
+      },
+      "amplifier": {
+        "reaction_key_anywhere": [],
+        "reply_element_types": [
+          "text_run"
+        ],
+        "reply_element_populated_keys": [
+          "text_run"
+        ],
+        "reply_extra_in_list": [
+          {
+            "image_list": []
+          }
+        ],
+        "reply_extra_in_replies_list": [
+          {
+            "image_list": []
+          }
+        ],
+        "comment_create_time": 1785288478,
+        "comment_update_time": 1785288496,
+        "comment_edited_by_times": true,
+        "reply_times": [
+          {
+            "reply_id": "7667755630689537759",
+            "create_time": 1785288478,
+            "update_time": 1785288496,
+            "edited_by_times": true
+          }
+        ],
+        "is_solved": false,
+        "solved_time_present": false,
+        "solver_user_id": null,
+        "comment_extra": {
+          "content_anchor_id": "Example1f67e18ba055e40eb687"
+        }
+      }
+    },
+    "Image": {
+      "example": "Image",
+      "surface": "docx-zoo",
+      "file_type": "docx",
+      "comment_id": "7667755822109167325",
+      "list_item": {
+        "comment_id": "7667755822109167325",
+        "create_time": 1785288529,
+        "extra": {
+          "content_anchor_id": "Example7e30112c406cb09c2ee9"
+        },
+        "is_solved": false,
+        "is_whole": false,
+        "quote": "Comment with Image Embedded",
+        "reply_list": {
+          "replies": [
+            {
+              "content": {
+                "elements": [
+                  {
+                    "docs_link": null,
+                    "person": null,
+                    "text_run": {
+                      "text": "Comment with Image Embedded"
+                    },
+                    "type": "text_run"
+                  }
+                ]
+              },
+              "create_time": 1785288529,
+              "extra": {
+                "image_list": [
+                  "Example275b62835dfea3441291"
+                ]
+              },
+              "reply_id": "7667755822125944544",
+              "update_time": 1785288529,
+              "user_id": "ou_exampleowner00000000000000000001"
+            }
+          ]
+        },
+        "solver_user_id": null,
+        "update_time": 1785288530,
+        "user_id": "ou_exampleowner00000000000000000001"
+      },
+      "shapes": {
+        "get_one": {
+          "label": "get-one",
+          "method": "GET",
+          "path": "drive/v1/files/{tok}/comments/{cid}",
+          "request_body": null,
+          "http_status": 404,
+          "code": 1069307,
+          "msg": "not exist",
+          "response": {
+            "code": 1069307,
+            "msg": "not exist",
+            "error": {
+              "log_id": "20260729171454A5A04648A54F569810D9"
+            }
+          }
+        },
+        "batch_query_need_relation_false": {
+          "label": "batch_query need_relation=false",
+          "method": "POST",
+          "path": "drive/v1/files/{tok}/comments/batch_query",
+          "request_body": {
+            "comment_ids": [
+              "7667755822109167325"
+            ]
+          },
+          "http_status": 200,
+          "code": 0,
+          "msg": "Success",
+          "response": {
+            "code": 0,
+            "data": {
+              "items": [
+                {
+                  "comment_id": "7667755822109167325",
+                  "create_time": 1785288529,
+                  "extra": {
+                    "content_anchor_id": "Example7e30112c406cb09c2ee9"
+                  },
+                  "has_more": false,
+                  "is_solved": false,
+                  "is_whole": false,
+                  "page_token": "",
+                  "quote": "Comment with Image Embedded",
+                  "reply_list": {
+                    "replies": [
+                      {
+                        "content": {
+                          "elements": [
+                            {
+                              "docs_link": null,
+                              "person": null,
+                              "text_run": {
+                                "text": "Comment with Image Embedded"
+                              },
+                              "type": "text_run"
+                            }
+                          ]
+                        },
+                        "create_time": 1785288529,
+                        "extra": {
+                          "image_list": [
+                            "Example275b62835dfea3441291"
+                          ]
+                        },
+                        "reply_id": "7667755822125944544",
+                        "update_time": 1785288529,
+                        "user_id": "ou_exampleowner00000000000000000001"
+                      }
+                    ]
+                  },
+                  "solver_user_id": null,
+                  "update_time": 1785288530,
+                  "user_id": "ou_exampleowner00000000000000000001"
+                }
+              ]
+            },
+            "msg": "Success"
+          }
+        },
+        "batch_query_need_relation_true": {
+          "label": "batch_query need_relation=true",
+          "method": "POST",
+          "path": "drive/v1/files/{tok}/comments/batch_query",
+          "request_body": {
+            "comment_ids": [
+              "7667755822109167325"
+            ]
+          },
+          "http_status": 200,
+          "code": 0,
+          "msg": "Success",
+          "response": {
+            "code": 0,
+            "data": {
+              "items": [
+                {
+                  "comment_id": "7667755822109167325",
+                  "create_time": 1785288529,
+                  "extra": {
+                    "content_anchor_id": "Example7e30112c406cb09c2ee9"
+                  },
+                  "has_more": false,
+                  "is_solved": false,
+                  "is_whole": false,
+                  "page_token": "",
+                  "quote": "Comment with Image Embedded",
+                  "reply_list": {
+                    "replies": [
+                      {
+                        "content": {
+                          "elements": [
+                            {
+                              "docs_link": null,
+                              "person": null,
+                              "text_run": {
+                                "text": "Comment with Image Embedded"
+                              },
+                              "type": "text_run"
+                            }
+                          ]
+                        },
+                        "create_time": 1785288529,
+                        "extra": {
+                          "image_list": [
+                            "Example275b62835dfea3441291"
+                          ]
+                        },
+                        "reply_id": "7667755822125944544",
+                        "update_time": 1785288529,
+                        "user_id": "ou_exampleowner00000000000000000001"
+                      }
+                    ]
+                  },
+                  "solver_user_id": null,
+                  "update_time": 1785288530,
+                  "user_id": "ou_exampleowner00000000000000000001"
+                }
+              ]
+            },
+            "msg": "Success"
+          }
+        },
+        "replies_list": {
+          "label": "replies-list",
+          "method": "GET",
+          "path": "drive/v1/files/{tok}/comments/{cid}/replies",
+          "request_body": null,
+          "http_status": 200,
+          "code": 0,
+          "msg": "Success",
+          "response": {
+            "code": 0,
+            "data": {
+              "has_more": false,
+              "items": [
+                {
+                  "content": {
+                    "elements": [
+                      {
+                        "docs_link": null,
+                        "person": null,
+                        "text_run": {
+                          "text": "Comment with Image Embedded"
+                        },
+                        "type": "text_run"
+                      }
+                    ]
+                  },
+                  "create_time": 1785288529,
+                  "extra": {
+                    "image_list": [
+                      "Example275b62835dfea3441291"
+                    ]
+                  },
+                  "reply_id": "7667755822125944544",
+                  "update_time": 1785288529,
+                  "user_id": "ou_exampleowner00000000000000000001"
+                }
+              ],
+              "page_token": "0"
+            },
+            "msg": "Success"
+          }
+        }
+      },
+      "shape_row": {
+        "list_keys": [
+          "comment_id",
+          "create_time",
+          "extra",
+          "is_solved",
+          "is_whole",
+          "quote",
+          "reply_list",
+          "solver_user_id",
+          "update_time",
+          "user_id"
+        ],
+        "get_one_code": 1069307,
+        "get_one_keys": [],
+        "batch_query_keys": [
+          "comment_id",
+          "create_time",
+          "extra",
+          "has_more",
+          "is_solved",
+          "is_whole",
+          "page_token",
+          "quote",
+          "reply_list",
+          "solver_user_id",
+          "update_time",
+          "user_id"
+        ],
+        "batch_query_need_relation_keys": [
+          "comment_id",
+          "create_time",
+          "extra",
+          "has_more",
+          "is_solved",
+          "is_whole",
+          "page_token",
+          "quote",
+          "reply_list",
+          "solver_user_id",
+          "update_time",
+          "user_id"
+        ],
+        "replies_list_code": 0,
+        "list_has_is_whole": true,
+        "batch_query_has_is_whole": true,
+        "list_has_is_solved": true,
+        "batch_query_has_is_solved": true,
+        "list_has_solved_time": false,
+        "batch_query_has_solved_time": false,
+        "list_has_solver_user_id": true,
+        "batch_query_has_solver_user_id": true,
+        "list_has_quote": true,
+        "batch_query_has_quote": true,
+        "list_has_extra": true,
+        "batch_query_has_extra": true,
+        "list_has_has_more": false,
+        "batch_query_has_has_more": true,
+        "list_has_page_token": false,
+        "batch_query_has_page_token": true
+      },
+      "amplifier": {
+        "reaction_key_anywhere": [],
+        "reply_element_types": [
+          "text_run"
+        ],
+        "reply_element_populated_keys": [
+          "text_run"
+        ],
+        "reply_extra_in_list": [
+          {
+            "image_list": [
+              "Example275b62835dfea3441291"
+            ]
+          }
+        ],
+        "reply_extra_in_replies_list": [
+          {
+            "image_list": [
+              "Example275b62835dfea3441291"
+            ]
+          }
+        ],
+        "comment_create_time": 1785288529,
+        "comment_update_time": 1785288530,
+        "comment_edited_by_times": true,
+        "reply_times": [
+          {
+            "reply_id": "7667755822125944544",
+            "create_time": 1785288529,
+            "update_time": 1785288529,
+            "edited_by_times": false
+          }
+        ],
+        "is_solved": false,
+        "solved_time_present": false,
+        "solver_user_id": null,
+        "comment_extra": {
+          "content_anchor_id": "Example7e30112c406cb09c2ee9"
+        }
+      }
+    }
+  },
+  "missing_examples": [],
+  "unlabelled_comment_ids": [],
+  "capture_complete": true,
+  "block_list_pages": [
+    {
+      "http_status": 200,
+      "code": 0,
+      "msg": "success"
+    }
+  ],
+  "block_count": 282,
+  "anchored_blocks": {
+    "Example913189730f710c82e3a5": {
+      "block_verbatim": {
+        "block_id": "Example913189730f710c82e3a5",
+        "block_type": 13,
+        "comment_ids": [
+          "7667754726531878624"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Simple Open Comment",
+                "text_element_style": {
+                  "bold": false,
+                  "comment_ids": [
+                    "7667754726531878624"
+                  ],
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false,
+            "sequence": "1"
+          }
+        },
+        "parent_id": "DocCommentZooExample0000001"
+      },
+      "block_level_anchors": [
+        "7667754726531878624"
+      ],
+      "word_level_anchors": [
+        "7667754726531878624"
+      ],
+      "comment_id_view": {
+        "container_key": "ordered",
+        "block_comment_ids": [
+          "7667754726531878624"
+        ],
+        "element_comment_ids": [
+          [
+            "7667754726531878624"
+          ]
+        ],
+        "element_contents": [
+          "Simple Open Comment"
+        ]
+      },
+      "plain_text": "Simple Open Comment",
+      "parent_id": "DocCommentZooExample0000001",
+      "block_type": 13
+    },
+    "Example276015cba8efe64d31a3": {
+      "block_verbatim": {
+        "block_id": "Example276015cba8efe64d31a3",
+        "block_type": 13,
+        "children": [
+          "Example4cae92439088f0e762d5"
+        ],
+        "comment_ids": [
+          "7667754810224938728"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Resolved Comment ",
+                "text_element_style": {
+                  "bold": false,
+                  "comment_ids": [
+                    "7667754810224938728"
+                  ],
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false,
+            "sequence": "auto"
+          }
+        },
+        "parent_id": "DocCommentZooExample0000001"
+      },
+      "block_level_anchors": [
+        "7667754810224938728"
+      ],
+      "word_level_anchors": [
+        "7667754810224938728"
+      ],
+      "comment_id_view": {
+        "container_key": "ordered",
+        "block_comment_ids": [
+          "7667754810224938728"
+        ],
+        "element_comment_ids": [
+          [
+            "7667754810224938728"
+          ]
+        ],
+        "element_contents": [
+          "Resolved Comment "
+        ]
+      },
+      "plain_text": "Resolved Comment ",
+      "parent_id": "DocCommentZooExample0000001",
+      "block_type": 13
+    },
+    "Example4cae92439088f0e762d5": {
+      "block_verbatim": {
+        "block_id": "Example4cae92439088f0e762d5",
+        "block_type": 13,
+        "comment_ids": [
+          "7667754810224938728"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "might not even be visible since it is not visible on the UI unless unhided resolved comments",
+                "text_element_style": {
+                  "bold": false,
+                  "comment_ids": [
+                    "7667754810224938728"
+                  ],
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false,
+            "sequence": "1"
+          }
+        },
+        "parent_id": "Example276015cba8efe64d31a3"
+      },
+      "block_level_anchors": [
+        "7667754810224938728"
+      ],
+      "word_level_anchors": [
+        "7667754810224938728"
+      ],
+      "comment_id_view": {
+        "container_key": "ordered",
+        "block_comment_ids": [
+          "7667754810224938728"
+        ],
+        "element_comment_ids": [
+          [
+            "7667754810224938728"
+          ]
+        ],
+        "element_contents": [
+          "might not even be visible since it is not visible on the UI unless unhided resolved comments"
+        ]
+      },
+      "plain_text": "might not even be visible since it is not visible on the UI unless unhided resolved comments",
+      "parent_id": "Example276015cba8efe64d31a3",
+      "block_type": 13
+    },
+    "Exampled120510db14b7453214c": {
+      "block_verbatim": {
+        "block_id": "Exampled120510db14b7453214c",
+        "block_type": 13,
+        "comment_ids": [
+          "7667755056904572640"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Comment thread with multiple replies",
+                "text_element_style": {
+                  "bold": false,
+                  "comment_ids": [
+                    "7667755056904572640"
+                  ],
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false,
+            "sequence": "auto"
+          }
+        },
+        "parent_id": "DocCommentZooExample0000001"
+      },
+      "block_level_anchors": [
+        "7667755056904572640"
+      ],
+      "word_level_anchors": [
+        "7667755056904572640"
+      ],
+      "comment_id_view": {
+        "container_key": "ordered",
+        "block_comment_ids": [
+          "7667755056904572640"
+        ],
+        "element_comment_ids": [
+          [
+            "7667755056904572640"
+          ]
+        ],
+        "element_contents": [
+          "Comment thread with multiple replies"
+        ]
+      },
+      "plain_text": "Comment thread with multiple replies",
+      "parent_id": "DocCommentZooExample0000001",
+      "block_type": 13
+    },
+    "Example11de0c7aa51fe8309b95": {
+      "block_verbatim": {
+        "block_id": "Example11de0c7aa51fe8309b95",
+        "block_type": 13,
+        "comment_ids": [
+          "7667755191499755240"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Comment with a Like",
+                "text_element_style": {
+                  "bold": false,
+                  "comment_ids": [
+                    "7667755191499755240"
+                  ],
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false,
+            "sequence": "auto"
+          }
+        },
+        "parent_id": "DocCommentZooExample0000001"
+      },
+      "block_level_anchors": [
+        "7667755191499755240"
+      ],
+      "word_level_anchors": [
+        "7667755191499755240"
+      ],
+      "comment_id_view": {
+        "container_key": "ordered",
+        "block_comment_ids": [
+          "7667755191499755240"
+        ],
+        "element_comment_ids": [
+          [
+            "7667755191499755240"
+          ]
+        ],
+        "element_contents": [
+          "Comment with a Like"
+        ]
+      },
+      "plain_text": "Comment with a Like",
+      "parent_id": "DocCommentZooExample0000001",
+      "block_type": 13
+    },
+    "Example1f67e18ba055e40eb687": {
+      "block_verbatim": {
+        "block_id": "Example1f67e18ba055e40eb687",
+        "block_type": 13,
+        "comment_ids": [
+          "7667755630672793311"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Edited Comment",
+                "text_element_style": {
+                  "bold": false,
+                  "comment_ids": [
+                    "7667755630672793311"
+                  ],
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false,
+            "sequence": "auto"
+          }
+        },
+        "parent_id": "DocCommentZooExample0000001"
+      },
+      "block_level_anchors": [
+        "7667755630672793311"
+      ],
+      "word_level_anchors": [
+        "7667755630672793311"
+      ],
+      "comment_id_view": {
+        "container_key": "ordered",
+        "block_comment_ids": [
+          "7667755630672793311"
+        ],
+        "element_comment_ids": [
+          [
+            "7667755630672793311"
+          ]
+        ],
+        "element_contents": [
+          "Edited Comment"
+        ]
+      },
+      "plain_text": "Edited Comment",
+      "parent_id": "DocCommentZooExample0000001",
+      "block_type": 13
+    },
+    "Example7e30112c406cb09c2ee9": {
+      "block_verbatim": {
+        "block_id": "Example7e30112c406cb09c2ee9",
+        "block_type": 13,
+        "comment_ids": [
+          "7667755822109167325"
+        ],
+        "ordered": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Comment with Image Embedded",
+                "text_element_style": {
+                  "bold": false,
+                  "comment_ids": [
+                    "7667755822109167325"
+                  ],
+                  "inline_code": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false
+                }
+              }
+            }
+          ],
+          "style": {
+            "align": 1,
+            "folded": false,
+            "sequence": "auto"
+          }
+        },
+        "parent_id": "DocCommentZooExample0000001"
+      },
+      "block_level_anchors": [
+        "7667755822109167325"
+      ],
+      "word_level_anchors": [
+        "7667755822109167325"
+      ],
+      "comment_id_view": {
+        "container_key": "ordered",
+        "block_comment_ids": [
+          "7667755822109167325"
+        ],
+        "element_comment_ids": [
+          [
+            "7667755822109167325"
+          ]
+        ],
+        "element_contents": [
+          "Comment with Image Embedded"
+        ]
+      },
+      "plain_text": "Comment with Image Embedded",
+      "parent_id": "DocCommentZooExample0000001",
+      "block_type": 13
+    }
+  },
+  "forward_join_blocks_to_comments": {
+    "Simple": {
+      "comment_id": "7667754726531878624",
+      "blocks_block_level": [
+        "Example913189730f710c82e3a5"
+      ],
+      "blocks_word_level": [
+        "Example913189730f710c82e3a5"
+      ]
+    },
+    "Resolved": {
+      "comment_id": "7667754810224938728",
+      "blocks_block_level": [
+        "Example276015cba8efe64d31a3",
+        "Example4cae92439088f0e762d5"
+      ],
+      "blocks_word_level": [
+        "Example276015cba8efe64d31a3",
+        "Example4cae92439088f0e762d5"
+      ]
+    },
+    "Thread": {
+      "comment_id": "7667755056904572640",
+      "blocks_block_level": [
+        "Exampled120510db14b7453214c"
+      ],
+      "blocks_word_level": [
+        "Exampled120510db14b7453214c"
+      ]
+    },
+    "Like": {
+      "comment_id": "7667755191499755240",
+      "blocks_block_level": [
+        "Example11de0c7aa51fe8309b95"
+      ],
+      "blocks_word_level": [
+        "Example11de0c7aa51fe8309b95"
+      ]
+    },
+    "Edited": {
+      "comment_id": "7667755630672793311",
+      "blocks_block_level": [
+        "Example1f67e18ba055e40eb687"
+      ],
+      "blocks_word_level": [
+        "Example1f67e18ba055e40eb687"
+      ]
+    },
+    "Image": {
+      "comment_id": "7667755822109167325",
+      "blocks_block_level": [
+        "Example7e30112c406cb09c2ee9"
+      ],
+      "blocks_word_level": [
+        "Example7e30112c406cb09c2ee9"
+      ]
+    }
+  },
+  "hazard_baseline": {
+    "note": "LD-162's mermaid specimen lives in THIS document. Its id, position and record hash are recorded BEFORE this issue's single edit so LD-162 can confirm it was never in the blast radius.",
+    "add_ons_block_ids": [
+      "Example3a5beaf6a136e401cc42"
+    ],
+    "specimen_blocks": {
+      "Example3a5beaf6a136e401cc42": {
+        "block_type": 40,
+        "component_type_id": "blk_640017963d808005a21a6445",
+        "record_len": 1646,
+        "record_sha256_12": "daf20f4c9ade",
+        "root_child_index": 67
+      }
+    },
+    "root_child_index_of_anchored_blocks": {
+      "Example913189730f710c82e3a5": 69,
+      "Example276015cba8efe64d31a3": 70,
+      "Example4cae92439088f0e762d5": null,
+      "Exampled120510db14b7453214c": 71,
+      "Example11de0c7aa51fe8309b95": 72,
+      "Example1f67e18ba055e40eb687": 73,
+      "Example7e30112c406cb09c2ee9": 74
+    }
+  },
+  "api_calls": 26
+}

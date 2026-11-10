@@ -1,0 +1,410 @@
+{
+  "_probe": "05",
+  "_endpoint": ".../tables/{table_id}/fields",
+  "_method": "POST",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": null,
+  "_verdict": "OK",
+  "_note": "one create attempt per candidate field type — the creatable/not-creatable axis of a future Base matrix",
+  "response": {
+    "code": 0,
+    "data": {
+      "attempts": [
+        {
+          "requested": {
+            "field_name": "Z-Number",
+            "type": 2,
+            "ui_type": "Number"
+          },
+          "code": 0,
+          "msg": "success",
+          "created": {
+            "field_id": "fldEWuDBLB",
+            "field_name": "Z-Number",
+            "is_extend": false,
+            "is_primary": false,
+            "is_synced": false,
+            "property": {
+              "formatter": "0.00"
+            },
+            "type": 2,
+            "ui_type": "Number"
+          }
+        },
+        {
+          "requested": {
+            "field_name": "Z-Progress",
+            "type": 2,
+            "ui_type": "Progress"
+          },
+          "code": 0,
+          "msg": "success",
+          "created": {
+            "field_id": "fldSpd2mTL",
+            "field_name": "Z-Progress",
+            "is_extend": false,
+            "is_primary": false,
+            "is_synced": false,
+            "property": {
+              "formatter": "0.0%",
+              "max": 1,
+              "min": 0
+            },
+            "type": 2,
+            "ui_type": "Progress"
+          }
+        },
+        {
+          "requested": {
+            "field_name": "Z-SingleSelect",
+            "type": 3,
+            "ui_type": "SingleSelect"
+          },
+          "code": 0,
+          "msg": "success",
+          "created": {
+            "field_id": "fld1syA9JJ",
+            "field_name": "Z-SingleSelect",
+            "is_extend": false,
+            "is_primary": false,
+            "is_synced": false,
+            "property": {
+              "options": [
+                {
+                  "color": 0,
+                  "id": "opt8LFsYLy",
+                  "name": "Alpha"
+                },
+                {
+                  "color": 1,
+                  "id": "optku4zoQM",
+                  "name": "Beta"
+                }
+              ]
+            },
+            "type": 3,
+            "ui_type": "SingleSelect"
+          }
+        },
+        {
+          "requested": {
+            "field_name": "Z-MultiSelect",
+            "type": 4,
+            "ui_type": "MultiSelect"
+          },
+          "code": 0,
+          "msg": "success",
+          "created": {
+            "field_id": "fld3NWqFzX",
+            "field_name": "Z-MultiSelect",
+            "is_extend": false,
+            "is_primary": false,
+            "is_synced": false,
+            "property": {
+              "options": [
+                {
+                  "color": 0,
+                  "id": "optsX1Er67",
+                  "name": "Red"
+                },
+                {
+                  "color": 1,
+                  "id": "optLJwM2cg",
+                  "name": "Green"
+                }
+              ]
+            },
+            "type": 4,
+            "ui_type": "MultiSelect"
+          }
+        },
+        {
+          "requested": {
+            "field_name": "Z-DateTime",
+            "type": 5,
+            "ui_type": "DateTime"
+          },
+          "code": 0,
+          "msg": "success",
+          "created": {
+            "field_id": "fldHz3AxGP",
+            "field_name": "Z-DateTime",
+            "is_extend": false,
+            "is_primary": false,
+            "is_synced": false,
+            "property": {
+              "auto_fill": false,
+              "date_formatter": "yyyy/MM/dd HH:mm"
+            },
+            "type": 5,
+            "ui_type": "DateTime"
+          }
+        },
+        {
+          "requested": {
+            "field_name": "Z-Checkbox",
+            "type": 7,
+            "ui_type": "Checkbox"
+          },
+          "code": 0,
+          "msg": "success",
+          "created": {
+            "field_id": "fldiEKJo5N",
+            "field_name": "Z-Checkbox",
+            "is_extend": false,
+            "is_primary": false,
+            "is_synced": false,
+            "property": null,
+            "type": 7,
+            "ui_type": "Checkbox"
+          }
+        },
+        {
+          "requested": {
+            "field_name": "Z-User",
+            "type": 11,
+            "ui_type": "User"
+          },
+          "code": 0,
+          "msg": "success",
+          "created": {
+            "field_id": "fldDB01JDB",
+            "field_name": "Z-User",
+            "is_extend": false,
+            "is_primary": false,
+            "is_synced": false,
+            "property": {
+              "multiple": false
+            },
+            "type": 11,
+            "ui_type": "User"
+          }
+        },
+        {
+          "requested": {
+            "field_name": "Z-Phone",
+            "type": 13,
+            "ui_type": "PhoneNumber"
+          },
+          "code": 99992402,
+          "msg": "field validation failed",
+          "created": null
+        },
+        {
+          "requested": {
+            "field_name": "Z-Url",
+            "type": 15,
+            "ui_type": "Url"
+          },
+          "code": 0,
+          "msg": "success",
+          "created": {
+            "field_id": "fldlyyhSwp",
+            "field_name": "Z-Url",
+            "is_extend": false,
+            "is_primary": false,
+            "is_synced": false,
+            "property": null,
+            "type": 15,
+            "ui_type": "Url"
+          }
+        },
+        {
+          "requested": {
+            "field_name": "Z-Attachment",
+            "type": 17,
+            "ui_type": "Attachment"
+          },
+          "code": 0,
+          "msg": "success",
+          "created": {
+            "field_id": "fldL4KmAxC",
+            "field_name": "Z-Attachment",
+            "is_extend": false,
+            "is_primary": false,
+            "is_synced": false,
+            "property": null,
+            "type": 17,
+            "ui_type": "Attachment"
+          }
+        },
+        {
+          "requested": {
+            "field_name": "Z-Location",
+            "type": 22,
+            "ui_type": "Location"
+          },
+          "code": 0,
+          "msg": "success",
+          "created": {
+            "field_id": "fldLfknB0Z",
+            "field_name": "Z-Location",
+            "is_extend": false,
+            "is_primary": false,
+            "is_synced": false,
+            "property": {
+              "location": {
+                "input_type": "not_limit"
+              }
+            },
+            "type": 22,
+            "ui_type": "Location"
+          }
+        },
+        {
+          "requested": {
+            "field_name": "Z-GroupChat",
+            "type": 23,
+            "ui_type": "GroupChat"
+          },
+          "code": 0,
+          "msg": "success",
+          "created": {
+            "field_id": "fld6C2mwWS",
+            "field_name": "Z-GroupChat",
+            "is_extend": false,
+            "is_primary": false,
+            "is_synced": false,
+            "property": {
+              "multiple": true
+            },
+            "type": 23,
+            "ui_type": "GroupChat"
+          }
+        },
+        {
+          "requested": {
+            "field_name": "Z-CreatedTime",
+            "type": 1001,
+            "ui_type": "CreatedTime"
+          },
+          "code": 0,
+          "msg": "success",
+          "created": {
+            "field_id": "fldTN48LGD",
+            "field_name": "Z-CreatedTime",
+            "is_extend": false,
+            "is_primary": false,
+            "is_synced": false,
+            "property": {
+              "date_formatter": "yyyy/MM/dd"
+            },
+            "type": 1001,
+            "ui_type": "CreatedTime"
+          }
+        },
+        {
+          "requested": {
+            "field_name": "Z-ModifiedTime",
+            "type": 1002,
+            "ui_type": "ModifiedTime"
+          },
+          "code": 0,
+          "msg": "success",
+          "created": {
+            "field_id": "fldH0iU60p",
+            "field_name": "Z-ModifiedTime",
+            "is_extend": false,
+            "is_primary": false,
+            "is_synced": false,
+            "property": {
+              "date_formatter": "yyyy/MM/dd"
+            },
+            "type": 1002,
+            "ui_type": "ModifiedTime"
+          }
+        },
+        {
+          "requested": {
+            "field_name": "Z-CreatedUser",
+            "type": 1003,
+            "ui_type": "CreatedUser"
+          },
+          "code": 0,
+          "msg": "success",
+          "created": {
+            "field_id": "fldcy8uPkH",
+            "field_name": "Z-CreatedUser",
+            "is_extend": false,
+            "is_primary": false,
+            "is_synced": false,
+            "property": null,
+            "type": 1003,
+            "ui_type": "CreatedUser"
+          }
+        },
+        {
+          "requested": {
+            "field_name": "Z-AutoNumber",
+            "type": 1005,
+            "ui_type": "AutoNumber"
+          },
+          "code": 0,
+          "msg": "success",
+          "created": {
+            "field_id": "fldwSAFutX",
+            "field_name": "Z-AutoNumber",
+            "is_extend": false,
+            "is_primary": false,
+            "is_synced": false,
+            "property": {
+              "auto_serial": {
+                "type": "auto_increment_number"
+              }
+            },
+            "type": 1005,
+            "ui_type": "AutoNumber"
+          }
+        },
+        {
+          "requested": {
+            "field_name": "Z-Barcode",
+            "type": 1,
+            "ui_type": "Barcode"
+          },
+          "code": 0,
+          "msg": "success",
+          "created": {
+            "field_id": "fldjcEjtJl",
+            "field_name": "Z-Barcode",
+            "is_extend": false,
+            "is_primary": false,
+            "is_synced": false,
+            "property": {
+              "allowed_edit_modes": {
+                "manual": true,
+                "scan": true
+              }
+            },
+            "type": 1,
+            "ui_type": "Barcode"
+          }
+        },
+        {
+          "requested": {
+            "field_name": "Z-Link",
+            "type": 18,
+            "ui_type": "SingleLink"
+          },
+          "code": 0,
+          "msg": "success",
+          "created": {
+            "field_id": "fldhmKHmw1",
+            "field_name": "Z-Link",
+            "is_extend": false,
+            "is_primary": false,
+            "is_synced": false,
+            "property": {
+              "multiple": true,
+              "table_id": "tblDghjoOXsg03o9",
+              "table_name": "Z-LinkTarget"
+            },
+            "type": 18,
+            "ui_type": "SingleLink"
+          }
+        }
+      ]
+    }
+  }
+}

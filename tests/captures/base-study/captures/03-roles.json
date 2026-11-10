@@ -1,0 +1,17 @@
+{
+  "_probe": "03",
+  "_endpoint": "/open-apis/bitable/v1/apps/Example046a321406fe497fe3a2/roles",
+  "_method": "GET",
+  "_http_status": 400,
+  "_lark_code": 1254301,
+  "_lark_msg": "OperationTypeError",
+  "_verdict": "DENIED_OR_ERROR",
+  "_note": "advanced-permission roles; the scratch app has is_advanced=false",
+  "response": {
+    "code": 1254301,
+    "msg": "OperationTypeError",
+    "error": {
+      "log_id": "202608030154287B86E0D4C965A13E531B"
+    }
+  }
+}

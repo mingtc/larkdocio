@@ -1,0 +1,17 @@
+{
+  "_probe": "02",
+  "_endpoint": "/open-apis/bitable/v1/apps/Example3b5902b83520533e4650/tables/tblGgEHCSGMXEKQs/fields",
+  "_method": "GET",
+  "_http_status": 200,
+  "_lark_code": 1254041,
+  "_lark_msg": "TableIdNotFound",
+  "_verdict": "DENIED_OR_ERROR",
+  "_note": "table-scoped read through the split tail",
+  "response": {
+    "code": 1254041,
+    "msg": "TableIdNotFound",
+    "error": {
+      "log_id": "202608030153258082713252F8E64D04E4"
+    }
+  }
+}

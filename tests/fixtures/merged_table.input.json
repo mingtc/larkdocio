@@ -1,0 +1,146 @@
+[
+  {
+    "block_id": "root",
+    "parent_id": "doc",
+    "block_type": 1,
+    "page": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Doc Title"
+          }
+        }
+      ]
+    },
+    "children": [
+      "mt"
+    ]
+  },
+  {
+    "block_id": "mt",
+    "parent_id": "root",
+    "block_type": 31,
+    "table": {
+      "property": {
+        "row_size": 2,
+        "column_size": 2,
+        "merge_info": [
+          {
+            "row_span": 2,
+            "col_span": 1
+          },
+          {
+            "row_span": 1,
+            "col_span": 1
+          },
+          {
+            "row_span": 1,
+            "col_span": 1
+          },
+          {
+            "row_span": 1,
+            "col_span": 1
+          }
+        ]
+      }
+    },
+    "children": [
+      "m00",
+      "m01",
+      "m10",
+      "m11"
+    ]
+  },
+  {
+    "block_id": "m00",
+    "parent_id": "mt",
+    "block_type": 32,
+    "table_cell": {},
+    "children": [
+      "m00t"
+    ]
+  },
+  {
+    "block_id": "m00t",
+    "parent_id": "m00",
+    "block_type": 2,
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Merged"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "block_id": "m01",
+    "parent_id": "mt",
+    "block_type": 32,
+    "table_cell": {},
+    "children": [
+      "m01t"
+    ]
+  },
+  {
+    "block_id": "m01t",
+    "parent_id": "m01",
+    "block_type": 2,
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Top-right"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "block_id": "m10",
+    "parent_id": "mt",
+    "block_type": 32,
+    "table_cell": {},
+    "children": [
+      "m10t"
+    ]
+  },
+  {
+    "block_id": "m10t",
+    "parent_id": "m10",
+    "block_type": 2,
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": ""
+          }
+        }
+      ]
+    }
+  },
+  {
+    "block_id": "m11",
+    "parent_id": "mt",
+    "block_type": 32,
+    "table_cell": {},
+    "children": [
+      "m11t"
+    ]
+  },
+  {
+    "block_id": "m11t",
+    "parent_id": "m11",
+    "block_type": 2,
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Bottom-right"
+          }
+        }
+      ]
+    }
+  }
+]

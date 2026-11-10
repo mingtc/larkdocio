@@ -1,0 +1,191 @@
+[
+  {
+    "block_id": "root",
+    "parent_id": "doc",
+    "block_type": 1,
+    "page": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Real Doc"
+          }
+        }
+      ]
+    },
+    "children": [
+      "h2",
+      "b1",
+      "o1",
+      "q1",
+      "tbl"
+    ]
+  },
+  {
+    "block_id": "h2",
+    "parent_id": "root",
+    "block_type": 4,
+    "heading2": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Real Section"
+          }
+        }
+      ]
+    },
+    "children": []
+  },
+  {
+    "block_id": "b1",
+    "parent_id": "root",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "# Fake H1 inside a real bullet"
+          }
+        }
+      ]
+    },
+    "children": []
+  },
+  {
+    "block_id": "o1",
+    "parent_id": "root",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "1. nested numbering in a real ordered item"
+          }
+        }
+      ]
+    },
+    "children": []
+  },
+  {
+    "block_id": "q1",
+    "parent_id": "root",
+    "block_type": 15,
+    "quote": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "- Apples in a real quote"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "block_id": "tbl",
+    "parent_id": "root",
+    "block_type": 31,
+    "table": {
+      "property": {
+        "row_size": 2,
+        "column_size": 2
+      }
+    },
+    "children": [
+      "c00",
+      "c01",
+      "c10",
+      "c11"
+    ]
+  },
+  {
+    "block_id": "c00",
+    "parent_id": "tbl",
+    "block_type": 32,
+    "table_cell": {},
+    "children": [
+      "c00t"
+    ]
+  },
+  {
+    "block_id": "c00t",
+    "parent_id": "c00",
+    "block_type": 2,
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "H1"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "block_id": "c01",
+    "parent_id": "tbl",
+    "block_type": 32,
+    "table_cell": {},
+    "children": [
+      "c01t"
+    ]
+  },
+  {
+    "block_id": "c01t",
+    "parent_id": "c01",
+    "block_type": 2,
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "H2"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "block_id": "c10",
+    "parent_id": "tbl",
+    "block_type": 32,
+    "table_cell": {},
+    "children": [
+      "c10t"
+    ]
+  },
+  {
+    "block_id": "c10t",
+    "parent_id": "c10",
+    "block_type": 2,
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "| pipe and # hash"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "block_id": "c11",
+    "parent_id": "tbl",
+    "block_type": 32,
+    "table_cell": {},
+    "children": [
+      "c11t"
+    ]
+  },
+  {
+    "block_id": "c11t",
+    "parent_id": "c11",
+    "block_type": 2,
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "**stars** in a cell"
+          }
+        }
+      ]
+    }
+  }
+]

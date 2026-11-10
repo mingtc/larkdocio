@@ -1,0 +1,33 @@
+{
+  "issue": "LD-601",
+  "leg": "after",
+  "route": "r5",
+  "route_title": "the file's named versions",
+  "endpoint": "/open-apis/drive/v1/files/Examplebe2270e20bfe6e6fff4c/versions",
+  "credential_pair": "read",
+  "shipped_call_site": "DriveClient.list_versions",
+  "subject_document_id": "Examplebe2270e20bfe6e6fff4c",
+  "disposables_folder_token": "Example0c60da6a89d790aee55d",
+  "sent": {
+    "method": "GET",
+    "path": "/open-apis/drive/v1/files/Examplebe2270e20bfe6e6fff4c/versions",
+    "body": null,
+    "params": {
+      "obj_type": "docx",
+      "page_size": 10
+    }
+  },
+  "object_type_literal_sent": "docx",
+  "object_type_note": "the doc_type / obj_type literal is recorded per route because a wrong spelling returns code:0 with metas:[] — indistinguishable from a refusal unless failed_list is read",
+  "response": {
+    "code": 1068404,
+    "msg": "parent file  does not exist, Please check the file status",
+    "error": {
+      "log_id": "2026083118061521811A3AC9AF1FEE5099"
+    }
+  },
+  "failed_list": null,
+  "resolved_the_object": false,
+  "captured_at": "2026-08-31T18:06:15+0800",
+  "tenant_note": "one tenant, one document, one run — other tenants, regions and object types are unmeasured, not refuted"
+}

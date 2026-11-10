@@ -1,0 +1,118 @@
+{
+  "probe": "LD-190 numeric read-back normalization (rider c / F19)",
+  "at": "2026-07-31T21:54:39.038430+00:00",
+  "arms": [
+    {
+      "label": "18.0 float (F19's value)",
+      "written": 18.0,
+      "written_type": "float",
+      "written_str": "18.0",
+      "read_back": 18,
+      "read_back_type": "int",
+      "read_back_str": "18",
+      "formatted_read_back": 18,
+      "string_equal": false,
+      "value_equal": true
+    },
+    {
+      "label": "22.5 float (F19's control \u2014 NOT whole)",
+      "written": 22.5,
+      "written_type": "float",
+      "written_str": "22.5",
+      "read_back": 22.5,
+      "read_back_type": "float",
+      "read_back_str": "22.5",
+      "formatted_read_back": 22.5,
+      "string_equal": true,
+      "value_equal": true
+    },
+    {
+      "label": "0.0 float",
+      "written": 0.0,
+      "written_type": "float",
+      "written_str": "0.0",
+      "read_back": 0,
+      "read_back_type": "int",
+      "read_back_str": "0",
+      "formatted_read_back": 0,
+      "string_equal": false,
+      "value_equal": true
+    },
+    {
+      "label": "-3.0 float",
+      "written": -3.0,
+      "written_type": "float",
+      "written_str": "-3.0",
+      "read_back": -3,
+      "read_back_type": "int",
+      "read_back_str": "-3",
+      "formatted_read_back": -3,
+      "string_equal": false,
+      "value_equal": true
+    },
+    {
+      "label": "1e6 float",
+      "written": 1000000.0,
+      "written_type": "float",
+      "written_str": "1000000.0",
+      "read_back": 1000000,
+      "read_back_type": "int",
+      "read_back_str": "1000000",
+      "formatted_read_back": 1000000,
+      "string_equal": false,
+      "value_equal": true
+    },
+    {
+      "label": "2.5 * 4 = 10.0 (whole AFTER arithmetic)",
+      "written": 10.0,
+      "written_type": "float",
+      "written_str": "10.0",
+      "read_back": 10,
+      "read_back_type": "int",
+      "read_back_str": "10",
+      "formatted_read_back": 10,
+      "string_equal": false,
+      "value_equal": true
+    },
+    {
+      "label": "'18.0' STRING (not a number at all)",
+      "written": "18.0",
+      "written_type": "str",
+      "written_str": "18.0",
+      "read_back": "18.0",
+      "read_back_type": "str",
+      "read_back_str": "18.0",
+      "formatted_read_back": "18.0",
+      "string_equal": true,
+      "value_equal": true
+    },
+    {
+      "label": "18 int",
+      "written": 18,
+      "written_type": "int",
+      "written_str": "18",
+      "read_back": 18,
+      "read_back_type": "int",
+      "read_back_str": "18",
+      "formatted_read_back": 18,
+      "string_equal": true,
+      "value_equal": true
+    },
+    {
+      "label": "0.30000000000000004 (float artefact)",
+      "written": 0.30000000000000004,
+      "written_type": "float",
+      "written_str": "0.30000000000000004",
+      "read_back": 0.30000000000000004,
+      "read_back_type": "float",
+      "read_back_str": "0.30000000000000004",
+      "formatted_read_back": 0.30000000000000004,
+      "string_equal": true,
+      "value_equal": true
+    }
+  ],
+  "spreadsheet_token": "Example40b442053d463eb5a037",
+  "first_sheet_id": "3ea60d",
+  "deleted": true,
+  "gone_confirmed": true
+}

@@ -1,0 +1,50 @@
+{
+  "n": 209,
+  "label": "r3 historical read paginates (page_size=1)",
+  "credential_pair": "READ",
+  "request": {
+    "method": "GET",
+    "path": "/open-apis/docx/v1/documents/Examplee818404931411bff32a2/blocks?document_revision_id=2&page_size=1",
+    "headers": [
+      "Authorization: Bearer <redacted>"
+    ]
+  },
+  "http_status": 200,
+  "response": {
+    "code": 0,
+    "data": {
+      "has_more": true,
+      "items": [
+        {
+          "block_id": "Examplee818404931411bff32a2",
+          "block_type": 1,
+          "children": [
+            "doxlgExample6eca36e5d397fde"
+          ],
+          "page": {
+            "elements": [
+              {
+                "text_run": {
+                  "content": "larkdocio-LD-404-r3 1786403552",
+                  "text_element_style": {
+                    "bold": false,
+                    "inline_code": false,
+                    "italic": false,
+                    "strikethrough": false,
+                    "underline": false
+                  }
+                }
+              }
+            ],
+            "style": {
+              "align": 1
+            }
+          },
+          "parent_id": ""
+        }
+      ],
+      "page_token": "MR7Dsh9yw4hZw5QeAcKBw7teOUzDhcKcQMORbBvCtw7CrsOqw6vCuMOGGsOUImnDgcKMwql7RCsLC0zDn8K3wq0Tw63Ck8KYwoTCqkHDpTTCk2dew7jDj8Kfw5LDh3xEOhDDoC0Te33CgwnDncO0woldccKdPHTCuMOhISURWj7Dh13CnC_CjAMRTGHChsOvw5fDiMKawqQfwotmwq1_HcKFeFrCjcKtHDxmXcKPbETDunYvwrF2wqZaDQJow5x1T2BJA8KDwoYdIMKOw63ChT8"
+    },
+    "msg": "success"
+  }
+}

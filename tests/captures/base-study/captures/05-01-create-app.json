@@ -1,0 +1,23 @@
+{
+  "_probe": "05",
+  "_endpoint": "/open-apis/bitable/v1/apps",
+  "_method": "POST",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": "success",
+  "_verdict": "OK",
+  "_note": "create a disposable Base app (the scratch-doc doctrine's Base analogue) — is creation grantable at all?",
+  "response": {
+    "code": 0,
+    "data": {
+      "app": {
+        "app_token": "Example02154ddbd1fe2927e2e6",
+        "default_table_id": "tblIwcDAKXzn8xXB",
+        "folder_token": "",
+        "name": "larkdocio-DISPOSABLE-base-study-20260803-015718",
+        "url": "https://<redacted:tenant-host>.larksuite.com/base/Example02154ddbd1fe2927e2e6"
+      }
+    },
+    "msg": "success"
+  }
+}

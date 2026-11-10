@@ -1,0 +1,88 @@
+{
+  "_probe": "ld356-01",
+  "_endpoint": "/open-apis/bitable/v1/apps/{app_token}/tables (POST) + …/tables/{table_id}/views (GET) + …/views/{view_id} (PATCH)",
+  "_method": "create → list views → PATCH view_name → list views again",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": "success",
+  "_verdict": "AC1 GATE = False. (i) A freshly created table has EXACTLY ONE view: True — the plain create listed total=1 and the kitted create total=1; that view is named '表格视图 1' on this tenant. (ii) PATCH …/views/{view_id} {'view_name': 'LD356 Named View'} answered code=0 and the SECOND listing read back ['LD356 Named View'] — applied=True, proven by read-back and not by code:0. (iii) The default view is identifiable WITHOUT its locale-dependent name: the create's OWN response body carries `default_view_id` and it equals the single listed view's id on both the plain and the kitted create (False) — so the composite needs NO extra read and NO name comparison to find the view it must rename.",
+  "_note": "AC1 gate for LD-356. If (i) or (iii) had come back other than expected — more than one view, or no locale-independent handle on the default one — the issue BOUNCES to the maintainer rather than shipping an unmeasured composite (LD-344's AC1 is the precedent). The view's default name is recorded as MEASURED; no locale claim is made about it here.",
+  "_transport": "larkdocio.common.transport.CredentialedRawHttpClient (urllib), paced 1.3 s — the RAW core, because the question is what the server returns",
+  "_disposable": "one, harness-created; deleted in the harness finally, ledger-backed",
+  "response": {
+    "plain_create": {
+      "sent_body": "{\"table\": {\"name\": \"ld356-plain\"}}",
+      "code": 0,
+      "msg": "success",
+      "data_keys": [
+        "table_id"
+      ],
+      "table_id": "tblWBr6dDUz8Jq43",
+      "default_view_id": null,
+      "field_id_list": null,
+      "views_after_create": {
+        "total": 1,
+        "views": [
+          {
+            "view_id": "vewPr0OFqQ",
+            "view_name": "表格视图 1",
+            "view_type": "grid",
+            "view_public_level": "Public"
+          }
+        ]
+      },
+      "exactly_one_view": true,
+      "echo_names_the_view": false
+    },
+    "rename_case": {
+      "view_id": "vewPr0OFqQ",
+      "asked_view_name": "LD356 Named View",
+      "code": 0,
+      "msg": "success",
+      "read_back": {
+        "total": 1,
+        "views": [
+          {
+            "view_id": "vewPr0OFqQ",
+            "view_name": "LD356 Named View",
+            "view_type": "grid",
+            "view_public_level": "Public"
+          }
+        ]
+      },
+      "applied": true
+    },
+    "kitted_create": {
+      "sent_body": "{\"table\": {\"name\": \"ld356-kitted\", \"fields\": [{\"field_name\": \"Title\", \"type\": 1}]}}",
+      "code": 0,
+      "msg": "success",
+      "data_keys": [
+        "default_view_id",
+        "field_id_list",
+        "table_id"
+      ],
+      "table_id": "tblstPIOzPzkfeOD",
+      "default_view_id": "vewpj7k1k7",
+      "field_id_list": [
+        "fld3JduWMQ"
+      ],
+      "views_after_create": {
+        "total": 1,
+        "views": [
+          {
+            "view_id": "vewpj7k1k7",
+            "view_name": "Grid",
+            "view_type": "grid",
+            "view_public_level": "Public"
+          }
+        ]
+      },
+      "exactly_one_view": true,
+      "echo_names_the_view": true
+    },
+    "exactly_one_view": true,
+    "create_echo_identifies_the_default_view": false,
+    "default_view_name_on_this_tenant": "表格视图 1",
+    "gate": false
+  }
+}

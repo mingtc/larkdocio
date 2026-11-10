@@ -1,0 +1,109 @@
+{
+  "_probe": "02-list-files-implicit-root",
+  "_endpoint": "/open-apis/drive/v1/files",
+  "_method": "GET",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": "success",
+  "_note": "children listing with NO folder_token (documented default: root of the caller's space)",
+  "_verdict": "OK",
+  "response": {
+    "code": 0,
+    "data": {
+      "files": [
+        {
+          "created_time": "1785887983",
+          "modified_time": "1785888054",
+          "name": "Example Dogfood Base 01",
+          "owner_id": "<redacted:person-id>",
+          "parent_token": "nodlgExampleee5c77c8ba65b63",
+          "token": "Examplea21e3e9b9a0a3982d137",
+          "type": "bitable",
+          "url": "https://<redacted:tenant-host>.larksuite.com/base/Examplea21e3e9b9a0a3982d137"
+        },
+        {
+          "created_time": "1785887878",
+          "modified_time": "1785887928",
+          "name": "Example Dogfood Base 02",
+          "owner_id": "<redacted:person-id>",
+          "parent_token": "nodlgExampleee5c77c8ba65b63",
+          "token": "Example4ca86657c7d92cd02405",
+          "type": "bitable",
+          "url": "https://<redacted:tenant-host>.larksuite.com/base/Example4ca86657c7d92cd02405"
+        },
+        {
+          "created_time": "1785887818",
+          "modified_time": "1785887827",
+          "name": "Example Dogfood Base 03",
+          "owner_id": "<redacted:person-id>",
+          "parent_token": "nodlgExampleee5c77c8ba65b63",
+          "token": "Exampleee097d6f267dba6ba1b9",
+          "type": "bitable",
+          "url": "https://<redacted:tenant-host>.larksuite.com/base/Exampleee097d6f267dba6ba1b9"
+        },
+        {
+          "created_time": "1784770435",
+          "modified_time": "1784770435",
+          "name": "final_test.txt",
+          "owner_id": "<redacted:person-id>",
+          "parent_token": "nodlgExampleee5c77c8ba65b63",
+          "token": "Example2deb8d0c778214dccf78",
+          "type": "file",
+          "url": "https://<redacted:tenant-host>.larksuite.com/file/Example2deb8d0c778214dccf78"
+        },
+        {
+          "created_time": "1784770134",
+          "modified_time": "1784770134",
+          "name": "test_data.json",
+          "owner_id": "<redacted:person-id>",
+          "parent_token": "nodlgExampleee5c77c8ba65b63",
+          "token": "Example17c04f03a8e33ee7d8f8",
+          "type": "file",
+          "url": "https://<redacted:tenant-host>.larksuite.com/file/Example17c04f03a8e33ee7d8f8"
+        },
+        {
+          "created_time": "1784770134",
+          "modified_time": "1784770134",
+          "name": "test_document.txt",
+          "owner_id": "<redacted:person-id>",
+          "parent_token": "nodlgExampleee5c77c8ba65b63",
+          "token": "Exampledc5623a7ef04131aa320",
+          "type": "file",
+          "url": "https://<redacted:tenant-host>.larksuite.com/file/Exampledc5623a7ef04131aa320"
+        },
+        {
+          "created_time": "1784770128",
+          "modified_time": "1784770128",
+          "name": "final_test.txt",
+          "owner_id": "<redacted:person-id>",
+          "parent_token": "nodlgExampleee5c77c8ba65b63",
+          "token": "Examplea77b59a58f1e8ee2e464",
+          "type": "file",
+          "url": "https://<redacted:tenant-host>.larksuite.com/file/Examplea77b59a58f1e8ee2e464"
+        },
+        {
+          "created_time": "1784764800",
+          "modified_time": "1784764800",
+          "name": "Example Pre-existing Document",
+          "owner_id": "<redacted:person-id>",
+          "parent_token": "nodlgExampleee5c77c8ba65b63",
+          "token": "Example404f3e9679c878cec7ff",
+          "type": "docx",
+          "url": "https://<redacted:tenant-host>.larksuite.com/docx/Example404f3e9679c878cec7ff"
+        },
+        {
+          "created_time": "1784764800",
+          "modified_time": "1784764800",
+          "name": "Example Pre-existing Document",
+          "owner_id": "<redacted:person-id>",
+          "parent_token": "nodlgExampleee5c77c8ba65b63",
+          "token": "Example9302370ebe50b671dcbc",
+          "type": "docx",
+          "url": "https://<redacted:tenant-host>.larksuite.com/docx/Example9302370ebe50b671dcbc"
+        }
+      ],
+      "has_more": false
+    },
+    "msg": "success"
+  }
+}

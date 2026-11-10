@@ -1,0 +1,103 @@
+{
+  "credentials": "READ pair (LARK_READ_APP_*), tenant_access_token",
+  "method": "GET",
+  "route": "/open-apis/sheets/v3/spreadsheets/Example402d14e864078abc36ae/sheets/query",
+  "http_status": 200,
+  "raw_response_body": {
+    "code": 0,
+    "data": {
+      "sheets": [
+        {
+          "grid_properties": {
+            "column_count": 20,
+            "frozen_column_count": 0,
+            "frozen_row_count": 0,
+            "row_count": 200
+          },
+          "hidden": false,
+          "index": 0,
+          "resource_type": "sheet",
+          "sheet_id": "3IZPYQ",
+          "title": "LD477-Beta"
+        },
+        {
+          "grid_properties": {
+            "column_count": 20,
+            "frozen_column_count": 0,
+            "frozen_row_count": 0,
+            "row_count": 200
+          },
+          "hidden": true,
+          "index": 1,
+          "resource_type": "sheet",
+          "sheet_id": "c7949b",
+          "title": "Sheet1"
+        }
+      ]
+    },
+    "msg": "success"
+  },
+  "raw_body_bytes": 423,
+  "per_tab_wire_keys": {
+    "3IZPYQ": [
+      "grid_properties",
+      "hidden",
+      "index",
+      "resource_type",
+      "sheet_id",
+      "title"
+    ],
+    "c7949b": [
+      "grid_properties",
+      "hidden",
+      "index",
+      "resource_type",
+      "sheet_id",
+      "title"
+    ]
+  },
+  "per_tab_hidden_value": {
+    "3IZPYQ": false,
+    "c7949b": true
+  },
+  "hidden_key_present_for_every_tab": true,
+  "offline_projection_SheetTab_from_dict_fields": {
+    "3IZPYQ": [
+      "column_count",
+      "filter_state",
+      "filter_state_detail",
+      "filtered_out_rows",
+      "frozen_panes",
+      "frozen_state",
+      "frozen_state_detail",
+      "index",
+      "merges",
+      "revision",
+      "revision_state",
+      "revision_state_detail",
+      "row_count",
+      "sheet_filter",
+      "sheet_id",
+      "title"
+    ],
+    "c7949b": [
+      "column_count",
+      "filter_state",
+      "filter_state_detail",
+      "filtered_out_rows",
+      "frozen_panes",
+      "frozen_state",
+      "frozen_state_detail",
+      "index",
+      "merges",
+      "revision",
+      "revision_state",
+      "revision_state_detail",
+      "row_count",
+      "sheet_filter",
+      "sheet_id",
+      "title"
+    ]
+  },
+  "note": "raw_response_body is the verbatim decoded JSON body of the READ route; no Authorization header or secret is recorded here."
+}

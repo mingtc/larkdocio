@@ -1,0 +1,21 @@
+{
+  "probe": "Q9-board-bogus-READ",
+  "method": "GET",
+  "path": "/open-apis/board/v1/whiteboards/Zzzz0000LdIoProbeBoardNope0000/download_as_image",
+  "params": [],
+  "note": "board family, nonexistent whiteboard id",
+  "http_status": 400,
+  "response_headers": {
+    "content-type": "application/json; charset=utf-8",
+    "x-tt-logid": "20260730154621F13F2F66B6C80CF8476B",
+    "x-request-id": "20260730154621F13F2F66B6C80CF8476B"
+  },
+  "response": {
+    "code": 2890003,
+    "msg": "mg entities not found [@from@] unknown doc [@from@] record missing [@from@] resource error [@from@] whiteboard",
+    "error": {
+      "message": "The whiteboard Not Exists, please check and rerequest.",
+      "log_id": "20260730154621F13F2F66B6C80CF8476B"
+    }
+  }
+}

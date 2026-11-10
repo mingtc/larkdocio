@@ -1,0 +1,71 @@
+{
+  "_probe": "p4",
+  "_endpoint": "drive/v1/medias/upload_all + records POST",
+  "_method": "MIXED",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": null,
+  "_verdict": "OK",
+  "_note": "CAN the API populate an Attachment cell? the upload leg, the accepted write shape, and the create echo",
+  "response": {
+    "code": 0,
+    "data": {
+      "payload_sha256": "135e8d141e85f8df",
+      "payload_bytes": 108,
+      "upload_all::bitable_file": {
+        "http": 200,
+        "code": 0,
+        "msg": "Success",
+        "data": {
+          "file_token": "Example92f5849e435cbbc81d5d",
+          "version": "7669520944997600990"
+        },
+        "error": null
+      },
+      "file_token": "Example92f5849e435cbbc81d5d",
+      "upload_all::bitable_image": {
+        "http": 200,
+        "code": 0,
+        "msg": "Success",
+        "data": {
+          "file_token": "Example4a141ba14f063dc06f12",
+          "version": "7669520950156594910"
+        },
+        "error": null
+      },
+      "write::list_of_file_token_objects": {
+        "request_value": [
+          {
+            "file_token": "Example92f5849e435cbbc81d5d"
+          }
+        ],
+        "code": 0,
+        "msg": "success",
+        "error": null,
+        "echo": {
+          "fields": {
+            "Attach": [
+              {
+                "file_token": "Example92f5849e435cbbc81d5d"
+              }
+            ],
+            "多行文本": "attach-list_of_file_token_objects"
+          },
+          "id": "recvrdC1LZZeuo",
+          "record_id": "recvrdC1LZZeuo"
+        }
+      },
+      "write::bare_list_of_tokens": {
+        "request_value": [
+          "Example92f5849e435cbbc81d5d"
+        ],
+        "code": 1254069,
+        "msg": "AttachFieldConvFail",
+        "error": {
+          "log_id": "20260803033821A6794A5E77779B584CC1"
+        },
+        "echo": null
+      }
+    }
+  }
+}

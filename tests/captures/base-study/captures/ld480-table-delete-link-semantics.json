@@ -1,0 +1,108 @@
+{
+ "_counter_observation": {
+  "date": "2026-08-14",
+  "issue": "LD-455 (QA slice)",
+  "note": "ONE run disagreed. LD-455's QA slice on 2026-08-14 recorded two_way_survived TRUE — the two-way column surviving its target table's deletion and dangling — on a diff that touched no Base code (progress.md, entry '2026-08-14 QA review of LD-455': Base live_write slice 95 passed / 1 failed, this test the failure). LD-480 re-measured the SAME route twice on 2026-08-14 and read FALSE both times: this gate's own re-run, and a media-free probe on an independently built shape (dev/base-study/probes/probe_ld480_table_delete_cascade_timing.py -> dev/base-study/captures/ld480-02-table-delete-cascade-timing.json). The mechanism that would make both readings true — the source column's removal LAGGING the table delete, so that a fast enough field read still sees it — was tested directly and REFUTED within its own scope: the column was already absent 0.9 s after the delete and stayed absent at t+2/5/10/20/40 s, stable across the whole window, on a QUIET tenant. A busy tenant was not measured, so the refutation is scoped to the condition it was taken under.",
+  "reading": "two_way_survived: true",
+  "reproduced_by_LD_480": false,
+  "source": "progress.md, entry '2026-08-14 QA review of LD-455'"
+ },
+ "_issue": "LD-480",
+ "_measured_at": "2026-08-14",
+ "_not_measured_here": {
+  "note": "deleting a two-way link COLUMN takes its twin with it. That is a field-route reading, it is not re-measured here, and nothing in this capture may be carried across to it (D-59).",
+  "route": "DELETE /open-apis/bitable/v1/apps/:app_token/tables/:table_id/fields/:field_id",
+  "standing_reading": "p0-5-02: source_duplex_survived false"
+ },
+ "_reconfirms": {
+  "capture": "dev/base-study/captures/ld272-01-relational-round-trip.json",
+  "date": "2026-08-05",
+  "issue": "LD-272",
+  "outcome": "re-measured 2026-08-14, UNCHANGED",
+  "table_delete": {
+   "dangling_columns": [
+    "ld272-one-way"
+   ],
+   "detector_extra_calls": 0,
+   "link_columns_surviving": [
+    "ld272-one-way"
+   ],
+   "one_way_survived": true,
+   "records_search_still_answers": 11,
+   "states": {
+    "ld272-one-way": "target-table-missing"
+   },
+   "table_is_gone": true,
+   "two_way_survived": false
+  },
+  "why_it_was_recorded": "LD-272 measured, on 2026-08-05, that a two-way link column pointing INTO a deleted table does NOT survive the table's deletion, while the one-way column does: the two-way column's mirror lives inside the doomed table, and deleting a mirror COLUMN had been captured taking its source column with it (p0-5-02, a DIFFERENT route). A measured asymmetry between the two link kinds is exactly the kind of fact a consumer plans around, so the gate asserts it."
+ },
+ "_revisit_trigger": "A SECOND run in which the two-way column SURVIVES its target table's deletion moves this reading. One such observation exists already and did not reproduce; a second one makes intermittency the finding, and at that point this arm should assert what the LIBRARY does (every surviving link column reads dangling) and record Lark's cascade as unstable rather than assert either outcome. A one-way column that stops surviving, or a survivor still reporting a live target_table_name, moves it too.",
+ "_verdict": "OK",
+ "_what": "the TABLE-DELETE link semantics, re-measured per link kind: a SingleLink (18) and a DuplexLink (21) pointing into the SAME target table, both populated, the target table deleted, and the source table read back. Every observation carries the route it was made on",
+ "observations": {
+  "record_delete": {
+   "_route": "DELETE /open-apis/bitable/v1/apps/:app_token/tables/:table_id/records/:record_id",
+   "one_way_state": "dangling",
+   "one_way_still_holds_the_dead_id": true,
+   "two_way_self_healed": true,
+   "unchanged_since": "2026-08-05"
+  },
+  "table_delete": {
+   "_route": "DELETE /open-apis/bitable/v1/apps/:app_token/tables/:table_id",
+   "deleted_table_id": "tblkco15W2dLasTx",
+   "detector_extra_calls": 0,
+   "fields_read": {
+    "_route": "GET /open-apis/bitable/v1/apps/:app_token/tables/:table_id/fields",
+    "columns": 6
+   },
+   "mirror_column": {
+    "_route": "DELETE /open-apis/bitable/v1/apps/:app_token/tables/:table_id",
+    "field_names": [
+     "Table-ld272-two-way"
+    ],
+    "lived_in_the_deleted_table": true,
+    "note": "the two-way link's mirror was auto-created INSIDE the target table, so it went with the table — and so did the SOURCE column in the other table. The one-way column, whose target had no mirror of it, is the one that survives and dangles.",
+    "survives": false
+   },
+   "per_kind": {
+    "DuplexLink": {
+     "field_payload": null,
+     "field_type": null,
+     "state": null,
+     "survived": false,
+     "symmetric": null,
+     "target_table_id": null,
+     "target_table_id_persists": false,
+     "target_table_name_present": false
+    },
+    "SingleLink": {
+     "field_payload": {
+      "field_id": "fldnj7kmVF",
+      "field_name": "ld272-one-way",
+      "is_primary": false,
+      "property": {
+       "multiple": true,
+       "table_id": "tblkco15W2dLasTx"
+      },
+      "type": 18,
+      "ui_type": "SingleLink"
+     },
+     "field_type": 18,
+     "state": "target-table-missing",
+     "survived": true,
+     "symmetric": false,
+     "target_table_id": "tblkco15W2dLasTx",
+     "target_table_id_persists": true,
+     "target_table_name_present": false
+    }
+   },
+   "records_search": {
+    "_route": "POST /open-apis/bitable/v1/apps/:app_token/tables/:table_id/records/search",
+    "code": 0,
+    "records": 11
+   },
+   "table_is_gone": true
+  }
+ }
+}

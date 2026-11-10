@@ -1,0 +1,46 @@
+{
+  "trial": {
+    "id": "S-reorder-2",
+    "doc": "S",
+    "shape": "reorder",
+    "arm": "A",
+    "rep": 2
+  },
+  "cli_version": "2.1.195 (Claude Code)",
+  "instruction": "Move the 'Status' section so that it appears before the 'Open items' section. Keep the content of both sections unchanged.",
+  "instruction_mentions_markers": false,
+  "meta": {
+    "model_requested": "sonnet",
+    "models_used": [
+      "claude-haiku-4-5-20251001",
+      "claude-sonnet-4-6"
+    ],
+    "duration_ms": 5580,
+    "cost_usd": 0.0974644,
+    "is_error": false,
+    "num_turns": 1
+  },
+  "fenced_output": false,
+  "classification": {
+    "source_marker_count": 8,
+    "output_marker_count": 8,
+    "per_marker": {
+      "s01": "preserved",
+      "s02": "preserved",
+      "s03": "preserved",
+      "s04": "preserved",
+      "s05": "preserved",
+      "s06": "preserved",
+      "s07": "preserved",
+      "s08": "preserved"
+    },
+    "counts": {
+      "preserved": 8
+    },
+    "invented_ids": [],
+    "mangled_forms": [],
+    "order_preserved": false,
+    "trial_clean": true
+  },
+  "edited_document": "# Release checklist\n\n<!-- lark:block:s01 -->\n## Scope\n\n<!-- lark:block:s02 -->\nThis release covers the reader hardening work only. The writer changes that were originally planned for this release have been moved out, because the review found that they were not ready and would have needed another round of testing that there was simply not enough time for in this particular window.\n\n<!-- lark:block:s03 -->\nThe rollout is staged: early consumers first, then the wider set.\n\n<!-- lark:block:s07 -->\n## Status\n\n<!-- lark:block:s08 -->\n| Item | Owner | Status |\n| --- | --- | --- |\n| Reader hardening | Maintainer | Done |\n| Changelog | Maintainer | In review |\n| Canary rerun | Maintainer | Not started |\n\n<!-- lark:block:s04 -->\n## Open items\n\n<!-- lark:block:s05 -->\n- Confirm the changelog entry with the maintainer\n- Re-run the download canary against the scratch document\n- Decide whether the deprecation note ships in this release or the next one\n\n<!-- lark:block:s06 -->\nNobody has yet confirmed which machine runs the checks during the rollout window, which is the one item that could actually block the release."
+}

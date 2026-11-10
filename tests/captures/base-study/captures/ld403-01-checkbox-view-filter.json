@@ -1,0 +1,448 @@
+{
+  "_probe": "ld403-01",
+  "_endpoint": "PATCH /open-apis/bitable/v1/apps/{a}/tables/{t}/views/{v} (property.filter_info) — with POST …/records/search as the other route",
+  "_method": "20 view-route value spellings on one Checkbox field, each a single-condition filter_info, bracketed by 2 TEXT controls on the same view and 4 search-route arms",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_verdict": "4 of 20 probed view-route Checkbox forms were accepted by Lark; 2 of 2 TEXT controls on the same view in the same run were accepted.",
+  "_note": "LD-403 AC1-AC3. The consumer's four shapes are the first four rows; everything after them is this probe's own reasoned extension. A form NOT in this list is UNMEASURED, not refused. The table has 3 rows, 2 of them ticked, so an accepted filter that matches nothing is still visible as `rows_visible_through_view`.",
+  "_transport": "larkdocio.common.transport.CredentialedRawHttpClient (urllib), paced 1.3 s. Raw rather than the shipped serialiser because the serialiser can produce only one of the spellings under test.",
+  "_disposable": {
+    "title": "larkdocio-DISPOSABLE-1786384331-84018",
+    "app_token": "Example9d1c3173a4b299055bb3",
+    "deleted": "in the harness's finally; see orphans() below"
+  },
+  "rows_staged": [
+    {
+      "Check": true,
+      "Note": "alpha"
+    },
+    {
+      "Check": false,
+      "Note": "beta"
+    },
+    {
+      "Check": true,
+      "Note": "gamma"
+    }
+  ],
+  "controls": [
+    {
+      "form": "CONTROL text is ['alpha']",
+      "operator": "is",
+      "value_sent": "[\"alpha\"]",
+      "value_json_type": "str",
+      "why": "the captured working view-route shape, on a TEXT field, through this same harness — if this is not code:0 the probe measures itself, not Lark",
+      "code": 0,
+      "msg": "success",
+      "accepted": true,
+      "persisted_filter_info": {
+        "condition_omitted": null,
+        "conditions": [
+          {
+            "condition_id": "conztjMVkM",
+            "field_id": "fld2H4bGav",
+            "field_type": 1,
+            "operator": "is",
+            "value": "[\"alpha\"]"
+          }
+        ],
+        "conjunction": "and"
+      },
+      "rows_visible_through_view": 1
+    },
+    {
+      "form": "CONTROL text isNotEmpty (key omitted)",
+      "operator": "isNotEmpty",
+      "value_sent": "<key omitted>",
+      "value_json_type": "<omitted>",
+      "why": "the valueless control on a TEXT field",
+      "code": 0,
+      "msg": "success",
+      "accepted": true,
+      "persisted_filter_info": {
+        "condition_omitted": null,
+        "conditions": [
+          {
+            "condition_id": "condBkLG01",
+            "field_id": "fld2H4bGav",
+            "field_type": 1,
+            "operator": "isNotEmpty",
+            "value": null
+          }
+        ],
+        "conjunction": "and"
+      },
+      "rows_visible_through_view": 3
+    }
+  ],
+  "view_route_arms": [
+    {
+      "form": "consumer-1 / library's own True",
+      "operator": "is",
+      "value_sent": "[\"True\"]",
+      "value_json_type": "str",
+      "why": "the json-string the shipped serialiser produces for (\"is\", (True,)) — str(True) is \"True\"",
+      "code": 1254001,
+      "msg": "The request body is wrong, please modify it.",
+      "accepted": false,
+      "error": {
+        "message": "Invalid request parameter: 'property.filter_info.conditions[0].value'. Correct format : the condition value of 'Checkbox' must be a legal json string, and the content is a list of booleans. Please check and modify accordingly.",
+        "log_id": "20260811015231D5C79D20FB6036232573"
+      }
+    },
+    {
+      "form": "consumer-2 / lowercase true",
+      "operator": "is",
+      "value_sent": "[\"true\"]",
+      "value_json_type": "str",
+      "why": "the json-string for (\"is\", (\"true\",))",
+      "code": 1254001,
+      "msg": "The request body is wrong, please modify it.",
+      "accepted": false,
+      "error": {
+        "message": "Invalid request parameter: 'property.filter_info.conditions[0].value'. Correct format : the condition value of 'Checkbox' must be a legal json string, and the content is a list of booleans. Please check and modify accordingly.",
+        "log_id": "202608110152338F88F03F56F31C249792"
+      }
+    },
+    {
+      "form": "consumer-3 / the int 1",
+      "operator": "is",
+      "value_sent": "[\"1\"]",
+      "value_json_type": "str",
+      "why": "the json-string for (\"is\", (1,))",
+      "code": 1254001,
+      "msg": "The request body is wrong, please modify it.",
+      "accepted": false,
+      "error": {
+        "message": "Invalid request parameter: 'property.filter_info.conditions[0].value'. Correct format : the condition value of 'Checkbox' must be a legal json string, and the content is a list of booleans. Please check and modify accordingly.",
+        "log_id": "2026081101523525D8273D8911FF239E7B"
+      }
+    },
+    {
+      "form": "consumer-4 / valueless isNotEmpty",
+      "operator": "isNotEmpty",
+      "value_sent": "<key omitted>",
+      "value_json_type": "<omitted>",
+      "why": "the valueless twin, key OMITTED — the only shape the view route takes for a valueless operator on a text field",
+      "code": 1254001,
+      "msg": "The request body is wrong, please modify it.",
+      "accepted": false,
+      "error": {
+        "message": "Invalid request parameter: 'property.filter_info.conditions[0].field_id.fldbSDYQJj.operator.isNotEmpty'. Correct format : the operator type is unsupported. Please check and modify accordingly.",
+        "log_id": "20260811015236E8CFC8BB8F139C23AC3E"
+      }
+    },
+    {
+      "form": "valueless isEmpty",
+      "operator": "isEmpty",
+      "value_sent": "<key omitted>",
+      "value_json_type": "<omitted>",
+      "why": "the other valueless operator, same omission",
+      "code": 1254001,
+      "msg": "The request body is wrong, please modify it.",
+      "accepted": false,
+      "error": {
+        "message": "Invalid request parameter: 'property.filter_info.conditions[0].field_id.fldbSDYQJj.operator.isEmpty'. Correct format : the operator type is unsupported. Please check and modify accordingly.",
+        "log_id": "20260811015238AC1C369F6036EC23633F"
+      }
+    },
+    {
+      "form": "json bool inside the array",
+      "operator": "is",
+      "value_sent": "[true]",
+      "value_json_type": "str",
+      "why": "a json-string whose element is a real JSON boolean, not a quoted one — the shape VALUE_RETYPED_ON_STORAGE says Lark itself stores numbers as",
+      "code": 0,
+      "msg": "success",
+      "accepted": true,
+      "persisted_filter_info": {
+        "condition_omitted": null,
+        "conditions": [
+          {
+            "condition_id": "con9LpPssM",
+            "field_id": "fldbSDYQJj",
+            "field_type": 7,
+            "operator": "is",
+            "value": "[true]"
+          }
+        ],
+        "conjunction": "and"
+      },
+      "rows_visible_through_view": 2
+    },
+    {
+      "form": "json number inside the array",
+      "operator": "is",
+      "value_sent": "[1]",
+      "value_json_type": "str",
+      "why": "a json-string whose element is a real JSON number",
+      "code": 1254001,
+      "msg": "The request body is wrong, please modify it.",
+      "accepted": false,
+      "error": {
+        "message": "Invalid request parameter: 'property.filter_info.conditions[0].value'. Correct format : the condition value of 'Checkbox' must be a legal json string, and the content is a list of booleans. Please check and modify accordingly.",
+        "log_id": "202608110152445550052827129E22A1D0"
+      }
+    },
+    {
+      "form": "json number zero",
+      "operator": "is",
+      "value_sent": "[0]",
+      "value_json_type": "str",
+      "why": "the false side of the same spelling",
+      "code": 1254001,
+      "msg": "The request body is wrong, please modify it.",
+      "accepted": false,
+      "error": {
+        "message": "Invalid request parameter: 'property.filter_info.conditions[0].value'. Correct format : the condition value of 'Checkbox' must be a legal json string, and the content is a list of booleans. Please check and modify accordingly.",
+        "log_id": "20260811015246D6E159AD19D73F241826"
+      }
+    },
+    {
+      "form": "quoted zero",
+      "operator": "is",
+      "value_sent": "[\"0\"]",
+      "value_json_type": "str",
+      "why": "the false side as a quoted string",
+      "code": 1254001,
+      "msg": "The request body is wrong, please modify it.",
+      "accepted": false,
+      "error": {
+        "message": "Invalid request parameter: 'property.filter_info.conditions[0].value'. Correct format : the condition value of 'Checkbox' must be a legal json string, and the content is a list of booleans. Please check and modify accordingly.",
+        "log_id": "20260811015247DC13FCA01D28CF22FC2F"
+      }
+    },
+    {
+      "form": "quoted false",
+      "operator": "is",
+      "value_sent": "[\"false\"]",
+      "value_json_type": "str",
+      "why": "the word, lower case",
+      "code": 1254001,
+      "msg": "The request body is wrong, please modify it.",
+      "accepted": false,
+      "error": {
+        "message": "Invalid request parameter: 'property.filter_info.conditions[0].value'. Correct format : the condition value of 'Checkbox' must be a legal json string, and the content is a list of booleans. Please check and modify accordingly.",
+        "log_id": "202608110152490F301A3ABBA521242AA5"
+      }
+    },
+    {
+      "form": "quoted False",
+      "operator": "is",
+      "value_sent": "[\"False\"]",
+      "value_json_type": "str",
+      "why": "the word, Python's capitalisation",
+      "code": 1254001,
+      "msg": "The request body is wrong, please modify it.",
+      "accepted": false,
+      "error": {
+        "message": "Invalid request parameter: 'property.filter_info.conditions[0].value'. Correct format : the condition value of 'Checkbox' must be a legal json string, and the content is a list of booleans. Please check and modify accordingly.",
+        "log_id": "2026081101525067EE0E81DC82FE251246"
+      }
+    },
+    {
+      "form": "quoted yes",
+      "operator": "is",
+      "value_sent": "[\"yes\"]",
+      "value_json_type": "str",
+      "why": "the English affirmative a UI might store",
+      "code": 1254001,
+      "msg": "The request body is wrong, please modify it.",
+      "accepted": false,
+      "error": {
+        "message": "Invalid request parameter: 'property.filter_info.conditions[0].value'. Correct format : the condition value of 'Checkbox' must be a legal json string, and the content is a list of booleans. Please check and modify accordingly.",
+        "log_id": "202608110152521A46F6E4D34426230241"
+      }
+    },
+    {
+      "form": "quoted checked",
+      "operator": "is",
+      "value_sent": "[\"checked\"]",
+      "value_json_type": "str",
+      "why": "the UI's own word for a ticked box",
+      "code": 1254001,
+      "msg": "The request body is wrong, please modify it.",
+      "accepted": false,
+      "error": {
+        "message": "Invalid request parameter: 'property.filter_info.conditions[0].value'. Correct format : the condition value of 'Checkbox' must be a legal json string, and the content is a list of booleans. Please check and modify accordingly.",
+        "log_id": "20260811015253D7FE23733CFCFA23E94A"
+      }
+    },
+    {
+      "form": "is with the value key OMITTED",
+      "operator": "is",
+      "value_sent": "<key omitted>",
+      "value_json_type": "<omitted>",
+      "why": "`is` carrying no value at all — the valueless spelling applied to a valued operator",
+      "code": 1254001,
+      "msg": "The request body is wrong, please modify it.",
+      "accepted": false,
+      "error": {
+        "message": "Invalid request parameter: 'property.filter_info.conditions[0].value'. Correct format : the condition value of 'Checkbox' must be a legal json string, and the content is a list of booleans. Please check and modify accordingly.",
+        "log_id": "202608110152557925C3DBFC12022405DB"
+      }
+    },
+    {
+      "form": "empty json array",
+      "operator": "is",
+      "value_sent": "[]",
+      "value_json_type": "str",
+      "why": "a json-string carrying an empty array",
+      "code": 0,
+      "msg": "success",
+      "accepted": true,
+      "persisted_filter_info": {
+        "condition_omitted": null,
+        "conditions": [
+          {
+            "condition_id": "congab3csA",
+            "field_id": "fldbSDYQJj",
+            "field_type": 7,
+            "operator": "is",
+            "value": "[false]"
+          }
+        ],
+        "conjunction": "and"
+      },
+      "rows_visible_through_view": 11
+    },
+    {
+      "form": "real array, not a string",
+      "operator": "is",
+      "value_sent": [
+        "true"
+      ],
+      "value_json_type": "list",
+      "why": "the SEARCH route's wrapper sent to the view route — 9499 on a text field, probed here so the refusal code is attributable",
+      "code": 9499,
+      "msg": "Invalid parameter type in json: value. Invalid parameter value: [\"true\"]. Please check and modify accordingly.",
+      "accepted": false,
+      "error": {
+        "log_id": "20260811015301134E7CD08FD2BA23C5AE"
+      }
+    },
+    {
+      "form": "bare unquoted string",
+      "operator": "is",
+      "value_sent": "true",
+      "value_json_type": "str",
+      "why": "no array at all — 1254001 on a text field, probed for the same reason",
+      "code": 0,
+      "msg": "success",
+      "accepted": true,
+      "persisted_filter_info": {
+        "condition_omitted": null,
+        "conditions": [
+          {
+            "condition_id": "cong0TBpJ0",
+            "field_id": "fldbSDYQJj",
+            "field_type": 7,
+            "operator": "is",
+            "value": "[true]"
+          }
+        ],
+        "conjunction": "and"
+      },
+      "rows_visible_through_view": 2
+    },
+    {
+      "form": "bare JSON boolean",
+      "operator": "is",
+      "value_sent": true,
+      "value_json_type": "bool",
+      "why": "the boolean itself as the value, no wrapper",
+      "code": 0,
+      "msg": "success",
+      "accepted": true,
+      "persisted_filter_info": {
+        "condition_omitted": null,
+        "conditions": [
+          {
+            "condition_id": "con2sfGbBj",
+            "field_id": "fldbSDYQJj",
+            "field_type": 7,
+            "operator": "is",
+            "value": "[true]"
+          }
+        ],
+        "conjunction": "and"
+      },
+      "rows_visible_through_view": 2
+    },
+    {
+      "form": "isNot / lowercase true",
+      "operator": "isNot",
+      "value_sent": "[\"true\"]",
+      "value_json_type": "str",
+      "why": "a different operator, in case `is` alone is the objection",
+      "code": 1254001,
+      "msg": "The request body is wrong, please modify it.",
+      "accepted": false,
+      "error": {
+        "message": "Invalid request parameter: 'property.filter_info.conditions[0].field_id.fldbSDYQJj.operator.isNot'. Correct format : the operator type is unsupported. Please check and modify accordingly.",
+        "log_id": "20260811015312A5D71F8B2C57BF240AFD"
+      }
+    },
+    {
+      "form": "contains / lowercase true",
+      "operator": "contains",
+      "value_sent": "[\"true\"]",
+      "value_json_type": "str",
+      "why": "the text-shaped operator, in case Checkbox is filtered as text",
+      "code": 1254001,
+      "msg": "The request body is wrong, please modify it.",
+      "accepted": false,
+      "error": {
+        "message": "Invalid request parameter: 'property.filter_info.conditions[0].field_id.fldbSDYQJj.operator.contains'. Correct format : the operator type is unsupported. Please check and modify accordingly.",
+        "log_id": "20260811015314017A59BAF0CDE523A5A9"
+      }
+    }
+  ],
+  "search_route_arms": [
+    {
+      "form": "checkbox is ['True'] — what the shipped serialiser sends",
+      "operator": "is",
+      "value_sent": [
+        "True"
+      ],
+      "code": 0,
+      "msg": "success",
+      "accepted": true,
+      "rows_returned": 2
+    },
+    {
+      "form": "checkbox is ['true']",
+      "operator": "is",
+      "value_sent": [
+        "true"
+      ],
+      "code": 0,
+      "msg": "success",
+      "accepted": true,
+      "rows_returned": 2
+    },
+    {
+      "form": "checkbox is ['1']",
+      "operator": "is",
+      "value_sent": [
+        "1"
+      ],
+      "code": 0,
+      "msg": "success",
+      "accepted": true,
+      "rows_returned": 2
+    },
+    {
+      "form": "CONTROL text is ['alpha']",
+      "operator": "is",
+      "value_sent": [
+        "alpha"
+      ],
+      "code": 0,
+      "msg": "success",
+      "accepted": true,
+      "rows_returned": 1
+    }
+  ]
+}

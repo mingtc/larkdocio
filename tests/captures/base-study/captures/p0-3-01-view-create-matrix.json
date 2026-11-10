@@ -1,0 +1,180 @@
+{
+  "_probe": "p3",
+  "_endpoint": ".../tables/tblCsqtsRXFIOtwF/views",
+  "_method": "POST",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": null,
+  "_verdict": "OK",
+  "_note": "which view_types the open API can CREATE, and the verbatim refusal for the rest",
+  "response": {
+    "code": 0,
+    "data": {
+      "grid": {
+        "http": 200,
+        "code": 0,
+        "msg": "success",
+        "response": {
+          "code": 0,
+          "data": {
+            "view": {
+              "view_id": "vew3TGwDLu",
+              "view_name": "p0-grid",
+              "view_type": "grid"
+            }
+          },
+          "msg": "success"
+        },
+        "view": {
+          "view_id": "vew3TGwDLu",
+          "view_name": "p0-grid",
+          "view_type": "grid"
+        }
+      },
+      "kanban": {
+        "http": 200,
+        "code": 0,
+        "msg": "success",
+        "response": {
+          "code": 0,
+          "data": {
+            "view": {
+              "view_id": "vewvILXTX2",
+              "view_name": "p0-kanban",
+              "view_type": "kanban"
+            }
+          },
+          "msg": "success"
+        },
+        "view": {
+          "view_id": "vewvILXTX2",
+          "view_name": "p0-kanban",
+          "view_type": "kanban"
+        }
+      },
+      "gallery": {
+        "http": 200,
+        "code": 0,
+        "msg": "success",
+        "response": {
+          "code": 0,
+          "data": {
+            "view": {
+              "view_id": "vewxXVHYqy",
+              "view_name": "p0-gallery",
+              "view_type": "gallery"
+            }
+          },
+          "msg": "success"
+        },
+        "view": {
+          "view_id": "vewxXVHYqy",
+          "view_name": "p0-gallery",
+          "view_type": "gallery"
+        }
+      },
+      "gantt": {
+        "http": 200,
+        "code": 0,
+        "msg": "success",
+        "response": {
+          "code": 0,
+          "data": {
+            "view": {
+              "view_id": "vewWmOEhO9",
+              "view_name": "p0-gantt",
+              "view_type": "gantt"
+            }
+          },
+          "msg": "success"
+        },
+        "view": {
+          "view_id": "vewWmOEhO9",
+          "view_name": "p0-gantt",
+          "view_type": "gantt"
+        }
+      },
+      "form": {
+        "http": 200,
+        "code": 0,
+        "msg": "success",
+        "response": {
+          "code": 0,
+          "data": {
+            "view": {
+              "view_id": "vew7HYATaP",
+              "view_name": "p0-form",
+              "view_type": "form"
+            }
+          },
+          "msg": "success"
+        },
+        "view": {
+          "view_id": "vew7HYATaP",
+          "view_name": "p0-form",
+          "view_type": "form"
+        }
+      },
+      "calendar": {
+        "http": 400,
+        "code": 99992402,
+        "msg": "field validation failed",
+        "response": {
+          "code": 99992402,
+          "msg": "field validation failed",
+          "error": {
+            "log_id": "20260803033438E4D7C78091DA6C476DF3",
+            "field_violations": [
+              {
+                "field": "view_type",
+                "value": "calendar",
+                "description": "view_type is optional, options: [grid,kanban,gallery,gantt,form]"
+              }
+            ]
+          }
+        },
+        "view": {}
+      },
+      "board": {
+        "http": 400,
+        "code": 99992402,
+        "msg": "field validation failed",
+        "response": {
+          "code": 99992402,
+          "msg": "field validation failed",
+          "error": {
+            "log_id": "20260803033439BE1A3920E5121A4BDE81",
+            "field_violations": [
+              {
+                "field": "view_type",
+                "value": "board",
+                "description": "view_type is optional, options: [grid,kanban,gallery,gantt,form]"
+              }
+            ]
+          }
+        },
+        "view": {}
+      },
+      "list": {
+        "http": 400,
+        "code": 99992402,
+        "msg": "field validation failed",
+        "response": {
+          "code": 99992402,
+          "msg": "field validation failed",
+          "error": {
+            "log_id": "20260803033441CDE15509C0DAE9239DAC",
+            "field_violations": [
+              {
+                "field": "view_type",
+                "value": "list",
+                "description": "view_type is optional, options: [grid,kanban,gallery,gantt,form]"
+              }
+            ]
+          }
+        },
+        "view": {}
+      }
+    }
+  }
+}

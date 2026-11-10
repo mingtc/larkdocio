@@ -1,0 +1,3385 @@
+{
+  "probe": "LD-189 cell BORDER + WORD-WRAP characterization",
+  "at": "2026-07-31T20:54:21.808566+00:00",
+  "steps": [
+    {
+      "label": "X0a control: known-good bold + a NONSENSE field alongside it",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Examplecebc79e08c1c018da29b/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "1b11cb!H1:H1",
+          "style": {
+            "font": {
+              "bold": true
+            },
+            "larkdocioNonsenseFieldXyz": true
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "updates": {
+            "revision": 2,
+            "spreadsheetToken": "Examplecebc79e08c1c018da29b",
+            "updatedCells": 1,
+            "updatedColumns": 1,
+            "updatedRange": "1b11cb!H1:H1",
+            "updatedRows": 1
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "label": "X0b control: the NONSENSE field ALONE (no known field at all)",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Examplecebc79e08c1c018da29b/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "1b11cb!H2:H2",
+          "style": {
+            "larkdocioNonsenseFieldXyz": true
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "updates": {
+            "revision": 3,
+            "spreadsheetToken": "Examplecebc79e08c1c018da29b",
+            "updatedCells": 1,
+            "updatedColumns": 1,
+            "updatedRange": "1b11cb!H2:H2",
+            "updatedRows": 1
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "label": "A1 borderType FULL_BORDER (the documented candidate name)",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Examplecebc79e08c1c018da29b/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "1b11cb!A2:A2",
+          "style": {
+            "borderType": "FULL_BORDER"
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "updates": {
+            "revision": 4,
+            "spreadsheetToken": "Examplecebc79e08c1c018da29b",
+            "updatedCells": 1,
+            "updatedColumns": 1,
+            "updatedRange": "1b11cb!A2:A2",
+            "updatedRows": 1
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "label": "A2 borderType FULL_BORDER + borderColor #FF0000",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Examplecebc79e08c1c018da29b/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "1b11cb!A3:A3",
+          "style": {
+            "borderType": "FULL_BORDER",
+            "borderColor": "#FF0000"
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "updates": {
+            "revision": 5,
+            "spreadsheetToken": "Examplecebc79e08c1c018da29b",
+            "updatedCells": 1,
+            "updatedColumns": 1,
+            "updatedRange": "1b11cb!A3:A3",
+            "updatedRows": 1
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "label": "A4 single edge LEFT_BORDER",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Examplecebc79e08c1c018da29b/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "1b11cb!A4:A4",
+          "style": {
+            "borderType": "LEFT_BORDER"
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "updates": {
+            "revision": 6,
+            "spreadsheetToken": "Examplecebc79e08c1c018da29b",
+            "updatedCells": 1,
+            "updatedColumns": 1,
+            "updatedRange": "1b11cb!A4:A4",
+            "updatedRows": 1
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "label": "A5 single edge RIGHT_BORDER",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Examplecebc79e08c1c018da29b/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "1b11cb!A5:A5",
+          "style": {
+            "borderType": "RIGHT_BORDER"
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "updates": {
+            "revision": 7,
+            "spreadsheetToken": "Examplecebc79e08c1c018da29b",
+            "updatedCells": 1,
+            "updatedColumns": 1,
+            "updatedRange": "1b11cb!A5:A5",
+            "updatedRows": 1
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "label": "A6 single edge TOP_BORDER",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Examplecebc79e08c1c018da29b/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "1b11cb!A6:A6",
+          "style": {
+            "borderType": "TOP_BORDER"
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "updates": {
+            "revision": 8,
+            "spreadsheetToken": "Examplecebc79e08c1c018da29b",
+            "updatedCells": 1,
+            "updatedColumns": 1,
+            "updatedRange": "1b11cb!A6:A6",
+            "updatedRows": 1
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "label": "A7 single edge BOTTOM_BORDER",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Examplecebc79e08c1c018da29b/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "1b11cb!A7:A7",
+          "style": {
+            "borderType": "BOTTOM_BORDER"
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "updates": {
+            "revision": 9,
+            "spreadsheetToken": "Examplecebc79e08c1c018da29b",
+            "updatedCells": 1,
+            "updatedColumns": 1,
+            "updatedRange": "1b11cb!A7:A7",
+            "updatedRows": 1
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "label": "B2:C3 OUTER_BORDER over a multi-cell RANGE",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Examplecebc79e08c1c018da29b/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "1b11cb!B2:C3",
+          "style": {
+            "borderType": "OUTER_BORDER"
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "updates": {
+            "revision": 10,
+            "spreadsheetToken": "Examplecebc79e08c1c018da29b",
+            "updatedCells": 4,
+            "updatedColumns": 2,
+            "updatedRange": "1b11cb!B2:C3",
+            "updatedRows": 2
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "label": "B4:C5 INNER_BORDER over a multi-cell RANGE",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Examplecebc79e08c1c018da29b/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "1b11cb!B4:C5",
+          "style": {
+            "borderType": "INNER_BORDER"
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "updates": {
+            "revision": 11,
+            "spreadsheetToken": "Examplecebc79e08c1c018da29b",
+            "updatedCells": 4,
+            "updatedColumns": 2,
+            "updatedRange": "1b11cb!B4:C5",
+            "updatedRows": 2
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "label": "D2 border FIRST (so the clear has something to clear)",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Examplecebc79e08c1c018da29b/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "1b11cb!D2:D2",
+          "style": {
+            "borderType": "FULL_BORDER"
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "updates": {
+            "revision": 12,
+            "spreadsheetToken": "Examplecebc79e08c1c018da29b",
+            "updatedCells": 1,
+            "updatedColumns": 1,
+            "updatedRange": "1b11cb!D2:D2",
+            "updatedRows": 1
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "label": "D2 CLEAR attempt \u2014 borderType NO_BORDER",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Examplecebc79e08c1c018da29b/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "1b11cb!D2:D2",
+          "style": {
+            "borderType": "NO_BORDER"
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "updates": {
+            "revision": 13,
+            "spreadsheetToken": "Examplecebc79e08c1c018da29b",
+            "updatedCells": 1,
+            "updatedColumns": 1,
+            "updatedRange": "1b11cb!D2:D2",
+            "updatedRows": 1
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "label": "D3 border FIRST, then an EMPTY-STRING borderType clear attempt",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Examplecebc79e08c1c018da29b/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "1b11cb!D3:D3",
+          "style": {
+            "borderType": "FULL_BORDER"
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "updates": {
+            "revision": 14,
+            "spreadsheetToken": "Examplecebc79e08c1c018da29b",
+            "updatedCells": 1,
+            "updatedColumns": 1,
+            "updatedRange": "1b11cb!D3:D3",
+            "updatedRows": 1
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "label": "D3 CLEAR attempt \u2014 borderType '' (empty string)",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Examplecebc79e08c1c018da29b/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "1b11cb!D3:D3",
+          "style": {
+            "borderType": ""
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 90204,
+      "msg": "invalid borderType",
+      "response": {
+        "code": 90204,
+        "data": {},
+        "msg": "invalid borderType"
+      }
+    },
+    {
+      "label": "D4 INVALID borderType 'DIAGONAL_ZIGZAG'",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Examplecebc79e08c1c018da29b/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "1b11cb!D4:D4",
+          "style": {
+            "borderType": "DIAGONAL_ZIGZAG"
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 90204,
+      "msg": "invalid borderType",
+      "response": {
+        "code": 90204,
+        "data": {},
+        "msg": "invalid borderType"
+      }
+    },
+    {
+      "label": "D5 INVALID borderType lower-case 'full_border'",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Examplecebc79e08c1c018da29b/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "1b11cb!D5:D5",
+          "style": {
+            "borderType": "full_border"
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 90204,
+      "msg": "invalid borderType",
+      "response": {
+        "code": 90204,
+        "data": {},
+        "msg": "invalid borderType"
+      }
+    },
+    {
+      "label": "D6 borderColor ALONE, no borderType",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Examplecebc79e08c1c018da29b/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "1b11cb!D6:D6",
+          "style": {
+            "borderColor": "#00FF00"
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "updates": {
+            "revision": 15,
+            "spreadsheetToken": "Examplecebc79e08c1c018da29b",
+            "updatedCells": 1,
+            "updatedColumns": 1,
+            "updatedRange": "1b11cb!D6:D6",
+            "updatedRows": 1
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "label": "D7 borderColor in a BAD form ('red') with a valid borderType",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Examplecebc79e08c1c018da29b/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "1b11cb!D7:D7",
+          "style": {
+            "borderType": "FULL_BORDER",
+            "borderColor": "red"
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 90204,
+      "msg": "invalid borderColor",
+      "response": {
+        "code": 90204,
+        "data": {},
+        "msg": "invalid borderColor"
+      }
+    },
+    {
+      "label": "merge E2:E4 (MERGE_ALL)",
+      "method": "POST",
+      "path": "merge_cells",
+      "response": {
+        "spreadsheetToken": "Examplecebc79e08c1c018da29b"
+      }
+    },
+    {
+      "label": "E2:E4 FULL_BORDER over the WHOLE merged span",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Examplecebc79e08c1c018da29b/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "1b11cb!E2:E4",
+          "style": {
+            "borderType": "FULL_BORDER"
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "updates": {
+            "revision": 17,
+            "spreadsheetToken": "Examplecebc79e08c1c018da29b",
+            "updatedCells": 3,
+            "updatedColumns": 1,
+            "updatedRange": "1b11cb!E2:E4",
+            "updatedRows": 3
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "label": "merge F2:F4 (MERGE_ALL)",
+      "method": "POST",
+      "path": "merge_cells",
+      "response": {
+        "spreadsheetToken": "Examplecebc79e08c1c018da29b"
+      }
+    },
+    {
+      "label": "F2 FULL_BORDER on the merge ANCHOR ONLY (part of the region)",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Examplecebc79e08c1c018da29b/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "1b11cb!F2:F2",
+          "style": {
+            "borderType": "FULL_BORDER"
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "updates": {
+            "revision": 19,
+            "spreadsheetToken": "Examplecebc79e08c1c018da29b",
+            "updatedCells": 1,
+            "updatedColumns": 1,
+            "updatedRange": "1b11cb!F2:F2",
+            "updatedRows": 1
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "label": "G2/G3 batch: borderType through styles_batch_update",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Examplecebc79e08c1c018da29b/styles_batch_update",
+      "request_body": {
+        "data": [
+          {
+            "ranges": [
+              "1b11cb!G2:G2"
+            ],
+            "style": {
+              "borderType": "FULL_BORDER"
+            }
+          },
+          {
+            "ranges": [
+              "1b11cb!G3:G3"
+            ],
+            "style": {
+              "borderType": "OUTER_BORDER",
+              "borderColor": "#0000FF"
+            }
+          }
+        ]
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "responses": [
+            {
+              "spreadsheetToken": "Examplecebc79e08c1c018da29b",
+              "updatedCells": 1,
+              "updatedColumns": 1,
+              "updatedRange": "1b11cb!G2:G2",
+              "updatedRows": 1
+            },
+            {
+              "spreadsheetToken": "Examplecebc79e08c1c018da29b",
+              "updatedCells": 1,
+              "updatedColumns": 1,
+              "updatedRange": "1b11cb!G3:G3",
+              "updatedRows": 1
+            }
+          ],
+          "revision": 20,
+          "spreadsheetToken": "Examplecebc79e08c1c018da29b",
+          "totalUpdatedCells": 2,
+          "totalUpdatedColumns": 2,
+          "totalUpdatedRows": 2
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "label": "G4 combined: bold + backColor + FULL_BORDER in one style",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Examplecebc79e08c1c018da29b/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "1b11cb!G4:G4",
+          "style": {
+            "font": {
+              "bold": true
+            },
+            "backColor": "#FFFF00",
+            "borderType": "FULL_BORDER",
+            "borderColor": "#FF0000"
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "updates": {
+            "revision": 21,
+            "spreadsheetToken": "Examplecebc79e08c1c018da29b",
+            "updatedCells": 1,
+            "updatedColumns": 1,
+            "updatedRange": "1b11cb!G4:G4",
+            "updatedRows": 1
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "label": "B1 wrap candidate {\"wrap\": true}",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Examplecebc79e08c1c018da29b/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "1b11cb!B1:B1",
+          "style": {
+            "wrap": true
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "updates": {
+            "revision": 22,
+            "spreadsheetToken": "Examplecebc79e08c1c018da29b",
+            "updatedCells": 1,
+            "updatedColumns": 1,
+            "updatedRange": "1b11cb!B1:B1",
+            "updatedRows": 1
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "label": "C1 wrap candidate {\"wrapText\": true}",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Examplecebc79e08c1c018da29b/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "1b11cb!C1:C1",
+          "style": {
+            "wrapText": true
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "updates": {
+            "revision": 23,
+            "spreadsheetToken": "Examplecebc79e08c1c018da29b",
+            "updatedCells": 1,
+            "updatedColumns": 1,
+            "updatedRange": "1b11cb!C1:C1",
+            "updatedRows": 1
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "label": "D1 wrap candidate {\"wrapStrategy\": \"WRAP\"}",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Examplecebc79e08c1c018da29b/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "1b11cb!D1:D1",
+          "style": {
+            "wrapStrategy": "WRAP"
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "updates": {
+            "revision": 24,
+            "spreadsheetToken": "Examplecebc79e08c1c018da29b",
+            "updatedCells": 1,
+            "updatedColumns": 1,
+            "updatedRange": "1b11cb!D1:D1",
+            "updatedRows": 1
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "label": "E1 wrap candidate {\"textWrap\": true}",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Examplecebc79e08c1c018da29b/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "1b11cb!E1:E1",
+          "style": {
+            "textWrap": true
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "updates": {
+            "revision": 25,
+            "spreadsheetToken": "Examplecebc79e08c1c018da29b",
+            "updatedCells": 1,
+            "updatedColumns": 1,
+            "updatedRange": "1b11cb!E1:E1",
+            "updatedRows": 1
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "label": "F1 wrap candidate {\"autoWrap\": true}",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Examplecebc79e08c1c018da29b/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "1b11cb!F1:F1",
+          "style": {
+            "autoWrap": true
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "updates": {
+            "revision": 26,
+            "spreadsheetToken": "Examplecebc79e08c1c018da29b",
+            "updatedCells": 1,
+            "updatedColumns": 1,
+            "updatedRange": "1b11cb!F1:F1",
+            "updatedRows": 1
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "label": "G1 wrap candidate {\"font\": {\"wrap\": true}}",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Examplecebc79e08c1c018da29b/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "1b11cb!G1:G1",
+          "style": {
+            "font": {
+              "wrap": true
+            }
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "updates": {
+            "revision": 27,
+            "spreadsheetToken": "Examplecebc79e08c1c018da29b",
+            "updatedCells": 1,
+            "updatedColumns": 1,
+            "updatedRange": "1b11cb!G1:G1",
+            "updatedRows": 1
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "label": "A8 wrap candidate {\"wrap\": 1}",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Examplecebc79e08c1c018da29b/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "1b11cb!A8:A8",
+          "style": {
+            "wrap": 1
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "updates": {
+            "revision": 28,
+            "spreadsheetToken": "Examplecebc79e08c1c018da29b",
+            "updatedCells": 1,
+            "updatedColumns": 1,
+            "updatedRange": "1b11cb!A8:A8",
+            "updatedRows": 1
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "label": "B8 wrap candidate {\"wrapStrategy\": \"CLIP\"}",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Examplecebc79e08c1c018da29b/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "1b11cb!B8:B8",
+          "style": {
+            "wrapStrategy": "CLIP"
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "updates": {
+            "revision": 29,
+            "spreadsheetToken": "Examplecebc79e08c1c018da29b",
+            "updatedCells": 1,
+            "updatedColumns": 1,
+            "updatedRange": "1b11cb!B8:B8",
+            "updatedRows": 1
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "label": "C8 wrap candidate {\"hAlign\": 0, \"wrap\": true}",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Examplecebc79e08c1c018da29b/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "1b11cb!C8:C8",
+          "style": {
+            "hAlign": 0,
+            "wrap": true
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "updates": {
+            "revision": 30,
+            "spreadsheetToken": "Examplecebc79e08c1c018da29b",
+            "updatedCells": 1,
+            "updatedColumns": 1,
+            "updatedRange": "1b11cb!C8:C8",
+            "updatedRows": 1
+          }
+        },
+        "msg": "success"
+      }
+    }
+  ],
+  "spreadsheet_token": "Examplecebc79e08c1c018da29b",
+  "first_sheet_id": "1b11cb",
+  "export": {
+    "byte_len": 20236,
+    "shipped_reader_cells": {
+      "A1": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "B1": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "C1": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "D1": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "E1": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "F1": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "G1": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "H1": {
+        "bold": true,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "A2": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "B2": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "C2": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "D2": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "E2": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "F2": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "G2": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "H2": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "A3": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "B3": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "C3": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "D3": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "E3": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "F3": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "G3": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "H3": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "A4": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "B4": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "C4": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "D4": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "E4": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "F4": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "G4": {
+        "bold": true,
+        "italic": false,
+        "fill_rgb": "FFFFFF00",
+        "num_fmt": null
+      },
+      "H4": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "A5": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "B5": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "C5": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "D5": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "E5": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "F5": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "G5": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "H5": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "A6": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "B6": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "C6": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "D6": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "E6": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "F6": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "G6": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "H6": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "A7": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "B7": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "C7": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "D7": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "E7": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "F7": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "G7": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "H7": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "A8": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "B8": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "C8": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "D8": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "E8": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "F8": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "G8": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "H8": {
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      }
+    },
+    "raw_border_and_alignment": {
+      "A1": {
+        "s": 0,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "false",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "false",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "0",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "B1": {
+        "s": 0,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "false",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "false",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "0",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "C1": {
+        "s": 0,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "false",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "false",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "0",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "D1": {
+        "s": 0,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "false",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "false",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "0",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "E1": {
+        "s": 0,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "false",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "false",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "0",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "F1": {
+        "s": 0,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "false",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "false",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "0",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "G1": {
+        "s": 0,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "false",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "false",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "0",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "H1": {
+        "s": 1,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "true",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "true",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "1",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "A2": {
+        "s": 2,
+        "borderId": 1,
+        "border": {
+          "left": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "right": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "top": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "bottom": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "true",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "true",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "1",
+          "fillId": "0",
+          "fontId": "2",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "B2": {
+        "s": 3,
+        "borderId": 2,
+        "border": {
+          "left": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "right": {},
+          "top": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "true",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "true",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "2",
+          "fillId": "0",
+          "fontId": "2",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "C2": {
+        "s": 4,
+        "borderId": 3,
+        "border": {
+          "left": {},
+          "right": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "top": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "true",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "true",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "3",
+          "fillId": "0",
+          "fontId": "2",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "D2": {
+        "s": 5,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "true",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "true",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "2",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "E2": {
+        "s": 6,
+        "borderId": 1,
+        "border": {
+          "left": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "right": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "top": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "bottom": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "diagonal": {}
+        },
+        "alignment": {
+          "horizontal": "center",
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "true",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "true",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "1",
+          "fillId": "0",
+          "fontId": "2",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "F2": {
+        "s": 6,
+        "borderId": 1,
+        "border": {
+          "left": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "right": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "top": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "bottom": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "diagonal": {}
+        },
+        "alignment": {
+          "horizontal": "center",
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "true",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "true",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "1",
+          "fillId": "0",
+          "fontId": "2",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "G2": {
+        "s": 2,
+        "borderId": 1,
+        "border": {
+          "left": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "right": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "top": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "bottom": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "true",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "true",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "1",
+          "fillId": "0",
+          "fontId": "2",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "H2": {
+        "s": 0,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "false",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "false",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "0",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "A3": {
+        "s": 7,
+        "borderId": 4,
+        "border": {
+          "left": {
+            "style": "thin",
+            "color": {
+              "rgb": "FFFF0000"
+            }
+          },
+          "right": {
+            "style": "thin",
+            "color": {
+              "rgb": "FFFF0000"
+            }
+          },
+          "top": {
+            "style": "thin",
+            "color": {
+              "rgb": "FFFF0000"
+            }
+          },
+          "bottom": {
+            "style": "thin",
+            "color": {
+              "rgb": "FFFF0000"
+            }
+          },
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "true",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "true",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "4",
+          "fillId": "0",
+          "fontId": "2",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "B3": {
+        "s": 8,
+        "borderId": 5,
+        "border": {
+          "left": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "right": {},
+          "top": {},
+          "bottom": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "true",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "true",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "5",
+          "fillId": "0",
+          "fontId": "2",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "C3": {
+        "s": 9,
+        "borderId": 6,
+        "border": {
+          "left": {},
+          "right": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "top": {},
+          "bottom": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "true",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "true",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "6",
+          "fillId": "0",
+          "fontId": "2",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "D3": {
+        "s": 2,
+        "borderId": 1,
+        "border": {
+          "left": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "right": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "top": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "bottom": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "true",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "true",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "1",
+          "fillId": "0",
+          "fontId": "2",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "E3": {
+        "s": 6,
+        "borderId": 1,
+        "border": {
+          "left": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "right": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "top": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "bottom": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "diagonal": {}
+        },
+        "alignment": {
+          "horizontal": "center",
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "true",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "true",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "1",
+          "fillId": "0",
+          "fontId": "2",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "F3": {
+        "s": 10,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "horizontal": "center",
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "true",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "true",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "2",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "G3": {
+        "s": 11,
+        "borderId": 7,
+        "border": {
+          "left": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF0000FF"
+            }
+          },
+          "right": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF0000FF"
+            }
+          },
+          "top": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF0000FF"
+            }
+          },
+          "bottom": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF0000FF"
+            }
+          },
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "true",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "true",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "7",
+          "fillId": "0",
+          "fontId": "2",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "H3": {
+        "s": 0,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "false",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "false",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "0",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "A4": {
+        "s": 12,
+        "borderId": 8,
+        "border": {
+          "left": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "true",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "true",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "8",
+          "fillId": "0",
+          "fontId": "2",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "B4": {
+        "s": 9,
+        "borderId": 6,
+        "border": {
+          "left": {},
+          "right": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "top": {},
+          "bottom": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "true",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "true",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "6",
+          "fillId": "0",
+          "fontId": "2",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "C4": {
+        "s": 8,
+        "borderId": 5,
+        "border": {
+          "left": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "right": {},
+          "top": {},
+          "bottom": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "true",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "true",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "5",
+          "fillId": "0",
+          "fontId": "2",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "D4": {
+        "s": 0,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "false",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "false",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "0",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "E4": {
+        "s": 6,
+        "borderId": 1,
+        "border": {
+          "left": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "right": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "top": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "bottom": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "diagonal": {}
+        },
+        "alignment": {
+          "horizontal": "center",
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "true",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "true",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "1",
+          "fillId": "0",
+          "fontId": "2",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "F4": {
+        "s": 10,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "horizontal": "center",
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "true",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "true",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "2",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "G4": {
+        "s": 13,
+        "borderId": 4,
+        "border": {
+          "left": {
+            "style": "thin",
+            "color": {
+              "rgb": "FFFF0000"
+            }
+          },
+          "right": {
+            "style": "thin",
+            "color": {
+              "rgb": "FFFF0000"
+            }
+          },
+          "top": {
+            "style": "thin",
+            "color": {
+              "rgb": "FFFF0000"
+            }
+          },
+          "bottom": {
+            "style": "thin",
+            "color": {
+              "rgb": "FFFF0000"
+            }
+          },
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "true",
+          "applyBorder": "false",
+          "applyFill": "true",
+          "applyFont": "true",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "4",
+          "fillId": "2",
+          "fontId": "3",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "H4": {
+        "s": 0,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "false",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "false",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "0",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "A5": {
+        "s": 14,
+        "borderId": 9,
+        "border": {
+          "left": {},
+          "right": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "true",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "true",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "9",
+          "fillId": "0",
+          "fontId": "2",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "B5": {
+        "s": 4,
+        "borderId": 3,
+        "border": {
+          "left": {},
+          "right": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "top": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "true",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "true",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "3",
+          "fillId": "0",
+          "fontId": "2",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "C5": {
+        "s": 3,
+        "borderId": 2,
+        "border": {
+          "left": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "right": {},
+          "top": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "true",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "true",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "2",
+          "fillId": "0",
+          "fontId": "2",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "D5": {
+        "s": 0,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "false",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "false",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "0",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "E5": {
+        "s": 0,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "false",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "false",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "0",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "F5": {
+        "s": 0,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "false",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "false",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "0",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "G5": {
+        "s": 0,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "false",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "false",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "0",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "H5": {
+        "s": 0,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "false",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "false",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "0",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "A6": {
+        "s": 15,
+        "borderId": 10,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "true",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "true",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "10",
+          "fillId": "0",
+          "fontId": "2",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "B6": {
+        "s": 0,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "false",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "false",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "0",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "C6": {
+        "s": 0,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "false",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "false",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "0",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "D6": {
+        "s": 0,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "false",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "false",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "0",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "E6": {
+        "s": 0,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "false",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "false",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "0",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "F6": {
+        "s": 0,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "false",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "false",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "0",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "G6": {
+        "s": 0,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "false",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "false",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "0",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "H6": {
+        "s": 0,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "false",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "false",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "0",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "A7": {
+        "s": 16,
+        "borderId": 11,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "true",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "true",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "11",
+          "fillId": "0",
+          "fontId": "2",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "B7": {
+        "s": 0,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "false",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "false",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "0",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "C7": {
+        "s": 0,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "false",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "false",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "0",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "D7": {
+        "s": 0,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "false",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "false",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "0",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "E7": {
+        "s": 0,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "false",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "false",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "0",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "F7": {
+        "s": 0,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "false",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "false",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "0",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "G7": {
+        "s": 0,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "false",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "false",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "0",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "H7": {
+        "s": 0,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "false",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "false",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "0",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "A8": {
+        "s": 0,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "false",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "false",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "0",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "B8": {
+        "s": 0,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "false",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "false",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "0",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "C8": {
+        "s": 17,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "horizontal": "left",
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "true",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "true",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "2",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "D8": {
+        "s": 0,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "false",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "false",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "0",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "E8": {
+        "s": 0,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "false",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "false",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "0",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "F8": {
+        "s": 0,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "false",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "false",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "0",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "G8": {
+        "s": 0,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "false",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "false",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "0",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "H8": {
+        "s": 0,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "false",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "false",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "0",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      }
+    }
+  },
+  "deleted": true,
+  "gone_confirmed": true
+}

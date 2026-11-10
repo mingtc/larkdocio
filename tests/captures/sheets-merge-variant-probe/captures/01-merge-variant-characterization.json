@@ -1,0 +1,1595 @@
+{
+  "probe": "LD-190 MERGE_ROWS / MERGE_COLUMNS characterization",
+  "at": "2026-07-31T21:50:01.651618+00:00",
+  "steps": [
+    {
+      "label": "X0 control: nonsense mergeType 'MERGE_NOTHING_AT_ALL' on A1:B2",
+      "range": "07d1cd!A1:B2",
+      "merge_type": "MERGE_NOTHING_AT_ALL",
+      "before_values": [
+        [
+          "A1",
+          "B1"
+        ],
+        [
+          "A2",
+          "B2"
+        ]
+      ],
+      "shipped_loss_preview": {
+        "kind": "merge",
+        "merge_region": [
+          0,
+          1,
+          0,
+          1
+        ],
+        "anchor": {
+          "ref": "A1",
+          "value": "A1"
+        },
+        "covered": [
+          {
+            "ref": "B1",
+            "value": "B1"
+          },
+          {
+            "ref": "A2",
+            "value": "A2"
+          },
+          {
+            "ref": "B2",
+            "value": "B2"
+          }
+        ],
+        "covered_count": 3,
+        "lost_values": [
+          {
+            "ref": "B1",
+            "value": "B1"
+          },
+          {
+            "ref": "A2",
+            "value": "A2"
+          },
+          {
+            "ref": "B2",
+            "value": "B2"
+          }
+        ],
+        "lost_count": 3
+      },
+      "response": null,
+      "raised": "LarkAPIError('sheets merge cells failed: Code: 90204, Msg: invalid mergeType')",
+      "merges_after": [],
+      "values_after": [
+        [
+          "A1",
+          "B1"
+        ],
+        [
+          "A2",
+          "B2"
+        ]
+      ]
+    },
+    {
+      "label": "R1 MERGE_ROWS on a 2x2 (D1:E2)",
+      "range": "07d1cd!D1:E2",
+      "merge_type": "MERGE_ROWS",
+      "before_values": [
+        [
+          "D1",
+          "E1"
+        ],
+        [
+          "D2",
+          "E2"
+        ]
+      ],
+      "shipped_loss_preview": {
+        "kind": "merge",
+        "merge_region": [
+          0,
+          1,
+          3,
+          4
+        ],
+        "anchor": {
+          "ref": "D1",
+          "value": "D1"
+        },
+        "covered": [
+          {
+            "ref": "E1",
+            "value": "E1"
+          },
+          {
+            "ref": "D2",
+            "value": "D2"
+          },
+          {
+            "ref": "E2",
+            "value": "E2"
+          }
+        ],
+        "covered_count": 3,
+        "lost_values": [
+          {
+            "ref": "E1",
+            "value": "E1"
+          },
+          {
+            "ref": "D2",
+            "value": "D2"
+          },
+          {
+            "ref": "E2",
+            "value": "E2"
+          }
+        ],
+        "lost_count": 3
+      },
+      "response": {
+        "spreadsheetToken": "Example5076c5148f2e02da3a6e"
+      },
+      "raised": null,
+      "merges_after": [
+        {
+          "end_column_index": 4,
+          "end_row_index": 0,
+          "start_column_index": 3,
+          "start_row_index": 0
+        },
+        {
+          "end_column_index": 4,
+          "end_row_index": 1,
+          "start_column_index": 3,
+          "start_row_index": 1
+        }
+      ],
+      "values_after": [
+        [
+          "D1",
+          null
+        ],
+        [
+          "D2",
+          null
+        ]
+      ]
+    },
+    {
+      "label": "C1 MERGE_COLUMNS on a 2x2 (G1:H2)",
+      "range": "07d1cd!G1:H2",
+      "merge_type": "MERGE_COLUMNS",
+      "before_values": [
+        [
+          "G1",
+          "H1"
+        ],
+        [
+          "G2",
+          "H2"
+        ]
+      ],
+      "shipped_loss_preview": {
+        "kind": "merge",
+        "merge_region": [
+          0,
+          1,
+          6,
+          7
+        ],
+        "anchor": {
+          "ref": "G1",
+          "value": "G1"
+        },
+        "covered": [
+          {
+            "ref": "H1",
+            "value": "H1"
+          },
+          {
+            "ref": "G2",
+            "value": "G2"
+          },
+          {
+            "ref": "H2",
+            "value": "H2"
+          }
+        ],
+        "covered_count": 3,
+        "lost_values": [
+          {
+            "ref": "H1",
+            "value": "H1"
+          },
+          {
+            "ref": "G2",
+            "value": "G2"
+          },
+          {
+            "ref": "H2",
+            "value": "H2"
+          }
+        ],
+        "lost_count": 3
+      },
+      "response": {
+        "spreadsheetToken": "Example5076c5148f2e02da3a6e"
+      },
+      "raised": null,
+      "merges_after": [
+        {
+          "end_column_index": 4,
+          "end_row_index": 0,
+          "start_column_index": 3,
+          "start_row_index": 0
+        },
+        {
+          "end_column_index": 4,
+          "end_row_index": 1,
+          "start_column_index": 3,
+          "start_row_index": 1
+        },
+        {
+          "end_column_index": 6,
+          "end_row_index": 1,
+          "start_column_index": 6,
+          "start_row_index": 0
+        },
+        {
+          "end_column_index": 7,
+          "end_row_index": 1,
+          "start_column_index": 7,
+          "start_row_index": 0
+        }
+      ],
+      "values_after": [
+        [
+          "G1",
+          "H1"
+        ],
+        [
+          null,
+          null
+        ]
+      ]
+    },
+    {
+      "label": "R2 MERGE_ROWS on a 1xN single row (A4:C4)",
+      "range": "07d1cd!A4:C4",
+      "merge_type": "MERGE_ROWS",
+      "before_values": [
+        [
+          "A4",
+          "B4",
+          "C4"
+        ]
+      ],
+      "shipped_loss_preview": {
+        "kind": "merge",
+        "merge_region": [
+          3,
+          3,
+          0,
+          2
+        ],
+        "anchor": {
+          "ref": "A4",
+          "value": "A4"
+        },
+        "covered": [
+          {
+            "ref": "B4",
+            "value": "B4"
+          },
+          {
+            "ref": "C4",
+            "value": "C4"
+          }
+        ],
+        "covered_count": 2,
+        "lost_values": [
+          {
+            "ref": "B4",
+            "value": "B4"
+          },
+          {
+            "ref": "C4",
+            "value": "C4"
+          }
+        ],
+        "lost_count": 2
+      },
+      "response": {
+        "spreadsheetToken": "Example5076c5148f2e02da3a6e"
+      },
+      "raised": null,
+      "merges_after": [
+        {
+          "end_column_index": 4,
+          "end_row_index": 0,
+          "start_column_index": 3,
+          "start_row_index": 0
+        },
+        {
+          "end_column_index": 4,
+          "end_row_index": 1,
+          "start_column_index": 3,
+          "start_row_index": 1
+        },
+        {
+          "end_column_index": 6,
+          "end_row_index": 1,
+          "start_column_index": 6,
+          "start_row_index": 0
+        },
+        {
+          "end_column_index": 7,
+          "end_row_index": 1,
+          "start_column_index": 7,
+          "start_row_index": 0
+        },
+        {
+          "end_column_index": 2,
+          "end_row_index": 3,
+          "start_column_index": 0,
+          "start_row_index": 3
+        }
+      ],
+      "values_after": [
+        [
+          "A4",
+          null,
+          null
+        ]
+      ]
+    },
+    {
+      "label": "C2 MERGE_COLUMNS on an Nx1 single column (E4:E6)",
+      "range": "07d1cd!E4:E6",
+      "merge_type": "MERGE_COLUMNS",
+      "before_values": [
+        [
+          "E4"
+        ],
+        [
+          "E5"
+        ],
+        [
+          "E6"
+        ]
+      ],
+      "shipped_loss_preview": {
+        "kind": "merge",
+        "merge_region": [
+          3,
+          5,
+          4,
+          4
+        ],
+        "anchor": {
+          "ref": "E4",
+          "value": "E4"
+        },
+        "covered": [
+          {
+            "ref": "E5",
+            "value": "E5"
+          },
+          {
+            "ref": "E6",
+            "value": "E6"
+          }
+        ],
+        "covered_count": 2,
+        "lost_values": [
+          {
+            "ref": "E5",
+            "value": "E5"
+          },
+          {
+            "ref": "E6",
+            "value": "E6"
+          }
+        ],
+        "lost_count": 2
+      },
+      "response": {
+        "spreadsheetToken": "Example5076c5148f2e02da3a6e"
+      },
+      "raised": null,
+      "merges_after": [
+        {
+          "end_column_index": 4,
+          "end_row_index": 0,
+          "start_column_index": 3,
+          "start_row_index": 0
+        },
+        {
+          "end_column_index": 4,
+          "end_row_index": 1,
+          "start_column_index": 3,
+          "start_row_index": 1
+        },
+        {
+          "end_column_index": 6,
+          "end_row_index": 1,
+          "start_column_index": 6,
+          "start_row_index": 0
+        },
+        {
+          "end_column_index": 7,
+          "end_row_index": 1,
+          "start_column_index": 7,
+          "start_row_index": 0
+        },
+        {
+          "end_column_index": 2,
+          "end_row_index": 3,
+          "start_column_index": 0,
+          "start_row_index": 3
+        },
+        {
+          "end_column_index": 4,
+          "end_row_index": 5,
+          "start_column_index": 4,
+          "start_row_index": 3
+        }
+      ],
+      "values_after": [
+        [
+          "E4"
+        ],
+        [
+          null
+        ],
+        [
+          null
+        ]
+      ]
+    },
+    {
+      "label": "R3 MERGE_ROWS on a 3x3 (G4:I6)",
+      "range": "07d1cd!G4:I6",
+      "merge_type": "MERGE_ROWS",
+      "before_values": [
+        [
+          "G4",
+          "H4",
+          "I4"
+        ],
+        [
+          "G5",
+          "H5",
+          "I5"
+        ],
+        [
+          "G6",
+          "H6",
+          "I6"
+        ]
+      ],
+      "shipped_loss_preview": {
+        "kind": "merge",
+        "merge_region": [
+          3,
+          5,
+          6,
+          8
+        ],
+        "anchor": {
+          "ref": "G4",
+          "value": "G4"
+        },
+        "covered": [
+          {
+            "ref": "H4",
+            "value": "H4"
+          },
+          {
+            "ref": "I4",
+            "value": "I4"
+          },
+          {
+            "ref": "G5",
+            "value": "G5"
+          },
+          {
+            "ref": "H5",
+            "value": "H5"
+          },
+          {
+            "ref": "I5",
+            "value": "I5"
+          },
+          {
+            "ref": "G6",
+            "value": "G6"
+          },
+          {
+            "ref": "H6",
+            "value": "H6"
+          },
+          {
+            "ref": "I6",
+            "value": "I6"
+          }
+        ],
+        "covered_count": 8,
+        "lost_values": [
+          {
+            "ref": "H4",
+            "value": "H4"
+          },
+          {
+            "ref": "I4",
+            "value": "I4"
+          },
+          {
+            "ref": "G5",
+            "value": "G5"
+          },
+          {
+            "ref": "H5",
+            "value": "H5"
+          },
+          {
+            "ref": "I5",
+            "value": "I5"
+          },
+          {
+            "ref": "G6",
+            "value": "G6"
+          },
+          {
+            "ref": "H6",
+            "value": "H6"
+          },
+          {
+            "ref": "I6",
+            "value": "I6"
+          }
+        ],
+        "lost_count": 8
+      },
+      "response": {
+        "spreadsheetToken": "Example5076c5148f2e02da3a6e"
+      },
+      "raised": null,
+      "merges_after": [
+        {
+          "end_column_index": 4,
+          "end_row_index": 0,
+          "start_column_index": 3,
+          "start_row_index": 0
+        },
+        {
+          "end_column_index": 4,
+          "end_row_index": 1,
+          "start_column_index": 3,
+          "start_row_index": 1
+        },
+        {
+          "end_column_index": 6,
+          "end_row_index": 1,
+          "start_column_index": 6,
+          "start_row_index": 0
+        },
+        {
+          "end_column_index": 7,
+          "end_row_index": 1,
+          "start_column_index": 7,
+          "start_row_index": 0
+        },
+        {
+          "end_column_index": 2,
+          "end_row_index": 3,
+          "start_column_index": 0,
+          "start_row_index": 3
+        },
+        {
+          "end_column_index": 4,
+          "end_row_index": 5,
+          "start_column_index": 4,
+          "start_row_index": 3
+        },
+        {
+          "end_column_index": 8,
+          "end_row_index": 3,
+          "start_column_index": 6,
+          "start_row_index": 3
+        },
+        {
+          "end_column_index": 8,
+          "end_row_index": 4,
+          "start_column_index": 6,
+          "start_row_index": 4
+        },
+        {
+          "end_column_index": 8,
+          "end_row_index": 5,
+          "start_column_index": 6,
+          "start_row_index": 5
+        }
+      ],
+      "values_after": [
+        [
+          "G4",
+          null,
+          null
+        ],
+        [
+          "G5",
+          null,
+          null
+        ],
+        [
+          "G6",
+          null,
+          null
+        ]
+      ]
+    },
+    {
+      "label": "C3 MERGE_COLUMNS on a 3x3 (A8:C10)",
+      "range": "07d1cd!A8:C10",
+      "merge_type": "MERGE_COLUMNS",
+      "before_values": [
+        [
+          "A8",
+          "B8",
+          "C8"
+        ],
+        [
+          "A9",
+          "B9",
+          "C9"
+        ],
+        [
+          "A10",
+          "B10",
+          "C10"
+        ]
+      ],
+      "shipped_loss_preview": {
+        "kind": "merge",
+        "merge_region": [
+          7,
+          9,
+          0,
+          2
+        ],
+        "anchor": {
+          "ref": "A8",
+          "value": "A8"
+        },
+        "covered": [
+          {
+            "ref": "B8",
+            "value": "B8"
+          },
+          {
+            "ref": "C8",
+            "value": "C8"
+          },
+          {
+            "ref": "A9",
+            "value": "A9"
+          },
+          {
+            "ref": "B9",
+            "value": "B9"
+          },
+          {
+            "ref": "C9",
+            "value": "C9"
+          },
+          {
+            "ref": "A10",
+            "value": "A10"
+          },
+          {
+            "ref": "B10",
+            "value": "B10"
+          },
+          {
+            "ref": "C10",
+            "value": "C10"
+          }
+        ],
+        "covered_count": 8,
+        "lost_values": [
+          {
+            "ref": "B8",
+            "value": "B8"
+          },
+          {
+            "ref": "C8",
+            "value": "C8"
+          },
+          {
+            "ref": "A9",
+            "value": "A9"
+          },
+          {
+            "ref": "B9",
+            "value": "B9"
+          },
+          {
+            "ref": "C9",
+            "value": "C9"
+          },
+          {
+            "ref": "A10",
+            "value": "A10"
+          },
+          {
+            "ref": "B10",
+            "value": "B10"
+          },
+          {
+            "ref": "C10",
+            "value": "C10"
+          }
+        ],
+        "lost_count": 8
+      },
+      "response": {
+        "spreadsheetToken": "Example5076c5148f2e02da3a6e"
+      },
+      "raised": null,
+      "merges_after": [
+        {
+          "end_column_index": 4,
+          "end_row_index": 0,
+          "start_column_index": 3,
+          "start_row_index": 0
+        },
+        {
+          "end_column_index": 4,
+          "end_row_index": 1,
+          "start_column_index": 3,
+          "start_row_index": 1
+        },
+        {
+          "end_column_index": 6,
+          "end_row_index": 1,
+          "start_column_index": 6,
+          "start_row_index": 0
+        },
+        {
+          "end_column_index": 7,
+          "end_row_index": 1,
+          "start_column_index": 7,
+          "start_row_index": 0
+        },
+        {
+          "end_column_index": 2,
+          "end_row_index": 3,
+          "start_column_index": 0,
+          "start_row_index": 3
+        },
+        {
+          "end_column_index": 4,
+          "end_row_index": 5,
+          "start_column_index": 4,
+          "start_row_index": 3
+        },
+        {
+          "end_column_index": 8,
+          "end_row_index": 3,
+          "start_column_index": 6,
+          "start_row_index": 3
+        },
+        {
+          "end_column_index": 8,
+          "end_row_index": 4,
+          "start_column_index": 6,
+          "start_row_index": 4
+        },
+        {
+          "end_column_index": 8,
+          "end_row_index": 5,
+          "start_column_index": 6,
+          "start_row_index": 5
+        },
+        {
+          "end_column_index": 0,
+          "end_row_index": 9,
+          "start_column_index": 0,
+          "start_row_index": 7
+        },
+        {
+          "end_column_index": 1,
+          "end_row_index": 9,
+          "start_column_index": 1,
+          "start_row_index": 7
+        },
+        {
+          "end_column_index": 2,
+          "end_row_index": 9,
+          "start_column_index": 2,
+          "start_row_index": 7
+        }
+      ],
+      "values_after": [
+        [
+          "A8",
+          "B8",
+          "C8"
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ]
+    },
+    {
+      "label": "O1 MERGE_ALL first on E8:F8 (the merge to overlap)",
+      "range": "07d1cd!E8:F8",
+      "merge_type": "MERGE_ALL",
+      "before_values": [
+        [
+          "E8",
+          "F8"
+        ]
+      ],
+      "shipped_loss_preview": {
+        "kind": "merge",
+        "merge_region": [
+          7,
+          7,
+          4,
+          5
+        ],
+        "anchor": {
+          "ref": "E8",
+          "value": "E8"
+        },
+        "covered": [
+          {
+            "ref": "F8",
+            "value": "F8"
+          }
+        ],
+        "covered_count": 1,
+        "lost_values": [
+          {
+            "ref": "F8",
+            "value": "F8"
+          }
+        ],
+        "lost_count": 1
+      },
+      "response": {
+        "spreadsheetToken": "Example5076c5148f2e02da3a6e"
+      },
+      "raised": null,
+      "merges_after": [
+        {
+          "end_column_index": 4,
+          "end_row_index": 0,
+          "start_column_index": 3,
+          "start_row_index": 0
+        },
+        {
+          "end_column_index": 4,
+          "end_row_index": 1,
+          "start_column_index": 3,
+          "start_row_index": 1
+        },
+        {
+          "end_column_index": 6,
+          "end_row_index": 1,
+          "start_column_index": 6,
+          "start_row_index": 0
+        },
+        {
+          "end_column_index": 7,
+          "end_row_index": 1,
+          "start_column_index": 7,
+          "start_row_index": 0
+        },
+        {
+          "end_column_index": 2,
+          "end_row_index": 3,
+          "start_column_index": 0,
+          "start_row_index": 3
+        },
+        {
+          "end_column_index": 4,
+          "end_row_index": 5,
+          "start_column_index": 4,
+          "start_row_index": 3
+        },
+        {
+          "end_column_index": 8,
+          "end_row_index": 3,
+          "start_column_index": 6,
+          "start_row_index": 3
+        },
+        {
+          "end_column_index": 8,
+          "end_row_index": 4,
+          "start_column_index": 6,
+          "start_row_index": 4
+        },
+        {
+          "end_column_index": 8,
+          "end_row_index": 5,
+          "start_column_index": 6,
+          "start_row_index": 5
+        },
+        {
+          "end_column_index": 0,
+          "end_row_index": 9,
+          "start_column_index": 0,
+          "start_row_index": 7
+        },
+        {
+          "end_column_index": 1,
+          "end_row_index": 9,
+          "start_column_index": 1,
+          "start_row_index": 7
+        },
+        {
+          "end_column_index": 2,
+          "end_row_index": 9,
+          "start_column_index": 2,
+          "start_row_index": 7
+        },
+        {
+          "end_column_index": 5,
+          "end_row_index": 7,
+          "start_column_index": 4,
+          "start_row_index": 7
+        }
+      ],
+      "values_after": [
+        [
+          "E8",
+          null
+        ]
+      ]
+    },
+    {
+      "label": "O2 MERGE_ROWS OVER the existing merge (E8:F9)",
+      "range": "07d1cd!E8:F9",
+      "merge_type": "MERGE_ROWS",
+      "before_values": [
+        [
+          "E8",
+          null
+        ],
+        [
+          "E9",
+          "F9"
+        ]
+      ],
+      "shipped_loss_preview": {
+        "kind": "merge",
+        "merge_region": [
+          7,
+          8,
+          4,
+          5
+        ],
+        "anchor": {
+          "ref": "E8",
+          "value": "E8"
+        },
+        "covered": [
+          {
+            "ref": "F8",
+            "value": null
+          },
+          {
+            "ref": "E9",
+            "value": "E9"
+          },
+          {
+            "ref": "F9",
+            "value": "F9"
+          }
+        ],
+        "covered_count": 3,
+        "lost_values": [
+          {
+            "ref": "E9",
+            "value": "E9"
+          },
+          {
+            "ref": "F9",
+            "value": "F9"
+          }
+        ],
+        "lost_count": 2
+      },
+      "response": {
+        "spreadsheetToken": "Example5076c5148f2e02da3a6e"
+      },
+      "raised": null,
+      "merges_after": [
+        {
+          "end_column_index": 4,
+          "end_row_index": 0,
+          "start_column_index": 3,
+          "start_row_index": 0
+        },
+        {
+          "end_column_index": 4,
+          "end_row_index": 1,
+          "start_column_index": 3,
+          "start_row_index": 1
+        },
+        {
+          "end_column_index": 6,
+          "end_row_index": 1,
+          "start_column_index": 6,
+          "start_row_index": 0
+        },
+        {
+          "end_column_index": 7,
+          "end_row_index": 1,
+          "start_column_index": 7,
+          "start_row_index": 0
+        },
+        {
+          "end_column_index": 2,
+          "end_row_index": 3,
+          "start_column_index": 0,
+          "start_row_index": 3
+        },
+        {
+          "end_column_index": 4,
+          "end_row_index": 5,
+          "start_column_index": 4,
+          "start_row_index": 3
+        },
+        {
+          "end_column_index": 8,
+          "end_row_index": 3,
+          "start_column_index": 6,
+          "start_row_index": 3
+        },
+        {
+          "end_column_index": 8,
+          "end_row_index": 4,
+          "start_column_index": 6,
+          "start_row_index": 4
+        },
+        {
+          "end_column_index": 8,
+          "end_row_index": 5,
+          "start_column_index": 6,
+          "start_row_index": 5
+        },
+        {
+          "end_column_index": 0,
+          "end_row_index": 9,
+          "start_column_index": 0,
+          "start_row_index": 7
+        },
+        {
+          "end_column_index": 1,
+          "end_row_index": 9,
+          "start_column_index": 1,
+          "start_row_index": 7
+        },
+        {
+          "end_column_index": 2,
+          "end_row_index": 9,
+          "start_column_index": 2,
+          "start_row_index": 7
+        },
+        {
+          "end_column_index": 5,
+          "end_row_index": 7,
+          "start_column_index": 4,
+          "start_row_index": 7
+        },
+        {
+          "end_column_index": 5,
+          "end_row_index": 8,
+          "start_column_index": 4,
+          "start_row_index": 8
+        }
+      ],
+      "values_after": [
+        [
+          "E8",
+          null
+        ],
+        [
+          "E9",
+          null
+        ]
+      ]
+    },
+    {
+      "label": "V1 lower-case 'merge_rows' (H8:I8)",
+      "range": "07d1cd!H8:I8",
+      "merge_type": "merge_rows",
+      "before_values": [
+        [
+          "H8",
+          "I8"
+        ]
+      ],
+      "shipped_loss_preview": {
+        "kind": "merge",
+        "merge_region": [
+          7,
+          7,
+          7,
+          8
+        ],
+        "anchor": {
+          "ref": "H8",
+          "value": "H8"
+        },
+        "covered": [
+          {
+            "ref": "I8",
+            "value": "I8"
+          }
+        ],
+        "covered_count": 1,
+        "lost_values": [
+          {
+            "ref": "I8",
+            "value": "I8"
+          }
+        ],
+        "lost_count": 1
+      },
+      "response": null,
+      "raised": "LarkAPIError('sheets merge cells failed: Code: 90204, Msg: invalid mergeType')",
+      "merges_after": [
+        {
+          "end_column_index": 4,
+          "end_row_index": 0,
+          "start_column_index": 3,
+          "start_row_index": 0
+        },
+        {
+          "end_column_index": 4,
+          "end_row_index": 1,
+          "start_column_index": 3,
+          "start_row_index": 1
+        },
+        {
+          "end_column_index": 6,
+          "end_row_index": 1,
+          "start_column_index": 6,
+          "start_row_index": 0
+        },
+        {
+          "end_column_index": 7,
+          "end_row_index": 1,
+          "start_column_index": 7,
+          "start_row_index": 0
+        },
+        {
+          "end_column_index": 2,
+          "end_row_index": 3,
+          "start_column_index": 0,
+          "start_row_index": 3
+        },
+        {
+          "end_column_index": 4,
+          "end_row_index": 5,
+          "start_column_index": 4,
+          "start_row_index": 3
+        },
+        {
+          "end_column_index": 8,
+          "end_row_index": 3,
+          "start_column_index": 6,
+          "start_row_index": 3
+        },
+        {
+          "end_column_index": 8,
+          "end_row_index": 4,
+          "start_column_index": 6,
+          "start_row_index": 4
+        },
+        {
+          "end_column_index": 8,
+          "end_row_index": 5,
+          "start_column_index": 6,
+          "start_row_index": 5
+        },
+        {
+          "end_column_index": 0,
+          "end_row_index": 9,
+          "start_column_index": 0,
+          "start_row_index": 7
+        },
+        {
+          "end_column_index": 1,
+          "end_row_index": 9,
+          "start_column_index": 1,
+          "start_row_index": 7
+        },
+        {
+          "end_column_index": 2,
+          "end_row_index": 9,
+          "start_column_index": 2,
+          "start_row_index": 7
+        },
+        {
+          "end_column_index": 5,
+          "end_row_index": 7,
+          "start_column_index": 4,
+          "start_row_index": 7
+        },
+        {
+          "end_column_index": 5,
+          "end_row_index": 8,
+          "start_column_index": 4,
+          "start_row_index": 8
+        }
+      ],
+      "values_after": [
+        [
+          "H8",
+          "I8"
+        ]
+      ]
+    },
+    {
+      "label": "V2 whitespace-padded ' MERGE_ROWS ' (H10:I10)",
+      "range": "07d1cd!H10:I10",
+      "merge_type": " MERGE_ROWS ",
+      "before_values": [
+        [
+          "H10",
+          "I10"
+        ]
+      ],
+      "shipped_loss_preview": {
+        "kind": "merge",
+        "merge_region": [
+          9,
+          9,
+          7,
+          8
+        ],
+        "anchor": {
+          "ref": "H10",
+          "value": "H10"
+        },
+        "covered": [
+          {
+            "ref": "I10",
+            "value": "I10"
+          }
+        ],
+        "covered_count": 1,
+        "lost_values": [
+          {
+            "ref": "I10",
+            "value": "I10"
+          }
+        ],
+        "lost_count": 1
+      },
+      "response": null,
+      "raised": "LarkAPIError('sheets merge cells failed: Code: 90204, Msg: invalid mergeType')",
+      "merges_after": [
+        {
+          "end_column_index": 4,
+          "end_row_index": 0,
+          "start_column_index": 3,
+          "start_row_index": 0
+        },
+        {
+          "end_column_index": 4,
+          "end_row_index": 1,
+          "start_column_index": 3,
+          "start_row_index": 1
+        },
+        {
+          "end_column_index": 6,
+          "end_row_index": 1,
+          "start_column_index": 6,
+          "start_row_index": 0
+        },
+        {
+          "end_column_index": 7,
+          "end_row_index": 1,
+          "start_column_index": 7,
+          "start_row_index": 0
+        },
+        {
+          "end_column_index": 2,
+          "end_row_index": 3,
+          "start_column_index": 0,
+          "start_row_index": 3
+        },
+        {
+          "end_column_index": 4,
+          "end_row_index": 5,
+          "start_column_index": 4,
+          "start_row_index": 3
+        },
+        {
+          "end_column_index": 8,
+          "end_row_index": 3,
+          "start_column_index": 6,
+          "start_row_index": 3
+        },
+        {
+          "end_column_index": 8,
+          "end_row_index": 4,
+          "start_column_index": 6,
+          "start_row_index": 4
+        },
+        {
+          "end_column_index": 8,
+          "end_row_index": 5,
+          "start_column_index": 6,
+          "start_row_index": 5
+        },
+        {
+          "end_column_index": 0,
+          "end_row_index": 9,
+          "start_column_index": 0,
+          "start_row_index": 7
+        },
+        {
+          "end_column_index": 1,
+          "end_row_index": 9,
+          "start_column_index": 1,
+          "start_row_index": 7
+        },
+        {
+          "end_column_index": 2,
+          "end_row_index": 9,
+          "start_column_index": 2,
+          "start_row_index": 7
+        },
+        {
+          "end_column_index": 5,
+          "end_row_index": 7,
+          "start_column_index": 4,
+          "start_row_index": 7
+        },
+        {
+          "end_column_index": 5,
+          "end_row_index": 8,
+          "start_column_index": 4,
+          "start_row_index": 8
+        }
+      ],
+      "values_after": [
+        [
+          "H10",
+          "I10"
+        ]
+      ]
+    }
+  ],
+  "spreadsheet_token": "Example5076c5148f2e02da3a6e",
+  "first_sheet_id": "07d1cd",
+  "final_merges": [
+    {
+      "end_column_index": 4,
+      "end_row_index": 0,
+      "start_column_index": 3,
+      "start_row_index": 0
+    },
+    {
+      "end_column_index": 4,
+      "end_row_index": 1,
+      "start_column_index": 3,
+      "start_row_index": 1
+    },
+    {
+      "end_column_index": 6,
+      "end_row_index": 1,
+      "start_column_index": 6,
+      "start_row_index": 0
+    },
+    {
+      "end_column_index": 7,
+      "end_row_index": 1,
+      "start_column_index": 7,
+      "start_row_index": 0
+    },
+    {
+      "end_column_index": 2,
+      "end_row_index": 3,
+      "start_column_index": 0,
+      "start_row_index": 3
+    },
+    {
+      "end_column_index": 4,
+      "end_row_index": 5,
+      "start_column_index": 4,
+      "start_row_index": 3
+    },
+    {
+      "end_column_index": 8,
+      "end_row_index": 3,
+      "start_column_index": 6,
+      "start_row_index": 3
+    },
+    {
+      "end_column_index": 8,
+      "end_row_index": 4,
+      "start_column_index": 6,
+      "start_row_index": 4
+    },
+    {
+      "end_column_index": 8,
+      "end_row_index": 5,
+      "start_column_index": 6,
+      "start_row_index": 5
+    },
+    {
+      "end_column_index": 0,
+      "end_row_index": 9,
+      "start_column_index": 0,
+      "start_row_index": 7
+    },
+    {
+      "end_column_index": 1,
+      "end_row_index": 9,
+      "start_column_index": 1,
+      "start_row_index": 7
+    },
+    {
+      "end_column_index": 2,
+      "end_row_index": 9,
+      "start_column_index": 2,
+      "start_row_index": 7
+    },
+    {
+      "end_column_index": 5,
+      "end_row_index": 7,
+      "start_column_index": 4,
+      "start_row_index": 7
+    },
+    {
+      "end_column_index": 5,
+      "end_row_index": 8,
+      "start_column_index": 4,
+      "start_row_index": 8
+    }
+  ],
+  "final_values": [
+    [
+      "A1",
+      "B1",
+      "C1",
+      "D1",
+      null,
+      "F1",
+      "G1",
+      "H1",
+      "I1",
+      "J1"
+    ],
+    [
+      "A2",
+      "B2",
+      "C2",
+      "D2",
+      null,
+      "F2",
+      null,
+      null,
+      "I2",
+      "J2"
+    ],
+    [
+      "A3",
+      "B3",
+      "C3",
+      "D3",
+      "E3",
+      "F3",
+      "G3",
+      "H3",
+      "I3",
+      "J3"
+    ],
+    [
+      "A4",
+      null,
+      null,
+      "D4",
+      "E4",
+      "F4",
+      "G4",
+      null,
+      null,
+      "J4"
+    ],
+    [
+      "A5",
+      "B5",
+      "C5",
+      "D5",
+      null,
+      "F5",
+      "G5",
+      null,
+      null,
+      "J5"
+    ],
+    [
+      "A6",
+      "B6",
+      "C6",
+      "D6",
+      null,
+      "F6",
+      "G6",
+      null,
+      null,
+      "J6"
+    ],
+    [
+      "A7",
+      "B7",
+      "C7",
+      "D7",
+      "E7",
+      "F7",
+      "G7",
+      "H7",
+      "I7",
+      "J7"
+    ],
+    [
+      "A8",
+      "B8",
+      "C8",
+      "D8",
+      "E8",
+      null,
+      "G8",
+      "H8",
+      "I8",
+      "J8"
+    ],
+    [
+      null,
+      null,
+      null,
+      "D9",
+      "E9",
+      null,
+      "G9",
+      "H9",
+      "I9",
+      "J9"
+    ],
+    [
+      null,
+      null,
+      null,
+      "D10",
+      "E10",
+      "F10",
+      "G10",
+      "H10",
+      "I10",
+      "J10"
+    ]
+  ],
+  "deleted": true,
+  "gone_confirmed": true
+}

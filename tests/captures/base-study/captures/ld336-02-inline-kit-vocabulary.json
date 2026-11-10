@@ -1,0 +1,396 @@
+{
+  "_probe": "ld336-02",
+  "_endpoint": "/open-apis/bitable/v1/apps/{app_token}/tables",
+  "_method": "POST, with an inline `fields` array — 5 shape cases + 9 kind cases",
+  "_http_status": 200,
+  "_lark_code": "0 for 7 kinds; 1254012 for 2: ['Rating', 'Checkbox']",
+  "_lark_msg": "Unsupported field type. (the refusing kinds)",
+  "_verdict": "THREE FINDINGS. (1) THE KIT'S FIRST ENTRY BECOMES THE PRIMARY COLUMN: every kitted create read back with the array's first entry flagged is_primary and NO locale-named default column anywhere in the listing, while the name-only control got the locale-named primary. (2) THIS ROUTE'S KIND VOCABULARY IS NARROWER THAN POST .../fields's: ['Rating', 'Checkbox'] answer 1254012 and create NOTHING — no table, no columns — while ['Text', 'Number', 'DateTime', 'SingleSelect', 'Barcode', 'Currency', 'Progress'] land with their property intact. (3) tables/batch_create ACCEPTS a per-table `fields` array and IGNORES it: code 0, kit honoured = False — every table arrives with the locale-named default primary and none of the kit. Sent as a hand-written raw body, so the swallow is the SERVER's, not the library's.",
+  "_note": "LD-336. Q1 asked whether the array's first entry BECOMES the primary or arrives beside the locale-named one Lark creates itself; the primary column per case was {\"A name only (the control)\": [\"多行文本\"], \"B one field: name + type\": [\"b\"], \"C one field + ui_type\": [\"c\"], \"D two fields\": [\"d1\"], \"E property WITHOUT ui_type\": [\"e\"]} — so it BECOMES it, and the older guess (a kit adds columns beside the default) is refuted. Q2 asked whether the two authoring routes share a vocabulary; they do not, which is why the shipped kit gate refuses the measured-refusing kinds LOCALLY and names create_field as the route that does author them. Case E is the R12 warning beside it: a `property` sent with NO `ui_type` is accepted and SILENTLY IGNORED — the column lands as the storage type's default kind — which is why the shipped builder never sends a property without the ui_type it belongs to. This list is what was MEASURED (9 kinds), not a claim about the whole enum.",
+  "_transport": "larkdocio.common.transport.CredentialedRawHttpClient (urllib), paced 1.3 s — the RAW core, because the question is what the server does with a body",
+  "_disposable": "one, harness-created; deleted in the harness finally, ledger-backed",
+  "response": {
+    "shape_cases": [
+      {
+        "case": "A name only (the control)",
+        "sent_body": "{\"table\": {\"name\": \"ld336-A\"}}",
+        "code": 0,
+        "msg": "success",
+        "table_id": "tblHZuIA7uu6RBwv",
+        "read_back": [
+          {
+            "field_name": "多行文本",
+            "type": 1,
+            "ui_type": "Text",
+            "is_primary": true,
+            "property": null
+          }
+        ]
+      },
+      {
+        "case": "B one field: name + type",
+        "sent_body": "{\"table\": {\"name\": \"ld336-B\", \"fields\": [{\"field_name\": \"b\", \"type\": 1}]}}",
+        "code": 0,
+        "msg": "success",
+        "table_id": "tblKaS4KEPTKkxOT",
+        "read_back": [
+          {
+            "field_name": "b",
+            "type": 1,
+            "ui_type": "Text",
+            "is_primary": true,
+            "property": null
+          }
+        ]
+      },
+      {
+        "case": "C one field + ui_type",
+        "sent_body": "{\"table\": {\"name\": \"ld336-C\", \"fields\": [{\"field_name\": \"c\", \"type\": 1, \"ui_type\": \"Text\"}]}}",
+        "code": 0,
+        "msg": "success",
+        "table_id": "tblpaEnMtJSTVTZG",
+        "read_back": [
+          {
+            "field_name": "c",
+            "type": 1,
+            "ui_type": "Text",
+            "is_primary": true,
+            "property": null
+          }
+        ]
+      },
+      {
+        "case": "D two fields",
+        "sent_body": "{\"table\": {\"name\": \"ld336-D\", \"fields\": [{\"field_name\": \"d1\", \"type\": 1}, {\"field_name\": \"d2\", \"type\": 2}]}}",
+        "code": 0,
+        "msg": "success",
+        "table_id": "tblFaNLmaIholGlr",
+        "read_back": [
+          {
+            "field_name": "d1",
+            "type": 1,
+            "ui_type": "Text",
+            "is_primary": true,
+            "property": null
+          },
+          {
+            "field_name": "d2",
+            "type": 2,
+            "ui_type": "Number",
+            "is_primary": false,
+            "property": {
+              "formatter": "0.0"
+            }
+          }
+        ]
+      },
+      {
+        "case": "E property WITHOUT ui_type",
+        "sent_body": "{\"table\": {\"name\": \"ld336-E\", \"fields\": [{\"field_name\": \"e\", \"type\": 2, \"property\": {\"min\": 1, \"max\": 5, \"rating\": {\"symbol\": \"star\"}}}]}}",
+        "code": 0,
+        "msg": "success",
+        "table_id": "tblbiPk6CXuxstZB",
+        "read_back": [
+          {
+            "field_name": "e",
+            "type": 2,
+            "ui_type": "Number",
+            "is_primary": true,
+            "property": {
+              "formatter": "0.0"
+            }
+          }
+        ]
+      }
+    ],
+    "batch_create_case": {
+      "sent": "one table WITH a kit, one WITHOUT, in ONE batch_create",
+      "code": 0,
+      "msg": "success",
+      "table_ids": [
+        "tblf8AjHU6uEIzWh",
+        "tblGLAuUcgxHjfPt"
+      ],
+      "read_back": {
+        "tblf8AjHU6uEIzWh": [
+          {
+            "field_name": "多行文本",
+            "type": 1,
+            "ui_type": "Text",
+            "is_primary": true,
+            "property": null
+          }
+        ],
+        "tblGLAuUcgxHjfPt": [
+          {
+            "field_name": "多行文本",
+            "type": 1,
+            "ui_type": "Text",
+            "is_primary": true,
+            "property": null
+          }
+        ]
+      },
+      "kit_honoured": false
+    },
+    "kind_cases": [
+      {
+        "ui_type": "Text",
+        "sent_body": "{\"field_name\": \"k-Text\", \"type\": 1, \"ui_type\": \"Text\"}",
+        "code": 0,
+        "msg": "success",
+        "table_id": "tblTF7DW78jLUs3h",
+        "authored": true,
+        "read_back": [
+          {
+            "field_name": "k-Text",
+            "type": 1,
+            "ui_type": "Text",
+            "is_primary": true,
+            "property": null
+          }
+        ]
+      },
+      {
+        "ui_type": "Number",
+        "sent_body": "{\"field_name\": \"k-Number\", \"type\": 2, \"ui_type\": \"Number\", \"property\": {\"formatter\": \"0.0\"}}",
+        "code": 0,
+        "msg": "success",
+        "table_id": "tblhSsJ6v91fkpja",
+        "authored": true,
+        "read_back": [
+          {
+            "field_name": "k-Number",
+            "type": 2,
+            "ui_type": "Number",
+            "is_primary": true,
+            "property": {
+              "formatter": "0.0"
+            }
+          }
+        ]
+      },
+      {
+        "ui_type": "DateTime",
+        "sent_body": "{\"field_name\": \"k-DateTime\", \"type\": 5, \"ui_type\": \"DateTime\", \"property\": {\"date_formatter\": \"yyyy/MM/dd\"}}",
+        "code": 0,
+        "msg": "success",
+        "table_id": "tblz7B7zro0XzaTL",
+        "authored": true,
+        "read_back": [
+          {
+            "field_name": "k-DateTime",
+            "type": 5,
+            "ui_type": "DateTime",
+            "is_primary": true,
+            "property": {
+              "auto_fill": false,
+              "date_formatter": "yyyy/MM/dd"
+            }
+          }
+        ]
+      },
+      {
+        "ui_type": "SingleSelect",
+        "sent_body": "{\"field_name\": \"k-SingleSelect\", \"type\": 3, \"ui_type\": \"SingleSelect\", \"property\": {\"options\": [{\"name\": \"a\"}, {\"name\": \"b\"}]}}",
+        "code": 0,
+        "msg": "success",
+        "table_id": "tbl75G3zj4P34Mtc",
+        "authored": true,
+        "read_back": [
+          {
+            "field_name": "k-SingleSelect",
+            "type": 3,
+            "ui_type": "SingleSelect",
+            "is_primary": true,
+            "property": {
+              "options": [
+                {
+                  "color": 0,
+                  "id": "optR0RtMRQ",
+                  "name": "a"
+                },
+                {
+                  "color": 1,
+                  "id": "optHiCdav6",
+                  "name": "b"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "ui_type": "Barcode",
+        "sent_body": "{\"field_name\": \"k-Barcode\", \"type\": 1, \"ui_type\": \"Barcode\"}",
+        "code": 0,
+        "msg": "success",
+        "table_id": "tblts7B1z6jZOpcw",
+        "authored": true,
+        "read_back": [
+          {
+            "field_name": "k-Barcode",
+            "type": 1,
+            "ui_type": "Barcode",
+            "is_primary": true,
+            "property": {
+              "allowed_edit_modes": {
+                "manual": true,
+                "scan": true
+              }
+            }
+          }
+        ]
+      },
+      {
+        "ui_type": "Currency",
+        "sent_body": "{\"field_name\": \"k-Currency\", \"type\": 2, \"ui_type\": \"Currency\", \"property\": {\"formatter\": \"0.00\", \"currency_code\": \"USD\"}}",
+        "code": 0,
+        "msg": "success",
+        "table_id": "tblt10ytKH1RTz18",
+        "authored": true,
+        "read_back": [
+          {
+            "field_name": "k-Currency",
+            "type": 2,
+            "ui_type": "Currency",
+            "is_primary": true,
+            "property": {
+              "currency_code": "USD",
+              "formatter": "0.00"
+            }
+          }
+        ]
+      },
+      {
+        "ui_type": "Progress",
+        "sent_body": "{\"field_name\": \"k-Progress\", \"type\": 2, \"ui_type\": \"Progress\", \"property\": {\"formatter\": \"0.0\"}}",
+        "code": 0,
+        "msg": "success",
+        "table_id": "tblbLYTPefJyTFf1",
+        "authored": true,
+        "read_back": [
+          {
+            "field_name": "k-Progress",
+            "type": 2,
+            "ui_type": "Progress",
+            "is_primary": true,
+            "property": {
+              "formatter": "0.0",
+              "max": 100,
+              "min": 0
+            }
+          }
+        ]
+      },
+      {
+        "ui_type": "Rating",
+        "sent_body": "{\"field_name\": \"k-Rating\", \"type\": 2, \"ui_type\": \"Rating\", \"property\": {\"symbol\": \"star\", \"min\": 1, \"max\": 5}}",
+        "code": 1254012,
+        "msg": "Unsupported field type.",
+        "table_id": null,
+        "authored": false
+      },
+      {
+        "ui_type": "Checkbox",
+        "sent_body": "{\"field_name\": \"k-Checkbox\", \"type\": 7, \"ui_type\": \"Checkbox\"}",
+        "code": 1254012,
+        "msg": "Unsupported field type.",
+        "table_id": null,
+        "authored": false
+      }
+    ],
+    "authored_kinds": [
+      "Text",
+      "Number",
+      "DateTime",
+      "SingleSelect",
+      "Barcode",
+      "Currency",
+      "Progress"
+    ],
+    "refused_kinds": [
+      "Rating",
+      "Checkbox"
+    ],
+    "primary_column_per_shape_case": {
+      "A name only (the control)": [
+        "多行文本"
+      ],
+      "B one field: name + type": [
+        "b"
+      ],
+      "C one field + ui_type": [
+        "c"
+      ],
+      "D two fields": [
+        "d1"
+      ],
+      "E property WITHOUT ui_type": [
+        "e"
+      ]
+    },
+    "tables_in_the_disposable_at_the_end": [
+      [
+        "tblEjJb9pyNfBOIs",
+        "Table"
+      ],
+      [
+        "tblHZuIA7uu6RBwv",
+        "ld336-A"
+      ],
+      [
+        "tblKaS4KEPTKkxOT",
+        "ld336-B"
+      ],
+      [
+        "tblpaEnMtJSTVTZG",
+        "ld336-C"
+      ],
+      [
+        "tblFaNLmaIholGlr",
+        "ld336-D"
+      ],
+      [
+        "tblbiPk6CXuxstZB",
+        "ld336-E"
+      ],
+      [
+        "tblTF7DW78jLUs3h",
+        "ld336-k-Text"
+      ],
+      [
+        "tblhSsJ6v91fkpja",
+        "ld336-k-Number"
+      ],
+      [
+        "tblz7B7zro0XzaTL",
+        "ld336-k-DateTime"
+      ],
+      [
+        "tbl75G3zj4P34Mtc",
+        "ld336-k-SingleSelect"
+      ],
+      [
+        "tblts7B1z6jZOpcw",
+        "ld336-k-Barcode"
+      ],
+      [
+        "tblt10ytKH1RTz18",
+        "ld336-k-Currency"
+      ],
+      [
+        "tblbLYTPefJyTFf1",
+        "ld336-k-Progress"
+      ],
+      [
+        "tblf8AjHU6uEIzWh",
+        "ld336-batch-A"
+      ],
+      [
+        "tblGLAuUcgxHjfPt",
+        "ld336-batch-B"
+      ]
+    ]
+  }
+}

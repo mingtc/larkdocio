@@ -1,0 +1,23 @@
+{
+  "n": 725,
+  "label": "LD420 ac3 INVENTED KEY CONTROL patch zzz ld420 control",
+  "credential_pair": "WRITE",
+  "request": {
+    "method": "PATCH",
+    "path": "/open-apis/drive/v2/permissions/Example96b1f1037377879d8dd5/public?type=docx",
+    "body": {
+      "zzz_ld420_control": "anyone_can_view"
+    },
+    "headers": [
+      "Authorization: Bearer <redacted>"
+    ]
+  },
+  "http_status": 400,
+  "response": {
+    "code": 1063001,
+    "msg": "Invalid parameter",
+    "error": {
+      "log_id": "20260812064801611A56304865A5A673D7"
+    }
+  }
+}

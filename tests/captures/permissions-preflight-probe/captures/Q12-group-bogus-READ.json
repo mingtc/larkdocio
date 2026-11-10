@@ -1,0 +1,37 @@
+{
+  "probe": "Q12-group-bogus-READ",
+  "method": "GET",
+  "path": "/open-apis/contact/v3/group/zzzz0000ldioprobegroupnope/member/simplelist",
+  "params": [
+    [
+      "page_size",
+      "1"
+    ]
+  ],
+  "note": "contact:group:readonly is NOT held (captured denial in the earlier spike). The group id is bogus. A 99991672 here proves the SCOPE gate runs before the RESOURCE lookup, which makes a bogus-id read a sound resource-free scope probe.",
+  "http_status": 400,
+  "response_headers": {
+    "content-type": "application/json; charset=utf-8",
+    "x-tt-logid": "20260730154659B667980F9CF032AD95D9",
+    "x-request-id": "20260730154659B667980F9CF032AD95D9"
+  },
+  "response": {
+    "code": 99991672,
+    "msg": "Access denied. One of the following scopes is required: [contact:group:readonly]",
+    "error": {
+      "log_id": "20260730154659B667980F9CF032AD95D9",
+      "permission_violations": [
+        {
+          "type": "action_scope_required",
+          "subject": "contact:group:readonly"
+        }
+      ],
+      "helps": [
+        {
+          "description": "Learn more about scopes and how to add them: [contact:group:readonly]",
+          "url": "https://open.larksuite.com/app/cli_example000000001/auth?q=contact:group:readonly&op_from=openapi&token_type=tenant"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,681 @@
+{
+  "probe": "05-edit-path-comment-ids",
+  "started_at": "2026-07-28T22:35:55.969625+00:00",
+  "leg1": {
+    "inside": {
+      "live_elements_in": [
+        {
+          "text_run": {
+            "content": "The quarterly revenue grew ",
+            "text_element_style": {
+              "bold": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "12.4%",
+            "text_element_style": {
+              "bold": true,
+              "comment_ids": [
+                "7667000000000000001"
+              ]
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": " in Q3 across all regions.",
+            "text_element_style": {
+              "bold": false
+            }
+          }
+        }
+      ],
+      "element_level_body": {
+        "update_text_elements": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "REPLACED WHOLE PARAGRAPH"
+              }
+            }
+          ]
+        }
+      },
+      "subspan_body": {
+        "update_text_elements": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "The quarterly revenue grew "
+              }
+            },
+            {
+              "text_run": {
+                "content": "15.0%",
+                "text_element_style": {
+                  "bold": true
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " in Q3 across all regions."
+              }
+            }
+          ]
+        }
+      },
+      "element_level_emits_comment_ids": false,
+      "subspan_emits_comment_ids": false,
+      "subspan_refused": false
+    },
+    "spanning": {
+      "live_elements_in": [
+        {
+          "text_run": {
+            "content": "The quarterly revenue grew 12.4% in Q3 across all regions.",
+            "text_element_style": {
+              "comment_ids": [
+                "7667000000000000001"
+              ]
+            }
+          }
+        }
+      ],
+      "element_level_body": {
+        "update_text_elements": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "REPLACED WHOLE PARAGRAPH"
+              }
+            }
+          ]
+        }
+      },
+      "subspan_body": {
+        "update_text_elements": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "The quarterly revenue grew "
+              }
+            },
+            {
+              "text_run": {
+                "content": "15.0%"
+              }
+            },
+            {
+              "text_run": {
+                "content": " in Q3 across all regions."
+              }
+            }
+          ]
+        }
+      },
+      "element_level_emits_comment_ids": false,
+      "subspan_emits_comment_ids": false,
+      "subspan_refused": false
+    },
+    "neighbour": {
+      "live_elements_in": [
+        {
+          "text_run": {
+            "content": "The quarterly revenue grew ",
+            "text_element_style": {
+              "comment_ids": [
+                "7667000000000000001"
+              ]
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "12.4%",
+            "text_element_style": {
+              "bold": true
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": " in Q3 across all regions.",
+            "text_element_style": {}
+          }
+        }
+      ],
+      "element_level_body": {
+        "update_text_elements": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "REPLACED WHOLE PARAGRAPH"
+              }
+            }
+          ]
+        }
+      },
+      "subspan_body": {
+        "update_text_elements": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "The quarterly revenue grew "
+              }
+            },
+            {
+              "text_run": {
+                "content": "15.0%",
+                "text_element_style": {
+                  "bold": true
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " in Q3 across all regions."
+              }
+            }
+          ]
+        }
+      },
+      "element_level_emits_comment_ids": false,
+      "subspan_emits_comment_ids": false,
+      "subspan_refused": false
+    }
+  },
+  "leg1_verdict": "BOTH edit paths STRIP comment_ids from every run they rebuild",
+  "disposable_doc_id": "Example4363dd46a8c50623a796",
+  "target_block_id": "doxlgExample0efebc23f716e8c",
+  "minted_comment_id": "7667711299958083304",
+  "create_with_comment_ids": {
+    "code": 1770001,
+    "msg": "invalid param",
+    "response": {
+      "code": 1770001,
+      "msg": "invalid param",
+      "error": {
+        "helps": [
+          {
+            "description": "确认参数是否合法"
+          }
+        ],
+        "log_id": "202607290635578AA197222DBB35CA23DF"
+      }
+    }
+  },
+  "patch_with_comment_ids": {
+    "code": 1770001,
+    "msg": "invalid param",
+    "response": {
+      "code": 1770001,
+      "msg": "invalid param",
+      "error": {
+        "helps": [
+          {
+            "description": "确认参数是否合法"
+          }
+        ],
+        "log_id": "2026072906355815B98477428500ABB9D3"
+      }
+    }
+  },
+  "inline_before": {
+    "block_comment_ids": null,
+    "element_comment_ids": [
+      null
+    ],
+    "element_contents": [
+      "The quarterly revenue grew 12.4% in Q3 across all regions."
+    ]
+  },
+  "inline_comment_minted": false,
+  "engine": {
+    "subspan": {
+      "plan": {
+        "entries": [
+          {
+            "outcome": "resolved",
+            "anchor": {
+              "kind": "by-id",
+              "block_id": "doxlgExample0efebc23f716e8c"
+            },
+            "op": "subspan",
+            "span": "12.4%",
+            "replacement": "15.0%",
+            "block_id": "doxlgExample0efebc23f716e8c",
+            "before": "12.4%",
+            "after": "15.0%",
+            "precondition_text": "The quarterly revenue grew 12.4% in Q3 across all regions."
+          }
+        ],
+        "document_revision_id": 2,
+        "revision_guard": "active",
+        "revision_guard_detail": "the whole-document compare-and-swap (STALE_DOCUMENT) is ACTIVE on the plan-time document revision 2: apply re-reads the document's revision_id immediately before the batch and, if it differs at all, refuses the ENTIRE batch with ZERO writes issued. The per-entry STALE_ANCHOR re-validation still applies on top of it."
+      },
+      "log_outcomes": [
+        "applied"
+      ],
+      "before": {
+        "block_comment_ids": null,
+        "element_comment_ids": [
+          null
+        ],
+        "element_contents": [
+          "The quarterly revenue grew 12.4% in Q3 across all regions."
+        ]
+      },
+      "after": {
+        "block_comment_ids": null,
+        "element_comment_ids": [
+          null,
+          null,
+          null
+        ],
+        "element_contents": [
+          "The quarterly revenue grew ",
+          "15.0%",
+          " in Q3 across all regions."
+        ]
+      },
+      "comment_still_listed": true,
+      "inline_ids_before": [],
+      "inline_ids_after": []
+    },
+    "element_level": {
+      "plan": {
+        "entries": [
+          {
+            "outcome": "resolved",
+            "anchor": {
+              "kind": "by-id",
+              "block_id": "doxlgExample0efebc23f716e8c"
+            },
+            "replacement": "The quarterly revenue grew 15.0% in Q3 across all regions.",
+            "block_id": "doxlgExample0efebc23f716e8c",
+            "before": "The quarterly revenue grew 12.4% in Q3 across all regions.",
+            "after": "The quarterly revenue grew 15.0% in Q3 across all regions.",
+            "precondition_text": "The quarterly revenue grew 12.4% in Q3 across all regions."
+          }
+        ],
+        "document_revision_id": 4,
+        "revision_guard": "active",
+        "revision_guard_detail": "the whole-document compare-and-swap (STALE_DOCUMENT) is ACTIVE on the plan-time document revision 4: apply re-reads the document's revision_id immediately before the batch and, if it differs at all, refuses the ENTIRE batch with ZERO writes issued. The per-entry STALE_ANCHOR re-validation still applies on top of it."
+      },
+      "log_outcomes": [
+        "applied"
+      ],
+      "before": {
+        "block_comment_ids": null,
+        "element_comment_ids": [
+          null
+        ],
+        "element_contents": [
+          "The quarterly revenue grew 12.4% in Q3 across all regions."
+        ]
+      },
+      "after": {
+        "block_comment_ids": null,
+        "element_comment_ids": [
+          null
+        ],
+        "element_contents": [
+          "The quarterly revenue grew 15.0% in Q3 across all regions."
+        ]
+      },
+      "comment_still_listed": true,
+      "inline_ids_before": [],
+      "inline_ids_after": []
+    }
+  },
+  "comment_removal": [
+    {
+      "comment_id": "7667711299958083304",
+      "recheck_code": 1069307,
+      "still_resolves": false
+    }
+  ],
+  "comments_remaining": 0,
+  "finished_at": "2026-07-28T22:36:08.954234+00:00",
+  "api_calls": 20,
+  "captures": [
+    {
+      "label": "baseline-children",
+      "method": "POST",
+      "path": "blocks/{root}/children",
+      "request_body": {
+        "children": "[2 text blocks]"
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "children": [
+            {
+              "block_id": "doxlgExample0efebc23f716e8c",
+              "block_type": 2,
+              "parent_id": "Example4363dd46a8c50623a796",
+              "text": {
+                "elements": [
+                  {
+                    "text_run": {
+                      "content": "The quarterly revenue grew 12.4% in Q3 across all regions.",
+                      "text_element_style": {
+                        "bold": false,
+                        "inline_code": false,
+                        "italic": false,
+                        "strikethrough": false,
+                        "underline": false
+                      }
+                    }
+                  }
+                ],
+                "style": {
+                  "align": 1,
+                  "folded": false
+                }
+              }
+            },
+            {
+              "block_id": "doxlgExampleb4d392c9e3e6a12",
+              "block_type": 2,
+              "parent_id": "Example4363dd46a8c50623a796",
+              "text": {
+                "elements": [
+                  {
+                    "text_run": {
+                      "content": "A neighbour paragraph, untouched.",
+                      "text_element_style": {
+                        "bold": false,
+                        "inline_code": false,
+                        "italic": false,
+                        "strikethrough": false,
+                        "underline": false
+                      }
+                    }
+                  }
+                ],
+                "style": {
+                  "align": 1,
+                  "folded": false
+                }
+              }
+            }
+          ],
+          "client_token": "ab7a8212-8543-4092-b0d8-dfa4ccd6b0da",
+          "document_revision_id": 2
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "label": "mint-whole-doc-comment",
+      "method": "POST",
+      "path": "…/comments",
+      "request_body": {
+        "reply_list": "…"
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "Success",
+      "response": {
+        "code": 0,
+        "data": {
+          "comment_id": "7667711299958083304",
+          "create_time": 1785278157,
+          "is_solved": false,
+          "reply_list": {
+            "replies": [
+              {
+                "content": {
+                  "elements": [
+                    {
+                      "docs_link": null,
+                      "person": null,
+                      "text_run": {
+                        "text": "LD-156 edit-path probe comment."
+                      },
+                      "type": "text_run"
+                    }
+                  ]
+                },
+                "create_time": 1785278157,
+                "extra": null,
+                "reply_id": "7667711299970682590",
+                "update_time": 1785278157,
+                "user_id": "ou_examplebot0000000000000000000001"
+              }
+            ]
+          },
+          "solver_user_id": null,
+          "update_time": 1785278157,
+          "user_id": "ou_examplebot0000000000000000000001"
+        },
+        "msg": "Success"
+      }
+    },
+    {
+      "label": "create-block-with-comment_ids",
+      "method": "POST",
+      "path": "blocks/{root}/children",
+      "request_body": {
+        "text_element_style": {
+          "comment_ids": [
+            "7667711299958083304"
+          ]
+        }
+      },
+      "http_status": 400,
+      "code": 1770001,
+      "msg": "invalid param",
+      "response": {
+        "code": 1770001,
+        "msg": "invalid param",
+        "error": {
+          "helps": [
+            {
+              "description": "确认参数是否合法"
+            }
+          ],
+          "log_id": "202607290635578AA197222DBB35CA23DF"
+        }
+      }
+    },
+    {
+      "label": "patch-with-comment_ids",
+      "method": "PATCH",
+      "path": "docx blocks/{block}",
+      "request_body": {
+        "update_text_elements": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "The quarterly revenue grew "
+              }
+            },
+            {
+              "text_run": {
+                "content": "12.4%",
+                "text_element_style": {
+                  "bold": true,
+                  "comment_ids": [
+                    "7667711299958083304"
+                  ]
+                }
+              }
+            },
+            {
+              "text_run": {
+                "content": " in Q3 across all regions."
+              }
+            }
+          ]
+        }
+      },
+      "http_status": 400,
+      "code": 1770001,
+      "msg": "invalid param",
+      "response": {
+        "code": 1770001,
+        "msg": "invalid param",
+        "error": {
+          "helps": [
+            {
+              "description": "确认参数是否合法"
+            }
+          ],
+          "log_id": "2026072906355815B98477428500ABB9D3"
+        }
+      }
+    },
+    {
+      "label": "get-block-after-mint-attempt",
+      "method": "GET",
+      "path": "docx blocks/{block}",
+      "request_body": null,
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "block": {
+            "block_id": "doxlgExample0efebc23f716e8c",
+            "block_type": 2,
+            "parent_id": "Example4363dd46a8c50623a796",
+            "text": {
+              "elements": [
+                {
+                  "text_run": {
+                    "content": "The quarterly revenue grew 12.4% in Q3 across all regions.",
+                    "text_element_style": {
+                      "bold": false,
+                      "inline_code": false,
+                      "italic": false,
+                      "strikethrough": false,
+                      "underline": false
+                    }
+                  }
+                }
+              ],
+              "style": {
+                "align": 1,
+                "folded": false
+              }
+            }
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "label": "engine-subspan-after",
+      "method": "GET",
+      "path": "docx blocks/{block}",
+      "request_body": null,
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "block": {
+            "block_id": "doxlgExample0efebc23f716e8c",
+            "block_type": 2,
+            "parent_id": "Example4363dd46a8c50623a796",
+            "text": {
+              "elements": [
+                {
+                  "text_run": {
+                    "content": "The quarterly revenue grew ",
+                    "text_element_style": {
+                      "bold": false,
+                      "inline_code": false,
+                      "italic": false,
+                      "strikethrough": false,
+                      "underline": false
+                    }
+                  }
+                },
+                {
+                  "text_run": {
+                    "content": "15.0%",
+                    "text_element_style": {
+                      "bold": false,
+                      "inline_code": false,
+                      "italic": false,
+                      "strikethrough": false,
+                      "underline": false
+                    }
+                  }
+                },
+                {
+                  "text_run": {
+                    "content": " in Q3 across all regions.",
+                    "text_element_style": {
+                      "bold": false,
+                      "inline_code": false,
+                      "italic": false,
+                      "strikethrough": false,
+                      "underline": false
+                    }
+                  }
+                }
+              ],
+              "style": {
+                "align": 1,
+                "folded": false
+              }
+            }
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "label": "engine-element_level-after",
+      "method": "GET",
+      "path": "docx blocks/{block}",
+      "request_body": null,
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "block": {
+            "block_id": "doxlgExample0efebc23f716e8c",
+            "block_type": 2,
+            "parent_id": "Example4363dd46a8c50623a796",
+            "text": {
+              "elements": [
+                {
+                  "text_run": {
+                    "content": "The quarterly revenue grew 15.0% in Q3 across all regions.",
+                    "text_element_style": {
+                      "bold": false,
+                      "inline_code": false,
+                      "italic": false,
+                      "strikethrough": false,
+                      "underline": false
+                    }
+                  }
+                }
+              ],
+              "style": {
+                "align": 1,
+                "folded": false
+              }
+            }
+          }
+        },
+        "msg": "success"
+      }
+    }
+  ]
+}

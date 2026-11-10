@@ -1,0 +1,44 @@
+[
+  {
+    "block_id": "root",
+    "parent_id": "doc",
+    "block_type": 1,
+    "page": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Doc Title"
+          }
+        }
+      ]
+    },
+    "children": [
+      "s1"
+    ]
+  },
+  {
+    "block_id": "s1",
+    "parent_id": "root",
+    "block_type": 49,
+    "source_synced": {
+      "elements": []
+    },
+    "children": [
+      "t1"
+    ]
+  },
+  {
+    "block_id": "t1",
+    "parent_id": "s1",
+    "block_type": 2,
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Child paragraph content"
+          }
+        }
+      ]
+    }
+  }
+]

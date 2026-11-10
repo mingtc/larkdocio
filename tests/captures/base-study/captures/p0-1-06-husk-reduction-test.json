@@ -1,0 +1,95 @@
+{
+  "_probe": "p1",
+  "_endpoint": "app_meta|tables|DELETE tables|drive meta on the auto-provisioned base",
+  "_method": "MIXED",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": null,
+  "_verdict": "OK",
+  "_note": "hypothesis (b) test: is the zoo-18 shape (zero tables, no time_zone, blank drive title) REACHABLE from a healthy docx-born base by deleting its tables?",
+  "response": {
+    "code": 0,
+    "data": {
+      "zoo18_signature": {
+        "name": "Untitled bitable",
+        "time_zone": "ABSENT",
+        "tables": [],
+        "drive_title": "",
+        "drive_sec_label_name": ""
+      },
+      "Examplec8af798413375ff9bc09": {
+        "app_meta": {
+          "app_token": "Examplec8af798413375ff9bc09",
+          "formula_type": 2,
+          "is_advanced": false,
+          "name": "Untitled bitable",
+          "revision": 1
+        },
+        "has_time_zone": false,
+        "n_tables": 1,
+        "table_ids": [
+          "tbloLtUSiQNhlkYX"
+        ],
+        "drive_meta": {
+          "create_time": "1785698916",
+          "doc_token": "Examplec8af798413375ff9bc09",
+          "doc_type": "bitable",
+          "latest_modify_time": "1785698916",
+          "latest_modify_user": "<redacted:person-id>",
+          "owner_id": "<redacted:person-id>",
+          "request_doc_info": {
+            "doc_token": "Examplec8af798413375ff9bc09",
+            "doc_type": "bitable"
+          },
+          "sec_label_name": "",
+          "title": "",
+          "url": ""
+        },
+        "delete_every_table": [
+          {
+            "table_id": "tbloLtUSiQNhlkYX",
+            "code": 1254034,
+            "msg": "The last table cannot be deleted."
+          }
+        ],
+        "tables_after_deletion": {
+          "code": 0,
+          "data": {
+            "has_more": false,
+            "items": [
+              {
+                "name": "tbloLtUSiQNhlkYX",
+                "revision": 0,
+                "table_id": "tbloLtUSiQNhlkYX"
+              }
+            ],
+            "page_token": "tbloLtUSiQNhlkYX",
+            "total": 1
+          }
+        },
+        "app_meta_after_deletion": {
+          "app_token": "Examplec8af798413375ff9bc09",
+          "formula_type": 2,
+          "is_advanced": false,
+          "name": "Untitled bitable",
+          "revision": 1
+        },
+        "drive_meta_after_deletion": {
+          "create_time": "1785698916",
+          "doc_token": "Examplec8af798413375ff9bc09",
+          "doc_type": "bitable",
+          "latest_modify_time": "1785698916",
+          "latest_modify_user": "<redacted:person-id>",
+          "owner_id": "<redacted:person-id>",
+          "request_doc_info": {
+            "doc_token": "Examplec8af798413375ff9bc09",
+            "doc_type": "bitable"
+          },
+          "sec_label_name": "",
+          "title": "",
+          "url": ""
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,238 @@
+{
+  "probe": "probe_ld517_in_cell_link",
+  "issue": "LD-517",
+  "authorization": "requirements/DECISIONS.md D-106",
+  "date": "2026-09-02",
+  "the_one_question": "Does Lark accept AND STORE a link-carrying text run (text_element_style.link.url) inside a docx TABLE CELL?",
+  "verdicts": {
+    "control_paragraph": "ACCEPTED_AND_STORED_VERBATIM",
+    "route_A_create_time_descendant": "ACCEPTED_AND_STORED_VERBATIM",
+    "route_B_fill_time_update_text_elements": "ACCEPTED_AND_STORED_VERBATIM"
+  },
+  "verdict_source": "the FRESH read GET /open-apis/docx/v1/documents/{id}/blocks issued AFTER both writes — never a create's own code:0 (D-04 / R12)",
+  "sent": {
+    "control_paragraph_create_children": [
+      {
+        "block_type": 2,
+        "text": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Example Item - Details",
+                "text_element_style": {
+                  "link": {
+                    "url": "https://example.com/items/example-item"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "block_type": 31,
+        "table": {
+          "property": {
+            "row_size": 1,
+            "column_size": 2,
+            "header_row": false
+          }
+        }
+      }
+    ],
+    "route_A_descendant_body": {
+      "children_id": [
+        "larkdocio_t"
+      ],
+      "descendants": [
+        {
+          "block_id": "larkdocio_t",
+          "block_type": 31,
+          "table": {
+            "property": {
+              "row_size": 1,
+              "column_size": 2,
+              "header_row": false
+            }
+          },
+          "children": [
+            "larkdocio_c0",
+            "larkdocio_c1"
+          ]
+        },
+        {
+          "block_id": "larkdocio_c0",
+          "block_type": 32,
+          "table_cell": {},
+          "children": [
+            "larkdocio_x0"
+          ]
+        },
+        {
+          "block_id": "larkdocio_x0",
+          "block_type": 2,
+          "text": {
+            "elements": [
+              {
+                "text_run": {
+                  "content": "EX-01"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "block_id": "larkdocio_c1",
+          "block_type": 32,
+          "table_cell": {},
+          "children": [
+            "larkdocio_x1"
+          ]
+        },
+        {
+          "block_id": "larkdocio_x1",
+          "block_type": 2,
+          "text": {
+            "elements": [
+              {
+                "text_run": {
+                  "content": "Example Item - Details",
+                  "text_element_style": {
+                    "link": {
+                      "url": "https://example.com/items/example-item"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "route_B_batch_update_body": [
+      {
+        "block_id": "doxlgExample5e32f79590e5842",
+        "update_text_elements": {
+          "elements": [
+            {
+              "text_run": {
+                "content": "Example Item - Details",
+                "text_element_style": {
+                  "link": {
+                    "url": "https://example.com/items/example-item"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "read_back": {
+    "control_paragraph": {
+      "block_id": "doxlgExamplee557cbdfad6df90",
+      "block_type": 2,
+      "runs": [
+        {
+          "content": "Example Item - Details",
+          "text_element_style": {
+            "bold": false,
+            "inline_code": false,
+            "italic": false,
+            "link": {
+              "url": "https://example.com/items/example-item"
+            },
+            "strikethrough": false,
+            "underline": false
+          }
+        }
+      ],
+      "stored_link": {
+        "url": "https://example.com/items/example-item"
+      }
+    },
+    "route_A_cell_inner_block": {
+      "block_id": "doxlgExampleeec38041b094cfb",
+      "parent_id": "doxlgExamplebd470adbb38be11",
+      "block_type": 2,
+      "runs": [
+        {
+          "content": "Example Item - Details",
+          "text_element_style": {
+            "bold": false,
+            "inline_code": false,
+            "italic": false,
+            "link": {
+              "url": "https://example.com/items/example-item"
+            },
+            "strikethrough": false,
+            "underline": false
+          }
+        }
+      ],
+      "stored_link": {
+        "url": "https://example.com/items/example-item"
+      },
+      "send_error": null,
+      "block_id_relations": [
+        {
+          "block_id": "doxlgExample2ddb23ded8be0a3",
+          "temporary_block_id": "larkdocio_t"
+        },
+        {
+          "block_id": "doxlgExample955c571dbb92b81",
+          "temporary_block_id": "larkdocio_c0"
+        },
+        {
+          "block_id": "doxlgExampled8b4291955146a9",
+          "temporary_block_id": "larkdocio_x0"
+        },
+        {
+          "block_id": "doxlgExamplebd470adbb38be11",
+          "temporary_block_id": "larkdocio_c1"
+        },
+        {
+          "block_id": "doxlgExampleeec38041b094cfb",
+          "temporary_block_id": "larkdocio_x1"
+        }
+      ],
+      "resolution": "resolved"
+    },
+    "route_B_cell_inner_block": {
+      "route": "PATCH .../blocks/batch_update — update_text_elements on the cell's Lark-provisioned inner text block",
+      "block_id": "doxlgExample5e32f79590e5842",
+      "parent_id": "doxlgExample0e9fea3d62c0591",
+      "block_type": 2,
+      "runs": [
+        {
+          "content": "Example Item - Details",
+          "text_element_style": {
+            "bold": false,
+            "inline_code": false,
+            "italic": false,
+            "link": {
+              "url": "https://example.com/items/example-item"
+            },
+            "strikethrough": false,
+            "underline": false
+          }
+        }
+      ],
+      "stored_link": {
+        "url": "https://example.com/items/example-item"
+      },
+      "send_error": null
+    }
+  },
+  "evidence_fence": "Nothing here is inferred from the LD-506 in-cell IMAGE accept (a different block type), the 1.33 BASE text-cell refusal (a different surface), or the Sheets hyperlink write (a different product API). D-59.",
+  "scope": {
+    "tenant": "one (the repo's WRITE application)",
+    "token": "tenant_access_token",
+    "api": "docx v1",
+    "block_types": "31 table / 32 table_cell / 2 text",
+    "document": "one this probe created; NOT wiki-wrapped",
+    "unmeasured_not_refuted": "user_access_token; other tenants and regions; wiki-wrapped documents; every style key other than link; merged or nested cells; whether a client RENDERS the stored link as a clickable anchor (no human click was made — the document was deleted)"
+  },
+  "document_id": "Examplea0924fb797ac4d0669ee"
+}

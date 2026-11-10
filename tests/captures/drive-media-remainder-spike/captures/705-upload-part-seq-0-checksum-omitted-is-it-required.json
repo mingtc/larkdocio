@@ -1,0 +1,32 @@
+{
+  "n": 705,
+  "probe": "01-chunked-upload",
+  "label": "upload_part seq=0 (checksum omitted — is it required?)",
+  "credential_pair": "WRITE",
+  "request": {
+    "method": "POST",
+    "path": "/open-apis/drive/v1/files/upload_part",
+    "form_fields": {
+      "upload_id": "7673163768917937897",
+      "seq": "0",
+      "size": "130"
+    },
+    "file_part": {
+      "file_name": "ld437-chunked.html",
+      "content_type": "text/html",
+      "size": 130,
+      "sha256": "158b5a7e95ab3a320964f6d7492fd2fcb4504767c5e40a1d64280de460cf3fdb",
+      "bytes": "<NOT CAPTURED — media bytes are hashed, never written to a capture>"
+    },
+    "headers": [
+      "Authorization: Bearer <redacted>",
+      "Content-Type: multipart/form-data; boundary=<generated>"
+    ]
+  },
+  "http_status": 200,
+  "response": {
+    "code": 0,
+    "data": null,
+    "msg": "Success"
+  }
+}

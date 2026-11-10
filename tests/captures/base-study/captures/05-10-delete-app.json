@@ -1,0 +1,15 @@
+{
+  "_probe": "05",
+  "_endpoint": "/open-apis/drive/v1/files/Example02154ddbd1fe2927e2e6",
+  "_method": "DELETE",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": "success",
+  "_verdict": "OK",
+  "_note": "delete the disposable Base via the Drive file API (bitable v1 has no delete-app endpoint)",
+  "response": {
+    "code": 0,
+    "data": {},
+    "msg": "success"
+  }
+}

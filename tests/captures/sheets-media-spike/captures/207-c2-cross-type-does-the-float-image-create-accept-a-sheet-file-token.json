@@ -1,0 +1,35 @@
+{
+  "n": 207,
+  "probe": "LD-435 AC1/AC2 arms B+C — values_image, sheet_file, absence",
+  "label": "C2 cross-type does the float image create accept a sheet_file token",
+  "credential_pair": "WRITE",
+  "request": {
+    "method": "POST",
+    "path": "/open-apis/sheets/v3/spreadsheets/Exampleb31ebb6e3fd2fe5eddf0/sheets/61a0cd/float_images",
+    "body": {
+      "float_image_token": "Exampled7a15ca0baea2baafe68",
+      "range": "61a0cd!E5:E5",
+      "width": 60,
+      "height": 60
+    },
+    "headers": [
+      "Authorization: Bearer <redacted>"
+    ]
+  },
+  "http_status": 200,
+  "response": {
+    "code": 0,
+    "data": {
+      "float_image": {
+        "float_image_id": "xFU1rVOkD7",
+        "float_image_token": "Exampled7a15ca0baea2baafe68",
+        "height": 60,
+        "offset_x": 0,
+        "offset_y": 0,
+        "range": "61a0cd!E5:E5",
+        "width": 60
+      }
+    },
+    "msg": "success"
+  }
+}

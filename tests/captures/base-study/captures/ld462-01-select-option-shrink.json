@@ -1,0 +1,237 @@
+{
+ "_endpoint": "PUT /open-apis/bitable/v1/apps/{a}/tables/{t}/fields/{f}",
+ "_method": "PUT",
+ "_note": "LD-462. What an option SHRINK does to the cells that hold the dropped option, on the route LD-339 left open: every SURVIVING option carries its id, so LD-339's fence passes, and the omitted option's cells are destroyed anyway. Four arms, four independent columns of one table, three records each. Read back through records/search, which renders a select cell as the option NAME.",
+ "_probe": "ld462-01-select-option-shrink",
+ "_target": "a harness-created disposable Base (larkdocio-DISPOSABLE-*), deleted in the same run",
+ "_verdict": "OK — the shrink DESTROYS the cells of the dropped option (arms 1 and 3), a rename with every id kept destroys nothing (arm 2), and a shrink of an option no record holds destroys nothing (arm 4)",
+ "arms": [
+  {
+   "arm": "single-select-shrink-populated",
+   "cells_after": {
+    "recqnbU7PgpZJD": null,
+    "rectcsN6Yzh6SK": null,
+    "recssuZ6Sbv4QT": "A"
+   },
+   "cells_before": {
+    "recqnbU7PgpZJD": "C",
+    "rectcsN6Yzh6SK": "C",
+    "recssuZ6Sbv4QT": "A"
+   },
+   "cells_emptied": [
+    "recqnbU7PgpZJD",
+    "rectcsN6Yzh6SK"
+   ],
+   "column": "P1",
+   "option_ids_preserved": true,
+   "options_after": [
+    {
+     "color": 0,
+     "id": "optWc0OZxI",
+     "name": "A"
+    },
+    {
+     "color": 1,
+     "id": "optsbgSq8v",
+     "name": "B"
+    }
+   ],
+   "options_before": [
+    {
+     "color": 0,
+     "id": "optWc0OZxI",
+     "name": "A"
+    },
+    {
+     "color": 1,
+     "id": "optsbgSq8v",
+     "name": "B"
+    },
+    {
+     "color": 2,
+     "id": "optYDeUhPo",
+     "name": "C"
+    }
+   ],
+   "records_changed": [
+    "recqnbU7PgpZJD",
+    "rectcsN6Yzh6SK"
+   ],
+   "records_changed_count": 2,
+   "ui_type": "SingleSelect",
+   "what": "SingleSelect A,B,C -> the body keeps A and B WITH their ids and OMITS C, which 2 of 3 records hold. THE DEFECT: the two cells holding C read back EMPTY, the survivor is untouched, and the library answered success with no preview and no consent asked."
+  },
+  {
+   "arm": "single-select-rename-every-id-kept",
+   "cells_after": {
+    "recqnbU7PgpZJD": "C",
+    "rectcsN6Yzh6SK": "B",
+    "recssuZ6Sbv4QT": "A-RENAMED"
+   },
+   "cells_before": {
+    "recqnbU7PgpZJD": "C",
+    "rectcsN6Yzh6SK": "B",
+    "recssuZ6Sbv4QT": "A"
+   },
+   "cells_emptied": [],
+   "column": "P2",
+   "option_ids_preserved": true,
+   "options_after": [
+    {
+     "color": 0,
+     "id": "optPU8b5Xs",
+     "name": "A-RENAMED"
+    },
+    {
+     "color": 1,
+     "id": "opthzVODJh",
+     "name": "B"
+    },
+    {
+     "color": 2,
+     "id": "optxj7tuee",
+     "name": "C"
+    }
+   ],
+   "options_before": [
+    {
+     "color": 0,
+     "id": "optPU8b5Xs",
+     "name": "A"
+    },
+    {
+     "color": 1,
+     "id": "opthzVODJh",
+     "name": "B"
+    },
+    {
+     "color": 2,
+     "id": "optxj7tuee",
+     "name": "C"
+    }
+   ],
+   "records_changed": [
+    "recssuZ6Sbv4QT"
+   ],
+   "records_changed_count": 1,
+   "ui_type": "SingleSelect",
+   "what": "SingleSelect A,B,C -> the same three ids, one option RENAMED (A -> A-RENAMED). Every cell survives and the renamed cell reads back under the NEW name, because the cell is anchored to the id. MEASURED NON-DESTRUCTIVE: no value is lost."
+  },
+  {
+   "arm": "multi-select-narrowing-populated",
+   "cells_after": {
+    "recqnbU7PgpZJD": [
+     "B"
+    ],
+    "rectcsN6Yzh6SK": null,
+    "recssuZ6Sbv4QT": [
+     "A",
+     "B"
+    ]
+   },
+   "cells_before": {
+    "recqnbU7PgpZJD": [
+     "B",
+     "C"
+    ],
+    "rectcsN6Yzh6SK": [
+     "C"
+    ],
+    "recssuZ6Sbv4QT": [
+     "A",
+     "B"
+    ]
+   },
+   "cells_emptied": [
+    "rectcsN6Yzh6SK"
+   ],
+   "column": "P3",
+   "option_ids_preserved": true,
+   "options_after": [
+    {
+     "color": 0,
+     "id": "optjzQkhaT",
+     "name": "A"
+    },
+    {
+     "color": 1,
+     "id": "optMuVl3zG",
+     "name": "B"
+    }
+   ],
+   "options_before": [
+    {
+     "color": 0,
+     "id": "optjzQkhaT",
+     "name": "A"
+    },
+    {
+     "color": 1,
+     "id": "optMuVl3zG",
+     "name": "B"
+    },
+    {
+     "color": 2,
+     "id": "optX9eTBD8",
+     "name": "C"
+    }
+   ],
+   "records_changed": [
+    "recqnbU7PgpZJD",
+    "rectcsN6Yzh6SK"
+   ],
+   "records_changed_count": 2,
+   "ui_type": "MultiSelect",
+   "what": "MultiSelect A,B,C -> A and B kept with their ids, C omitted. A cell holding [B,C] reads back [B] — the dropped value alone is removed — and a cell holding [C] ALONE reads back EMPTY. So a narrowing destroys values per cell, not whole cells."
+  },
+  {
+   "arm": "single-select-shrink-unpopulated",
+   "cells_after": {
+    "recqnbU7PgpZJD": "Y",
+    "rectcsN6Yzh6SK": "X",
+    "recssuZ6Sbv4QT": "X"
+   },
+   "cells_before": {
+    "recqnbU7PgpZJD": "Y",
+    "rectcsN6Yzh6SK": "X",
+    "recssuZ6Sbv4QT": "X"
+   },
+   "cells_emptied": [],
+   "column": "P4",
+   "option_ids_preserved": true,
+   "options_after": [
+    {
+     "color": 0,
+     "id": "opt8UZF38q",
+     "name": "X"
+    },
+    {
+     "color": 1,
+     "id": "optUKz7BVL",
+     "name": "Y"
+    }
+   ],
+   "options_before": [
+    {
+     "color": 0,
+     "id": "opt8UZF38q",
+     "name": "X"
+    },
+    {
+     "color": 1,
+     "id": "optUKz7BVL",
+     "name": "Y"
+    },
+    {
+     "color": 2,
+     "id": "optFGzMPCJ",
+     "name": "Z"
+    }
+   ],
+   "records_changed": [],
+   "records_changed_count": 0,
+   "ui_type": "SingleSelect",
+   "what": "SingleSelect X,Y,Z -> X and Y kept with their ids, Z omitted. NO record holds Z. Every cell is byte-identical afterwards: a shrink that destroys nothing really destroys nothing."
+  }
+ ]
+}

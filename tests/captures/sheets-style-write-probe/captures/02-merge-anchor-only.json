@@ -1,0 +1,69 @@
+{
+  "probe": "LD-188 round 2 \u2014 a style on a MERGE's ANCHOR only",
+  "at": "2026-07-31T20:18:50.452730+00:00",
+  "steps": [
+    {
+      "label": "merge A1:A3 (MERGE_ALL)",
+      "response": {
+        "spreadsheetToken": "Exampleed9ad694b9476ba76526"
+      }
+    },
+    {
+      "label": "style the ANCHOR ONLY (A1:A1) of the A1:A3 merge",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Exampleed9ad694b9476ba76526/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "94694f!A1:A1",
+          "style": {
+            "font": {
+              "bold": true
+            },
+            "backColor": "#FFFF00"
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "updates": {
+            "revision": 3,
+            "spreadsheetToken": "Exampleed9ad694b9476ba76526",
+            "updatedCells": 1,
+            "updatedColumns": 1,
+            "updatedRange": "94694f!A1:A1",
+            "updatedRows": 1
+          }
+        },
+        "msg": "success"
+      }
+    }
+  ],
+  "spreadsheet_token": "Exampleed9ad694b9476ba76526",
+  "first_sheet_id": "94694f",
+  "export": {
+    "cells": {
+      "A1": {
+        "value": "anchor",
+        "bold": true,
+        "fill_rgb": "FFFFFF00"
+      },
+      "A2": {
+        "value": null,
+        "bold": false,
+        "fill_rgb": null
+      },
+      "A3": {
+        "value": null,
+        "bold": false,
+        "fill_rgb": null
+      }
+    }
+  },
+  "finding": "a style write lands on EXACTLY the cells its range names: the anchor carries the bold + fill, and the merge's covered cells carry NEITHER. Round 1's 'the whole merged span' reading was an artefact of styling the whole span.",
+  "deleted": true,
+  "gone_confirmed": true
+}

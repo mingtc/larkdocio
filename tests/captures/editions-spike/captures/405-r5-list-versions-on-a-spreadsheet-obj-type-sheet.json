@@ -1,0 +1,35 @@
+{
+  "n": 405,
+  "label": "r5 list versions on a SPREADSHEET obj_type=sheet",
+  "credential_pair": "WRITE",
+  "request": {
+    "method": "GET",
+    "path": "/open-apis/drive/v1/files/Examplea1f244ad7022d85b5341/versions?obj_type=sheet&page_size=10",
+    "body": null,
+    "headers": [
+      "Authorization: Bearer <redacted>"
+    ]
+  },
+  "http_status": 200,
+  "response": {
+    "code": 0,
+    "data": {
+      "has_more": false,
+      "items": [
+        {
+          "create_time": "1786403693",
+          "creator_id": "ou_examplebot0000000000000000000001",
+          "name": "LD-404 sheet",
+          "obj_type": "sheet",
+          "owner_id": "ou_examplebot0000000000000000000001",
+          "parent_token": "Examplea1f244ad7022d85b5341",
+          "parent_type": "sheet",
+          "status": 0,
+          "update_time": "1786403694",
+          "version": "apClPr"
+        }
+      ]
+    },
+    "msg": "Success"
+  }
+}

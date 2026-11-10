@@ -1,0 +1,17 @@
+{
+  "_probe": "ld466-01-shipped-type-file-delete-against-a-base",
+  "_endpoint": "DELETE /open-apis/drive/v1/files/:file_token?type=file",
+  "_method": "DELETE",
+  "_http_status": 404,
+  "_lark_code": 1061003,
+  "_lark_msg": "not found.",
+  "_verdict": "DENIED_OR_ERROR",
+  "_note": "question (a): DriveFilesWriteClient.delete hardcodes this type. The request is byte-for-byte what the shipped verb sends, against a Base the same credentials just created",
+  "response": {
+    "code": 1061003,
+    "msg": "not found.",
+    "error": {
+      "log_id": "20260815004159E8698EA984731FE8814C"
+    }
+  }
+}

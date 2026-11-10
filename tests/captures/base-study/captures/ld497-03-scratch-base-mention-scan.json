@@ -1,0 +1,39 @@
+{
+  "_probe": "ld497-03",
+  "_script": "dev/base-study/probes/probe_ld497_scratch_base_mention_scan.py",
+  "_endpoint": "GET …/tables · POST …/tables/{t}/records/search (the pinned read route; no /fields call — the walk dispatches on each segment's own type, never on the field's)",
+  "_method": "READ-ONLY scan of every table's every text-shaped cell in the Scratch Base, looking for a segment whose own type is `mention`. The coordinates were NOT supplied — they are discovered here or they do not exist.",
+  "_redaction": "The tenant host in the found segment's link is redacted as ld497-01 redacts the consumer's — '<redacted-tenant-host>' stands where the domain was. In this public copy the docx token, the block anchor and the document title are replaced too (tests/captures/README.md); the table and record ids are the standing scratch Base's own. Redaction is not optional here — tests/test_base_cells.py's nine-pattern PII sweep reads every capture in this directory and pattern 7 refuses an unredacted tenant host (LD-512, which re-landed this reading; the probe writes the raw host and the guard is not the thing to move).",
+  "_writes": 0,
+  "_disposables_created": 0,
+  "_media_tokens_created": 0,
+  "_tables_scanned": [
+    {
+      "table_id": "tblYtWUpf5q944Ao",
+      "name": "Table"
+    },
+    {
+      "table_id": "tblvHhs6KA9QYNCo",
+      "name": "Table 2"
+    }
+  ],
+  "_cells_scanned": 31,
+  "_mentions_found": [
+    {
+      "table_id": "tblYtWUpf5q944Ao",
+      "table_name": "Table",
+      "field_name": "Text",
+      "record_id": "recpzOcYNQEp0F",
+      "segment": {
+        "link": "https://<redacted-tenant-host>/docx/Example186efd1e3a61eacda895",
+        "mentionType": "Docx",
+        "realMentionType": "Docx",
+        "text": "Example Document Title",
+        "token": "Example186efd1e3a61eacda895",
+        "type": "mention"
+      }
+    }
+  ],
+  "_verdict": "1 mention-carrying cell(s) found across 2 table(s) / 31 cell(s)",
+  "_scope": "D-59: one tenant, the configured Scratch Base, the records/search read route, on the run date. A cell nobody chipped cannot be found by scanning, so an empty result is evidence about THIS Base on THIS day and is not a claim about what Lark can mint."
+}

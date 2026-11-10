@@ -1,0 +1,29 @@
+[
+  {
+    "block_id": "root",
+    "parent_id": "doc",
+    "block_type": 1,
+    "page": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Doc Title"
+          }
+        }
+      ]
+    },
+    "children": [
+      "a"
+    ]
+  },
+  {
+    "block_id": "a",
+    "parent_id": "root",
+    "block_type": 40,
+    "add_ons": {
+      "component_id": "c1",
+      "component_type_id": "blk_OTHER",
+      "record": "{}"
+    }
+  }
+]

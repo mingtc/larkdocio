@@ -1,0 +1,988 @@
+{
+  "_probe": "q1-stage-pagination",
+  "steps": [
+    {
+      "_probe": "q1-stage-pagination",
+      "_endpoint": "…/records/search?page_size=2",
+      "_method": "POST",
+      "_http_status": 200,
+      "_lark_code": 0,
+      "_lark_msg": "success",
+      "_verdict": "OK",
+      "_note": "page_size in the QUERY STRING",
+      "response": {
+        "code": 0,
+        "data": {
+          "has_more": true,
+          "items": [
+            {
+              "fields": {
+                "Email": [
+                  {
+                    "link": "<redacted:email>",
+                    "text": "<redacted:email>",
+                    "type": "url"
+                  }
+                ],
+                "Text": [
+                  {
+                    "text": "Text 1",
+                    "type": "text"
+                  }
+                ],
+                "lookup": {
+                  "type": 1,
+                  "value": [
+                    {
+                      "text": "Text 2 Test Data 2",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 3",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 1",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 5",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 4",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "record_id": "rec88HpEvHGLV4"
+            },
+            {
+              "fields": {
+                "Email": [
+                  {
+                    "link": "<redacted:email>",
+                    "text": "<redacted:email>",
+                    "type": "url"
+                  }
+                ],
+                "Text": [
+                  {
+                    "text": "Text 2",
+                    "type": "text"
+                  }
+                ],
+                "lookup": {
+                  "type": 1,
+                  "value": [
+                    {
+                      "text": "Text 2 Test Data 2",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 3",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 1",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 5",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 4",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "record_id": "rec41UqRqMBEzI"
+            }
+          ],
+          "page_token": "cGFnZVRva2VuOjI=",
+          "total": 6
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "_probe": "q1-stage-pagination",
+      "_endpoint": "…/records/search (body page_size)",
+      "_method": "POST",
+      "_http_status": 200,
+      "_lark_code": 0,
+      "_lark_msg": "success",
+      "_verdict": "OK",
+      "_note": "page_size in the BODY — the seat's anomaly reproduced?",
+      "response": {
+        "code": 0,
+        "data": {
+          "has_more": false,
+          "items": [
+            {
+              "fields": {
+                "Email": [
+                  {
+                    "link": "<redacted:email>",
+                    "text": "<redacted:email>",
+                    "type": "url"
+                  }
+                ],
+                "Text": [
+                  {
+                    "text": "Text 1",
+                    "type": "text"
+                  }
+                ],
+                "lookup": {
+                  "type": 1,
+                  "value": [
+                    {
+                      "text": "Text 2 Test Data 2",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 3",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 1",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 5",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 4",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "record_id": "rec88HpEvHGLV4"
+            },
+            {
+              "fields": {
+                "Email": [
+                  {
+                    "link": "<redacted:email>",
+                    "text": "<redacted:email>",
+                    "type": "url"
+                  }
+                ],
+                "Text": [
+                  {
+                    "text": "Text 2",
+                    "type": "text"
+                  }
+                ],
+                "lookup": {
+                  "type": 1,
+                  "value": [
+                    {
+                      "text": "Text 2 Test Data 2",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 3",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 1",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 5",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 4",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "record_id": "rec41UqRqMBEzI"
+            },
+            {
+              "fields": {
+                "Email": [
+                  {
+                    "link": "<redacted:email>",
+                    "text": "<redacted:email>",
+                    "type": "url"
+                  }
+                ],
+                "Text": [
+                  {
+                    "text": "Text 3",
+                    "type": "text"
+                  }
+                ],
+                "lookup": {
+                  "type": 1,
+                  "value": [
+                    {
+                      "text": "Text 2 Test Data 2",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 3",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 1",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 5",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 4",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "record_id": "rec21KoSrDDYfZ"
+            },
+            {
+              "fields": {
+                "Email": [
+                  {
+                    "link": "<redacted:email>",
+                    "text": "<redacted:email>",
+                    "type": "url"
+                  }
+                ],
+                "Text": [
+                  {
+                    "text": "Text 4",
+                    "type": "text"
+                  }
+                ],
+                "lookup": {
+                  "type": 1,
+                  "value": [
+                    {
+                      "text": "Text 2 Test Data 2",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 3",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 1",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 5",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 4",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "record_id": "rec35QlZlLFDhE"
+            },
+            {
+              "fields": {
+                "Email": [
+                  {
+                    "link": "<redacted:email>",
+                    "text": "<redacted:email>",
+                    "type": "url"
+                  }
+                ],
+                "Text": [
+                  {
+                    "text": "Text 5",
+                    "type": "text"
+                  }
+                ],
+                "lookup": {
+                  "type": 1,
+                  "value": [
+                    {
+                      "text": "Text 2 Test Data 2",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 3",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 1",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 5",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 4",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "record_id": "rec48UhAcMVEaR"
+            },
+            {
+              "fields": {
+                "Email": [
+                  {
+                    "link": "<redacted:email>",
+                    "text": "<redacted:email>",
+                    "type": "url"
+                  }
+                ],
+                "Text": [
+                  {
+                    "text": "Text 6",
+                    "type": "text"
+                  }
+                ],
+                "lookup": {
+                  "type": 1,
+                  "value": [
+                    {
+                      "text": "Text 2 Test Data 2",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 3",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 1",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 5",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 4",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "record_id": "recvrcu7ydmoHm"
+            }
+          ],
+          "total": 6
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "_probe": "q1-stage-pagination",
+      "_endpoint": "…/records/search?page_size=1",
+      "_method": "POST",
+      "_http_status": 200,
+      "_lark_code": 0,
+      "_lark_msg": "success",
+      "_verdict": "OK",
+      "_note": "min page size?",
+      "response": {
+        "code": 0,
+        "data": {
+          "has_more": true,
+          "items": [
+            {
+              "fields": {
+                "Email": [
+                  {
+                    "link": "<redacted:email>",
+                    "text": "<redacted:email>",
+                    "type": "url"
+                  }
+                ],
+                "Text": [
+                  {
+                    "text": "Text 1",
+                    "type": "text"
+                  }
+                ],
+                "lookup": {
+                  "type": 1,
+                  "value": [
+                    {
+                      "text": "Text 2 Test Data 2",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 3",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 1",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 5",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 4",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "record_id": "rec88HpEvHGLV4"
+            }
+          ],
+          "page_token": "cGFnZVRva2VuOjE=",
+          "total": 6
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "_probe": "q1-stage-pagination",
+      "_endpoint": "…/records/search (page_token walk)",
+      "_method": "POST",
+      "_http_status": 200,
+      "_lark_code": 0,
+      "_lark_msg": "success",
+      "_verdict": "OK",
+      "_note": "walk step 1",
+      "response": {
+        "code": 0,
+        "data": {
+          "has_more": true,
+          "items": [
+            {
+              "fields": {
+                "Email": [
+                  {
+                    "link": "<redacted:email>",
+                    "text": "<redacted:email>",
+                    "type": "url"
+                  }
+                ],
+                "Text": [
+                  {
+                    "text": "Text 3",
+                    "type": "text"
+                  }
+                ],
+                "lookup": {
+                  "type": 1,
+                  "value": [
+                    {
+                      "text": "Text 2 Test Data 2",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 3",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 1",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 5",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 4",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "record_id": "rec21KoSrDDYfZ"
+            },
+            {
+              "fields": {
+                "Email": [
+                  {
+                    "link": "<redacted:email>",
+                    "text": "<redacted:email>",
+                    "type": "url"
+                  }
+                ],
+                "Text": [
+                  {
+                    "text": "Text 4",
+                    "type": "text"
+                  }
+                ],
+                "lookup": {
+                  "type": 1,
+                  "value": [
+                    {
+                      "text": "Text 2 Test Data 2",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 3",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 1",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 5",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 4",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "record_id": "rec35QlZlLFDhE"
+            }
+          ],
+          "page_token": "cGFnZVRva2VuOjQ=",
+          "total": 6
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "_probe": "q1-stage-pagination",
+      "_endpoint": "…/records/search (page_token walk)",
+      "_method": "POST",
+      "_http_status": 200,
+      "_lark_code": 0,
+      "_lark_msg": "success",
+      "_verdict": "OK",
+      "_note": "walk step 2",
+      "response": {
+        "code": 0,
+        "data": {
+          "has_more": false,
+          "items": [
+            {
+              "fields": {
+                "Email": [
+                  {
+                    "link": "<redacted:email>",
+                    "text": "<redacted:email>",
+                    "type": "url"
+                  }
+                ],
+                "Text": [
+                  {
+                    "text": "Text 5",
+                    "type": "text"
+                  }
+                ],
+                "lookup": {
+                  "type": 1,
+                  "value": [
+                    {
+                      "text": "Text 2 Test Data 2",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 3",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 1",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 5",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 4",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "record_id": "rec48UhAcMVEaR"
+            },
+            {
+              "fields": {
+                "Email": [
+                  {
+                    "link": "<redacted:email>",
+                    "text": "<redacted:email>",
+                    "type": "url"
+                  }
+                ],
+                "Text": [
+                  {
+                    "text": "Text 6",
+                    "type": "text"
+                  }
+                ],
+                "lookup": {
+                  "type": 1,
+                  "value": [
+                    {
+                      "text": "Text 2 Test Data 2",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 3",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 1",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 5",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 4",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "record_id": "recvrcu7ydmoHm"
+            }
+          ],
+          "total": 6
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "_probe": "q1-stage-pagination",
+      "_endpoint": "…/records?page_size=2",
+      "_method": "GET",
+      "_http_status": 200,
+      "_lark_code": 0,
+      "_lark_msg": "success",
+      "_verdict": "OK",
+      "_note": "legacy list, query page_size",
+      "response": {
+        "code": 0,
+        "data": {
+          "has_more": true,
+          "items": [
+            {
+              "fields": {
+                "Email": "<redacted:email>",
+                "Text": "Text 1",
+                "lookup": [
+                  {
+                    "text": "Text 2 Test Data 2",
+                    "type": "text"
+                  },
+                  {
+                    "text": ",",
+                    "type": "text"
+                  },
+                  {
+                    "text": "Text 2 Test Data 3",
+                    "type": "text"
+                  },
+                  {
+                    "text": ",",
+                    "type": "text"
+                  },
+                  {
+                    "text": "Text 2 Test Data 1",
+                    "type": "text"
+                  },
+                  {
+                    "text": ",",
+                    "type": "text"
+                  },
+                  {
+                    "text": "Text 2 Test Data 5",
+                    "type": "text"
+                  },
+                  {
+                    "text": ",",
+                    "type": "text"
+                  },
+                  {
+                    "text": "Text 2 Test Data 4",
+                    "type": "text"
+                  }
+                ]
+              },
+              "id": "rec88HpEvHGLV4",
+              "record_id": "rec88HpEvHGLV4"
+            },
+            {
+              "fields": {
+                "Email": "<redacted:email>",
+                "Text": "Text 2",
+                "lookup": [
+                  {
+                    "text": "Text 2 Test Data 2",
+                    "type": "text"
+                  },
+                  {
+                    "text": ",",
+                    "type": "text"
+                  },
+                  {
+                    "text": "Text 2 Test Data 3",
+                    "type": "text"
+                  },
+                  {
+                    "text": ",",
+                    "type": "text"
+                  },
+                  {
+                    "text": "Text 2 Test Data 1",
+                    "type": "text"
+                  },
+                  {
+                    "text": ",",
+                    "type": "text"
+                  },
+                  {
+                    "text": "Text 2 Test Data 5",
+                    "type": "text"
+                  },
+                  {
+                    "text": ",",
+                    "type": "text"
+                  },
+                  {
+                    "text": "Text 2 Test Data 4",
+                    "type": "text"
+                  }
+                ]
+              },
+              "id": "rec41UqRqMBEzI",
+              "record_id": "rec41UqRqMBEzI"
+            }
+          ],
+          "page_token": "rec41UqRqMBEzI",
+          "total": 6
+        },
+        "msg": "success"
+      }
+    }
+  ]
+}

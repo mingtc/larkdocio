@@ -1,0 +1,16 @@
+{
+  "_probe": "ld466-05-re-read-is-the-deletion-proof",
+  "_endpoint": "GET /open-apis/bitable/v1/apps/:app_token",
+  "_method": "GET",
+  "_http_status": 200,
+  "_lark_code": 1002,
+  "_lark_msg": "note has been deleted",
+  "_verdict": "DENIED_OR_ERROR",
+  "_note": "question (d), the LD-453 precedent: the delete's code:0 is acceptance, this re-read is the proof. code in OBJECT_GONE_CODES (1254041, 1002, 91402)? True",
+  "response": {
+    "code": 1002,
+    "msg": "note has been deleted",
+    "data": {}
+  },
+  "_gone_by_oracle": true
+}

@@ -1,0 +1,17 @@
+{
+  "n": 756,
+  "label": "LD420 leg2 F POST TRANSFER DELETABILITY can the harness still delete D3",
+  "credential_pair": "WRITE",
+  "request": {
+    "method": "DELETE",
+    "path": "/open-apis/drive/v1/files/Example8aed997554e84478fc85?type=docx",
+    "body": null,
+    "headers": [
+      "Authorization: Bearer <redacted>"
+    ]
+  },
+  "http_status": null,
+  "response": {
+    "_error": "LarkAPIError: delete document failed: Code: 1062501, Msg: operate node no permission."
+  }
+}

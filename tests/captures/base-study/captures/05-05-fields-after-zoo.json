@@ -1,0 +1,296 @@
+{
+  "_probe": "05",
+  "_endpoint": ".../tables/tblIwcDAKXzn8xXB/fields",
+  "_method": "GET",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": "success",
+  "_verdict": "OK",
+  "_note": "THE field-type registry capture: every type's schema shape as Lark returns it (offline-fixture seed)",
+  "response": {
+    "code": 0,
+    "data": {
+      "has_more": false,
+      "items": [
+        {
+          "field_id": "fld7LmTJKs",
+          "field_name": "Text",
+          "is_extend": false,
+          "is_primary": true,
+          "is_synced": false,
+          "property": null,
+          "type": 1,
+          "ui_type": "Text"
+        },
+        {
+          "field_id": "fld4OAyJBe",
+          "field_name": "Single option",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "options": []
+          },
+          "type": 3,
+          "ui_type": "SingleSelect"
+        },
+        {
+          "field_id": "fldt7z0j2W",
+          "field_name": "Date",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "auto_fill": false,
+            "date_formatter": "yyyy/MM/dd"
+          },
+          "type": 5,
+          "ui_type": "DateTime"
+        },
+        {
+          "field_id": "fldTtzjl88",
+          "field_name": "Attachment",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": null,
+          "type": 17,
+          "ui_type": "Attachment"
+        },
+        {
+          "field_id": "fldEWuDBLB",
+          "field_name": "Z-Number",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "formatter": "0.00"
+          },
+          "type": 2,
+          "ui_type": "Number"
+        },
+        {
+          "field_id": "fldSpd2mTL",
+          "field_name": "Z-Progress",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "formatter": "0.0%",
+            "max": 1,
+            "min": 0
+          },
+          "type": 2,
+          "ui_type": "Progress"
+        },
+        {
+          "field_id": "fld1syA9JJ",
+          "field_name": "Z-SingleSelect",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "options": [
+              {
+                "color": 0,
+                "id": "opt8LFsYLy",
+                "name": "Alpha"
+              },
+              {
+                "color": 1,
+                "id": "optku4zoQM",
+                "name": "Beta"
+              }
+            ]
+          },
+          "type": 3,
+          "ui_type": "SingleSelect"
+        },
+        {
+          "field_id": "fld3NWqFzX",
+          "field_name": "Z-MultiSelect",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "options": [
+              {
+                "color": 0,
+                "id": "optsX1Er67",
+                "name": "Red"
+              },
+              {
+                "color": 1,
+                "id": "optLJwM2cg",
+                "name": "Green"
+              }
+            ]
+          },
+          "type": 4,
+          "ui_type": "MultiSelect"
+        },
+        {
+          "field_id": "fldHz3AxGP",
+          "field_name": "Z-DateTime",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "auto_fill": false,
+            "date_formatter": "yyyy/MM/dd HH:mm"
+          },
+          "type": 5,
+          "ui_type": "DateTime"
+        },
+        {
+          "field_id": "fldiEKJo5N",
+          "field_name": "Z-Checkbox",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": null,
+          "type": 7,
+          "ui_type": "Checkbox"
+        },
+        {
+          "field_id": "fldDB01JDB",
+          "field_name": "Z-User",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "multiple": false
+          },
+          "type": 11,
+          "ui_type": "User"
+        },
+        {
+          "field_id": "fldlyyhSwp",
+          "field_name": "Z-Url",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": null,
+          "type": 15,
+          "ui_type": "Url"
+        },
+        {
+          "field_id": "fldL4KmAxC",
+          "field_name": "Z-Attachment",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": null,
+          "type": 17,
+          "ui_type": "Attachment"
+        },
+        {
+          "field_id": "fldLfknB0Z",
+          "field_name": "Z-Location",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "location": {
+              "input_type": "not_limit"
+            }
+          },
+          "type": 22,
+          "ui_type": "Location"
+        },
+        {
+          "field_id": "fld6C2mwWS",
+          "field_name": "Z-GroupChat",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "multiple": true
+          },
+          "type": 23,
+          "ui_type": "GroupChat"
+        },
+        {
+          "field_id": "fldTN48LGD",
+          "field_name": "Z-CreatedTime",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "date_formatter": "yyyy/MM/dd"
+          },
+          "type": 1001,
+          "ui_type": "CreatedTime"
+        },
+        {
+          "field_id": "fldH0iU60p",
+          "field_name": "Z-ModifiedTime",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "date_formatter": "yyyy/MM/dd"
+          },
+          "type": 1002,
+          "ui_type": "ModifiedTime"
+        },
+        {
+          "field_id": "fldcy8uPkH",
+          "field_name": "Z-CreatedUser",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": null,
+          "type": 1003,
+          "ui_type": "CreatedUser"
+        },
+        {
+          "field_id": "fldwSAFutX",
+          "field_name": "Z-AutoNumber",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "auto_serial": {
+              "type": "auto_increment_number"
+            }
+          },
+          "type": 1005,
+          "ui_type": "AutoNumber"
+        },
+        {
+          "field_id": "fldjcEjtJl",
+          "field_name": "Z-Barcode",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "allowed_edit_modes": {
+              "manual": true,
+              "scan": true
+            }
+          },
+          "type": 1,
+          "ui_type": "Barcode"
+        },
+        {
+          "field_id": "fldhmKHmw1",
+          "field_name": "Z-Link",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "multiple": true,
+            "table_id": "tblDghjoOXsg03o9",
+            "table_name": "Z-LinkTarget"
+          },
+          "type": 18,
+          "ui_type": "SingleLink"
+        }
+      ],
+      "page_token": "fldhmKHmw1",
+      "total": 21
+    },
+    "msg": "success"
+  }
+}

@@ -1,0 +1,304 @@
+{
+ "_issue": "LD-480",
+ "_measured_at": "2026-08-14",
+ "_not_measured_here": {
+  "note": "the FIELD-delete route is a different route and is not touched by this probe; p0-5-02's source_duplex_survived:false stands as it is (D-59).",
+  "route": "DELETE /open-apis/bitable/v1/apps/:app_token/tables/:table_id/fields/:field_id"
+ },
+ "_probe": "ld480-02",
+ "_question": "is the SOURCE two-way link column's removal synchronous with DELETE …/tables/:table_id, or does it lag it?",
+ "_residue": "none — this probe uploads nothing and mints no media token",
+ "_routes": {
+  "the act": "DELETE /open-apis/bitable/v1/apps/:app_token/tables/:table_id",
+  "the reading": "GET /open-apis/bitable/v1/apps/:app_token/tables/:table_id/fields"
+ },
+ "_verdict": {
+  "one_way_present_at_each_poll": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "two_way_ever_present_after_delete": false,
+  "two_way_presence_is_STABLE_across_the_window": true,
+  "two_way_present_at_each_poll": [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  "two_way_still_present_at_the_last_poll": false
+ },
+ "observations": {
+  "before_the_delete": {
+   "_route": "GET /open-apis/bitable/v1/apps/:app_token/tables/:table_id/fields",
+   "columns": [
+    "Attachment",
+    "Date",
+    "Single option",
+    "Text",
+    "ld480-one-way",
+    "ld480-two-way"
+   ],
+   "ld480-one-way": {
+    "field_payload": {
+     "field_id": "fld0LP49MB",
+     "field_name": "ld480-one-way",
+     "is_primary": false,
+     "property": {
+      "multiple": true,
+      "table_id": "tblgVhnWLAYADIGC",
+      "table_name": "ld480-target"
+     },
+     "type": 18,
+     "ui_type": "SingleLink"
+    },
+    "present": true,
+    "state": "target-table-live",
+    "target_table_id": "tblgVhnWLAYADIGC",
+    "target_table_name_present": true
+   },
+   "ld480-two-way": {
+    "field_payload": {
+     "field_id": "fldsLvf50c",
+     "field_name": "ld480-two-way",
+     "is_primary": false,
+     "property": {
+      "back_field_name": "Table-ld480-two-way",
+      "multiple": true,
+      "table_id": "tblgVhnWLAYADIGC",
+      "table_name": "ld480-target"
+     },
+     "type": 21,
+     "ui_type": "DuplexLink"
+    },
+    "present": true,
+    "state": "target-table-live",
+    "target_table_id": "tblgVhnWLAYADIGC",
+    "target_table_name_present": true
+   }
+  },
+  "polls": [
+   {
+    "_route": "GET /open-apis/bitable/v1/apps/:app_token/tables/:table_id/fields",
+    "columns": [
+     "Attachment",
+     "Date",
+     "Single option",
+     "Text",
+     "ld480-one-way"
+    ],
+    "ld480-one-way": {
+     "field_payload": {
+      "field_id": "fld0LP49MB",
+      "field_name": "ld480-one-way",
+      "is_primary": false,
+      "property": {
+       "multiple": true,
+       "table_id": "tblgVhnWLAYADIGC"
+      },
+      "type": 18,
+      "ui_type": "SingleLink"
+     },
+     "present": true,
+     "state": "target-table-missing",
+     "target_table_id": "tblgVhnWLAYADIGC",
+     "target_table_name_present": false
+    },
+    "ld480-two-way": {
+     "field_payload": null,
+     "present": false,
+     "state": null,
+     "target_table_id": null,
+     "target_table_name_present": false
+    },
+    "scheduled_at": 0,
+    "seconds_after_delete_requested": 0.91
+   },
+   {
+    "_route": "GET /open-apis/bitable/v1/apps/:app_token/tables/:table_id/fields",
+    "columns": [
+     "Attachment",
+     "Date",
+     "Single option",
+     "Text",
+     "ld480-one-way"
+    ],
+    "ld480-one-way": {
+     "field_payload": {
+      "field_id": "fld0LP49MB",
+      "field_name": "ld480-one-way",
+      "is_primary": false,
+      "property": {
+       "multiple": true,
+       "table_id": "tblgVhnWLAYADIGC"
+      },
+      "type": 18,
+      "ui_type": "SingleLink"
+     },
+     "present": true,
+     "state": "target-table-missing",
+     "target_table_id": "tblgVhnWLAYADIGC",
+     "target_table_name_present": false
+    },
+    "ld480-two-way": {
+     "field_payload": null,
+     "present": false,
+     "state": null,
+     "target_table_id": null,
+     "target_table_name_present": false
+    },
+    "scheduled_at": 2,
+    "seconds_after_delete_requested": 2.23
+   },
+   {
+    "_route": "GET /open-apis/bitable/v1/apps/:app_token/tables/:table_id/fields",
+    "columns": [
+     "Attachment",
+     "Date",
+     "Single option",
+     "Text",
+     "ld480-one-way"
+    ],
+    "ld480-one-way": {
+     "field_payload": {
+      "field_id": "fld0LP49MB",
+      "field_name": "ld480-one-way",
+      "is_primary": false,
+      "property": {
+       "multiple": true,
+       "table_id": "tblgVhnWLAYADIGC"
+      },
+      "type": 18,
+      "ui_type": "SingleLink"
+     },
+     "present": true,
+     "state": "target-table-missing",
+     "target_table_id": "tblgVhnWLAYADIGC",
+     "target_table_name_present": false
+    },
+    "ld480-two-way": {
+     "field_payload": null,
+     "present": false,
+     "state": null,
+     "target_table_id": null,
+     "target_table_name_present": false
+    },
+    "scheduled_at": 5,
+    "seconds_after_delete_requested": 5.28
+   },
+   {
+    "_route": "GET /open-apis/bitable/v1/apps/:app_token/tables/:table_id/fields",
+    "columns": [
+     "Attachment",
+     "Date",
+     "Single option",
+     "Text",
+     "ld480-one-way"
+    ],
+    "ld480-one-way": {
+     "field_payload": {
+      "field_id": "fld0LP49MB",
+      "field_name": "ld480-one-way",
+      "is_primary": false,
+      "property": {
+       "multiple": true,
+       "table_id": "tblgVhnWLAYADIGC"
+      },
+      "type": 18,
+      "ui_type": "SingleLink"
+     },
+     "present": true,
+     "state": "target-table-missing",
+     "target_table_id": "tblgVhnWLAYADIGC",
+     "target_table_name_present": false
+    },
+    "ld480-two-way": {
+     "field_payload": null,
+     "present": false,
+     "state": null,
+     "target_table_id": null,
+     "target_table_name_present": false
+    },
+    "scheduled_at": 10,
+    "seconds_after_delete_requested": 10.3
+   },
+   {
+    "_route": "GET /open-apis/bitable/v1/apps/:app_token/tables/:table_id/fields",
+    "columns": [
+     "Attachment",
+     "Date",
+     "Single option",
+     "Text",
+     "ld480-one-way"
+    ],
+    "ld480-one-way": {
+     "field_payload": {
+      "field_id": "fld0LP49MB",
+      "field_name": "ld480-one-way",
+      "is_primary": false,
+      "property": {
+       "multiple": true,
+       "table_id": "tblgVhnWLAYADIGC"
+      },
+      "type": 18,
+      "ui_type": "SingleLink"
+     },
+     "present": true,
+     "state": "target-table-missing",
+     "target_table_id": "tblgVhnWLAYADIGC",
+     "target_table_name_present": false
+    },
+    "ld480-two-way": {
+     "field_payload": null,
+     "present": false,
+     "state": null,
+     "target_table_id": null,
+     "target_table_name_present": false
+    },
+    "scheduled_at": 20,
+    "seconds_after_delete_requested": 20.45
+   },
+   {
+    "_route": "GET /open-apis/bitable/v1/apps/:app_token/tables/:table_id/fields",
+    "columns": [
+     "Attachment",
+     "Date",
+     "Single option",
+     "Text",
+     "ld480-one-way"
+    ],
+    "ld480-one-way": {
+     "field_payload": {
+      "field_id": "fld0LP49MB",
+      "field_name": "ld480-one-way",
+      "is_primary": false,
+      "property": {
+       "multiple": true,
+       "table_id": "tblgVhnWLAYADIGC"
+      },
+      "type": 18,
+      "ui_type": "SingleLink"
+     },
+     "present": true,
+     "state": "target-table-missing",
+     "target_table_id": "tblgVhnWLAYADIGC",
+     "target_table_name_present": false
+    },
+    "ld480-two-way": {
+     "field_payload": null,
+     "present": false,
+     "state": null,
+     "target_table_id": null,
+     "target_table_name_present": false
+    },
+    "scheduled_at": 40,
+    "seconds_after_delete_requested": 40.25
+   }
+  ]
+ }
+}

@@ -1,0 +1,55 @@
+{
+  "_probe": "p3",
+  "_endpoint": ".../tables/tblCsqtsRXFIOtwF/views/{view_id}",
+  "_method": "DELETE",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": null,
+  "_verdict": "OK",
+  "_note": "view DELETE return shape, and whether the LAST view is protected (the destructive-fence input)",
+  "response": {
+    "code": 0,
+    "data": {
+      "grid": {
+        "view_id": "vew3TGwDLu",
+        "code": 0,
+        "msg": "success",
+        "data": {}
+      },
+      "kanban": {
+        "view_id": "vewvILXTX2",
+        "code": 0,
+        "msg": "success",
+        "data": {}
+      },
+      "gallery": {
+        "view_id": "vewxXVHYqy",
+        "code": 0,
+        "msg": "success",
+        "data": {}
+      },
+      "gantt": {
+        "view_id": "vewWmOEhO9",
+        "code": 0,
+        "msg": "success",
+        "data": {}
+      },
+      "form": {
+        "view_id": "vew7HYATaP",
+        "code": 0,
+        "msg": "success",
+        "data": {}
+      },
+      "views_after_delete": [
+        {
+          "view_id": "vew74UFHMG",
+          "view_type": "grid"
+        }
+      ],
+      "delete_last_view": {
+        "code": 1254023,
+        "msg": "LastViewDeleteForbidden"
+      }
+    }
+  }
+}

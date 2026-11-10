@@ -1,0 +1,20 @@
+{
+  "n": 27,
+  "label": "leg2 delete version 2sDlEF (measured, never shipped this round)",
+  "credential_pair": "WRITE",
+  "request": {
+    "method": "DELETE",
+    "path": "/open-apis/drive/v1/files/Example9668460258a2a652cfde/versions/2sDlEF?obj_type=docx",
+    "body": null,
+    "headers": [
+      "Authorization: Bearer <redacted>"
+    ]
+  },
+  "http_status": 200,
+  "seconds": 0.233,
+  "response": {
+    "code": 0,
+    "data": {},
+    "msg": "Success"
+  }
+}

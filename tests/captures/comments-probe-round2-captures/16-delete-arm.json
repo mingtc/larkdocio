@@ -1,0 +1,183 @@
+{
+  "probe": "16-delete-arm",
+  "started_at": "2026-07-29T09:29:13.642956+00:00",
+  "target_example": "Simple",
+  "doc_target_comment_id": "7667754726531878624",
+  "sheet_target_comment_id": "7667756144613461727",
+  "app_fingerprint_write": "ex9fa8801d8f",
+  "human_author_of_the_targets": "ou_exampleowner00000000000000000001",
+  "app_bot_author_for_contrast": "ou_examplebot0000000000000000000001",
+  "doc_arm": {
+    "surface": "docx-zoo",
+    "file_type": "docx",
+    "comment_id": "7667754726531878624",
+    "paths": [
+      {
+        "path": "DELETE …/comments/{cid}",
+        "http_status": 404,
+        "code": null,
+        "msg": null,
+        "non_json_body": "404 page not found",
+        "route_absent": true,
+        "removed": false
+      },
+      {
+        "path": "DELETE …/comments/{cid}/replies/{rid}",
+        "reply_id": "7667754726552784605",
+        "reply_author": "ou_exampleowner00000000000000000001",
+        "http_status": 403,
+        "code": 1069303,
+        "msg": "forbidden",
+        "response_verbatim": {
+          "code": 1069303,
+          "msg": "forbidden",
+          "error": {
+            "log_id": "2026072917291590921480E30F20097200"
+          }
+        },
+        "removed": false
+      }
+    ],
+    "captures": [
+      {
+        "label": "delete-comment-direct",
+        "method": "DELETE",
+        "path": "drive/v1/files/{tok}/comments/{cid}",
+        "request_body": null,
+        "http_status": 404,
+        "code": null,
+        "msg": null,
+        "response": {
+          "_non_json_body": "404 page not found"
+        }
+      },
+      {
+        "label": "replies-list",
+        "method": "GET",
+        "path": "drive/v1/files/{tok}/comments/{cid}/replies",
+        "request_body": null,
+        "http_status": 200,
+        "code": 0,
+        "msg": "Success",
+        "response": {
+          "code": 0,
+          "data": {
+            "has_more": false,
+            "items": [
+              {
+                "content": {
+                  "elements": [
+                    {
+                      "docs_link": null,
+                      "person": null,
+                      "text_run": {
+                        "text": "Simple Open Comment"
+                      },
+                      "type": "text_run"
+                    }
+                  ]
+                },
+                "create_time": 1785288268,
+                "extra": {
+                  "image_list": []
+                },
+                "reply_id": "7667754726552784605",
+                "update_time": 1785288268,
+                "user_id": "ou_exampleowner00000000000000000001"
+              }
+            ],
+            "page_token": "0"
+          },
+          "msg": "Success"
+        }
+      },
+      {
+        "label": "delete-reply",
+        "method": "DELETE",
+        "path": "drive/v1/files/{tok}/comments/{cid}/replies/{rid}",
+        "request_body": null,
+        "http_status": 403,
+        "code": 1069303,
+        "msg": "forbidden",
+        "response": {
+          "code": 1069303,
+          "msg": "forbidden",
+          "error": {
+            "log_id": "2026072917291590921480E30F20097200"
+          }
+        },
+        "reply_id": "7667754726552784605"
+      }
+    ],
+    "replies": [
+      {
+        "reply_id": "7667754726552784605",
+        "user_id": "ou_exampleowner00000000000000000001"
+      }
+    ],
+    "recheck": [
+      {
+        "when": "immediate",
+        "still_listed": true,
+        "comment_count": 7,
+        "ids": [
+          "7667754726531878624",
+          "7667754810224938728",
+          "7667755056904572640",
+          "7667755191499755240",
+          "7667755630672793311",
+          "7667755822109167325",
+          "7667877938850762473"
+        ]
+      },
+      {
+        "when": "after-pause",
+        "still_listed": true,
+        "comment_count": 7,
+        "ids": [
+          "7667754726531878624",
+          "7667754810224938728",
+          "7667755056904572640",
+          "7667755191499755240",
+          "7667755630672793311",
+          "7667755822109167325",
+          "7667877938850762473"
+        ]
+      }
+    ],
+    "removed": false,
+    "removal_codes": [
+      1069303
+    ]
+  },
+  "sheet_arm_decision": {
+    "run": false,
+    "reasoning": "The doc arm was refused with [1069303], which is an OWNERSHIP-shaped refusal — it is about who the caller is, not about which file type it named. That logic is file-type-independent, so the sheet arm would re-ask an answered question and would spend an irreplaceable hand-made fixture to do it. NOT RUN, per the issue's amplifier ('do not spend the sheet's Simple Comment on the same question unless the surfaces plausibly differ')."
+  },
+  "sheet_arm": null,
+  "sheet_target_still_present": true,
+  "sheet_comment_count": 5,
+  "anchor_block_after_delete_attempt": {
+    "block_id": "Example913189730f710c82e3a5",
+    "comment_id_view": {
+      "container_key": "ordered",
+      "block_comment_ids": null,
+      "element_comment_ids": [
+        null
+      ],
+      "element_contents": [
+        "Simple Open Comment"
+      ]
+    },
+    "plain_text": "Simple Open Comment",
+    "note": "This block's inline anchor was ALREADY orphaned by probe 15 (AC6), so this reading cannot separate 'the delete cleared it' from 'the edit cleared it'. Recorded for completeness, not as evidence."
+  },
+  "verdict": {
+    "can_an_app_remove_a_comment_a_human_authored": false,
+    "docx": "NO — every removal path was refused; codes [1069303].",
+    "sheets": "NOT TESTED — see sheet_arm_decision",
+    "direct_comment_delete_endpoint": "ABSENT on both surfaces — the gateway answers with a non-JSON 404, exactly as round 1 recorded.",
+    "implication_for_a_comments_write_surface": "Removal can be documented as app-own-threads-only, and the API enforces it, so the library's refusal is a disclosure rather than a guardrail it must build."
+  },
+  "api_calls": 7
+}

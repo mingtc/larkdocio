@@ -1,0 +1,38 @@
+{
+  "_probe": "06",
+  "_endpoint": ".../tables/tblLAHFqgMhRGuPX/records",
+  "_method": "POST",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": "success",
+  "_verdict": "OK",
+  "_note": "create echo — what the API says it stored, per type",
+  "response": {
+    "code": 0,
+    "data": {
+      "record": {
+        "fields": {
+          "Barcode": "BC-0001",
+          "Checkbox": true,
+          "Currency": 19.99,
+          "DateTime": 1785061011000,
+          "MultiSelect": [
+            "Red",
+            "Green"
+          ],
+          "Number": 42.5,
+          "Phone": "+12025550100",
+          "SingleSelect": "Alpha",
+          "Text": "THE ROW",
+          "Url": {
+            "link": "https://example.invalid/x",
+            "text": "Example"
+          }
+        },
+        "id": "recvrymubKYG8P",
+        "record_id": "recvrymubKYG8P"
+      }
+    },
+    "msg": "success"
+  }
+}

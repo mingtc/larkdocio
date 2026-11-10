@@ -1,0 +1,24 @@
+{
+  "_probe": "02",
+  "_endpoint": "/open-apis/bitable/v1/apps/Examplef5d787ae62ccf194cb22",
+  "_method": "GET",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": "success",
+  "_verdict": "OK",
+  "_note": "head half of the reader-surfaced compound token Examplef5d787ae62ccf194cb22_tbloRVXCoxKjVR5A",
+  "response": {
+    "code": 0,
+    "data": {
+      "app": {
+        "app_token": "Examplef5d787ae62ccf194cb22",
+        "formula_type": 2,
+        "is_advanced": false,
+        "name": "Untitled base",
+        "revision": 0,
+        "time_zone": "Asia/Singapore"
+      }
+    },
+    "msg": "success"
+  }
+}

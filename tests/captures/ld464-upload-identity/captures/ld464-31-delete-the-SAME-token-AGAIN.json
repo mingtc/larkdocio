@@ -1,0 +1,17 @@
+{
+  "_probe": "31-delete-the-SAME-token-AGAIN",
+  "_endpoint": "/open-apis/drive/v1/files/:file_token",
+  "_method": "DELETE",
+  "_http_status": 404,
+  "_lark_code": 1061007,
+  "_lark_msg": "file has been delete.",
+  "_verdict": "DENIED_OR_ERROR",
+  "_note": "AC4: the code an already-trashed FILE token answers",
+  "response": {
+    "code": 1061007,
+    "msg": "file has been delete.",
+    "error": {
+      "log_id": "20260815061208F5D86118A647F4001059"
+    }
+  }
+}

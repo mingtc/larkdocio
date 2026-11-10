@@ -1,0 +1,122 @@
+{
+  "capture": "001-image-block-delete",
+  "probe": "probe_ld507_image_delete",
+  "issue": "LD-507",
+  "date": "2026-08-19",
+  "question": "does POST …/documents/{doc}/blocks/{parent}/children/batch_delete remove a child that is an IMAGE block (docx type 27)?",
+  "_scope": {
+    "tenant": "one (the operator's), via LARKDOCIO_DISPOSABLES_FOLDER",
+    "app_identity": "one — the WRITE pair (LARK_WRITE_APP_ID/SECRET)",
+    "token_kind": "tenant_access_token",
+    "route": "POST /open-apis/docx/v1/documents/{document_id}/blocks/{block_id}/children/batch_delete",
+    "block_type_measured": "image (docx block type 27), authored by larkdocio.write.media.put_image_in_document",
+    "parent_type": "table cell (docx block type 32)",
+    "document_kind": "a plain docx (not wiki-wrapped)",
+    "date": "2026-08-19",
+    "sends_that_are_the_question": 1,
+    "unmeasured_not_refuted": [
+      "board (43), iframe (26), Base embed (18), Sheet embed (30), Base named-view (53), synced origin (49), synced reference (50) — the other seven WRITE_HOSTILE types",
+      "an image whose parent is the document root or a list item rather than a table cell",
+      "any other delete route, a user_access_token, a wiki-wrapped document, another tenant or another region"
+    ]
+  },
+  "reused": {
+    "document_id": "Examplee952f37af51cbcffdce1",
+    "table_block_id": "doxlgExample3c9c34d6a6dcf68",
+    "cell_block_id": "doxlgExamplebcbb97c6d1b317b",
+    "image_block_id": "doxlgExample62d93f236e57a0b",
+    "media_file_token": "Examplec11ec9e2c11b40f4193c",
+    "minted_by": "LD-506 (dev/ld506-in-cell-image/captures/003-spend-ledger.json)"
+  },
+  "pre_state": {
+    "document_block_count": 11,
+    "cell_children": [
+      "doxlgExample860c572dfb19959",
+      "doxlgExampleb0651016353a877",
+      "doxlgExample62d93f236e57a0b"
+    ],
+    "image_index": 2,
+    "control_block_id": "doxlgExample860c572dfb19959",
+    "control_index": 0,
+    "control_block_type": 2
+  },
+  "question_image_27": {
+    "label": "THE QUESTION — image block (27)",
+    "parent_id": "doxlgExamplebcbb97c6d1b317b",
+    "start_index": 2,
+    "end_index": 3,
+    "accepted": true,
+    "code": 0,
+    "msg": "success",
+    "note": "ACCEPTANCE IS NOT THE VERDICT — see the read_back beside this record (R12 / D-55).",
+    "read_back": {
+      "block_id": "doxlgExample62d93f236e57a0b",
+      "parent_children_after": [
+        "doxlgExample860c572dfb19959",
+        "doxlgExampleb0651016353a877"
+      ],
+      "parent_still_lists_it": false,
+      "direct_read_resolves": false,
+      "direct_read_error": {
+        "raised": "LarkAPIError",
+        "code": 1770002,
+        "msg": "not found"
+      },
+      "direct_read_block_type": null,
+      "verdict": "gone",
+      "verdict_basis": "READ-BACK: the parent's own children list AND an independent get_block of the id. NEVER the delete call's own code:0."
+    }
+  },
+  "control_text_2": {
+    "label": "THE CONTROL — text block (2), same parent",
+    "parent_id": "doxlgExamplebcbb97c6d1b317b",
+    "start_index": 0,
+    "end_index": 1,
+    "accepted": true,
+    "code": 0,
+    "msg": "success",
+    "note": "ACCEPTANCE IS NOT THE VERDICT — see the read_back beside this record (R12 / D-55).",
+    "read_back": {
+      "block_id": "doxlgExample860c572dfb19959",
+      "parent_children_after": [
+        "doxlgExampleb0651016353a877"
+      ],
+      "parent_still_lists_it": false,
+      "direct_read_resolves": false,
+      "direct_read_error": {
+        "raised": "LarkAPIError",
+        "code": 1770002,
+        "msg": "not found"
+      },
+      "direct_read_block_type": null,
+      "verdict": "gone",
+      "verdict_basis": "READ-BACK: the parent's own children list AND an independent get_block of the id. NEVER the delete call's own code:0."
+    }
+  },
+  "post_state": {
+    "document_block_count": 10,
+    "block_ids": [
+      "Examplee952f37af51cbcffdce1",
+      "doxlgExample3c9c34d6a6dcf68",
+      "doxlgExamplefdcd83e6f9f2c53",
+      "doxlgExampleddacc5dcff5fec9",
+      "doxlgExample19f049012999344",
+      "doxlgExamplefa1821fbc2d0175",
+      "doxlgExample6da5a96cb59e2ec",
+      "doxlgExample18795a8c8cdfc67",
+      "doxlgExamplebcbb97c6d1b317b",
+      "doxlgExampleb0651016353a877"
+    ],
+    "image_block_present": false,
+    "control_block_present": false
+  },
+  "_outcome": "ROUTE_DELETES_IMAGE_BLOCK",
+  "_code": 0,
+  "_msg": "success",
+  "_sends": 11,
+  "_verdict_image_27": "gone",
+  "_verdict_control_text_2": "gone",
+  "_side_by_side": "image (27) → gone; text (2), same parent, same run → gone",
+  "_fork": "FORK A — larkdocio's type-level fence is over-broad for DELETE",
+  "teardown": "TRASHED — delete_document accepted; independent re-read no longer resolves the document"
+}

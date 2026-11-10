@@ -1,0 +1,165 @@
+{
+  "probe": "02b_export_fidelity",
+  "captures": {
+    "write_style": {
+      "label": "appendStyle",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Example8f0059b95ae797ae3980/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "c8d13e!A1:A1",
+          "style": {
+            "font": {
+              "bold": true
+            },
+            "backColor": "#FFFF00",
+            "formatter": "0.00%"
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "response": {
+        "code": 0,
+        "data": {
+          "updates": {
+            "revision": 2,
+            "spreadsheetToken": "Example8f0059b95ae797ae3980",
+            "updatedCells": 1,
+            "updatedColumns": 1,
+            "updatedRange": "c8d13e!A1:A1",
+            "updatedRows": 1
+          }
+        },
+        "msg": "success"
+      }
+    },
+    "read_unformatted": {
+      "label": "values Unformatted A1:A1",
+      "method": "GET",
+      "path": "/open-apis/sheets/v2/spreadsheets/Example8f0059b95ae797ae3980/values/c8d13e!A1:A1",
+      "request_body": null,
+      "http_status": 200,
+      "code": 0,
+      "response": {
+        "code": 0,
+        "data": {
+          "revision": 2,
+          "spreadsheetToken": "Example8f0059b95ae797ae3980",
+          "valueRange": {
+            "majorDimension": "ROWS",
+            "range": "c8d13e!A1:A1",
+            "revision": 2,
+            "values": [
+              [
+                0.1234
+              ]
+            ]
+          }
+        },
+        "msg": "success"
+      }
+    },
+    "read_formatted": {
+      "label": "values Formatted A1:A1",
+      "method": "GET",
+      "path": "/open-apis/sheets/v2/spreadsheets/Example8f0059b95ae797ae3980/values/c8d13e!A1:A1",
+      "request_body": null,
+      "http_status": 200,
+      "code": 0,
+      "response": {
+        "code": 0,
+        "data": {
+          "revision": 2,
+          "spreadsheetToken": "Example8f0059b95ae797ae3980",
+          "valueRange": {
+            "majorDimension": "ROWS",
+            "range": "c8d13e!A1:A1",
+            "revision": 2,
+            "values": [
+              [
+                "12.34%"
+              ]
+            ]
+          }
+        },
+        "msg": "success"
+      }
+    },
+    "export_create": {
+      "label": "export create",
+      "method": "POST",
+      "path": "/open-apis/drive/v1/export_tasks",
+      "request_body": {
+        "file_extension": "xlsx",
+        "token": "Example8f0059b95ae797ae3980",
+        "type": "sheet"
+      },
+      "http_status": 200,
+      "code": 0,
+      "response": {
+        "code": 0,
+        "data": {
+          "ticket": "7666898784341069545"
+        },
+        "msg": "success"
+      }
+    },
+    "export_poll_final": {
+      "label": "export poll final",
+      "method": "GET",
+      "path": "/open-apis/drive/v1/export_tasks/7666898784341069545",
+      "request_body": null,
+      "http_status": 200,
+      "code": 0,
+      "response": {
+        "code": 0,
+        "data": {
+          "result": {
+            "extra": {},
+            "file_extension": "xlsx",
+            "file_name": "larkdocio LD-107 export-fidelity",
+            "file_size": 19447,
+            "file_token": "Example06ee43f657c66705890b",
+            "job_error_msg": "success",
+            "job_status": 0,
+            "type": "sheet"
+          }
+        },
+        "msg": "success"
+      }
+    }
+  },
+  "xlsx_findings": {
+    "downloaded": true,
+    "http_status": 200,
+    "byte_len": 19447,
+    "is_zip": true,
+    "entries": [
+      "xl/styles.xml",
+      "docProps/core.xml",
+      "docProps/app.xml",
+      "xl/metadata.xml",
+      "[Content_Types].xml",
+      "xl/workbook.xml",
+      "xl/theme/theme1.xml",
+      "xl/worksheets/sheet1.xml",
+      "xl/sharedStrings.xml",
+      "xl/media/image1.png",
+      "xl/worksheets/_rels/sheet1.xml.rels",
+      "_rels/.rels",
+      "xl/_rels/workbook.xml.rels"
+    ],
+    "numFmt_formatCodes": [
+      "0.00%"
+    ],
+    "fill_rgb_values": [
+      "FF000000",
+      "FFFFFF00"
+    ],
+    "has_bold_b_tag": true,
+    "styles_xml_excerpt": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<styleSheet xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" mc:Ignorable=\"x14ac x16r2 xr xr9\" xmlns:x14ac=\"http://schemas.microsoft.com/office/spreadsheetml/2009/9/ac\" xmlns:x16r2=\"http://schemas.microsoft.com/office/spreadsheetml/2015/02/main\" xmlns:xr=\"http://schemas.microsoft.com/office/spreadsheetml/2014/revision\" xmlns:xr9=\"http://schemas.microsoft.com/office/spreadsheetml/2016/revision9\"><numFmts count=\"1\"><numFmt numFmtId=\"164\" formatCode=\"0.00%\"></numFmt></numFmts><fonts count=\"2\"><font><sz val=\"12\"></sz><color theme=\"1\"></color><name val=\"Calibri\"></name><family val=\"2\"></family><scheme val=\"minor\"></scheme></font><font><b val=\"true\"></b><sz val=\"10\"></sz><color rgb=\"FF000000\"></color><name val=\"Calibri\"></name><family val=\"2\"></family><scheme val=\"minor\"></scheme></font></fonts><fills count=\"3\"><fill><patternFill patternType=\"none\"><fgColor></fgColor><bgColor></bgColor></patternFill></fill><fill><patternFill patternType=\"gray125\"><fgColor></fgColor><bgColor></bgColor></patternFill></fill><fill><patternFill patternType=\"solid\"><fgColor rgb=\"FFFFFF00\"></fgColor><bgColor></bgColor></patternFill></fill></fills><borders count=\"1\"><border><left></left><right></right><top></top><bottom></bottom><diagonal></diagonal></border></borders><cellStyleXfs count=\"1\"><xf applyAlignment=\"true\" applyBorder=\"false\" applyFill=\"false\" applyFont=",
+    "A1_cell_xml": "<c r=\"A1\" s=\"1\"><v>0.1234</v></c>"
+  },
+  "total_calls": 10
+}

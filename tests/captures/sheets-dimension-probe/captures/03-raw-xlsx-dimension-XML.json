@@ -1,0 +1,135 @@
+{
+ "probe": "LD-185 round 3 — raw xlsx dimension XML + restore round-trip",
+ "at": "2026-07-30T07:15:41.011078+00:00",
+ "steps": [
+  {
+   "label": "row 2 height 60",
+   "request_body": {
+    "dimension": {
+     "sheetId": "c8c744",
+     "majorDimension": "ROWS",
+     "startIndex": 2,
+     "endIndex": 2
+    },
+    "dimensionProperties": {
+     "fixedSize": 60
+    }
+   },
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {},
+    "msg": "success"
+   }
+  },
+  {
+   "label": "row 3 HIDDEN",
+   "request_body": {
+    "dimension": {
+     "sheetId": "c8c744",
+     "majorDimension": "ROWS",
+     "startIndex": 3,
+     "endIndex": 3
+    },
+    "dimensionProperties": {
+     "visible": false
+    }
+   },
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {},
+    "msg": "success"
+   }
+  },
+  {
+   "label": "column B width 200",
+   "request_body": {
+    "dimension": {
+     "sheetId": "c8c744",
+     "majorDimension": "COLUMNS",
+     "startIndex": 2,
+     "endIndex": 2
+    },
+    "dimensionProperties": {
+     "fixedSize": 200
+    }
+   },
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {},
+    "msg": "success"
+   }
+  },
+  {
+   "label": "column C HIDDEN",
+   "request_body": {
+    "dimension": {
+     "sheetId": "c8c744",
+     "majorDimension": "COLUMNS",
+     "startIndex": 3,
+     "endIndex": 3
+    },
+    "dimensionProperties": {
+     "visible": false
+    }
+   },
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {},
+    "msg": "success"
+   }
+  },
+  {
+   "label": "RESTORE column C visible",
+   "request_body": {
+    "dimension": {
+     "sheetId": "c8c744",
+     "majorDimension": "COLUMNS",
+     "startIndex": 3,
+     "endIndex": 3
+    },
+    "dimensionProperties": {
+     "visible": true
+    }
+   },
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {},
+    "msg": "success"
+   }
+  },
+  {
+   "label": "RESTORE row 3 visible",
+   "request_body": {
+    "dimension": {
+     "sheetId": "c8c744",
+     "majorDimension": "ROWS",
+     "startIndex": 3,
+     "endIndex": 3
+    },
+    "dimensionProperties": {
+     "visible": true
+    }
+   },
+   "code": 0,
+   "msg": "success",
+   "response": {
+    "code": 0,
+    "data": {},
+    "msg": "success"
+   }
+  }
+ ],
+ "spreadsheet_token": "Example61e923d81cfc6cf92225",
+ "RAW_AFTER_DIMENSION_WRITES": "<sheetFormatPr defaultColWidth=\"13\" defaultRowHeight=\"20\"></sheetFormatPr><cols><col collapsed=\"false\" customWidth=\"true\" hidden=\"false\" max=\"2\" min=\"2\" style=\"0\" width=\"25\"></col><col collapsed=\"false\" customWidth=\"true\" hidden=\"false\" max=\"3\" min=\"3\" style=\"0\" width=\"13\"></col><col collapsed=\"false\" customWidth=\"true\" hidden=\"true\" max=\"3\" min=\"3\" style=\"0\" width=\"13\"></col></cols><sheetData><row r=\"1\"><c r=\"A1\" t=\"s\"><v>1</v></c><c r=\"B1\" t=\"s\"><v>2</v></c><c r=\"C1\" t=\"s\"><v>3</v></c></row><row customHeight=\"true\" ht=\"44\" r=\"2\"><c r=\"A2\" t=\"s\"><v>4</v></c><c r=\"B2\" t=\"s\"><v>5</v></c><c r=\"C2\" t=\"s\"><v>6</v></c></row><row customHeight=\"true\" hidden=\"true\" ht=\"20\" r=\"3\"><c r=\"A3\" t=\"s\"><v>7</v></c><c r=\"B3\" t=\"s\"><v>8</v></c><c r=\"C3\" t=\"s\"><v>9</v></c></row><row r=\"4\"><c r=\"A4\" t=\"s\"><v>10</v></c><c r=\"B4\" t=\"s\"><v>11</v></c><c r=\"C4\" t=\"s\"><v>12</v></c></row></sheetData><pageMargins bottom=\"0.75\" footer=\"0.3\" header=\"0.3\" left=\"0.7\" right=\"0.7\" top=\"0.75\"></pageMargins><picture r:id=\"rId1\"></picture></worksheet>",
+ "RAW_AFTER_RESTORE": "<sheetFormatPr defaultColWidth=\"13\" defaultRowHeight=\"20\"></sheetFormatPr><cols><col collapsed=\"false\" customWidth=\"true\" hidden=\"false\" max=\"2\" min=\"2\" style=\"0\" width=\"25\"></col></cols><sheetData><row r=\"1\"><c r=\"A1\" t=\"s\"><v>1</v></c><c r=\"B1\" t=\"s\"><v>2</v></c><c r=\"C1\" t=\"s\"><v>3</v></c></row><row customHeight=\"true\" ht=\"44\" r=\"2\"><c r=\"A2\" t=\"s\"><v>4</v></c><c r=\"B2\" t=\"s\"><v>5</v></c><c r=\"C2\" t=\"s\"><v>6</v></c></row><row r=\"3\"><c r=\"A3\" t=\"s\"><v>7</v></c><c r=\"B3\" t=\"s\"><v>8</v></c><c r=\"C3\" t=\"s\"><v>9</v></c></row><row r=\"4\"><c r=\"A4\" t=\"s\"><v>10</v></c><c r=\"B4\" t=\"s\"><v>11</v></c><c r=\"C4\" t=\"s\"><v>12</v></c></row></sheetData><pageMargins bottom=\"0.75\" footer=\"0.3\" header=\"0.3\" left=\"0.7\" right=\"0.7\" top=\"0.75\"></pageMargins><picture r:id=\"rId1\"></picture></worksheet>"
+}

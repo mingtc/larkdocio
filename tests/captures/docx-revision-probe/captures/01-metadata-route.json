@@ -1,0 +1,442 @@
+{
+  "probe": "LD-382 — a cheap docx revision route: metadata-only, ideally bulk",
+  "target_policy": "harness-created disposable docs only; never the canary, never a real doc",
+  "observed": {
+    "documents": {
+      "a": "Example99c4efb4e1dba287502f",
+      "b": "Examplebe63b50de0b5469e767b"
+    },
+    "answers": {
+      "i_metadata_only_revision": 2,
+      "i_metadata_route": "GET /open-apis/docx/v1/documents/{document_id}",
+      "i_meta_keys": [
+        "display_setting",
+        "document_id",
+        "revision_id",
+        "title"
+      ],
+      "ii_content_revision_same_moment": 2,
+      "ii_agreement": true,
+      "ii_agreement_after_edit": true,
+      "iii_batch_code": 0,
+      "iii_batch_row_keys": [
+        "create_time",
+        "doc_token",
+        "doc_type",
+        "latest_modify_time",
+        "latest_modify_user",
+        "owner_id",
+        "request_doc_info",
+        "sec_label_name",
+        "title",
+        "url"
+      ],
+      "iii_batch_rows": 2,
+      "iii_batch_carries_revision": false,
+      "iii_speculative": {
+        "A4 docx documents?document_ids= (speculative list form)": {
+          "http": 404,
+          "code": null,
+          "msg": null
+        },
+        "A5 docx documents/batch_get (speculative)": {
+          "http": 400,
+          "code": 99992402,
+          "msg": "field validation failed"
+        },
+        "A6 docx documents/batch_query GET (speculative)": {
+          "http": 400,
+          "code": 99992402,
+          "msg": "field validation failed"
+        }
+      },
+      "iv_meta_seconds": 0.119,
+      "iv_content_seconds": 0.35,
+      "iv_content_blocks": 2,
+      "iv_meta_http": 200,
+      "iv_credential_pair": "READ (LARK_READ_APP_*)",
+      "movement_meta_before": 2,
+      "movement_meta_after": 3,
+      "movement_content_after": 3,
+      "movement_meta_stable_across_reads": true,
+      "movement_batch_before": [
+        {
+          "create_time": "1786303858",
+          "doc_token": "Example99c4efb4e1dba287502f",
+          "doc_type": "docx",
+          "latest_modify_time": "1786303860",
+          "latest_modify_user": "ou_examplebot0000000000000000000001",
+          "owner_id": "ou_examplebot0000000000000000000001",
+          "request_doc_info": {
+            "doc_token": "Example99c4efb4e1dba287502f",
+            "doc_type": "docx"
+          },
+          "sec_label_name": "",
+          "title": "larkdocio-LD-382-probe-1 1786303854",
+          "url": ""
+        },
+        {
+          "create_time": "1786303859",
+          "doc_token": "Examplebe63b50de0b5469e767b",
+          "doc_type": "docx",
+          "latest_modify_time": "1786303859",
+          "latest_modify_user": "ou_examplebot0000000000000000000001",
+          "owner_id": "ou_examplebot0000000000000000000001",
+          "request_doc_info": {
+            "doc_token": "Examplebe63b50de0b5469e767b",
+            "doc_type": "docx"
+          },
+          "sec_label_name": "",
+          "title": "larkdocio-LD-382-probe-2 1786303854",
+          "url": ""
+        }
+      ],
+      "movement_batch_after": [
+        {
+          "create_time": "1786303858",
+          "doc_token": "Example99c4efb4e1dba287502f",
+          "doc_type": "docx",
+          "latest_modify_time": "1786303864",
+          "latest_modify_user": "ou_examplebot0000000000000000000001",
+          "owner_id": "ou_examplebot0000000000000000000001",
+          "request_doc_info": {
+            "doc_token": "Example99c4efb4e1dba287502f",
+            "doc_type": "docx"
+          },
+          "sec_label_name": "",
+          "title": "larkdocio-LD-382-probe-1 1786303854",
+          "url": ""
+        },
+        {
+          "create_time": "1786303859",
+          "doc_token": "Examplebe63b50de0b5469e767b",
+          "doc_type": "docx",
+          "latest_modify_time": "1786303859",
+          "latest_modify_user": "ou_examplebot0000000000000000000001",
+          "owner_id": "ou_examplebot0000000000000000000001",
+          "request_doc_info": {
+            "doc_token": "Examplebe63b50de0b5469e767b",
+            "doc_type": "docx"
+          },
+          "sec_label_name": "",
+          "title": "larkdocio-LD-382-probe-2 1786303854",
+          "url": ""
+        }
+      ],
+      "content_seconds_after": 0.3
+    }
+  },
+  "teardown": [
+    {
+      "document_id": "Example99c4efb4e1dba287502f",
+      "delete_code": 0,
+      "requery_http": 400,
+      "requery_code": 1770003,
+      "requery_msg": "resource deleted",
+      "gone": true
+    },
+    {
+      "document_id": "Examplebe63b50de0b5469e767b",
+      "delete_code": 0,
+      "requery_http": 400,
+      "requery_code": 1770003,
+      "requery_msg": "resource deleted",
+      "gone": true
+    }
+  ],
+  "steps": [
+    {
+      "label": "A1 docx meta GET (metadata-only route)",
+      "method": "GET",
+      "path": "/open-apis/docx/v1/documents/Example99c4efb4e1dba287502f",
+      "body": null,
+      "http_status": 200,
+      "seconds": 0.119,
+      "response": {
+        "code": 0,
+        "data": {
+          "document": {
+            "display_setting": {
+              "show_authors": true,
+              "show_comment_count": false,
+              "show_create_time": false,
+              "show_like_count": false,
+              "show_pv": false,
+              "show_related_matters": false,
+              "show_uv": false
+            },
+            "document_id": "Example99c4efb4e1dba287502f",
+            "revision_id": 2,
+            "title": "larkdocio-LD-382-probe-1 1786303854"
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "label": "A2 full get_docx_content (the expensive route)",
+      "seconds": 0.35,
+      "value": "(2, 2)"
+    },
+    {
+      "label": "A3 drive metas/batch_query x2 (bulk candidate)",
+      "method": "POST",
+      "path": "/open-apis/drive/v1/metas/batch_query",
+      "body": {
+        "request_docs": [
+          {
+            "doc_token": "Example99c4efb4e1dba287502f",
+            "doc_type": "docx"
+          },
+          {
+            "doc_token": "Examplebe63b50de0b5469e767b",
+            "doc_type": "docx"
+          }
+        ],
+        "with_url": false
+      },
+      "http_status": 200,
+      "seconds": 0.125,
+      "response": {
+        "code": 0,
+        "data": {
+          "metas": [
+            {
+              "create_time": "1786303858",
+              "doc_token": "Example99c4efb4e1dba287502f",
+              "doc_type": "docx",
+              "latest_modify_time": "1786303860",
+              "latest_modify_user": "ou_examplebot0000000000000000000001",
+              "owner_id": "ou_examplebot0000000000000000000001",
+              "request_doc_info": {
+                "doc_token": "Example99c4efb4e1dba287502f",
+                "doc_type": "docx"
+              },
+              "sec_label_name": "",
+              "title": "larkdocio-LD-382-probe-1 1786303854",
+              "url": ""
+            },
+            {
+              "create_time": "1786303859",
+              "doc_token": "Examplebe63b50de0b5469e767b",
+              "doc_type": "docx",
+              "latest_modify_time": "1786303859",
+              "latest_modify_user": "ou_examplebot0000000000000000000001",
+              "owner_id": "ou_examplebot0000000000000000000001",
+              "request_doc_info": {
+                "doc_token": "Examplebe63b50de0b5469e767b",
+                "doc_type": "docx"
+              },
+              "sec_label_name": "",
+              "title": "larkdocio-LD-382-probe-2 1786303854",
+              "url": ""
+            }
+          ]
+        },
+        "msg": "Success"
+      }
+    },
+    {
+      "label": "A4 docx documents?document_ids= (speculative list form)",
+      "method": "GET",
+      "path": "/open-apis/docx/v1/documents?document_ids=Example99c4efb4e1dba287502f,Examplebe63b50de0b5469e767b",
+      "body": null,
+      "http_status": 404,
+      "seconds": 0.029,
+      "response": {
+        "_raw": "404 page not found"
+      }
+    },
+    {
+      "label": "A5 docx documents/batch_get (speculative)",
+      "method": "GET",
+      "path": "/open-apis/docx/v1/documents/batch_get?document_ids=Example99c4efb4e1dba287502f,Examplebe63b50de0b5469e767b",
+      "body": null,
+      "http_status": 400,
+      "seconds": 0.06,
+      "response": {
+        "code": 99992402,
+        "msg": "field validation failed",
+        "error": {
+          "log_id": "20260810033103E11C069BEE383C042431",
+          "field_violations": [
+            {
+              "field": "document_id",
+              "description": "the min len is 27"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "A6 docx documents/batch_query GET (speculative)",
+      "method": "GET",
+      "path": "/open-apis/docx/v1/documents/batch_query?document_ids=Example99c4efb4e1dba287502f,Examplebe63b50de0b5469e767b",
+      "body": null,
+      "http_status": 400,
+      "seconds": 0.059,
+      "response": {
+        "code": 99992402,
+        "msg": "field validation failed",
+        "error": {
+          "log_id": "20260810033104EEF03AFBDDBF3755870C",
+          "field_violations": [
+            {
+              "field": "document_id",
+              "description": "the min len is 27"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "B1 docx meta GET after an edit",
+      "method": "GET",
+      "path": "/open-apis/docx/v1/documents/Example99c4efb4e1dba287502f",
+      "body": null,
+      "http_status": 200,
+      "seconds": 0.11,
+      "response": {
+        "code": 0,
+        "data": {
+          "document": {
+            "display_setting": {
+              "show_authors": true,
+              "show_comment_count": false,
+              "show_create_time": false,
+              "show_like_count": false,
+              "show_pv": false,
+              "show_related_matters": false,
+              "show_uv": false
+            },
+            "document_id": "Example99c4efb4e1dba287502f",
+            "revision_id": 3,
+            "title": "larkdocio-LD-382-probe-1 1786303854"
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "label": "B2 full get_docx_content after an edit",
+      "seconds": 0.3,
+      "value": "(3, 3)"
+    },
+    {
+      "label": "B3 drive metas/batch_query after an edit",
+      "method": "POST",
+      "path": "/open-apis/drive/v1/metas/batch_query",
+      "body": {
+        "request_docs": [
+          {
+            "doc_token": "Example99c4efb4e1dba287502f",
+            "doc_type": "docx"
+          },
+          {
+            "doc_token": "Examplebe63b50de0b5469e767b",
+            "doc_type": "docx"
+          }
+        ],
+        "with_url": false
+      },
+      "http_status": 200,
+      "seconds": 0.099,
+      "response": {
+        "code": 0,
+        "data": {
+          "metas": [
+            {
+              "create_time": "1786303858",
+              "doc_token": "Example99c4efb4e1dba287502f",
+              "doc_type": "docx",
+              "latest_modify_time": "1786303864",
+              "latest_modify_user": "ou_examplebot0000000000000000000001",
+              "owner_id": "ou_examplebot0000000000000000000001",
+              "request_doc_info": {
+                "doc_token": "Example99c4efb4e1dba287502f",
+                "doc_type": "docx"
+              },
+              "sec_label_name": "",
+              "title": "larkdocio-LD-382-probe-1 1786303854",
+              "url": ""
+            },
+            {
+              "create_time": "1786303859",
+              "doc_token": "Examplebe63b50de0b5469e767b",
+              "doc_type": "docx",
+              "latest_modify_time": "1786303859",
+              "latest_modify_user": "ou_examplebot0000000000000000000001",
+              "owner_id": "ou_examplebot0000000000000000000001",
+              "request_doc_info": {
+                "doc_token": "Examplebe63b50de0b5469e767b",
+                "doc_type": "docx"
+              },
+              "sec_label_name": "",
+              "title": "larkdocio-LD-382-probe-2 1786303854",
+              "url": ""
+            }
+          ]
+        },
+        "msg": "Success"
+      }
+    },
+    {
+      "label": "B4 docx meta GET again (stability across reads)",
+      "method": "GET",
+      "path": "/open-apis/docx/v1/documents/Example99c4efb4e1dba287502f",
+      "body": null,
+      "http_status": 200,
+      "seconds": 0.157,
+      "response": {
+        "code": 0,
+        "data": {
+          "document": {
+            "display_setting": {
+              "show_authors": true,
+              "show_comment_count": false,
+              "show_create_time": false,
+              "show_like_count": false,
+              "show_pv": false,
+              "show_related_matters": false,
+              "show_uv": false
+            },
+            "document_id": "Example99c4efb4e1dba287502f",
+            "revision_id": 3,
+            "title": "larkdocio-LD-382-probe-1 1786303854"
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "label": "teardown re-query Example99c4efb4e1dba287502f",
+      "method": "GET",
+      "path": "/open-apis/docx/v1/documents/Example99c4efb4e1dba287502f",
+      "body": null,
+      "http_status": 400,
+      "seconds": 0.125,
+      "response": {
+        "code": 1770003,
+        "msg": "resource deleted",
+        "error": {
+          "log_id": "20260810033112B27AC32AA599381D5ED0"
+        }
+      }
+    },
+    {
+      "label": "teardown re-query Examplebe63b50de0b5469e767b",
+      "method": "GET",
+      "path": "/open-apis/docx/v1/documents/Examplebe63b50de0b5469e767b",
+      "body": null,
+      "http_status": 400,
+      "seconds": 0.073,
+      "response": {
+        "code": 1770003,
+        "msg": "resource deleted",
+        "error": {
+          "log_id": "20260810033112D6AB5695E029AC2F0DB6"
+        }
+      }
+    }
+  ]
+}

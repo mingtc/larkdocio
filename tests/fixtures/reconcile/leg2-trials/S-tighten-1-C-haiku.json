@@ -1,0 +1,46 @@
+{
+  "trial": {
+    "id": "S-tighten-1-C-haiku",
+    "doc": "S",
+    "shape": "tighten",
+    "arm": "C-haiku",
+    "rep": 1
+  },
+  "cli_version": "2.1.195 (Claude Code)",
+  "instruction": "Tighten this document: cut redundancy, shorten long sentences, and make the prose crisper throughout.",
+  "instruction_mentions_markers": false,
+  "meta": {
+    "model_requested": "haiku",
+    "models_used": [
+      "claude-haiku-4-5-20251001"
+    ],
+    "duration_ms": 12128,
+    "cost_usd": 0.0419429,
+    "is_error": false,
+    "num_turns": 1
+  },
+  "fenced_output": false,
+  "classification": {
+    "source_marker_count": 8,
+    "output_marker_count": 8,
+    "per_marker": {
+      "s01": "preserved",
+      "s02": "preserved-heavily-rewritten",
+      "s03": "preserved",
+      "s04": "preserved",
+      "s05": "preserved",
+      "s06": "preserved-heavily-rewritten",
+      "s07": "preserved",
+      "s08": "preserved"
+    },
+    "counts": {
+      "preserved": 6,
+      "preserved-heavily-rewritten": 2
+    },
+    "invented_ids": [],
+    "mangled_forms": [],
+    "order_preserved": true,
+    "trial_clean": true
+  },
+  "edited_document": "# Release checklist\n\n<!-- lark:block:s01 -->\n## Scope\n\n<!-- lark:block:s02 -->\nReader hardening only. Writer changes deferred; review found insufficient testing time.\n\n<!-- lark:block:s03 -->\nStaged rollout: early consumers first, then wider.\n\n<!-- lark:block:s04 -->\n## Open items\n\n<!-- lark:block:s05 -->\n- Confirm changelog entry with the maintainer\n- Re-run download canary against scratch document\n- Decide whether deprecation note ships this release or next\n\n<!-- lark:block:s06 -->\nCheck machine unconfirmed\u2014the sole blocker.\n\n<!-- lark:block:s07 -->\n## Status\n\n<!-- lark:block:s08 -->\n| Item | Owner | Status |\n| --- | --- | --- |\n| Reader hardening | Maintainer | Done |\n| Changelog | Maintainer | In review |\n| Canary rerun | Maintainer | Not started |"
+}

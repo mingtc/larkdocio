@@ -1,0 +1,21 @@
+{
+  "n": 702,
+  "label": "LD420 leg0 B list permission members of a doc the bot just created (v1)",
+  "credential_pair": "WRITE",
+  "request": {
+    "method": "GET",
+    "path": "/open-apis/drive/v1/permissions/Example96b1f1037377879d8dd5/members?type=docx",
+    "body": null,
+    "headers": [
+      "Authorization: Bearer <redacted>"
+    ]
+  },
+  "http_status": 200,
+  "response": {
+    "code": 0,
+    "data": {
+      "items": []
+    },
+    "msg": "Success"
+  }
+}

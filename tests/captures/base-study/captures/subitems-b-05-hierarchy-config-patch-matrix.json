@@ -1,0 +1,107 @@
+{
+  "_probe": "sub-b",
+  "_endpoint": "/open-apis/bitable/v1/apps/Exampleb735d410075fcc1c89ab/tables/tbljnCMElmG4kiQZ/views/vewrhGFmTW",
+  "_method": "PATCH",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": null,
+  "_verdict": "OK",
+  "_note": "Q2b/Q2c: every hierarchy_config PATCH with its READ-BACK. A code:0 that reads back null is a refusal wearing a success code and is recorded as such.",
+  "response": {
+    "code": 0,
+    "data": {
+      "attempts": {
+        "single_link_field": {
+          "request_property": {
+            "hierarchy_config": {
+              "field_id": "fldz7feL7d"
+            }
+          },
+          "patch_code": 0,
+          "patch_msg": "success",
+          "patch_error_message": null,
+          "readback_property": {
+            "filter_info": null,
+            "hidden_fields": null,
+            "hierarchy_config": {
+              "field_id": "fldz7feL7d"
+            }
+          },
+          "note": "the shape the 1254001 error named: a single_link field"
+        },
+        "text_field_CONTROL": {
+          "request_property": {
+            "hierarchy_config": {
+              "field_id": "fld8j11vcw"
+            }
+          },
+          "patch_code": 1254001,
+          "patch_msg": "The request body is wrong, please modify it.",
+          "patch_error_message": "Invalid request parameter: 'property.hierarchy_config.field_id'. Correct format : the field must be single_link or duplex_link. Please check and modify accordingly.",
+          "readback_property": {
+            "filter_info": null,
+            "hidden_fields": null,
+            "hierarchy_config": {
+              "field_id": "fldz7feL7d"
+            }
+          },
+          "note": "NEGATIVE CONTROL: the primary TEXT field — reproduces the study's 1254001 body-shape error fresh, proving the accept above is real"
+        },
+        "nonexistent_field_CONTROL": {
+          "request_property": {
+            "hierarchy_config": {
+              "field_id": "fldZZZnotreal"
+            }
+          },
+          "patch_code": 1254044,
+          "patch_msg": "Field id is not found.",
+          "patch_error_message": "Invalid request parameter: 'property.hierarchy_config.field_id'. Correct format : the field_id is not found. Please check and modify accordingly.",
+          "readback_property": {
+            "filter_info": null,
+            "hidden_fields": null,
+            "hierarchy_config": {
+              "field_id": "fldz7feL7d"
+            }
+          },
+          "note": "NEGATIVE CONTROL: a field_id that does not exist"
+        },
+        "bogus_key_CONTROL": {
+          "request_property": {
+            "hierarchy_config": {
+              "larkdocio_not_a_real_key": "x"
+            }
+          },
+          "patch_code": 0,
+          "patch_msg": "success",
+          "patch_error_message": null,
+          "readback_property": {
+            "filter_info": null,
+            "hidden_fields": null,
+            "hierarchy_config": {
+              "field_id": "fldz7feL7d"
+            }
+          },
+          "note": "R12 CONTROL: an unrecognised key INSIDE hierarchy_config — ignored silently, or rejected?"
+        },
+        "duplex_link_field": {
+          "request_property": {
+            "hierarchy_config": {
+              "field_id": "fld9ukArDf"
+            }
+          },
+          "patch_code": 0,
+          "patch_msg": "success",
+          "patch_error_message": null,
+          "readback_property": {
+            "filter_info": null,
+            "hidden_fields": null,
+            "hierarchy_config": {
+              "field_id": "fld9ukArDf"
+            }
+          },
+          "note": "the other shape the error named: a duplex_link field"
+        }
+      }
+    }
+  }
+}

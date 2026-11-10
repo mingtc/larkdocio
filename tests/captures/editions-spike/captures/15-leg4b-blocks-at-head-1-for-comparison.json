@@ -1,0 +1,102 @@
+{
+  "n": 15,
+  "label": "leg4b blocks at HEAD (-1) for comparison",
+  "credential_pair": "WRITE",
+  "request": {
+    "method": "GET",
+    "path": "/open-apis/docx/v1/documents/Example9668460258a2a652cfde/blocks?document_revision_id=-1&page_size=50",
+    "body": null,
+    "headers": [
+      "Authorization: Bearer <redacted>"
+    ]
+  },
+  "http_status": 200,
+  "seconds": 0.108,
+  "response": {
+    "code": 0,
+    "data": {
+      "has_more": false,
+      "items": [
+        {
+          "block_id": "Example9668460258a2a652cfde",
+          "block_type": 1,
+          "children": [
+            "doxlgExample55392ea1bb2f803",
+            "doxlgExample9306b184eed20d2"
+          ],
+          "page": {
+            "elements": [
+              {
+                "text_run": {
+                  "content": "larkdocio-LD-404-editions-D 1786403286",
+                  "text_element_style": {
+                    "bold": false,
+                    "inline_code": false,
+                    "italic": false,
+                    "strikethrough": false,
+                    "underline": false
+                  }
+                }
+              }
+            ],
+            "style": {
+              "align": 1
+            }
+          },
+          "parent_id": ""
+        },
+        {
+          "block_id": "doxlgExample55392ea1bb2f803",
+          "block_type": 2,
+          "parent_id": "Example9668460258a2a652cfde",
+          "text": {
+            "elements": [
+              {
+                "text_run": {
+                  "content": "LD-404 STATE-TWO line",
+                  "text_element_style": {
+                    "bold": false,
+                    "inline_code": false,
+                    "italic": false,
+                    "strikethrough": false,
+                    "underline": false
+                  }
+                }
+              }
+            ],
+            "style": {
+              "align": 1,
+              "folded": false
+            }
+          }
+        },
+        {
+          "block_id": "doxlgExample9306b184eed20d2",
+          "block_type": 2,
+          "parent_id": "Example9668460258a2a652cfde",
+          "text": {
+            "elements": [
+              {
+                "text_run": {
+                  "content": "LD-404 STATE-ONE line",
+                  "text_element_style": {
+                    "bold": false,
+                    "inline_code": false,
+                    "italic": false,
+                    "strikethrough": false,
+                    "underline": false
+                  }
+                }
+              }
+            ],
+            "style": {
+              "align": 1,
+              "folded": false
+            }
+          }
+        }
+      ]
+    },
+    "msg": "success"
+  }
+}

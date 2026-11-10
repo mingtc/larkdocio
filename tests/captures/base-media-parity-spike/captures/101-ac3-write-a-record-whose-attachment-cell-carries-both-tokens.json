@@ -1,0 +1,46 @@
+{
+  "n": 101,
+  "probe": "LD-436 probe 01 — the /file/ permalink question",
+  "label": "ac3 write a record whose attachment cell carries both tokens",
+  "credential_pair": "WRITE",
+  "request": {
+    "method": "POST",
+    "path": "/open-apis/bitable/v1/apps/Example124cc4a0685df35f8846/tables/tblWku0yTdYiYDRv/records",
+    "body": {
+      "fields": {
+        "Attach": [
+          {
+            "file_token": "Example406b7cbfc415633680f8"
+          },
+          {
+            "file_token": "Exampleff109b60c3cf18ac9bca"
+          }
+        ]
+      }
+    },
+    "headers": [
+      "Authorization: Bearer <redacted>"
+    ]
+  },
+  "http_status": 200,
+  "response": {
+    "code": 0,
+    "data": {
+      "record": {
+        "fields": {
+          "Attach": [
+            {
+              "file_token": "Example406b7cbfc415633680f8"
+            },
+            {
+              "file_token": "Exampleff109b60c3cf18ac9bca"
+            }
+          ]
+        },
+        "id": "recho3KdKDDbPz",
+        "record_id": "recho3KdKDDbPz"
+      }
+    },
+    "msg": "success"
+  }
+}

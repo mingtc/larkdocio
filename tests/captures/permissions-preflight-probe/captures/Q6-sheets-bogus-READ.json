@@ -1,0 +1,20 @@
+{
+  "probe": "Q6-sheets-bogus-READ",
+  "method": "GET",
+  "path": "/open-apis/sheets/v3/spreadsheets/Zzzz0000LdIoProbeSheetNope0000",
+  "params": [],
+  "note": "spreadsheet family, nonexistent token",
+  "http_status": 400,
+  "response_headers": {
+    "content-type": "application/json; charset=utf-8",
+    "x-tt-logid": "202607301546168A222D1DCF618DAF9466",
+    "x-request-id": "202607301546168A222D1DCF618DAF9466"
+  },
+  "response": {
+    "code": 1310251,
+    "msg": "Path param :spreadsheet_token invalid",
+    "error": {
+      "log_id": "202607301546168A222D1DCF618DAF9466"
+    }
+  }
+}

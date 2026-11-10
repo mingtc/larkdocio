@@ -1,0 +1,62 @@
+{
+  "probe": "R0-users-batch-READ",
+  "method": "GET",
+  "path": "/open-apis/contact/v3/users/batch",
+  "params": [
+    [
+      "user_id_type",
+      "open_id"
+    ],
+    [
+      "user_ids",
+      "ou_exampleowner00000000000000000001"
+    ],
+    [
+      "user_ids",
+      "ou_examplesecond0000000000000000001"
+    ]
+  ],
+  "body": null,
+  "http_status": 200,
+  "response_headers": {
+    "content-type": "application/json; charset=utf-8",
+    "x-tt-logid": "20260730124310AFFF77226FED1B876245",
+    "x-request-id": "20260730124310AFFF77226FED1B876245"
+  },
+  "response": {
+    "code": 0,
+    "data": {
+      "items": [
+        {
+          "avatar": {
+            "avatar_240": "https://avatar.example.invalid/photo.png",
+            "avatar_640": "https://avatar.example.invalid/photo.png",
+            "avatar_72": "https://avatar.example.invalid/photo.png",
+            "avatar_origin": "https://avatar.example.invalid/photo.png"
+          },
+          "description": "",
+          "en_name": "",
+          "mobile_visible": true,
+          "name": "Example User",
+          "open_id": "ou_exampleowner00000000000000000001",
+          "union_id": "on_exampleuniontwo00000000000000001"
+        },
+        {
+          "avatar": {
+            "avatar_240": "https://avatar.example.invalid/photo.png",
+            "avatar_640": "https://avatar.example.invalid/photo.png",
+            "avatar_72": "https://avatar.example.invalid/photo.png",
+            "avatar_origin": "https://avatar.example.invalid/photo.png"
+          },
+          "description": "",
+          "en_name": "",
+          "mobile_visible": true,
+          "name": "Example Second User",
+          "open_id": "ou_examplesecond0000000000000000001",
+          "union_id": "on_exampleunionone00000000000000001"
+        }
+      ]
+    },
+    "msg": "success"
+  }
+}

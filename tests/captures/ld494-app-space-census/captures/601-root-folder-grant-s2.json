@@ -1,0 +1,49 @@
+{
+  "_probe": "LD-494 AC6 — root-folder grant, S2 — type=folder, need_notification=false, perm=view (is the LEVEL the part that is refused?)",
+  "_endpoint": "/open-apis/drive/v1/permissions/{app_root}/members (POST)",
+  "_method": "POST",
+  "_route_as_sent": "POST /open-apis/drive/v1/permissions/nodlgExampleee5c77c8ba65b63/members?type=folder&need_notification=false",
+  "_target_token": "nodlgExampleee5c77c8ba65b63",
+  "_target_type": "folder",
+  "_request_body": {
+    "member_type": "openid",
+    "member_id": "<the LARKDOCIO_GRANT_EMAIL holder's open_id — redacted>",
+    "perm": "view"
+  },
+  "_grantee_source": "LARKDOCIO_GRANT_EMAIL",
+  "_http_status": 403,
+  "_lark_code": 1063002,
+  "_lark_msg": "Permission denied",
+  "_denial_body_verbatim": {
+    "code": 1063002,
+    "msg": "Permission denied",
+    "error": {
+      "log_id": "202608170924459EC3E27554FF9D6D43EA"
+    }
+  },
+  "_verdict": "REFUSED",
+  "_read_back": {
+    "route": "GET /open-apis/drive/v1/permissions/nodlgExampleee5c77c8ba65b63/members?type=folder",
+    "http_status": 400,
+    "lark_code": 99992402,
+    "member_count": 0,
+    "grantee_present": false,
+    "body_verbatim": {
+      "code": 99992402,
+      "msg": "field validation failed",
+      "error": {
+        "log_id": "20260817092446295E8E6AC1B74370CFC7",
+        "field_violations": [
+          {
+            "field": "type",
+            "value": "folder",
+            "description": "type is optional, options: [doc,sheet,file,wiki,bitable,docx,mindnote,minutes,slides]"
+          }
+        ]
+      }
+    }
+  },
+  "_stored": false,
+  "_d59_scope": "One tenant, one app, one day, tenant_access_token (the WRITE pair). This answer is scoped to THIS route and THIS spelling; any other spelling is unmeasured, not refused.",
+  "_no_scope_widened": "No scope was requested, widened or escalated. A grant is a Lark console action; this leg only reports what Lark said."
+}

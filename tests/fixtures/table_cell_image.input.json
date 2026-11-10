@@ -1,0 +1,224 @@
+[
+  {
+    "block_id": "Examplee952f37af51cbcffdce1",
+    "block_type": 1,
+    "children": [
+      "doxlgExample3c9c34d6a6dcf68"
+    ],
+    "page": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "larkdocio-LD-506-in-cell-image 1787081171",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1
+      }
+    },
+    "parent_id": ""
+  },
+  {
+    "block_id": "doxlgExample3c9c34d6a6dcf68",
+    "block_type": 31,
+    "children": [
+      "doxlgExamplefdcd83e6f9f2c53",
+      "doxlgExample19f049012999344",
+      "doxlgExample6da5a96cb59e2ec",
+      "doxlgExamplebcbb97c6d1b317b"
+    ],
+    "parent_id": "Examplee952f37af51cbcffdce1",
+    "table": {
+      "cells": [
+        "doxlgExamplefdcd83e6f9f2c53",
+        "doxlgExample19f049012999344",
+        "doxlgExample6da5a96cb59e2ec",
+        "doxlgExamplebcbb97c6d1b317b"
+      ],
+      "property": {
+        "column_size": 2,
+        "column_width": [
+          100,
+          100
+        ],
+        "header_row": true,
+        "merge_info": [
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          }
+        ],
+        "row_size": 2
+      }
+    }
+  },
+  {
+    "block_id": "doxlgExamplefdcd83e6f9f2c53",
+    "block_type": 32,
+    "children": [
+      "doxlgExampleddacc5dcff5fec9"
+    ],
+    "parent_id": "doxlgExample3c9c34d6a6dcf68",
+    "table_cell": {}
+  },
+  {
+    "block_id": "doxlgExampleddacc5dcff5fec9",
+    "block_type": 2,
+    "parent_id": "doxlgExamplefdcd83e6f9f2c53",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Variant",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "doxlgExample19f049012999344",
+    "block_type": 32,
+    "children": [
+      "doxlgExamplefa1821fbc2d0175"
+    ],
+    "parent_id": "doxlgExample3c9c34d6a6dcf68",
+    "table_cell": {}
+  },
+  {
+    "block_id": "doxlgExamplefa1821fbc2d0175",
+    "block_type": 2,
+    "parent_id": "doxlgExample19f049012999344",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Image",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "doxlgExample6da5a96cb59e2ec",
+    "block_type": 32,
+    "children": [
+      "doxlgExample18795a8c8cdfc67"
+    ],
+    "parent_id": "doxlgExample3c9c34d6a6dcf68",
+    "table_cell": {}
+  },
+  {
+    "block_id": "doxlgExample18795a8c8cdfc67",
+    "block_type": 2,
+    "parent_id": "doxlgExample6da5a96cb59e2ec",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Variant A",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "doxlgExamplebcbb97c6d1b317b",
+    "block_type": 32,
+    "children": [
+      "doxlgExampleb0651016353a877",
+      "doxlgExample62d93f236e57a0b"
+    ],
+    "parent_id": "doxlgExample3c9c34d6a6dcf68",
+    "table_cell": {}
+  },
+  {
+    "block_id": "doxlgExampleb0651016353a877",
+    "block_type": 2,
+    "parent_id": "doxlgExamplebcbb97c6d1b317b",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "doxlgExample62d93f236e57a0b",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 1,
+      "scale": 1,
+      "token": "Examplec11ec9e2c11b40f4193c",
+      "width": 1
+    },
+    "parent_id": "doxlgExamplebcbb97c6d1b317b"
+  }
+]

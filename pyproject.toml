@@ -1,0 +1,197 @@
+[build-system]
+requires = ["setuptools>=77.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "larkdocio"
+version = "1.53.0"
+description = "Lark (Feishu) docs toolkit: docx→Markdown reader/writer, Sheets read/write, Base read + records/schema/attachments write, Drive folder read + versions/access/files/folders write, comments, contacts."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+authors = [{ name = "mingtc" }]
+keywords = ["lark", "feishu", "docx", "sheets", "base", "bitable", "drive", "folder", "files", "versions", "access", "folders", "markdown", "write", "records", "schema", "attachments", "comments", "contacts"]
+dependencies = [
+    "lark-oapi==1.5.3",
+    "click==8.3.1",
+    "python-dotenv==1.2.2",
+    # LD-136: the reference Markdown parser `compose()` compiles the authoring dialect
+    # with. Promoted from the dev extra to RUNTIME — the dialect IS CommonMark + GFM
+    # tables/strikethrough (our reader's own output), so hand-rolling a second definition
+    # of it would make the binding round-trip property prove only that two hand-rolled
+    # halves agree. Pure Python, one transitive dep (mdurl); guarded by
+    # tests/test_cleanup_deps_docs.py both ways.
+    "markdown-it-py==4.2.0",
+]
+
+# LD-658 AC4: the wheel shipped no [project.urls] at all, so `check_err`'s
+# "Report the following if it is a bug" banner demanded a report with nowhere to send it. The
+# `Issues` value is a PROJECTION of `larkdocio.common.reporting.ISSUES_URL`, which is where it
+# is authored; tests/test_cli_refusal_uniformity.py holds the two byte-identical.
+[project.urls]
+Source = "https://github.com/mingtc/larkdocio"
+Issues = "https://github.com/mingtc/larkdocio/issues"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=9.0",
+    "build",
+    "pytest-xdist>=3.6",  # LD-353: `-n auto` spreads the OFFLINE suite across every core; dev-only, never shipped
+]
+# --- The `mutation` extra (LD-504) — DELIBERATELY NOT IN `dev` ---------------
+# mutmut is the ADVISORY mutation meter, run on demand by scripts/mutation-check.sh
+# and NEVER a gate. That runner is a maintainers' tool and is not part of the public
+# repository; this extra and the [tool.mutmut] table below are what it reads, kept
+# here so the meter measures the same package the suite tests. Nothing else uses them,
+# and they change nothing about `pip install larkdocio` or `.[dev]`. It used to live in `dev`, so every
+# ./setup.sh installed it. LD-504 moved it out, and the reason is a measurement, not
+# a preference:
+#
+#   mutmut depends on `setproctitle`. pytest-xdist imports setproctitle
+#   OPPORTUNISTICALLY whenever it happens to be importable (xdist/remote.py:32, inside
+#   a try/except ImportError whose fallback is a no-op) and then uses it to rename each
+#   worker process to the running node id — TWICE PER TEST (xdist/remote.py:224 and
+#   :230). On macOS a process rename is not a local operation: it is
+#   `_LSSetApplicationInformationItem` -> a SYNCHRONOUS XPC round-trip into
+#   `launchservicesd`, which serialises on one dispatch queue and broadcasts an
+#   "application name changed" notification that makes EVERY running AppKit app
+#   synchronously query LaunchServices back. Cost is O(tests x running apps).
+#   MEASURED on a macOS desktop during one ordinary ./scripts/verify.sh: 7,333
+#   turnstile-blocked samples waiting on launchservicesd (next-worst blocker: 48),
+#   148.1 s of daemon CPU inside a 74 s run, and a fully WEDGED DESKTOP — menu bar,
+#   window switching, Terminal echo and the IDE all frozen — while the machine used
+#   only about half of its cores. Removing setproctitle alone: 65.2 s daemon CPU, no freeze.
+#
+# So mutmut must never be installed into an environment that runs the suite.
+# scripts/mutation-check.sh builds its OWN virtualenv and installs `.[mutation]` into
+# it; tests/test_mutation_meter.py asserts setproctitle is not importable in the suite's
+# environment. Nothing in src/, tests/ or scripts/ uses setproctitle — it is pure
+# collateral of this one advisory tool. (The measurements above are the whole of the
+# diagnosis that is still kept; its write-up was retired with the evidence tree.)
+mutation = [
+    "mutmut>=3.0",
+]
+
+[project.scripts]
+larkdocio = "larkdocio.cli:cli"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+# CHANGELOG.md / RELEASE_NOTES.md are the two RELEASE DOCUMENTS, and a vendoring
+# consumer's entire view of this library is the wheel plus what the refresh script
+# drops beside it — so they have to ship IN the wheel or they answer nobody.
+# package-data can only carry files that live INSIDE a package directory, and the
+# canonical copies live at the repo ROOT (the ruled location). The root MANIFEST.in
+# added in LD-215 does NOT change that: it is PRUNE-ONLY (it drops `tests/` from the
+# sdist and deliberately ships nothing — `tests/test_packaging.py` asserts it carries
+# no inclusion directive), so it is not a second way to package a doc.
+# So the root file stays canonical and src/larkdocio/<name> is a COMMITTED,
+# MATERIALISED copy of it, held byte-identical to a projection of the root file by
+# tests/test_shipped_notes.py::notes_identity_report.
+# LD-549 added a THIRD such document — LARK_SETUP.md, the Lark-application
+# walkthrough — for the same reason the release documents shipped: the reader who
+# most needs it holds an installed wheel and no clone. It is projected through the
+# IDENTITY (the whole document; a setup walkthrough does not go out of date by being
+# old), and its guard is tests/test_packaged_lark_setup.py.
+# Never hand-copy any of the three. Edit the ROOT file, then run
+#     ./scripts/sync-packaged-notes.sh        # (--check reports drift, writes nothing)
+# which is the only writer of these copies (LD-540 retired `cp`: two of the three are
+# recent-N WINDOWS of their root file, so a copy is the wrong answer, and every
+# projection is defined once — larkdocio.guide.packaged_projection).
+# A forgotten regeneration cannot reach a release: the maintainers' release script (not in
+# this repository) runs the suite as its first preflight, so the drift guard refuses the tag.
+larkdocio = [
+    "config.json", "GUIDE.md", "CHANGELOG.md", "RELEASE_NOTES.md", "LARK_SETUP.md",
+]
+"larkdocio.blocks" = ["BLOCK_TYPES.md"]
+"larkdocio.write" = ["README.md"]
+
+# --- Mutation meter (advisory; LD-018) ----------------------
+# Read ONLY by `scripts/mutation-check.sh` (on-demand; a maintainers' tool, not part of
+# the public repository — see the `mutation` extra above) — mutmut never runs in
+# pytest or verify.sh, so this table is inert for the unit suite and the build.
+# The whole package is copied into the throwaway `mutants/` tree so imports
+# resolve; `only_mutate` scopes the actual mutation to blocks/ + read/ + model/ —
+# the offline net's zone (Decision Log #3: measure + report, never enforce).
+# model/*.py was added in LD-033 (R-S0 net): T2 moved the single serializer into
+# model/renderer.py, which the old scope did NOT see — extending scope RAISES the
+# honest overall 70.1% → 77.8% (renderer 96.0%; model/nodes.py yields 0 mutants,
+# pure dataclasses). (Those figures are the 2026-07-24 baseline; its write-up was retired.)
+[tool.mutmut]
+source_paths = ["src/larkdocio"]
+only_mutate = [
+    "src/larkdocio/blocks/*.py",
+    "src/larkdocio/read/*.py",
+    "src/larkdocio/model/*.py",   # T2 moved the serializer here; measure it (96.0% killed)
+]
+# mutmut copies the project into a throwaway ./mutants/ tree before mutating
+# (also_copy always implicitly includes tests/ + pyproject.toml — see mutmut's
+# own configuration.py — so those two never need listing here). Root-level docs
+# do NOT ride along automatically, and several test modules read one at
+# **import time** (module scope, i.e. before any test even runs) — if that file
+# is missing in mutants/, collection raises and the WHOLE stats-collection run
+# aborts (LD-511: this is the "every mutant errors at import" defect, confirmed
+# by direct measurement — a bare `mutmut run` inside this repo failed stats
+# collection with `FileNotFoundError: .../mutants/BASE.md`, raised at
+# tests/test_base_front_door.py's module-level `_BASE_MD` assignment).
+#
+# LD-511's census (grep for a module-scope, i.e. unindented, `read_text()`/
+# `open()`/`json.load()` call on a repo-root doc, across tests/*.py and every
+# helper module tests/*.py imports at collection time) found exactly ONE file
+# read that way:
+#   - BASE.md: tests/test_base_front_door.py, test_base_schema_write_front_door.py and
+#     test_base_write_front_door.py all do `_BASE_MD = (_REPO / "BASE.md").read_text(...)`
+#     as a bare module-level assignment — this is the confirmed miss.
+# Several other root docs (SHEETS.md, DRIVE.md, PERMISSIONS.md, README.md,
+# CHANGELOG.md, RELEASE_NOTES.md, requirements/DECISIONS.md — the maintainers'
+# record, in the dev repo only — and BLOCKS.md itself) are referenced by test modules too, but every one of those sites
+# binds a `Path` at import time and defers the actual `.read_text()` call into
+# a test function or fixture body — a DIFFERENT failure mode (that single test
+# would fail/error when it runs, not the whole suite at collection) that does
+# NOT reproduce "every mutant errors at import". They are deliberately NOT
+# added: an also_copy entry that isn't needed rots the same way an unexplained
+# absence does (LD-511 AC1).
+#
+# BLOCKS.md is the one exception, kept from its original T2/LD-032 entry even
+# though tests/test_blocks_md_matrix.py's `_BLOCKS_MD` is itself a Path-bound/deferred read
+# (same category as the ones above) — copying it costs one line and avoids
+# that one matrix-guard test spuriously erroring on every mutant, which is
+# cheap enough to be worth keeping even though it isn't the import-time defect
+# this issue fixes. Kept, not re-justified as "needed" — see the LD-511
+# discussion above for why it is not strictly required by AC1.
+also_copy = ["BLOCKS.md", "BASE.md"]  # BASE.md: LD-511 fix (import-time miss); BLOCKS.md: pre-existing, see comment above
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# Live + zoo + live_write tests are deselected by default so a plain `pytest`
+# (and verify.sh) runs the offline suite with no creds/network. A
+# command-line `-m live` / `-m zoo` / `-m live_write` overrides this default `-m`
+# expression (last `-m` wins), selecting only that ring. The zoo ring (LD-044) is
+# ADVISORY; the live_write ring (LD-064) is the credential-gated W0 WRITE gate —
+# both are deselected here AND absent from verify.sh (and so from any CI that runs it) as a gate.
+# LD-353: `-n auto` parallelizes the OFFLINE suite across every core, for every
+# ordinary invocation (`pytest`, `verify.sh`) with no flag to remember. The
+# live/zoo/live_write rings stay SERIAL by seat ruling — tests/conftest.py's
+# `pytest_configure` turns xdist back off whenever the `-m` expression can select
+# one of those rings (their determinism/tenant-residue properties are unproven
+# under parallelism, and they are API-bound anyway, so no speed is given up).
+addopts = "-q -n auto -m 'not live and not zoo and not live_write'"
+markers = [
+    "live: live API canary against the real disposable scratch doc; needs read creds + network; deselected by default — run with 'pytest -m live'",
+    "zoo: advisory block-zoo live ring against the disposable LARKDOCIO_BLOCKZOO_DOC; needs read creds + network; deselected by default, NEVER a gate — run with 'pytest -m zoo'",
+    "live_write: live-WRITE harness (the W0 gate) — self-provisions its OWN disposable doc, round-trips create→baseline→download→mutate→diff→teardown; needs LARK_WRITE_APP_* + network; deselected by default, NEVER in verify.sh. SELECTION IS NOT ENOUGH (LD-537): the ring also refuses to EXECUTE without the consent variable, so run it with 'LARKDOCIO_LIVE_WRITE_AUTHORIZED_BY=LD-NNN pytest -m live_write' — the value is the authorizing issue id, unset or malformed is a loud skip, and clearing the default deselection re-selects the ring but does not arm it",
+    # LD-370: a LENS, not a ring and not a gate. `conformance` is pure metadata — it
+    # OVERLAYS the ring markers (a test may be both live_write and conformance) and is
+    # absent from `addopts` above on purpose, so it perturbs no selection: the same cases
+    # run by default, and `-m live` / `-m zoo` / `-m live_write` select exactly what they
+    # selected before. The full suite remains the QA and release gate, unchanged.
+    # LD-685: metadata for the one-way public export. In the maintainers' private repository it
+    # skips nothing; tests/private_tree.py skips a marked test, with its reason, wherever dev/ is
+    # absent — which includes every clone of the public repository.
+    "private_tree: the test's subject exists only in the private working repository (the process kit, the decision register, the board, the dev/ evidence record); runs here, skipped with its reason in the public export — see tests/private_tree.py",
+    "walks_tree: the test scans a corpus spanning the whole repository, private files included; in the public export it checks the public subset — the declaration the LD-685 private-read guard asks for (tests/private_tree.py)",
+    "conformance: CONFORMANCE-tier — must still pass after a full rewrite of the implementation from the corpus (it pins the PRODUCT, not this implementation). A lens, never a gate; definition, worked examples and the marking convention are a maintainers' process document (process/doctrine/conformance-tier.md, in the private working repository)",
+]

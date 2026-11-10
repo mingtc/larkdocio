@@ -1,0 +1,22 @@
+{
+  "n": 16,
+  "label": "leg4b raw_content at HISTORICAL document_revision_id (STATE-ONE)",
+  "credential_pair": "WRITE",
+  "request": {
+    "method": "GET",
+    "path": "/open-apis/docx/v1/documents/Example9668460258a2a652cfde/raw_content?document_revision_id=2&lang=0",
+    "body": null,
+    "headers": [
+      "Authorization: Bearer <redacted>"
+    ]
+  },
+  "http_status": 200,
+  "seconds": 0.095,
+  "response": {
+    "code": 0,
+    "data": {
+      "content": "larkdocio-LD-404-editions-D 1786403286\nLD-404 STATE-TWO line\nLD-404 STATE-ONE line\n"
+    },
+    "msg": "success"
+  }
+}

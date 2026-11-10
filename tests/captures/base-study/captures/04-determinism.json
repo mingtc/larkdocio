@@ -1,0 +1,27 @@
+{
+  "_probe": "04",
+  "_endpoint": "app_meta + tables + fields + records/search (x2)",
+  "_method": "GET/POST",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": null,
+  "_verdict": "OK",
+  "_note": "two back-to-back spine reads",
+  "response": {
+    "code": 0,
+    "data": {
+      "read1_sha256": "fde53cbf4097607499770cd790d8e54345e98cde38f364f81ee38d70493a505b",
+      "read2_sha256": "fde53cbf4097607499770cd790d8e54345e98cde38f364f81ee38d70493a505b",
+      "byte_identical": true,
+      "app_revision_read1": 0,
+      "app_revision_read2": 0,
+      "table_revisions_read1": [
+        0
+      ],
+      "table_revisions_read2": [
+        0
+      ],
+      "note": "log_id is NOT present in a code:0 body, so success payloads carry no per-request nonce — that is what makes byte-identity achievable."
+    }
+  }
+}

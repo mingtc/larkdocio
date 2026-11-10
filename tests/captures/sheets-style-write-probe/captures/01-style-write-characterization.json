@@ -1,0 +1,937 @@
+{
+  "probe": "LD-188 cell style write (appendStyle / styles_batch_update)",
+  "at": "2026-07-31T19:34:35.901062+00:00",
+  "steps": [
+    {
+      "label": "A1 fontSize '10pt/1.5' (documented string form)",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Exampleb443d1da6da4ed3e9385/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "9eef9c!A1:A1",
+          "style": {
+            "font": {
+              "fontSize": "10pt/1.5"
+            }
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "updates": {
+            "revision": 2,
+            "spreadsheetToken": "Exampleb443d1da6da4ed3e9385",
+            "updatedCells": 1,
+            "updatedColumns": 1,
+            "updatedRange": "9eef9c!A1:A1",
+            "updatedRows": 1
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "label": "A2 fontSize 10 (bare int)",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Exampleb443d1da6da4ed3e9385/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "9eef9c!A2:A2",
+          "style": {
+            "font": {
+              "fontSize": 10
+            }
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 90204,
+      "msg": "invalid fontSize, fontSize must between 9 and 36",
+      "response": {
+        "code": 90204,
+        "data": {},
+        "msg": "invalid fontSize, fontSize must between 9 and 36"
+      }
+    },
+    {
+      "label": "A3 fontSize '8pt/1.5' (UNDER the documented 9 floor)",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Exampleb443d1da6da4ed3e9385/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "9eef9c!A3:A3",
+          "style": {
+            "font": {
+              "fontSize": "8pt/1.5"
+            }
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 90204,
+      "msg": "invalid fontSize, fontSize must between 9 and 36",
+      "response": {
+        "code": 90204,
+        "data": {},
+        "msg": "invalid fontSize, fontSize must between 9 and 36"
+      }
+    },
+    {
+      "label": "A4 fontSize '37pt/1.5' (OVER the documented 36 ceiling)",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Exampleb443d1da6da4ed3e9385/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "9eef9c!A4:A4",
+          "style": {
+            "font": {
+              "fontSize": "37pt/1.5"
+            }
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 90204,
+      "msg": "invalid fontSize, fontSize must between 9 and 36",
+      "response": {
+        "code": 90204,
+        "data": {},
+        "msg": "invalid fontSize, fontSize must between 9 and 36"
+      }
+    },
+    {
+      "label": "A5 fontSize '9pt/1.5' (the floor itself)",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Exampleb443d1da6da4ed3e9385/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "9eef9c!A5:A5",
+          "style": {
+            "font": {
+              "fontSize": "9pt/1.5"
+            }
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "updates": {
+            "revision": 3,
+            "spreadsheetToken": "Exampleb443d1da6da4ed3e9385",
+            "updatedCells": 1,
+            "updatedColumns": 1,
+            "updatedRange": "9eef9c!A5:A5",
+            "updatedRows": 1
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "label": "A6 fontSize '36pt/1.5' (the ceiling itself)",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Exampleb443d1da6da4ed3e9385/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "9eef9c!A6:A6",
+          "style": {
+            "font": {
+              "fontSize": "36pt/1.5"
+            }
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "updates": {
+            "revision": 4,
+            "spreadsheetToken": "Exampleb443d1da6da4ed3e9385",
+            "updatedCells": 1,
+            "updatedColumns": 1,
+            "updatedRange": "9eef9c!A6:A6",
+            "updatedRows": 1
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "label": "B1 formatter ONLY, no font and no fill",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Exampleb443d1da6da4ed3e9385/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "9eef9c!B1:B1",
+          "style": {
+            "formatter": "0.00%"
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "updates": {
+            "revision": 5,
+            "spreadsheetToken": "Exampleb443d1da6da4ed3e9385",
+            "updatedCells": 1,
+            "updatedColumns": 1,
+            "updatedRange": "9eef9c!B1:B1",
+            "updatedRows": 1
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "label": "B2 BARE single cell (no Start:End) \u2014 the 90202 trap",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Exampleb443d1da6da4ed3e9385/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "9eef9c!B2",
+          "style": {
+            "font": {
+              "bold": true
+            }
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 90202,
+      "msg": "wrong range=9eef9c!B2",
+      "response": {
+        "code": 90202,
+        "data": {},
+        "msg": "wrong range=9eef9c!B2"
+      }
+    },
+    {
+      "label": "C1 batch with a BARE single-cell range \u2014 immune or 90202?",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Exampleb443d1da6da4ed3e9385/styles_batch_update",
+      "request_body": {
+        "data": [
+          {
+            "ranges": [
+              "9eef9c!C1"
+            ],
+            "style": {
+              "font": {
+                "bold": true
+              }
+            }
+          }
+        ]
+      },
+      "http_status": 200,
+      "code": 90202,
+      "msg": "wrong range=9eef9c!C1",
+      "response": {
+        "code": 90202,
+        "data": {
+          "spreadsheetToken": ""
+        },
+        "msg": "wrong range=9eef9c!C1"
+      }
+    },
+    {
+      "label": "C2+C3 batch, TWO ranges, ONE call",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Exampleb443d1da6da4ed3e9385/styles_batch_update",
+      "request_body": {
+        "data": [
+          {
+            "ranges": [
+              "9eef9c!C2:C2"
+            ],
+            "style": {
+              "backColor": "#D9EAD3"
+            }
+          },
+          {
+            "ranges": [
+              "9eef9c!C3:C3"
+            ],
+            "style": {
+              "font": {
+                "italic": true
+              },
+              "foreColor": "#FF0000"
+            }
+          }
+        ]
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "responses": [
+            {
+              "spreadsheetToken": "Exampleb443d1da6da4ed3e9385",
+              "updatedCells": 1,
+              "updatedColumns": 1,
+              "updatedRange": "9eef9c!C2:C2",
+              "updatedRows": 1
+            },
+            {
+              "spreadsheetToken": "Exampleb443d1da6da4ed3e9385",
+              "updatedCells": 1,
+              "updatedColumns": 1,
+              "updatedRange": "9eef9c!C3:C3",
+              "updatedRows": 1
+            }
+          ],
+          "revision": 6,
+          "spreadsheetToken": "Exampleb443d1da6da4ed3e9385",
+          "totalUpdatedCells": 2,
+          "totalUpdatedColumns": 2,
+          "totalUpdatedRows": 2
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "label": "C4+C5 batch, ONE element carrying TWO ranges",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Exampleb443d1da6da4ed3e9385/styles_batch_update",
+      "request_body": {
+        "data": [
+          {
+            "ranges": [
+              "9eef9c!C4:C4",
+              "9eef9c!C5:C5"
+            ],
+            "style": {
+              "font": {
+                "bold": true
+              }
+            }
+          }
+        ]
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "responses": [
+            {
+              "spreadsheetToken": "Exampleb443d1da6da4ed3e9385",
+              "updatedCells": 1,
+              "updatedColumns": 1,
+              "updatedRange": "9eef9c!C4:C4",
+              "updatedRows": 1
+            },
+            {
+              "spreadsheetToken": "Exampleb443d1da6da4ed3e9385",
+              "updatedCells": 1,
+              "updatedColumns": 1,
+              "updatedRange": "9eef9c!C5:C5",
+              "updatedRows": 1
+            }
+          ],
+          "revision": 7,
+          "spreadsheetToken": "Exampleb443d1da6da4ed3e9385",
+          "totalUpdatedCells": 2,
+          "totalUpdatedColumns": 2,
+          "totalUpdatedRows": 2
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "label": "merge D1:D3 (MERGE_ALL)",
+      "method": "POST",
+      "path": "merge_cells",
+      "response": {
+        "spreadsheetToken": "Exampleb443d1da6da4ed3e9385"
+      }
+    },
+    {
+      "label": "D1:D3 style over the MERGED span",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Exampleb443d1da6da4ed3e9385/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "9eef9c!D1:D3",
+          "style": {
+            "backColor": "#FFFF00",
+            "font": {
+              "bold": true
+            }
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "updates": {
+            "revision": 9,
+            "spreadsheetToken": "Exampleb443d1da6da4ed3e9385",
+            "updatedCells": 3,
+            "updatedColumns": 1,
+            "updatedRange": "9eef9c!D1:D3",
+            "updatedRows": 3
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "label": "E1 combined font+fill+foreColor+formatter",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Exampleb443d1da6da4ed3e9385/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "9eef9c!E1:E1",
+          "style": {
+            "font": {
+              "bold": true,
+              "italic": true,
+              "fontSize": "18pt/1.5"
+            },
+            "backColor": "#FFFF00",
+            "foreColor": "#FF0000",
+            "formatter": "0.00%"
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "updates": {
+            "revision": 10,
+            "spreadsheetToken": "Exampleb443d1da6da4ed3e9385",
+            "updatedCells": 1,
+            "updatedColumns": 1,
+            "updatedRange": "9eef9c!E1:E1",
+            "updatedRows": 1
+          }
+        },
+        "msg": "success"
+      }
+    }
+  ],
+  "spreadsheet_token": "Exampleb443d1da6da4ed3e9385",
+  "first_sheet_id": "9eef9c",
+  "export": {
+    "byte_len": 19816,
+    "shipped_reader_cells": {
+      "A1": {
+        "value": 0.1234,
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "A2": {
+        "value": 0.1234,
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "A3": {
+        "value": 0.1234,
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "A4": {
+        "value": 0.1234,
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "A5": {
+        "value": 0.1234,
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "A6": {
+        "value": 0.1234,
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "B1": {
+        "value": 0.1234,
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": "0.00%"
+      },
+      "B2": {
+        "value": "b2",
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "C1": {
+        "value": "c1",
+        "bold": false,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "C2": {
+        "value": "c2",
+        "bold": false,
+        "italic": false,
+        "fill_rgb": "FFD9EAD3",
+        "num_fmt": null
+      },
+      "C3": {
+        "value": "c3",
+        "bold": false,
+        "italic": true,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "C4": {
+        "value": "c4",
+        "bold": true,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "C5": {
+        "value": "c5",
+        "bold": true,
+        "italic": false,
+        "fill_rgb": null,
+        "num_fmt": null
+      },
+      "D1": {
+        "value": "d1",
+        "bold": true,
+        "italic": false,
+        "fill_rgb": "FFFFFF00",
+        "num_fmt": null
+      },
+      "D2": {
+        "value": null,
+        "bold": true,
+        "italic": false,
+        "fill_rgb": "FFFFFF00",
+        "num_fmt": null
+      },
+      "D3": {
+        "value": null,
+        "bold": true,
+        "italic": false,
+        "fill_rgb": "FFFFFF00",
+        "num_fmt": null
+      },
+      "E1": {
+        "value": 0.5,
+        "bold": true,
+        "italic": true,
+        "fill_rgb": "FFFFFF00",
+        "num_fmt": "0.00%"
+      }
+    },
+    "raw_resolved_fonts": {
+      "A1": {
+        "s": 0,
+        "fontId": 0,
+        "font": {
+          "sz": "12",
+          "color": true,
+          "name": "Calibri",
+          "family": "2",
+          "scheme": "minor"
+        },
+        "numFmtId": "0"
+      },
+      "B1": {
+        "s": 1,
+        "fontId": 1,
+        "font": {
+          "sz": "10",
+          "color": true,
+          "name": "Calibri",
+          "family": "2",
+          "scheme": "minor"
+        },
+        "numFmtId": "164"
+      },
+      "C1": {
+        "s": 0,
+        "fontId": 0,
+        "font": {
+          "sz": "12",
+          "color": true,
+          "name": "Calibri",
+          "family": "2",
+          "scheme": "minor"
+        },
+        "numFmtId": "0"
+      },
+      "D1": {
+        "s": 2,
+        "fontId": 2,
+        "font": {
+          "b": "true",
+          "sz": "10",
+          "color": true,
+          "name": "Calibri",
+          "family": "2",
+          "scheme": "minor"
+        },
+        "numFmtId": "0"
+      },
+      "E1": {
+        "s": 3,
+        "fontId": 3,
+        "font": {
+          "b": "true",
+          "i": "true",
+          "sz": "18",
+          "color": true,
+          "name": "Calibri",
+          "family": "2",
+          "scheme": "minor"
+        },
+        "numFmtId": "164"
+      },
+      "A2": {
+        "s": 0,
+        "fontId": 0,
+        "font": {
+          "sz": "12",
+          "color": true,
+          "name": "Calibri",
+          "family": "2",
+          "scheme": "minor"
+        },
+        "numFmtId": "0"
+      },
+      "B2": {
+        "s": 0,
+        "fontId": 0,
+        "font": {
+          "sz": "12",
+          "color": true,
+          "name": "Calibri",
+          "family": "2",
+          "scheme": "minor"
+        },
+        "numFmtId": "0"
+      },
+      "C2": {
+        "s": 4,
+        "fontId": 1,
+        "font": {
+          "sz": "10",
+          "color": true,
+          "name": "Calibri",
+          "family": "2",
+          "scheme": "minor"
+        },
+        "numFmtId": "0"
+      },
+      "D2": {
+        "s": 2,
+        "fontId": 2,
+        "font": {
+          "b": "true",
+          "sz": "10",
+          "color": true,
+          "name": "Calibri",
+          "family": "2",
+          "scheme": "minor"
+        },
+        "numFmtId": "0"
+      },
+      "E2": {
+        "s": 0,
+        "fontId": 0,
+        "font": {
+          "sz": "12",
+          "color": true,
+          "name": "Calibri",
+          "family": "2",
+          "scheme": "minor"
+        },
+        "numFmtId": "0"
+      },
+      "A3": {
+        "s": 0,
+        "fontId": 0,
+        "font": {
+          "sz": "12",
+          "color": true,
+          "name": "Calibri",
+          "family": "2",
+          "scheme": "minor"
+        },
+        "numFmtId": "0"
+      },
+      "B3": {
+        "s": 0,
+        "fontId": 0,
+        "font": {
+          "sz": "12",
+          "color": true,
+          "name": "Calibri",
+          "family": "2",
+          "scheme": "minor"
+        },
+        "numFmtId": "0"
+      },
+      "C3": {
+        "s": 5,
+        "fontId": 4,
+        "font": {
+          "i": "true",
+          "sz": "10",
+          "color": true,
+          "name": "Calibri",
+          "family": "2",
+          "scheme": "minor"
+        },
+        "numFmtId": "0"
+      },
+      "D3": {
+        "s": 2,
+        "fontId": 2,
+        "font": {
+          "b": "true",
+          "sz": "10",
+          "color": true,
+          "name": "Calibri",
+          "family": "2",
+          "scheme": "minor"
+        },
+        "numFmtId": "0"
+      },
+      "E3": {
+        "s": 0,
+        "fontId": 0,
+        "font": {
+          "sz": "12",
+          "color": true,
+          "name": "Calibri",
+          "family": "2",
+          "scheme": "minor"
+        },
+        "numFmtId": "0"
+      },
+      "A4": {
+        "s": 0,
+        "fontId": 0,
+        "font": {
+          "sz": "12",
+          "color": true,
+          "name": "Calibri",
+          "family": "2",
+          "scheme": "minor"
+        },
+        "numFmtId": "0"
+      },
+      "B4": {
+        "s": 0,
+        "fontId": 0,
+        "font": {
+          "sz": "12",
+          "color": true,
+          "name": "Calibri",
+          "family": "2",
+          "scheme": "minor"
+        },
+        "numFmtId": "0"
+      },
+      "C4": {
+        "s": 6,
+        "fontId": 2,
+        "font": {
+          "b": "true",
+          "sz": "10",
+          "color": true,
+          "name": "Calibri",
+          "family": "2",
+          "scheme": "minor"
+        },
+        "numFmtId": "0"
+      },
+      "D4": {
+        "s": 0,
+        "fontId": 0,
+        "font": {
+          "sz": "12",
+          "color": true,
+          "name": "Calibri",
+          "family": "2",
+          "scheme": "minor"
+        },
+        "numFmtId": "0"
+      },
+      "E4": {
+        "s": 0,
+        "fontId": 0,
+        "font": {
+          "sz": "12",
+          "color": true,
+          "name": "Calibri",
+          "family": "2",
+          "scheme": "minor"
+        },
+        "numFmtId": "0"
+      },
+      "A5": {
+        "s": 7,
+        "fontId": 5,
+        "font": {
+          "sz": "9",
+          "color": true,
+          "name": "Calibri",
+          "family": "2",
+          "scheme": "minor"
+        },
+        "numFmtId": "0"
+      },
+      "B5": {
+        "s": 0,
+        "fontId": 0,
+        "font": {
+          "sz": "12",
+          "color": true,
+          "name": "Calibri",
+          "family": "2",
+          "scheme": "minor"
+        },
+        "numFmtId": "0"
+      },
+      "C5": {
+        "s": 6,
+        "fontId": 2,
+        "font": {
+          "b": "true",
+          "sz": "10",
+          "color": true,
+          "name": "Calibri",
+          "family": "2",
+          "scheme": "minor"
+        },
+        "numFmtId": "0"
+      },
+      "D5": {
+        "s": 0,
+        "fontId": 0,
+        "font": {
+          "sz": "12",
+          "color": true,
+          "name": "Calibri",
+          "family": "2",
+          "scheme": "minor"
+        },
+        "numFmtId": "0"
+      },
+      "E5": {
+        "s": 0,
+        "fontId": 0,
+        "font": {
+          "sz": "12",
+          "color": true,
+          "name": "Calibri",
+          "family": "2",
+          "scheme": "minor"
+        },
+        "numFmtId": "0"
+      },
+      "A6": {
+        "s": 8,
+        "fontId": 6,
+        "font": {
+          "sz": "36",
+          "color": true,
+          "name": "Calibri",
+          "family": "2",
+          "scheme": "minor"
+        },
+        "numFmtId": "0"
+      },
+      "B6": {
+        "s": 0,
+        "fontId": 0,
+        "font": {
+          "sz": "12",
+          "color": true,
+          "name": "Calibri",
+          "family": "2",
+          "scheme": "minor"
+        },
+        "numFmtId": "0"
+      },
+      "C6": {
+        "s": 0,
+        "fontId": 0,
+        "font": {
+          "sz": "12",
+          "color": true,
+          "name": "Calibri",
+          "family": "2",
+          "scheme": "minor"
+        },
+        "numFmtId": "0"
+      },
+      "D6": {
+        "s": 0,
+        "fontId": 0,
+        "font": {
+          "sz": "12",
+          "color": true,
+          "name": "Calibri",
+          "family": "2",
+          "scheme": "minor"
+        },
+        "numFmtId": "0"
+      },
+      "E6": {
+        "s": 0,
+        "fontId": 0,
+        "font": {
+          "sz": "12",
+          "color": true,
+          "name": "Calibri",
+          "family": "2",
+          "scheme": "minor"
+        },
+        "numFmtId": "0"
+      }
+    }
+  },
+  "deleted": true,
+  "gone_confirmed": true
+}

@@ -1,0 +1,632 @@
+{
+  "_probe": "ld416-01",
+  "_endpoint": "POST /open-apis/bitable/v1/apps/{a}/tables/{t}/records and PUT /open-apis/bitable/v1/apps/{a}/tables/{t}/records/{rid}; read-back through POST …/records/search",
+  "_method": "15 value shapes on one Text (1 / Text) field, each sent on both record-write routes, bracketed by the bare-string control",
+  "_http_status": 200,
+  "_verdict": "1/15 shapes accepted on the create route, 1/15 on the update route.",
+  "_note": "LD-416 AC1-AC3. Shapes a-f are the AC2 minimum; g-n are this probe's own reasoned extension. A form NOT in this list is UNMEASURED, not refused — see _not_tried.",
+  "_not_tried": [
+    "the batch routes (POST …/records/batch_create, POST …/records/batch_update) — a sibling route is out of this claim's scope (D-59)",
+    "create_table's `fields` cell seeding at table-creation time",
+    "any field pair other than (1, 'Text') — the scope fence (AC6) keeps Phone (13) and Barcode (1/Barcode) out of this probe entirely",
+    "segment arrays longer than three members, and nested arrays",
+    "a url segment carrying extra unknown keys alongside link/text/type",
+    "the update route's PATCH spelling (this tenant's record update is PUT)"
+  ],
+  "_transport": "larkdocio.common.transport.CredentialedRawHttpClient (urllib), paced 1.3 s. Raw rather than the shipped encoder, which refuses these shapes locally — which is the question.",
+  "_disposable": {
+    "title": "larkdocio-DISPOSABLE-1786464500-12682",
+    "app_token": "Example97238791bcf60bed22d0",
+    "deleted": "in the harness's finally; see orphans below"
+  },
+  "create_route_arms": [
+    {
+      "form": "CONTROL bare string",
+      "route": "POST …/records (create)",
+      "value_sent": "Example Link",
+      "why": "the shipped write shape — if this is not code:0 the probe measures itself, not Lark",
+      "code": 0,
+      "msg": "success",
+      "accepted": true,
+      "create_echo": "Example Link",
+      "record_id": "recls7z4g0PDiv",
+      "read_back": [
+        {
+          "text": "Example Link",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "form": "a: url-only array",
+      "route": "POST …/records (create)",
+      "value_sent": [
+        {
+          "type": "url",
+          "text": "Example Link",
+          "link": "https://example.com/example-link"
+        }
+      ],
+      "why": "one url segment and nothing else — the label-IS-the-link cell",
+      "code": 1254060,
+      "msg": "TextFieldConvFail",
+      "accepted": false,
+      "create_echo": null,
+      "record_id": null,
+      "error": {
+        "log_id": "202608120009037E9AA2D6DAC26794E44F"
+      }
+    },
+    {
+      "form": "b: mixed text-url-text",
+      "route": "POST …/records (create)",
+      "value_sent": [
+        {
+          "type": "text",
+          "text": "see "
+        },
+        {
+          "type": "url",
+          "text": "Example Link",
+          "link": "https://example.com/example-link"
+        },
+        {
+          "type": "text",
+          "text": " for detail"
+        }
+      ],
+      "why": "text before and after a url segment",
+      "code": 1254060,
+      "msg": "TextFieldConvFail",
+      "accepted": false,
+      "create_echo": null,
+      "record_id": null,
+      "error": {
+        "log_id": "20260812000904FE5329CDE06D3792A83C"
+      }
+    },
+    {
+      "form": "c: consumer's exact example shape",
+      "route": "POST …/records (create)",
+      "value_sent": [
+        {
+          "text": "see "
+        },
+        {
+          "link": "https://example.com/example-link",
+          "text": "Example Link",
+          "type": "url"
+        },
+        {
+          "text": " for detail"
+        }
+      ],
+      "why": "the findings' own spelling — {link, text, type} key order, and the text segments carrying NO type key, exactly as the quoted read-back shows them",
+      "code": 1254060,
+      "msg": "TextFieldConvFail",
+      "accepted": false,
+      "create_echo": null,
+      "record_id": null,
+      "error": {
+        "log_id": "202608120009067FC65E22EDFB8094AD5B"
+      }
+    },
+    {
+      "form": "d: reverse order url-then-text",
+      "route": "POST …/records (create)",
+      "value_sent": [
+        {
+          "type": "url",
+          "text": "Example Link",
+          "link": "https://example.com/example-link"
+        },
+        {
+          "type": "text",
+          "text": " — see above"
+        }
+      ],
+      "why": "url first, text last",
+      "code": 1254060,
+      "msg": "TextFieldConvFail",
+      "accepted": false,
+      "create_echo": null,
+      "record_id": null,
+      "error": {
+        "log_id": "202608120009088512698EEAB23C9418B2"
+      }
+    },
+    {
+      "form": "e: text-only array",
+      "route": "POST …/records (create)",
+      "value_sent": [
+        {
+          "type": "text",
+          "text": "plain words"
+        }
+      ],
+      "why": "the degenerate case — does an array of nothing but text behave like the bare string?",
+      "code": 1254060,
+      "msg": "TextFieldConvFail",
+      "accepted": false,
+      "create_echo": null,
+      "record_id": null,
+      "error": {
+        "log_id": "20260812000909C993F033A884F993CA31"
+      }
+    },
+    {
+      "form": "f: MALFORMED url segment, no link",
+      "route": "POST …/records (create)",
+      "value_sent": [
+        {
+          "type": "url",
+          "text": "Example Link"
+        }
+      ],
+      "why": "a url segment missing the one key that makes it a link — the server's own validation voice on record",
+      "code": 1254060,
+      "msg": "TextFieldConvFail",
+      "accepted": false,
+      "create_echo": null,
+      "record_id": null,
+      "error": {
+        "log_id": "202608120009111456F9FDC9F4E293BAFF"
+      }
+    },
+    {
+      "form": "g: MALFORMED url segment, empty link",
+      "route": "POST …/records (create)",
+      "value_sent": [
+        {
+          "type": "url",
+          "text": "Example Link",
+          "link": ""
+        }
+      ],
+      "why": "the same omission spelled as an empty string rather than an absent key",
+      "code": 1254060,
+      "msg": "TextFieldConvFail",
+      "accepted": false,
+      "create_echo": null,
+      "record_id": null,
+      "error": {
+        "log_id": "20260812000912F4F27C0BFC813F92F97C"
+      }
+    },
+    {
+      "form": "h: url segment with no type key",
+      "route": "POST …/records (create)",
+      "value_sent": [
+        {
+          "text": "Example Link",
+          "link": "https://example.com/example-link"
+        }
+      ],
+      "why": "link+text with the kind unstated — is `type` load-bearing on the write side?",
+      "code": 1254060,
+      "msg": "TextFieldConvFail",
+      "accepted": false,
+      "create_echo": null,
+      "record_id": null,
+      "error": {
+        "log_id": "202608120009149B66C89B73753294CDB5"
+      }
+    },
+    {
+      "form": "i: bare segment object, not in a list",
+      "route": "POST …/records (create)",
+      "value_sent": {
+        "type": "url",
+        "text": "Example Link",
+        "link": "https://example.com/example-link"
+      },
+      "why": "the single segment unwrapped — a dict is refused locally today alongside the list",
+      "code": 1254060,
+      "msg": "TextFieldConvFail",
+      "accepted": false,
+      "create_echo": null,
+      "record_id": null,
+      "error": {
+        "log_id": "20260812000915F4F27C0BFC813F92FA1B"
+      }
+    },
+    {
+      "form": "j: url segment with empty text",
+      "route": "POST …/records (create)",
+      "value_sent": [
+        {
+          "type": "url",
+          "text": "",
+          "link": "https://example.com/example-link"
+        }
+      ],
+      "why": "no label at all — does the server substitute the link as its own label?",
+      "code": 1254060,
+      "msg": "TextFieldConvFail",
+      "accepted": false,
+      "create_echo": null,
+      "record_id": null,
+      "error": {
+        "log_id": "20260812000917701EAB663FB8869629E7"
+      }
+    },
+    {
+      "form": "k: url segment, non-http scheme",
+      "route": "POST …/records (create)",
+      "value_sent": [
+        {
+          "type": "url",
+          "text": "Example Link",
+          "link": "mailto:nobody@example.invalid"
+        }
+      ],
+      "why": "a scheme Lark synthesizes itself on an Email cell, sent explicitly here",
+      "code": 1254060,
+      "msg": "TextFieldConvFail",
+      "accepted": false,
+      "create_echo": null,
+      "record_id": null,
+      "error": {
+        "log_id": "202608120009197AE9CA795AF0CA947C9A"
+      }
+    },
+    {
+      "form": "l: url segment, scheme-less link",
+      "route": "POST …/records (create)",
+      "value_sent": [
+        {
+          "type": "url",
+          "text": "Example Link",
+          "link": "example.com/example-link"
+        }
+      ],
+      "why": "no scheme — the shape a human pastes",
+      "code": 1254060,
+      "msg": "TextFieldConvFail",
+      "accepted": false,
+      "create_echo": null,
+      "record_id": null,
+      "error": {
+        "log_id": "202608120009203C924A4165146C926538"
+      }
+    },
+    {
+      "form": "m: unknown segment type",
+      "route": "POST …/records (create)",
+      "value_sent": [
+        {
+          "type": "mention",
+          "text": "@nobody"
+        }
+      ],
+      "why": "a segment kind the READ side knows but no write shape claims — does the route validate the type token at all?",
+      "code": 1254060,
+      "msg": "TextFieldConvFail",
+      "accepted": false,
+      "create_echo": null,
+      "record_id": null,
+      "error": {
+        "log_id": "2026081200092285E3ED8A15FFDF923A6C"
+      }
+    },
+    {
+      "form": "n: empty array",
+      "route": "POST …/records (create)",
+      "value_sent": [],
+      "why": "the empty segment array — a clear, an empty string, or a refusal?",
+      "code": 1254060,
+      "msg": "TextFieldConvFail",
+      "accepted": false,
+      "create_echo": null,
+      "record_id": null,
+      "error": {
+        "log_id": "20260812000923BB5BF860AFDB7094DDD9"
+      }
+    }
+  ],
+  "update_route_arms": [
+    {
+      "form": "CONTROL bare string",
+      "route": "PUT …/records/{record_id} (update)",
+      "value_sent": "Example Link",
+      "why": "the shipped write shape — if this is not code:0 the probe measures itself, not Lark",
+      "code": 0,
+      "msg": "success",
+      "accepted": true,
+      "update_echo": "Example Link",
+      "record_id": "recwi6u78c6VIk",
+      "read_back": [
+        {
+          "text": "Example Link",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "form": "a: url-only array",
+      "route": "PUT …/records/{record_id} (update)",
+      "value_sent": [
+        {
+          "type": "url",
+          "text": "Example Link",
+          "link": "https://example.com/example-link"
+        }
+      ],
+      "why": "one url segment and nothing else — the label-IS-the-link cell",
+      "code": 1254060,
+      "msg": "TextFieldConvFail",
+      "accepted": false,
+      "update_echo": null,
+      "record_id": "reczw8s2JrAM4X",
+      "error": {
+        "log_id": "20260812000929BE484D8A0DCB8698B3EF"
+      }
+    },
+    {
+      "form": "b: mixed text-url-text",
+      "route": "PUT …/records/{record_id} (update)",
+      "value_sent": [
+        {
+          "type": "text",
+          "text": "see "
+        },
+        {
+          "type": "url",
+          "text": "Example Link",
+          "link": "https://example.com/example-link"
+        },
+        {
+          "type": "text",
+          "text": " for detail"
+        }
+      ],
+      "why": "text before and after a url segment",
+      "code": 1254060,
+      "msg": "TextFieldConvFail",
+      "accepted": false,
+      "update_echo": null,
+      "record_id": "recvh3y5jiZaxI",
+      "error": {
+        "log_id": "2026081200093090B688C9BA5377946B67"
+      }
+    },
+    {
+      "form": "c: consumer's exact example shape",
+      "route": "PUT …/records/{record_id} (update)",
+      "value_sent": [
+        {
+          "text": "see "
+        },
+        {
+          "link": "https://example.com/example-link",
+          "text": "Example Link",
+          "type": "url"
+        },
+        {
+          "text": " for detail"
+        }
+      ],
+      "why": "the findings' own spelling — {link, text, type} key order, and the text segments carrying NO type key, exactly as the quoted read-back shows them",
+      "code": 1254060,
+      "msg": "TextFieldConvFail",
+      "accepted": false,
+      "update_echo": null,
+      "record_id": "recbh4a9ULYI7h",
+      "error": {
+        "log_id": "20260812000932BE484D8A0DCB8698B4A2"
+      }
+    },
+    {
+      "form": "d: reverse order url-then-text",
+      "route": "PUT …/records/{record_id} (update)",
+      "value_sent": [
+        {
+          "type": "url",
+          "text": "Example Link",
+          "link": "https://example.com/example-link"
+        },
+        {
+          "type": "text",
+          "text": " — see above"
+        }
+      ],
+      "why": "url first, text last",
+      "code": 1254060,
+      "msg": "TextFieldConvFail",
+      "accepted": false,
+      "update_echo": null,
+      "record_id": "recar3f5uSDyLp",
+      "error": {
+        "log_id": "2026081200093389B8CD5B8D9F5D970AB0"
+      }
+    },
+    {
+      "form": "e: text-only array",
+      "route": "PUT …/records/{record_id} (update)",
+      "value_sent": [
+        {
+          "type": "text",
+          "text": "plain words"
+        }
+      ],
+      "why": "the degenerate case — does an array of nothing but text behave like the bare string?",
+      "code": 1254060,
+      "msg": "TextFieldConvFail",
+      "accepted": false,
+      "update_echo": null,
+      "record_id": "recwl2t7TyHbvc",
+      "error": {
+        "log_id": "202608120009353800C1EB60596B96F0A5"
+      }
+    },
+    {
+      "form": "f: MALFORMED url segment, no link",
+      "route": "PUT …/records/{record_id} (update)",
+      "value_sent": [
+        {
+          "type": "url",
+          "text": "Example Link"
+        }
+      ],
+      "why": "a url segment missing the one key that makes it a link — the server's own validation voice on record",
+      "code": 1254060,
+      "msg": "TextFieldConvFail",
+      "accepted": false,
+      "update_echo": null,
+      "record_id": "recbr8d6vbaA5n",
+      "error": {
+        "log_id": "20260812000936FA3D08AC2904C2943BB9"
+      }
+    },
+    {
+      "form": "g: MALFORMED url segment, empty link",
+      "route": "PUT …/records/{record_id} (update)",
+      "value_sent": [
+        {
+          "type": "url",
+          "text": "Example Link",
+          "link": ""
+        }
+      ],
+      "why": "the same omission spelled as an empty string rather than an absent key",
+      "code": 1254060,
+      "msg": "TextFieldConvFail",
+      "accepted": false,
+      "update_echo": null,
+      "record_id": "rechk8x51BIFj0",
+      "error": {
+        "log_id": "2026081200093889B8CD5B8D9F5D970BDC"
+      }
+    },
+    {
+      "form": "h: url segment with no type key",
+      "route": "PUT …/records/{record_id} (update)",
+      "value_sent": [
+        {
+          "text": "Example Link",
+          "link": "https://example.com/example-link"
+        }
+      ],
+      "why": "link+text with the kind unstated — is `type` load-bearing on the write side?",
+      "code": 1254060,
+      "msg": "TextFieldConvFail",
+      "accepted": false,
+      "update_echo": null,
+      "record_id": "recea3x0tUh6nA",
+      "error": {
+        "log_id": "202608120009399009B5CACA5E4A93941F"
+      }
+    },
+    {
+      "form": "i: bare segment object, not in a list",
+      "route": "PUT …/records/{record_id} (update)",
+      "value_sent": {
+        "type": "url",
+        "text": "Example Link",
+        "link": "https://example.com/example-link"
+      },
+      "why": "the single segment unwrapped — a dict is refused locally today alongside the list",
+      "code": 1254060,
+      "msg": "TextFieldConvFail",
+      "accepted": false,
+      "update_echo": null,
+      "record_id": "recjr2x99neITp",
+      "error": {
+        "log_id": "2026081200094128FCE3DDBD017593563A"
+      }
+    },
+    {
+      "form": "j: url segment with empty text",
+      "route": "PUT …/records/{record_id} (update)",
+      "value_sent": [
+        {
+          "type": "url",
+          "text": "",
+          "link": "https://example.com/example-link"
+        }
+      ],
+      "why": "no label at all — does the server substitute the link as its own label?",
+      "code": 1254060,
+      "msg": "TextFieldConvFail",
+      "accepted": false,
+      "update_echo": null,
+      "record_id": "recin6e3IWnGP6",
+      "error": {
+        "log_id": "202608120009439B66C89B73753294D2D6"
+      }
+    },
+    {
+      "form": "k: url segment, non-http scheme",
+      "route": "PUT …/records/{record_id} (update)",
+      "value_sent": [
+        {
+          "type": "url",
+          "text": "Example Link",
+          "link": "mailto:nobody@example.invalid"
+        }
+      ],
+      "why": "a scheme Lark synthesizes itself on an Email cell, sent explicitly here",
+      "code": 1254060,
+      "msg": "TextFieldConvFail",
+      "accepted": false,
+      "update_echo": null,
+      "record_id": "recgg5z0ljxKMK",
+      "error": {
+        "log_id": "20260812000944A47D44CC82091B925996"
+      }
+    },
+    {
+      "form": "l: url segment, scheme-less link",
+      "route": "PUT …/records/{record_id} (update)",
+      "value_sent": [
+        {
+          "type": "url",
+          "text": "Example Link",
+          "link": "example.com/example-link"
+        }
+      ],
+      "why": "no scheme — the shape a human pastes",
+      "code": 1254060,
+      "msg": "TextFieldConvFail",
+      "accepted": false,
+      "update_echo": null,
+      "record_id": "reccu7s2IoqyJ6",
+      "error": {
+        "log_id": "20260812000946AB86DA10FA657B94A7D3"
+      }
+    },
+    {
+      "form": "m: unknown segment type",
+      "route": "PUT …/records/{record_id} (update)",
+      "value_sent": [
+        {
+          "type": "mention",
+          "text": "@nobody"
+        }
+      ],
+      "why": "a segment kind the READ side knows but no write shape claims — does the route validate the type token at all?",
+      "code": 1254060,
+      "msg": "TextFieldConvFail",
+      "accepted": false,
+      "update_echo": null,
+      "record_id": "recuk7e3mv1nEW",
+      "error": {
+        "log_id": "202608120009473517EC0753F46E94E318"
+      }
+    },
+    {
+      "form": "n: empty array",
+      "route": "PUT …/records/{record_id} (update)",
+      "value_sent": [],
+      "why": "the empty segment array — a clear, an empty string, or a refusal?",
+      "code": 1254060,
+      "msg": "TextFieldConvFail",
+      "accepted": false,
+      "update_echo": null,
+      "record_id": "recfr6i7Snb7hZ",
+      "error": {
+        "log_id": "20260812000949D3EBDB9DF3F0859636C1"
+      }
+    }
+  ]
+}

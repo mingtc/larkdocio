@@ -1,0 +1,222 @@
+{
+ "observed": {
+  "metainfo.properties.revision": 37,
+  "v3_tab_query_carries_a_revision": false,
+  "v3_tab_query_keys": [
+   "grid_properties",
+   "hidden",
+   "index",
+   "merges",
+   "resource_type",
+   "sheet_id",
+   "title"
+  ],
+  "values_reply_revisions": {
+   "v2 values read of tab 444a1c!A1:B2": {
+    "data.revision": 37,
+    "data.valueRange.revision": 37
+   },
+   "v2 values read of tab 7pg9wE!A1:B2": {
+    "data.revision": 37,
+    "data.valueRange.revision": 37
+   }
+  }
+ },
+ "probe": "LD-332 sheets revision anchor — which value, what scope",
+ "read_only": true,
+ "steps": [
+  {
+   "label": "v2 metainfo (properties.revision)",
+   "response": {
+    "code": 0,
+    "data": {
+     "properties": {
+      "ownerUser": 9000000000000000002,
+      "revision": 37,
+      "sheetCount": 2,
+      "title": "Larkdocio Scratch Sheet"
+     },
+     "sheets": [
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 0,
+       "rowCount": 200,
+       "sheetId": "444a1c",
+       "title": "Types"
+      },
+      {
+       "columnCount": 20,
+       "frozenColCount": 0,
+       "frozenRowCount": 0,
+       "index": 1,
+       "merges": [
+        {
+         "columnCount": 3,
+         "rowCount": 1,
+         "startColumnIndex": 0,
+         "startRowIndex": 0
+        },
+        {
+         "columnCount": 1,
+         "rowCount": 3,
+         "startColumnIndex": 0,
+         "startRowIndex": 2
+        },
+        {
+         "columnCount": 2,
+         "rowCount": 1,
+         "startColumnIndex": 1,
+         "startRowIndex": 2
+        },
+        {
+         "columnCount": 3,
+         "rowCount": 2,
+         "startColumnIndex": 1,
+         "startRowIndex": 6
+        },
+        {
+         "columnCount": 3,
+         "rowCount": 1,
+         "startColumnIndex": 0,
+         "startRowIndex": 9
+        }
+       ],
+       "rowCount": 200,
+       "sheetId": "7pg9wE",
+       "title": "Merged"
+      }
+     ],
+     "spreadsheetToken": "SheetScratchExample00000001"
+    },
+    "msg": "success"
+   }
+  },
+  {
+   "label": "v3 sheets/query (does a TAB carry a revision?)",
+   "response": {
+    "code": 0,
+    "data": {
+     "sheets": [
+      {
+       "grid_properties": {
+        "column_count": 20,
+        "frozen_column_count": 0,
+        "frozen_row_count": 0,
+        "row_count": 200
+       },
+       "hidden": false,
+       "index": 0,
+       "resource_type": "sheet",
+       "sheet_id": "444a1c",
+       "title": "Types"
+      },
+      {
+       "grid_properties": {
+        "column_count": 20,
+        "frozen_column_count": 0,
+        "frozen_row_count": 0,
+        "row_count": 200
+       },
+       "hidden": false,
+       "index": 1,
+       "merges": [
+        {
+         "end_column_index": 2,
+         "end_row_index": 0,
+         "start_column_index": 0,
+         "start_row_index": 0
+        },
+        {
+         "end_column_index": 0,
+         "end_row_index": 4,
+         "start_column_index": 0,
+         "start_row_index": 2
+        },
+        {
+         "end_column_index": 2,
+         "end_row_index": 2,
+         "start_column_index": 1,
+         "start_row_index": 2
+        },
+        {
+         "end_column_index": 3,
+         "end_row_index": 7,
+         "start_column_index": 1,
+         "start_row_index": 6
+        },
+        {
+         "end_column_index": 2,
+         "end_row_index": 9,
+         "start_column_index": 0,
+         "start_row_index": 9
+        }
+       ],
+       "resource_type": "sheet",
+       "sheet_id": "7pg9wE",
+       "title": "Merged"
+      }
+     ]
+    },
+    "msg": "success"
+   }
+  },
+  {
+   "label": "v2 values read of tab 444a1c!A1:B2",
+   "response": {
+    "code": 0,
+    "data": {
+     "revision": 37,
+     "spreadsheetToken": "SheetScratchExample00000001",
+     "valueRange": {
+      "majorDimension": "ROWS",
+      "range": "444a1c!A1:B2",
+      "revision": 37,
+      "values": [
+       [
+        "Type",
+        "Value"
+       ],
+       [
+        "plain string",
+        "hello world"
+       ]
+      ]
+     }
+    },
+    "msg": "success"
+   }
+  },
+  {
+   "label": "v2 values read of tab 7pg9wE!A1:B2",
+   "response": {
+    "code": 0,
+    "data": {
+     "revision": 37,
+     "spreadsheetToken": "SheetScratchExample00000001",
+     "valueRange": {
+      "majorDimension": "ROWS",
+      "range": "7pg9wE!A1:B2",
+      "revision": 37,
+      "values": [
+       [
+        "merged title spanning A1:C1",
+        null
+       ],
+       [
+        null,
+        null
+       ]
+      ]
+     }
+    },
+    "msg": "success"
+   }
+  }
+ ],
+ "target": {
+  "env": "LARKDOCIO_SCRATCH_SHEET",
+  "token": "SheetScratchExample00000001"
+ }
+}

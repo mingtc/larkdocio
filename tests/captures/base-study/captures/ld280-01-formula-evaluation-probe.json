@@ -1,0 +1,267 @@
+{
+ "_endpoint": ".../tables/{t}/fields + .../records/search + .../records/batch_get",
+ "_method": "POST",
+ "_note": "THE CELL READ the ld262 probe never took: a Formula column authored through POST .../fields, then its CELLS read on two routes, over a record written before the column and a record written after it, re-read until a bounded poll budget is spent — all against a self-provisioned disposable",
+ "_probe": "ld280-formula-evaluation",
+ "_verdict": "OK",
+ "observations": {
+  "formula_cell_read": {
+   "batch_get_rows": [
+    {
+     "ld280-const": {
+      "type": 2,
+      "value": [
+       2
+      ]
+     }
+    },
+    {
+     "ld280-const": {
+      "type": 2,
+      "value": [
+       2
+      ]
+     }
+    },
+    {
+     "ld280-const": {
+      "type": 2,
+      "value": [
+       2
+      ]
+     }
+    },
+    {
+     "ld280-const": {
+      "type": 2,
+      "value": [
+       2
+      ]
+     }
+    },
+    {
+     "ld280-const": {
+      "type": 2,
+      "value": [
+       2
+      ]
+     }
+    },
+    {
+     "ld280-const": {
+      "type": 2,
+      "value": [
+       2
+      ]
+     }
+    },
+    {
+     "ld280-const": {
+      "type": 2,
+      "value": [
+       2
+      ]
+     }
+    },
+    {
+     "ld280-const": {
+      "type": 2,
+      "value": [
+       2
+      ]
+     }
+    },
+    {
+     "ld280-const": {
+      "type": 2,
+      "value": [
+       2
+      ]
+     }
+    },
+    {
+     "ld280-const": {
+      "type": 2,
+      "value": [
+       2
+      ]
+     }
+    },
+    {
+     "ld280-const": {
+      "type": 2,
+      "value": [
+       2
+      ]
+     },
+     "ld280-input": 21
+    },
+    {
+     "ld280-const": {
+      "type": 2,
+      "value": [
+       2
+      ]
+     },
+     "ld280-input": 5
+    }
+   ],
+   "cells_present_per_expression": {
+    "ld280-bound": false,
+    "ld280-const": true,
+    "ld280-ref": false
+   },
+   "constant_computes": true,
+   "created": {
+    "ld280-bound": {
+     "authored_through": "the harness probe seam (the library refuses it)",
+     "property_read_back": {
+      "formatter": "",
+      "formula_expression": "CurrentValue.bitable::$table[tblAGVxjPS57uq9g].$field[fldtRZyfiB]*2"
+     },
+     "requested_expression": "CurrentValue.bitable::$table[tblAGVxjPS57uq9g].$field[fldtRZyfiB]*2",
+     "type": 20,
+     "ui_type": "Formula"
+    },
+    "ld280-const": {
+     "authored_through": "the shipped client",
+     "property_read_back": {
+      "formatter": "",
+      "formula_expression": "1+1"
+     },
+     "requested_expression": "1+1",
+     "type": 20,
+     "ui_type": "Formula"
+    },
+    "ld280-ref": {
+     "authored_through": "the harness probe seam (the library refuses it)",
+     "property_read_back": {
+      "formatter": "",
+      "formula_expression": "CurrentValue.bitable::$table[tblAGVxjPS57uq9g].$field[fldtRZyfiB]*2"
+     },
+     "requested_expression": "CurrentValue.[ld280-input] * 2",
+     "type": 20,
+     "ui_type": "Formula"
+    }
+   },
+   "keys_present_batch_get": [
+    "ld280-const",
+    "ld280-input"
+   ],
+   "keys_present_search": [
+    "ld280-const",
+    "ld280-input"
+   ],
+   "listed_ui_types": [
+    "Attachment",
+    "DateTime",
+    "Formula",
+    "Number",
+    "SingleSelect",
+    "Text"
+   ],
+   "polls": 8,
+   "reference_computes": false,
+   "search_rows_final": [
+    {
+     "ld280-const": {
+      "type": 2,
+      "value": [
+       2
+      ]
+     }
+    },
+    {
+     "ld280-const": {
+      "type": 2,
+      "value": [
+       2
+      ]
+     }
+    },
+    {
+     "ld280-const": {
+      "type": 2,
+      "value": [
+       2
+      ]
+     }
+    },
+    {
+     "ld280-const": {
+      "type": 2,
+      "value": [
+       2
+      ]
+     }
+    },
+    {
+     "ld280-const": {
+      "type": 2,
+      "value": [
+       2
+      ]
+     }
+    },
+    {
+     "ld280-const": {
+      "type": 2,
+      "value": [
+       2
+      ]
+     }
+    },
+    {
+     "ld280-const": {
+      "type": 2,
+      "value": [
+       2
+      ]
+     }
+    },
+    {
+     "ld280-const": {
+      "type": 2,
+      "value": [
+       2
+      ]
+     }
+    },
+    {
+     "ld280-const": {
+      "type": 2,
+      "value": [
+       2
+      ]
+     }
+    },
+    {
+     "ld280-const": {
+      "type": 2,
+      "value": [
+       2
+      ]
+     }
+    },
+    {
+     "ld280-const": {
+      "type": 2,
+      "value": [
+       2
+      ]
+     },
+     "ld280-input": 21
+    },
+    {
+     "ld280-const": {
+      "type": 2,
+      "value": [
+       2
+      ]
+     },
+     "ld280-input": 5
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,17 @@
+{
+  "n": 703,
+  "label": "LD420 leg0 C list permission members v2 for a second view of the same question",
+  "credential_pair": "WRITE",
+  "request": {
+    "method": "GET",
+    "path": "/open-apis/drive/v2/permissions/Example96b1f1037377879d8dd5/members?type=docx",
+    "body": null,
+    "headers": [
+      "Authorization: Bearer <redacted>"
+    ]
+  },
+  "http_status": 404,
+  "response": {
+    "_raw": "404 page not found"
+  }
+}

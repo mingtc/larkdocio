@@ -1,0 +1,41 @@
+{
+  "n": 208,
+  "probe": "LD-435 AC1/AC2 arms B+C — values_image, sheet_file, absence",
+  "label": "C2b read-back after the cross-type create",
+  "credential_pair": "WRITE",
+  "request": {
+    "method": "GET",
+    "path": "/open-apis/sheets/v3/spreadsheets/Exampleb31ebb6e3fd2fe5eddf0/sheets/61a0cd/float_images/query",
+    "body": null,
+    "headers": [
+      "Authorization: Bearer <redacted>"
+    ]
+  },
+  "http_status": 200,
+  "response": {
+    "code": 0,
+    "data": {
+      "items": [
+        {
+          "float_image_id": "N1c3GER4am",
+          "float_image_token": "Example78521b01c50869b8aa83",
+          "height": 120,
+          "offset_x": 0,
+          "offset_y": 0,
+          "range": "61a0cd!A1:A1",
+          "width": 120
+        },
+        {
+          "float_image_id": "xFU1rVOkD7",
+          "float_image_token": "Exampled7a15ca0baea2baafe68",
+          "height": 60,
+          "offset_x": 0,
+          "offset_y": 0,
+          "range": "61a0cd!E5:E5",
+          "width": 60
+        }
+      ]
+    },
+    "msg": "success"
+  }
+}

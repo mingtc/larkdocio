@@ -1,0 +1,17 @@
+{
+  "_probe": "03",
+  "_endpoint": "/open-apis/bitable/v1/apps/Example046a321406fe497fe3a2/workflows",
+  "_method": "GET",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": "success",
+  "_verdict": "OK",
+  "_note": "automation/workflow family",
+  "response": {
+    "code": 0,
+    "data": {
+      "workflows": []
+    },
+    "msg": "success"
+  }
+}

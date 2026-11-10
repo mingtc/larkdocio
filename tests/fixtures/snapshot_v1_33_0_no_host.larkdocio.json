@@ -1,0 +1,161 @@
+{
+  "larkdocio_snapshot": {
+    "format_version": 1,
+    "integrity": {
+      "algorithm": "sha256",
+      "covers": "the CONTENT of `payload` (the block payloads, the document token and the document_revision_id), canonicalized — keys sorted, no insignificant whitespace — so reformatting this file is not corruption, while any change to a block, the token or the revision is.",
+      "does_not_cover": "this envelope's own fields — `format_version` and this `integrity` block itself, which are checked by the version check and by the digest comparison rather than by the digest value; and anything outside this file, including images or board PNGs a read wrote beside it.",
+      "value": "a6b3eb3d48250ccec41d284879e679115e69f27695923639ee7c0f1c10529d8d",
+      "why": "INTEGRITY, NEVER ENCRYPTION. No security boundary exists between a local library and the caller, who owns this file, the process and the disk; the threat this digest answers is accidental corruption — a truncated write, a half-synced cloud folder, a corrupted disk, a hand-edited file — and it answers nothing else. It is not a signature and says nothing about who wrote the file."
+    },
+    "payload": {
+      "blocks": [
+        {
+          "block_id": "root",
+          "block_type": 1,
+          "children": [
+            "b1"
+          ],
+          "page": {
+            "elements": [
+              {
+                "text_run": {
+                  "content": "Doc Title"
+                }
+              }
+            ]
+          },
+          "parent_id": "doc"
+        },
+        {
+          "block_id": "b1",
+          "block_type": 12,
+          "bullet": {
+            "elements": [
+              {
+                "text_run": {
+                  "content": "Item with a table"
+                }
+              }
+            ]
+          },
+          "children": [
+            "tbl"
+          ],
+          "parent_id": "root"
+        },
+        {
+          "block_id": "tbl",
+          "block_type": 31,
+          "children": [
+            "c00",
+            "c01",
+            "c10",
+            "c11"
+          ],
+          "parent_id": "b1",
+          "table": {
+            "property": {
+              "column_size": 2,
+              "row_size": 2
+            }
+          }
+        },
+        {
+          "block_id": "c00",
+          "block_type": 32,
+          "children": [
+            "c00t"
+          ],
+          "parent_id": "tbl",
+          "table_cell": {}
+        },
+        {
+          "block_id": "c00t",
+          "block_type": 2,
+          "parent_id": "c00",
+          "text": {
+            "elements": [
+              {
+                "text_run": {
+                  "content": "H1"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "block_id": "c01",
+          "block_type": 32,
+          "children": [
+            "c01t"
+          ],
+          "parent_id": "tbl",
+          "table_cell": {}
+        },
+        {
+          "block_id": "c01t",
+          "block_type": 2,
+          "parent_id": "c01",
+          "text": {
+            "elements": [
+              {
+                "text_run": {
+                  "content": "H2"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "block_id": "c10",
+          "block_type": 32,
+          "children": [
+            "c10t"
+          ],
+          "parent_id": "tbl",
+          "table_cell": {}
+        },
+        {
+          "block_id": "c10t",
+          "block_type": 2,
+          "parent_id": "c10",
+          "text": {
+            "elements": [
+              {
+                "text_run": {
+                  "content": "a"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "block_id": "c11",
+          "block_type": 32,
+          "children": [
+            "c11t"
+          ],
+          "parent_id": "tbl",
+          "table_cell": {}
+        },
+        {
+          "block_id": "c11t",
+          "block_type": 2,
+          "parent_id": "c11",
+          "text": {
+            "elements": [
+              {
+                "text_run": {
+                  "content": "b"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "document_revision_id": 41,
+      "document_token": "root"
+    }
+  }
+}

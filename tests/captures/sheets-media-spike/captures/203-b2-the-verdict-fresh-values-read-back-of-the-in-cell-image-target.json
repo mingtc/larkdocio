@@ -1,0 +1,40 @@
+{
+  "n": 203,
+  "probe": "LD-435 AC1/AC2 arms B+C — values_image, sheet_file, absence",
+  "label": "B2 THE VERDICT fresh values read-back of the in-cell image target",
+  "credential_pair": "WRITE",
+  "request": {
+    "method": "GET",
+    "path": "/open-apis/sheets/v2/spreadsheets/Exampleb31ebb6e3fd2fe5eddf0/values/61a0cd!B2:B2",
+    "body": null,
+    "headers": [
+      "Authorization: Bearer <redacted>"
+    ]
+  },
+  "http_status": 200,
+  "response": {
+    "code": 0,
+    "data": {
+      "revision": 2,
+      "spreadsheetToken": "Exampleb31ebb6e3fd2fe5eddf0",
+      "valueRange": {
+        "majorDimension": "ROWS",
+        "range": "61a0cd!B2:B2",
+        "revision": 2,
+        "values": [
+          [
+            {
+              "fileToken": "Example01e5441c8fb74fe6adf8",
+              "height": 24,
+              "link": "internal-api-space-sg.larksuite.com/space/api/box/stream/download/v2/cover/Example01e5441c8fb74fe6adf8?height=1280&width=1280&policy=equal&mount_point=sheet_image&mount_node_token=Exampleb31ebb6e3fd2fe5eddf0",
+              "text": "",
+              "type": "embed-image",
+              "width": 24
+            }
+          ]
+        ]
+      }
+    },
+    "msg": "success"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "n": 109,
+  "label": "r2 create version burst 3 (count/quota disclosure)",
+  "credential_pair": "WRITE",
+  "request": {
+    "method": "POST",
+    "path": "/open-apis/drive/v1/files/Example923c2c2d4498ddcbef50/versions",
+    "body": {
+      "name": "burst-3",
+      "obj_type": "docx"
+    },
+    "headers": [
+      "Authorization: Bearer <redacted>"
+    ]
+  },
+  "http_status": 200,
+  "seconds": 0.281,
+  "response": {
+    "code": 0,
+    "data": {
+      "create_time": "1786403468",
+      "creator_id": "ou_examplebot0000000000000000000001",
+      "name": "burst-3",
+      "obj_type": "docx",
+      "owner_id": "ou_examplebot0000000000000000000001",
+      "parent_token": "Example923c2c2d4498ddcbef50",
+      "parent_type": "docx",
+      "status": 0,
+      "version": "92dgEn"
+    },
+    "msg": "Success"
+  }
+}

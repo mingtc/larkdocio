@@ -1,0 +1,600 @@
+{
+  "_probe": "ld463-date-only-zone",
+  "_issue": "LD-463",
+  "started_at_utc": "2026-08-14T12:46:01.146884+00:00",
+  "read_app_fingerprint": "ex9fa8801d8f",
+  "write_app_fingerprint": "ex9fa8801d8f",
+  "c_preexisting_bases": {
+    "scratch_base_hand_authored_in_product": {
+      "app_token": "Example046a321406fe497fe3a2",
+      "how_it_was_born": "the standing LARKDOCIO_SCRATCH_BASE — its Lookup / Email / Stage specimens are hand-authored in the Lark product, so it is the closest thing to a UI-created Base this probe may touch. READ-ONLY here.",
+      "status": 200,
+      "code": 0,
+      "msg": "success",
+      "app_payload_keys": [
+        "app_token",
+        "formula_type",
+        "is_advanced",
+        "name",
+        "revision",
+        "time_zone"
+      ],
+      "time_zone_key_present_in_raw_json": true,
+      "time_zone_raw_value": "Asia/Singapore",
+      "raw_body": {
+        "code": 0,
+        "data": {
+          "app": {
+            "app_token": "Example046a321406fe497fe3a2",
+            "formula_type": 2,
+            "is_advanced": false,
+            "name": "Larkdocio Scratch Base",
+            "revision": 14,
+            "time_zone": "Asia/Singapore"
+          }
+        },
+        "msg": "success"
+      }
+    },
+    "docx_embedded_base": {
+      "app_token": "Example3b5902b83520533e4650",
+      "how_it_was_born": "the Base embedded in the block-zoo doc (docx block type 18). READ-ONLY here.",
+      "status": 200,
+      "code": 0,
+      "msg": "success",
+      "app_payload_keys": [
+        "app_token",
+        "formula_type",
+        "is_advanced",
+        "name",
+        "revision"
+      ],
+      "time_zone_key_present_in_raw_json": false,
+      "time_zone_raw_value": null,
+      "raw_body": {
+        "code": 0,
+        "data": {
+          "app": {
+            "app_token": "Example3b5902b83520533e4650",
+            "formula_type": 2,
+            "is_advanced": false,
+            "name": "Untitled bitable",
+            "revision": 3
+          }
+        },
+        "msg": "success"
+      }
+    }
+  },
+  "c_create_body_time_zone": {
+    "sent": {
+      "name": "<disposable title>",
+      "time_zone": "Asia/Singapore"
+    },
+    "create_status": 200,
+    "create_code": 0,
+    "create_msg": "success",
+    "create_echo_time_zone": "Asia/Singapore",
+    "app_meta_after_create": {
+      "status": 200,
+      "code": 0,
+      "msg": "success",
+      "app_payload_keys": [
+        "app_token",
+        "formula_type",
+        "is_advanced",
+        "name",
+        "revision",
+        "time_zone"
+      ],
+      "time_zone_key_present_in_raw_json": true,
+      "time_zone_raw_value": "Asia/Singapore",
+      "raw_body": {
+        "code": 0,
+        "data": {
+          "app": {
+            "app_token": "Example0f4804e46801107929aa",
+            "formula_type": 2,
+            "is_advanced": false,
+            "name": "larkdocio-DISPOSABLE-1786711562-44476",
+            "revision": 0,
+            "time_zone": "Asia/Singapore"
+          }
+        },
+        "msg": "success"
+      }
+    },
+    "sdk_view": {
+      "sdk_attribute_present": true,
+      "sdk_time_zone": "Asia/Singapore",
+      "sdk_name_present": true
+    }
+  },
+  "disposable": {
+    "app_token": "Example1dcd90324e6fa9235c46",
+    "table_id": "tblaVyJQgYRvyNy1",
+    "title": "larkdocio-DISPOSABLE-1786711565-44476"
+  },
+  "c_fresh_api_created_base": {
+    "seconds_after_create": 5.7,
+    "status": 200,
+    "code": 0,
+    "msg": "success",
+    "app_payload_keys": [
+      "app_token",
+      "formula_type",
+      "is_advanced",
+      "name",
+      "revision"
+    ],
+    "time_zone_key_present_in_raw_json": false,
+    "time_zone_raw_value": null,
+    "raw_body": {
+      "code": 0,
+      "data": {
+        "app": {
+          "app_token": "Example1dcd90324e6fa9235c46",
+          "formula_type": 2,
+          "is_advanced": false,
+          "name": "larkdocio-DISPOSABLE-1786711565-44476",
+          "revision": 0
+        }
+      },
+      "msg": "success"
+    },
+    "sdk_view": {
+      "sdk_attribute_present": true,
+      "sdk_time_zone": null,
+      "sdk_name_present": true
+    }
+  },
+  "fields_created": {
+    "DateOnly": {
+      "status": 200,
+      "code": 0,
+      "msg": "success",
+      "echo": {
+        "field_id": "fldH3KcvcY",
+        "field_name": "DateOnly",
+        "is_extend": false,
+        "is_primary": false,
+        "is_synced": false,
+        "property": {
+          "auto_fill": false,
+          "date_formatter": "yyyy/MM/dd"
+        },
+        "type": 5,
+        "ui_type": "DateTime"
+      }
+    },
+    "DateTime": {
+      "status": 200,
+      "code": 0,
+      "msg": "success",
+      "echo": {
+        "field_id": "fldfMuGuJp",
+        "field_name": "DateTime",
+        "is_extend": false,
+        "is_primary": false,
+        "is_synced": false,
+        "property": {
+          "auto_fill": false,
+          "date_formatter": "yyyy/MM/dd HH:mm"
+        },
+        "type": 5,
+        "ui_type": "DateTime"
+      }
+    }
+  },
+  "a_batch_create": {
+    "status": 200,
+    "code": 0,
+    "msg": "success",
+    "count": 21
+  },
+  "a_read_back": {
+    "status": 200,
+    "code": 0,
+    "rows_read": 31
+  },
+  "b_server_day_oracle": {
+    "status": 200,
+    "code": 0,
+    "msg": "success",
+    "probe_ran_at_utc": "2026-08-14T12:46:01.146884+00:00",
+    "utc_midnight_today_ms": 1786665600000,
+    "hours_matching_today_utc": [
+      0,
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14
+    ],
+    "hours_not_matching_today_utc": [
+      16,
+      18,
+      20,
+      22
+    ],
+    "how_to_read_this": "the server evaluates `Today` against ITS OWN clock in ITS OWN zone, so the boundary hour between matching and non-matching UTC hours of one UTC day is the server's day boundary in absolute time — i.e. its UTC offset. All 12 matching means the boundary is UTC midnight itself (offset 0)."
+  },
+  "values": [
+    {
+      "kind": "calendar-date",
+      "convention": "utc_midnight",
+      "intended_calendar_date": "2026/03/01",
+      "ms": 1772323200000,
+      "record_id": "recjiw4VcJgVyL",
+      "echo_DateOnly": 1772323200000,
+      "stored_DateOnly": 1772323200000,
+      "stored_DateTime": 1772323200000,
+      "stored_equals_sent": true,
+      "rendered": {
+        "None->UTC": "2026/03/01",
+        "UTC": "2026/03/01",
+        "Asia/Singapore": "2026/03/01",
+        "America/New_York": "2026/02/28"
+      }
+    },
+    {
+      "kind": "calendar-date",
+      "convention": "utc_midnight",
+      "intended_calendar_date": "2027/01/01",
+      "ms": 1798761600000,
+      "record_id": "recbbg3OwC2341",
+      "echo_DateOnly": 1798761600000,
+      "stored_DateOnly": 1798761600000,
+      "stored_DateTime": 1798761600000,
+      "stored_equals_sent": true,
+      "rendered": {
+        "None->UTC": "2027/01/01",
+        "UTC": "2027/01/01",
+        "Asia/Singapore": "2027/01/01",
+        "America/New_York": "2026/12/31"
+      }
+    },
+    {
+      "kind": "calendar-date",
+      "convention": "utc_midnight",
+      "intended_calendar_date": "2026/08/14",
+      "ms": 1786665600000,
+      "record_id": "recjmh7DyCGn9h",
+      "echo_DateOnly": 1786665600000,
+      "stored_DateOnly": 1786665600000,
+      "stored_DateTime": 1786665600000,
+      "stored_equals_sent": true,
+      "rendered": {
+        "None->UTC": "2026/08/14",
+        "UTC": "2026/08/14",
+        "Asia/Singapore": "2026/08/14",
+        "America/New_York": "2026/08/13"
+      }
+    },
+    {
+      "kind": "calendar-date",
+      "convention": "plus8_midnight",
+      "intended_calendar_date": "2026/03/01",
+      "ms": 1772294400000,
+      "record_id": "recqtr0HvMXb74",
+      "echo_DateOnly": 1772294400000,
+      "stored_DateOnly": 1772294400000,
+      "stored_DateTime": 1772294400000,
+      "stored_equals_sent": true,
+      "rendered": {
+        "None->UTC": "2026/02/28",
+        "UTC": "2026/02/28",
+        "Asia/Singapore": "2026/03/01",
+        "America/New_York": "2026/02/28"
+      }
+    },
+    {
+      "kind": "calendar-date",
+      "convention": "plus8_midnight",
+      "intended_calendar_date": "2027/01/01",
+      "ms": 1798732800000,
+      "record_id": "rechen5PlMt0rL",
+      "echo_DateOnly": 1798732800000,
+      "stored_DateOnly": 1798732800000,
+      "stored_DateTime": 1798732800000,
+      "stored_equals_sent": true,
+      "rendered": {
+        "None->UTC": "2026/12/31",
+        "UTC": "2026/12/31",
+        "Asia/Singapore": "2027/01/01",
+        "America/New_York": "2026/12/31"
+      }
+    },
+    {
+      "kind": "calendar-date",
+      "convention": "plus8_midnight",
+      "intended_calendar_date": "2026/08/14",
+      "ms": 1786636800000,
+      "record_id": "recxtp6AsS2Tqt",
+      "echo_DateOnly": 1786636800000,
+      "stored_DateOnly": 1786636800000,
+      "stored_DateTime": 1786636800000,
+      "stored_equals_sent": true,
+      "rendered": {
+        "None->UTC": "2026/08/13",
+        "UTC": "2026/08/13",
+        "Asia/Singapore": "2026/08/14",
+        "America/New_York": "2026/08/13"
+      }
+    },
+    {
+      "kind": "calendar-date",
+      "convention": "minus5_midnight",
+      "intended_calendar_date": "2026/03/01",
+      "ms": 1772341200000,
+      "record_id": "recpma2QjCchYf",
+      "echo_DateOnly": 1772341200000,
+      "stored_DateOnly": 1772341200000,
+      "stored_DateTime": 1772341200000,
+      "stored_equals_sent": true,
+      "rendered": {
+        "None->UTC": "2026/03/01",
+        "UTC": "2026/03/01",
+        "Asia/Singapore": "2026/03/01",
+        "America/New_York": "2026/03/01"
+      }
+    },
+    {
+      "kind": "calendar-date",
+      "convention": "minus5_midnight",
+      "intended_calendar_date": "2027/01/01",
+      "ms": 1798779600000,
+      "record_id": "recwpk6JdHDxeG",
+      "echo_DateOnly": 1798779600000,
+      "stored_DateOnly": 1798779600000,
+      "stored_DateTime": 1798779600000,
+      "stored_equals_sent": true,
+      "rendered": {
+        "None->UTC": "2027/01/01",
+        "UTC": "2027/01/01",
+        "Asia/Singapore": "2027/01/01",
+        "America/New_York": "2027/01/01"
+      }
+    },
+    {
+      "kind": "calendar-date",
+      "convention": "minus5_midnight",
+      "intended_calendar_date": "2026/08/14",
+      "ms": 1786683600000,
+      "record_id": "recssu0QrNLggN",
+      "echo_DateOnly": 1786683600000,
+      "stored_DateOnly": 1786683600000,
+      "stored_DateTime": 1786683600000,
+      "stored_equals_sent": true,
+      "rendered": {
+        "None->UTC": "2026/08/14",
+        "UTC": "2026/08/14",
+        "Asia/Singapore": "2026/08/14",
+        "America/New_York": "2026/08/14"
+      }
+    },
+    {
+      "kind": "hour-grid",
+      "convention": "utc_0000_today",
+      "intended_calendar_date": "2026-08-14",
+      "ms": 1786665600000,
+      "record_id": "recooj7MqS2pNR",
+      "echo_DateOnly": 1786665600000,
+      "stored_DateOnly": 1786665600000,
+      "stored_DateTime": 1786665600000,
+      "stored_equals_sent": true,
+      "matches_is_Today": true,
+      "rendered": {
+        "None->UTC": "2026/08/14",
+        "UTC": "2026/08/14",
+        "Asia/Singapore": "2026/08/14",
+        "America/New_York": "2026/08/13"
+      }
+    },
+    {
+      "kind": "hour-grid",
+      "convention": "utc_0200_today",
+      "intended_calendar_date": "2026-08-14",
+      "ms": 1786672800000,
+      "record_id": "reczca2WhLZOBm",
+      "echo_DateOnly": 1786672800000,
+      "stored_DateOnly": 1786672800000,
+      "stored_DateTime": 1786672800000,
+      "stored_equals_sent": true,
+      "matches_is_Today": true,
+      "rendered": {
+        "None->UTC": "2026/08/14",
+        "UTC": "2026/08/14",
+        "Asia/Singapore": "2026/08/14",
+        "America/New_York": "2026/08/13"
+      }
+    },
+    {
+      "kind": "hour-grid",
+      "convention": "utc_0400_today",
+      "intended_calendar_date": "2026-08-14",
+      "ms": 1786680000000,
+      "record_id": "receme8KvISSjB",
+      "echo_DateOnly": 1786680000000,
+      "stored_DateOnly": 1786680000000,
+      "stored_DateTime": 1786680000000,
+      "stored_equals_sent": true,
+      "matches_is_Today": true,
+      "rendered": {
+        "None->UTC": "2026/08/14",
+        "UTC": "2026/08/14",
+        "Asia/Singapore": "2026/08/14",
+        "America/New_York": "2026/08/14"
+      }
+    },
+    {
+      "kind": "hour-grid",
+      "convention": "utc_0600_today",
+      "intended_calendar_date": "2026-08-14",
+      "ms": 1786687200000,
+      "record_id": "recmxz1OlZG8Me",
+      "echo_DateOnly": 1786687200000,
+      "stored_DateOnly": 1786687200000,
+      "stored_DateTime": 1786687200000,
+      "stored_equals_sent": true,
+      "matches_is_Today": true,
+      "rendered": {
+        "None->UTC": "2026/08/14",
+        "UTC": "2026/08/14",
+        "Asia/Singapore": "2026/08/14",
+        "America/New_York": "2026/08/14"
+      }
+    },
+    {
+      "kind": "hour-grid",
+      "convention": "utc_0800_today",
+      "intended_calendar_date": "2026-08-14",
+      "ms": 1786694400000,
+      "record_id": "recimq4SyYqcxN",
+      "echo_DateOnly": 1786694400000,
+      "stored_DateOnly": 1786694400000,
+      "stored_DateTime": 1786694400000,
+      "stored_equals_sent": true,
+      "matches_is_Today": true,
+      "rendered": {
+        "None->UTC": "2026/08/14",
+        "UTC": "2026/08/14",
+        "Asia/Singapore": "2026/08/14",
+        "America/New_York": "2026/08/14"
+      }
+    },
+    {
+      "kind": "hour-grid",
+      "convention": "utc_1000_today",
+      "intended_calendar_date": "2026-08-14",
+      "ms": 1786701600000,
+      "record_id": "recwtk1LgFR1Ab",
+      "echo_DateOnly": 1786701600000,
+      "stored_DateOnly": 1786701600000,
+      "stored_DateTime": 1786701600000,
+      "stored_equals_sent": true,
+      "matches_is_Today": true,
+      "rendered": {
+        "None->UTC": "2026/08/14",
+        "UTC": "2026/08/14",
+        "Asia/Singapore": "2026/08/14",
+        "America/New_York": "2026/08/14"
+      }
+    },
+    {
+      "kind": "hour-grid",
+      "convention": "utc_1200_today",
+      "intended_calendar_date": "2026-08-14",
+      "ms": 1786708800000,
+      "record_id": "rectro1WlLVLck",
+      "echo_DateOnly": 1786708800000,
+      "stored_DateOnly": 1786708800000,
+      "stored_DateTime": 1786708800000,
+      "stored_equals_sent": true,
+      "matches_is_Today": true,
+      "rendered": {
+        "None->UTC": "2026/08/14",
+        "UTC": "2026/08/14",
+        "Asia/Singapore": "2026/08/14",
+        "America/New_York": "2026/08/14"
+      }
+    },
+    {
+      "kind": "hour-grid",
+      "convention": "utc_1400_today",
+      "intended_calendar_date": "2026-08-14",
+      "ms": 1786716000000,
+      "record_id": "recwij6AdVixj8",
+      "echo_DateOnly": 1786716000000,
+      "stored_DateOnly": 1786716000000,
+      "stored_DateTime": 1786716000000,
+      "stored_equals_sent": true,
+      "matches_is_Today": true,
+      "rendered": {
+        "None->UTC": "2026/08/14",
+        "UTC": "2026/08/14",
+        "Asia/Singapore": "2026/08/14",
+        "America/New_York": "2026/08/14"
+      }
+    },
+    {
+      "kind": "hour-grid",
+      "convention": "utc_1600_today",
+      "intended_calendar_date": "2026-08-14",
+      "ms": 1786723200000,
+      "record_id": "recfws7ChX4t4L",
+      "echo_DateOnly": 1786723200000,
+      "stored_DateOnly": 1786723200000,
+      "stored_DateTime": 1786723200000,
+      "stored_equals_sent": true,
+      "matches_is_Today": false,
+      "rendered": {
+        "None->UTC": "2026/08/14",
+        "UTC": "2026/08/14",
+        "Asia/Singapore": "2026/08/15",
+        "America/New_York": "2026/08/14"
+      }
+    },
+    {
+      "kind": "hour-grid",
+      "convention": "utc_1800_today",
+      "intended_calendar_date": "2026-08-14",
+      "ms": 1786730400000,
+      "record_id": "reckck3CqYASed",
+      "echo_DateOnly": 1786730400000,
+      "stored_DateOnly": 1786730400000,
+      "stored_DateTime": 1786730400000,
+      "stored_equals_sent": true,
+      "matches_is_Today": false,
+      "rendered": {
+        "None->UTC": "2026/08/14",
+        "UTC": "2026/08/14",
+        "Asia/Singapore": "2026/08/15",
+        "America/New_York": "2026/08/14"
+      }
+    },
+    {
+      "kind": "hour-grid",
+      "convention": "utc_2000_today",
+      "intended_calendar_date": "2026-08-14",
+      "ms": 1786737600000,
+      "record_id": "recoua5TnVq88P",
+      "echo_DateOnly": 1786737600000,
+      "stored_DateOnly": 1786737600000,
+      "stored_DateTime": 1786737600000,
+      "stored_equals_sent": true,
+      "matches_is_Today": false,
+      "rendered": {
+        "None->UTC": "2026/08/14",
+        "UTC": "2026/08/14",
+        "Asia/Singapore": "2026/08/15",
+        "America/New_York": "2026/08/14"
+      }
+    },
+    {
+      "kind": "hour-grid",
+      "convention": "utc_2200_today",
+      "intended_calendar_date": "2026-08-14",
+      "ms": 1786744800000,
+      "record_id": "recqct6HbP3O4w",
+      "echo_DateOnly": 1786744800000,
+      "stored_DateOnly": 1786744800000,
+      "stored_DateTime": 1786744800000,
+      "stored_equals_sent": true,
+      "matches_is_Today": false,
+      "rendered": {
+        "None->UTC": "2026/08/14",
+        "UTC": "2026/08/14",
+        "Asia/Singapore": "2026/08/15",
+        "America/New_York": "2026/08/14"
+      }
+    }
+  ],
+  "teardown": {
+    "still_resolving_after_close_out": [],
+    "orphans": []
+  },
+  "call_count": 10
+}

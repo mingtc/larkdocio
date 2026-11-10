@@ -1,0 +1,37 @@
+{
+  "n": 8,
+  "label": "leg1 list versions page_size=1 (pagination probe)",
+  "credential_pair": "READ",
+  "request": {
+    "method": "GET",
+    "path": "/open-apis/drive/v1/files/Example9668460258a2a652cfde/versions?obj_type=docx&page_size=1&user_id_type=open_id",
+    "body": null,
+    "headers": [
+      "Authorization: Bearer <redacted>"
+    ]
+  },
+  "http_status": 200,
+  "seconds": 0.188,
+  "response": {
+    "code": 0,
+    "data": {
+      "has_more": true,
+      "items": [
+        {
+          "create_time": "1786403295",
+          "creator_id": "ou_examplebot0000000000000000000001",
+          "name": "LD-404 V2.0",
+          "obj_type": "docx",
+          "owner_id": "ou_examplebot0000000000000000000001",
+          "parent_token": "Example9668460258a2a652cfde",
+          "parent_type": "docx",
+          "status": 0,
+          "update_time": "1786403295",
+          "version": "2fFuFO"
+        }
+      ],
+      "page_token": "7672543718964055778"
+    },
+    "msg": "Success"
+  }
+}

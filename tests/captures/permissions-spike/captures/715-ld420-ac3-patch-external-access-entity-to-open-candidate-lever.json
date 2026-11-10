@@ -1,0 +1,23 @@
+{
+  "n": 715,
+  "label": "LD420 ac3 patch external_access_entity to open (candidate lever)",
+  "credential_pair": "WRITE",
+  "request": {
+    "method": "PATCH",
+    "path": "/open-apis/drive/v2/permissions/Example96b1f1037377879d8dd5/public?type=docx",
+    "body": {
+      "external_access_entity": "open"
+    },
+    "headers": [
+      "Authorization: Bearer <redacted>"
+    ]
+  },
+  "http_status": 200,
+  "response": {
+    "code": 91009,
+    "error": {
+      "log_id": "202608120647542F22E2E9C9EF4BA32AF6"
+    },
+    "msg": ""
+  }
+}

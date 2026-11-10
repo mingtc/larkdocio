@@ -1,0 +1,17 @@
+{
+  "_probe": "03",
+  "_endpoint": "/open-apis/bitable/v1/apps/Example3b5902b83520533e4650/tables/tblGgEHCSGMXEKQs/records/search",
+  "_method": "POST",
+  "_http_status": 200,
+  "_lark_code": 1254004,
+  "_lark_msg": "WrongTableId",
+  "_verdict": "DENIED_OR_ERROR",
+  "_note": "does a record read through the type-18 tail fail the same way fields did?",
+  "response": {
+    "code": 1254004,
+    "msg": "WrongTableId",
+    "error": {
+      "log_id": "202608030154367B86E0D4C965A13E5482"
+    }
+  }
+}

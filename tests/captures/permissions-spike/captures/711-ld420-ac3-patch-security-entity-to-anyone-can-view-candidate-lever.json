@@ -1,0 +1,25 @@
+{
+  "n": 711,
+  "label": "LD420 ac3 patch security_entity to anyone_can_view (candidate lever)",
+  "credential_pair": "WRITE",
+  "request": {
+    "method": "PATCH",
+    "path": "/open-apis/drive/v2/permissions/Example96b1f1037377879d8dd5/public?type=docx",
+    "body": {
+      "security_entity": "anyone_can_view"
+    },
+    "headers": [
+      "Authorization: Bearer <redacted>"
+    ]
+  },
+  "http_status": 200,
+  "response": {
+    "code": 0,
+    "data": {
+      "permission_public": {
+        "security_entity": "anyone_can_view"
+      }
+    },
+    "msg": ""
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "_probe": "05",
+  "_endpoint": ".../tables/tblIwcDAKXzn8xXB/records/batch_create",
+  "_method": "POST",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": "success",
+  "_verdict": "OK",
+  "_note": "populate the zoo — which typed values are writable as plain JSON",
+  "response": {
+    "code": 0,
+    "data": {
+      "records": [
+        {
+          "fields": {
+            "Text": "row-one",
+            "Z-Barcode": "BC-0001",
+            "Z-Checkbox": true,
+            "Z-DateTime": 1785061011000,
+            "Z-MultiSelect": [
+              "Red",
+              "Green"
+            ],
+            "Z-Number": 42.5,
+            "Z-Progress": 0.75,
+            "Z-SingleSelect": "Alpha",
+            "Z-Url": {
+              "link": "https://example.invalid/x",
+              "text": "Example"
+            }
+          },
+          "id": "recvrdoAfy0EnE",
+          "record_id": "recvrdoAfy0EnE"
+        },
+        {
+          "fields": {
+            "Text": "row-two"
+          },
+          "id": "recvrjaQgikhoU",
+          "record_id": "recvrjaQgikhoU"
+        }
+      ]
+    },
+    "msg": "success"
+  }
+}

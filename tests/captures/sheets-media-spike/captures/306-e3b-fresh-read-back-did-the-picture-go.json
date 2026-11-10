@@ -1,0 +1,33 @@
+{
+  "n": 306,
+  "probe": "LD-435 arms E — bytes back, removal, teardown",
+  "label": "E3b fresh read-back did the picture go",
+  "credential_pair": "WRITE",
+  "request": {
+    "method": "GET",
+    "path": "/open-apis/sheets/v2/spreadsheets/Exampleb31ebb6e3fd2fe5eddf0/values/61a0cd!B2:B2",
+    "body": null,
+    "headers": [
+      "Authorization: Bearer <redacted>"
+    ]
+  },
+  "http_status": 200,
+  "response": {
+    "code": 0,
+    "data": {
+      "revision": 5,
+      "spreadsheetToken": "Exampleb31ebb6e3fd2fe5eddf0",
+      "valueRange": {
+        "majorDimension": "ROWS",
+        "range": "61a0cd!B2:B2",
+        "revision": 5,
+        "values": [
+          [
+            ""
+          ]
+        ]
+      }
+    },
+    "msg": "success"
+  }
+}

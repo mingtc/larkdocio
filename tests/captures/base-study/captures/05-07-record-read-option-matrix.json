@@ -1,0 +1,1181 @@
+{
+  "_probe": "05",
+  "_endpoint": ".../tables/tblIwcDAKXzn8xXB/records/search",
+  "_method": "POST",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": null,
+  "_verdict": "OK",
+  "_note": "how each read option changes the record payload — the L1 'which render option' decision, Base edition",
+  "response": {
+    "code": 0,
+    "data": {
+      "modes": {
+        "plain": {
+          "code": 0,
+          "msg": "success",
+          "data": {
+            "has_more": true,
+            "items": [
+              {
+                "fields": {
+                  "Z-AutoNumber": "1",
+                  "Z-CreatedTime": 1785693438000,
+                  "Z-CreatedUser": [
+                    {
+                      "avatar_url": "<redacted:avatar_url>",
+                      "email": "",
+                      "en_name": "<redacted:en_name>",
+                      "id": "<redacted:person-id>",
+                      "name": "<redacted:person-name>"
+                    }
+                  ],
+                  "Z-Link": {
+                    "link_record_ids": null
+                  },
+                  "Z-ModifiedTime": 1785693462000
+                },
+                "record_id": "rec14CfLqm1EsM"
+              },
+              {
+                "fields": {
+                  "Z-AutoNumber": "2",
+                  "Z-CreatedTime": 1785693438000,
+                  "Z-CreatedUser": [
+                    {
+                      "avatar_url": "<redacted:avatar_url>",
+                      "email": "",
+                      "en_name": "<redacted:en_name>",
+                      "id": "<redacted:person-id>",
+                      "name": "<redacted:person-name>"
+                    }
+                  ],
+                  "Z-Link": {
+                    "link_record_ids": null
+                  },
+                  "Z-ModifiedTime": 1785693462000
+                },
+                "record_id": "rec38JdOar5Ato"
+              },
+              {
+                "fields": {
+                  "Z-AutoNumber": "3",
+                  "Z-CreatedTime": 1785693438000,
+                  "Z-CreatedUser": [
+                    {
+                      "avatar_url": "<redacted:avatar_url>",
+                      "email": "",
+                      "en_name": "<redacted:en_name>",
+                      "id": "<redacted:person-id>",
+                      "name": "<redacted:person-name>"
+                    }
+                  ],
+                  "Z-Link": {
+                    "link_record_ids": null
+                  },
+                  "Z-ModifiedTime": 1785693462000
+                },
+                "record_id": "rec13HxIjn6SHI"
+              },
+              {
+                "fields": {
+                  "Z-AutoNumber": "4",
+                  "Z-CreatedTime": 1785693438000,
+                  "Z-CreatedUser": [
+                    {
+                      "avatar_url": "<redacted:avatar_url>",
+                      "email": "",
+                      "en_name": "<redacted:en_name>",
+                      "id": "<redacted:person-id>",
+                      "name": "<redacted:person-name>"
+                    }
+                  ],
+                  "Z-Link": {
+                    "link_record_ids": null
+                  },
+                  "Z-ModifiedTime": 1785693462000
+                },
+                "record_id": "rec48KuHjc9Rwp"
+              },
+              {
+                "fields": {
+                  "Z-AutoNumber": "5",
+                  "Z-CreatedTime": 1785693438000,
+                  "Z-CreatedUser": [
+                    {
+                      "avatar_url": "<redacted:avatar_url>",
+                      "email": "",
+                      "en_name": "<redacted:en_name>",
+                      "id": "<redacted:person-id>",
+                      "name": "<redacted:person-name>"
+                    }
+                  ],
+                  "Z-Link": {
+                    "link_record_ids": null
+                  },
+                  "Z-ModifiedTime": 1785693462000
+                },
+                "record_id": "rec41IeFat9MiS"
+              },
+              {
+                "fields": {
+                  "Z-AutoNumber": "6",
+                  "Z-CreatedTime": 1785693438000,
+                  "Z-CreatedUser": [
+                    {
+                      "avatar_url": "<redacted:avatar_url>",
+                      "email": "",
+                      "en_name": "<redacted:en_name>",
+                      "id": "<redacted:person-id>",
+                      "name": "<redacted:person-name>"
+                    }
+                  ],
+                  "Z-Link": {
+                    "link_record_ids": null
+                  },
+                  "Z-ModifiedTime": 1785693462000
+                },
+                "record_id": "rec93BpTqo1I2e"
+              },
+              {
+                "fields": {
+                  "Z-AutoNumber": "7",
+                  "Z-CreatedTime": 1785693438000,
+                  "Z-CreatedUser": [
+                    {
+                      "avatar_url": "<redacted:avatar_url>",
+                      "email": "",
+                      "en_name": "<redacted:en_name>",
+                      "id": "<redacted:person-id>",
+                      "name": "<redacted:person-name>"
+                    }
+                  ],
+                  "Z-Link": {
+                    "link_record_ids": null
+                  },
+                  "Z-ModifiedTime": 1785693462000
+                },
+                "record_id": "rec58CeUoz3Paa"
+              },
+              {
+                "fields": {
+                  "Z-AutoNumber": "8",
+                  "Z-CreatedTime": 1785693438000,
+                  "Z-CreatedUser": [
+                    {
+                      "avatar_url": "<redacted:avatar_url>",
+                      "email": "",
+                      "en_name": "<redacted:en_name>",
+                      "id": "<redacted:person-id>",
+                      "name": "<redacted:person-name>"
+                    }
+                  ],
+                  "Z-Link": {
+                    "link_record_ids": null
+                  },
+                  "Z-ModifiedTime": 1785693462000
+                },
+                "record_id": "rec20TlAwi690v"
+              },
+              {
+                "fields": {
+                  "Z-AutoNumber": "9",
+                  "Z-CreatedTime": 1785693438000,
+                  "Z-CreatedUser": [
+                    {
+                      "avatar_url": "<redacted:avatar_url>",
+                      "email": "",
+                      "en_name": "<redacted:en_name>",
+                      "id": "<redacted:person-id>",
+                      "name": "<redacted:person-name>"
+                    }
+                  ],
+                  "Z-Link": {
+                    "link_record_ids": null
+                  },
+                  "Z-ModifiedTime": 1785693462000
+                },
+                "record_id": "rec57GyJda06AO"
+              },
+              {
+                "fields": {
+                  "Z-AutoNumber": "10",
+                  "Z-CreatedTime": 1785693438000,
+                  "Z-CreatedUser": [
+                    {
+                      "avatar_url": "<redacted:avatar_url>",
+                      "email": "",
+                      "en_name": "<redacted:en_name>",
+                      "id": "<redacted:person-id>",
+                      "name": "<redacted:person-name>"
+                    }
+                  ],
+                  "Z-Link": {
+                    "link_record_ids": null
+                  },
+                  "Z-ModifiedTime": 1785693462000
+                },
+                "record_id": "rec46WxZpp49hL"
+              }
+            ],
+            "page_token": "cGFnZVRva2VuOjEw",
+            "total": 12
+          }
+        },
+        "automatic_fields": {
+          "code": 0,
+          "msg": "success",
+          "data": {
+            "has_more": true,
+            "items": [
+              {
+                "created_by": {
+                  "avatar_url": "<redacted:avatar_url>",
+                  "email": "",
+                  "en_name": "<redacted:en_name>",
+                  "id": "<redacted:person-id>",
+                  "name": "<redacted:person-name>"
+                },
+                "created_time": 1785693438000,
+                "fields": {
+                  "Z-AutoNumber": "1",
+                  "Z-CreatedTime": 1785693438000,
+                  "Z-CreatedUser": [
+                    {
+                      "avatar_url": "<redacted:avatar_url>",
+                      "email": "",
+                      "en_name": "<redacted:en_name>",
+                      "id": "<redacted:person-id>",
+                      "name": "<redacted:person-name>"
+                    }
+                  ],
+                  "Z-Link": {
+                    "link_record_ids": null
+                  },
+                  "Z-ModifiedTime": 1785693462000
+                },
+                "last_modified_by": {
+                  "avatar_url": "<redacted:avatar_url>",
+                  "email": "",
+                  "en_name": "<redacted:en_name>",
+                  "id": "<redacted:person-id>",
+                  "name": "<redacted:person-name>"
+                },
+                "last_modified_time": 1785693462000,
+                "record_id": "rec14CfLqm1EsM"
+              },
+              {
+                "created_by": {
+                  "avatar_url": "<redacted:avatar_url>",
+                  "email": "",
+                  "en_name": "<redacted:en_name>",
+                  "id": "<redacted:person-id>",
+                  "name": "<redacted:person-name>"
+                },
+                "created_time": 1785693438000,
+                "fields": {
+                  "Z-AutoNumber": "2",
+                  "Z-CreatedTime": 1785693438000,
+                  "Z-CreatedUser": [
+                    {
+                      "avatar_url": "<redacted:avatar_url>",
+                      "email": "",
+                      "en_name": "<redacted:en_name>",
+                      "id": "<redacted:person-id>",
+                      "name": "<redacted:person-name>"
+                    }
+                  ],
+                  "Z-Link": {
+                    "link_record_ids": null
+                  },
+                  "Z-ModifiedTime": 1785693462000
+                },
+                "last_modified_by": {
+                  "avatar_url": "<redacted:avatar_url>",
+                  "email": "",
+                  "en_name": "<redacted:en_name>",
+                  "id": "<redacted:person-id>",
+                  "name": "<redacted:person-name>"
+                },
+                "last_modified_time": 1785693462000,
+                "record_id": "rec38JdOar5Ato"
+              },
+              {
+                "created_by": {
+                  "avatar_url": "<redacted:avatar_url>",
+                  "email": "",
+                  "en_name": "<redacted:en_name>",
+                  "id": "<redacted:person-id>",
+                  "name": "<redacted:person-name>"
+                },
+                "created_time": 1785693438000,
+                "fields": {
+                  "Z-AutoNumber": "3",
+                  "Z-CreatedTime": 1785693438000,
+                  "Z-CreatedUser": [
+                    {
+                      "avatar_url": "<redacted:avatar_url>",
+                      "email": "",
+                      "en_name": "<redacted:en_name>",
+                      "id": "<redacted:person-id>",
+                      "name": "<redacted:person-name>"
+                    }
+                  ],
+                  "Z-Link": {
+                    "link_record_ids": null
+                  },
+                  "Z-ModifiedTime": 1785693462000
+                },
+                "last_modified_by": {
+                  "avatar_url": "<redacted:avatar_url>",
+                  "email": "",
+                  "en_name": "<redacted:en_name>",
+                  "id": "<redacted:person-id>",
+                  "name": "<redacted:person-name>"
+                },
+                "last_modified_time": 1785693462000,
+                "record_id": "rec13HxIjn6SHI"
+              },
+              {
+                "created_by": {
+                  "avatar_url": "<redacted:avatar_url>",
+                  "email": "",
+                  "en_name": "<redacted:en_name>",
+                  "id": "<redacted:person-id>",
+                  "name": "<redacted:person-name>"
+                },
+                "created_time": 1785693438000,
+                "fields": {
+                  "Z-AutoNumber": "4",
+                  "Z-CreatedTime": 1785693438000,
+                  "Z-CreatedUser": [
+                    {
+                      "avatar_url": "<redacted:avatar_url>",
+                      "email": "",
+                      "en_name": "<redacted:en_name>",
+                      "id": "<redacted:person-id>",
+                      "name": "<redacted:person-name>"
+                    }
+                  ],
+                  "Z-Link": {
+                    "link_record_ids": null
+                  },
+                  "Z-ModifiedTime": 1785693462000
+                },
+                "last_modified_by": {
+                  "avatar_url": "<redacted:avatar_url>",
+                  "email": "",
+                  "en_name": "<redacted:en_name>",
+                  "id": "<redacted:person-id>",
+                  "name": "<redacted:person-name>"
+                },
+                "last_modified_time": 1785693462000,
+                "record_id": "rec48KuHjc9Rwp"
+              },
+              {
+                "created_by": {
+                  "avatar_url": "<redacted:avatar_url>",
+                  "email": "",
+                  "en_name": "<redacted:en_name>",
+                  "id": "<redacted:person-id>",
+                  "name": "<redacted:person-name>"
+                },
+                "created_time": 1785693438000,
+                "fields": {
+                  "Z-AutoNumber": "5",
+                  "Z-CreatedTime": 1785693438000,
+                  "Z-CreatedUser": [
+                    {
+                      "avatar_url": "<redacted:avatar_url>",
+                      "email": "",
+                      "en_name": "<redacted:en_name>",
+                      "id": "<redacted:person-id>",
+                      "name": "<redacted:person-name>"
+                    }
+                  ],
+                  "Z-Link": {
+                    "link_record_ids": null
+                  },
+                  "Z-ModifiedTime": 1785693462000
+                },
+                "last_modified_by": {
+                  "avatar_url": "<redacted:avatar_url>",
+                  "email": "",
+                  "en_name": "<redacted:en_name>",
+                  "id": "<redacted:person-id>",
+                  "name": "<redacted:person-name>"
+                },
+                "last_modified_time": 1785693462000,
+                "record_id": "rec41IeFat9MiS"
+              },
+              {
+                "created_by": {
+                  "avatar_url": "<redacted:avatar_url>",
+                  "email": "",
+                  "en_name": "<redacted:en_name>",
+                  "id": "<redacted:person-id>",
+                  "name": "<redacted:person-name>"
+                },
+                "created_time": 1785693438000,
+                "fields": {
+                  "Z-AutoNumber": "6",
+                  "Z-CreatedTime": 1785693438000,
+                  "Z-CreatedUser": [
+                    {
+                      "avatar_url": "<redacted:avatar_url>",
+                      "email": "",
+                      "en_name": "<redacted:en_name>",
+                      "id": "<redacted:person-id>",
+                      "name": "<redacted:person-name>"
+                    }
+                  ],
+                  "Z-Link": {
+                    "link_record_ids": null
+                  },
+                  "Z-ModifiedTime": 1785693462000
+                },
+                "last_modified_by": {
+                  "avatar_url": "<redacted:avatar_url>",
+                  "email": "",
+                  "en_name": "<redacted:en_name>",
+                  "id": "<redacted:person-id>",
+                  "name": "<redacted:person-name>"
+                },
+                "last_modified_time": 1785693462000,
+                "record_id": "rec93BpTqo1I2e"
+              },
+              {
+                "created_by": {
+                  "avatar_url": "<redacted:avatar_url>",
+                  "email": "",
+                  "en_name": "<redacted:en_name>",
+                  "id": "<redacted:person-id>",
+                  "name": "<redacted:person-name>"
+                },
+                "created_time": 1785693438000,
+                "fields": {
+                  "Z-AutoNumber": "7",
+                  "Z-CreatedTime": 1785693438000,
+                  "Z-CreatedUser": [
+                    {
+                      "avatar_url": "<redacted:avatar_url>",
+                      "email": "",
+                      "en_name": "<redacted:en_name>",
+                      "id": "<redacted:person-id>",
+                      "name": "<redacted:person-name>"
+                    }
+                  ],
+                  "Z-Link": {
+                    "link_record_ids": null
+                  },
+                  "Z-ModifiedTime": 1785693462000
+                },
+                "last_modified_by": {
+                  "avatar_url": "<redacted:avatar_url>",
+                  "email": "",
+                  "en_name": "<redacted:en_name>",
+                  "id": "<redacted:person-id>",
+                  "name": "<redacted:person-name>"
+                },
+                "last_modified_time": 1785693462000,
+                "record_id": "rec58CeUoz3Paa"
+              },
+              {
+                "created_by": {
+                  "avatar_url": "<redacted:avatar_url>",
+                  "email": "",
+                  "en_name": "<redacted:en_name>",
+                  "id": "<redacted:person-id>",
+                  "name": "<redacted:person-name>"
+                },
+                "created_time": 1785693438000,
+                "fields": {
+                  "Z-AutoNumber": "8",
+                  "Z-CreatedTime": 1785693438000,
+                  "Z-CreatedUser": [
+                    {
+                      "avatar_url": "<redacted:avatar_url>",
+                      "email": "",
+                      "en_name": "<redacted:en_name>",
+                      "id": "<redacted:person-id>",
+                      "name": "<redacted:person-name>"
+                    }
+                  ],
+                  "Z-Link": {
+                    "link_record_ids": null
+                  },
+                  "Z-ModifiedTime": 1785693462000
+                },
+                "last_modified_by": {
+                  "avatar_url": "<redacted:avatar_url>",
+                  "email": "",
+                  "en_name": "<redacted:en_name>",
+                  "id": "<redacted:person-id>",
+                  "name": "<redacted:person-name>"
+                },
+                "last_modified_time": 1785693462000,
+                "record_id": "rec20TlAwi690v"
+              },
+              {
+                "created_by": {
+                  "avatar_url": "<redacted:avatar_url>",
+                  "email": "",
+                  "en_name": "<redacted:en_name>",
+                  "id": "<redacted:person-id>",
+                  "name": "<redacted:person-name>"
+                },
+                "created_time": 1785693438000,
+                "fields": {
+                  "Z-AutoNumber": "9",
+                  "Z-CreatedTime": 1785693438000,
+                  "Z-CreatedUser": [
+                    {
+                      "avatar_url": "<redacted:avatar_url>",
+                      "email": "",
+                      "en_name": "<redacted:en_name>",
+                      "id": "<redacted:person-id>",
+                      "name": "<redacted:person-name>"
+                    }
+                  ],
+                  "Z-Link": {
+                    "link_record_ids": null
+                  },
+                  "Z-ModifiedTime": 1785693462000
+                },
+                "last_modified_by": {
+                  "avatar_url": "<redacted:avatar_url>",
+                  "email": "",
+                  "en_name": "<redacted:en_name>",
+                  "id": "<redacted:person-id>",
+                  "name": "<redacted:person-name>"
+                },
+                "last_modified_time": 1785693462000,
+                "record_id": "rec57GyJda06AO"
+              },
+              {
+                "created_by": {
+                  "avatar_url": "<redacted:avatar_url>",
+                  "email": "",
+                  "en_name": "<redacted:en_name>",
+                  "id": "<redacted:person-id>",
+                  "name": "<redacted:person-name>"
+                },
+                "created_time": 1785693438000,
+                "fields": {
+                  "Z-AutoNumber": "10",
+                  "Z-CreatedTime": 1785693438000,
+                  "Z-CreatedUser": [
+                    {
+                      "avatar_url": "<redacted:avatar_url>",
+                      "email": "",
+                      "en_name": "<redacted:en_name>",
+                      "id": "<redacted:person-id>",
+                      "name": "<redacted:person-name>"
+                    }
+                  ],
+                  "Z-Link": {
+                    "link_record_ids": null
+                  },
+                  "Z-ModifiedTime": 1785693462000
+                },
+                "last_modified_by": {
+                  "avatar_url": "<redacted:avatar_url>",
+                  "email": "",
+                  "en_name": "<redacted:en_name>",
+                  "id": "<redacted:person-id>",
+                  "name": "<redacted:person-name>"
+                },
+                "last_modified_time": 1785693462000,
+                "record_id": "rec46WxZpp49hL"
+              }
+            ],
+            "page_token": "cGFnZVRva2VuOjEw",
+            "total": 12
+          }
+        },
+        "text_field_as_array": {
+          "code": 0,
+          "msg": "success",
+          "data": {
+            "has_more": true,
+            "items": [
+              {
+                "fields": {
+                  "Z-AutoNumber": "1",
+                  "Z-CreatedTime": 1785693438000,
+                  "Z-CreatedUser": [
+                    {
+                      "avatar_url": "<redacted:avatar_url>",
+                      "email": "",
+                      "en_name": "<redacted:en_name>",
+                      "id": "<redacted:person-id>",
+                      "name": "<redacted:person-name>"
+                    }
+                  ],
+                  "Z-Link": {
+                    "link_record_ids": null
+                  },
+                  "Z-ModifiedTime": 1785693462000
+                },
+                "record_id": "rec14CfLqm1EsM"
+              },
+              {
+                "fields": {
+                  "Z-AutoNumber": "2",
+                  "Z-CreatedTime": 1785693438000,
+                  "Z-CreatedUser": [
+                    {
+                      "avatar_url": "<redacted:avatar_url>",
+                      "email": "",
+                      "en_name": "<redacted:en_name>",
+                      "id": "<redacted:person-id>",
+                      "name": "<redacted:person-name>"
+                    }
+                  ],
+                  "Z-Link": {
+                    "link_record_ids": null
+                  },
+                  "Z-ModifiedTime": 1785693462000
+                },
+                "record_id": "rec38JdOar5Ato"
+              },
+              {
+                "fields": {
+                  "Z-AutoNumber": "3",
+                  "Z-CreatedTime": 1785693438000,
+                  "Z-CreatedUser": [
+                    {
+                      "avatar_url": "<redacted:avatar_url>",
+                      "email": "",
+                      "en_name": "<redacted:en_name>",
+                      "id": "<redacted:person-id>",
+                      "name": "<redacted:person-name>"
+                    }
+                  ],
+                  "Z-Link": {
+                    "link_record_ids": null
+                  },
+                  "Z-ModifiedTime": 1785693462000
+                },
+                "record_id": "rec13HxIjn6SHI"
+              },
+              {
+                "fields": {
+                  "Z-AutoNumber": "4",
+                  "Z-CreatedTime": 1785693438000,
+                  "Z-CreatedUser": [
+                    {
+                      "avatar_url": "<redacted:avatar_url>",
+                      "email": "",
+                      "en_name": "<redacted:en_name>",
+                      "id": "<redacted:person-id>",
+                      "name": "<redacted:person-name>"
+                    }
+                  ],
+                  "Z-Link": {
+                    "link_record_ids": null
+                  },
+                  "Z-ModifiedTime": 1785693462000
+                },
+                "record_id": "rec48KuHjc9Rwp"
+              },
+              {
+                "fields": {
+                  "Z-AutoNumber": "5",
+                  "Z-CreatedTime": 1785693438000,
+                  "Z-CreatedUser": [
+                    {
+                      "avatar_url": "<redacted:avatar_url>",
+                      "email": "",
+                      "en_name": "<redacted:en_name>",
+                      "id": "<redacted:person-id>",
+                      "name": "<redacted:person-name>"
+                    }
+                  ],
+                  "Z-Link": {
+                    "link_record_ids": null
+                  },
+                  "Z-ModifiedTime": 1785693462000
+                },
+                "record_id": "rec41IeFat9MiS"
+              },
+              {
+                "fields": {
+                  "Z-AutoNumber": "6",
+                  "Z-CreatedTime": 1785693438000,
+                  "Z-CreatedUser": [
+                    {
+                      "avatar_url": "<redacted:avatar_url>",
+                      "email": "",
+                      "en_name": "<redacted:en_name>",
+                      "id": "<redacted:person-id>",
+                      "name": "<redacted:person-name>"
+                    }
+                  ],
+                  "Z-Link": {
+                    "link_record_ids": null
+                  },
+                  "Z-ModifiedTime": 1785693462000
+                },
+                "record_id": "rec93BpTqo1I2e"
+              },
+              {
+                "fields": {
+                  "Z-AutoNumber": "7",
+                  "Z-CreatedTime": 1785693438000,
+                  "Z-CreatedUser": [
+                    {
+                      "avatar_url": "<redacted:avatar_url>",
+                      "email": "",
+                      "en_name": "<redacted:en_name>",
+                      "id": "<redacted:person-id>",
+                      "name": "<redacted:person-name>"
+                    }
+                  ],
+                  "Z-Link": {
+                    "link_record_ids": null
+                  },
+                  "Z-ModifiedTime": 1785693462000
+                },
+                "record_id": "rec58CeUoz3Paa"
+              },
+              {
+                "fields": {
+                  "Z-AutoNumber": "8",
+                  "Z-CreatedTime": 1785693438000,
+                  "Z-CreatedUser": [
+                    {
+                      "avatar_url": "<redacted:avatar_url>",
+                      "email": "",
+                      "en_name": "<redacted:en_name>",
+                      "id": "<redacted:person-id>",
+                      "name": "<redacted:person-name>"
+                    }
+                  ],
+                  "Z-Link": {
+                    "link_record_ids": null
+                  },
+                  "Z-ModifiedTime": 1785693462000
+                },
+                "record_id": "rec20TlAwi690v"
+              },
+              {
+                "fields": {
+                  "Z-AutoNumber": "9",
+                  "Z-CreatedTime": 1785693438000,
+                  "Z-CreatedUser": [
+                    {
+                      "avatar_url": "<redacted:avatar_url>",
+                      "email": "",
+                      "en_name": "<redacted:en_name>",
+                      "id": "<redacted:person-id>",
+                      "name": "<redacted:person-name>"
+                    }
+                  ],
+                  "Z-Link": {
+                    "link_record_ids": null
+                  },
+                  "Z-ModifiedTime": 1785693462000
+                },
+                "record_id": "rec57GyJda06AO"
+              },
+              {
+                "fields": {
+                  "Z-AutoNumber": "10",
+                  "Z-CreatedTime": 1785693438000,
+                  "Z-CreatedUser": [
+                    {
+                      "avatar_url": "<redacted:avatar_url>",
+                      "email": "",
+                      "en_name": "<redacted:en_name>",
+                      "id": "<redacted:person-id>",
+                      "name": "<redacted:person-name>"
+                    }
+                  ],
+                  "Z-Link": {
+                    "link_record_ids": null
+                  },
+                  "Z-ModifiedTime": 1785693462000
+                },
+                "record_id": "rec46WxZpp49hL"
+              }
+            ],
+            "page_token": "cGFnZVRva2VuOjEw",
+            "total": 12
+          }
+        },
+        "both+shared_url": {
+          "code": 0,
+          "msg": "success",
+          "data": {
+            "has_more": true,
+            "items": [
+              {
+                "created_by": {
+                  "avatar_url": "<redacted:avatar_url>",
+                  "email": "",
+                  "en_name": "<redacted:en_name>",
+                  "id": "<redacted:person-id>",
+                  "name": "<redacted:person-name>"
+                },
+                "created_time": 1785693438000,
+                "fields": {
+                  "Z-AutoNumber": "1",
+                  "Z-CreatedTime": 1785693438000,
+                  "Z-CreatedUser": [
+                    {
+                      "avatar_url": "<redacted:avatar_url>",
+                      "email": "",
+                      "en_name": "<redacted:en_name>",
+                      "id": "<redacted:person-id>",
+                      "name": "<redacted:person-name>"
+                    }
+                  ],
+                  "Z-Link": {
+                    "link_record_ids": null
+                  },
+                  "Z-ModifiedTime": 1785693462000
+                },
+                "last_modified_by": {
+                  "avatar_url": "<redacted:avatar_url>",
+                  "email": "",
+                  "en_name": "<redacted:en_name>",
+                  "id": "<redacted:person-id>",
+                  "name": "<redacted:person-name>"
+                },
+                "last_modified_time": 1785693462000,
+                "record_id": "rec14CfLqm1EsM"
+              },
+              {
+                "created_by": {
+                  "avatar_url": "<redacted:avatar_url>",
+                  "email": "",
+                  "en_name": "<redacted:en_name>",
+                  "id": "<redacted:person-id>",
+                  "name": "<redacted:person-name>"
+                },
+                "created_time": 1785693438000,
+                "fields": {
+                  "Z-AutoNumber": "2",
+                  "Z-CreatedTime": 1785693438000,
+                  "Z-CreatedUser": [
+                    {
+                      "avatar_url": "<redacted:avatar_url>",
+                      "email": "",
+                      "en_name": "<redacted:en_name>",
+                      "id": "<redacted:person-id>",
+                      "name": "<redacted:person-name>"
+                    }
+                  ],
+                  "Z-Link": {
+                    "link_record_ids": null
+                  },
+                  "Z-ModifiedTime": 1785693462000
+                },
+                "last_modified_by": {
+                  "avatar_url": "<redacted:avatar_url>",
+                  "email": "",
+                  "en_name": "<redacted:en_name>",
+                  "id": "<redacted:person-id>",
+                  "name": "<redacted:person-name>"
+                },
+                "last_modified_time": 1785693462000,
+                "record_id": "rec38JdOar5Ato"
+              },
+              {
+                "created_by": {
+                  "avatar_url": "<redacted:avatar_url>",
+                  "email": "",
+                  "en_name": "<redacted:en_name>",
+                  "id": "<redacted:person-id>",
+                  "name": "<redacted:person-name>"
+                },
+                "created_time": 1785693438000,
+                "fields": {
+                  "Z-AutoNumber": "3",
+                  "Z-CreatedTime": 1785693438000,
+                  "Z-CreatedUser": [
+                    {
+                      "avatar_url": "<redacted:avatar_url>",
+                      "email": "",
+                      "en_name": "<redacted:en_name>",
+                      "id": "<redacted:person-id>",
+                      "name": "<redacted:person-name>"
+                    }
+                  ],
+                  "Z-Link": {
+                    "link_record_ids": null
+                  },
+                  "Z-ModifiedTime": 1785693462000
+                },
+                "last_modified_by": {
+                  "avatar_url": "<redacted:avatar_url>",
+                  "email": "",
+                  "en_name": "<redacted:en_name>",
+                  "id": "<redacted:person-id>",
+                  "name": "<redacted:person-name>"
+                },
+                "last_modified_time": 1785693462000,
+                "record_id": "rec13HxIjn6SHI"
+              },
+              {
+                "created_by": {
+                  "avatar_url": "<redacted:avatar_url>",
+                  "email": "",
+                  "en_name": "<redacted:en_name>",
+                  "id": "<redacted:person-id>",
+                  "name": "<redacted:person-name>"
+                },
+                "created_time": 1785693438000,
+                "fields": {
+                  "Z-AutoNumber": "4",
+                  "Z-CreatedTime": 1785693438000,
+                  "Z-CreatedUser": [
+                    {
+                      "avatar_url": "<redacted:avatar_url>",
+                      "email": "",
+                      "en_name": "<redacted:en_name>",
+                      "id": "<redacted:person-id>",
+                      "name": "<redacted:person-name>"
+                    }
+                  ],
+                  "Z-Link": {
+                    "link_record_ids": null
+                  },
+                  "Z-ModifiedTime": 1785693462000
+                },
+                "last_modified_by": {
+                  "avatar_url": "<redacted:avatar_url>",
+                  "email": "",
+                  "en_name": "<redacted:en_name>",
+                  "id": "<redacted:person-id>",
+                  "name": "<redacted:person-name>"
+                },
+                "last_modified_time": 1785693462000,
+                "record_id": "rec48KuHjc9Rwp"
+              },
+              {
+                "created_by": {
+                  "avatar_url": "<redacted:avatar_url>",
+                  "email": "",
+                  "en_name": "<redacted:en_name>",
+                  "id": "<redacted:person-id>",
+                  "name": "<redacted:person-name>"
+                },
+                "created_time": 1785693438000,
+                "fields": {
+                  "Z-AutoNumber": "5",
+                  "Z-CreatedTime": 1785693438000,
+                  "Z-CreatedUser": [
+                    {
+                      "avatar_url": "<redacted:avatar_url>",
+                      "email": "",
+                      "en_name": "<redacted:en_name>",
+                      "id": "<redacted:person-id>",
+                      "name": "<redacted:person-name>"
+                    }
+                  ],
+                  "Z-Link": {
+                    "link_record_ids": null
+                  },
+                  "Z-ModifiedTime": 1785693462000
+                },
+                "last_modified_by": {
+                  "avatar_url": "<redacted:avatar_url>",
+                  "email": "",
+                  "en_name": "<redacted:en_name>",
+                  "id": "<redacted:person-id>",
+                  "name": "<redacted:person-name>"
+                },
+                "last_modified_time": 1785693462000,
+                "record_id": "rec41IeFat9MiS"
+              },
+              {
+                "created_by": {
+                  "avatar_url": "<redacted:avatar_url>",
+                  "email": "",
+                  "en_name": "<redacted:en_name>",
+                  "id": "<redacted:person-id>",
+                  "name": "<redacted:person-name>"
+                },
+                "created_time": 1785693438000,
+                "fields": {
+                  "Z-AutoNumber": "6",
+                  "Z-CreatedTime": 1785693438000,
+                  "Z-CreatedUser": [
+                    {
+                      "avatar_url": "<redacted:avatar_url>",
+                      "email": "",
+                      "en_name": "<redacted:en_name>",
+                      "id": "<redacted:person-id>",
+                      "name": "<redacted:person-name>"
+                    }
+                  ],
+                  "Z-Link": {
+                    "link_record_ids": null
+                  },
+                  "Z-ModifiedTime": 1785693462000
+                },
+                "last_modified_by": {
+                  "avatar_url": "<redacted:avatar_url>",
+                  "email": "",
+                  "en_name": "<redacted:en_name>",
+                  "id": "<redacted:person-id>",
+                  "name": "<redacted:person-name>"
+                },
+                "last_modified_time": 1785693462000,
+                "record_id": "rec93BpTqo1I2e"
+              },
+              {
+                "created_by": {
+                  "avatar_url": "<redacted:avatar_url>",
+                  "email": "",
+                  "en_name": "<redacted:en_name>",
+                  "id": "<redacted:person-id>",
+                  "name": "<redacted:person-name>"
+                },
+                "created_time": 1785693438000,
+                "fields": {
+                  "Z-AutoNumber": "7",
+                  "Z-CreatedTime": 1785693438000,
+                  "Z-CreatedUser": [
+                    {
+                      "avatar_url": "<redacted:avatar_url>",
+                      "email": "",
+                      "en_name": "<redacted:en_name>",
+                      "id": "<redacted:person-id>",
+                      "name": "<redacted:person-name>"
+                    }
+                  ],
+                  "Z-Link": {
+                    "link_record_ids": null
+                  },
+                  "Z-ModifiedTime": 1785693462000
+                },
+                "last_modified_by": {
+                  "avatar_url": "<redacted:avatar_url>",
+                  "email": "",
+                  "en_name": "<redacted:en_name>",
+                  "id": "<redacted:person-id>",
+                  "name": "<redacted:person-name>"
+                },
+                "last_modified_time": 1785693462000,
+                "record_id": "rec58CeUoz3Paa"
+              },
+              {
+                "created_by": {
+                  "avatar_url": "<redacted:avatar_url>",
+                  "email": "",
+                  "en_name": "<redacted:en_name>",
+                  "id": "<redacted:person-id>",
+                  "name": "<redacted:person-name>"
+                },
+                "created_time": 1785693438000,
+                "fields": {
+                  "Z-AutoNumber": "8",
+                  "Z-CreatedTime": 1785693438000,
+                  "Z-CreatedUser": [
+                    {
+                      "avatar_url": "<redacted:avatar_url>",
+                      "email": "",
+                      "en_name": "<redacted:en_name>",
+                      "id": "<redacted:person-id>",
+                      "name": "<redacted:person-name>"
+                    }
+                  ],
+                  "Z-Link": {
+                    "link_record_ids": null
+                  },
+                  "Z-ModifiedTime": 1785693462000
+                },
+                "last_modified_by": {
+                  "avatar_url": "<redacted:avatar_url>",
+                  "email": "",
+                  "en_name": "<redacted:en_name>",
+                  "id": "<redacted:person-id>",
+                  "name": "<redacted:person-name>"
+                },
+                "last_modified_time": 1785693462000,
+                "record_id": "rec20TlAwi690v"
+              },
+              {
+                "created_by": {
+                  "avatar_url": "<redacted:avatar_url>",
+                  "email": "",
+                  "en_name": "<redacted:en_name>",
+                  "id": "<redacted:person-id>",
+                  "name": "<redacted:person-name>"
+                },
+                "created_time": 1785693438000,
+                "fields": {
+                  "Z-AutoNumber": "9",
+                  "Z-CreatedTime": 1785693438000,
+                  "Z-CreatedUser": [
+                    {
+                      "avatar_url": "<redacted:avatar_url>",
+                      "email": "",
+                      "en_name": "<redacted:en_name>",
+                      "id": "<redacted:person-id>",
+                      "name": "<redacted:person-name>"
+                    }
+                  ],
+                  "Z-Link": {
+                    "link_record_ids": null
+                  },
+                  "Z-ModifiedTime": 1785693462000
+                },
+                "last_modified_by": {
+                  "avatar_url": "<redacted:avatar_url>",
+                  "email": "",
+                  "en_name": "<redacted:en_name>",
+                  "id": "<redacted:person-id>",
+                  "name": "<redacted:person-name>"
+                },
+                "last_modified_time": 1785693462000,
+                "record_id": "rec57GyJda06AO"
+              },
+              {
+                "created_by": {
+                  "avatar_url": "<redacted:avatar_url>",
+                  "email": "",
+                  "en_name": "<redacted:en_name>",
+                  "id": "<redacted:person-id>",
+                  "name": "<redacted:person-name>"
+                },
+                "created_time": 1785693438000,
+                "fields": {
+                  "Z-AutoNumber": "10",
+                  "Z-CreatedTime": 1785693438000,
+                  "Z-CreatedUser": [
+                    {
+                      "avatar_url": "<redacted:avatar_url>",
+                      "email": "",
+                      "en_name": "<redacted:en_name>",
+                      "id": "<redacted:person-id>",
+                      "name": "<redacted:person-name>"
+                    }
+                  ],
+                  "Z-Link": {
+                    "link_record_ids": null
+                  },
+                  "Z-ModifiedTime": 1785693462000
+                },
+                "last_modified_by": {
+                  "avatar_url": "<redacted:avatar_url>",
+                  "email": "",
+                  "en_name": "<redacted:en_name>",
+                  "id": "<redacted:person-id>",
+                  "name": "<redacted:person-name>"
+                },
+                "last_modified_time": 1785693462000,
+                "record_id": "rec46WxZpp49hL"
+              }
+            ],
+            "page_token": "cGFnZVRva2VuOjEw",
+            "total": 12
+          }
+        }
+      }
+    }
+  }
+}

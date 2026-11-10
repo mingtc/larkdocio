@@ -1,0 +1,50 @@
+[
+  {
+    "block_id": "root",
+    "parent_id": "doc",
+    "block_type": 1,
+    "page": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Doc Title"
+          }
+        }
+      ]
+    },
+    "children": [
+      "lq1"
+    ]
+  },
+  {
+    "block_id": "lq1",
+    "parent_id": "root",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Item with quote"
+          }
+        }
+      ]
+    },
+    "children": [
+      "lq1q"
+    ]
+  },
+  {
+    "block_id": "lq1q",
+    "parent_id": "lq1",
+    "block_type": 15,
+    "quote": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Nested quoted line"
+          }
+        }
+      ]
+    }
+  }
+]

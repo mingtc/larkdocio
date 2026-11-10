@@ -1,0 +1,79 @@
+{
+  "_probe": "p4",
+  "_endpoint": ".../tables/tblwtQsB0m6CfKek/records/search",
+  "_method": "POST",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": "success",
+  "_verdict": "OK",
+  "_note": "READ encodings for Attachment / Location / GroupChat after population",
+  "response": {
+    "code": 0,
+    "data": {
+      "has_more": false,
+      "items": [
+        {
+          "fields": {
+            "Attach": [
+              {
+                "file_token": "Example92f5849e435cbbc81d5d",
+                "name": "p0-specimen-033811.txt",
+                "size": 108,
+                "tmp_url": "https://open.larksuite.com/open-apis/drive/v1/medias/batch_get_tmp_download_url?file_tokens=Example92f5849e435cbbc81d5d",
+                "type": "text/plain; charset=utf-8",
+                "url": "https://open.larksuite.com/open-apis/drive/v1/medias/Example92f5849e435cbbc81d5d/download"
+              }
+            ],
+            "多行文本": [
+              {
+                "text": "attach-list_of_file_token_objects",
+                "type": "text"
+              }
+            ]
+          },
+          "record_id": "recvrdC1LZZeuo"
+        },
+        {
+          "fields": {
+            "Loc": {
+              "address": "",
+              "adname": "",
+              "cityname": "",
+              "full_address": "Central Singapore,Singapore",
+              "location": "103.8198,1.3521",
+              "name": "",
+              "pname": "Central Singapore"
+            },
+            "多行文本": [
+              {
+                "text": "loc-lng_lat_string",
+                "type": "text"
+              }
+            ]
+          },
+          "record_id": "recvrkV1rRVeKa"
+        },
+        {
+          "fields": {
+            "Chat": [
+              {
+                "avatar_url": "<redacted:avatar_url>",
+                "id": "<redacted:chat-id>",
+                "name": "<redacted:chat-name>"
+              }
+            ],
+            "多行文本": [
+              {
+                "text": "chat-object_shape",
+                "type": "text"
+              }
+            ]
+          },
+          "record_id": "recvroMwclvi8u"
+        }
+      ],
+      "total": 3
+    },
+    "msg": "success"
+  }
+}

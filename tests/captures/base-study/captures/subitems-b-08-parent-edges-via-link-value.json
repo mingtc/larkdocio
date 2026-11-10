@@ -1,0 +1,48 @@
+{
+  "_probe": "sub-b",
+  "_endpoint": "/open-apis/bitable/v1/apps/Exampleb735d410075fcc1c89ab/tables/tbljnCMElmG4kiQZ/records/{rid}",
+  "_method": "PUT",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": null,
+  "_verdict": "OK",
+  "_note": "Q3's real route: the child->parent edge written as an ORDINARY link-field value on the self-referencing field, three levels deep (G1 -> C1 -> P1)",
+  "response": {
+    "code": 0,
+    "data": {
+      "link_field": "SelfSingleLink",
+      "edges": {
+        "C1->P1": {
+          "code": 0,
+          "msg": "success",
+          "error_message": null,
+          "readback_fields": {
+            "SelfSingleLink": [
+              "recvropvLr6RXO"
+            ]
+          }
+        },
+        "C2->P1": {
+          "code": 0,
+          "msg": "success",
+          "error_message": null,
+          "readback_fields": {
+            "SelfSingleLink": [
+              "recvropvLr6RXO"
+            ]
+          }
+        },
+        "G1->C1": {
+          "code": 0,
+          "msg": "success",
+          "error_message": null,
+          "readback_fields": {
+            "SelfSingleLink": [
+              "recvrxnnZd3da4"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

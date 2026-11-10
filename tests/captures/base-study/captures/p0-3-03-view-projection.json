@@ -1,0 +1,72 @@
+{
+  "_probe": "p3",
+  "_endpoint": "fields?view_id= / records/search {view_id}",
+  "_method": "MIXED",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": null,
+  "_verdict": "OK",
+  "_note": "STUDY §9 ITEM 3: does a view with HIDDEN + FILTERED fields change what fields/records a reader sees?",
+  "response": {
+    "code": 0,
+    "data": {
+      "unscoped_field_order": [
+        "多行文本",
+        "Alpha",
+        "Beta",
+        "Gamma",
+        "WhenDate"
+      ],
+      "view_scoped_field_order": [
+        "多行文本",
+        "Alpha",
+        "Beta",
+        "Gamma",
+        "WhenDate"
+      ],
+      "view_scoped_fields_code": 0,
+      "search_with_view_id": {
+        "code": 0,
+        "n": 3,
+        "field_keys_per_row": [
+          [
+            "Beta",
+            "Gamma",
+            "多行文本"
+          ],
+          [
+            "Beta",
+            "Gamma",
+            "多行文本"
+          ],
+          [
+            "Beta",
+            "Gamma",
+            "多行文本"
+          ]
+        ]
+      },
+      "search_no_view_id": {
+        "code": 0,
+        "n": 3,
+        "field_keys_per_row": [
+          [
+            "Beta",
+            "Gamma",
+            "多行文本"
+          ],
+          [
+            "Beta",
+            "Gamma",
+            "多行文本"
+          ],
+          [
+            "Beta",
+            "Gamma",
+            "多行文本"
+          ]
+        ]
+      }
+    }
+  }
+}

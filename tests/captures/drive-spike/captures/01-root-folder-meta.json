@@ -1,0 +1,19 @@
+{
+  "_probe": "01-root-folder-meta",
+  "_endpoint": "/open-apis/drive/explorer/v2/root_folder/meta",
+  "_method": "GET",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": "success",
+  "_note": "root folder token for the bot's own space (legacy explorer family, not in SDK)",
+  "_verdict": "OK",
+  "response": {
+    "code": 0,
+    "data": {
+      "id": "9000000000000000001",
+      "token": "nodlgExampleee5c77c8ba65b63",
+      "user_id": "<redacted:user_id>"
+    },
+    "msg": "success"
+  }
+}

@@ -1,0 +1,203 @@
+{
+  "_probe": "p5",
+  "_endpoint": ".../tables/tblTocDQM07rh68h/records/search",
+  "_method": "POST",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": null,
+  "_verdict": "OK",
+  "_note": "captured (not inferred) read encodings for Rating / Progress / Currency / Barcode / ModifiedUser / AutoNumber",
+  "response": {
+    "code": 0,
+    "data": {
+      "create_echo": {
+        "fields": {
+          "Barcode": "BC-9",
+          "Currency": 12.5,
+          "DLink": [
+            "recvrsK0tN2SKV",
+            "recvrdA8aJyUmM"
+          ],
+          "Progress": 0.35,
+          "Rating": 4,
+          "SLink": [
+            "recvrsK0tN2SKV",
+            "recvrdA8aJyUmM"
+          ],
+          "多行文本": "row"
+        },
+        "id": "recvrpH1g1JOJ8",
+        "record_id": "recvrpH1g1JOJ8"
+      },
+      "search_rows": [
+        {
+          "fields": {
+            "AutoNum": "1",
+            "Barcode": [
+              {
+                "text": "BC-9",
+                "type": "text"
+              }
+            ],
+            "Currency": 12.5,
+            "DLink": {
+              "link_record_ids": [
+                "recvrsK0tN2SKV",
+                "recvrdA8aJyUmM"
+              ]
+            },
+            "ModUser": [
+              {
+                "avatar_url": "<redacted:avatar_url>",
+                "email": "",
+                "en_name": "<redacted:en_name>",
+                "id": "<redacted:person-id>",
+                "name": "<redacted:person-name>"
+              }
+            ],
+            "Progress": 0.35,
+            "Rating": 4,
+            "SLink": {
+              "link_record_ids": [
+                "recvrsK0tN2SKV",
+                "recvrdA8aJyUmM"
+              ]
+            },
+            "多行文本": [
+              {
+                "text": "row",
+                "type": "text"
+              }
+            ]
+          },
+          "record_id": "recvrpH1g1JOJ8"
+        }
+      ],
+      "schema": [
+        {
+          "field_id": "fld176Ymhk",
+          "field_name": "多行文本",
+          "is_extend": false,
+          "is_primary": true,
+          "is_synced": false,
+          "property": null,
+          "type": 1,
+          "ui_type": "Text"
+        },
+        {
+          "field_id": "fldnFwM09L",
+          "field_name": "Rating",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "formatter": "0",
+            "max": 5,
+            "min": 0,
+            "rating": {
+              "symbol": "star"
+            }
+          },
+          "type": 2,
+          "ui_type": "Rating"
+        },
+        {
+          "field_id": "fldE6dJXJ4",
+          "field_name": "Progress",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "formatter": "0%",
+            "max": 1,
+            "min": 0
+          },
+          "type": 2,
+          "ui_type": "Progress"
+        },
+        {
+          "field_id": "fldgzYXSvE",
+          "field_name": "Currency",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "currency_code": "SGD",
+            "formatter": "0.00"
+          },
+          "type": 2,
+          "ui_type": "Currency"
+        },
+        {
+          "field_id": "fldL2WBf0j",
+          "field_name": "Barcode",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "allowed_edit_modes": {
+              "manual": true,
+              "scan": true
+            }
+          },
+          "type": 1,
+          "ui_type": "Barcode"
+        },
+        {
+          "field_id": "flddGF97o1",
+          "field_name": "ModUser",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": null,
+          "type": 1004,
+          "ui_type": "ModifiedUser"
+        },
+        {
+          "field_id": "fld80nSl5O",
+          "field_name": "AutoNum",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "auto_serial": {
+              "type": "auto_increment_number"
+            }
+          },
+          "type": 1005,
+          "ui_type": "AutoNumber"
+        },
+        {
+          "field_id": "fldQcVZ81b",
+          "field_name": "SLink",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "multiple": true,
+            "table_id": "tblsT2Ons4CcdJgY",
+            "table_name": "p0cl-Ref-034137"
+          },
+          "type": 18,
+          "ui_type": "SingleLink"
+        },
+        {
+          "field_id": "fldQGje8b3",
+          "field_name": "DLink",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "back_field_id": "fldQcxSpPQ",
+            "back_field_name": "p0cl-Main-034137-DLink",
+            "multiple": true,
+            "table_id": "tblsT2Ons4CcdJgY",
+            "table_name": "p0cl-Ref-034137"
+          },
+          "type": 21,
+          "ui_type": "DuplexLink"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "n": 721,
+  "label": "LD420 ac3 patch lock_switch to True (candidate lever)",
+  "credential_pair": "WRITE",
+  "request": {
+    "method": "PATCH",
+    "path": "/open-apis/drive/v2/permissions/Example96b1f1037377879d8dd5/public?type=docx",
+    "body": {
+      "lock_switch": true
+    },
+    "headers": [
+      "Authorization: Bearer <redacted>"
+    ]
+  },
+  "http_status": 400,
+  "response": {
+    "code": 1063001,
+    "msg": "Invalid parameter",
+    "error": {
+      "log_id": "20260812064758D215F25DA08C5EA24771"
+    }
+  }
+}

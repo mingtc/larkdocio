@@ -1,0 +1,75 @@
+{
+  "n": 113,
+  "probe": "LD-436 probe 03 — the gap enumeration",
+  "label": "ac1 metas batch_query with the permalink KEPT verbatim, plus a bogus token in the same call so failed_list is shown working",
+  "credential_pair": "WRITE",
+  "request": {
+    "method": "POST",
+    "path": "/open-apis/drive/v1/metas/batch_query",
+    "body": {
+      "request_docs": [
+        {
+          "doc_token": "Example406b7cbfc415633680f8",
+          "doc_type": "file"
+        },
+        {
+          "doc_token": "Exampleff109b60c3cf18ac9bca",
+          "doc_type": "file"
+        },
+        {
+          "doc_token": "ZZZZbogus0000000000000000ZZ",
+          "doc_type": "file"
+        }
+      ],
+      "with_url": true
+    },
+    "headers": [
+      "Authorization: Bearer <redacted>"
+    ]
+  },
+  "http_status": 200,
+  "response": {
+    "code": 0,
+    "data": {
+      "failed_list": [
+        {
+          "code": 970005,
+          "token": "ZZZZbogus0000000000000000ZZ"
+        }
+      ],
+      "metas": [
+        {
+          "create_time": "1786545820",
+          "doc_token": "Exampleff109b60c3cf18ac9bca",
+          "doc_type": "file",
+          "latest_modify_time": "1786545820",
+          "latest_modify_user": "ou_examplebot0000000000000000000001",
+          "owner_id": "ou_examplebot0000000000000000000001",
+          "request_doc_info": {
+            "doc_token": "Exampleff109b60c3cf18ac9bca",
+            "doc_type": "file"
+          },
+          "sec_label_name": "",
+          "title": "ld436-parity.html",
+          "url": "https://your-domain.larksuite.com/file/Exampleff109b60c3cf18ac9bca"
+        },
+        {
+          "create_time": "1786545820",
+          "doc_token": "Example406b7cbfc415633680f8",
+          "doc_type": "file",
+          "latest_modify_time": "1786545820",
+          "latest_modify_user": "ou_examplebot0000000000000000000001",
+          "owner_id": "ou_examplebot0000000000000000000001",
+          "request_doc_info": {
+            "doc_token": "Example406b7cbfc415633680f8",
+            "doc_type": "file"
+          },
+          "sec_label_name": "",
+          "title": "ld436-parity.png",
+          "url": "https://your-domain.larksuite.com/file/Example406b7cbfc415633680f8"
+        }
+      ]
+    },
+    "msg": "Success"
+  }
+}

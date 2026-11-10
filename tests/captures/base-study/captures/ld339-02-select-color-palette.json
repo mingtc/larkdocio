@@ -1,0 +1,168 @@
+{
+  "_probe": "ld339-02",
+  "_endpoint": "/open-apis/bitable/v1/apps/{a}/tables/{t}/fields",
+  "_method": "POST with one option per colour int — 21 in one column, then 4 out-of-range probes one column each",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_verdict": "MEASURED, NOT NAMED. 21 of 21 colour ints stored exactly what was sent; the out-of-range probes answered [(-1, 99992402), (54, 0), (99, 99992402), (1000, 99992402)]. WHAT HUE EACH INT PAINTS IS NOT SOMETHING THIS LIBRARY READS — the API returns the int it was given, so no hue name is inferred here or anywhere downstream.",
+  "_note": "LD-339 AC5. The consumer set 0/1/5/11/17/22/24/33/40/46 blind; this sweep is that set plus a cheap extension in the same call. The Base is RETAINED for a human eyeball pass — see dev/base-study/ld339-colour-palette-card.md for the live URL, the owner and the deletion trigger.",
+  "_transport": "larkdocio.common.transport.CredentialedRawHttpClient (urllib), paced 1.3 s",
+  "retained_app_token": "Example0514a43f9f7b261f1c1f",
+  "retained_title": "larkdocio-DISPOSABLE-ld339-palette-RETAINED",
+  "retained_table_id": "tblVL4AFmEt9cykb",
+  "palette": [
+    {
+      "option_name": "0",
+      "sent_color": 0,
+      "stored_color": 0,
+      "normalised": false
+    },
+    {
+      "option_name": "1",
+      "sent_color": 1,
+      "stored_color": 1,
+      "normalised": false
+    },
+    {
+      "option_name": "2",
+      "sent_color": 2,
+      "stored_color": 2,
+      "normalised": false
+    },
+    {
+      "option_name": "3",
+      "sent_color": 3,
+      "stored_color": 3,
+      "normalised": false
+    },
+    {
+      "option_name": "4",
+      "sent_color": 4,
+      "stored_color": 4,
+      "normalised": false
+    },
+    {
+      "option_name": "5",
+      "sent_color": 5,
+      "stored_color": 5,
+      "normalised": false
+    },
+    {
+      "option_name": "8",
+      "sent_color": 8,
+      "stored_color": 8,
+      "normalised": false
+    },
+    {
+      "option_name": "11",
+      "sent_color": 11,
+      "stored_color": 11,
+      "normalised": false
+    },
+    {
+      "option_name": "14",
+      "sent_color": 14,
+      "stored_color": 14,
+      "normalised": false
+    },
+    {
+      "option_name": "17",
+      "sent_color": 17,
+      "stored_color": 17,
+      "normalised": false
+    },
+    {
+      "option_name": "20",
+      "sent_color": 20,
+      "stored_color": 20,
+      "normalised": false
+    },
+    {
+      "option_name": "22",
+      "sent_color": 22,
+      "stored_color": 22,
+      "normalised": false
+    },
+    {
+      "option_name": "24",
+      "sent_color": 24,
+      "stored_color": 24,
+      "normalised": false
+    },
+    {
+      "option_name": "28",
+      "sent_color": 28,
+      "stored_color": 28,
+      "normalised": false
+    },
+    {
+      "option_name": "33",
+      "sent_color": 33,
+      "stored_color": 33,
+      "normalised": false
+    },
+    {
+      "option_name": "36",
+      "sent_color": 36,
+      "stored_color": 36,
+      "normalised": false
+    },
+    {
+      "option_name": "40",
+      "sent_color": 40,
+      "stored_color": 40,
+      "normalised": false
+    },
+    {
+      "option_name": "43",
+      "sent_color": 43,
+      "stored_color": 43,
+      "normalised": false
+    },
+    {
+      "option_name": "46",
+      "sent_color": 46,
+      "stored_color": 46,
+      "normalised": false
+    },
+    {
+      "option_name": "49",
+      "sent_color": 49,
+      "stored_color": 49,
+      "normalised": false
+    },
+    {
+      "option_name": "53",
+      "sent_color": 53,
+      "stored_color": 53,
+      "normalised": false
+    }
+  ],
+  "out_of_range": [
+    {
+      "sent_color": -1,
+      "code": 99992402,
+      "msg": "field validation failed",
+      "accepted": false
+    },
+    {
+      "sent_color": 54,
+      "code": 0,
+      "msg": "success",
+      "accepted": true,
+      "stored_color": 54
+    },
+    {
+      "sent_color": 99,
+      "code": 99992402,
+      "msg": "field validation failed",
+      "accepted": false
+    },
+    {
+      "sent_color": 1000,
+      "code": 99992402,
+      "msg": "field validation failed",
+      "accepted": false
+    }
+  ]
+}

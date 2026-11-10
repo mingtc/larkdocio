@@ -1,0 +1,254 @@
+{
+  "_probe": "p2",
+  "_endpoint": ".../tables/tblMWxK1iJYvK56l/fields",
+  "_method": "POST",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": null,
+  "_verdict": "OK",
+  "_note": "ModifiedUser(1004) + the Rating / Email / Stage / Progress ui_type variants: which are creatable, with what property, and the verbatim refusal for the rest",
+  "response": {
+    "code": 0,
+    "data": {
+      "ModifiedUser": {
+        "request": {
+          "field_name": "ModifiedUser",
+          "type": 1004
+        },
+        "code": 0,
+        "msg": "success",
+        "field": {
+          "field_id": "fldkjxis90",
+          "field_name": "ModifiedUser",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": null,
+          "type": 1004,
+          "ui_type": "ModifiedUser"
+        }
+      },
+      "ModifiedUser_ui": {
+        "request": {
+          "field_name": "ModifiedUser2",
+          "type": 1004,
+          "ui_type": "ModifiedUser"
+        },
+        "code": 0,
+        "msg": "success",
+        "field": {
+          "field_id": "fldmuA67bP",
+          "field_name": "ModifiedUser2",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": null,
+          "type": 1004,
+          "ui_type": "ModifiedUser"
+        }
+      },
+      "Rating": {
+        "request": {
+          "field_name": "Rating",
+          "type": 2,
+          "ui_type": "Rating",
+          "property": {
+            "formatter": "0",
+            "rating": {
+              "symbol": "star"
+            },
+            "min": 0,
+            "max": 5
+          }
+        },
+        "code": 0,
+        "msg": "success",
+        "field": {
+          "field_id": "fldWFiP7S4",
+          "field_name": "Rating",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "formatter": "0",
+            "max": 5,
+            "min": 0,
+            "rating": {
+              "symbol": "star"
+            }
+          },
+          "type": 2,
+          "ui_type": "Rating"
+        }
+      },
+      "Rating_minimal": {
+        "request": {
+          "field_name": "Rating2",
+          "type": 2,
+          "ui_type": "Rating"
+        },
+        "code": 1254001,
+        "msg": "WrongRequestBody",
+        "field": null
+      },
+      "Email_type1": {
+        "request": {
+          "field_name": "Email",
+          "type": 1,
+          "ui_type": "Email"
+        },
+        "code": 99992402,
+        "msg": "field validation failed",
+        "field": null
+      },
+      "Email_type13": {
+        "request": {
+          "field_name": "Email2",
+          "type": 13,
+          "ui_type": "Email"
+        },
+        "code": 99992402,
+        "msg": "field validation failed",
+        "field": null
+      },
+      "Stage_type3": {
+        "request": {
+          "field_name": "Stage",
+          "type": 3,
+          "ui_type": "Stage"
+        },
+        "code": 99992402,
+        "msg": "field validation failed",
+        "field": null
+      },
+      "Stage_type24": {
+        "request": {
+          "field_name": "Stage2",
+          "type": 24,
+          "ui_type": "Stage"
+        },
+        "code": 99992402,
+        "msg": "field validation failed",
+        "field": null
+      },
+      "Progress": {
+        "request": {
+          "field_name": "Progress",
+          "type": 2,
+          "ui_type": "Progress",
+          "property": {
+            "formatter": "0%",
+            "min": 0,
+            "max": 1
+          }
+        },
+        "code": 0,
+        "msg": "success",
+        "field": {
+          "field_id": "fld3alKVTK",
+          "field_name": "Progress",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "formatter": "0%",
+            "max": 1,
+            "min": 0
+          },
+          "type": 2,
+          "ui_type": "Progress"
+        }
+      },
+      "User_multiple": {
+        "request": {
+          "field_name": "UserM",
+          "type": 11,
+          "ui_type": "User",
+          "property": {
+            "multiple": true
+          }
+        },
+        "code": 0,
+        "msg": "success",
+        "field": {
+          "field_id": "fldFTlp8Q6",
+          "field_name": "UserM",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "multiple": true
+          },
+          "type": 11,
+          "ui_type": "User"
+        }
+      },
+      "Attachment": {
+        "request": {
+          "field_name": "Attach",
+          "type": 17,
+          "ui_type": "Attachment"
+        },
+        "code": 0,
+        "msg": "success",
+        "field": {
+          "field_id": "fldB1r7Qw2",
+          "field_name": "Attach",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": null,
+          "type": 17,
+          "ui_type": "Attachment"
+        }
+      },
+      "Location": {
+        "request": {
+          "field_name": "Loc",
+          "type": 22,
+          "ui_type": "Location",
+          "property": {
+            "input_type": "ONLY_MOBILE"
+          }
+        },
+        "code": 0,
+        "msg": "success",
+        "field": {
+          "field_id": "fld1xYXAm5",
+          "field_name": "Loc",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "location": {
+              "input_type": "not_limit"
+            }
+          },
+          "type": 22,
+          "ui_type": "Location"
+        }
+      },
+      "GroupChat": {
+        "request": {
+          "field_name": "Chat",
+          "type": 23,
+          "ui_type": "GroupChat"
+        },
+        "code": 0,
+        "msg": "success",
+        "field": {
+          "field_id": "fldE8DvwAP",
+          "field_name": "Chat",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "multiple": true
+          },
+          "type": 23,
+          "ui_type": "GroupChat"
+        }
+      }
+    }
+  }
+}

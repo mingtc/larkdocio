@@ -1,0 +1,140 @@
+[
+  {
+    "block_id": "root",
+    "parent_id": "doc",
+    "block_type": 1,
+    "page": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Doc Title"
+          }
+        }
+      ]
+    },
+    "children": [
+      "ag"
+    ]
+  },
+  {
+    "block_id": "ag",
+    "parent_id": "root",
+    "block_type": 44,
+    "agenda": {},
+    "children": [
+      "ai1",
+      "ai2"
+    ]
+  },
+  {
+    "block_id": "ai1",
+    "parent_id": "ag",
+    "block_type": 45,
+    "agenda_item": {},
+    "children": [
+      "ai1t",
+      "ai1c"
+    ]
+  },
+  {
+    "block_id": "ai1t",
+    "parent_id": "ai1",
+    "block_type": 46,
+    "agenda_item_title": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Agenda title 1"
+          }
+        }
+      ],
+      "align": 1
+    }
+  },
+  {
+    "block_id": "ai1c",
+    "parent_id": "ai1",
+    "block_type": 47,
+    "agenda_item_content": {},
+    "children": [
+      "ai1b1",
+      "ai1b2"
+    ]
+  },
+  {
+    "block_id": "ai1b1",
+    "parent_id": "ai1c",
+    "block_type": 2,
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Agenda body text - level 1"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "block_id": "ai1b2",
+    "parent_id": "ai1c",
+    "block_type": 2,
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": ""
+          }
+        }
+      ]
+    }
+  },
+  {
+    "block_id": "ai2",
+    "parent_id": "ag",
+    "block_type": 45,
+    "agenda_item": {},
+    "children": [
+      "ai2t",
+      "ai2c"
+    ]
+  },
+  {
+    "block_id": "ai2t",
+    "parent_id": "ai2",
+    "block_type": 46,
+    "agenda_item_title": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Agenda topic 1 \u2014 self-referential sample"
+          }
+        }
+      ],
+      "align": 1
+    }
+  },
+  {
+    "block_id": "ai2c",
+    "parent_id": "ai2",
+    "block_type": 47,
+    "agenda_item_content": {},
+    "children": [
+      "ai2b1"
+    ]
+  },
+  {
+    "block_id": "ai2b1",
+    "parent_id": "ai2c",
+    "block_type": 2,
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": ""
+          }
+        }
+      ]
+    }
+  }
+]

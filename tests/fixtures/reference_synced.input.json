@@ -1,0 +1,28 @@
+[
+  {
+    "block_id": "root",
+    "parent_id": "doc",
+    "block_type": 1,
+    "page": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Doc Title"
+          }
+        }
+      ]
+    },
+    "children": [
+      "r1"
+    ]
+  },
+  {
+    "block_id": "r1",
+    "parent_id": "root",
+    "block_type": 50,
+    "reference_synced": {
+      "source_document_id": "docSourceABC",
+      "source_block_id": "blkSource123"
+    }
+  }
+]

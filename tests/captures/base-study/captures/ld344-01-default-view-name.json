@@ -1,0 +1,62 @@
+{
+  "_probe": "ld344-01",
+  "_endpoint": "/open-apis/bitable/v1/apps/{app_token}/tables",
+  "_method": "POST with default_view_name (send path + control) + GET …/views read-back",
+  "_http_status": 200,
+  "_lark_code": 1254001,
+  "_lark_msg": "WrongRequestBody",
+  "_verdict": "default_view_name STICKS = False. A create carrying default_view_name='LD344 Named View' answered code=1254001 and GET …/views read back [] (total=None). The control — same create without the key — read back ['表格视图 1']. So a nameless create's single view is called '表格视图 1' on this tenant, and the key IS A NO-OP.",
+  "_note": "AC1 gate. If STICKS the issue proceeds; if the key is accepted (code:0) and IGNORED the issue BOUNCES to the maintainer (R12). The locale claim is NOT made for view names: the control's view name is recorded as MEASURED, not asserted to arrive localised. BONUS (out of scope to ship): batch_create honoured the key = False.",
+  "_transport": "larkdocio.common.transport.CredentialedRawHttpClient (urllib), paced 1.3 s — the RAW core, because the question is what the server does",
+  "_disposable": "one, harness-created; deleted in the harness finally, ledger-backed",
+  "response": {
+    "named_case": {
+      "asked_view_name": "LD344 Named View",
+      "sent_body": "{\"table\": {\"name\": \"ld344-named\", \"default_view_name\": \"LD344 Named View\"}}",
+      "code": 1254001,
+      "msg": "WrongRequestBody",
+      "table_id": null
+    },
+    "control_case": {
+      "sent_body": "{\"table\": {\"name\": \"ld344-control\"}}",
+      "code": 0,
+      "msg": "success",
+      "table_id": "tbl9eK6JuHCazvbC",
+      "read_back": {
+        "total": 1,
+        "views": [
+          {
+            "view_id": "vewyzn6QuZ",
+            "view_name": "表格视图 1",
+            "view_type": "grid",
+            "view_public_level": "Public"
+          }
+        ]
+      }
+    },
+    "batch_create_case": {
+      "sent": "one table WITH default_view_name, in batch_create",
+      "code": 0,
+      "msg": "success",
+      "table_ids": [
+        "tblCbYGqb59xLCS1"
+      ],
+      "read_back": {
+        "tblCbYGqb59xLCS1": {
+          "total": 1,
+          "views": [
+            {
+              "view_id": "vewqGhXZKc",
+              "view_name": "表格视图 1",
+              "view_type": "grid",
+              "view_public_level": "Public"
+            }
+          ]
+        }
+      },
+      "honoured": false
+    },
+    "sticks": false,
+    "control_view_name": "表格视图 1"
+  }
+}

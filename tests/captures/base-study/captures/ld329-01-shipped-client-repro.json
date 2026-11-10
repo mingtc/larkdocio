@@ -1,0 +1,47 @@
+{
+  "_probe": "ld329-01",
+  "_endpoint": "/open-apis/bitable/v1/apps/{app_token}/tables/{table_id}/fields",
+  "_method": "POST",
+  "_http_status": 200,
+  "_lark_code": 9499,
+  "_lark_msg": "Invalid parameter type in param: TableId. Invalid parameter value: \"tbl…\". Please check and modify accordingly.",
+  "_verdict": "REPRODUCED — not transient",
+  "_note": "LD-329 spike leg 1: the LD-317 QA finding re-run ~30-55 min later (QA window 2026-08-07 06:00-06:30Z; this run 06:58Z) through the SHIPPED BaseSchemaClient.create_field on ONE self-provisioned disposable. create_app and create_table answer code:0 in the same breath; both field creates answer 9499 — one against the disposable's own default table, one against a table the same client minted seconds earlier. The third step never reached the wire (probe-side signature misuse of build_property, recorded verbatim so the capture is not read as a server answer).",
+  "_transport": "lark-oapi SDK (shipped client, unmodified)",
+  "_disposable": "one; deleted in the harness finally, ledger last_code 0, deleted:true",
+  "response": {
+    "started_at": "2026-08-07T06:58:26+00:00",
+    "finished_at": "2026-08-07T06:58:28+00:00",
+    "default_table_id": "tbljmfyxmnyvszap",
+    "steps": [
+      {
+        "step": "create_table (shipped client)",
+        "at": "2026-08-07T06:58:27+00:00",
+        "outcome": "ok",
+        "code": 0,
+        "detail": "tbl6hpG4Rx8PBYW3"
+      },
+      {
+        "step": "create_field Text on the DEFAULT table",
+        "at": "2026-08-07T06:58:28+00:00",
+        "outcome": "raised",
+        "code": 9499,
+        "error": "create column 'ld329-text' in table tbljmfyxmnyvszap failed: Code: 9499, Msg: Invalid parameter type in param: TableId. Invalid parameter value: \"tbljmfyxmnyvszap\". Please check and modify accordingly."
+      },
+      {
+        "step": "create_field Text on the JUST-CREATED table",
+        "at": "2026-08-07T06:58:28+00:00",
+        "outcome": "raised",
+        "code": 9499,
+        "error": "create column 'ld329-text2' in table tbl6hpG4Rx8PBYW3 failed: Code: 9499, Msg: Invalid parameter type in param: TableId. Invalid parameter value: \"tbl6hpG4Rx8PBYW3\". Please check and modify accordingly."
+      },
+      {
+        "step": "create_field Progress(captured property) on the JUST-CREATED table",
+        "at": "2026-08-07T06:58:28+00:00",
+        "outcome": "NO CALL — probe-side error, not a server answer",
+        "code": null,
+        "error": "build_property() argument after ** must be a mapping, not AppTableFieldProperty (the probe passed an already-built property into create_field(properties=…), which takes the FLAT option dict)"
+      }
+    ]
+  }
+}

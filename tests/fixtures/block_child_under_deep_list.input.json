@@ -1,0 +1,85 @@
+[
+  {
+    "block_id": "root",
+    "parent_id": "doc",
+    "block_type": 1,
+    "page": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Doc Title"
+          }
+        }
+      ]
+    },
+    "children": [
+      "bl1"
+    ]
+  },
+  {
+    "block_id": "bl1",
+    "parent_id": "root",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Top item"
+          }
+        }
+      ]
+    },
+    "children": [
+      "bl2"
+    ]
+  },
+  {
+    "block_id": "bl2",
+    "parent_id": "bl1",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Nested item"
+          }
+        }
+      ]
+    },
+    "children": [
+      "blc",
+      "blq"
+    ]
+  },
+  {
+    "block_id": "blc",
+    "parent_id": "bl2",
+    "block_type": 14,
+    "code": {
+      "style": {
+        "language": 49
+      },
+      "elements": [
+        {
+          "text_run": {
+            "content": "deep_code()"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "block_id": "blq",
+    "parent_id": "bl2",
+    "block_type": 15,
+    "quote": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "deep quote"
+          }
+        }
+      ]
+    }
+  }
+]

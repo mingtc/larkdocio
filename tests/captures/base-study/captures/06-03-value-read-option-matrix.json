@@ -1,0 +1,240 @@
+{
+  "_probe": "06",
+  "_endpoint": ".../tables/tblLAHFqgMhRGuPX/records/search",
+  "_method": "POST",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": null,
+  "_verdict": "OK",
+  "_note": "THE typed-value read shapes: how each field type encodes in `fields`, and what each read option changes",
+  "response": {
+    "code": 0,
+    "data": {
+      "record_id": "recvrymubKYG8P",
+      "modes": {
+        "plain": {
+          "code": 0,
+          "total_records": 11,
+          "has_more": false,
+          "populated_record": {
+            "fields": {
+              "Barcode": [
+                {
+                  "text": "BC-0001",
+                  "type": "text"
+                }
+              ],
+              "Checkbox": true,
+              "Currency": 19.99,
+              "DateTime": 1785061011000,
+              "Formula": {
+                "type": 2,
+                "value": [
+                  2
+                ]
+              },
+              "MultiSelect": [
+                "Red",
+                "Green"
+              ],
+              "Number": 42.5,
+              "Phone": "+12025550100",
+              "SingleSelect": "Alpha",
+              "Text": [
+                {
+                  "text": "THE ROW",
+                  "type": "text"
+                }
+              ],
+              "Url": {
+                "link": "https://example.invalid/x",
+                "text": "Example",
+                "type": "url"
+              }
+            },
+            "record_id": "recvrymubKYG8P"
+          }
+        },
+        "automatic_fields": {
+          "code": 0,
+          "total_records": 11,
+          "has_more": false,
+          "populated_record": {
+            "created_by": {
+              "avatar_url": "<redacted:avatar_url>",
+              "email": "",
+              "en_name": "<redacted:en_name>",
+              "id": "<redacted:person-id>",
+              "name": "<redacted:person-name>"
+            },
+            "created_time": 1785693629000,
+            "fields": {
+              "Barcode": [
+                {
+                  "text": "BC-0001",
+                  "type": "text"
+                }
+              ],
+              "Checkbox": true,
+              "Currency": 19.99,
+              "DateTime": 1785061011000,
+              "Formula": {
+                "type": 2,
+                "value": [
+                  2
+                ]
+              },
+              "MultiSelect": [
+                "Red",
+                "Green"
+              ],
+              "Number": 42.5,
+              "Phone": "+12025550100",
+              "SingleSelect": "Alpha",
+              "Text": [
+                {
+                  "text": "THE ROW",
+                  "type": "text"
+                }
+              ],
+              "Url": {
+                "link": "https://example.invalid/x",
+                "text": "Example",
+                "type": "url"
+              }
+            },
+            "last_modified_by": {
+              "avatar_url": "<redacted:avatar_url>",
+              "email": "",
+              "en_name": "<redacted:en_name>",
+              "id": "<redacted:person-id>",
+              "name": "<redacted:person-name>"
+            },
+            "last_modified_time": 1785693629000,
+            "record_id": "recvrymubKYG8P"
+          }
+        },
+        "text_field_as_array": {
+          "code": 0,
+          "total_records": 11,
+          "has_more": false,
+          "populated_record": {
+            "fields": {
+              "Barcode": [
+                {
+                  "text": "BC-0001",
+                  "type": "text"
+                }
+              ],
+              "Checkbox": true,
+              "Currency": 19.99,
+              "DateTime": 1785061011000,
+              "Formula": {
+                "type": 2,
+                "value": [
+                  2
+                ]
+              },
+              "MultiSelect": [
+                "Red",
+                "Green"
+              ],
+              "Number": 42.5,
+              "Phone": "+12025550100",
+              "SingleSelect": "Alpha",
+              "Text": [
+                {
+                  "text": "THE ROW",
+                  "type": "text"
+                }
+              ],
+              "Url": {
+                "link": "https://example.invalid/x",
+                "text": "Example",
+                "type": "url"
+              }
+            },
+            "record_id": "recvrymubKYG8P"
+          }
+        },
+        "all_options": {
+          "code": 0,
+          "total_records": 11,
+          "has_more": false,
+          "populated_record": {
+            "created_by": {
+              "avatar_url": "<redacted:avatar_url>",
+              "email": "",
+              "en_name": "<redacted:en_name>",
+              "id": "<redacted:person-id>",
+              "name": "<redacted:person-name>"
+            },
+            "created_time": 1785693629000,
+            "fields": {
+              "Barcode": [
+                {
+                  "text": "BC-0001",
+                  "type": "text"
+                }
+              ],
+              "Checkbox": true,
+              "Currency": 19.99,
+              "DateTime": 1785061011000,
+              "Formula": {
+                "type": 2,
+                "value": [
+                  2
+                ]
+              },
+              "MultiSelect": [
+                "Red",
+                "Green"
+              ],
+              "Number": 42.5,
+              "Phone": "+12025550100",
+              "SingleSelect": "Alpha",
+              "Text": [
+                {
+                  "text": "THE ROW",
+                  "type": "text"
+                }
+              ],
+              "Url": {
+                "link": "https://example.invalid/x",
+                "text": "Example",
+                "type": "url"
+              }
+            },
+            "last_modified_by": {
+              "avatar_url": "<redacted:avatar_url>",
+              "email": "",
+              "en_name": "<redacted:en_name>",
+              "id": "<redacted:person-id>",
+              "name": "<redacted:person-name>"
+            },
+            "last_modified_time": 1785693629000,
+            "record_id": "recvrymubKYG8P"
+          }
+        },
+        "field_names_subset": {
+          "code": 0,
+          "total_records": 11,
+          "has_more": false,
+          "populated_record": {
+            "fields": {
+              "Number": 42.5,
+              "SingleSelect": "Alpha",
+              "Text": [
+                {
+                  "text": "THE ROW",
+                  "type": "text"
+                }
+              ]
+            },
+            "record_id": "recvrymubKYG8P"
+          }
+        }
+      }
+    }
+  }
+}

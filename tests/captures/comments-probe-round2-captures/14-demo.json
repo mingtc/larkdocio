@@ -1,0 +1,538 @@
+{
+  "probe": "14-demo",
+  "started_at": "2026-07-29T09:22:34.985277+00:00",
+  "app_fingerprint_write": "ex9fa8801d8f",
+  "captures": [
+    {
+      "label": "demo-create-docx",
+      "method": "POST",
+      "path": "drive/v1/files/{tok}/comments?file_type=docx",
+      "request_body": {
+        "reply_list": {
+          "replies": [
+            {
+              "content": {
+                "elements": [
+                  {
+                    "type": "text_run",
+                    "text_run": {
+                      "text": "larkdocio LD-161 DEMO — this is a whole-document comment created through the API by the project's own application (a bot identity). It is the ONLY kind of comment the API can create: every attempt to anchor a comment to a passage is accepted and then silently produces one of these. Left in place deliberately, for the maintainer to see."
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "Success",
+      "response": {
+        "code": 0,
+        "data": {
+          "comment_id": "7667877938850762473",
+          "create_time": 1785316956,
+          "is_solved": false,
+          "reply_list": {
+            "replies": [
+              {
+                "content": {
+                  "elements": [
+                    {
+                      "docs_link": null,
+                      "person": null,
+                      "text_run": {
+                        "text": "larkdocio LD-161 DEMO — this is a whole-document comment created through the API by the project's own application (a bot identity). It is the ONLY kind of comment the API can create: every attempt to anchor a comment to a passage is accepted and then silently produces one of these. Left in place deliberately, for the maintainer to see."
+                      },
+                      "type": "text_run"
+                    }
+                  ]
+                },
+                "create_time": 1785316956,
+                "extra": null,
+                "reply_id": "7667877938867556062",
+                "update_time": 1785316956,
+                "user_id": "ou_examplebot0000000000000000000001"
+              }
+            ]
+          },
+          "solver_user_id": null,
+          "update_time": 1785316956,
+          "user_id": "ou_examplebot0000000000000000000001"
+        },
+        "msg": "Success"
+      }
+    },
+    {
+      "label": "demo-create-sheet-sheet",
+      "method": "POST",
+      "path": "drive/v1/files/{tok}/comments?file_type=sheet",
+      "request_body": {
+        "reply_list": "…"
+      },
+      "http_status": 400,
+      "code": 99992402,
+      "msg": "field validation failed",
+      "response": {
+        "code": 99992402,
+        "msg": "field validation failed",
+        "error": {
+          "log_id": "20260729172240F45ACB6E0BBDA93A0FCC",
+          "field_violations": [
+            {
+              "field": "file_type",
+              "value": "sheet",
+              "description": "file_type is optional, options: [doc,docx]"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "demo-create-sheet-sheets",
+      "method": "POST",
+      "path": "drive/v1/files/{tok}/comments?file_type=sheets",
+      "request_body": {
+        "reply_list": "…"
+      },
+      "http_status": 400,
+      "code": 99992402,
+      "msg": "field validation failed",
+      "response": {
+        "code": 99992402,
+        "msg": "field validation failed",
+        "error": {
+          "log_id": "2026072917224113D3FCFF8CDC1D8D863A",
+          "field_violations": [
+            {
+              "field": "file_type",
+              "value": "sheets",
+              "description": "file_type is optional, options: [doc,docx]"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "demo-create-sheet-spreadsheet",
+      "method": "POST",
+      "path": "drive/v1/files/{tok}/comments?file_type=spreadsheet",
+      "request_body": {
+        "reply_list": "…"
+      },
+      "http_status": 400,
+      "code": 99992402,
+      "msg": "field validation failed",
+      "response": {
+        "code": 99992402,
+        "msg": "field validation failed",
+        "error": {
+          "log_id": "20260729172242ED3A489F337F8C1BE0EF",
+          "field_violations": [
+            {
+              "field": "file_type",
+              "value": "spreadsheet",
+              "description": "file_type is optional, options: [doc,docx]"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "comments_before": [
+    "7667754726531878624",
+    "7667754810224938728",
+    "7667755056904572640",
+    "7667755191499755240",
+    "7667755630672793311",
+    "7667755822109167325"
+  ],
+  "demo_comment_id": "7667877938850762473",
+  "demo_create_code": 0,
+  "demo_create_response_verbatim": {
+    "code": 0,
+    "data": {
+      "comment_id": "7667877938850762473",
+      "create_time": 1785316956,
+      "is_solved": false,
+      "reply_list": {
+        "replies": [
+          {
+            "content": {
+              "elements": [
+                {
+                  "docs_link": null,
+                  "person": null,
+                  "text_run": {
+                    "text": "larkdocio LD-161 DEMO — this is a whole-document comment created through the API by the project's own application (a bot identity). It is the ONLY kind of comment the API can create: every attempt to anchor a comment to a passage is accepted and then silently produces one of these. Left in place deliberately, for the maintainer to see."
+                  },
+                  "type": "text_run"
+                }
+              ]
+            },
+            "create_time": 1785316956,
+            "extra": null,
+            "reply_id": "7667877938867556062",
+            "update_time": 1785316956,
+            "user_id": "ou_examplebot0000000000000000000001"
+          }
+        ]
+      },
+      "solver_user_id": null,
+      "update_time": 1785316956,
+      "user_id": "ou_examplebot0000000000000000000001"
+    },
+    "msg": "Success"
+  },
+  "demo_author_user_id": "ou_examplebot0000000000000000000001",
+  "demo_reply_ids": [
+    "7667877938867556062"
+  ],
+  "demo_read_back_shapes": {
+    "get_one": {
+      "label": "get-one",
+      "method": "GET",
+      "path": "drive/v1/files/{tok}/comments/{cid}",
+      "request_body": null,
+      "http_status": 200,
+      "code": 0,
+      "msg": "Success",
+      "response": {
+        "code": 0,
+        "data": {
+          "comment_id": "7667877938850762473",
+          "create_time": 1785316956,
+          "is_solved": false,
+          "reply_list": {
+            "replies": [
+              {
+                "content": {
+                  "elements": [
+                    {
+                      "docs_link": null,
+                      "person": null,
+                      "text_run": {
+                        "text": "larkdocio LD-161 DEMO — this is a whole-document comment created through the API by the project's own application (a bot identity). It is the ONLY kind of comment the API can create: every attempt to anchor a comment to a passage is accepted and then silently produces one of these. Left in place deliberately, for the maintainer to see."
+                      },
+                      "type": "text_run"
+                    }
+                  ]
+                },
+                "create_time": 1785316956,
+                "extra": {
+                  "image_list": null
+                },
+                "reply_id": "7667877938867556062",
+                "update_time": 1785316956,
+                "user_id": "ou_examplebot0000000000000000000001"
+              }
+            ]
+          },
+          "solver_user_id": null,
+          "update_time": 1785316956,
+          "user_id": "ou_examplebot0000000000000000000001"
+        },
+        "msg": "Success"
+      }
+    },
+    "batch_query_need_relation_false": {
+      "label": "batch_query need_relation=false",
+      "method": "POST",
+      "path": "drive/v1/files/{tok}/comments/batch_query",
+      "request_body": {
+        "comment_ids": [
+          "7667877938850762473"
+        ]
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "Success",
+      "response": {
+        "code": 0,
+        "data": {
+          "items": [
+            {
+              "comment_id": "7667877938850762473",
+              "create_time": 1785316956,
+              "has_more": false,
+              "is_solved": false,
+              "is_whole": true,
+              "page_token": "",
+              "reply_list": {
+                "replies": [
+                  {
+                    "content": {
+                      "elements": [
+                        {
+                          "docs_link": null,
+                          "person": null,
+                          "text_run": {
+                            "text": "larkdocio LD-161 DEMO — this is a whole-document comment created through the API by the project's own application (a bot identity). It is the ONLY kind of comment the API can create: every attempt to anchor a comment to a passage is accepted and then silently produces one of these. Left in place deliberately, for the maintainer to see."
+                          },
+                          "type": "text_run"
+                        }
+                      ]
+                    },
+                    "create_time": 1785316956,
+                    "extra": {
+                      "image_list": null
+                    },
+                    "reply_id": "7667877938867556062",
+                    "update_time": 1785316956,
+                    "user_id": "ou_examplebot0000000000000000000001"
+                  }
+                ]
+              },
+              "solver_user_id": null,
+              "update_time": 1785316956,
+              "user_id": "ou_examplebot0000000000000000000001"
+            }
+          ]
+        },
+        "msg": "Success"
+      }
+    },
+    "batch_query_need_relation_true": {
+      "label": "batch_query need_relation=true",
+      "method": "POST",
+      "path": "drive/v1/files/{tok}/comments/batch_query",
+      "request_body": {
+        "comment_ids": [
+          "7667877938850762473"
+        ]
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "Success",
+      "response": {
+        "code": 0,
+        "data": {
+          "items": [
+            {
+              "comment_id": "7667877938850762473",
+              "create_time": 1785316956,
+              "has_more": false,
+              "is_solved": false,
+              "is_whole": true,
+              "page_token": "",
+              "reply_list": {
+                "replies": [
+                  {
+                    "content": {
+                      "elements": [
+                        {
+                          "docs_link": null,
+                          "person": null,
+                          "text_run": {
+                            "text": "larkdocio LD-161 DEMO — this is a whole-document comment created through the API by the project's own application (a bot identity). It is the ONLY kind of comment the API can create: every attempt to anchor a comment to a passage is accepted and then silently produces one of these. Left in place deliberately, for the maintainer to see."
+                          },
+                          "type": "text_run"
+                        }
+                      ]
+                    },
+                    "create_time": 1785316956,
+                    "extra": {
+                      "image_list": null
+                    },
+                    "reply_id": "7667877938867556062",
+                    "update_time": 1785316956,
+                    "user_id": "ou_examplebot0000000000000000000001"
+                  }
+                ]
+              },
+              "solver_user_id": null,
+              "update_time": 1785316956,
+              "user_id": "ou_examplebot0000000000000000000001"
+            }
+          ]
+        },
+        "msg": "Success"
+      }
+    },
+    "replies_list": {
+      "label": "replies-list",
+      "method": "GET",
+      "path": "drive/v1/files/{tok}/comments/{cid}/replies",
+      "request_body": null,
+      "http_status": 200,
+      "code": 0,
+      "msg": "Success",
+      "response": {
+        "code": 0,
+        "data": {
+          "has_more": false,
+          "items": [
+            {
+              "content": {
+                "elements": [
+                  {
+                    "docs_link": null,
+                    "person": null,
+                    "text_run": {
+                      "text": "larkdocio LD-161 DEMO — this is a whole-document comment created through the API by the project's own application (a bot identity). It is the ONLY kind of comment the API can create: every attempt to anchor a comment to a passage is accepted and then silently produces one of these. Left in place deliberately, for the maintainer to see."
+                    },
+                    "type": "text_run"
+                  }
+                ]
+              },
+              "create_time": 1785316956,
+              "extra": {
+                "image_list": null
+              },
+              "reply_id": "7667877938867556062",
+              "update_time": 1785316956,
+              "user_id": "ou_examplebot0000000000000000000001"
+            }
+          ],
+          "page_token": "0"
+        },
+        "msg": "Success"
+      }
+    }
+  },
+  "comments_after": [
+    "7667754726531878624",
+    "7667754810224938728",
+    "7667755056904572640",
+    "7667755191499755240",
+    "7667755630672793311",
+    "7667755822109167325",
+    "7667877938850762473"
+  ],
+  "demo_list_item_verbatim": {
+    "comment_id": "7667877938850762473",
+    "create_time": 1785316956,
+    "is_solved": false,
+    "is_whole": true,
+    "reply_list": {
+      "replies": [
+        {
+          "content": {
+            "elements": [
+              {
+                "docs_link": null,
+                "person": null,
+                "text_run": {
+                  "text": "larkdocio LD-161 DEMO — this is a whole-document comment created through the API by the project's own application (a bot identity). It is the ONLY kind of comment the API can create: every attempt to anchor a comment to a passage is accepted and then silently produces one of these. Left in place deliberately, for the maintainer to see."
+                },
+                "type": "text_run"
+              }
+            ]
+          },
+          "create_time": 1785316956,
+          "extra": {
+            "image_list": null
+          },
+          "reply_id": "7667877938867556062",
+          "update_time": 1785316956,
+          "user_id": "ou_examplebot0000000000000000000001"
+        }
+      ]
+    },
+    "solver_user_id": null,
+    "update_time": 1785316956,
+    "user_id": "ou_examplebot0000000000000000000001"
+  },
+  "demo_is_whole_in_list": true,
+  "demo_quote_in_list": null,
+  "demo_extra_in_list": null,
+  "demo_get_one_code": 0,
+  "blocks_carrying_the_demo_id": [],
+  "sheet_attempts": {
+    "sheet": {
+      "http_status": 400,
+      "code": 99992402,
+      "msg": "field validation failed",
+      "field_violations": [
+        {
+          "field": "file_type",
+          "value": "sheet",
+          "description": "file_type is optional, options: [doc,docx]"
+        }
+      ],
+      "response_verbatim": {
+        "code": 99992402,
+        "msg": "field validation failed",
+        "error": {
+          "log_id": "20260729172240F45ACB6E0BBDA93A0FCC",
+          "field_violations": [
+            {
+              "field": "file_type",
+              "value": "sheet",
+              "description": "file_type is optional, options: [doc,docx]"
+            }
+          ]
+        }
+      },
+      "created_a_comment": false
+    },
+    "sheets": {
+      "http_status": 400,
+      "code": 99992402,
+      "msg": "field validation failed",
+      "field_violations": [
+        {
+          "field": "file_type",
+          "value": "sheets",
+          "description": "file_type is optional, options: [doc,docx]"
+        }
+      ],
+      "response_verbatim": {
+        "code": 99992402,
+        "msg": "field validation failed",
+        "error": {
+          "log_id": "2026072917224113D3FCFF8CDC1D8D863A",
+          "field_violations": [
+            {
+              "field": "file_type",
+              "value": "sheets",
+              "description": "file_type is optional, options: [doc,docx]"
+            }
+          ]
+        }
+      },
+      "created_a_comment": false
+    },
+    "spreadsheet": {
+      "http_status": 400,
+      "code": 99992402,
+      "msg": "field validation failed",
+      "field_violations": [
+        {
+          "field": "file_type",
+          "value": "spreadsheet",
+          "description": "file_type is optional, options: [doc,docx]"
+        }
+      ],
+      "response_verbatim": {
+        "code": 99992402,
+        "msg": "field validation failed",
+        "error": {
+          "log_id": "20260729172242ED3A489F337F8C1BE0EF",
+          "field_violations": [
+            {
+              "field": "file_type",
+              "value": "spreadsheet",
+              "description": "file_type is optional, options: [doc,docx]"
+            }
+          ]
+        }
+      },
+      "created_a_comment": false
+    }
+  },
+  "sheet_creation_impossible": true,
+  "where_to_look": {
+    "surface": "the granted zoo doc (LARKDOCIO_COMMENT_ZOO_DOC) — file token DocCommentZooExample0000001",
+    "how": "Open the document and open the comments panel (the speech-bubble icon in the top-right, or the right-hand sidebar). The demo is NOT highlighted anywhere in the text, because it is a WHOLE-DOCUMENT comment: it is attached to the file, not to a passage, so no words are underlined for it and it does not sit beside the 'Comments' section at the bottom the way the six hand-made ones do. It will appear in the panel's document-level list.",
+    "what_it_looks_like": "One comment, one reply, text beginning 'larkdocio LD-161 DEMO'. Its author is the project's WRITE application's BOT identity — an opaque ou_… open id with NO resolvable display name (the directory lookup answers 41050 'no user authority' on this app's scopes), so the UI will show whatever it shows for an app, not a person's name. It carries quote=null and is_whole=true.",
+    "comment_id": "7667877938850762473",
+    "author_user_id": "ou_examplebot0000000000000000000001",
+    "author_is_the_app_not_a_human": true,
+    "human_author_of_the_zoo_for_contrast": "ou_exampleowner00000000000000000001",
+    "left_in_place": true,
+    "why_left": "maintainer order (dev/overnight-2026-07-29-plan.md § Morning session, Q4)."
+  },
+  "api_calls": 11
+}

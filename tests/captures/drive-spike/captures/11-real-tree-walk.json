@@ -1,0 +1,456 @@
+{
+  "_probe": "11-real-tree-walk",
+  "_note": "U3 — depth-first READ-ONLY traversal of the maintainer's real folder. GET /drive/v1/files only; no document was read.",
+  "_read_only": true,
+  "_method": "GET",
+  "_root_folder": "FolderRootExample0000000001",
+  "_calls_used": 7,
+  "_max_depth": 4,
+  "_total_children": 35,
+  "_by_type": {
+    "folder": 6,
+    "docx": 27,
+    "file": 2
+  },
+  "_subfolders": 6,
+  "_truncated": null,
+  "_pages": [
+    {
+      "folder": "FolderRootExample0000000001",
+      "page_no": 1,
+      "n_files": 4,
+      "has_more": false,
+      "next_page_token_present": false
+    },
+    {
+      "folder": "<tok:ex85cfa3>",
+      "page_no": 1,
+      "n_files": 5,
+      "has_more": false,
+      "next_page_token_present": false
+    },
+    {
+      "folder": "<tok:exd95cba>",
+      "page_no": 1,
+      "n_files": 7,
+      "has_more": false,
+      "next_page_token_present": false
+    },
+    {
+      "folder": "<tok:ex0c1ecf>",
+      "page_no": 1,
+      "n_files": 11,
+      "has_more": false,
+      "next_page_token_present": false
+    },
+    {
+      "folder": "<tok:ex77e90a>",
+      "page_no": 1,
+      "n_files": 2,
+      "has_more": false,
+      "next_page_token_present": false
+    },
+    {
+      "folder": "<tok:exfc9e98>",
+      "page_no": 1,
+      "n_files": 2,
+      "has_more": false,
+      "next_page_token_present": false
+    },
+    {
+      "folder": "<tok:exa7c05c>",
+      "page_no": 1,
+      "n_files": 4,
+      "has_more": false,
+      "next_page_token_present": false
+    }
+  ],
+  "_natural_pagination_seen": [],
+  "nodes": [
+    {
+      "depth": 1,
+      "path": "/Example Folder 01",
+      "name": "Example Folder 01",
+      "type": "folder",
+      "token": "<tok:ex85cfa3>",
+      "parent_token": "FolderRootExample0000000001",
+      "url": "https://<redacted:tenant-host>.larksuite.com/drive/folder/<tok:ex85cfa3>",
+      "shortcut_info": null,
+      "modified_time": "1786080035"
+    },
+    {
+      "depth": 1,
+      "path": "/Example Folder 02",
+      "name": "Example Folder 02",
+      "type": "folder",
+      "token": "<tok:exd95cba>",
+      "parent_token": "FolderRootExample0000000001",
+      "url": "https://<redacted:tenant-host>.larksuite.com/drive/folder/<tok:exd95cba>",
+      "shortcut_info": null,
+      "modified_time": "1786080015"
+    },
+    {
+      "depth": 1,
+      "path": "/Example Folder 03",
+      "name": "Example Folder 03",
+      "type": "folder",
+      "token": "<tok:exa7c05c>",
+      "parent_token": "FolderRootExample0000000001",
+      "url": "https://<redacted:tenant-host>.larksuite.com/drive/folder/<tok:exa7c05c>",
+      "shortcut_info": null,
+      "modified_time": "1785838458"
+    },
+    {
+      "depth": 1,
+      "path": "/Example Document 04",
+      "name": "Example Document 04",
+      "type": "docx",
+      "token": "<tok:exf2eff8>",
+      "parent_token": "FolderRootExample0000000001",
+      "url": "https://<redacted:tenant-host>.larksuite.com/docx/<tok:exf2eff8>",
+      "shortcut_info": null,
+      "modified_time": "1786075884"
+    },
+    {
+      "depth": 2,
+      "path": "/Example Folder 01/Example Document 05",
+      "name": "Example Document 05",
+      "type": "docx",
+      "token": "<tok:exaf8c94>",
+      "parent_token": "<tok:ex85cfa3>",
+      "url": "https://<redacted:tenant-host>.larksuite.com/docx/<tok:exaf8c94>",
+      "shortcut_info": null,
+      "modified_time": "1786080045"
+    },
+    {
+      "depth": 2,
+      "path": "/Example Folder 01/Example Document 06",
+      "name": "Example Document 06",
+      "type": "docx",
+      "token": "<tok:exd3ed12>",
+      "parent_token": "<tok:ex85cfa3>",
+      "url": "https://<redacted:tenant-host>.larksuite.com/docx/<tok:exd3ed12>",
+      "shortcut_info": null,
+      "modified_time": "1786080043"
+    },
+    {
+      "depth": 2,
+      "path": "/Example Folder 01/Example Document 07",
+      "name": "Example Document 07",
+      "type": "docx",
+      "token": "<tok:ex91ec3b>",
+      "parent_token": "<tok:ex85cfa3>",
+      "url": "https://<redacted:tenant-host>.larksuite.com/docx/<tok:ex91ec3b>",
+      "shortcut_info": null,
+      "modified_time": "1786078026"
+    },
+    {
+      "depth": 2,
+      "path": "/Example Folder 01/Example Document 08",
+      "name": "Example Document 08",
+      "type": "docx",
+      "token": "<tok:ex86b1c6>",
+      "parent_token": "<tok:ex85cfa3>",
+      "url": "https://<redacted:tenant-host>.larksuite.com/docx/<tok:ex86b1c6>",
+      "shortcut_info": null,
+      "modified_time": "1786057025"
+    },
+    {
+      "depth": 2,
+      "path": "/Example Folder 01/Example Document 09",
+      "name": "Example Document 09",
+      "type": "docx",
+      "token": "<tok:ex191a9e>",
+      "parent_token": "<tok:ex85cfa3>",
+      "url": "https://<redacted:tenant-host>.larksuite.com/docx/<tok:ex191a9e>",
+      "shortcut_info": null,
+      "modified_time": "1785472337"
+    },
+    {
+      "depth": 2,
+      "path": "/Example Folder 02/Example Folder 10",
+      "name": "Example Folder 10",
+      "type": "folder",
+      "token": "<tok:ex0c1ecf>",
+      "parent_token": "<tok:exd95cba>",
+      "url": "https://<redacted:tenant-host>.larksuite.com/drive/folder/<tok:ex0c1ecf>",
+      "shortcut_info": null,
+      "modified_time": "1785689682"
+    },
+    {
+      "depth": 2,
+      "path": "/Example Folder 02/Example Document 11",
+      "name": "Example Document 11",
+      "type": "docx",
+      "token": "<tok:ex21e1f6>",
+      "parent_token": "<tok:exd95cba>",
+      "url": "https://<redacted:tenant-host>.larksuite.com/docx/<tok:ex21e1f6>",
+      "shortcut_info": null,
+      "modified_time": "1786051758"
+    },
+    {
+      "depth": 2,
+      "path": "/Example Folder 02/Example Document 12",
+      "name": "Example Document 12",
+      "type": "docx",
+      "token": "<tok:ex882251>",
+      "parent_token": "<tok:exd95cba>",
+      "url": "https://<redacted:tenant-host>.larksuite.com/docx/<tok:ex882251>",
+      "shortcut_info": null,
+      "modified_time": "1786009420"
+    },
+    {
+      "depth": 2,
+      "path": "/Example Folder 02/Example Document 13",
+      "name": "Example Document 13",
+      "type": "docx",
+      "token": "<tok:ex775846>",
+      "parent_token": "<tok:exd95cba>",
+      "url": "https://<redacted:tenant-host>.larksuite.com/docx/<tok:ex775846>",
+      "shortcut_info": null,
+      "modified_time": "1785478273"
+    },
+    {
+      "depth": 2,
+      "path": "/Example Folder 02/Example Document 14",
+      "name": "Example Document 14",
+      "type": "docx",
+      "token": "<tok:ex51958e>",
+      "parent_token": "<tok:exd95cba>",
+      "url": "https://<redacted:tenant-host>.larksuite.com/docx/<tok:ex51958e>",
+      "shortcut_info": null,
+      "modified_time": "1785472334"
+    },
+    {
+      "depth": 2,
+      "path": "/Example Folder 02/Example Document 15",
+      "name": "Example Document 15",
+      "type": "docx",
+      "token": "<tok:exe9478f>",
+      "parent_token": "<tok:exd95cba>",
+      "url": "https://<redacted:tenant-host>.larksuite.com/docx/<tok:exe9478f>",
+      "shortcut_info": null,
+      "modified_time": "1785396508"
+    },
+    {
+      "depth": 2,
+      "path": "/Example Folder 02/Example Document 16",
+      "name": "Example Document 16",
+      "type": "docx",
+      "token": "<tok:ex9e9f7b>",
+      "parent_token": "<tok:exd95cba>",
+      "url": "https://<redacted:tenant-host>.larksuite.com/docx/<tok:ex9e9f7b>",
+      "shortcut_info": null,
+      "modified_time": "1785393458"
+    },
+    {
+      "depth": 3,
+      "path": "/Example Folder 02/Example Folder 10/Example Folder 17",
+      "name": "Example Folder 17",
+      "type": "folder",
+      "token": "<tok:ex77e90a>",
+      "parent_token": "<tok:ex0c1ecf>",
+      "url": "https://<redacted:tenant-host>.larksuite.com/drive/folder/<tok:ex77e90a>",
+      "shortcut_info": null,
+      "modified_time": "1785689000"
+    },
+    {
+      "depth": 3,
+      "path": "/Example Folder 02/Example Folder 10/Example Folder 18",
+      "name": "Example Folder 18",
+      "type": "folder",
+      "token": "<tok:exfc9e98>",
+      "parent_token": "<tok:ex0c1ecf>",
+      "url": "https://<redacted:tenant-host>.larksuite.com/drive/folder/<tok:exfc9e98>",
+      "shortcut_info": null,
+      "modified_time": "1785688650"
+    },
+    {
+      "depth": 3,
+      "path": "/Example Folder 02/Example Folder 10/Example Document 19",
+      "name": "Example Document 19",
+      "type": "docx",
+      "token": "<tok:ex8fdc4a>",
+      "parent_token": "<tok:ex0c1ecf>",
+      "url": "https://<redacted:tenant-host>.larksuite.com/docx/<tok:ex8fdc4a>",
+      "shortcut_info": null,
+      "modified_time": "1785689877"
+    },
+    {
+      "depth": 3,
+      "path": "/Example Folder 02/Example Folder 10/Example Document 20",
+      "name": "Example Document 20",
+      "type": "docx",
+      "token": "<tok:ex0fa1e8>",
+      "parent_token": "<tok:ex0c1ecf>",
+      "url": "https://<redacted:tenant-host>.larksuite.com/docx/<tok:ex0fa1e8>",
+      "shortcut_info": null,
+      "modified_time": "1785689642"
+    },
+    {
+      "depth": 3,
+      "path": "/Example Folder 02/Example Folder 10/Example Document 21",
+      "name": "Example Document 21",
+      "type": "docx",
+      "token": "<tok:ex34a70e>",
+      "parent_token": "<tok:ex0c1ecf>",
+      "url": "https://<redacted:tenant-host>.larksuite.com/docx/<tok:ex34a70e>",
+      "shortcut_info": null,
+      "modified_time": "1785689634"
+    },
+    {
+      "depth": 3,
+      "path": "/Example Folder 02/Example Folder 10/Example Document 22",
+      "name": "Example Document 22",
+      "type": "docx",
+      "token": "<tok:ex792f73>",
+      "parent_token": "<tok:ex0c1ecf>",
+      "url": "https://<redacted:tenant-host>.larksuite.com/docx/<tok:ex792f73>",
+      "shortcut_info": null,
+      "modified_time": "1785689598"
+    },
+    {
+      "depth": 3,
+      "path": "/Example Folder 02/Example Folder 10/Example Document 23",
+      "name": "Example Document 23",
+      "type": "docx",
+      "token": "<tok:ex869fca>",
+      "parent_token": "<tok:ex0c1ecf>",
+      "url": "https://<redacted:tenant-host>.larksuite.com/docx/<tok:ex869fca>",
+      "shortcut_info": null,
+      "modified_time": "1785689583"
+    },
+    {
+      "depth": 3,
+      "path": "/Example Folder 02/Example Folder 10/Example Document 24",
+      "name": "Example Document 24",
+      "type": "docx",
+      "token": "<tok:exf84e06>",
+      "parent_token": "<tok:ex0c1ecf>",
+      "url": "https://<redacted:tenant-host>.larksuite.com/docx/<tok:exf84e06>",
+      "shortcut_info": null,
+      "modified_time": "1785689577"
+    },
+    {
+      "depth": 3,
+      "path": "/Example Folder 02/Example Folder 10/Example Document 25",
+      "name": "Example Document 25",
+      "type": "docx",
+      "token": "<tok:ex04d836>",
+      "parent_token": "<tok:ex0c1ecf>",
+      "url": "https://<redacted:tenant-host>.larksuite.com/docx/<tok:ex04d836>",
+      "shortcut_info": null,
+      "modified_time": "1785689558"
+    },
+    {
+      "depth": 3,
+      "path": "/Example Folder 02/Example Folder 10/Example Document 26",
+      "name": "Example Document 26",
+      "type": "docx",
+      "token": "<tok:exb970d4>",
+      "parent_token": "<tok:ex0c1ecf>",
+      "url": "https://<redacted:tenant-host>.larksuite.com/docx/<tok:exb970d4>",
+      "shortcut_info": null,
+      "modified_time": "1785689531"
+    },
+    {
+      "depth": 3,
+      "path": "/Example Folder 02/Example Folder 10/Example Document 27",
+      "name": "Example Document 27",
+      "type": "docx",
+      "token": "<tok:exad901c>",
+      "parent_token": "<tok:ex0c1ecf>",
+      "url": "https://<redacted:tenant-host>.larksuite.com/docx/<tok:exad901c>",
+      "shortcut_info": null,
+      "modified_time": "1785689524"
+    },
+    {
+      "depth": 4,
+      "path": "/Example Folder 02/Example Folder 10/Example Folder 17/Example Document 28",
+      "name": "Example Document 28",
+      "type": "docx",
+      "token": "<tok:ex80f46e>",
+      "parent_token": "<tok:ex77e90a>",
+      "url": "https://<redacted:tenant-host>.larksuite.com/docx/<tok:ex80f46e>",
+      "shortcut_info": null,
+      "modified_time": "1785689673"
+    },
+    {
+      "depth": 4,
+      "path": "/Example Folder 02/Example Folder 10/Example Folder 17/Example Document 29",
+      "name": "Example Document 29",
+      "type": "docx",
+      "token": "<tok:ex67d4a7>",
+      "parent_token": "<tok:ex77e90a>",
+      "url": "https://<redacted:tenant-host>.larksuite.com/docx/<tok:ex67d4a7>",
+      "shortcut_info": null,
+      "modified_time": "1785689665"
+    },
+    {
+      "depth": 4,
+      "path": "/Example Folder 02/Example Folder 10/Example Folder 18/example-spec.yaml",
+      "name": "example-spec.yaml",
+      "type": "file",
+      "token": "<tok:ex6d0f81>",
+      "parent_token": "<tok:exfc9e98>",
+      "url": "https://<redacted:tenant-host>.larksuite.com/file/<tok:ex6d0f81>",
+      "shortcut_info": null,
+      "modified_time": "1785688639"
+    },
+    {
+      "depth": 4,
+      "path": "/Example Folder 02/Example Folder 10/Example Folder 18/example-reference.html",
+      "name": "example-reference.html",
+      "type": "file",
+      "token": "<tok:ex2c91d2>",
+      "parent_token": "<tok:exfc9e98>",
+      "url": "https://<redacted:tenant-host>.larksuite.com/file/<tok:ex2c91d2>",
+      "shortcut_info": null,
+      "modified_time": "1785688639"
+    },
+    {
+      "depth": 2,
+      "path": "/Example Folder 03/Example Document 30",
+      "name": "Example Document 30",
+      "type": "docx",
+      "token": "<tok:ex9283b9>",
+      "parent_token": "<tok:exa7c05c>",
+      "url": "https://<redacted:tenant-host>.larksuite.com/docx/<tok:ex9283b9>",
+      "shortcut_info": null,
+      "modified_time": "1786079956"
+    },
+    {
+      "depth": 2,
+      "path": "/Example Folder 03/Example Document 31",
+      "name": "Example Document 31",
+      "type": "docx",
+      "token": "<tok:exe8229a>",
+      "parent_token": "<tok:exa7c05c>",
+      "url": "https://<redacted:tenant-host>.larksuite.com/docx/<tok:exe8229a>",
+      "shortcut_info": null,
+      "modified_time": "1785710553"
+    },
+    {
+      "depth": 2,
+      "path": "/Example Folder 03/Example Document 32",
+      "name": "Example Document 32",
+      "type": "docx",
+      "token": "<tok:ex9cd13a>",
+      "parent_token": "<tok:exa7c05c>",
+      "url": "https://<redacted:tenant-host>.larksuite.com/docx/<tok:ex9cd13a>",
+      "shortcut_info": null,
+      "modified_time": "1785690926"
+    },
+    {
+      "depth": 2,
+      "path": "/Example Folder 03/Example Document 33",
+      "name": "Example Document 33",
+      "type": "docx",
+      "token": "<tok:ex885b2b>",
+      "parent_token": "<tok:exa7c05c>",
+      "url": "https://<redacted:tenant-host>.larksuite.com/docx/<tok:ex885b2b>",
+      "shortcut_info": null,
+      "modified_time": "1784764800"
+    }
+  ]
+}

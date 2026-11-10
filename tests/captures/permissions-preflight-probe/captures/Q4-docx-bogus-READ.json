@@ -1,0 +1,26 @@
+{
+  "probe": "Q4-docx-bogus-READ",
+  "method": "GET",
+  "path": "/open-apis/docx/v1/documents/Zzzz0000LdIoProbeDoesNotExist0000",
+  "params": [],
+  "note": "docx family, nonexistent document: scope-first would answer 99991672, resource-first would answer not-found",
+  "http_status": 400,
+  "response_headers": {
+    "content-type": "application/json; charset=utf-8",
+    "x-tt-logid": "202607301546137BDABF0D746E88A1F4A1",
+    "x-request-id": "202607301546137BDABF0D746E88A1F4A1"
+  },
+  "response": {
+    "code": 99992402,
+    "msg": "field validation failed",
+    "error": {
+      "log_id": "202607301546137BDABF0D746E88A1F4A1",
+      "field_violations": [
+        {
+          "field": "document_id",
+          "description": "the max len is 27"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,413 @@
+{
+  "probe": "03_rich_cells",
+  "captures": {
+    "hyperlink": {
+      "write": {
+        "label": "hyperlink write",
+        "method": "PUT",
+        "path": "/open-apis/sheets/v2/spreadsheets/Examplef3d417827703afe887be/values",
+        "request_body": {
+          "valueRange": {
+            "range": "1082ed!A1:A1",
+            "values": [
+              [
+                {
+                  "type": "url",
+                  "text": "Lark Suite",
+                  "link": "https://www.larksuite.com"
+                }
+              ]
+            ]
+          }
+        },
+        "http_status": 200,
+        "code": 0,
+        "response": {
+          "code": 0,
+          "data": {
+            "revision": 1,
+            "spreadsheetToken": "Examplef3d417827703afe887be",
+            "updatedCells": 1,
+            "updatedColumns": 1,
+            "updatedRange": "1082ed!A1:A1",
+            "updatedRows": 1
+          },
+          "msg": "success"
+        }
+      },
+      "readback": {
+        "label": "hyperlink readback",
+        "method": "GET",
+        "path": "/open-apis/sheets/v2/spreadsheets/Examplef3d417827703afe887be/values/1082ed!A1:A1",
+        "request_body": null,
+        "http_status": 200,
+        "code": 0,
+        "response": {
+          "code": 0,
+          "data": {
+            "revision": 1,
+            "spreadsheetToken": "Examplef3d417827703afe887be",
+            "valueRange": {
+              "majorDimension": "ROWS",
+              "range": "1082ed!A1:A1",
+              "revision": 1,
+              "values": [
+                [
+                  [
+                    {
+                      "cellPosition": null,
+                      "link": "https://www.larksuite.com",
+                      "text": "Lark Suite",
+                      "type": "url"
+                    }
+                  ]
+                ]
+              ]
+            }
+          },
+          "msg": "success"
+        }
+      },
+      "readback_values": [
+        [
+          [
+            {
+              "cellPosition": null,
+              "link": "https://www.larksuite.com",
+              "text": "Lark Suite",
+              "type": "url"
+            }
+          ]
+        ]
+      ]
+    },
+    "styled_runs": {
+      "write": {
+        "label": "styled_runs write",
+        "method": "PUT",
+        "path": "/open-apis/sheets/v2/spreadsheets/Examplef3d417827703afe887be/values",
+        "request_body": {
+          "valueRange": {
+            "range": "1082ed!A2:A2",
+            "values": [
+              [
+                [
+                  {
+                    "type": "text",
+                    "text": "bold ",
+                    "segmentStyle": {
+                      "bold": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": "then italic",
+                    "segmentStyle": {
+                      "italic": true,
+                      "foreColor": "#FF0000"
+                    }
+                  }
+                ]
+              ]
+            ]
+          }
+        },
+        "http_status": 200,
+        "code": 0,
+        "response": {
+          "code": 0,
+          "data": {
+            "revision": 2,
+            "spreadsheetToken": "Examplef3d417827703afe887be",
+            "updatedCells": 1,
+            "updatedColumns": 1,
+            "updatedRange": "1082ed!A2:A2",
+            "updatedRows": 1
+          },
+          "msg": "success"
+        }
+      },
+      "readback": {
+        "label": "styled_runs readback",
+        "method": "GET",
+        "path": "/open-apis/sheets/v2/spreadsheets/Examplef3d417827703afe887be/values/1082ed!A2:A2",
+        "request_body": null,
+        "http_status": 200,
+        "code": 0,
+        "response": {
+          "code": 0,
+          "data": {
+            "revision": 2,
+            "spreadsheetToken": "Examplef3d417827703afe887be",
+            "valueRange": {
+              "majorDimension": "ROWS",
+              "range": "1082ed!A2:A2",
+              "revision": 2,
+              "values": [
+                [
+                  [
+                    {
+                      "segmentStyle": {
+                        "bold": true,
+                        "fontSize": 10,
+                        "foreColor": "#000000",
+                        "italic": false,
+                        "strikeThrough": false,
+                        "underline": false
+                      },
+                      "text": "bold ",
+                      "type": "text"
+                    },
+                    {
+                      "segmentStyle": {
+                        "bold": false,
+                        "fontSize": 10,
+                        "foreColor": "#ff0000",
+                        "italic": true,
+                        "strikeThrough": false,
+                        "underline": false
+                      },
+                      "text": "then italic",
+                      "type": "text"
+                    }
+                  ]
+                ]
+              ]
+            }
+          },
+          "msg": "success"
+        }
+      },
+      "readback_values": [
+        [
+          [
+            {
+              "segmentStyle": {
+                "bold": true,
+                "fontSize": 10,
+                "foreColor": "#000000",
+                "italic": false,
+                "strikeThrough": false,
+                "underline": false
+              },
+              "text": "bold ",
+              "type": "text"
+            },
+            {
+              "segmentStyle": {
+                "bold": false,
+                "fontSize": 10,
+                "foreColor": "#ff0000",
+                "italic": true,
+                "strikeThrough": false,
+                "underline": false
+              },
+              "text": "then italic",
+              "type": "text"
+            }
+          ]
+        ]
+      ]
+    },
+    "mention_user": {
+      "write": {
+        "label": "mention_user write",
+        "method": "PUT",
+        "path": "/open-apis/sheets/v2/spreadsheets/Examplef3d417827703afe887be/values",
+        "request_body": {
+          "valueRange": {
+            "range": "1082ed!A3:A3",
+            "values": [
+              [
+                {
+                  "type": "mention",
+                  "text": "ou_examplesecond0000000000000000001",
+                  "textType": "openId",
+                  "notify": false,
+                  "grantReadPermission": false
+                }
+              ]
+            ]
+          }
+        },
+        "http_status": 200,
+        "code": 0,
+        "response": {
+          "code": 0,
+          "data": {
+            "revision": 3,
+            "spreadsheetToken": "Examplef3d417827703afe887be",
+            "updatedCells": 1,
+            "updatedColumns": 1,
+            "updatedRange": "1082ed!A3:A3",
+            "updatedRows": 1
+          },
+          "msg": "success"
+        }
+      },
+      "readback": {
+        "label": "mention_user readback",
+        "method": "GET",
+        "path": "/open-apis/sheets/v2/spreadsheets/Examplef3d417827703afe887be/values/1082ed!A3:A3",
+        "request_body": null,
+        "http_status": 200,
+        "code": 0,
+        "response": {
+          "code": 0,
+          "data": {
+            "revision": 3,
+            "spreadsheetToken": "Examplef3d417827703afe887be",
+            "valueRange": {
+              "majorDimension": "ROWS",
+              "range": "1082ed!A3:A3",
+              "revision": 3,
+              "values": [
+                [
+                  {
+                    "category": "at-user-block",
+                    "en_name": "Example Second User",
+                    "link": "https://avatar.example.invalid/photo.png",
+                    "mentionNotify": false,
+                    "mentionType": 0,
+                    "name": "Example Second User",
+                    "text": "@Example Second User",
+                    "token": "9000000000000000003",
+                    "type": "mention"
+                  }
+                ]
+              ]
+            }
+          },
+          "msg": "success"
+        }
+      },
+      "readback_values": [
+        [
+          {
+            "category": "at-user-block",
+            "en_name": "Example Second User",
+            "link": "https://avatar.example.invalid/photo.png",
+            "mentionNotify": false,
+            "mentionType": 0,
+            "name": "Example Second User",
+            "text": "@Example Second User",
+            "token": "9000000000000000003",
+            "type": "mention"
+          }
+        ]
+      ]
+    },
+    "data_validation_set": {
+      "label": "dataValidation list multi",
+      "method": "POST",
+      "path": "/open-apis/sheets/v2/spreadsheets/Examplef3d417827703afe887be/dataValidation",
+      "request_body": {
+        "range": "1082ed!A4:A4",
+        "dataValidationType": "list",
+        "dataValidation": {
+          "conditionValues": [
+            "Red",
+            "Green",
+            "Blue"
+          ],
+          "options": {
+            "multipleValues": true
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 90204,
+      "response": {
+        "code": 90204,
+        "data": {},
+        "msg": "conditionValues should be one-to-one match with colors when highlightValidData is true."
+      }
+    },
+    "multi_value": {
+      "write": {
+        "label": "multi_value write",
+        "method": "PUT",
+        "path": "/open-apis/sheets/v2/spreadsheets/Examplef3d417827703afe887be/values",
+        "request_body": {
+          "valueRange": {
+            "range": "1082ed!A4:A4",
+            "values": [
+              [
+                {
+                  "type": "multipleValue",
+                  "values": [
+                    "Red",
+                    "Green"
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "http_status": 200,
+        "code": 0,
+        "response": {
+          "code": 0,
+          "data": {
+            "revision": 4,
+            "spreadsheetToken": "Examplef3d417827703afe887be",
+            "updatedCells": 1,
+            "updatedColumns": 1,
+            "updatedRange": "1082ed!A4:A4",
+            "updatedRows": 1
+          },
+          "msg": "success"
+        }
+      },
+      "readback": {
+        "label": "multi_value readback",
+        "method": "GET",
+        "path": "/open-apis/sheets/v2/spreadsheets/Examplef3d417827703afe887be/values/1082ed!A4:A4",
+        "request_body": null,
+        "http_status": 200,
+        "code": 0,
+        "response": {
+          "code": 0,
+          "data": {
+            "revision": 4,
+            "spreadsheetToken": "Examplef3d417827703afe887be",
+            "valueRange": {
+              "majorDimension": "ROWS",
+              "range": "1082ed!A4:A4",
+              "revision": 4,
+              "values": [
+                [
+                  "Red,Green"
+                ]
+              ]
+            }
+          },
+          "msg": "success"
+        }
+      },
+      "readback_values": [
+        [
+          "Red,Green"
+        ]
+      ]
+    },
+    "data_validation_get": {
+      "label": "dataValidation get",
+      "method": "GET",
+      "path": "/open-apis/sheets/v2/spreadsheets/Examplef3d417827703afe887be/dataValidation",
+      "request_body": null,
+      "http_status": 200,
+      "code": 0,
+      "response": {
+        "code": 0,
+        "data": {
+          "revision": 4,
+          "sheetId": "1082ed",
+          "spreadsheetToken": "Examplef3d417827703afe887be"
+        },
+        "msg": "success"
+      }
+    }
+  },
+  "total_calls": 13
+}

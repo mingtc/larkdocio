@@ -1,0 +1,152 @@
+[
+  {
+    "file_token": "Exampleb4d105e26b68d94907d7",
+    "type": "docx",
+    "title": "larkdocio-LD156-smoke-docx 1785278066",
+    "created_at": "2026-07-28T22:34:26.917585+00:00",
+    "comments_created": [],
+    "deleted": true,
+    "delete_code": 0,
+    "deleted_at": "2026-07-28T22:34:29.967416+00:00"
+  },
+  {
+    "file_token": "Example8d58b89be610f0a68c52",
+    "type": "sheet",
+    "title": "larkdocio-LD156-smoke-sheet 1785278066",
+    "created_at": "2026-07-28T22:34:30.506818+00:00",
+    "comments_created": [],
+    "deleted": true,
+    "delete_code": 0,
+    "deleted_at": "2026-07-28T22:34:33.987869+00:00"
+  },
+  {
+    "file_token": "Example5be07f43d669f84f84c8",
+    "type": "docx",
+    "title": "larkdocio-LD156-hazard 1785278075",
+    "created_at": "2026-07-28T22:34:35.736297+00:00",
+    "comments_created": [
+      {
+        "comment_id": "7667710952829095653",
+        "note": "v1 whole-document, hazard drill",
+        "at": "2026-07-28T22:34:36.626785+00:00"
+      }
+    ],
+    "deleted": true,
+    "delete_code": 0,
+    "deleted_at": "2026-07-28T22:34:45.486139+00:00"
+  },
+  {
+    "file_token": "Exampled47116a7c9580bd3bce8",
+    "type": "docx",
+    "title": "larkdocio-LD156-createv2-docx 1785278086",
+    "created_at": "2026-07-28T22:34:47.222088+00:00",
+    "comments_created": [
+      {
+        "comment_id": "7667711015378767586",
+        "note": "p2-A-anchor-dict-valid-block",
+        "at": "2026-07-28T22:34:51.200303+00:00"
+      },
+      {
+        "comment_id": "7667711017745977062",
+        "note": "p2-B-anchor-jsonstring-valid-block",
+        "at": "2026-07-28T22:34:51.733263+00:00"
+      },
+      {
+        "comment_id": "7667711020231577308",
+        "note": "p2-C-anchor-dict-bogus-block",
+        "at": "2026-07-28T22:34:52.310051+00:00"
+      },
+      {
+        "comment_id": "7667711023008190175",
+        "note": "p2-D-quote-only-is_whole-false",
+        "at": "2026-07-28T22:34:52.998529+00:00"
+      },
+      {
+        "comment_id": "7667711025415753439",
+        "note": "p2-E-quote-only",
+        "at": "2026-07-28T22:34:53.538172+00:00"
+      },
+      {
+        "comment_id": "7667711028053970654",
+        "note": "p2-F-quote-not-in-document",
+        "at": "2026-07-28T22:34:54.140434+00:00"
+      }
+    ],
+    "deleted": true,
+    "delete_code": 0,
+    "deleted_at": "2026-07-28T22:35:09.089082+00:00"
+  },
+  {
+    "file_token": "Example717c36419f96141f6d41",
+    "type": "docx",
+    "title": "larkdocio-LD156-sweep 1785278110",
+    "created_at": "2026-07-28T22:35:10.813955+00:00",
+    "comments_created": [],
+    "deleted": true,
+    "delete_code": 0,
+    "deleted_at": "2026-07-28T22:35:23.032171+00:00"
+  },
+  {
+    "file_token": "Example95bc063558bdace21625",
+    "type": "sheet",
+    "title": "larkdocio-LD156-sheets-comments 1785278124",
+    "created_at": "2026-07-28T22:35:24.738903+00:00",
+    "comments_created": [],
+    "deleted": true,
+    "delete_code": 0,
+    "deleted_at": "2026-07-28T22:35:37.084178+00:00"
+  },
+  {
+    "file_token": "Example502a4be975a920193280",
+    "type": "docx",
+    "title": "larkdocio-LD156-authorship-1 1785278138",
+    "created_at": "2026-07-28T22:35:38.792513+00:00",
+    "comments_created": [
+      {
+        "comment_id": "7667711223584001766",
+        "note": "authorship stability doc 1",
+        "at": "2026-07-28T22:35:39.670241+00:00"
+      },
+      {
+        "comment_id": "7667711237102243557",
+        "note": "person-mention content arm",
+        "at": "2026-07-28T22:35:42.846355+00:00"
+      }
+    ],
+    "deleted": true,
+    "delete_code": 0,
+    "deleted_at": "2026-07-28T22:35:49.253927+00:00"
+  },
+  {
+    "file_token": "Examplec7126a3c8da295b7b2b0",
+    "type": "docx",
+    "title": "larkdocio-LD156-authorship-2 1785278138",
+    "created_at": "2026-07-28T22:35:49.801972+00:00",
+    "comments_created": [
+      {
+        "comment_id": "7667711270845435614",
+        "note": "authorship stability doc 2",
+        "at": "2026-07-28T22:35:50.682649+00:00"
+      }
+    ],
+    "deleted": true,
+    "delete_code": 0,
+    "deleted_at": "2026-07-28T22:35:54.700473+00:00"
+  },
+  {
+    "file_token": "Example4363dd46a8c50623a796",
+    "type": "docx",
+    "title": "larkdocio-LD156-editpath 1785278155",
+    "created_at": "2026-07-28T22:35:56.565975+00:00",
+    "comments_created": [
+      {
+        "comment_id": "7667711299958083304",
+        "note": "edit-path probe (relocation source)",
+        "at": "2026-07-28T22:35:57.435060+00:00"
+      }
+    ],
+    "deleted": true,
+    "delete_code": 0,
+    "deleted_at": "2026-07-28T22:36:08.953207+00:00"
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "probe": "Q8-wiki-bogus-READ",
+  "method": "GET",
+  "path": "/open-apis/wiki/v2/spaces/get_node",
+  "params": [
+    [
+      "obj_type",
+      "wiki"
+    ],
+    [
+      "token",
+      "Zzzz0000LdIoProbeDoesNotExist0000"
+    ]
+  ],
+  "note": "wiki family, nonexistent node token",
+  "http_status": 400,
+  "response_headers": {
+    "content-type": "application/json; charset=utf-8",
+    "x-tt-logid": "20260730154619C654D715493A1AD83B2B",
+    "x-request-id": "20260730154619C654D715493A1AD83B2B"
+  },
+  "response": {
+    "code": 131005,
+    "msg": "not found",
+    "error": {
+      "log_id": "20260730154619C654D715493A1AD83B2B"
+    }
+  }
+}

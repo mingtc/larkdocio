@@ -1,0 +1,21 @@
+# MANIFEST.in — PRUNE-ONLY, on purpose (LD-215).
+#
+# What it is for: setuptools' LEGACY DEFAULT sdist glob includes `tests/test*.py`
+# when no manifest overrides it. That default shipped 222 `tests/test_*.py` files —
+# 3.9 MB, 64% of `larkdocio-1.22.0.tar.gz` — that `pyproject.toml` never declared and
+# `SOURCES.txt` never accounted for, WITHOUT `tests/conftest.py` and WITHOUT
+# `tests/fixtures/`: an unrunnable suite presented as the project's verification
+# surface. `prune` (not `recursive-exclude tests *`) because it drops the `tests/`
+# DIRECTORY ENTRY as well as the files.
+#
+# What it deliberately does NOT do: ship anything. There is no `include`, no
+# `recursive-include`, no `graft` here, and `tests/test_packaging.py` asserts that.
+# This file is exactly the mechanism that could start shipping the root
+# `CHANGELOG.md` / `RELEASE_NOTES.md` at sdist top level, which would disturb the
+# root-canonical + src-copy arrangement documented in `pyproject.toml`'s
+# `[tool.setuptools.package-data]` comment. Doing that is a separate maintainer decision,
+# not a side effect of a prune.
+#
+# `dev/` and `progress/` need no line: the legacy glob never reached them. The
+# content guard forbids them by name prospectively (`front_door.SDIST_FORBIDDEN_TREES`).
+prune tests

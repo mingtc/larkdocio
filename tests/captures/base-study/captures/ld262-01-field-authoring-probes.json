@@ -1,0 +1,95 @@
+{
+ "_endpoint": ".../tables/{t}/fields",
+ "_method": "POST + PUT",
+ "_note": "the DuplexLink cross-table mirror, the Text -> Barcode conversion's effect ON A POPULATED CELL, the Formula authoring probe, and table.revision's +1-per-field-op — all against a self-provisioned disposable",
+ "_probe": "ld262-field-authoring",
+ "_verdict": "OK",
+ "observations": {
+  "duplex_mirror": {
+   "new_fields_in_target": [
+    "Table-ld262-link"
+   ],
+   "predicted_field_name": "Table-ld262-link",
+   "source_table": "Table",
+   "target_table_id": "tblaDFzBz2IlG8Ks"
+  },
+  "field_lifecycle_anchor": {
+   "read_back": {
+    "anchor": "unavailable — the identity read-back stands alone",
+    "field_name": "ld262-note",
+    "identity_confirmed": true,
+    "revision_at_plan": 0,
+    "revision_moved": null,
+    "revision_now": 1,
+    "table_id": "tblj4LHLl4NNzQIL",
+    "ui_type": "Text"
+   },
+   "revision_after_create": 1,
+   "revision_before_create": 0
+  },
+  "formula_authoring_probe": {
+   "code": 0,
+   "created": {
+    "property": {
+     "formatter": "",
+     "formula_expression": "1+1"
+    },
+    "type": 20,
+    "ui_type": "Formula"
+   },
+   "requested": {
+    "field_name": "ld262-formula",
+    "property": {
+     "formula_expression": "1+1"
+    },
+    "type": 20,
+    "ui_type": "Formula"
+   },
+   "status": "captured"
+  },
+  "text_to_barcode_over_a_populated_cell": {
+   "cells_after": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {
+     "ld262-conv": [
+      {
+       "text": "LD262-VALUE",
+       "type": "text"
+      }
+     ]
+    }
+   ],
+   "cells_before": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {
+     "ld262-conv": [
+      {
+       "text": "LD262-VALUE",
+       "type": "text"
+      }
+     ]
+    }
+   ],
+   "type_after": 1,
+   "ui_type_after": "Barcode"
+  }
+ }
+}

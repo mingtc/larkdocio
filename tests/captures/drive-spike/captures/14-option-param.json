@@ -1,0 +1,22 @@
+{
+  "_probe": "14-option-param",
+  "_note": "U7 — the undocumented `option` query param on GET /drive/v1/files: does it change the response shape?",
+  "_read_only": true,
+  "_method": "GET",
+  "obj_type": {
+    "http": 400,
+    "code": 1061002,
+    "msg": "params error.",
+    "n_files": 0,
+    "file_keys": null,
+    "data_keys": []
+  },
+  "1": {
+    "http": 400,
+    "code": 1061002,
+    "msg": "params error.",
+    "n_files": 0,
+    "file_keys": null,
+    "data_keys": []
+  }
+}

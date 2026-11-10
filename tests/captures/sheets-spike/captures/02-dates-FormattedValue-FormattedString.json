@@ -1,0 +1,27 @@
+{
+  "code": 0,
+  "data": {
+    "revision": 34,
+    "spreadsheetToken": "SheetScratchExample00000001",
+    "valueRange": {
+      "majorDimension": "ROWS",
+      "range": "444a1c!A8:D9",
+      "revision": 34,
+      "values": [
+        [
+          "date",
+          "7/26/2026",
+          null,
+          "7/26/2026"
+        ],
+        [
+          "datetime",
+          "7/26/2026 15:30",
+          null,
+          "7/26/2026 15:30"
+        ]
+      ]
+    }
+  },
+  "msg": "success"
+}

@@ -1,0 +1,63 @@
+{
+  "_probe": "07",
+  "_endpoint": "/open-apis/drive/v1/metas/batch_query",
+  "_method": "POST",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": "Success",
+  "_verdict": "OK",
+  "_note": "independent second-family oracle: both disposables must be absent, the standing scratch Base must be present and untouched",
+  "response": {
+    "code": 0,
+    "data": {
+      "metas": [
+        {
+          "create_time": "1785061011",
+          "doc_token": "Example046a321406fe497fe3a2",
+          "doc_type": "bitable",
+          "latest_modify_time": "1785061041",
+          "latest_modify_user": "<redacted:person-id>",
+          "owner_id": "<redacted:person-id>",
+          "request_doc_info": {
+            "doc_token": "Example046a321406fe497fe3a2",
+            "doc_type": "bitable"
+          },
+          "sec_label_name": "Label A",
+          "title": "Larkdocio Scratch Base",
+          "url": ""
+        },
+        {
+          "create_time": "1785693438",
+          "doc_token": "Example02154ddbd1fe2927e2e6",
+          "doc_type": "bitable",
+          "latest_modify_time": "1785693479",
+          "latest_modify_user": "<redacted:person-id>",
+          "owner_id": "<redacted:person-id>",
+          "request_doc_info": {
+            "doc_token": "Example02154ddbd1fe2927e2e6",
+            "doc_type": "bitable"
+          },
+          "sec_label_name": "",
+          "title": "larkdocio-DISPOSABLE-base-study-20260803-015718",
+          "url": ""
+        },
+        {
+          "create_time": "1785693613",
+          "doc_token": "Exampleeacbd3f65db104d50fce",
+          "doc_type": "bitable",
+          "latest_modify_time": "1785693644",
+          "latest_modify_user": "<redacted:person-id>",
+          "owner_id": "<redacted:person-id>",
+          "request_doc_info": {
+            "doc_token": "Exampleeacbd3f65db104d50fce",
+            "doc_type": "bitable"
+          },
+          "sec_label_name": "",
+          "title": "larkdocio-DISPOSABLE-valueshapes-20260803-020013",
+          "url": ""
+        }
+      ]
+    },
+    "msg": "Success"
+  }
+}

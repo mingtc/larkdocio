@@ -1,0 +1,27 @@
+[
+  {
+    "block_id": "root",
+    "parent_id": "doc",
+    "block_type": 1,
+    "page": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Doc Title"
+          }
+        }
+      ]
+    },
+    "children": [
+      "bd1"
+    ]
+  },
+  {
+    "block_id": "bd1",
+    "parent_id": "root",
+    "block_type": 43,
+    "board": {
+      "token": "Examplea9e72fa99efd92d46d89"
+    }
+  }
+]

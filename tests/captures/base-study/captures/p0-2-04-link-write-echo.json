@@ -1,0 +1,59 @@
+{
+  "_probe": "p2",
+  "_endpoint": ".../tables/tblMWxK1iJYvK56l/records/batch_create",
+  "_method": "POST",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": "success",
+  "_verdict": "OK",
+  "_note": "WRITE shape for link fields: a bare list of record_ids is sent; this is what the API echoes back",
+  "response": {
+    "code": 0,
+    "data": {
+      "records": [
+        {
+          "fields": {
+            "多行文本": "empty-links"
+          },
+          "id": "recvrivuozcodN",
+          "record_id": "recvrivuozcodN"
+        },
+        {
+          "fields": {
+            "DuplexLink": [
+              "recvrftvdQu0a2"
+            ],
+            "SingleLinkMany": [
+              "recvrftvdQu0a2"
+            ],
+            "SingleLinkOne": [
+              "recvrftvdQu0a2"
+            ],
+            "多行文本": "one-link"
+          },
+          "id": "recvrhtjicR6ig",
+          "record_id": "recvrhtjicR6ig"
+        },
+        {
+          "fields": {
+            "DuplexLink": [
+              "recvrftvdQu0a2",
+              "recvrzucbGOfCz"
+            ],
+            "SingleLinkMany": [
+              "recvrftvdQu0a2",
+              "recvrzucbGOfCz"
+            ],
+            "SingleLinkOne": [
+              "recvrwoqiEOlwS"
+            ],
+            "多行文本": "multi-link"
+          },
+          "id": "recvrjqwefdk15",
+          "record_id": "recvrjqwefdk15"
+        }
+      ]
+    },
+    "msg": "success"
+  }
+}

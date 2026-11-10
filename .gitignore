@@ -1,0 +1,68 @@
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+
+# Virtual environments
+venv/
+.venv/
+env/
+# LD-504: the mutation meter's OWN env. scripts/mutation-check.sh installs mutmut
+# (and so setproctitle) here and NEVER into .venv — setproctitle turns every xdist
+# test into a synchronous launchservicesd round-trip and wedges macOS. (The diagnosis
+# write-up was a maintainers' private record and has been retired; pyproject.toml's
+# `mutation` extra keeps the measurements.)
+.venv-mutation/
+
+# Build artifacts
+dist/
+build/
+# `python -m build`'s sdist step stages the whole source tree here for a moment
+# before tarring it, then deletes it. Transient, never tracked — and named so the
+# repo-walking guards (which honour this file) cannot pick the copy up mid-build.
+larkdocio-[0-9]*/
+*.egg-info/
+src/*.egg-info/
+
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+
+# Test / tooling caches
+.pytest_cache/
+.coverage
+htmlcov/
+pytest.out
+
+# Mutation testing (mutmut) — advisory, on-demand only (scripts/mutation-check.sh).
+# The mutants/ working tree + cache are throwaway; never tracked (the baseline
+# REPORT under dev/, in the dev repo, is the committed artifact, not the run scratch).
+mutants/
+.mutmut-cache
+mutmut-stats.json
+
+# OS cruft
+.DS_Store
+
+# Process kit — kanban worktree machinery (move-issue.sh / finish-pr.sh do all
+# kanban git ops in a standing detached worktree pinned to the trunk; never tracked).
+.kanban-wt/
+.kanban-wt.lock/
+.kanban-wt.lock.reap/
+
+# Per-session declared role (require-role.sh hat gate) — ephemeral, never committed.
+.claude/session-role
+
+# Worktrees created by the `using-git-worktrees` skill.
+.worktrees/
+.claude/worktrees/
+
+# NOTE: config.json (package data) and tests/fixtures/*.json are intentionally
+# tracked — do NOT add a blanket *.json ignore here.
+
+# The live Base-write harness ledger — a record of live disposables, never source.
+# Its LD-297 sidecars: the flock file, and the atomic-replace temporaries.
+.base-disposables.json
+.base-disposables.json.lock
+.base-disposables.json.tmp-*

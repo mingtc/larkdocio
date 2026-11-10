@@ -1,0 +1,104 @@
+{
+  "_probe": "ld473-01",
+  "_endpoint": "POST /open-apis/bitable/v1/apps (the create), GET .../tables, GET .../tables/{t}/fields, POST .../tables/{t}/fields, POST .../records, POST .../records/search, DELETE /open-apis/drive/v1/files/{token}",
+  "_method": "create a Base, read what it came with, append columns, read the order",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_verdict": "a created Base arrives holding 1 table(s) with 4 column(s) and 10 row(s); list_tables()[0] IS that seeded table: True. create_field APPENDS in call order: asked ['ld473-open', 'ld473-zeta', 'ld473-alpha'], read back ['ld473-title', 'ld473-score', 'ld473-when', 'ld473-open', 'ld473-zeta', 'ld473-alpha'].",
+  "_note": "Measured for the shipped guide's Base truth batch. (i) SEEDING: the create's own reply carries a default_table_id and that table is what list_tables() returns at index 0, so every recipe teaching `list_tables(app_token)[0]` as 'the table I just made' names Lark's table, not the caller's. Its columns and row count are recorded above exactly as read — a seeding Lark changes is a finding, not a failure. (ii) ORDER: a table created with a three-entry kit reads back in the array's order; three columns appended afterwards, one create_field call each and deliberately anti-alphabetical, read back at the END in CALL order. Both halves of the shipped claim: the position asked for is forfeited, and append order is display order. One appended kind is Checkbox — the kind the table-create route refuses (1254012, probe ld336-02) — so the workaround is measured on the column that forces it. (iii) A Text cell written as a bare string reads back through search_records as a segment array.",
+  "_transport": "larkdocio.base.schema_client.BaseSchemaClient / BaseWriteClient / BaseReadClient through the shipped plan gate; no raw core",
+  "_disposable": "one, harness-created; deleted by the SHIPPED delete_base inside the with-block and confirmed on the bitable side, with the harness's ledgered finally behind it",
+  "response": {
+    "disposable": {
+      "app_token": "Example3717ba777cf0a43844ab",
+      "title": "larkdocio-DISPOSABLE-1786794324-17532",
+      "default_table_id": "tbleR8QrFj5GCRxn"
+    },
+    "seeding": {
+      "tables": [
+        {
+          "table_id": "tbleR8QrFj5GCRxn",
+          "name": "Table",
+          "revision": 0
+        }
+      ],
+      "default_table_id_from_create": "tbleR8QrFj5GCRxn",
+      "list_tables_0_is_the_default_table": true,
+      "columns": [
+        {
+          "field_name": "Text",
+          "type": 1,
+          "ui_type": "Text",
+          "is_primary": true
+        },
+        {
+          "field_name": "Single option",
+          "type": 3,
+          "ui_type": "SingleSelect",
+          "is_primary": false
+        },
+        {
+          "field_name": "Date",
+          "type": 5,
+          "ui_type": "DateTime",
+          "is_primary": false
+        },
+        {
+          "field_name": "Attachment",
+          "type": 17,
+          "ui_type": "Attachment",
+          "is_primary": false
+        }
+      ],
+      "row_count": 10,
+      "rows_all_empty": true
+    },
+    "column_order": {
+      "kit_asked": [
+        "ld473-title",
+        "ld473-score",
+        "ld473-when"
+      ],
+      "after_kit": [
+        "ld473-title",
+        "ld473-score",
+        "ld473-when"
+      ],
+      "appended_in_call_order": [
+        "ld473-open",
+        "ld473-zeta",
+        "ld473-alpha"
+      ],
+      "after_appends": [
+        "ld473-title",
+        "ld473-score",
+        "ld473-when",
+        "ld473-open",
+        "ld473-zeta",
+        "ld473-alpha"
+      ]
+    },
+    "text_cell_wire_shape": {
+      "written": "row",
+      "search_records_fields": [
+        {
+          "ld473-title": [
+            {
+              "text": "row",
+              "type": "text"
+            }
+          ]
+        }
+      ],
+      "text_cell": [
+        {
+          "text": "row",
+          "type": "text"
+        }
+      ]
+    },
+    "delete_base": {
+      "confirmed_gone": true
+    }
+  }
+}

@@ -1,0 +1,348 @@
+{
+ "probe": "LD-185 round 2 — dimension_range EDGES + raw xlsx dimension XML",
+ "at": "2026-07-30T07:13:51.715774+00:00",
+ "steps": [
+  {
+   "label": "A) ROWS {2,2} fixedSize=99 — SINGLE-row band",
+   "request_body": {
+    "dimension": {
+     "sheetId": "605de8",
+     "majorDimension": "ROWS",
+     "startIndex": 2,
+     "endIndex": 2
+    },
+    "dimensionProperties": {
+     "fixedSize": 99
+    }
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success"
+  },
+  {
+   "label": "xlsx after single-row band",
+   "observed": {
+    "1": {
+     "ht": null,
+     "customHeight": null,
+     "hidden": null
+    },
+    "2": {
+     "ht": "73",
+     "customHeight": "true",
+     "hidden": null
+    },
+    "3": {
+     "ht": null,
+     "customHeight": null,
+     "hidden": null
+    },
+    "4": {
+     "ht": null,
+     "customHeight": null,
+     "hidden": null
+    },
+    "5": {
+     "ht": null,
+     "customHeight": null,
+     "hidden": null
+    },
+    "6": {
+     "ht": null,
+     "customHeight": null,
+     "hidden": null
+    },
+    "7": {
+     "ht": null,
+     "customHeight": null,
+     "hidden": null
+    },
+    "8": {
+     "ht": null,
+     "customHeight": null,
+     "hidden": null
+    }
+   }
+  },
+  {
+   "label": "B) ROWS {5,3} — REVERSED band",
+   "request_body": {
+    "dimension": {
+     "sheetId": "605de8",
+     "majorDimension": "ROWS",
+     "startIndex": 5,
+     "endIndex": 3
+    },
+    "dimensionProperties": {
+     "fixedSize": 99
+    }
+   },
+   "http_status": 200,
+   "code": 90202,
+   "msg": "invalid dimension range, EndIndex must greater than or equal to StartIndex"
+  },
+  {
+   "label": "C) ROWS {4,4} fixedSize=-1",
+   "request_body": {
+    "dimension": {
+     "sheetId": "605de8",
+     "majorDimension": "ROWS",
+     "startIndex": 4,
+     "endIndex": 4
+    },
+    "dimensionProperties": {
+     "fixedSize": -1
+    }
+   },
+   "http_status": 200,
+   "code": 90204,
+   "msg": "invalid operation"
+  },
+  {
+   "label": "C) ROWS {4,4} fixedSize=0",
+   "request_body": {
+    "dimension": {
+     "sheetId": "605de8",
+     "majorDimension": "ROWS",
+     "startIndex": 4,
+     "endIndex": 4
+    },
+    "dimensionProperties": {
+     "fixedSize": 0
+    }
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success"
+  },
+  {
+   "label": "C) ROWS {4,4} fixedSize=1",
+   "request_body": {
+    "dimension": {
+     "sheetId": "605de8",
+     "majorDimension": "ROWS",
+     "startIndex": 4,
+     "endIndex": 4
+    },
+    "dimensionProperties": {
+     "fixedSize": 1
+    }
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success"
+  },
+  {
+   "label": "C) ROWS {4,4} fixedSize=2",
+   "request_body": {
+    "dimension": {
+     "sheetId": "605de8",
+     "majorDimension": "ROWS",
+     "startIndex": 4,
+     "endIndex": 4
+    },
+    "dimensionProperties": {
+     "fixedSize": 2
+    }
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success"
+  },
+  {
+   "label": "C) ROWS {4,4} fixedSize=500",
+   "request_body": {
+    "dimension": {
+     "sheetId": "605de8",
+     "majorDimension": "ROWS",
+     "startIndex": 4,
+     "endIndex": 4
+    },
+    "dimensionProperties": {
+     "fixedSize": 500
+    }
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success"
+  },
+  {
+   "label": "C) ROWS {4,4} fixedSize=2000",
+   "request_body": {
+    "dimension": {
+     "sheetId": "605de8",
+     "majorDimension": "ROWS",
+     "startIndex": 4,
+     "endIndex": 4
+    },
+    "dimensionProperties": {
+     "fixedSize": 2000
+    }
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success"
+  },
+  {
+   "label": "C) ROWS {4,4} fixedSize=2001",
+   "request_body": {
+    "dimension": {
+     "sheetId": "605de8",
+     "majorDimension": "ROWS",
+     "startIndex": 4,
+     "endIndex": 4
+    },
+    "dimensionProperties": {
+     "fixedSize": 2001
+    }
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success"
+  },
+  {
+   "label": "C) ROWS {4,4} fixedSize=5000",
+   "request_body": {
+    "dimension": {
+     "sheetId": "605de8",
+     "majorDimension": "ROWS",
+     "startIndex": 4,
+     "endIndex": 4
+    },
+    "dimensionProperties": {
+     "fixedSize": 5000
+    }
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success"
+  },
+  {
+   "label": "C) ROWS {4,4} fixedSize=100000",
+   "request_body": {
+    "dimension": {
+     "sheetId": "605de8",
+     "majorDimension": "ROWS",
+     "startIndex": 4,
+     "endIndex": 4
+    },
+    "dimensionProperties": {
+     "fixedSize": 100000
+    }
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success"
+  },
+  {
+   "label": "xlsx after fixedSize sweep",
+   "observed": {
+    "1": {
+     "ht": null,
+     "customHeight": null,
+     "hidden": null
+    },
+    "2": {
+     "ht": "73",
+     "customHeight": "true",
+     "hidden": null
+    },
+    "3": {
+     "ht": null,
+     "customHeight": null,
+     "hidden": null
+    },
+    "4": {
+     "ht": "74074",
+     "customHeight": "true",
+     "hidden": null
+    },
+    "5": {
+     "ht": null,
+     "customHeight": null,
+     "hidden": null
+    },
+    "6": {
+     "ht": null,
+     "customHeight": null,
+     "hidden": null
+    },
+    "7": {
+     "ht": null,
+     "customHeight": null,
+     "hidden": null
+    },
+    "8": {
+     "ht": null,
+     "customHeight": null,
+     "hidden": null
+    }
+   }
+  },
+  {
+   "label": "D) ROWS {6,6} with EMPTY dimensionProperties",
+   "request_body": {
+    "dimension": {
+     "sheetId": "605de8",
+     "majorDimension": "ROWS",
+     "startIndex": 6,
+     "endIndex": 6
+    },
+    "dimensionProperties": {}
+   },
+   "http_status": 200,
+   "code": 90204,
+   "msg": "dimensionProperties FixedSize and Visible are nil"
+  },
+  {
+   "label": "E) ROWS {200,200} — the LAST declared row (row_count=200)",
+   "request_body": {
+    "dimension": {
+     "sheetId": "605de8",
+     "majorDimension": "ROWS",
+     "startIndex": 200,
+     "endIndex": 200
+    },
+    "dimensionProperties": {
+     "fixedSize": 88
+    }
+   },
+   "http_status": 200,
+   "code": 0,
+   "msg": "success"
+  },
+  {
+   "label": "F) ROWS {200,201} — ONE past the declared grid",
+   "request_body": {
+    "dimension": {
+     "sheetId": "605de8",
+     "majorDimension": "ROWS",
+     "startIndex": 200,
+     "endIndex": 201
+    },
+    "dimensionProperties": {
+     "fixedSize": 88
+    }
+   },
+   "http_status": 200,
+   "code": 90202,
+   "msg": "dimension endIndex wrong, endIndex must less than or equal to sheetMaxRowCount"
+  }
+ ],
+ "spreadsheet_token": "Example298d14839d7e61b3b230",
+ "sheet_id": "605de8",
+ "SINGLE_ROW_BAND": {
+  "rows_with_ht": [
+   2
+  ]
+ },
+ "FIXED_SIZE_SWEEP_ROW4": {
+  "ht": "74074",
+  "customHeight": "true",
+  "hidden": null
+ },
+ "DECLARED_GRID": {
+  "row_count": 200
+ },
+ "RAW_WORKSHEET_XML_HEAD": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<worksheet xr:uid=\"{00000000-0001-0000-0000-000000000000}\" xmlns:xr=\"http://schemas.microsoft.com/office/spreadsheetml/2014/revision\" xmlns:xr3=\"http://schemas.microsoft.com/office/spreadsheetml/2016/revision3\" xmlns:xr2=\"http://schemas.microsoft.com/office/spreadsheetml/2015/revision2\" xmlns:xr6=\"http://schemas.microsoft.com/office/spreadsheetml/2016/revision6\" xmlns:xr10=\"http://schemas.microsoft.com/office/spreadsheetml/2016/revision10\" xmlns:x14=\"http://schemas.microsoft.com/office/spreadsheetml/2009/9/main\" xmlns:x14ac=\"http://schemas.microsoft.com/office/spreadsheetml/2009/9/ac\" xmlns:x15=\"http://schemas.microsoft.com/office/spreadsheetml/2010/11/main\" mc:Ignorable=\"x14ac xr xr2 xr3 xr6 xr10 x15\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mx=\"http://schemas.microsoft.com/office/mac/excel/2008/main\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\"><sheetPr><outlinePr summaryBelow=\"false\" summaryRight=\"false\"></outlinePr></sheetPr><dimension ref=\"A1\"></dimension><sheetViews><sheetView showGridLines=\"true\" tabSelected=\"true\" workbookViewId=\"0\"><selection activeCell=\"B5\" sqref=\"B5\"></selection></sheetView></sheetViews><sheetFormatPr defaultColWidth=\"13\" defaultRowHeight=\"20\"></sheetFormatPr><sheetData><row r=\"1\"><c r=\"A1\" t=\"s\"><v>1</v></c></row><row customHeight=\"true\" ht=\"73\" r=\"2\"><c r=\"A2\" t=\"s\"><v>2</v></c></row><row r=\"3\"><c r=\"A3\" t=\"s\"><v>3</v></c></row><row customHeight=\"true\" ht=\"74074\" r=\"4\"><c r=\"A4\" t=\"s\"><v>4</v></c></row><row r=\"5\"><c r=\"A5\" t=\"s\"><v>5</v></c></row><row r=\"6\"><c r=\"A6\" t=\"s\"><v>6</v></c></row><row r=\"7\"><c r=\"A7\" t=\"s\"><v>7</v></c></row><row r=\"8\"><c r=\"A8\" t=\"s\"><v>8</v></c></row><row r=\"9\"></row><row r=\"10\"></row><row r=\"11\"></row><row r=\"12\"></row><row r=\"13\"></row><row r=\"14\"></row><row r=\"15\"></row><row r=\"16\"></row><row r=\"17\"></row><row r=\"18\"></row><row r=\"19\"></row><row r=\"20\"></row><row r=\"21\"></row><row r=\"22\"></row><row r=\"23\"></row><row r=\"24\"></row><row r=\"25\"></row><row r=\"26\"></row><row r=\"27\"></row><row r=\"28\"></row><row r=\"29\"></row><row r=\"30\"></row><row r=\"31\"></row><row r=\"32\"></row><row r=\"33\"></row><row r=\"34\"></row><row r=\"35\"></row><row r=\"36\"></row><row r=\"37\"></row><row r=\"38\"></row><row r=\"39\"></row><row r=\"40\"></row><row r=\"41\"></row><row r=\"42\"></row><row r=\"43\"></row><row r=\"44\"></row><row r=\"45\"></row><row r=\"46\"></row><row r=\"47\"></row><row r=\"48\"></row><row r=\"49\"></row><row r=\"50\"></row><row r=\"51\"></r"
+}

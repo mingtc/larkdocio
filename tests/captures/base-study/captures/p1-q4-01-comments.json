@@ -1,0 +1,170 @@
+{
+  "_probe": "q4-comments-copy-sweep",
+  "steps": [
+    {
+      "_probe": "q4-comments-copy-sweep",
+      "_endpoint": "/open-apis/drive/v1/files/BaseScratchExample000000001/comments",
+      "_method": "GET",
+      "_http_status": 200,
+      "_lark_code": 0,
+      "_lark_msg": "Success",
+      "_verdict": "OK",
+      "_note": "drive comments, file_token=app_token, type=bitable :: body=null",
+      "response": {
+        "code": 0,
+        "data": {
+          "has_more": false,
+          "items": [],
+          "page_token": "0"
+        },
+        "msg": "Success"
+      }
+    },
+    {
+      "_probe": "q4-comments-copy-sweep",
+      "_endpoint": "/open-apis/drive/v1/files/BaseScratchExample000000001/comments",
+      "_method": "GET",
+      "_http_status": 200,
+      "_lark_code": 0,
+      "_lark_msg": "Success",
+      "_verdict": "OK",
+      "_note": "…same + is_whole=false :: body=null",
+      "response": {
+        "code": 0,
+        "data": {
+          "has_more": false,
+          "items": [],
+          "page_token": "0"
+        },
+        "msg": "Success"
+      }
+    },
+    {
+      "_probe": "q4-comments-copy-sweep",
+      "_endpoint": "/open-apis/drive/v1/files/BaseScratchExample000000001/comments",
+      "_method": "GET",
+      "_http_status": 200,
+      "_lark_code": 0,
+      "_lark_msg": "Success",
+      "_verdict": "OK",
+      "_note": "…same + is_solved=false :: body=null",
+      "response": {
+        "code": 0,
+        "data": {
+          "has_more": false,
+          "items": [],
+          "page_token": "0"
+        },
+        "msg": "Success"
+      }
+    },
+    {
+      "_probe": "q4-comments-copy-sweep",
+      "_endpoint": "/open-apis/drive/v1/files/rec88HpEvHGLV4/comments",
+      "_method": "GET",
+      "_http_status": 404,
+      "_lark_code": 1069307,
+      "_lark_msg": "not exist",
+      "_verdict": "DENIED_OR_ERROR",
+      "_note": "drive comments, file_token=RECORD id :: body=null",
+      "response": {
+        "code": 1069307,
+        "msg": "not exist",
+        "error": {
+          "log_id": "20260803100845E0D0F7029384523A70D9"
+        }
+      }
+    },
+    {
+      "_probe": "q4-comments-copy-sweep",
+      "_endpoint": "/open-apis/drive/v1/files/BaseScratchExample000000001/comments",
+      "_method": "GET",
+      "_http_status": 400,
+      "_lark_code": 99992402,
+      "_lark_msg": "field validation failed",
+      "_verdict": "DENIED_OR_ERROR",
+      "_note": "drive comments, file_type=bitable_record :: body=null",
+      "response": {
+        "code": 99992402,
+        "msg": "field validation failed",
+        "error": {
+          "log_id": "20260803100846F70CFD66FAE2A35C5B70",
+          "field_violations": [
+            {
+              "value": "bitable_record",
+              "description": "file_type is optional, options: [doc,docx,sheet,file,slides,bitable,apps]",
+              "field": "file_type"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "_probe": "q4-comments-copy-sweep",
+      "_endpoint": "/open-apis/drive/v1/files/BaseScratchExample000000001/comments",
+      "_method": "GET",
+      "_http_status": 404,
+      "_lark_code": 1069307,
+      "_lark_msg": "not exist",
+      "_verdict": "DENIED_OR_ERROR",
+      "_note": "drive comments, file_type=docx (wrong-type control) :: body=null",
+      "response": {
+        "code": 1069307,
+        "msg": "not exist",
+        "error": {
+          "log_id": "2026080310084727A50A032C29EBA87A34"
+        }
+      }
+    },
+    {
+      "_probe": "q4-comments-copy-sweep",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/tables/tblYtWUpf5q944Ao/records/rec88HpEvHGLV4/comments",
+      "_method": "GET",
+      "_http_status": 404,
+      "_lark_code": null,
+      "_lark_msg": null,
+      "_verdict": "DENIED_OR_ERROR",
+      "_note": "bitable-family guess …/records/{r}/comments :: body=null",
+      "response": {
+        "_non_json_body_bytes": 18
+      }
+    },
+    {
+      "_probe": "q4-comments-copy-sweep",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/tables/tblYtWUpf5q944Ao/comments",
+      "_method": "GET",
+      "_http_status": 404,
+      "_lark_code": null,
+      "_lark_msg": null,
+      "_verdict": "DENIED_OR_ERROR",
+      "_note": "bitable-family guess …/tables/{t}/comments :: body=null",
+      "response": {
+        "_non_json_body_bytes": 18
+      }
+    },
+    {
+      "_probe": "q4-comments-copy-sweep",
+      "_endpoint": "/open-apis/drive/v1/files/BaseScratchExample000000001/comments",
+      "_method": "POST",
+      "_http_status": 400,
+      "_lark_code": 99992402,
+      "_lark_msg": "field validation failed",
+      "_verdict": "DENIED_OR_ERROR",
+      "_note": "CREATE comment on the Base (drive family) :: body={\"reply_list\": {\"replies\": [{\"content\": {\"elements\": [{\"type\": \"text_run\", \"text_run\": {\"text\": \"larkdocio p1 probe\"}}]}}]}}",
+      "response": {
+        "code": 99992402,
+        "msg": "field validation failed",
+        "error": {
+          "log_id": "2026080310085158692FA7012CBE529EF7",
+          "field_violations": [
+            {
+              "value": "bitable",
+              "description": "file_type is optional, options: [doc,docx]",
+              "field": "file_type"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

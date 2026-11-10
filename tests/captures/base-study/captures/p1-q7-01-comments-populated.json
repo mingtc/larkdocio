@@ -1,0 +1,66 @@
+{
+  "_probe": "q7-base-comments-populated",
+  "_read_only": true,
+  "steps": [
+    {
+      "_probe": "q7-base-comments-populated",
+      "_endpoint": "/open-apis/drive/v1/files/BaseScratchExample000000001/comments",
+      "_method": "GET",
+      "_http_status": 200,
+      "_lark_code": 0,
+      "_lark_msg": "Success",
+      "_verdict": "OK",
+      "_note": "drive comments, file_token=app_token, file_type=bitable, user_id_type=open_id :: READ-ONLY, body=null",
+      "response": {
+        "code": 0,
+        "data": {
+          "has_more": false,
+          "items": [
+            {
+              "comment_id": "7669627296249630428",
+              "create_time": 1785724260,
+              "is_solved": false,
+              "is_whole": false,
+              "quote": "Record 1",
+              "reply_list": {
+                "replies": [
+                  {
+                    "content": {
+                      "elements": [
+                        {
+                          "docs_link": null,
+                          "person": null,
+                          "text_run": {
+                            "text": "This is a comment on row 1"
+                          },
+                          "type": "text_run"
+                        }
+                      ]
+                    },
+                    "create_time": 1785724260,
+                    "extra": {
+                      "image_list": [],
+                      "notify_extra": {
+                        "record": "rec88HpEvHGLV4",
+                        "table": "tblYtWUpf5q944Ao",
+                        "view": "vewN5yTV1k"
+                      }
+                    },
+                    "reply_id": "7669627296270585566",
+                    "update_time": 1785724260,
+                    "user_id": "<redacted:user_id>"
+                  }
+                ]
+              },
+              "solver_user_id": null,
+              "update_time": 1785724260,
+              "user_id": "<redacted:user_id>"
+            }
+          ],
+          "page_token": "7669627296249630428"
+        },
+        "msg": "Success"
+      }
+    }
+  ]
+}

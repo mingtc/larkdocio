@@ -1,0 +1,33 @@
+{
+  "_probe": "05",
+  "_endpoint": "app_meta + tables + records PUT",
+  "_method": "MIXED",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": null,
+  "_verdict": "OK",
+  "_note": "does bitable expose a usable compare-and-swap anchor?",
+  "response": {
+    "code": 0,
+    "data": {
+      "app_revision_at_birth": 0,
+      "app_revision_before_write": 1,
+      "app_revision_after_write": 1,
+      "app_revision_moved": false,
+      "table_revisions_before_write": {
+        "tblIwcDAKXzn8xXB": 18,
+        "tblDghjoOXsg03o9": 0
+      },
+      "table_revisions_after_write": {
+        "tblIwcDAKXzn8xXB": 19,
+        "tblDghjoOXsg03o9": 0
+      },
+      "record_update_code": 0,
+      "precondition_key_probe": {
+        "code": 0,
+        "msg": "success",
+        "note": "unknown body keys 'revision'/'last_modified_time' sent deliberately: code:0 means the API SILENTLY IGNORES them, i.e. there is no server-side compare-and-swap."
+      }
+    }
+  }
+}

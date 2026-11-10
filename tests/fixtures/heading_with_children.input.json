@@ -1,0 +1,50 @@
+[
+  {
+    "block_id": "root",
+    "parent_id": "doc",
+    "block_type": 1,
+    "page": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Doc Title"
+          }
+        }
+      ]
+    },
+    "children": [
+      "hp"
+    ]
+  },
+  {
+    "block_id": "hp",
+    "parent_id": "root",
+    "block_type": 3,
+    "heading1": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Section"
+          }
+        }
+      ]
+    },
+    "children": [
+      "hc1"
+    ]
+  },
+  {
+    "block_id": "hc1",
+    "parent_id": "hp",
+    "block_type": 2,
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Body under heading"
+          }
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "attempt": "sup-01-create-document",
+  "note": "harness-created disposable (D-12)",
+  "request": {
+    "method": "POST",
+    "path": "/open-apis/docx/v1/documents",
+    "body": {
+      "title": "larkdocio-DISPOSABLE-LD478-move-probe-20260816T033205Z"
+    }
+  },
+  "response": {
+    "http_status": 200,
+    "lark_code": 0,
+    "lark_msg": "success",
+    "json_body": {
+      "code": 0,
+      "data": {
+        "document": {
+          "document_id": "Exampleb65dc58871f9a90fe095",
+          "revision_id": 1,
+          "title": "larkdocio-DISPOSABLE-LD478-move-probe-20260816T033205Z"
+        }
+      },
+      "msg": "success"
+    },
+    "raw_body_if_not_json": null
+  },
+  "observed_at_utc": "2026-08-16T03:32:06Z"
+}

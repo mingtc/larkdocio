@@ -1,0 +1,810 @@
+{
+  "probe": "LD-189 round 2 \u2014 border additivity / union / clear semantics",
+  "at": "2026-07-31T20:56:05.248390+00:00",
+  "steps": [
+    {
+      "label": "P1 A1 FULL_BORDER first",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Example1068639d19dc88d0f6e0/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "6e47d9!A1:A1",
+          "style": {
+            "borderType": "FULL_BORDER"
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "updates": {
+            "revision": 2,
+            "spreadsheetToken": "Example1068639d19dc88d0f6e0",
+            "updatedCells": 1,
+            "updatedColumns": 1,
+            "updatedRange": "6e47d9!A1:A1",
+            "updatedRows": 1
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "label": "P1 A1 then bold ONLY (does it keep the border?)",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Example1068639d19dc88d0f6e0/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "6e47d9!A1:A1",
+          "style": {
+            "font": {
+              "bold": true
+            }
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "updates": {
+            "revision": 3,
+            "spreadsheetToken": "Example1068639d19dc88d0f6e0",
+            "updatedCells": 1,
+            "updatedColumns": 1,
+            "updatedRange": "6e47d9!A1:A1",
+            "updatedRows": 1
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "label": "P2 A2 LEFT_BORDER",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Example1068639d19dc88d0f6e0/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "6e47d9!A2:A2",
+          "style": {
+            "borderType": "LEFT_BORDER"
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "updates": {
+            "revision": 4,
+            "spreadsheetToken": "Example1068639d19dc88d0f6e0",
+            "updatedCells": 1,
+            "updatedColumns": 1,
+            "updatedRange": "6e47d9!A2:A2",
+            "updatedRows": 1
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "label": "P2 A2 then TOP_BORDER (union \u2192 left+top, or replace \u2192 top only?)",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Example1068639d19dc88d0f6e0/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "6e47d9!A2:A2",
+          "style": {
+            "borderType": "TOP_BORDER"
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "updates": {
+            "revision": 5,
+            "spreadsheetToken": "Example1068639d19dc88d0f6e0",
+            "updatedCells": 1,
+            "updatedColumns": 1,
+            "updatedRange": "6e47d9!A2:A2",
+            "updatedRows": 1
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "label": "P3 A3 LEFT_BORDER",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Example1068639d19dc88d0f6e0/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "6e47d9!A3:A3",
+          "style": {
+            "borderType": "LEFT_BORDER"
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "updates": {
+            "revision": 6,
+            "spreadsheetToken": "Example1068639d19dc88d0f6e0",
+            "updatedCells": 1,
+            "updatedColumns": 1,
+            "updatedRange": "6e47d9!A3:A3",
+            "updatedRows": 1
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "label": "P3 A3 then NO_BORDER (clears a partial border?)",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Example1068639d19dc88d0f6e0/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "6e47d9!A3:A3",
+          "style": {
+            "borderType": "NO_BORDER"
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "updates": {
+            "revision": 7,
+            "spreadsheetToken": "Example1068639d19dc88d0f6e0",
+            "updatedCells": 1,
+            "updatedColumns": 1,
+            "updatedRange": "6e47d9!A3:A3",
+            "updatedRows": 1
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "label": "P4 C1:D2 FULL_BORDER over the range",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Example1068639d19dc88d0f6e0/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "6e47d9!C1:D2",
+          "style": {
+            "borderType": "FULL_BORDER"
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "updates": {
+            "revision": 8,
+            "spreadsheetToken": "Example1068639d19dc88d0f6e0",
+            "updatedCells": 4,
+            "updatedColumns": 2,
+            "updatedRange": "6e47d9!C1:D2",
+            "updatedRows": 2
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "label": "P4 C1 NO_BORDER over ONE cell of it",
+      "method": "PUT",
+      "path": "/open-apis/sheets/v2/spreadsheets/Example1068639d19dc88d0f6e0/style",
+      "request_body": {
+        "appendStyle": {
+          "range": "6e47d9!C1:C1",
+          "style": {
+            "borderType": "NO_BORDER"
+          }
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {
+          "updates": {
+            "revision": 9,
+            "spreadsheetToken": "Example1068639d19dc88d0f6e0",
+            "updatedCells": 1,
+            "updatedColumns": 1,
+            "updatedRange": "6e47d9!C1:C1",
+            "updatedRows": 1
+          }
+        },
+        "msg": "success"
+      }
+    }
+  ],
+  "spreadsheet_token": "Example1068639d19dc88d0f6e0",
+  "first_sheet_id": "6e47d9",
+  "export": {
+    "raw_border_and_alignment": {
+      "A1": {
+        "s": 1,
+        "borderId": 1,
+        "border": {
+          "left": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "right": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "top": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "bottom": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "true",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "true",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "1",
+          "fillId": "0",
+          "fontId": "1",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "B1": {
+        "s": 0,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "false",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "false",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "0",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "C1": {
+        "s": 2,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "true",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "true",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "2",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "D1": {
+        "s": 3,
+        "borderId": 1,
+        "border": {
+          "left": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "right": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "top": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "bottom": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "true",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "true",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "1",
+          "fillId": "0",
+          "fontId": "2",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "A2": {
+        "s": 4,
+        "borderId": 2,
+        "border": {
+          "left": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "right": {},
+          "top": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "true",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "true",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "2",
+          "fillId": "0",
+          "fontId": "2",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "B2": {
+        "s": 0,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "false",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "false",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "0",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "C2": {
+        "s": 3,
+        "borderId": 1,
+        "border": {
+          "left": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "right": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "top": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "bottom": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "true",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "true",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "1",
+          "fillId": "0",
+          "fontId": "2",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "D2": {
+        "s": 3,
+        "borderId": 1,
+        "border": {
+          "left": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "right": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "top": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "bottom": {
+            "style": "thin",
+            "color": {
+              "rgb": "FF000000"
+            }
+          },
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "true",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "true",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "1",
+          "fillId": "0",
+          "fontId": "2",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "A3": {
+        "s": 5,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "true",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "true",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "2",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "B3": {
+        "s": 0,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "false",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "false",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "0",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "C3": {
+        "s": 0,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "false",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "false",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "0",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "D3": {
+        "s": 0,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "false",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "false",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "0",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "A4": {
+        "s": 0,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "false",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "false",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "0",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "B4": {
+        "s": 0,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "false",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "false",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "0",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "C4": {
+        "s": 0,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "false",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "false",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "0",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      },
+      "D4": {
+        "s": 0,
+        "borderId": 0,
+        "border": {
+          "left": {},
+          "right": {},
+          "top": {},
+          "bottom": {},
+          "diagonal": {}
+        },
+        "alignment": {
+          "vertical": "center"
+        },
+        "xf": {
+          "applyAlignment": "false",
+          "applyBorder": "false",
+          "applyFill": "false",
+          "applyFont": "false",
+          "applyNumberFormat": "false",
+          "applyProtection": "false",
+          "borderId": "0",
+          "fillId": "0",
+          "fontId": "0",
+          "numFmtId": "0",
+          "xfId": "0"
+        }
+      }
+    }
+  },
+  "verdicts": {
+    "P1_additive_border_survives_font_write": [
+      "bottom",
+      "left",
+      "right",
+      "top"
+    ],
+    "P2_two_edge_writes": [
+      "left",
+      "top"
+    ],
+    "P3_no_border_clears_partial": [],
+    "P4_subset_cleared_C1": [],
+    "P4_neighbour_kept_D1": [
+      "bottom",
+      "left",
+      "right",
+      "top"
+    ],
+    "P4_neighbour_kept_C2": [
+      "bottom",
+      "left",
+      "right",
+      "top"
+    ],
+    "P4_neighbour_kept_D2": [
+      "bottom",
+      "left",
+      "right",
+      "top"
+    ]
+  },
+  "deleted": true,
+  "gone_confirmed": true
+}

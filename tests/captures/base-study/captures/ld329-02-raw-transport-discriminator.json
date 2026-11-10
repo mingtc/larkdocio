@@ -1,0 +1,54 @@
+{
+  "_probe": "ld329-02",
+  "_endpoint": "/open-apis/bitable/v1/apps/{app_token}/tables/{table_id}/fields",
+  "_method": "GET vs POST on the SAME path, plus one controlled TableId variation",
+  "_http_status": 200,
+  "_lark_code": "0 on GET, 9499 on POST",
+  "_lark_msg": "Invalid parameter type in param: TableId. Invalid parameter value: \"<the id GET just accepted>\". Please check and modify accordingly.",
+  "_verdict": "SERVER-SIDE DRIFT on the POST verb — the library's request is not the variable",
+  "_note": "LD-329 spike leg 2, the discriminator. Three raw-HTTP calls through the library's OWN transport core (tests-only CredentialedRawHttpClient subclass, the LD-264/schema-gate precedent) so lark-oapi's serialization is out of the picture. (a) GET on the exact failing path with the exact table_id answers code:0 and lists the 4 default columns — the gateway accepts this TableId on this path. (b) POST on that same path with the DOCUMENTED minimal body {field_name, type} answers 9499 naming that same TableId. (c) A blatantly malformed 'tbl000' answers the SAME message with only the echoed value changed — so the POST validator rejects a well-formed, server-issued id exactly as it rejects garbage. Conclusion: the fault is in the POST route's parameter validation server-side; there is no request shape in the library to correct.",
+  "_transport": "larkdocio.common.transport.CredentialedRawHttpClient (urllib), paced 1.2 s",
+  "_disposable": "one; deleted in the harness finally, ledger last_code 0, deleted:true",
+  "response": {
+    "started_at": "2026-08-07T07:01:04+00:00",
+    "finished_at": "2026-08-07T07:01:11+00:00",
+    "default_table_id": "tblZcM20LjrlbD0b",
+    "calls": [
+      {
+        "label": "A — list_fields (same path, read verb)",
+        "at": "2026-08-07T07:01:05+00:00",
+        "method": "GET",
+        "path": "/open-apis/bitable/v1/apps/<APP_TOKEN>/tables/tblZcM20LjrlbD0b/fields",
+        "body": null,
+        "code": 0,
+        "msg": "success",
+        "fields": [
+          {"field_id": "fldHswdEan", "field_name": "Text", "type": 1, "ui_type": "Text"},
+          {"field_id": "fldO3VmF4E", "field_name": "Single option", "type": 3, "ui_type": "SingleSelect"},
+          {"field_id": "fldK44LinN", "field_name": "Date", "type": 5, "ui_type": "DateTime"},
+          {"field_id": "fldSGtibjI", "field_name": "Attachment", "type": 17, "ui_type": "Attachment"}
+        ]
+      },
+      {
+        "label": "B — create_field, RAW transport, documented body",
+        "at": "2026-08-07T07:01:07+00:00",
+        "method": "POST",
+        "path": "/open-apis/bitable/v1/apps/<APP_TOKEN>/tables/tblZcM20LjrlbD0b/fields",
+        "body": {"field_name": "ld329-raw", "type": 1},
+        "code": 9499,
+        "msg": "Invalid parameter type in param: TableId. Invalid parameter value: \"tblZcM20LjrlbD0b\". Please check and modify accordingly.",
+        "data_keys": []
+      },
+      {
+        "label": "C — the controlled TableId variation (deliberately malformed)",
+        "at": "2026-08-07T07:01:08+00:00",
+        "method": "POST",
+        "path": "/open-apis/bitable/v1/apps/<APP_TOKEN>/tables/tbl000/fields",
+        "body": {"field_name": "ld329-raw-bad", "type": 1},
+        "code": 9499,
+        "msg": "Invalid parameter type in param: TableId. Invalid parameter value: \"tbl000\". Please check and modify accordingly.",
+        "data_keys": []
+      }
+    ]
+  }
+}

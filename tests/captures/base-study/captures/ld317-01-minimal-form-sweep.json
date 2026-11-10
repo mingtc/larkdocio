@@ -1,0 +1,546 @@
+{
+ "_endpoint": ".../tables/{table_id}/fields",
+ "_method": "POST",
+ "_note": "one PROPERTY-LESS create per FIELD_PROPERTY_SHAPES row, against a self-provisioned disposable, plus a working-shape follow-up (built by the shipped build_property) for every kind the server refused without one. This capture is what FieldPropertyShape.required is DERIVED from — the flag is no longer hand-set. It supersedes the 2026-07 zoo for this question: a property-less Progress answered code:0 there and 1254001 here.",
+ "_probe": "ld317-minimal-form-sweep",
+ "_verdict": "OK",
+ "observations": {
+  "Attachment": {
+   "minimal_form": {
+    "code": 0,
+    "field": {
+     "property": null,
+     "type": 17,
+     "ui_type": "Attachment"
+    },
+    "msg": "success",
+    "request": {
+     "field_name": "m00-Attachment",
+     "type": 17,
+     "ui_type": "Attachment"
+    }
+   }
+  },
+  "AutoNumber": {
+   "minimal_form": {
+    "code": 0,
+    "field": {
+     "property": {
+      "auto_serial": {
+       "type": "auto_increment_number"
+      }
+     },
+     "type": 1005,
+     "ui_type": "AutoNumber"
+    },
+    "msg": "success",
+    "request": {
+     "field_name": "m01-AutoNumber",
+     "type": 1005,
+     "ui_type": "AutoNumber"
+    }
+   }
+  },
+  "Barcode": {
+   "minimal_form": {
+    "code": 0,
+    "field": {
+     "property": {
+      "allowed_edit_modes": {
+       "manual": true,
+       "scan": true
+      }
+     },
+     "type": 1,
+     "ui_type": "Barcode"
+    },
+    "msg": "success",
+    "request": {
+     "field_name": "m02-Barcode",
+     "type": 1,
+     "ui_type": "Barcode"
+    }
+   }
+  },
+  "Checkbox": {
+   "minimal_form": {
+    "code": 0,
+    "field": {
+     "property": null,
+     "type": 7,
+     "ui_type": "Checkbox"
+    },
+    "msg": "success",
+    "request": {
+     "field_name": "m03-Checkbox",
+     "type": 7,
+     "ui_type": "Checkbox"
+    }
+   }
+  },
+  "CreatedTime": {
+   "minimal_form": {
+    "code": 0,
+    "field": {
+     "property": {
+      "date_formatter": "yyyy/MM/dd"
+     },
+     "type": 1001,
+     "ui_type": "CreatedTime"
+    },
+    "msg": "success",
+    "request": {
+     "field_name": "m04-CreatedTime",
+     "type": 1001,
+     "ui_type": "CreatedTime"
+    }
+   }
+  },
+  "CreatedUser": {
+   "minimal_form": {
+    "code": 0,
+    "field": {
+     "property": null,
+     "type": 1003,
+     "ui_type": "CreatedUser"
+    },
+    "msg": "success",
+    "request": {
+     "field_name": "m05-CreatedUser",
+     "type": 1003,
+     "ui_type": "CreatedUser"
+    }
+   }
+  },
+  "Currency": {
+   "minimal_form": {
+    "code": 1254001,
+    "field": null,
+    "msg": "WrongRequestBody",
+    "request": {
+     "field_name": "m06-Currency",
+     "type": 2,
+     "ui_type": "Currency"
+    }
+   },
+   "with_property": {
+    "code": 0,
+    "field": {
+     "property": {
+      "currency_code": "USD",
+      "formatter": "0.00"
+     },
+     "type": 2,
+     "ui_type": "Currency"
+    },
+    "msg": "success",
+    "options_passed": {
+     "currency_code": "USD",
+     "formatter": "0.00"
+    },
+    "request": {
+     "field_name": "w06-Currency",
+     "property": {
+      "currency_code": "USD",
+      "formatter": "0.00"
+     },
+     "type": 2,
+     "ui_type": "Currency"
+    }
+   }
+  },
+  "DateTime": {
+   "minimal_form": {
+    "code": 0,
+    "field": {
+     "property": {
+      "auto_fill": false,
+      "date_formatter": "yyyy/MM/dd"
+     },
+     "type": 5,
+     "ui_type": "DateTime"
+    },
+    "msg": "success",
+    "request": {
+     "field_name": "m07-DateTime",
+     "type": 5,
+     "ui_type": "DateTime"
+    }
+   }
+  },
+  "DuplexLink": {
+   "minimal_form": {
+    "code": 1254092,
+    "field": null,
+    "msg": "DuplexLinkFieldPropertyError",
+    "request": {
+     "field_name": "m08-DuplexLink",
+     "type": 21,
+     "ui_type": "DuplexLink"
+    }
+   },
+   "with_property": {
+    "code": 0,
+    "field": {
+     "property": {
+      "back_field_name": "Table-w08-DuplexLink",
+      "multiple": false,
+      "table_id": "tblIozLzSCCOEInB",
+      "table_name": "ld317-link-target"
+     },
+     "type": 21,
+     "ui_type": "DuplexLink"
+    },
+    "msg": "success",
+    "options_passed": {
+     "multiple": false,
+     "table_id": "tblIozLzSCCOEInB"
+    },
+    "request": {
+     "field_name": "w08-DuplexLink",
+     "property": {
+      "multiple": false,
+      "table_id": "tblIozLzSCCOEInB"
+     },
+     "type": 21,
+     "ui_type": "DuplexLink"
+    }
+   }
+  },
+  "Formula": {
+   "minimal_form": {
+    "code": 0,
+    "field": {
+     "property": {
+      "formatter": ""
+     },
+     "type": 20,
+     "ui_type": "Formula"
+    },
+    "msg": "success",
+    "request": {
+     "field_name": "m09-Formula",
+     "type": 20,
+     "ui_type": "Formula"
+    }
+   }
+  },
+  "GroupChat": {
+   "minimal_form": {
+    "code": 0,
+    "field": {
+     "property": {
+      "multiple": true
+     },
+     "type": 23,
+     "ui_type": "GroupChat"
+    },
+    "msg": "success",
+    "request": {
+     "field_name": "m10-GroupChat",
+     "type": 23,
+     "ui_type": "GroupChat"
+    }
+   }
+  },
+  "Location": {
+   "minimal_form": {
+    "code": 0,
+    "field": {
+     "property": {
+      "location": {
+       "input_type": "not_limit"
+      }
+     },
+     "type": 22,
+     "ui_type": "Location"
+    },
+    "msg": "success",
+    "request": {
+     "field_name": "m11-Location",
+     "type": 22,
+     "ui_type": "Location"
+    }
+   }
+  },
+  "ModifiedTime": {
+   "minimal_form": {
+    "code": 0,
+    "field": {
+     "property": {
+      "date_formatter": "yyyy/MM/dd"
+     },
+     "type": 1002,
+     "ui_type": "ModifiedTime"
+    },
+    "msg": "success",
+    "request": {
+     "field_name": "m12-ModifiedTime",
+     "type": 1002,
+     "ui_type": "ModifiedTime"
+    }
+   }
+  },
+  "ModifiedUser": {
+   "minimal_form": {
+    "code": 0,
+    "field": {
+     "property": null,
+     "type": 1004,
+     "ui_type": "ModifiedUser"
+    },
+    "msg": "success",
+    "request": {
+     "field_name": "m13-ModifiedUser",
+     "type": 1004,
+     "ui_type": "ModifiedUser"
+    }
+   }
+  },
+  "MultiSelect": {
+   "minimal_form": {
+    "code": 0,
+    "field": {
+     "property": {
+      "options": []
+     },
+     "type": 4,
+     "ui_type": "MultiSelect"
+    },
+    "msg": "success",
+    "request": {
+     "field_name": "m14-MultiSelect",
+     "type": 4,
+     "ui_type": "MultiSelect"
+    }
+   }
+  },
+  "Number": {
+   "minimal_form": {
+    "code": 0,
+    "field": {
+     "property": {
+      "formatter": "0.0"
+     },
+     "type": 2,
+     "ui_type": "Number"
+    },
+    "msg": "success",
+    "request": {
+     "field_name": "m15-Number",
+     "type": 2,
+     "ui_type": "Number"
+    }
+   }
+  },
+  "Phone": {
+   "minimal_form": {
+    "code": 0,
+    "field": {
+     "property": null,
+     "type": 13,
+     "ui_type": "Phone"
+    },
+    "msg": "success",
+    "request": {
+     "field_name": "m16-Phone",
+     "type": 13,
+     "ui_type": "Phone"
+    }
+   }
+  },
+  "Progress": {
+   "minimal_form": {
+    "code": 1254001,
+    "field": null,
+    "msg": "WrongRequestBody",
+    "request": {
+     "field_name": "m17-Progress",
+     "type": 2,
+     "ui_type": "Progress"
+    }
+   },
+   "with_property": {
+    "code": 0,
+    "field": {
+     "property": {
+      "formatter": "0%",
+      "max": 1,
+      "min": 0
+     },
+     "type": 2,
+     "ui_type": "Progress"
+    },
+    "msg": "success",
+    "options_passed": {
+     "formatter": "0%",
+     "max": 100,
+     "min": 0
+    },
+    "request": {
+     "field_name": "w17-Progress",
+     "property": {
+      "formatter": "0%",
+      "max": 100,
+      "min": 0
+     },
+     "type": 2,
+     "ui_type": "Progress"
+    }
+   }
+  },
+  "Rating": {
+   "minimal_form": {
+    "code": 1254001,
+    "field": null,
+    "msg": "WrongRequestBody",
+    "request": {
+     "field_name": "m18-Rating",
+     "type": 2,
+     "ui_type": "Rating"
+    }
+   },
+   "with_property": {
+    "code": 0,
+    "field": {
+     "property": {
+      "formatter": "0",
+      "max": 5,
+      "min": 0,
+      "rating": {
+       "symbol": "star"
+      }
+     },
+     "type": 2,
+     "ui_type": "Rating"
+    },
+    "msg": "success",
+    "options_passed": {
+     "formatter": "0",
+     "max": 5,
+     "min": 0,
+     "symbol": "star"
+    },
+    "request": {
+     "field_name": "w18-Rating",
+     "property": {
+      "formatter": "0",
+      "max": 5,
+      "min": 0,
+      "rating": {
+       "symbol": "star"
+      }
+     },
+     "type": 2,
+     "ui_type": "Rating"
+    }
+   }
+  },
+  "SingleLink": {
+   "minimal_form": {
+    "code": 1254089,
+    "field": null,
+    "msg": "LinkFieldPropertyError",
+    "request": {
+     "field_name": "m19-SingleLink",
+     "type": 18,
+     "ui_type": "SingleLink"
+    }
+   },
+   "with_property": {
+    "code": 0,
+    "field": {
+     "property": {
+      "multiple": false,
+      "table_id": "tblIozLzSCCOEInB",
+      "table_name": "ld317-link-target"
+     },
+     "type": 18,
+     "ui_type": "SingleLink"
+    },
+    "msg": "success",
+    "options_passed": {
+     "multiple": false,
+     "table_id": "tblIozLzSCCOEInB"
+    },
+    "request": {
+     "field_name": "w19-SingleLink",
+     "property": {
+      "multiple": false,
+      "table_id": "tblIozLzSCCOEInB"
+     },
+     "type": 18,
+     "ui_type": "SingleLink"
+    }
+   }
+  },
+  "SingleSelect": {
+   "minimal_form": {
+    "code": 0,
+    "field": {
+     "property": {
+      "options": []
+     },
+     "type": 3,
+     "ui_type": "SingleSelect"
+    },
+    "msg": "success",
+    "request": {
+     "field_name": "m20-SingleSelect",
+     "type": 3,
+     "ui_type": "SingleSelect"
+    }
+   }
+  },
+  "Text": {
+   "minimal_form": {
+    "code": 0,
+    "field": {
+     "property": null,
+     "type": 1,
+     "ui_type": "Text"
+    },
+    "msg": "success",
+    "request": {
+     "field_name": "m21-Text",
+     "type": 1,
+     "ui_type": "Text"
+    }
+   }
+  },
+  "Url": {
+   "minimal_form": {
+    "code": 0,
+    "field": {
+     "property": null,
+     "type": 15,
+     "ui_type": "Url"
+    },
+    "msg": "success",
+    "request": {
+     "field_name": "m22-Url",
+     "type": 15,
+     "ui_type": "Url"
+    }
+   }
+  },
+  "User": {
+   "minimal_form": {
+    "code": 0,
+    "field": {
+     "property": {
+      "multiple": true
+     },
+     "type": 11,
+     "ui_type": "User"
+    },
+    "msg": "success",
+    "request": {
+     "field_name": "m23-User",
+     "type": 11,
+     "ui_type": "User"
+    }
+   }
+  }
+ }
+}

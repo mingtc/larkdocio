@@ -1,0 +1,22 @@
+{
+  "n": 105,
+  "probe": "LD-435 AC1/AC2 arm A — sheet_image + float images",
+  "label": "A4 fresh read-back BEFORE any create is the upload alone a bind",
+  "credential_pair": "WRITE",
+  "request": {
+    "method": "GET",
+    "path": "/open-apis/sheets/v3/spreadsheets/Exampleb31ebb6e3fd2fe5eddf0/sheets/61a0cd/float_images/query",
+    "body": null,
+    "headers": [
+      "Authorization: Bearer <redacted>"
+    ]
+  },
+  "http_status": 200,
+  "response": {
+    "code": 0,
+    "data": {
+      "items": []
+    },
+    "msg": "success"
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "_probe": "ld336-01",
+  "_endpoint": "/open-apis/bitable/v1/apps/{app_token}/tables (and .../tables/batch_create), with the /fields WRITE family as the SAME-WINDOW control",
+  "_method": "POST table create carrying an inline `fields` array",
+  "_http_status": 200,
+  "_lark_code": "create_table+fields: applied (read-back verified, never code:0) · POST .../fields control: 9499",
+  "_lark_msg": "Invalid parameter type in param: TableId. Invalid parameter value: \"tblnHfrepWfI8RfD\". Please check and modify accordingly.",
+  "_batch_verdict": "batch_create carrying a per-table `fields` array: code 0 and the created tables carry NONE of the kit — which is why the shipped batch verb refuses the argument instead of forwarding a silent no-op.",
+  "_verdict": "create_table carrying an inline `fields` array: applied (verified against the created table's OWN field list, never code:0), measured beside a same-window POST .../fields control answering 9499.",
+  "_note": "arm 5 (fields-at-creation). (i) OUTAGE-IMMUNITY PREMISE: a create carrying an inline `fields` array was sent while the /fields WRITE family was probed in the same seconds on the same table path. The kitted create reported `applied` — verified by the created table's own field list, never by code:0 — and the same-window POST .../fields control answered `9499` ('Invalid parameter type in param: TableId. Invalid parameter value: \"tblnHfrepWfI8RfD\". Please check and modify accordingly.'). Read the two together: a kitted create that applied beside a 9499 control is the premise HOLDING; a kitted create that dropped or failed beside a code:0 control refutes it, and the capability still ships either way because it is the right shape for the surface independent of any outage. (ii) PRIMARY COLUMN: after the kitted create the columns flagged is_primary were ['ld336-title']; the kit's first entry BECAME the primary: True. True is what probe ld336-02 measured across nine cases — a kitted create does NOT also get the locale-named default column, so entry 0 of the array is the column the rows are keyed by and the array's ORDER is a decision.",
+  "_transport": "larkdocio.base.schema_client.BaseSchemaClient through the shipped plan gate; the control on larkdocio.common.transport.CredentialedRawHttpClient, paced 1.2 s",
+  "_disposable": "one, harness-created; deleted in the harness finally, ledger-backed",
+  "response": {
+    "disposable": {
+      "app_token": "Example3407cd9d46b29449edfd",
+      "title": "larkdocio-DISPOSABLE-1786105094-51852"
+    },
+    "dry_run": {
+      "describe": "create table 'ld336-kit' in Base Example3407cd9d46b29449edfd with 3 columns: 'ld336-title' (Text), 'ld336-budget' (Currency), 'ld336-due' (DateTime)",
+      "api_call_count": 1,
+      "read_calls": 2
+    },
+    "create_table_with_fields": {
+      "outcome": "applied",
+      "table_id": "tblnHfrepWfI8RfD",
+      "read_back": {
+        "how": "GET …/apps/{a}/tables lists the returned table_id",
+        "table_ids": [
+          "tblnHfrepWfI8RfD"
+        ],
+        "listed": true,
+        "columns": [
+          {
+            "table_id": "tblnHfrepWfI8RfD",
+            "asked": [
+              "ld336-title",
+              "ld336-budget",
+              "ld336-due"
+            ],
+            "seen": [
+              "ld336-budget",
+              "ld336-due",
+              "ld336-title"
+            ],
+            "missing": [],
+            "mismatched": [],
+            "primary": [
+              "ld336-title"
+            ]
+          }
+        ]
+      },
+      "refusal": null
+    },
+    "fields_write_control": {
+      "endpoint": "/open-apis/bitable/v1/apps/Example3407cd9d46b29449edfd/tables/tblnHfrepWfI8RfD/fields",
+      "code": 9499,
+      "msg": "Invalid parameter type in param: TableId. Invalid parameter value: \"tblnHfrepWfI8RfD\". Please check and modify accordingly."
+    },
+    "field_list": [
+      {
+        "field_name": "ld336-title",
+        "type": 1,
+        "ui_type": "Text",
+        "is_primary": true,
+        "property": null
+      },
+      {
+        "field_name": "ld336-budget",
+        "type": 2,
+        "ui_type": "Currency",
+        "is_primary": false,
+        "property": {
+          "formatter": "0.00",
+          "currency_code": "USD"
+        }
+      },
+      {
+        "field_name": "ld336-due",
+        "type": 5,
+        "ui_type": "DateTime",
+        "is_primary": false,
+        "property": {
+          "date_formatter": "yyyy/MM/dd",
+          "auto_fill": false
+        }
+      }
+    ],
+    "primary_after_kit": [
+      "ld336-title"
+    ],
+    "kit_first_entry_became_primary": true,
+    "batch_create_ignores_the_kit": {
+      "code": 0,
+      "msg": "success",
+      "table_ids": [
+        "tblsRf6HtbasKG89",
+        "tblNKCY3SrxaogUp"
+      ],
+      "columns_per_table": {
+        "tblsRf6HtbasKG89": [
+          {
+            "field_name": "多行文本",
+            "is_primary": true
+          }
+        ],
+        "tblNKCY3SrxaogUp": [
+          {
+            "field_name": "多行文本",
+            "is_primary": true
+          }
+        ]
+      }
+    },
+    "shipped_batch_verb_refuses_a_kit": "`batch_create_tables` does not author columns. Lark's batch route ACCEPTS a per-table `fields` array, answers code:0, and creates every table WITHOUT it — each one arrives with the locale-named default primary column and none of the kit. That was measured on the shipped path and again on a hand-written body through the raw HTTP core, so it is the server's behaviour and not something this library can send its way around; forwarding the array anyway would be shipping a silent no-op, which is exactly what R12 forbids. Use one `create_table(app_token, name, fields=[...])` per table — that route DOES author the kit, and each is still a single call. Nothing was sent."
+  }
+}

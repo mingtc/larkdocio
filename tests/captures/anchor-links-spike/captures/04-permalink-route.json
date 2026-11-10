@@ -1,0 +1,168 @@
+{
+  "AC1_field_route_identity": {
+    "batch_field_is_shared_url": true,
+    "batch_shared_url_EQUALS_single_get_record_url": true,
+    "single_get_field_is_record_url": true,
+    "single_get_shared_url_null": true
+  },
+  "AC1_i_flag_off_control": {
+    "list": {
+      "any_record_url_on_list": false,
+      "count": 4,
+      "url_keys_on_first": {
+        "record_url": {
+          "present": false,
+          "shape": null
+        },
+        "shared_url": {
+          "present": false,
+          "shape": null
+        }
+      }
+    },
+    "single_get": {
+      "lark_code": 0,
+      "url_keys": {
+        "record_url": {
+          "present": false,
+          "shape": null
+        },
+        "shared_url": {
+          "present": false,
+          "shape": null
+        }
+      }
+    },
+    "single_get_carries_record_url_without_flag": false
+  },
+  "AC1_ii_shared_url_ever_populated": true,
+  "AC2_batch_route": {
+    "BATCH_HONOURS_WITH_SHARED_URL": false,
+    "with_flag": {
+      "any_record_has_shared_url": true,
+      "every_record_has_record_url": false,
+      "lark_code": 0,
+      "per_record_url_keys": [
+        {
+          "record_url": {
+            "present": false,
+            "shape": null
+          },
+          "shared_url": {
+            "present": true,
+            "shape": {
+              "has_fragment": false,
+              "host": "your-domain.larksuite.com",
+              "path_form": "/record/<27ch>",
+              "query_param_names": [],
+              "scheme": "https"
+            }
+          }
+        },
+        {
+          "record_url": {
+            "present": false,
+            "shape": null
+          },
+          "shared_url": {
+            "present": true,
+            "shape": {
+              "has_fragment": false,
+              "host": "your-domain.larksuite.com",
+              "path_form": "/record/<27ch>",
+              "query_param_names": [],
+              "scheme": "https"
+            }
+          }
+        },
+        {
+          "record_url": {
+            "present": false,
+            "shape": null
+          },
+          "shared_url": {
+            "present": true,
+            "shape": {
+              "has_fragment": false,
+              "host": "your-domain.larksuite.com",
+              "path_form": "/record/<27ch>",
+              "query_param_names": [],
+              "scheme": "https"
+            }
+          }
+        }
+      ],
+      "record_count": 3
+    },
+    "without_flag": {
+      "any_record_has_record_url": false,
+      "any_record_has_shared_url": false,
+      "lark_code": 0,
+      "record_count": 3
+    }
+  },
+  "PACE": 1.2,
+  "_calls": [
+    {
+      "_body_keys": [],
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/tables/tblYtWUpf5q944Ao/records",
+      "_http_status": 200,
+      "_lark_code": 0,
+      "_lark_msg": "success",
+      "_method": "GET",
+      "_note": "list ids",
+      "_params": {
+        "page_size": 4
+      }
+    },
+    {
+      "_body_keys": [],
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/tables/tblYtWUpf5q944Ao/records/rec88HpEvHGLV4",
+      "_http_status": 200,
+      "_lark_code": 0,
+      "_lark_msg": "success",
+      "_method": "GET",
+      "_note": "GET flag-OFF control",
+      "_params": {}
+    },
+    {
+      "_body_keys": [
+        "record_ids",
+        "with_shared_url"
+      ],
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/tables/tblYtWUpf5q944Ao/records/batch_get",
+      "_http_status": 200,
+      "_lark_code": 0,
+      "_lark_msg": "success",
+      "_method": "POST",
+      "_note": "batch_get with_shared_url=true",
+      "_params": {}
+    },
+    {
+      "_body_keys": [
+        "record_ids"
+      ],
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/tables/tblYtWUpf5q944Ao/records/batch_get",
+      "_http_status": 200,
+      "_lark_code": 0,
+      "_lark_msg": "success",
+      "_method": "POST",
+      "_note": "batch_get flag-OFF control",
+      "_params": {}
+    },
+    {
+      "_body_keys": [],
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/tables/tblYtWUpf5q944Ao/records/rec88HpEvHGLV4",
+      "_http_status": 200,
+      "_lark_code": 0,
+      "_lark_msg": "success",
+      "_method": "GET",
+      "_note": "single GET with flag (identity check)",
+      "_params": {
+        "with_shared_url": "true"
+      }
+    }
+  ],
+  "no_credential_value_captured": true,
+  "table_id": "tblYtWUpf5q944Ao"
+}

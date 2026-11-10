@@ -1,0 +1,134 @@
+{
+  "_probe": "p2",
+  "_endpoint": ".../tables/tblMWxK1iJYvK56l/fields",
+  "_method": "POST",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": null,
+  "_verdict": "OK",
+  "_note": "SingleLink(18) / DuplexLink(21) / Lookup(19) create shapes, the DUPLEX MIRROR field, and every Lookup property variant with its verbatim refusal",
+  "response": {
+    "code": 0,
+    "data": {
+      "SingleLink_multiple_false": {
+        "code": 0,
+        "msg": "success",
+        "field": {
+          "field_id": "fldJk7MX7U",
+          "field_name": "SingleLinkOne",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "multiple": false,
+            "table_id": "tblauNkOg3QoDL99",
+            "table_name": "p0zoo-Ref-033103"
+          },
+          "type": 18,
+          "ui_type": "SingleLink"
+        }
+      },
+      "SingleLink_multiple_true": {
+        "code": 0,
+        "msg": "success",
+        "field": {
+          "field_id": "fldjbKCzVT",
+          "field_name": "SingleLinkMany",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "multiple": true,
+            "table_id": "tblauNkOg3QoDL99",
+            "table_name": "p0zoo-Ref-033103"
+          },
+          "type": 18,
+          "ui_type": "SingleLink"
+        }
+      },
+      "DuplexLink": {
+        "code": 0,
+        "msg": "success",
+        "field": {
+          "field_id": "fldWt26ekq",
+          "field_name": "DuplexLink",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "back_field_id": "fldrYKsT0L",
+            "back_field_name": "p0zoo-Main-033103-DuplexLink",
+            "multiple": true,
+            "table_id": "tblauNkOg3QoDL99",
+            "table_name": "p0zoo-Ref-033103"
+          },
+          "type": 21,
+          "ui_type": "DuplexLink"
+        }
+      },
+      "duplex_mirror_in_ref_table": {
+        "ref_fields_before": [
+          "多行文本",
+          "RefNum"
+        ],
+        "ref_fields_after": [
+          "多行文本",
+          "RefNum",
+          "p0zoo-Main-033103-DuplexLink"
+        ],
+        "new_fields": [
+          {
+            "field_id": "fldrYKsT0L",
+            "field_name": "p0zoo-Main-033103-DuplexLink",
+            "is_extend": false,
+            "is_primary": false,
+            "is_synced": false,
+            "property": {
+              "back_field_id": "fldWt26ekq",
+              "back_field_name": "DuplexLink",
+              "multiple": true,
+              "table_id": "tblMWxK1iJYvK56l",
+              "table_name": "p0zoo-Main-033103"
+            },
+            "type": 21,
+            "ui_type": "DuplexLink"
+          }
+        ]
+      },
+      "Lookup::table_id+back_field_id(link fld)+lookup target": {
+        "code": 99992402,
+        "msg": "field validation failed",
+        "request_property": {
+          "table_id": "tblauNkOg3QoDL99",
+          "back_field_id": "fldJk7MX7U",
+          "lookup_field_id": "fldotiRXTi"
+        },
+        "field": null
+      },
+      "Lookup::back_field_id only": {
+        "code": 99992402,
+        "msg": "field validation failed",
+        "request_property": {
+          "back_field_id": "fldJk7MX7U"
+        },
+        "field": null
+      },
+      "Lookup::no property": {
+        "code": 99992402,
+        "msg": "field validation failed",
+        "request_property": null,
+        "field": null
+      },
+      "Lookup::duplex as the back field": {
+        "code": 99992402,
+        "msg": "field validation failed",
+        "request_property": {
+          "table_id": "tblauNkOg3QoDL99",
+          "back_field_id": "fldWt26ekq",
+          "lookup_field_id": "fldotiRXTi"
+        },
+        "field": null
+      }
+    }
+  }
+}

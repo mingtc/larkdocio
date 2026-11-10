@@ -1,0 +1,265 @@
+{
+  "code": 0,
+  "data": {
+    "revision": 34,
+    "spreadsheetToken": "SheetScratchExample00000001",
+    "valueRange": {
+      "majorDimension": "ROWS",
+      "range": "444a1c!A1:D24",
+      "revision": 34,
+      "values": [
+        [
+          "Type",
+          "Value",
+          "Notes",
+          "Value (recreated natively)"
+        ],
+        [
+          "plain string",
+          "hello world",
+          null,
+          "hello world"
+        ],
+        [
+          "string with newline",
+          "line one\n line two",
+          "cell has wrap text",
+          "line one\nline two"
+        ],
+        [
+          "integer",
+          42,
+          null,
+          42
+        ],
+        [
+          "float",
+          3.14159,
+          null,
+          3.14159
+        ],
+        [
+          "percentage",
+          "12.34%",
+          "stored 0.1234, shown 12.34%",
+          0.1234
+        ],
+        [
+          "currency",
+          "$1,234.56",
+          null,
+          "$1,234.56"
+        ],
+        [
+          "date",
+          "7/26/2026",
+          null,
+          "7/26/2026"
+        ],
+        [
+          "datetime",
+          "7/26/2026 15:30",
+          null,
+          "7/26/2026 15:30"
+        ],
+        [
+          "boolean (xlsx TRUE)",
+          true,
+          "ALSO add a Lark checkbox by hand below",
+          true
+        ],
+        [
+          "formula sum",
+          60,
+          "literal formula",
+          60
+        ],
+        [
+          "formula ref",
+          84,
+          "references the integer row",
+          84
+        ],
+        [
+          "negative number",
+          -273.15,
+          null,
+          -273.15
+        ],
+        [
+          "big number",
+          "1.23E+13",
+          "precision edge",
+          12345700000000
+        ],
+        [
+          "leading-zero string",
+          7,
+          "text format, must stay a string",
+          7
+        ],
+        [
+          "hyperlink",
+          [
+            {
+              "cellPosition": null,
+              "link": "https://www.larksuite.com/",
+              "text": "Lark Suite homepage",
+              "type": "url"
+            }
+          ],
+          null,
+          [
+            {
+              "cellPosition": null,
+              "link": "https://www.google.com",
+              "text": "https://www.google.com",
+              "type": "url"
+            }
+          ]
+        ],
+        [
+          "styled text runs",
+          [
+            {
+              "segmentStyle": {
+                "bold": true,
+                "fontSize": 11,
+                "foreColor": "rgb(0, 0, 0)",
+                "italic": false,
+                "strikeThrough": false,
+                "underline": false
+              },
+              "text": "bold start",
+              "type": "text"
+            },
+            {
+              "segmentStyle": {
+                "bold": false,
+                "fontSize": 10,
+                "foreColor": "#000000",
+                "italic": false,
+                "strikeThrough": false,
+                "underline": false
+              },
+              "text": " plain middle ",
+              "type": "text"
+            },
+            {
+              "segmentStyle": {
+                "bold": false,
+                "fontSize": 11,
+                "foreColor": "rgb(0, 0, 0)",
+                "italic": true,
+                "strikeThrough": false,
+                "underline": false
+              },
+              "text": "italic end",
+              "type": "text"
+            }
+          ],
+          null,
+          [
+            {
+              "segmentStyle": {
+                "bold": true,
+                "fontSize": 10,
+                "foreColor": "#000000",
+                "italic": false,
+                "strikeThrough": false,
+                "underline": false
+              },
+              "text": "bold start",
+              "type": "text"
+            },
+            {
+              "segmentStyle": {
+                "bold": false,
+                "fontSize": 10,
+                "foreColor": "#000000",
+                "italic": false,
+                "strikeThrough": false,
+                "underline": false
+              },
+              "text": " plain middle",
+              "type": "text"
+            },
+            {
+              "segmentStyle": {
+                "bold": false,
+                "fontSize": 10,
+                "foreColor": "#000000",
+                "italic": true,
+                "strikeThrough": false,
+                "underline": false
+              },
+              "text": " italic end",
+              "type": "text"
+            }
+          ]
+        ],
+        [
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "row after an empty row",
+          null,
+          "B cell here is deliberately empty",
+          null
+        ],
+        [
+          "HAND-ADD: checkbox",
+          0,
+          "replace B cell by hand in Lark",
+          null
+        ],
+        [
+          "HAND-ADD: dropdown (single)",
+          null,
+          "replace B cell by hand in Lark",
+          null
+        ],
+        [
+          "HAND-ADD: dropdown (multi)",
+          null,
+          "replace B cell by hand in Lark",
+          null
+        ],
+        [
+          "HAND-ADD: @user mention",
+          {
+            "category": "at-user-block",
+            "en_name": "Example User",
+            "link": "https://avatar.example.invalid/photo.png",
+            "mentionNotify": false,
+            "mentionType": 0,
+            "name": "Example User",
+            "not_notify": false,
+            "text": "@Example User",
+            "token": "9000000000000000002",
+            "type": "mention"
+          },
+          "replace B cell by hand in Lark",
+          null
+        ],
+        [
+          "HAND-ADD: doc-link mention",
+          {
+            "link": "https%3A%2F%2Fyour-domain.larksuite.com%2Fdocx%2FDocScratchExample0000000001",
+            "mentionNotify": false,
+            "mentionType": 22,
+            "text": "Larkdocio Scratch",
+            "token": "DocScratchExample0000000001",
+            "type": "mention"
+          },
+          "replace B cell by hand in Lark",
+          null
+        ]
+      ]
+    }
+  },
+  "msg": "success"
+}

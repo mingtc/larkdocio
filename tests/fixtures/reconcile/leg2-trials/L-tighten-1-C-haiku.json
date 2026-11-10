@@ -1,0 +1,64 @@
+{
+  "trial": {
+    "id": "L-tighten-1-C-haiku",
+    "doc": "L",
+    "shape": "tighten",
+    "arm": "C-haiku",
+    "rep": 1
+  },
+  "cli_version": "2.1.195 (Claude Code)",
+  "instruction": "Tighten this document: cut redundancy, shorten long sentences, and make the prose crisper throughout.",
+  "instruction_mentions_markers": false,
+  "meta": {
+    "model_requested": "haiku",
+    "models_used": [
+      "claude-haiku-4-5-20251001"
+    ],
+    "duration_ms": 44243,
+    "cost_usd": 0.0696589,
+    "is_error": false,
+    "num_turns": 1
+  },
+  "fenced_output": false,
+  "classification": {
+    "source_marker_count": 26,
+    "output_marker_count": 26,
+    "per_marker": {
+      "l01": "preserved",
+      "l02": "preserved",
+      "l03": "preserved",
+      "l04": "preserved",
+      "l05": "preserved",
+      "l06": "preserved",
+      "l07": "preserved",
+      "l08": "preserved-heavily-rewritten",
+      "l09": "preserved",
+      "l10": "preserved",
+      "l11": "preserved",
+      "l12": "preserved",
+      "l13": "preserved",
+      "l14": "preserved",
+      "l15": "preserved",
+      "l16": "preserved",
+      "l17": "preserved",
+      "l18": "preserved",
+      "l19": "preserved",
+      "l20": "preserved",
+      "l21": "preserved",
+      "l22": "preserved",
+      "l23": "preserved",
+      "l24": "preserved",
+      "l25": "preserved",
+      "l26": "preserved"
+    },
+    "counts": {
+      "preserved": 25,
+      "preserved-heavily-rewritten": 1
+    },
+    "invented_ids": [],
+    "mangled_forms": [],
+    "order_preserved": true,
+    "trial_clean": true
+  },
+  "edited_document": "# Sample project review \u2014 first stage\n\n<!-- lark:block:l01 -->\n## Summary\n\n<!-- lark:block:l02 -->\nThe reader work landed on time and is now consumed by two consumer projects.\n\n<!-- lark:block:l03 -->\nThe remaining risk is in the writer surface: the plan-gated apply engine still refuses shapes consumers ask for regularly.\n\n<!-- lark:block:l04 -->\n## Reliability\n\n<!-- lark:block:l05 -->\nThree failed test runs outside any release all traced to a missing field-level permission scope.\n\n<!-- lark:block:l06 -->\nFollow-up work made failures legible rather than widening scopes\u2014a grant is a console action, not a library decision.\n\n<!-- lark:block:l07 -->\n## Throughput\n\n<!-- lark:block:l08 -->\nScripting board moves eliminated drift between folder state and logs.\n\n<!-- lark:block:l09 -->\nReview latency on large tranches remains, with a single reviewer holding too much context.\n\n<!-- lark:block:l10 -->\n## Consumers\n\n<!-- lark:block:l11 -->\nThe reference consumer pins the library locally and refreshes only when it chooses.\n\n<!-- lark:block:l12 -->\nThis is good: no surprise ships, and refresh is where compatibility is checked.\n\n<!-- lark:block:l13 -->\n## Resources\n\n<!-- lark:block:l14 -->\nDisk use was flat; the only new space went to a small sandbox for live write gates, torn down after each run.\n\n<!-- lark:block:l15 -->\nOne avoidable cost: a week of rework from misdiagnosis.\n\n<!-- lark:block:l16 -->\n## Second stage\n\n<!-- lark:block:l17 -->\nThe second stage centers on round-trip editing\u2014the most-requested capability the library currently lacks.\n\n<!-- lark:block:l18 -->\nEverything else follows, since a half-built round-trip is worse than none.\n\n<!-- lark:block:l19 -->\n### Risks\n\n<!-- lark:block:l20 -->\n- Review latency on large tranches\n- A single reviewer holding all the context\n- The round-trip work slipping into the following stage\n\n<!-- lark:block:l21 -->\nRisks are ordered by likelihood, not discomfort.\n\n<!-- lark:block:l22 -->\n### Numbers\n\n<!-- lark:block:l23 -->\n| Metric | Stage 1 | Target |\n| --- | --- | --- |\n| Failed runs | 3 | 0 |\n| Median cycle time | 4.1 days | 3 days |\n| Consumer refreshes | 6 | 6 |\n\n<!-- lark:block:l24 -->\nCycle time excludes two issues parked for the maintainer decisions; holding time \u2260 review time.\n\n<!-- lark:block:l25 -->\n### Decisions needed\n\n<!-- lark:block:l26 -->\nDecide whether round-trip ships behind a flag or as default\u2014this gates all sequencing after it."
+}

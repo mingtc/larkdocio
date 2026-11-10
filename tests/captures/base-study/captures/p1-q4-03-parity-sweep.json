@@ -1,0 +1,523 @@
+{
+  "_probe": "q4-comments-copy-sweep",
+  "original_app_name": "Scratch Base",
+  "steps": [
+    {
+      "_probe": "q4-comments-copy-sweep",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001",
+      "_method": "GET",
+      "_http_status": 200,
+      "_lark_code": 0,
+      "_lark_msg": "success",
+      "_verdict": "OK",
+      "_note": "app meta (capture name to restore) :: body=null",
+      "response": {
+        "code": 0,
+        "data": {
+          "app": {
+            "app_token": "BaseScratchExample000000001",
+            "formula_type": 2,
+            "is_advanced": false,
+            "name": "Scratch Base",
+            "revision": 3,
+            "time_zone": "Asia/Singapore"
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "_probe": "q4-comments-copy-sweep",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001",
+      "_method": "PUT",
+      "_http_status": 200,
+      "_lark_code": 0,
+      "_lark_msg": "success",
+      "_verdict": "OK",
+      "_note": "PUT app (rename) :: body={\"name\": \"larkdocio-p1-rename-probe\"}",
+      "response": {
+        "code": 0,
+        "data": {
+          "app": {
+            "app_token": "BaseScratchExample000000001",
+            "name": "larkdocio-p1-rename-probe"
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "_probe": "q4-comments-copy-sweep",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001",
+      "_method": "PUT",
+      "_http_status": 200,
+      "_lark_code": 0,
+      "_lark_msg": "success",
+      "_verdict": "OK",
+      "_note": "PUT app (RESTORE original name) :: body={\"name\": \"Scratch Base\"}",
+      "response": {
+        "code": 0,
+        "data": {
+          "app": {
+            "app_token": "BaseScratchExample000000001",
+            "name": "Scratch Base"
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "_probe": "q4-comments-copy-sweep",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001",
+      "_method": "PUT",
+      "_http_status": 403,
+      "_lark_code": 1254302,
+      "_lark_msg": "RolePermNotAllow",
+      "_verdict": "DENIED_OR_ERROR",
+      "_note": "PUT app (set is_advanced true) :: body={\"is_advanced\": true}",
+      "response": {
+        "code": 1254302,
+        "msg": "RolePermNotAllow",
+        "error": {
+          "log_id": "202608031009066886F4012F450A65CA6C"
+        }
+      }
+    },
+    {
+      "_probe": "q4-comments-copy-sweep",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/roles",
+      "_method": "GET",
+      "_http_status": 400,
+      "_lark_code": 1254301,
+      "_lark_msg": "OperationTypeError",
+      "_verdict": "DENIED_OR_ERROR",
+      "_note": "GET roles (advanced perms — opener said 1254301) :: body=null",
+      "response": {
+        "code": 1254301,
+        "msg": "OperationTypeError",
+        "error": {
+          "log_id": "20260803100908D6AB5695E029AC6DD6C2"
+        }
+      }
+    },
+    {
+      "_probe": "q4-comments-copy-sweep",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/tables/tblYtWUpf5q944Ao",
+      "_method": "PATCH",
+      "_http_status": 200,
+      "_lark_code": 0,
+      "_lark_msg": "success",
+      "_verdict": "OK",
+      "_note": "PATCH table (rename) :: body={\"name\": \"Table\"}",
+      "response": {
+        "code": 0,
+        "data": {
+          "name": "Table"
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "_probe": "q4-comments-copy-sweep",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/dashboards",
+      "_method": "GET",
+      "_http_status": 200,
+      "_lark_code": 0,
+      "_lark_msg": "success",
+      "_verdict": "OK",
+      "_note": "GET dashboards :: body=null",
+      "response": {
+        "code": 0,
+        "data": {
+          "has_more": false,
+          "total": 0
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "_probe": "q4-comments-copy-sweep",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/dashboards/blkNONEXISTENT/copy",
+      "_method": "POST",
+      "_http_status": 404,
+      "_lark_code": 1254050,
+      "_lark_msg": "Source block is not found.",
+      "_verdict": "DENIED_OR_ERROR",
+      "_note": "POST dashboards/{id}/copy (no dashboard exists) :: body={\"name\": \"d2\"}",
+      "response": {
+        "code": 1254050,
+        "msg": "Source block is not found.",
+        "error": {
+          "log_id": "20260803100911D265D15CEEADDB580EAC"
+        }
+      }
+    },
+    {
+      "_probe": "q4-comments-copy-sweep",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/workflows",
+      "_method": "GET",
+      "_http_status": 200,
+      "_lark_code": 0,
+      "_lark_msg": "success",
+      "_verdict": "OK",
+      "_note": "GET workflows :: body=null",
+      "response": {
+        "code": 0,
+        "data": {
+          "workflows": []
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "_probe": "q4-comments-copy-sweep",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/workflows/wflNONEXISTENT",
+      "_method": "PUT",
+      "_http_status": 200,
+      "_lark_code": 800074800,
+      "_lark_msg": "WorkflowID is not a valid workflow ID",
+      "_verdict": "DENIED_OR_ERROR",
+      "_note": "PUT workflows/{id} (enable/disable) :: body={\"status\": \"Disabled\"}",
+      "response": {
+        "code": 800074800,
+        "error": {
+          "log_id": "20260803100914E07F3635B1AE2B4AE353"
+        },
+        "msg": "WorkflowID is not a valid workflow ID"
+      }
+    },
+    {
+      "_probe": "q4-comments-copy-sweep",
+      "_endpoint": "/open-apis/drive/v1/permissions/BaseScratchExample000000001/public",
+      "_method": "GET",
+      "_http_status": 200,
+      "_lark_code": 0,
+      "_lark_msg": "Success",
+      "_verdict": "OK",
+      "_note": "drive public permission settings :: body=null",
+      "response": {
+        "code": 0,
+        "data": {
+          "permission_public": {
+            "comment_entity": "anyone_can_view",
+            "external_access": false,
+            "invite_external": false,
+            "link_share_entity": "tenant_readable",
+            "lock_switch": false,
+            "security_entity": "anyone_can_view",
+            "share_entity": "only_full_access"
+          }
+        },
+        "msg": "Success"
+      }
+    },
+    {
+      "_probe": "q4-comments-copy-sweep",
+      "_endpoint": "/open-apis/drive/v1/permissions/BaseScratchExample000000001/members",
+      "_method": "GET",
+      "_http_status": 200,
+      "_lark_code": 0,
+      "_lark_msg": "Success",
+      "_verdict": "OK",
+      "_note": "drive permission members :: body=null",
+      "response": {
+        "code": 0,
+        "data": {
+          "items": [
+            {
+              "member_id": "<redacted:chat-id>",
+              "member_type": "openchat",
+              "perm": "edit",
+              "perm_type": "container"
+            },
+            {
+              "member_id": "<redacted:person-id>",
+              "member_type": "openid",
+              "perm": "full_access",
+              "perm_type": "container"
+            }
+          ]
+        },
+        "msg": "Success"
+      }
+    },
+    {
+      "_probe": "q4-comments-copy-sweep",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/tables/tblYtWUpf5q944Ao/records/search",
+      "_method": "POST",
+      "_http_status": 200,
+      "_lark_code": 0,
+      "_lark_msg": "success",
+      "_verdict": "OK",
+      "_note": "search with_shared_url=true (record deep link?) :: body={\"automatic_fields\": true}",
+      "response": {
+        "code": 0,
+        "data": {
+          "has_more": true,
+          "items": [
+            {
+              "created_by": {
+                "avatar_url": "<redacted:avatar_url>",
+                "email": "<redacted:email>",
+                "en_name": "<redacted:en_name>",
+                "id": "<redacted:person-id>",
+                "name": "<redacted:person-name>"
+              },
+              "created_time": 1785696620000,
+              "fields": {
+                "Email": [
+                  {
+                    "link": "<redacted:email>",
+                    "text": "<redacted:email>",
+                    "type": "url"
+                  }
+                ],
+                "Text": [
+                  {
+                    "text": "Text 1",
+                    "type": "text"
+                  }
+                ],
+                "lookup": {
+                  "type": 1,
+                  "value": [
+                    {
+                      "text": "Text 2 Test Data 2",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 3",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 1",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 5",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 4",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "last_modified_by": {
+                "avatar_url": "<redacted:avatar_url>",
+                "email": "<redacted:email>",
+                "en_name": "<redacted:en_name>",
+                "id": "<redacted:person-id>",
+                "name": "<redacted:person-name>"
+              },
+              "last_modified_time": 1785722181000,
+              "record_id": "rec88HpEvHGLV4"
+            },
+            {
+              "created_by": {
+                "avatar_url": "<redacted:avatar_url>",
+                "email": "<redacted:email>",
+                "en_name": "<redacted:en_name>",
+                "id": "<redacted:person-id>",
+                "name": "<redacted:person-name>"
+              },
+              "created_time": 1785696620000,
+              "fields": {
+                "Email": [
+                  {
+                    "link": "<redacted:email>",
+                    "text": "<redacted:email>",
+                    "type": "url"
+                  }
+                ],
+                "Text": [
+                  {
+                    "text": "Text 2",
+                    "type": "text"
+                  }
+                ],
+                "lookup": {
+                  "type": 1,
+                  "value": [
+                    {
+                      "text": "Text 2 Test Data 2",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 3",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 1",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 5",
+                      "type": "text"
+                    },
+                    {
+                      "text": ",",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Text 2 Test Data 4",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "last_modified_by": {
+                "avatar_url": "<redacted:avatar_url>",
+                "email": "<redacted:email>",
+                "en_name": "<redacted:en_name>",
+                "id": "<redacted:person-id>",
+                "name": "<redacted:person-name>"
+              },
+              "last_modified_time": 1785720093000,
+              "record_id": "rec41UqRqMBEzI"
+            }
+          ],
+          "page_token": "cGFnZVRva2VuOjI=",
+          "total": 6
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "_probe": "q4-comments-copy-sweep",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/tables/batch_create",
+      "_method": "POST",
+      "_http_status": 200,
+      "_lark_code": 0,
+      "_lark_msg": "success",
+      "_verdict": "OK",
+      "_note": "tables/batch_create :: body={\"tables\": [{\"name\": \"p1sw-A\"}, {\"name\": \"p1sw-B\"}]}",
+      "response": {
+        "code": 0,
+        "data": {
+          "table_ids": [
+            "tblqiWbEHKCHOqWd",
+            "tbl8DhUNQDpj9gDK"
+          ]
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "_probe": "q4-comments-copy-sweep",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/tables",
+      "_method": "GET",
+      "_http_status": 200,
+      "_lark_code": 0,
+      "_lark_msg": "success",
+      "_verdict": "OK",
+      "_note": "tables list (find the batch-created) :: body=null",
+      "response": {
+        "code": 0,
+        "data": {
+          "has_more": false,
+          "items": [
+            {
+              "name": "Table",
+              "revision": 27,
+              "table_id": "tblYtWUpf5q944Ao"
+            },
+            {
+              "name": "Table 2",
+              "revision": 25,
+              "table_id": "tblvHhs6KA9QYNCo"
+            },
+            {
+              "name": "p1sw-A",
+              "revision": 0,
+              "table_id": "tblqiWbEHKCHOqWd"
+            },
+            {
+              "name": "p1sw-B",
+              "revision": 0,
+              "table_id": "tbl8DhUNQDpj9gDK"
+            }
+          ],
+          "page_token": "tbl8DhUNQDpj9gDK",
+          "total": 4
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "_probe": "q4-comments-copy-sweep",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/tables/batch_delete",
+      "_method": "POST",
+      "_http_status": 200,
+      "_lark_code": 0,
+      "_lark_msg": "success",
+      "_verdict": "OK",
+      "_note": "tables/batch_delete ['tblqiWbEHKCHOqWd', 'tbl8DhUNQDpj9gDK'] :: body={\"table_ids\": [\"tblqiWbEHKCHOqWd\", \"tbl8DhUNQDpj9gDK\"]}",
+      "response": {
+        "code": 0,
+        "data": {},
+        "msg": "success"
+      }
+    },
+    {
+      "_probe": "q4-comments-copy-sweep",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/tables",
+      "_method": "GET",
+      "_http_status": 200,
+      "_lark_code": 0,
+      "_lark_msg": "success",
+      "_verdict": "OK",
+      "_note": "final tables list (residue check) :: body=null",
+      "response": {
+        "code": 0,
+        "data": {
+          "has_more": false,
+          "items": [
+            {
+              "name": "Table",
+              "revision": 27,
+              "table_id": "tblYtWUpf5q944Ao"
+            },
+            {
+              "name": "Table 2",
+              "revision": 25,
+              "table_id": "tblvHhs6KA9QYNCo"
+            }
+          ],
+          "page_token": "tblvHhs6KA9QYNCo",
+          "total": 2
+        },
+        "msg": "success"
+      }
+    }
+  ]
+}

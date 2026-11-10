@@ -1,0 +1,51 @@
+{
+  "_probe": "sub-a",
+  "_endpoint": ".../apps/BaseScratchExample000000001/tables/{t}/views[/{v}]",
+  "_method": "GET",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": null,
+  "_verdict": "OK",
+  "_note": "Q2a: what `property.hierarchy_config` reads as on PRODUCT-BUILT views — via BOTH the view LIST and the single-view GET",
+  "response": {
+    "code": 0,
+    "data": {
+      "tables": {
+        "tblYtWUpf5q944Ao": {
+          "table_name_present": true,
+          "views": [
+            {
+              "view_id": "vewN5yTV1k",
+              "view_type": "grid",
+              "list_property": null,
+              "get_code": 0,
+              "get_view": {
+                "property": null,
+                "view_id": "vewN5yTV1k",
+                "view_name": "Grid",
+                "view_type": "grid"
+              }
+            }
+          ]
+        },
+        "tblvHhs6KA9QYNCo": {
+          "table_name_present": true,
+          "views": [
+            {
+              "view_id": "vewHtny0oX",
+              "view_type": "grid",
+              "list_property": null,
+              "get_code": 0,
+              "get_view": {
+                "property": null,
+                "view_id": "vewHtny0oX",
+                "view_name": "Grid",
+                "view_type": "grid"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "n": 760,
+  "label": "LD420 leg2 I read back the member list after the self re add attempt",
+  "credential_pair": "WRITE",
+  "request": {
+    "method": "GET",
+    "path": "/open-apis/drive/v1/permissions/Example8aed997554e84478fc85/members?type=docx",
+    "body": null,
+    "headers": [
+      "Authorization: Bearer <redacted>"
+    ]
+  },
+  "http_status": 200,
+  "response": {
+    "code": 0,
+    "data": {
+      "items": [
+        {
+          "member_id": "ou_exampleowner00000000000000000001",
+          "member_type": "openid",
+          "perm": "full_access",
+          "perm_type": "container"
+        }
+      ]
+    },
+    "msg": "Success"
+  }
+}

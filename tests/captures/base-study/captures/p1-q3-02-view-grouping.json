@@ -1,0 +1,126 @@
+{
+  "_probe": "q3-filter-sort-group",
+  "view_id": "vewVXf7FgP",
+  "steps": [
+    {
+      "_probe": "q3-filter-sort-group",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/tables/tblYtWUpf5q944Ao/views",
+      "_method": "POST",
+      "_http_status": 200,
+      "_lark_code": 0,
+      "_lark_msg": "success",
+      "_verdict": "OK",
+      "_note": "create probe grid view :: body={\"view_name\": \"p1g-Grouped\", \"view_type\": \"grid\"}",
+      "response": {
+        "code": 0,
+        "data": {
+          "view": {
+            "view_id": "vewVXf7FgP",
+            "view_name": "p1g-Grouped",
+            "view_type": "grid"
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "_probe": "q3-filter-sort-group",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/tables/tblYtWUpf5q944Ao/views/vewVXf7FgP",
+      "_method": "PATCH",
+      "_http_status": 200,
+      "_lark_code": 0,
+      "_lark_msg": "success",
+      "_verdict": "OK",
+      "_note": "PATCH view property.group_info :: body={\"property\": {\"group_info\": [{\"field_id\": \"fldbbSDMOY\", \"desc\": false}]}}",
+      "response": {
+        "code": 0,
+        "data": {
+          "view": {
+            "property": null,
+            "view_id": "vewVXf7FgP",
+            "view_name": "p1g-Grouped",
+            "view_type": "grid"
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "_probe": "q3-filter-sort-group",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/tables/tblYtWUpf5q944Ao/views/vewVXf7FgP",
+      "_method": "PATCH",
+      "_http_status": 200,
+      "_lark_code": 0,
+      "_lark_msg": "success",
+      "_verdict": "OK",
+      "_note": "PATCH view property.groups :: body={\"property\": {\"groups\": [{\"field_id\": \"fldbbSDMOY\", \"desc\": false}]}}",
+      "response": {
+        "code": 0,
+        "data": {
+          "view": {
+            "property": null,
+            "view_id": "vewVXf7FgP",
+            "view_name": "p1g-Grouped",
+            "view_type": "grid"
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "_probe": "q3-filter-sort-group",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/tables/tblYtWUpf5q944Ao/views/vewVXf7FgP",
+      "_method": "PATCH",
+      "_http_status": 400,
+      "_lark_code": 1254001,
+      "_lark_msg": "The request body is wrong, please modify it.",
+      "_verdict": "DENIED_OR_ERROR",
+      "_note": "PATCH view property.filter_info (P0 said body-shape error) :: body={\"property\": {\"filter_info\": {\"conjunction\": \"and\", \"conditions\": [{\"field_id\": \"fldbbSDMOY\", \"operator\": \"isNotEmpty\", \"value\": \"\"}]}}}",
+      "response": {
+        "code": 1254001,
+        "msg": "The request body is wrong, please modify it.",
+        "error": {
+          "message": "Invalid request parameter: 'property.filter_info.conditions[0].value'. Correct format : when the condition is 'isEmpty' or 'isNotEmpty', the corresponding value must be empty. Please check and modify accordingly.",
+          "log_id": "202608031007034E55E29C62863040A7E6"
+        }
+      }
+    },
+    {
+      "_probe": "q3-filter-sort-group",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/tables/tblYtWUpf5q944Ao/views/vewVXf7FgP",
+      "_method": "GET",
+      "_http_status": 200,
+      "_lark_code": 0,
+      "_lark_msg": "success",
+      "_verdict": "OK",
+      "_note": "GET view back :: body=null",
+      "response": {
+        "code": 0,
+        "data": {
+          "view": {
+            "property": null,
+            "view_id": "vewVXf7FgP",
+            "view_name": "p1g-Grouped",
+            "view_type": "grid"
+          }
+        },
+        "msg": "success"
+      }
+    },
+    {
+      "_probe": "q3-filter-sort-group",
+      "_endpoint": "/open-apis/bitable/v1/apps/BaseScratchExample000000001/tables/tblYtWUpf5q944Ao/views/vewVXf7FgP",
+      "_method": "DELETE",
+      "_http_status": 200,
+      "_lark_code": 0,
+      "_lark_msg": "success",
+      "_verdict": "OK",
+      "_note": "delete probe view :: body=null",
+      "response": {
+        "code": 0,
+        "data": {},
+        "msg": "success"
+      }
+    }
+  ]
+}

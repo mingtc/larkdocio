@@ -1,0 +1,265 @@
+{
+  "_probe": "15-dispatch-dry-run",
+  "_note": "Which larkdocio reader WOULD take each child today. NO document was read.",
+  "_read_only": true,
+  "_method": "GET",
+  "_verdicts": {
+    "N/A_STRUCTURE": 6,
+    "READABLE_TODAY": 27,
+    "NO_READER_AT_ALL": 2
+  },
+  "_url_vocabulary_today": [
+    "docs",
+    "docx",
+    "wiki",
+    "sheets",
+    "base"
+  ],
+  "rows": [
+    {
+      "name": "Example Folder 01",
+      "type": "folder",
+      "would_use": "— (structure, not a document)",
+      "verdict": "N/A_STRUCTURE",
+      "blocked_by": null
+    },
+    {
+      "name": "Example Folder 02",
+      "type": "folder",
+      "would_use": "— (structure, not a document)",
+      "verdict": "N/A_STRUCTURE",
+      "blocked_by": null
+    },
+    {
+      "name": "Example Folder 03",
+      "type": "folder",
+      "would_use": "— (structure, not a document)",
+      "verdict": "N/A_STRUCTURE",
+      "blocked_by": null
+    },
+    {
+      "name": "Example Document 04",
+      "type": "docx",
+      "would_use": "docx reader (read/download.py, URL-only)",
+      "verdict": "READABLE_TODAY",
+      "blocked_by": "common/url.py has no drive/folder vocabulary — the ENUMERATION is unreachable from a URL today"
+    },
+    {
+      "name": "Example Document 05",
+      "type": "docx",
+      "would_use": "docx reader (read/download.py, URL-only)",
+      "verdict": "READABLE_TODAY",
+      "blocked_by": "common/url.py has no drive/folder vocabulary — the ENUMERATION is unreachable from a URL today"
+    },
+    {
+      "name": "Example Document 06",
+      "type": "docx",
+      "would_use": "docx reader (read/download.py, URL-only)",
+      "verdict": "READABLE_TODAY",
+      "blocked_by": "common/url.py has no drive/folder vocabulary — the ENUMERATION is unreachable from a URL today"
+    },
+    {
+      "name": "Example Document 07",
+      "type": "docx",
+      "would_use": "docx reader (read/download.py, URL-only)",
+      "verdict": "READABLE_TODAY",
+      "blocked_by": "common/url.py has no drive/folder vocabulary — the ENUMERATION is unreachable from a URL today"
+    },
+    {
+      "name": "Example Document 08",
+      "type": "docx",
+      "would_use": "docx reader (read/download.py, URL-only)",
+      "verdict": "READABLE_TODAY",
+      "blocked_by": "common/url.py has no drive/folder vocabulary — the ENUMERATION is unreachable from a URL today"
+    },
+    {
+      "name": "Example Document 09",
+      "type": "docx",
+      "would_use": "docx reader (read/download.py, URL-only)",
+      "verdict": "READABLE_TODAY",
+      "blocked_by": "common/url.py has no drive/folder vocabulary — the ENUMERATION is unreachable from a URL today"
+    },
+    {
+      "name": "Example Folder 10",
+      "type": "folder",
+      "would_use": "— (structure, not a document)",
+      "verdict": "N/A_STRUCTURE",
+      "blocked_by": null
+    },
+    {
+      "name": "Example Document 11",
+      "type": "docx",
+      "would_use": "docx reader (read/download.py, URL-only)",
+      "verdict": "READABLE_TODAY",
+      "blocked_by": "common/url.py has no drive/folder vocabulary — the ENUMERATION is unreachable from a URL today"
+    },
+    {
+      "name": "Example Document 12",
+      "type": "docx",
+      "would_use": "docx reader (read/download.py, URL-only)",
+      "verdict": "READABLE_TODAY",
+      "blocked_by": "common/url.py has no drive/folder vocabulary — the ENUMERATION is unreachable from a URL today"
+    },
+    {
+      "name": "Example Document 13",
+      "type": "docx",
+      "would_use": "docx reader (read/download.py, URL-only)",
+      "verdict": "READABLE_TODAY",
+      "blocked_by": "common/url.py has no drive/folder vocabulary — the ENUMERATION is unreachable from a URL today"
+    },
+    {
+      "name": "Example Document 14",
+      "type": "docx",
+      "would_use": "docx reader (read/download.py, URL-only)",
+      "verdict": "READABLE_TODAY",
+      "blocked_by": "common/url.py has no drive/folder vocabulary — the ENUMERATION is unreachable from a URL today"
+    },
+    {
+      "name": "Example Document 15",
+      "type": "docx",
+      "would_use": "docx reader (read/download.py, URL-only)",
+      "verdict": "READABLE_TODAY",
+      "blocked_by": "common/url.py has no drive/folder vocabulary — the ENUMERATION is unreachable from a URL today"
+    },
+    {
+      "name": "Example Document 16",
+      "type": "docx",
+      "would_use": "docx reader (read/download.py, URL-only)",
+      "verdict": "READABLE_TODAY",
+      "blocked_by": "common/url.py has no drive/folder vocabulary — the ENUMERATION is unreachable from a URL today"
+    },
+    {
+      "name": "Example Folder 17",
+      "type": "folder",
+      "would_use": "— (structure, not a document)",
+      "verdict": "N/A_STRUCTURE",
+      "blocked_by": null
+    },
+    {
+      "name": "Example Folder 18",
+      "type": "folder",
+      "would_use": "— (structure, not a document)",
+      "verdict": "N/A_STRUCTURE",
+      "blocked_by": null
+    },
+    {
+      "name": "Example Document 19",
+      "type": "docx",
+      "would_use": "docx reader (read/download.py, URL-only)",
+      "verdict": "READABLE_TODAY",
+      "blocked_by": "common/url.py has no drive/folder vocabulary — the ENUMERATION is unreachable from a URL today"
+    },
+    {
+      "name": "Example Document 20",
+      "type": "docx",
+      "would_use": "docx reader (read/download.py, URL-only)",
+      "verdict": "READABLE_TODAY",
+      "blocked_by": "common/url.py has no drive/folder vocabulary — the ENUMERATION is unreachable from a URL today"
+    },
+    {
+      "name": "Example Document 21",
+      "type": "docx",
+      "would_use": "docx reader (read/download.py, URL-only)",
+      "verdict": "READABLE_TODAY",
+      "blocked_by": "common/url.py has no drive/folder vocabulary — the ENUMERATION is unreachable from a URL today"
+    },
+    {
+      "name": "Example Document 22",
+      "type": "docx",
+      "would_use": "docx reader (read/download.py, URL-only)",
+      "verdict": "READABLE_TODAY",
+      "blocked_by": "common/url.py has no drive/folder vocabulary — the ENUMERATION is unreachable from a URL today"
+    },
+    {
+      "name": "Example Document 23",
+      "type": "docx",
+      "would_use": "docx reader (read/download.py, URL-only)",
+      "verdict": "READABLE_TODAY",
+      "blocked_by": "common/url.py has no drive/folder vocabulary — the ENUMERATION is unreachable from a URL today"
+    },
+    {
+      "name": "Example Document 24",
+      "type": "docx",
+      "would_use": "docx reader (read/download.py, URL-only)",
+      "verdict": "READABLE_TODAY",
+      "blocked_by": "common/url.py has no drive/folder vocabulary — the ENUMERATION is unreachable from a URL today"
+    },
+    {
+      "name": "Example Document 25",
+      "type": "docx",
+      "would_use": "docx reader (read/download.py, URL-only)",
+      "verdict": "READABLE_TODAY",
+      "blocked_by": "common/url.py has no drive/folder vocabulary — the ENUMERATION is unreachable from a URL today"
+    },
+    {
+      "name": "Example Document 26",
+      "type": "docx",
+      "would_use": "docx reader (read/download.py, URL-only)",
+      "verdict": "READABLE_TODAY",
+      "blocked_by": "common/url.py has no drive/folder vocabulary — the ENUMERATION is unreachable from a URL today"
+    },
+    {
+      "name": "Example Document 27",
+      "type": "docx",
+      "would_use": "docx reader (read/download.py, URL-only)",
+      "verdict": "READABLE_TODAY",
+      "blocked_by": "common/url.py has no drive/folder vocabulary — the ENUMERATION is unreachable from a URL today"
+    },
+    {
+      "name": "Example Document 28",
+      "type": "docx",
+      "would_use": "docx reader (read/download.py, URL-only)",
+      "verdict": "READABLE_TODAY",
+      "blocked_by": "common/url.py has no drive/folder vocabulary — the ENUMERATION is unreachable from a URL today"
+    },
+    {
+      "name": "Example Document 29",
+      "type": "docx",
+      "would_use": "docx reader (read/download.py, URL-only)",
+      "verdict": "READABLE_TODAY",
+      "blocked_by": "common/url.py has no drive/folder vocabulary — the ENUMERATION is unreachable from a URL today"
+    },
+    {
+      "name": "example-spec.yaml",
+      "type": "file",
+      "would_use": "— no reader; raw bytes via GET /drive/v1/files/:token/download",
+      "verdict": "NO_READER_AT_ALL",
+      "blocked_by": null
+    },
+    {
+      "name": "example-reference.html",
+      "type": "file",
+      "would_use": "— no reader; raw bytes via GET /drive/v1/files/:token/download",
+      "verdict": "NO_READER_AT_ALL",
+      "blocked_by": null
+    },
+    {
+      "name": "Example Document 30",
+      "type": "docx",
+      "would_use": "docx reader (read/download.py, URL-only)",
+      "verdict": "READABLE_TODAY",
+      "blocked_by": "common/url.py has no drive/folder vocabulary — the ENUMERATION is unreachable from a URL today"
+    },
+    {
+      "name": "Example Document 31",
+      "type": "docx",
+      "would_use": "docx reader (read/download.py, URL-only)",
+      "verdict": "READABLE_TODAY",
+      "blocked_by": "common/url.py has no drive/folder vocabulary — the ENUMERATION is unreachable from a URL today"
+    },
+    {
+      "name": "Example Document 32",
+      "type": "docx",
+      "would_use": "docx reader (read/download.py, URL-only)",
+      "verdict": "READABLE_TODAY",
+      "blocked_by": "common/url.py has no drive/folder vocabulary — the ENUMERATION is unreachable from a URL today"
+    },
+    {
+      "name": "Example Document 33",
+      "type": "docx",
+      "would_use": "docx reader (read/download.py, URL-only)",
+      "verdict": "READABLE_TODAY",
+      "blocked_by": "common/url.py has no drive/folder vocabulary — the ENUMERATION is unreachable from a URL today"
+    }
+  ]
+}

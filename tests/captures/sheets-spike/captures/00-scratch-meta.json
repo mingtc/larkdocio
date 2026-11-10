@@ -1,0 +1,12 @@
+{
+  "code": 0,
+  "data": {
+    "spreadsheet": {
+      "owner_id": "ou_exampleowner00000000000000000001",
+      "title": "Larkdocio Scratch Sheet",
+      "token": "SheetScratchExample00000001",
+      "url": "https://your-domain.larksuite.com/sheets/SheetScratchExample00000001"
+    }
+  },
+  "msg": ""
+}

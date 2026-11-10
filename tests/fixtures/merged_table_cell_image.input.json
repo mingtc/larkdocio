@@ -1,0 +1,139 @@
+[
+  {
+    "block_id": "root",
+    "parent_id": "doc",
+    "block_type": 1,
+    "page": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Doc Title"
+          }
+        }
+      ]
+    },
+    "children": [
+      "mci"
+    ]
+  },
+  {
+    "block_id": "mci",
+    "parent_id": "root",
+    "block_type": 31,
+    "table": {
+      "cells": [
+        "mci0",
+        "mci1",
+        "mci2",
+        "mci3"
+      ],
+      "property": {
+        "column_size": 2,
+        "column_width": [
+          100,
+          100
+        ],
+        "header_row": false,
+        "merge_info": [
+          {
+            "col_span": 2,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          }
+        ],
+        "row_size": 2
+      }
+    },
+    "children": [
+      "mci0",
+      "mci1",
+      "mci2",
+      "mci3"
+    ]
+  },
+  {
+    "block_id": "mci0",
+    "parent_id": "mci",
+    "block_type": 32,
+    "table_cell": {},
+    "children": [
+      "mci0i"
+    ]
+  },
+  {
+    "block_id": "mci0i",
+    "parent_id": "mci0",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 60,
+      "scale": 1,
+      "token": "Example5b74e41794c11195d4e5",
+      "width": 120
+    }
+  },
+  {
+    "block_id": "mci1",
+    "parent_id": "mci",
+    "block_type": 32,
+    "table_cell": {},
+    "children": []
+  },
+  {
+    "block_id": "mci2",
+    "parent_id": "mci",
+    "block_type": 32,
+    "table_cell": {},
+    "children": [
+      "mci2t"
+    ]
+  },
+  {
+    "block_id": "mci2t",
+    "parent_id": "mci2",
+    "block_type": 2,
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Variant A"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "block_id": "mci3",
+    "parent_id": "mci",
+    "block_type": 32,
+    "table_cell": {},
+    "children": [
+      "mci3t"
+    ]
+  },
+  {
+    "block_id": "mci3t",
+    "parent_id": "mci3",
+    "block_type": 2,
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Light"
+          }
+        }
+      ]
+    }
+  }
+]

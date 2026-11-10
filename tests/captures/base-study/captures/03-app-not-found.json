@@ -1,0 +1,15 @@
+{
+  "_probe": "03",
+  "_endpoint": "/open-apis/bitable/v1/apps/basNONEXISTENTTOKEN00",
+  "_method": "GET",
+  "_http_status": 400,
+  "_lark_code": 91402,
+  "_lark_msg": "NOTEXIST",
+  "_verdict": "DENIED_OR_ERROR",
+  "_note": "the not-found denial shape — the oracle probe 06 will use to prove the disposable is really gone",
+  "response": {
+    "code": 91402,
+    "msg": "NOTEXIST",
+    "data": {}
+  }
+}

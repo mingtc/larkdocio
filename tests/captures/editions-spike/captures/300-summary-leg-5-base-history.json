@@ -1,0 +1,192 @@
+{
+  "probe": "LD-404 leg 5 — Base record-level edit history",
+  "target_policy": "a Base this harness created and deleted (D-12); scratch Base untouched",
+  "redaction": "Authorization header never captured; no app id/secret written to disk",
+  "observed": {
+    "fixture": {
+      "app_token_created": true,
+      "table_id": "tbl5yMGlFW3ucgan",
+      "record_edits": 2
+    },
+    "routes": [
+      {
+        "label": "leg5 record GET with automatic_fields (the nearest SERVED thing)",
+        "path": "/open-apis/bitable/v1/apps/Example22d60aa4364d34f1f661/tables/tbl5yMGlFW3ucgan/records/recvrOunHbPJqG?automatic_fields=true",
+        "http": 200,
+        "code": 0,
+        "msg": "success",
+        "data_keys": [
+          "record"
+        ]
+      },
+      {
+        "label": "leg5 spec records/{id}/history",
+        "path": "/open-apis/bitable/v1/apps/Example22d60aa4364d34f1f661/tables/tbl5yMGlFW3ucgan/records/recvrOunHbPJqG/history",
+        "http": 404,
+        "code": null,
+        "msg": null,
+        "data_keys": null
+      },
+      {
+        "label": "leg5 spec records/{id}/histories",
+        "path": "/open-apis/bitable/v1/apps/Example22d60aa4364d34f1f661/tables/tbl5yMGlFW3ucgan/records/recvrOunHbPJqG/histories",
+        "http": 404,
+        "code": null,
+        "msg": null,
+        "data_keys": null
+      },
+      {
+        "label": "leg5 spec records/{id}/revisions",
+        "path": "/open-apis/bitable/v1/apps/Example22d60aa4364d34f1f661/tables/tbl5yMGlFW3ucgan/records/recvrOunHbPJqG/revisions",
+        "http": 404,
+        "code": null,
+        "msg": null,
+        "data_keys": null
+      },
+      {
+        "label": "leg5 spec table/record_histories",
+        "path": "/open-apis/bitable/v1/apps/Example22d60aa4364d34f1f661/tables/tbl5yMGlFW3ucgan/record_histories?record_id=recvrOunHbPJqG",
+        "http": 404,
+        "code": null,
+        "msg": null,
+        "data_keys": null
+      },
+      {
+        "label": "leg5 spec table/histories",
+        "path": "/open-apis/bitable/v1/apps/Example22d60aa4364d34f1f661/tables/tbl5yMGlFW3ucgan/histories",
+        "http": 404,
+        "code": null,
+        "msg": null,
+        "data_keys": null
+      },
+      {
+        "label": "leg5 spec app/histories",
+        "path": "/open-apis/bitable/v1/apps/Example22d60aa4364d34f1f661/histories",
+        "http": 404,
+        "code": null,
+        "msg": null,
+        "data_keys": null
+      },
+      {
+        "label": "leg5 drive file-versions on a BASE (does the versions family cover bitable)",
+        "path": "/open-apis/drive/v1/files/Example22d60aa4364d34f1f661/versions?obj_type=bitable&page_size=10",
+        "http": 400,
+        "code": 1068411,
+        "msg": "params error, param [obj_type] is wrong",
+        "data_keys": null
+      },
+      {
+        "label": "leg5 drive statistics on a Base",
+        "path": "/open-apis/drive/v1/files/Example22d60aa4364d34f1f661/statistics?file_type=bitable",
+        "http": 200,
+        "code": 0,
+        "msg": "Success",
+        "data_keys": [
+          "file_token",
+          "file_type",
+          "statistics"
+        ]
+      }
+    ],
+    "record_automatic_fields": {
+      "Title": "v3 value"
+    }
+  },
+  "teardown": {
+    "app_token": "Example22d60aa4364d34f1f661",
+    "delete_code": 0,
+    "requery_code": 1002,
+    "requery_msg": "note has been deleted",
+    "gone": true
+  },
+  "steps_index": [
+    {
+      "n": 301,
+      "label": "leg5 record GET with automatic_fields (the nearest SERVED thing)",
+      "path": "/open-apis/bitable/v1/apps/Example22d60aa4364d34f1f661/tables/tbl5yMGlFW3ucgan/records/recvrOunHbPJqG?automatic_fields=true",
+      "http": 200,
+      "code": 0,
+      "msg": "success"
+    },
+    {
+      "n": 302,
+      "label": "leg5 spec records/{id}/history",
+      "path": "/open-apis/bitable/v1/apps/Example22d60aa4364d34f1f661/tables/tbl5yMGlFW3ucgan/records/recvrOunHbPJqG/history",
+      "http": 404,
+      "code": null,
+      "msg": null
+    },
+    {
+      "n": 303,
+      "label": "leg5 spec records/{id}/histories",
+      "path": "/open-apis/bitable/v1/apps/Example22d60aa4364d34f1f661/tables/tbl5yMGlFW3ucgan/records/recvrOunHbPJqG/histories",
+      "http": 404,
+      "code": null,
+      "msg": null
+    },
+    {
+      "n": 304,
+      "label": "leg5 spec records/{id}/revisions",
+      "path": "/open-apis/bitable/v1/apps/Example22d60aa4364d34f1f661/tables/tbl5yMGlFW3ucgan/records/recvrOunHbPJqG/revisions",
+      "http": 404,
+      "code": null,
+      "msg": null
+    },
+    {
+      "n": 305,
+      "label": "leg5 spec table/record_histories",
+      "path": "/open-apis/bitable/v1/apps/Example22d60aa4364d34f1f661/tables/tbl5yMGlFW3ucgan/record_histories?record_id=recvrOunHbPJqG",
+      "http": 404,
+      "code": null,
+      "msg": null
+    },
+    {
+      "n": 306,
+      "label": "leg5 spec table/histories",
+      "path": "/open-apis/bitable/v1/apps/Example22d60aa4364d34f1f661/tables/tbl5yMGlFW3ucgan/histories",
+      "http": 404,
+      "code": null,
+      "msg": null
+    },
+    {
+      "n": 307,
+      "label": "leg5 spec app/histories",
+      "path": "/open-apis/bitable/v1/apps/Example22d60aa4364d34f1f661/histories",
+      "http": 404,
+      "code": null,
+      "msg": null
+    },
+    {
+      "n": 308,
+      "label": "leg5 drive file-versions on a BASE (does the versions family cover bitable)",
+      "path": "/open-apis/drive/v1/files/Example22d60aa4364d34f1f661/versions?obj_type=bitable&page_size=10",
+      "http": 400,
+      "code": 1068411,
+      "msg": "params error, param [obj_type] is wrong"
+    },
+    {
+      "n": 309,
+      "label": "leg5 drive statistics on a Base",
+      "path": "/open-apis/drive/v1/files/Example22d60aa4364d34f1f661/statistics?file_type=bitable",
+      "http": 200,
+      "code": 0,
+      "msg": "Success"
+    },
+    {
+      "n": 310,
+      "label": "leg5 teardown delete the disposable Base",
+      "path": "/open-apis/drive/v1/files/Example22d60aa4364d34f1f661?type=bitable",
+      "http": 200,
+      "code": 0,
+      "msg": "success"
+    },
+    {
+      "n": 311,
+      "label": "leg5 teardown re-query the Base",
+      "path": "/open-apis/bitable/v1/apps/Example22d60aa4364d34f1f661",
+      "http": 200,
+      "code": 1002,
+      "msg": "note has been deleted"
+    }
+  ]
+}

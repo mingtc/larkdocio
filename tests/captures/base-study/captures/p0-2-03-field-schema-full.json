@@ -1,0 +1,210 @@
+{
+  "_probe": "p2",
+  "_endpoint": ".../tables/{main,ref}/fields",
+  "_method": "GET",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": null,
+  "_verdict": "OK",
+  "_note": "the authoritative READ-BACK property shape for every field type this probe could create (registry source material)",
+  "response": {
+    "code": 0,
+    "data": {
+      "main": [
+        {
+          "field_id": "fldr2hGnl2",
+          "field_name": "多行文本",
+          "is_extend": false,
+          "is_primary": true,
+          "is_synced": false,
+          "property": null,
+          "type": 1,
+          "ui_type": "Text"
+        },
+        {
+          "field_id": "fldJk7MX7U",
+          "field_name": "SingleLinkOne",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "multiple": false,
+            "table_id": "tblauNkOg3QoDL99",
+            "table_name": "p0zoo-Ref-033103"
+          },
+          "type": 18,
+          "ui_type": "SingleLink"
+        },
+        {
+          "field_id": "fldjbKCzVT",
+          "field_name": "SingleLinkMany",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "multiple": true,
+            "table_id": "tblauNkOg3QoDL99",
+            "table_name": "p0zoo-Ref-033103"
+          },
+          "type": 18,
+          "ui_type": "SingleLink"
+        },
+        {
+          "field_id": "fldWt26ekq",
+          "field_name": "DuplexLink",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "back_field_id": "fldrYKsT0L",
+            "back_field_name": "p0zoo-Main-033103-DuplexLink",
+            "multiple": true,
+            "table_id": "tblauNkOg3QoDL99",
+            "table_name": "p0zoo-Ref-033103"
+          },
+          "type": 21,
+          "ui_type": "DuplexLink"
+        },
+        {
+          "field_id": "fldkjxis90",
+          "field_name": "ModifiedUser",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": null,
+          "type": 1004,
+          "ui_type": "ModifiedUser"
+        },
+        {
+          "field_id": "fldmuA67bP",
+          "field_name": "ModifiedUser2",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": null,
+          "type": 1004,
+          "ui_type": "ModifiedUser"
+        },
+        {
+          "field_id": "fldWFiP7S4",
+          "field_name": "Rating",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "formatter": "0",
+            "max": 5,
+            "min": 0,
+            "rating": {
+              "symbol": "star"
+            }
+          },
+          "type": 2,
+          "ui_type": "Rating"
+        },
+        {
+          "field_id": "fld3alKVTK",
+          "field_name": "Progress",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "formatter": "0%",
+            "max": 1,
+            "min": 0
+          },
+          "type": 2,
+          "ui_type": "Progress"
+        },
+        {
+          "field_id": "fldFTlp8Q6",
+          "field_name": "UserM",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "multiple": true
+          },
+          "type": 11,
+          "ui_type": "User"
+        },
+        {
+          "field_id": "fldB1r7Qw2",
+          "field_name": "Attach",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": null,
+          "type": 17,
+          "ui_type": "Attachment"
+        },
+        {
+          "field_id": "fld1xYXAm5",
+          "field_name": "Loc",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "location": {
+              "input_type": "not_limit"
+            }
+          },
+          "type": 22,
+          "ui_type": "Location"
+        },
+        {
+          "field_id": "fldE8DvwAP",
+          "field_name": "Chat",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "multiple": true
+          },
+          "type": 23,
+          "ui_type": "GroupChat"
+        }
+      ],
+      "ref": [
+        {
+          "field_id": "fldnK9w8MX",
+          "field_name": "多行文本",
+          "is_extend": false,
+          "is_primary": true,
+          "is_synced": false,
+          "property": null,
+          "type": 1,
+          "ui_type": "Text"
+        },
+        {
+          "field_id": "fldotiRXTi",
+          "field_name": "RefNum",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "formatter": "0"
+          },
+          "type": 2,
+          "ui_type": "Number"
+        },
+        {
+          "field_id": "fldrYKsT0L",
+          "field_name": "p0zoo-Main-033103-DuplexLink",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "back_field_id": "fldWt26ekq",
+            "back_field_name": "DuplexLink",
+            "multiple": true,
+            "table_id": "tblMWxK1iJYvK56l",
+            "table_name": "p0zoo-Main-033103"
+          },
+          "type": 21,
+          "ui_type": "DuplexLink"
+        }
+      ]
+    }
+  }
+}

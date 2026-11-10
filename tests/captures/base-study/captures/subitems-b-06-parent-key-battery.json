@@ -1,0 +1,319 @@
+{
+  "_probe": "sub-b",
+  "_endpoint": "/open-apis/bitable/v1/apps/Exampleb735d410075fcc1c89ab/tables/tbljnCMElmG4kiQZ/records",
+  "_method": "POST",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": null,
+  "_verdict": "OK",
+  "_note": "Q3 + R12: one record CREATE per candidate parent key, each carrying the parent's record_id, PLUS the bogus-key control in the identical body shape. The finding is the DIFFERENCE.",
+  "response": {
+    "code": 0,
+    "data": {
+      "keys": {
+        "parent_id": {
+          "is_control": false,
+          "request_body_keys": [
+            "fields",
+            "parent_id"
+          ],
+          "code": 0,
+          "msg": "success",
+          "error_message": null,
+          "created_record_keys": [
+            "fields",
+            "id",
+            "record_id"
+          ],
+          "readback_record": {
+            "fields": {
+              "Attachment": null,
+              "Date": null,
+              "SelfDuplexLink": [
+                {
+                  "record_ids": null,
+                  "table_id": "tbljnCMElmG4kiQZ",
+                  "text": null,
+                  "text_arr": [],
+                  "type": "text"
+                }
+              ],
+              "SelfSingleLink": [
+                {
+                  "record_ids": null,
+                  "table_id": "tbljnCMElmG4kiQZ",
+                  "text": null,
+                  "text_arr": [],
+                  "type": "text"
+                }
+              ],
+              "Single option": null,
+              "Text": "probe-parent_id"
+            },
+            "id": "recvrkjtLHRrHt",
+            "record_id": "recvrkjtLHRrHt"
+          }
+        },
+        "parent_record_id": {
+          "is_control": false,
+          "request_body_keys": [
+            "fields",
+            "parent_record_id"
+          ],
+          "code": 0,
+          "msg": "success",
+          "error_message": null,
+          "created_record_keys": [
+            "fields",
+            "id",
+            "record_id"
+          ],
+          "readback_record": {
+            "fields": {
+              "Attachment": null,
+              "Date": null,
+              "SelfDuplexLink": [
+                {
+                  "record_ids": null,
+                  "table_id": "tbljnCMElmG4kiQZ",
+                  "text": null,
+                  "text_arr": [],
+                  "type": "text"
+                }
+              ],
+              "SelfSingleLink": [
+                {
+                  "record_ids": null,
+                  "table_id": "tbljnCMElmG4kiQZ",
+                  "text": null,
+                  "text_arr": [],
+                  "type": "text"
+                }
+              ],
+              "Single option": null,
+              "Text": "probe-parent_record_id"
+            },
+            "id": "recvrukvqk1I2e",
+            "record_id": "recvrukvqk1I2e"
+          }
+        },
+        "parent": {
+          "is_control": false,
+          "request_body_keys": [
+            "fields",
+            "parent"
+          ],
+          "code": 0,
+          "msg": "success",
+          "error_message": null,
+          "created_record_keys": [
+            "fields",
+            "id",
+            "record_id"
+          ],
+          "readback_record": {
+            "fields": {
+              "Attachment": null,
+              "Date": null,
+              "SelfDuplexLink": [
+                {
+                  "record_ids": null,
+                  "table_id": "tbljnCMElmG4kiQZ",
+                  "text": null,
+                  "text_arr": [],
+                  "type": "text"
+                }
+              ],
+              "SelfSingleLink": [
+                {
+                  "record_ids": null,
+                  "table_id": "tbljnCMElmG4kiQZ",
+                  "text": null,
+                  "text_arr": [],
+                  "type": "text"
+                }
+              ],
+              "Single option": null,
+              "Text": "probe-parent"
+            },
+            "id": "recvrmms3U3QJk",
+            "record_id": "recvrmms3U3QJk"
+          }
+        },
+        "sub_item_parent": {
+          "is_control": false,
+          "request_body_keys": [
+            "fields",
+            "sub_item_parent"
+          ],
+          "code": 0,
+          "msg": "success",
+          "error_message": null,
+          "created_record_keys": [
+            "fields",
+            "id",
+            "record_id"
+          ],
+          "readback_record": {
+            "fields": {
+              "Attachment": null,
+              "Date": null,
+              "SelfDuplexLink": [
+                {
+                  "record_ids": null,
+                  "table_id": "tbljnCMElmG4kiQZ",
+                  "text": null,
+                  "text_arr": [],
+                  "type": "text"
+                }
+              ],
+              "SelfSingleLink": [
+                {
+                  "record_ids": null,
+                  "table_id": "tbljnCMElmG4kiQZ",
+                  "text": null,
+                  "text_arr": [],
+                  "type": "text"
+                }
+              ],
+              "Single option": null,
+              "Text": "probe-sub_item_parent"
+            },
+            "id": "recvruxjhh86be",
+            "record_id": "recvruxjhh86be"
+          }
+        },
+        "parent_record": {
+          "is_control": false,
+          "request_body_keys": [
+            "fields",
+            "parent_record"
+          ],
+          "code": 0,
+          "msg": "success",
+          "error_message": null,
+          "created_record_keys": [
+            "fields",
+            "id",
+            "record_id"
+          ],
+          "readback_record": {
+            "fields": {
+              "Attachment": null,
+              "Date": null,
+              "SelfDuplexLink": [
+                {
+                  "record_ids": null,
+                  "table_id": "tbljnCMElmG4kiQZ",
+                  "text": null,
+                  "text_arr": [],
+                  "type": "text"
+                }
+              ],
+              "SelfSingleLink": [
+                {
+                  "record_ids": null,
+                  "table_id": "tbljnCMElmG4kiQZ",
+                  "text": null,
+                  "text_arr": [],
+                  "type": "text"
+                }
+              ],
+              "Single option": null,
+              "Text": "probe-parent_record"
+            },
+            "id": "recvrwxgTpcic1",
+            "record_id": "recvrwxgTpcic1"
+          }
+        },
+        "hierarchy_parent_id": {
+          "is_control": false,
+          "request_body_keys": [
+            "fields",
+            "hierarchy_parent_id"
+          ],
+          "code": 0,
+          "msg": "success",
+          "error_message": null,
+          "created_record_keys": [
+            "fields",
+            "id",
+            "record_id"
+          ],
+          "readback_record": {
+            "fields": {
+              "Attachment": null,
+              "Date": null,
+              "SelfDuplexLink": [
+                {
+                  "record_ids": null,
+                  "table_id": "tbljnCMElmG4kiQZ",
+                  "text": null,
+                  "text_arr": [],
+                  "type": "text"
+                }
+              ],
+              "SelfSingleLink": [
+                {
+                  "record_ids": null,
+                  "table_id": "tbljnCMElmG4kiQZ",
+                  "text": null,
+                  "text_arr": [],
+                  "type": "text"
+                }
+              ],
+              "Single option": null,
+              "Text": "probe-hierarchy_parent_id"
+            },
+            "id": "recvrwhykhn7oQ",
+            "record_id": "recvrwhykhn7oQ"
+          }
+        },
+        "larkdocio_not_a_real_key": {
+          "is_control": true,
+          "request_body_keys": [
+            "fields",
+            "larkdocio_not_a_real_key"
+          ],
+          "code": 0,
+          "msg": "success",
+          "error_message": null,
+          "created_record_keys": [
+            "fields",
+            "id",
+            "record_id"
+          ],
+          "readback_record": {
+            "fields": {
+              "Attachment": null,
+              "Date": null,
+              "SelfDuplexLink": [
+                {
+                  "record_ids": null,
+                  "table_id": "tbljnCMElmG4kiQZ",
+                  "text": null,
+                  "text_arr": [],
+                  "type": "text"
+                }
+              ],
+              "SelfSingleLink": [
+                {
+                  "record_ids": null,
+                  "table_id": "tbljnCMElmG4kiQZ",
+                  "text": null,
+                  "text_arr": [],
+                  "type": "text"
+                }
+              ],
+              "Single option": null,
+              "Text": "probe-larkdocio_not_a_real_key"
+            },
+            "id": "recvrzouWbiLD5",
+            "record_id": "recvrzouWbiLD5"
+          }
+        }
+      },
+      "control_key": "larkdocio_not_a_real_key"
+    }
+  }
+}

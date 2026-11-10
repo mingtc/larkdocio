@@ -1,0 +1,67 @@
+[
+  {
+    "block_id": "root",
+    "parent_id": "doc",
+    "block_type": 1,
+    "page": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Doc Title"
+          }
+        }
+      ]
+    },
+    "children": [
+      "nb1"
+    ]
+  },
+  {
+    "block_id": "nb1",
+    "parent_id": "root",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Level 1 bullet"
+          }
+        }
+      ]
+    },
+    "children": [
+      "nb1a",
+      "nb1b"
+    ]
+  },
+  {
+    "block_id": "nb1a",
+    "parent_id": "nb1",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Nested one"
+          }
+        }
+      ]
+    },
+    "children": []
+  },
+  {
+    "block_id": "nb1b",
+    "parent_id": "nb1",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Nested two"
+          }
+        }
+      ]
+    },
+    "children": []
+  }
+]

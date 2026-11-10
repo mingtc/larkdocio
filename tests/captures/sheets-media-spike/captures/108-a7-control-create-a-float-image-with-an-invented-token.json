@@ -1,0 +1,27 @@
+{
+  "n": 108,
+  "probe": "LD-435 AC1/AC2 arm A — sheet_image + float images",
+  "label": "A7 CONTROL create a float image with an invented token",
+  "credential_pair": "WRITE",
+  "request": {
+    "method": "POST",
+    "path": "/open-apis/sheets/v3/spreadsheets/Exampleb31ebb6e3fd2fe5eddf0/sheets/61a0cd/float_images",
+    "body": {
+      "float_image_token": "boxbcnLD435InventedTokenNothingMinted",
+      "range": "61a0cd!C3:C3",
+      "width": 60,
+      "height": 60
+    },
+    "headers": [
+      "Authorization: Bearer <redacted>"
+    ]
+  },
+  "http_status": 500,
+  "response": {
+    "code": 1315203,
+    "msg": "Server Error, Retry Later",
+    "error": {
+      "log_id": "20260812224220B0C34594D9084704D6B1"
+    }
+  }
+}

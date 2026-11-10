@@ -1,0 +1,71 @@
+{
+  "_probe": "p1",
+  "_endpoint": "/open-apis/docx/v1/documents/Example4a927dea726487bbb77b/blocks/Example4a927dea726487bbb77b/children",
+  "_method": "POST",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": null,
+  "_verdict": "OK",
+  "_note": "CAN the API create an embedded-Base block at all, and in which shapes? (BLOCKS.md calls 18/53 'not-creatable')",
+  "response": {
+    "code": 0,
+    "data": {
+      "18_no_token": {
+        "request_child": {
+          "block_type": 18,
+          "bitable": {}
+        },
+        "http": 400,
+        "code": 1770001,
+        "msg": "invalid param",
+        "created_blocks": []
+      },
+      "18_view_type_only": {
+        "request_child": {
+          "block_type": 18,
+          "bitable": {
+            "view_type": 1
+          }
+        },
+        "http": 200,
+        "code": 0,
+        "msg": "success",
+        "created_blocks": [
+          {
+            "bitable": {
+              "token": "Examplec8af798413375ff9bc09_tbloLtUSiQNhlkYX"
+            },
+            "block_id": "doxlgExample94beef9c8c7d19e",
+            "block_type": 18,
+            "parent_id": "Example4a927dea726487bbb77b"
+          }
+        ]
+      },
+      "18_scratch_token": {
+        "request_child": {
+          "block_type": 18,
+          "bitable": {
+            "token": "Example046a321406fe497fe3a2_tbltU5rC2gOD3xQi"
+          }
+        },
+        "http": 400,
+        "code": 1770001,
+        "msg": "invalid param",
+        "created_blocks": []
+      },
+      "53_scratch_token_view": {
+        "request_child": {
+          "block_type": 53,
+          "reference_base": {
+            "token": "Example046a321406fe497fe3a2_tbltU5rC2gOD3xQi",
+            "view_id": "vewTqMfTlT"
+          }
+        },
+        "http": 400,
+        "code": 1770029,
+        "msg": "block not support to create",
+        "created_blocks": []
+      }
+    }
+  }
+}

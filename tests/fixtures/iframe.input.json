@@ -1,0 +1,42 @@
+[
+  {
+    "block_id": "root",
+    "parent_id": "doc",
+    "block_type": 1,
+    "page": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Doc Title"
+          }
+        }
+      ]
+    },
+    "children": [
+      "if1",
+      "if2"
+    ]
+  },
+  {
+    "block_id": "if1",
+    "parent_id": "root",
+    "block_type": 26,
+    "iframe": {
+      "component": {
+        "iframe_type": 15,
+        "url": "https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DdQw4w9WgXcQ"
+      }
+    }
+  },
+  {
+    "block_id": "if2",
+    "parent_id": "root",
+    "block_type": 26,
+    "iframe": {
+      "component": {
+        "iframe_type": 99,
+        "url": "https%3A%2F%2Fwww.github.com%2F"
+      }
+    }
+  }
+]

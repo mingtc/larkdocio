@@ -1,0 +1,91 @@
+#!/usr/bin/env bash
+#
+# post-merge — larkdocio advisory update nag (ADVISORY ONLY; never auto-updates).
+#
+# Installed by a consumer to be told when a newer larkdocio wheel is available.
+# It ONLY runs `scripts/update_larkdocio.sh --check`, which REPORTS and never
+# writes:
+#   • it never updates the wheel,
+#   • it never touches ./vendor/,
+#   • it never fails your merge / pull (always exits 0).
+# Updating stays a deliberate, human-run `scripts/update_larkdocio.sh [tag]`.
+#
+# Git runs this hook after `git pull` / `git merge`. The check touches the
+# network (one lightweight `git ls-remote`, plus a second for the `dist` branch when
+# an update is available) only then — never on other git ops.
+#
+# That promise is why the hook sets LARKDOCIO_CHECK_NOTES=0 below. Run by hand,
+# `--check` also prints WHAT CHANGED (the release notes' section headers for the
+# versions in between), which needs the latest tag's notes file and therefore a
+# throwaway shallow clone. Paying for that on every `git pull` would make a nag
+# slower than the thing it is nagging about, so the hook opts out and stays at
+# lightweight `ls-remote` queries, with no clone. When you want the detail, run `scripts/update_larkdocio.sh --check`
+# yourself.
+#
+# ── Install (from the consumer repo root) ──────────────────────────────
+# After `setup-consumer.sh` has run, the template is at
+# `scripts/larkdocio-post-merge.hook`, so no path editing is needed. Do NOT type
+# the destination: let git name it, because `core.hooksPath` can point git at a
+# directory other than `.git/hooks` — and a hook left in `.git/hooks` is then
+# NEVER run: no warning, no error, exit 0.
+#
+#     HOOKS="$(git rev-parse --git-path hooks)"
+#     mkdir -p "$HOOKS"
+#     cp scripts/larkdocio-post-merge.hook "$HOOKS/post-merge"
+#     chmod +x "$HOOKS/post-merge"
+#     git hook run post-merge
+#
+# `git rev-parse --git-path hooks` is the right primitive because it answers in
+# every state: `.git/hooks` when `core.hooksPath` is unset, and the configured
+# directory (relative or absolute) when it is set. Reading the setting instead
+# — `git config --get core.hooksPath` — prints nothing and exits 1 when it is
+# absent, so it would need a second branch just for the common case.
+#
+# That last line is the PROOF, and it is worth running. `git hook run <name>`
+# resolves the hook through git's own lookup, so it prints this nag's line when
+# the wiring is right (or nothing at all if the check cannot reach the host or
+# no tag exists yet) and fails loudly (`cannot find a hook named …`) when the
+# file sits somewhere git does not read. Needs git 2.36 or newer; on older git,
+# merge something and watch for the `[larkdocio]` line. Check once: this nag is
+# quiet when you are up to date, so its silence is not by itself good news.
+#
+# The identical body also works as `"$HOOKS/post-checkout"` if you prefer to
+# be nagged on branch switches too (noisier). One hook is plenty.
+# ─────────────────────────────────────────────────────────────────────────────
+
+# The consumer's own copy of the refresh script. Git runs hooks with the working
+# directory at the repo root, so this consumer-relative path resolves correctly.
+CHECK="scripts/update_larkdocio.sh"
+
+# Nag-only + fail-safe: ANY problem (script missing, host offline, no tags, …)
+# must NOT break the consumer's git workflow. We swallow errors and always
+# exit 0. `--check` itself never writes, so there is nothing to undo.
+#
+# The `case` below reads THE VERDICT LINE, not the whole stdout (LD-546 § A item 7).
+# `--check`'s contract is exactly one verdict line on stdout — `UP TO DATE`,
+# `UPDATE AVAILABLE` or `AHEAD` — with all narration on stderr. Casing on the whole
+# stdout meant any stray line, before OR after the verdict, failed every pattern and
+# an AVAILABLE UPDATE printed through the quiet catch-all: the nag went silent in
+# exactly the situation it exists for. Selecting the verdict by the contract's own
+# vocabulary (falling back to the first line when none of it appears) keeps this hook
+# a grep rather than a parser. The script's own EXIT STATUS is still read unlaundered
+# — a pipe into `head` would launder it and make an offline `--check` look successful.
+if [ -x "$CHECK" ]; then
+    if raw="$(LARKDOCIO_CHECK_NOTES=0 "$CHECK" --check 2>/dev/null)"; then
+        out="$(printf '%s\n' "$raw" | grep -m1 -E '^(UPDATE AVAILABLE|UP TO DATE|AHEAD)' || true)"
+        [ -n "$out" ] || out="$(printf '%s\n' "$raw" | head -1)"
+        case "$out" in
+            "UPDATE AVAILABLE"*)
+                printf '\n[larkdocio] %s\n' "$out"
+                printf '[larkdocio] Update is DELIBERATE and manual — run:  %s\n\n' "$CHECK"
+                ;;
+            *)
+                # UP TO DATE / AHEAD — one quiet line, no nagging.
+                printf '[larkdocio] %s\n' "$out"
+                ;;
+        esac
+    fi
+fi
+
+# Advisory only: the hook's own exit status is always success.
+exit 0

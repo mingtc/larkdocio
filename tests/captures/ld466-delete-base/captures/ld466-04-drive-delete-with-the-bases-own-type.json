@@ -1,0 +1,28 @@
+{
+  "_probe": "ld466-04-drive-delete-with-the-bases-own-type",
+  "_endpoint": "DELETE /open-apis/drive/v1/files/:file_token?type=bitable",
+  "_method": "DELETE",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": "success",
+  "_verdict": "OK",
+  "_note": "question (c): every attempt is in _attempts. Landed on attempt 1 of 6; the not-yet-addressable codes this tenant rotates are (1061003, 1065200, 1061001)",
+  "response": {
+    "code": 0,
+    "data": {},
+    "msg": "success"
+  },
+  "_attempts": [
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "code": 0,
+      "msg": "success",
+      "response": {
+        "code": 0,
+        "data": {},
+        "msg": "success"
+      }
+    }
+  ]
+}

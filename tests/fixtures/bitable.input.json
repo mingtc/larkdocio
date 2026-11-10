@@ -1,0 +1,29 @@
+[
+  {
+    "block_id": "root",
+    "parent_id": "doc",
+    "block_type": 1,
+    "page": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Doc Title"
+          }
+        }
+      ]
+    },
+    "children": [
+      "bt"
+    ]
+  },
+  {
+    "_note": "RE-LABELLED, NOT LIVE EVIDENCE (LD-250, AC8). This token is a HUSK: the app Example3... answers GET /tables with {\"items\": []} \u2014 no total, no page_token, no has_more (dev/base-study/captures/02-bitable18-tables.json) \u2014 and its tail is a real 1254041 TableIdNotFound (02-bitable18-fields.json). It is a snapshot taken BEFORE the block-zoo author converted that block: the live zoo doc now contains no type-18 block at all (p0-1-01-blockzoo-live-embed-blocks.json). So it must NOT be cited as evidence of how a type-18 embed behaves \u2014 a freshly docx-born one bridges end to end (p0-1-05-fresh-embed-bridge.json, and the bitable_fresh_embed case below is the Base-era specimen seeded from it). The fixture is KEPT because the husk is a real, reachable state and this golden pins the placeholder a stale embed still renders. The `_note` key is dropped by the SDK deserializer, so it costs the golden nothing.",
+    "block_id": "bt",
+    "parent_id": "root",
+    "block_type": 18,
+    "bitable": {
+      "token": "Example3b5902b83520533e4650_tblGgEHCSGMXEKQs",
+      "view_type": null
+    }
+  }
+]

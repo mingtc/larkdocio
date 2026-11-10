@@ -1,0 +1,21 @@
+{
+  "n": 308,
+  "label": "leg5 drive file-versions on a BASE (does the versions family cover bitable)",
+  "credential_pair": "WRITE",
+  "request": {
+    "method": "GET",
+    "path": "/open-apis/drive/v1/files/Example22d60aa4364d34f1f661/versions?obj_type=bitable&page_size=10",
+    "body": null,
+    "headers": [
+      "Authorization: Bearer <redacted>"
+    ]
+  },
+  "http_status": 400,
+  "response": {
+    "code": 1068411,
+    "msg": "params error, param [obj_type] is wrong",
+    "error": {
+      "log_id": "20260811071353CA5B5F7C9358682FA09A"
+    }
+  }
+}

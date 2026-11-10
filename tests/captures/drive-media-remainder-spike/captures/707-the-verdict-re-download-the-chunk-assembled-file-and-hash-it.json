@@ -1,0 +1,19 @@
+{
+  "n": 707,
+  "probe": "01-chunked-upload",
+  "label": "THE VERDICT — re-download the chunk-assembled file and hash it",
+  "credential_pair": "WRITE",
+  "request": {
+    "method": "GET",
+    "path": "/open-apis/drive/v1/files/Example90686c06d9e09fc9abdc/download",
+    "headers": [
+      "Authorization: Bearer <redacted>"
+    ]
+  },
+  "http_status": 200,
+  "response": {
+    "_body": "<binary — hashed, not captured>",
+    "downloaded_size": 130,
+    "downloaded_sha256": "158b5a7e95ab3a320964f6d7492fd2fcb4504767c5e40a1d64280de460cf3fdb"
+  }
+}

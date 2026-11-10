@@ -1,0 +1,503 @@
+{
+  "probe": "04_structural_safety",
+  "steps": [
+    {
+      "label": "baseline",
+      "revision": 3,
+      "merges": [
+        {
+          "end_column_index": 2,
+          "end_row_index": 2,
+          "start_column_index": 1,
+          "start_row_index": 1
+        },
+        {
+          "end_column_index": 3,
+          "end_row_index": 5,
+          "start_column_index": 0,
+          "start_row_index": 5
+        }
+      ],
+      "grid": [
+        [
+          "A1",
+          "B1",
+          "C1",
+          "D1",
+          null
+        ],
+        [
+          "A2",
+          "B2",
+          null,
+          "D2",
+          null
+        ],
+        [
+          "A3",
+          null,
+          null,
+          "D3",
+          null
+        ],
+        [
+          "A4",
+          "B4",
+          "C4",
+          "D4",
+          null
+        ],
+        [
+          "A5",
+          "B5",
+          "C5",
+          "D5",
+          null
+        ],
+        [
+          "A6",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ]
+    },
+    {
+      "label": "after insert 1 row @idx1",
+      "revision": 4,
+      "merges": [
+        {
+          "end_column_index": 3,
+          "end_row_index": 6,
+          "start_column_index": 0,
+          "start_row_index": 6
+        },
+        {
+          "end_column_index": 2,
+          "end_row_index": 3,
+          "start_column_index": 1,
+          "start_row_index": 2
+        }
+      ],
+      "grid": [
+        [
+          "A1",
+          "B1",
+          "C1",
+          "D1",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "A2",
+          "B2",
+          null,
+          "D2",
+          null
+        ],
+        [
+          "A3",
+          null,
+          null,
+          "D3",
+          null
+        ],
+        [
+          "A4",
+          "B4",
+          "C4",
+          "D4",
+          null
+        ],
+        [
+          "A5",
+          "B5",
+          "C5",
+          "D5",
+          null
+        ],
+        [
+          "A6",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ]
+    },
+    {
+      "label": "after insert 1 col @idx1",
+      "revision": 5,
+      "merges": [
+        {
+          "end_column_index": 3,
+          "end_row_index": 3,
+          "start_column_index": 2,
+          "start_row_index": 2
+        },
+        {
+          "end_column_index": 4,
+          "end_row_index": 6,
+          "start_column_index": 0,
+          "start_row_index": 6
+        }
+      ],
+      "grid": [
+        [
+          "A1",
+          null,
+          "B1",
+          "C1",
+          "D1"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "A2",
+          null,
+          "B2",
+          null,
+          "D2"
+        ],
+        [
+          "A3",
+          null,
+          null,
+          null,
+          "D3"
+        ],
+        [
+          "A4",
+          null,
+          "B4",
+          "C4",
+          "D4"
+        ],
+        [
+          "A5",
+          null,
+          "B5",
+          "C5",
+          "D5"
+        ],
+        [
+          "A6",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ]
+    },
+    {
+      "label": "after delete row @idx2",
+      "revision": 6,
+      "merges": [
+        {
+          "end_column_index": 4,
+          "end_row_index": 4,
+          "start_column_index": 0,
+          "start_row_index": 4
+        },
+        {
+          "end_column_index": 3,
+          "end_row_index": 1,
+          "start_column_index": 2,
+          "start_row_index": 1
+        }
+      ],
+      "grid": [
+        [
+          "A1",
+          null,
+          "B1",
+          "C1",
+          "D1"
+        ],
+        [
+          "A3",
+          null,
+          null,
+          null,
+          "D3"
+        ],
+        [
+          "A4",
+          null,
+          "B4",
+          "C4",
+          "D4"
+        ],
+        [
+          "A5",
+          null,
+          "B5",
+          "C5",
+          "D5"
+        ],
+        [
+          "A6",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ]
+    },
+    {
+      "label": "after delete col @idx2",
+      "revision": 7,
+      "merges": [
+        {
+          "end_column_index": 2,
+          "end_row_index": 4,
+          "start_column_index": 0,
+          "start_row_index": 4
+        }
+      ],
+      "grid": [
+        [
+          "A1",
+          "C1",
+          "D1",
+          null,
+          null
+        ],
+        [
+          "A3",
+          null,
+          "D3",
+          null,
+          null
+        ],
+        [
+          "A4",
+          "C4",
+          "D4",
+          null,
+          null
+        ],
+        [
+          "A5",
+          "C5",
+          "D5",
+          null,
+          null
+        ],
+        [
+          "A6",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ]
+    }
+  ],
+  "captures": {
+    "insert_row": {
+      "label": "insert ROWS [1,2)",
+      "method": "POST",
+      "path": "/open-apis/sheets/v2/spreadsheets/Example3ae51823ecac6f104704/insert_dimension_range",
+      "request_body": {
+        "dimension": {
+          "sheetId": "555c22",
+          "majorDimension": "ROWS",
+          "startIndex": 1,
+          "endIndex": 2
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "response": {
+        "code": 0,
+        "data": {},
+        "msg": "success"
+      }
+    },
+    "insert_col": {
+      "label": "insert COLUMNS [1,2)",
+      "method": "POST",
+      "path": "/open-apis/sheets/v2/spreadsheets/Example3ae51823ecac6f104704/insert_dimension_range",
+      "request_body": {
+        "dimension": {
+          "sheetId": "555c22",
+          "majorDimension": "COLUMNS",
+          "startIndex": 1,
+          "endIndex": 2
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "response": {
+        "code": 0,
+        "data": {},
+        "msg": "success"
+      }
+    },
+    "delete_row": {
+      "label": "delete ROWS [2,3)",
+      "method": "DELETE",
+      "path": "/open-apis/sheets/v2/spreadsheets/Example3ae51823ecac6f104704/dimension_range",
+      "request_body": {
+        "dimension": {
+          "sheetId": "555c22",
+          "majorDimension": "ROWS",
+          "startIndex": 2,
+          "endIndex": 3
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "response": {
+        "code": 0,
+        "data": {
+          "delCount": 2,
+          "majorDimension": "ROWS"
+        },
+        "msg": "success"
+      }
+    },
+    "delete_col": {
+      "label": "delete COLUMNS [2,3)",
+      "method": "DELETE",
+      "path": "/open-apis/sheets/v2/spreadsheets/Example3ae51823ecac6f104704/dimension_range",
+      "request_body": {
+        "dimension": {
+          "sheetId": "555c22",
+          "majorDimension": "COLUMNS",
+          "startIndex": 2,
+          "endIndex": 3
+        }
+      },
+      "http_status": 200,
+      "code": 0,
+      "response": {
+        "code": 0,
+        "data": {
+          "delCount": 2,
+          "majorDimension": "COLUMNS"
+        },
+        "msg": "success"
+      }
+    }
+  },
+  "total_calls": 25
+}

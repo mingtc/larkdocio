@@ -1,0 +1,212 @@
+[
+  {
+    "block_id": "root",
+    "parent_id": "doc",
+    "block_type": 1,
+    "page": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Doc Title"
+          }
+        }
+      ]
+    },
+    "children": [
+      "g1"
+    ]
+  },
+  {
+    "block_id": "g1",
+    "parent_id": "root",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Outer list"
+          }
+        }
+      ]
+    },
+    "children": [
+      "g2"
+    ]
+  },
+  {
+    "block_id": "g2",
+    "parent_id": "g1",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Middle ordered"
+          }
+        }
+      ]
+    },
+    "children": [
+      "g3"
+    ]
+  },
+  {
+    "block_id": "g3",
+    "parent_id": "g2",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Inner list"
+          }
+        }
+      ]
+    },
+    "children": [
+      "gtbl",
+      "gcode",
+      "gquote"
+    ]
+  },
+  {
+    "block_id": "gtbl",
+    "parent_id": "g3",
+    "block_type": 31,
+    "table": {
+      "property": {
+        "row_size": 2,
+        "column_size": 2
+      }
+    },
+    "children": [
+      "gc00",
+      "gc01",
+      "gc10",
+      "gc11"
+    ]
+  },
+  {
+    "block_id": "gc00",
+    "parent_id": "gtbl",
+    "block_type": 32,
+    "table_cell": {},
+    "children": [
+      "gc00t"
+    ]
+  },
+  {
+    "block_id": "gc00t",
+    "parent_id": "gc00",
+    "block_type": 2,
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "H1"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "block_id": "gc01",
+    "parent_id": "gtbl",
+    "block_type": 32,
+    "table_cell": {},
+    "children": [
+      "gc01t"
+    ]
+  },
+  {
+    "block_id": "gc01t",
+    "parent_id": "gc01",
+    "block_type": 2,
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "H2"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "block_id": "gc10",
+    "parent_id": "gtbl",
+    "block_type": 32,
+    "table_cell": {},
+    "children": [
+      "gc10t"
+    ]
+  },
+  {
+    "block_id": "gc10t",
+    "parent_id": "gc10",
+    "block_type": 2,
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "a"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "block_id": "gc11",
+    "parent_id": "gtbl",
+    "block_type": 32,
+    "table_cell": {},
+    "children": [
+      "gc11t"
+    ]
+  },
+  {
+    "block_id": "gc11t",
+    "parent_id": "gc11",
+    "block_type": 2,
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "b"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "block_id": "gcode",
+    "parent_id": "g3",
+    "block_type": 14,
+    "code": {
+      "style": {
+        "language": 49
+      },
+      "elements": [
+        {
+          "text_run": {
+            "content": "inner()"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "block_id": "gquote",
+    "parent_id": "g3",
+    "block_type": 15,
+    "quote": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "inner quote"
+          }
+        }
+      ]
+    }
+  }
+]

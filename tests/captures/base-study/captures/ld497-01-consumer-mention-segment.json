@@ -1,0 +1,21 @@
+{
+  "_probe": "ld497-01",
+  "_provenance": "CONSUMER REPORT, NOT A SEAT PROBE. This payload was measured by a consumer project on a Base of its own (app_token BaseConsumerExample00000001) with a released larkdocio wheel installed, and reported to the maintainers with the payload quoted; the report itself is a maintainers' private record. They measured it on that Base with the wheel installed rather than inferring it from the release notes. No seat probe minted this; larkdocio has never written a mention segment (see ld416-01, and ld497-02 for the batch-route extension).",
+  "_endpoint": "POST /open-apis/bitable/v1/apps/{app_token}/tables/{table_id}/records/search — the pinned read route (cells.py 'Read pin')",
+  "_method": "read of a (1, Text) cell whose pasted docx url a human had touched, so Lark had chipped it into a doc-mention",
+  "_redaction": "The tenant host is redacted as the consumer redacted it — the literal '…' stands where their domain was. In this public copy the docx token, the block anchor and the document title are replaced too (tests/captures/README.md).",
+  "_scope": "D-59: observed on ONE tenant, on the records/search read route, on a (1, Text) field, on one day, for mentionType 'Docx' only. Other mentionType values (@user, @chat) were NOT observed by the reporter and are UNMEASURED, not refuted.",
+  "_note": "The defect this pins: render_segment read the `link` off this segment and discarded it through the unknown-kind fall-through, so the cell rendered as bare title text where the identical (text, link) pair on a type:'url' segment renders [text](link).",
+  "segment": {
+    "type": "mention",
+    "mentionType": "Docx",
+    "token": "Example09c5f37ea54fdaa4a226",
+    "text": "Example Document Title",
+    "link": "https://…/docx/Example09c5f37ea54fdaa4a226#Example9475ce2dda1cd28747db"
+  },
+  "_consumer_measured_blast_radius": {
+    "table": "their table",
+    "share_of_the_absent_set_that_is_mention_carried": "100%",
+    "_note": "the reporter's counts (rows, distinct links, mention-carried, absent) come from their own production table and are not published in this tree; the other links survive only by coincidence — the same url also appears elsewhere in the document via a url segment"
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "probe": "00_smoke",
+  "create": {
+    "label": "v3 create",
+    "method": "POST",
+    "path": "/open-apis/sheets/v3/spreadsheets",
+    "request_body": {
+      "title": "larkdocio LD-107 smoke"
+    },
+    "http_status": 200,
+    "code": 0,
+    "response": {
+      "code": 0,
+      "data": {
+        "spreadsheet": {
+          "folder_token": "",
+          "spreadsheet_token": "Examplea8df88dc661bc460a6ac",
+          "title": "larkdocio LD-107 smoke",
+          "url": "https://your-domain.larksuite.com/sheets/Examplea8df88dc661bc460a6ac"
+        }
+      },
+      "msg": "success"
+    }
+  },
+  "first_sheet_id": "c93d26",
+  "query_sheets": {
+    "label": "v3 sheets/query",
+    "method": "GET",
+    "path": "/open-apis/sheets/v3/spreadsheets/Examplea8df88dc661bc460a6ac/sheets/query",
+    "request_body": null,
+    "http_status": 200,
+    "code": 0,
+    "response": {
+      "code": 0,
+      "data": {
+        "sheets": [
+          {
+            "grid_properties": {
+              "column_count": 20,
+              "row_count": 200
+            },
+            "hidden": false,
+            "index": 0,
+            "resource_type": "sheet",
+            "sheet_id": "c93d26",
+            "title": "Sheet1"
+          }
+        ]
+      },
+      "msg": "success"
+    }
+  },
+  "values_put": {
+    "label": "v2 values PUT",
+    "method": "PUT",
+    "path": "/open-apis/sheets/v2/spreadsheets/Examplea8df88dc661bc460a6ac/values",
+    "request_body": {
+      "valueRange": {
+        "range": "c93d26!A1:B1",
+        "values": [
+          [
+            "hello",
+            42
+          ]
+        ]
+      }
+    },
+    "http_status": 200,
+    "code": 0,
+    "response": {
+      "code": 0,
+      "data": {
+        "revision": 1,
+        "spreadsheetToken": "Examplea8df88dc661bc460a6ac",
+        "updatedCells": 2,
+        "updatedColumns": 2,
+        "updatedRange": "c93d26!A1:B1",
+        "updatedRows": 1
+      },
+      "msg": "success"
+    }
+  },
+  "values_get": {
+    "label": "v2 values GET readback",
+    "method": "GET",
+    "path": "/open-apis/sheets/v2/spreadsheets/Examplea8df88dc661bc460a6ac/values/c93d26!A1:B1",
+    "request_body": null,
+    "http_status": 200,
+    "code": 0,
+    "response": {
+      "code": 0,
+      "data": {
+        "revision": 1,
+        "spreadsheetToken": "Examplea8df88dc661bc460a6ac",
+        "valueRange": {
+          "majorDimension": "ROWS",
+          "range": "c93d26!A1:B1",
+          "revision": 1,
+          "values": [
+            [
+              "hello",
+              42
+            ]
+          ]
+        }
+      },
+      "msg": "success"
+    }
+  },
+  "total_calls": 6
+}

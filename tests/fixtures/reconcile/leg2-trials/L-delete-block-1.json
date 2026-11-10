@@ -1,0 +1,65 @@
+{
+  "trial": {
+    "id": "L-delete-block-1",
+    "doc": "L",
+    "shape": "delete-block",
+    "arm": "A",
+    "rep": 1
+  },
+  "cli_version": "2.1.195 (Claude Code)",
+  "instruction": "Delete the paragraph about the avoidable cost caused by a misdiagnosis. Leave the rest of the document exactly as it is.",
+  "instruction_mentions_markers": false,
+  "meta": {
+    "model_requested": "sonnet",
+    "models_used": [
+      "claude-haiku-4-5-20251001",
+      "claude-sonnet-4-6"
+    ],
+    "duration_ms": 11943,
+    "cost_usd": 0.1093514,
+    "is_error": false,
+    "num_turns": 1
+  },
+  "fenced_output": false,
+  "classification": {
+    "source_marker_count": 26,
+    "output_marker_count": 25,
+    "per_marker": {
+      "l01": "preserved",
+      "l02": "preserved",
+      "l03": "preserved",
+      "l04": "preserved",
+      "l05": "preserved",
+      "l06": "preserved",
+      "l07": "preserved",
+      "l08": "preserved",
+      "l09": "preserved",
+      "l10": "preserved",
+      "l11": "preserved",
+      "l12": "preserved",
+      "l13": "preserved",
+      "l14": "preserved",
+      "l15": "content-absent",
+      "l16": "preserved",
+      "l17": "preserved",
+      "l18": "preserved",
+      "l19": "preserved",
+      "l20": "preserved",
+      "l21": "preserved",
+      "l22": "preserved",
+      "l23": "preserved",
+      "l24": "preserved",
+      "l25": "preserved",
+      "l26": "preserved"
+    },
+    "counts": {
+      "preserved": 25,
+      "content-absent": 1
+    },
+    "invented_ids": [],
+    "mangled_forms": [],
+    "order_preserved": true,
+    "trial_clean": true
+  },
+  "edited_document": "# Sample project review \u2014 first stage\n\n<!-- lark:block:l01 -->\n## Summary\n\n<!-- lark:block:l02 -->\nThe first stage was dominated by the reader work, which landed on time and is now consumed by two consumer projects.\n\n<!-- lark:block:l03 -->\nThe remaining risk sits almost entirely in the writer surface, where the review found that the plan-gated apply engine still refuses several shapes that consumers ask for regularly.\n\n<!-- lark:block:l04 -->\n## Reliability\n\n<!-- lark:block:l05 -->\nThere were three failed test runs, none of them in a release, and all three traced back to the same missing field-level permission scope.\n\n<!-- lark:block:l06 -->\nThe follow-up work has been to make the failure legible rather than to widen any scope, because a grant is a console action and not something the library may take upon itself.\n\n<!-- lark:block:l07 -->\n## Throughput\n\n<!-- lark:block:l08 -->\nCycle time improved once the board moves became scripted, which removed the class of drift where the folder and the log disagreed about an issue's state.\n\n<!-- lark:block:l09 -->\nThe remaining drag is review latency on the larger tranches, where a single reviewer has to hold a lot of context at once.\n\n<!-- lark:block:l10 -->\n## Consumers\n\n<!-- lark:block:l11 -->\nThe reference consumer vendors a built wheel and pins a local file requirement, so a release reaches it only when it chooses to refresh.\n\n<!-- lark:block:l12 -->\nThat has been a good trade: nothing ships to a consumer by surprise, and the refresh step is the one place where compatibility gets checked.\n\n<!-- lark:block:l13 -->\n## Resources\n\n<!-- lark:block:l14 -->\nDisk use was flat. The only new space went to the sandbox used for the live write gates, which is small and is torn down after each run.\n\n<!-- lark:block:l16 -->\n## Second stage\n\n<!-- lark:block:l17 -->\nThe second stage is planned around the round-trip editing work, which is the capability consumers ask for most often and cannot currently express.\n\n<!-- lark:block:l18 -->\nEverything else is sequenced behind it, on the view that a half-built round-trip would be worse than none at all.\n\n<!-- lark:block:l19 -->\n### Risks\n\n<!-- lark:block:l20 -->\n- Review latency on large tranches\n- A single reviewer holding all the context\n- The round-trip work slipping into the following stage\n\n<!-- lark:block:l21 -->\nThe risks above are ordered by how likely they are to actually bite, not by how uncomfortable they are to talk about.\n\n<!-- lark:block:l22 -->\n### Numbers\n\n<!-- lark:block:l23 -->\n| Metric | Stage 1 | Target |\n| --- | --- | --- |\n| Failed runs | 3 | 0 |\n| Median cycle time | 4.1 days | 3 days |\n| Consumer refreshes | 6 | 6 |\n\n<!-- lark:block:l24 -->\nThe cycle-time figure excludes the two issues that were parked for a maintainer decision, since holding time is not review time.\n\n<!-- lark:block:l25 -->\n### Decisions needed\n\n<!-- lark:block:l26 -->\nA decision is needed on whether the round-trip work ships behind a flag or as the default shape, and that decision gates the sequencing of everything after it."
+}

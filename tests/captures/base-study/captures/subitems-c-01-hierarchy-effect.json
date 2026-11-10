@@ -1,0 +1,1127 @@
+{
+  "_probe": "sub-c",
+  "_endpoint": "/open-apis/bitable/v1/apps/Example63b23729e029fefecc41/tables/tblVTZ57k0qXpNPH (view vew6edJbS0)",
+  "_method": "mixed",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": null,
+  "_verdict": "OK",
+  "_note": "Q2d/Q4: the SAME field carries the tree and the view's hierarchy_config. Everything is read before and after the PATCH and diffed — the effect assertion, not a code:0.",
+  "response": {
+    "code": 0,
+    "data": {
+      "tree_built": {
+        "P1": "recvrvyxLVX9TP",
+        "P2": "recvruabFLz9VF",
+        "C1": "recvramm0oObCE",
+        "C2": "recvrwwfxbFAwP",
+        "G1": "recvrmgyOULK2M",
+        "D1_two_parents": "recvrqqa2v2Jkn"
+      },
+      "edge_write_shapes": {
+        "single_parent_at_create": {
+          "code": 0,
+          "msg": "success",
+          "readback": [
+            "recvrvyxLVX9TP"
+          ]
+        },
+        "two_parents_at_create": {
+          "code": 0,
+          "msg": "success",
+          "error_message": null,
+          "readback": [
+            "recvrvyxLVX9TP",
+            "recvruabFLz9VF"
+          ],
+          "note": "the self-link field's property.multiple defaults to TRUE, so this asks whether the API can build a DAG the UI's row tree cannot draw"
+        },
+        "self_as_own_parent": {
+          "code": 0,
+          "msg": "success",
+          "error_message": null,
+          "readback": [
+            "recvruabFLz9VF"
+          ]
+        }
+      },
+      "hierarchy_patch_code": 0,
+      "hierarchy_readback_property": {
+        "filter_info": null,
+        "hidden_fields": null,
+        "hierarchy_config": {
+          "field_id": "fldFfAgfd4"
+        }
+      },
+      "search_before": [
+        {
+          "record_id": "rec98Bn8Pa37M2",
+          "text": null,
+          "parents": null
+        },
+        {
+          "record_id": "rec04Bi5Ln274s",
+          "text": null,
+          "parents": null
+        },
+        {
+          "record_id": "rec84Wx0Wg5bUH",
+          "text": null,
+          "parents": null
+        },
+        {
+          "record_id": "rec29Bo0Fp2bId",
+          "text": null,
+          "parents": null
+        },
+        {
+          "record_id": "rec71Kv5Ph5gxV",
+          "text": null,
+          "parents": null
+        },
+        {
+          "record_id": "rec23Kq3Vg3y6x",
+          "text": null,
+          "parents": null
+        },
+        {
+          "record_id": "rec63Nd3Cw1eTw",
+          "text": null,
+          "parents": null
+        },
+        {
+          "record_id": "rec44Vn9Sf9dlh",
+          "text": null,
+          "parents": null
+        },
+        {
+          "record_id": "rec91Di7To4iwg",
+          "text": null,
+          "parents": null
+        },
+        {
+          "record_id": "rec92Yc8Pq5qSa",
+          "text": null,
+          "parents": null
+        },
+        {
+          "record_id": "recvrvyxLVX9TP",
+          "text": "P1-parent",
+          "parents": null
+        },
+        {
+          "record_id": "recvruabFLz9VF",
+          "text": "P2-parent",
+          "parents": [
+            "recvruabFLz9VF"
+          ]
+        },
+        {
+          "record_id": "recvramm0oObCE",
+          "text": "C1-child",
+          "parents": [
+            "recvrvyxLVX9TP"
+          ]
+        },
+        {
+          "record_id": "recvrwwfxbFAwP",
+          "text": "C2-child",
+          "parents": [
+            "recvrvyxLVX9TP"
+          ]
+        },
+        {
+          "record_id": "recvrmgyOULK2M",
+          "text": "G1-grandchild",
+          "parents": [
+            "recvramm0oObCE"
+          ]
+        },
+        {
+          "record_id": "recvrqqa2v2Jkn",
+          "text": "D1-two-parents",
+          "parents": [
+            "recvrvyxLVX9TP",
+            "recvruabFLz9VF"
+          ]
+        }
+      ],
+      "search_after": [
+        {
+          "record_id": "rec98Bn8Pa37M2",
+          "text": null,
+          "parents": null
+        },
+        {
+          "record_id": "rec04Bi5Ln274s",
+          "text": null,
+          "parents": null
+        },
+        {
+          "record_id": "rec84Wx0Wg5bUH",
+          "text": null,
+          "parents": null
+        },
+        {
+          "record_id": "rec29Bo0Fp2bId",
+          "text": null,
+          "parents": null
+        },
+        {
+          "record_id": "rec71Kv5Ph5gxV",
+          "text": null,
+          "parents": null
+        },
+        {
+          "record_id": "rec23Kq3Vg3y6x",
+          "text": null,
+          "parents": null
+        },
+        {
+          "record_id": "rec63Nd3Cw1eTw",
+          "text": null,
+          "parents": null
+        },
+        {
+          "record_id": "rec44Vn9Sf9dlh",
+          "text": null,
+          "parents": null
+        },
+        {
+          "record_id": "rec91Di7To4iwg",
+          "text": null,
+          "parents": null
+        },
+        {
+          "record_id": "rec92Yc8Pq5qSa",
+          "text": null,
+          "parents": null
+        },
+        {
+          "record_id": "recvrvyxLVX9TP",
+          "text": "P1-parent",
+          "parents": null
+        },
+        {
+          "record_id": "recvruabFLz9VF",
+          "text": "P2-parent",
+          "parents": [
+            "recvruabFLz9VF"
+          ]
+        },
+        {
+          "record_id": "recvramm0oObCE",
+          "text": "C1-child",
+          "parents": [
+            "recvrvyxLVX9TP"
+          ]
+        },
+        {
+          "record_id": "recvrwwfxbFAwP",
+          "text": "C2-child",
+          "parents": [
+            "recvrvyxLVX9TP"
+          ]
+        },
+        {
+          "record_id": "recvrmgyOULK2M",
+          "text": "G1-grandchild",
+          "parents": [
+            "recvramm0oObCE"
+          ]
+        },
+        {
+          "record_id": "recvrqqa2v2Jkn",
+          "text": "D1-two-parents",
+          "parents": [
+            "recvrvyxLVX9TP",
+            "recvruabFLz9VF"
+          ]
+        }
+      ],
+      "search_after_view_scoped": [
+        {
+          "record_id": "rec98Bn8Pa37M2",
+          "text": null,
+          "parents": null
+        },
+        {
+          "record_id": "rec04Bi5Ln274s",
+          "text": null,
+          "parents": null
+        },
+        {
+          "record_id": "rec84Wx0Wg5bUH",
+          "text": null,
+          "parents": null
+        },
+        {
+          "record_id": "rec29Bo0Fp2bId",
+          "text": null,
+          "parents": null
+        },
+        {
+          "record_id": "rec71Kv5Ph5gxV",
+          "text": null,
+          "parents": null
+        },
+        {
+          "record_id": "rec23Kq3Vg3y6x",
+          "text": null,
+          "parents": null
+        },
+        {
+          "record_id": "rec63Nd3Cw1eTw",
+          "text": null,
+          "parents": null
+        },
+        {
+          "record_id": "rec44Vn9Sf9dlh",
+          "text": null,
+          "parents": null
+        },
+        {
+          "record_id": "rec91Di7To4iwg",
+          "text": null,
+          "parents": null
+        },
+        {
+          "record_id": "rec92Yc8Pq5qSa",
+          "text": null,
+          "parents": null
+        },
+        {
+          "record_id": "recvrvyxLVX9TP",
+          "text": "P1-parent",
+          "parents": null
+        },
+        {
+          "record_id": "recvruabFLz9VF",
+          "text": "P2-parent",
+          "parents": [
+            "recvruabFLz9VF"
+          ]
+        },
+        {
+          "record_id": "recvramm0oObCE",
+          "text": "C1-child",
+          "parents": [
+            "recvrvyxLVX9TP"
+          ]
+        },
+        {
+          "record_id": "recvrwwfxbFAwP",
+          "text": "C2-child",
+          "parents": [
+            "recvrvyxLVX9TP"
+          ]
+        },
+        {
+          "record_id": "recvrmgyOULK2M",
+          "text": "G1-grandchild",
+          "parents": [
+            "recvramm0oObCE"
+          ]
+        },
+        {
+          "record_id": "recvrqqa2v2Jkn",
+          "text": "D1-two-parents",
+          "parents": [
+            "recvrvyxLVX9TP",
+            "recvruabFLz9VF"
+          ]
+        }
+      ],
+      "records_list_view_scoped_before": [
+        {
+          "record_id": "rec98Bn8Pa37M2",
+          "text": null,
+          "parents": [
+            {
+              "record_ids": null,
+              "table_id": "tblVTZ57k0qXpNPH",
+              "text": null,
+              "text_arr": [],
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "record_id": "rec04Bi5Ln274s",
+          "text": null,
+          "parents": [
+            {
+              "record_ids": null,
+              "table_id": "tblVTZ57k0qXpNPH",
+              "text": null,
+              "text_arr": [],
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "record_id": "rec84Wx0Wg5bUH",
+          "text": null,
+          "parents": [
+            {
+              "record_ids": null,
+              "table_id": "tblVTZ57k0qXpNPH",
+              "text": null,
+              "text_arr": [],
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "record_id": "rec29Bo0Fp2bId",
+          "text": null,
+          "parents": [
+            {
+              "record_ids": null,
+              "table_id": "tblVTZ57k0qXpNPH",
+              "text": null,
+              "text_arr": [],
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "record_id": "rec71Kv5Ph5gxV",
+          "text": null,
+          "parents": [
+            {
+              "record_ids": null,
+              "table_id": "tblVTZ57k0qXpNPH",
+              "text": null,
+              "text_arr": [],
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "record_id": "rec23Kq3Vg3y6x",
+          "text": null,
+          "parents": [
+            {
+              "record_ids": null,
+              "table_id": "tblVTZ57k0qXpNPH",
+              "text": null,
+              "text_arr": [],
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "record_id": "rec63Nd3Cw1eTw",
+          "text": null,
+          "parents": [
+            {
+              "record_ids": null,
+              "table_id": "tblVTZ57k0qXpNPH",
+              "text": null,
+              "text_arr": [],
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "record_id": "rec44Vn9Sf9dlh",
+          "text": null,
+          "parents": [
+            {
+              "record_ids": null,
+              "table_id": "tblVTZ57k0qXpNPH",
+              "text": null,
+              "text_arr": [],
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "record_id": "rec91Di7To4iwg",
+          "text": null,
+          "parents": [
+            {
+              "record_ids": null,
+              "table_id": "tblVTZ57k0qXpNPH",
+              "text": null,
+              "text_arr": [],
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "record_id": "rec92Yc8Pq5qSa",
+          "text": null,
+          "parents": [
+            {
+              "record_ids": null,
+              "table_id": "tblVTZ57k0qXpNPH",
+              "text": null,
+              "text_arr": [],
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "record_id": "recvrvyxLVX9TP",
+          "text": "P1-parent",
+          "parents": [
+            {
+              "record_ids": null,
+              "table_id": "tblVTZ57k0qXpNPH",
+              "text": null,
+              "text_arr": [],
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "record_id": "recvruabFLz9VF",
+          "text": "P2-parent",
+          "parents": [
+            {
+              "record_ids": [
+                "recvruabFLz9VF"
+              ],
+              "table_id": "tblVTZ57k0qXpNPH",
+              "text": "P2-parent",
+              "text_arr": [
+                "P2-parent"
+              ],
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "record_id": "recvramm0oObCE",
+          "text": "C1-child",
+          "parents": [
+            {
+              "record_ids": [
+                "recvrvyxLVX9TP"
+              ],
+              "table_id": "tblVTZ57k0qXpNPH",
+              "text": "P1-parent",
+              "text_arr": [
+                "P1-parent"
+              ],
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "record_id": "recvrwwfxbFAwP",
+          "text": "C2-child",
+          "parents": [
+            {
+              "record_ids": [
+                "recvrvyxLVX9TP"
+              ],
+              "table_id": "tblVTZ57k0qXpNPH",
+              "text": "P1-parent",
+              "text_arr": [
+                "P1-parent"
+              ],
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "record_id": "recvrmgyOULK2M",
+          "text": "G1-grandchild",
+          "parents": [
+            {
+              "record_ids": [
+                "recvramm0oObCE"
+              ],
+              "table_id": "tblVTZ57k0qXpNPH",
+              "text": "C1-child",
+              "text_arr": [
+                "C1-child"
+              ],
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "record_id": "recvrqqa2v2Jkn",
+          "text": "D1-two-parents",
+          "parents": [
+            {
+              "record_ids": [
+                "recvrvyxLVX9TP",
+                "recvruabFLz9VF"
+              ],
+              "table_id": "tblVTZ57k0qXpNPH",
+              "text": "P1-parent,P2-parent",
+              "text_arr": [
+                "P1-parent",
+                "P2-parent"
+              ],
+              "type": "text"
+            }
+          ]
+        }
+      ],
+      "records_list_view_scoped_after": [
+        {
+          "record_id": "rec98Bn8Pa37M2",
+          "text": null,
+          "parents": [
+            {
+              "record_ids": null,
+              "table_id": "tblVTZ57k0qXpNPH",
+              "text": null,
+              "text_arr": [],
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "record_id": "rec04Bi5Ln274s",
+          "text": null,
+          "parents": [
+            {
+              "record_ids": null,
+              "table_id": "tblVTZ57k0qXpNPH",
+              "text": null,
+              "text_arr": [],
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "record_id": "rec84Wx0Wg5bUH",
+          "text": null,
+          "parents": [
+            {
+              "record_ids": null,
+              "table_id": "tblVTZ57k0qXpNPH",
+              "text": null,
+              "text_arr": [],
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "record_id": "rec29Bo0Fp2bId",
+          "text": null,
+          "parents": [
+            {
+              "record_ids": null,
+              "table_id": "tblVTZ57k0qXpNPH",
+              "text": null,
+              "text_arr": [],
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "record_id": "rec71Kv5Ph5gxV",
+          "text": null,
+          "parents": [
+            {
+              "record_ids": null,
+              "table_id": "tblVTZ57k0qXpNPH",
+              "text": null,
+              "text_arr": [],
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "record_id": "rec23Kq3Vg3y6x",
+          "text": null,
+          "parents": [
+            {
+              "record_ids": null,
+              "table_id": "tblVTZ57k0qXpNPH",
+              "text": null,
+              "text_arr": [],
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "record_id": "rec63Nd3Cw1eTw",
+          "text": null,
+          "parents": [
+            {
+              "record_ids": null,
+              "table_id": "tblVTZ57k0qXpNPH",
+              "text": null,
+              "text_arr": [],
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "record_id": "rec44Vn9Sf9dlh",
+          "text": null,
+          "parents": [
+            {
+              "record_ids": null,
+              "table_id": "tblVTZ57k0qXpNPH",
+              "text": null,
+              "text_arr": [],
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "record_id": "rec91Di7To4iwg",
+          "text": null,
+          "parents": [
+            {
+              "record_ids": null,
+              "table_id": "tblVTZ57k0qXpNPH",
+              "text": null,
+              "text_arr": [],
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "record_id": "rec92Yc8Pq5qSa",
+          "text": null,
+          "parents": [
+            {
+              "record_ids": null,
+              "table_id": "tblVTZ57k0qXpNPH",
+              "text": null,
+              "text_arr": [],
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "record_id": "recvrvyxLVX9TP",
+          "text": "P1-parent",
+          "parents": [
+            {
+              "record_ids": null,
+              "table_id": "tblVTZ57k0qXpNPH",
+              "text": null,
+              "text_arr": [],
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "record_id": "recvramm0oObCE",
+          "text": "C1-child",
+          "parents": [
+            {
+              "record_ids": [
+                "recvrvyxLVX9TP"
+              ],
+              "table_id": "tblVTZ57k0qXpNPH",
+              "text": "P1-parent",
+              "text_arr": [
+                "P1-parent"
+              ],
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "record_id": "recvrmgyOULK2M",
+          "text": "G1-grandchild",
+          "parents": [
+            {
+              "record_ids": [
+                "recvramm0oObCE"
+              ],
+              "table_id": "tblVTZ57k0qXpNPH",
+              "text": "C1-child",
+              "text_arr": [
+                "C1-child"
+              ],
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "record_id": "recvrwwfxbFAwP",
+          "text": "C2-child",
+          "parents": [
+            {
+              "record_ids": [
+                "recvrvyxLVX9TP"
+              ],
+              "table_id": "tblVTZ57k0qXpNPH",
+              "text": "P1-parent",
+              "text_arr": [
+                "P1-parent"
+              ],
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "record_id": "recvrqqa2v2Jkn",
+          "text": "D1-two-parents",
+          "parents": [
+            {
+              "record_ids": [
+                "recvrvyxLVX9TP",
+                "recvruabFLz9VF"
+              ],
+              "table_id": "tblVTZ57k0qXpNPH",
+              "text": "P1-parent,P2-parent",
+              "text_arr": [
+                "P1-parent",
+                "P2-parent"
+              ],
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "record_id": "recvruabFLz9VF",
+          "text": "P2-parent",
+          "parents": [
+            {
+              "record_ids": [
+                "recvruabFLz9VF"
+              ],
+              "table_id": "tblVTZ57k0qXpNPH",
+              "text": "P2-parent",
+              "text_arr": [
+                "P2-parent"
+              ],
+              "type": "text"
+            }
+          ]
+        }
+      ],
+      "single_record_GET_grandchild": {
+        "fields": {
+          "Attachment": null,
+          "Date": null,
+          "SelfLink": [
+            {
+              "record_ids": [
+                "recvramm0oObCE"
+              ],
+              "table_id": "tblVTZ57k0qXpNPH",
+              "text": "C1-child",
+              "text_arr": [
+                "C1-child"
+              ],
+              "type": "text"
+            }
+          ],
+          "Single option": null,
+          "Text": "G1-grandchild"
+        },
+        "id": "recvrmgyOULK2M",
+        "record_id": "recvrmgyOULK2M"
+      },
+      "search_hierarchy_knob_probes": {
+        "with_hierarchy_true": {
+          "code": 0,
+          "msg": "success",
+          "digest": [
+            {
+              "record_id": "rec98Bn8Pa37M2",
+              "text": null,
+              "parents": null
+            },
+            {
+              "record_id": "rec04Bi5Ln274s",
+              "text": null,
+              "parents": null
+            },
+            {
+              "record_id": "rec84Wx0Wg5bUH",
+              "text": null,
+              "parents": null
+            },
+            {
+              "record_id": "rec29Bo0Fp2bId",
+              "text": null,
+              "parents": null
+            },
+            {
+              "record_id": "rec71Kv5Ph5gxV",
+              "text": null,
+              "parents": null
+            },
+            {
+              "record_id": "rec23Kq3Vg3y6x",
+              "text": null,
+              "parents": null
+            },
+            {
+              "record_id": "rec63Nd3Cw1eTw",
+              "text": null,
+              "parents": null
+            },
+            {
+              "record_id": "rec44Vn9Sf9dlh",
+              "text": null,
+              "parents": null
+            },
+            {
+              "record_id": "rec91Di7To4iwg",
+              "text": null,
+              "parents": null
+            },
+            {
+              "record_id": "rec92Yc8Pq5qSa",
+              "text": null,
+              "parents": null
+            },
+            {
+              "record_id": "recvrvyxLVX9TP",
+              "text": "P1-parent",
+              "parents": null
+            },
+            {
+              "record_id": "recvruabFLz9VF",
+              "text": "P2-parent",
+              "parents": [
+                "recvruabFLz9VF"
+              ]
+            },
+            {
+              "record_id": "recvramm0oObCE",
+              "text": "C1-child",
+              "parents": [
+                "recvrvyxLVX9TP"
+              ]
+            },
+            {
+              "record_id": "recvrwwfxbFAwP",
+              "text": "C2-child",
+              "parents": [
+                "recvrvyxLVX9TP"
+              ]
+            },
+            {
+              "record_id": "recvrmgyOULK2M",
+              "text": "G1-grandchild",
+              "parents": [
+                "recvramm0oObCE"
+              ]
+            },
+            {
+              "record_id": "recvrqqa2v2Jkn",
+              "text": "D1-two-parents",
+              "parents": [
+                "recvrvyxLVX9TP",
+                "recvruabFLz9VF"
+              ]
+            }
+          ]
+        },
+        "hierarchy_true": {
+          "code": 0,
+          "msg": "success",
+          "digest": [
+            {
+              "record_id": "rec98Bn8Pa37M2",
+              "text": null,
+              "parents": null
+            },
+            {
+              "record_id": "rec04Bi5Ln274s",
+              "text": null,
+              "parents": null
+            },
+            {
+              "record_id": "rec84Wx0Wg5bUH",
+              "text": null,
+              "parents": null
+            },
+            {
+              "record_id": "rec29Bo0Fp2bId",
+              "text": null,
+              "parents": null
+            },
+            {
+              "record_id": "rec71Kv5Ph5gxV",
+              "text": null,
+              "parents": null
+            },
+            {
+              "record_id": "rec23Kq3Vg3y6x",
+              "text": null,
+              "parents": null
+            },
+            {
+              "record_id": "rec63Nd3Cw1eTw",
+              "text": null,
+              "parents": null
+            },
+            {
+              "record_id": "rec44Vn9Sf9dlh",
+              "text": null,
+              "parents": null
+            },
+            {
+              "record_id": "rec91Di7To4iwg",
+              "text": null,
+              "parents": null
+            },
+            {
+              "record_id": "rec92Yc8Pq5qSa",
+              "text": null,
+              "parents": null
+            },
+            {
+              "record_id": "recvrvyxLVX9TP",
+              "text": "P1-parent",
+              "parents": null
+            },
+            {
+              "record_id": "recvruabFLz9VF",
+              "text": "P2-parent",
+              "parents": [
+                "recvruabFLz9VF"
+              ]
+            },
+            {
+              "record_id": "recvramm0oObCE",
+              "text": "C1-child",
+              "parents": [
+                "recvrvyxLVX9TP"
+              ]
+            },
+            {
+              "record_id": "recvrwwfxbFAwP",
+              "text": "C2-child",
+              "parents": [
+                "recvrvyxLVX9TP"
+              ]
+            },
+            {
+              "record_id": "recvrmgyOULK2M",
+              "text": "G1-grandchild",
+              "parents": [
+                "recvramm0oObCE"
+              ]
+            },
+            {
+              "record_id": "recvrqqa2v2Jkn",
+              "text": "D1-two-parents",
+              "parents": [
+                "recvrvyxLVX9TP",
+                "recvruabFLz9VF"
+              ]
+            }
+          ]
+        },
+        "BOGUS_CONTROL": {
+          "code": 0,
+          "msg": "success",
+          "digest": [
+            {
+              "record_id": "rec98Bn8Pa37M2",
+              "text": null,
+              "parents": null
+            },
+            {
+              "record_id": "rec04Bi5Ln274s",
+              "text": null,
+              "parents": null
+            },
+            {
+              "record_id": "rec84Wx0Wg5bUH",
+              "text": null,
+              "parents": null
+            },
+            {
+              "record_id": "rec29Bo0Fp2bId",
+              "text": null,
+              "parents": null
+            },
+            {
+              "record_id": "rec71Kv5Ph5gxV",
+              "text": null,
+              "parents": null
+            },
+            {
+              "record_id": "rec23Kq3Vg3y6x",
+              "text": null,
+              "parents": null
+            },
+            {
+              "record_id": "rec63Nd3Cw1eTw",
+              "text": null,
+              "parents": null
+            },
+            {
+              "record_id": "rec44Vn9Sf9dlh",
+              "text": null,
+              "parents": null
+            },
+            {
+              "record_id": "rec91Di7To4iwg",
+              "text": null,
+              "parents": null
+            },
+            {
+              "record_id": "rec92Yc8Pq5qSa",
+              "text": null,
+              "parents": null
+            },
+            {
+              "record_id": "recvrvyxLVX9TP",
+              "text": "P1-parent",
+              "parents": null
+            },
+            {
+              "record_id": "recvruabFLz9VF",
+              "text": "P2-parent",
+              "parents": [
+                "recvruabFLz9VF"
+              ]
+            },
+            {
+              "record_id": "recvramm0oObCE",
+              "text": "C1-child",
+              "parents": [
+                "recvrvyxLVX9TP"
+              ]
+            },
+            {
+              "record_id": "recvrwwfxbFAwP",
+              "text": "C2-child",
+              "parents": [
+                "recvrvyxLVX9TP"
+              ]
+            },
+            {
+              "record_id": "recvrmgyOULK2M",
+              "text": "G1-grandchild",
+              "parents": [
+                "recvramm0oObCE"
+              ]
+            },
+            {
+              "record_id": "recvrqqa2v2Jkn",
+              "text": "D1-two-parents",
+              "parents": [
+                "recvrvyxLVX9TP",
+                "recvruabFLz9VF"
+              ]
+            }
+          ]
+        }
+      },
+      "knob_digest_identical_to_bogus_control": {
+        "with_hierarchy_true": true,
+        "hierarchy_true": true,
+        "BOGUS_CONTROL": true
+      },
+      "ASSERTIONS": {
+        "search_unchanged_by_hierarchy_config": true,
+        "view_scoped_search_equals_unscoped": true,
+        "records_list_unchanged_by_hierarchy_config": false
+      }
+    }
+  }
+}

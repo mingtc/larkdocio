@@ -1,0 +1,25 @@
+[
+  {
+    "block_id": "root",
+    "parent_id": "doc",
+    "block_type": 1,
+    "page": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Doc Title"
+          }
+        }
+      ]
+    },
+    "children": [
+      "u9"
+    ]
+  },
+  {
+    "block_id": "u9",
+    "parent_id": "root",
+    "block_type": 999,
+    "undefined": {}
+  }
+]

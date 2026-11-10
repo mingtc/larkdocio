@@ -1,0 +1,63 @@
+{
+  "_probe": "sub-b",
+  "_endpoint": "/open-apis/bitable/v1/apps/Exampleb735d410075fcc1c89ab/tables/tbljnCMElmG4kiQZ/fields",
+  "_method": "POST",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": null,
+  "_verdict": "OK",
+  "_note": "Q1/Q2b: can a link field point at its OWN table? That is the shape `hierarchy_config.field_id` demands (single_link or duplex_link).",
+  "response": {
+    "code": 0,
+    "data": {
+      "attempts": {
+        "SelfSingleLink": {
+          "requested_type": 18,
+          "requested_ui_type": "SingleLink",
+          "property_table_id": "<the table's OWN id>",
+          "code": 0,
+          "msg": "success",
+          "error_message": null,
+          "created_field": {
+            "field_id": "fldz7feL7d",
+            "field_name": "SelfSingleLink",
+            "is_extend": false,
+            "is_primary": false,
+            "is_synced": false,
+            "property": {
+              "multiple": true,
+              "table_id": "tbljnCMElmG4kiQZ",
+              "table_name": "Table"
+            },
+            "type": 18,
+            "ui_type": "SingleLink"
+          }
+        },
+        "SelfDuplexLink": {
+          "requested_type": 21,
+          "requested_ui_type": "DuplexLink",
+          "property_table_id": "<the table's OWN id>",
+          "code": 0,
+          "msg": "success",
+          "error_message": null,
+          "created_field": {
+            "field_id": "fld9ukArDf",
+            "field_name": "SelfDuplexLink",
+            "is_extend": false,
+            "is_primary": false,
+            "is_synced": false,
+            "property": {
+              "back_field_id": "fldRkirGlb",
+              "back_field_name": "Table-SelfDuplexLink",
+              "multiple": true,
+              "table_id": "tbljnCMElmG4kiQZ",
+              "table_name": "Table"
+            },
+            "type": 21,
+            "ui_type": "DuplexLink"
+          }
+        }
+      }
+    }
+  }
+}

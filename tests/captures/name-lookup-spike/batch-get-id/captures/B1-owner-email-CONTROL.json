@@ -1,0 +1,30 @@
+{
+  "probe": "B1-owner-email-CONTROL",
+  "method": "POST",
+  "path": "/open-apis/contact/v3/users/batch_get_id",
+  "params": [
+    [
+      "user_id_type",
+      "open_id"
+    ]
+  ],
+  "body": {
+    "emails": [
+      "example.user@example.com"
+    ]
+  },
+  "http_status": 200,
+  "response": {
+    "code": 0,
+    "data": {
+      "user_list": [
+        {
+          "email": "example.user@example.com",
+          "user_id": "ou_exampleowner00000000000000000001"
+        }
+      ]
+    },
+    "msg": "success"
+  },
+  "_sanitization": "recorded unredacted; in this public copy the owner's email is the placeholder example.user@example.com (tests/captures/README.md), and the synthetic example.invalid address and the synthetic unassignable +1-000 mobile are all either already committed (captures/P2, P6, W2) or not a real identifier"
+}

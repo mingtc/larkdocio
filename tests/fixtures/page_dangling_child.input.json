@@ -1,0 +1,34 @@
+[
+  {
+    "block_id": "root",
+    "parent_id": "doc",
+    "block_type": 1,
+    "page": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Doc Title"
+          }
+        }
+      ]
+    },
+    "children": [
+      "real",
+      "ghost"
+    ]
+  },
+  {
+    "block_id": "real",
+    "parent_id": "root",
+    "block_type": 2,
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "x"
+          }
+        }
+      ]
+    }
+  }
+]

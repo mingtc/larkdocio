@@ -1,0 +1,161 @@
+{
+  "_probe": "ld256-person-write-shapes",
+  "_endpoint": "/open-apis/bitable/v1/apps/{app}/tables/{table}/records",
+  "_method": "POST",
+  "_note": "LD-256 AC7 — the Person (11 / User) WRITE shape, the one writable type no earlier pack ever wrote. Captured against a SELF-PROVISIONED DISPOSABLE Base (tests/base_write_harness.py); the Scratch Base was never touched. Every person id and display name is redacted (LD-256 AC8).",
+  "_lark_code": 0,
+  "_verdict": "OK",
+  "response": {
+    "code": 0,
+    "data": {
+      "write_shapes": [
+        {
+          "shape": "list_of_id_objects",
+          "request_value": [
+            {
+              "id": "<redacted:person-id>"
+            }
+          ],
+          "code": 0,
+          "msg": "success",
+          "response": {
+            "code": 0,
+            "data": {
+              "record": {
+                "fields": {
+                  "Person": [
+                    {
+                      "id": "<redacted:person-id>"
+                    }
+                  ],
+                  "Text": "person-list_of_id_objects"
+                },
+                "id": "recvrw5PqEbwrM",
+                "record_id": "recvrw5PqEbwrM"
+              }
+            },
+            "msg": "success"
+          },
+          "echo": {
+            "Person": [
+              {
+                "id": "<redacted:person-id>"
+              }
+            ],
+            "Text": "person-list_of_id_objects"
+          }
+        },
+        {
+          "shape": "bare_list_of_ids",
+          "request_value": [
+            "<redacted:person-id>"
+          ],
+          "code": 1254066,
+          "msg": "UserFieldConvFail",
+          "response": {
+            "code": 1254066,
+            "msg": "UserFieldConvFail",
+            "error": {
+              "log_id": "2026080402041078231787FAA89EEC424A"
+            }
+          },
+          "echo": null
+        },
+        {
+          "shape": "bare_string_id",
+          "request_value": "<redacted:person-id>",
+          "code": 1254066,
+          "msg": "UserFieldConvFail",
+          "response": {
+            "code": 1254066,
+            "msg": "UserFieldConvFail",
+            "error": {
+              "log_id": "2026080402041038667B398DCDC0CEB6FE"
+            }
+          },
+          "echo": null
+        },
+        {
+          "shape": "list_of_name_objects",
+          "request_value": [
+            {
+              "name": "<redacted:person-name>"
+            }
+          ],
+          "code": 1254066,
+          "msg": "UserFieldConvFail",
+          "response": {
+            "code": 1254066,
+            "msg": "UserFieldConvFail",
+            "error": {
+              "log_id": "20260804020410666AD75DCC36DCD22051"
+            }
+          },
+          "echo": null
+        },
+        {
+          "shape": "read_back_shape",
+          "request_value": [
+            {
+              "id": "<redacted:person-id>",
+              "name": "<redacted:person-name>",
+              "en_name": "<redacted:person-name>"
+            }
+          ],
+          "code": 0,
+          "msg": "success",
+          "response": {
+            "code": 0,
+            "data": {
+              "record": {
+                "fields": {
+                  "Person": [
+                    {
+                      "en_name": "<redacted:person-name>",
+                      "id": "<redacted:person-id>",
+                      "name": "<redacted:person-name>"
+                    }
+                  ],
+                  "Text": "person-read_back_shape"
+                },
+                "id": "recvrj1FGpqxFS",
+                "record_id": "recvrj1FGpqxFS"
+              }
+            },
+            "msg": "success"
+          },
+          "echo": {
+            "Person": [
+              {
+                "en_name": "<redacted:person-name>",
+                "id": "<redacted:person-id>",
+                "name": "<redacted:person-name>"
+              }
+            ],
+            "Text": "person-read_back_shape"
+          }
+        }
+      ],
+      "records_search_readback": {
+        "person-list_of_id_objects": [
+          {
+            "avatar_url": "<redacted:avatar-url>",
+            "email": "",
+            "en_name": "<redacted:person-name>",
+            "id": "<redacted:person-id>",
+            "name": "<redacted:person-name>"
+          }
+        ],
+        "person-read_back_shape": [
+          {
+            "avatar_url": "<redacted:avatar-url>",
+            "email": "",
+            "en_name": "<redacted:person-name>",
+            "id": "<redacted:person-id>",
+            "name": "<redacted:person-name>"
+          }
+        ]
+      }
+    }
+  }
+}

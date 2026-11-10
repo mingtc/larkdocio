@@ -1,0 +1,36 @@
+{
+  "n": 206,
+  "probe": "LD-435 AC1/AC2 arms B+C — values_image, sheet_file, absence",
+  "label": "C1 upload_all parent_type sheet_file parent_node the SPREADSHEET",
+  "credential_pair": "WRITE",
+  "request": {
+    "method": "POST",
+    "path": "/open-apis/drive/v1/medias/upload_all",
+    "form_fields": {
+      "file_name": "ld435.png",
+      "parent_type": "sheet_file",
+      "parent_node": "Exampleb31ebb6e3fd2fe5eddf0",
+      "size": "88"
+    },
+    "file_part": {
+      "file_name": "ld435.png",
+      "content_type": "image/png",
+      "size": 88,
+      "sha256": "9949278fd2ea0be10d9eb25dfc8911d5b0ca62bdaa02b1215f4d4e9383beaa8f",
+      "bytes": "<NOT CAPTURED — media bytes are hashed, never written to a capture>"
+    },
+    "headers": [
+      "Authorization: Bearer <redacted>",
+      "Content-Type: multipart/form-data; boundary=<generated>"
+    ]
+  },
+  "http_status": 200,
+  "response": {
+    "code": 0,
+    "data": {
+      "file_token": "Exampled7a15ca0baea2baafe68",
+      "version": "7673155950269714143"
+    },
+    "msg": "Success"
+  }
+}

@@ -1,0 +1,70 @@
+{
+ "_probe": "ld264-view-filter-vocabulary",
+ "_note": "O5\u2033: the bundled probe moved `field_name` and snake_case operators at once. These two calls move ONE variable each.",
+ "verdict": "both independently",
+ "steps": [
+  {
+   "_note": "A: field_id + snake_case operator \u2014 isolates OPERATOR CASE",
+   "_endpoint": "\u2026/views/{view_id}",
+   "_method": "PATCH",
+   "request": {
+    "property": {
+     "filter_info": {
+      "conjunction": "and",
+      "conditions": [
+       {
+        "field_id": "fldlQJwUch",
+        "operator": "is_not",
+        "value": [
+         "x"
+        ]
+       }
+      ]
+     }
+    }
+   },
+   "code": 99992402,
+   "msg": "field validation failed",
+   "error": {
+    "log_id": "20260813004557BC66EDE59900490BE3DB",
+    "field_violations": [
+     {
+      "field": "property.filter_info.conditions[*].operator",
+      "value": "is_not",
+      "description": "property.filter_info.conditions[*].operator is optional, options: [is,isNot,contains,doesNotContain,isEmpty,isNotEmpty,isGreater,isGreaterEqual,isLess,isLessEqual]"
+     }
+    ]
+   }
+  },
+  {
+   "_note": "B: field_name + camelCase operator \u2014 isolates the KEY",
+   "_endpoint": "\u2026/views/{view_id}",
+   "_method": "PATCH",
+   "request": {
+    "property": {
+     "filter_info": {
+      "conjunction": "and",
+      "conditions": [
+       {
+        "field_name": "Text",
+        "operator": "isNotEmpty",
+        "value": []
+       }
+      ]
+     }
+    }
+   },
+   "code": 99992402,
+   "msg": "field validation failed",
+   "error": {
+    "log_id": "20260813004558604CC7F8115DAB0A2C60",
+    "field_violations": [
+     {
+      "field": "property.filter_info.conditions[*].field_id",
+      "description": "property.filter_info.conditions[*].field_id is required"
+     }
+    ]
+   }
+  }
+ ]
+}

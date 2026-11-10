@@ -1,0 +1,202 @@
+{
+  "_probe": "p2",
+  "_endpoint": ".../tables/{main,ref}/records/search",
+  "_method": "POST",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": null,
+  "_verdict": "OK",
+  "_note": "THE read encodings: SingleLink / DuplexLink / Lookup for EMPTY, SINGLE and MULTI link sets, plus the auto-populated DUPLEX MIRROR values in the linked table",
+  "response": {
+    "code": 0,
+    "data": {
+      "main_rows": [
+        {
+          "fields": {
+            "DuplexLink": {
+              "link_record_ids": null
+            },
+            "ModifiedUser": [
+              {
+                "avatar_url": "<redacted:avatar_url>",
+                "email": "",
+                "en_name": "<redacted:en_name>",
+                "id": "<redacted:person-id>",
+                "name": "<redacted:person-name>"
+              }
+            ],
+            "ModifiedUser2": [
+              {
+                "avatar_url": "<redacted:avatar_url>",
+                "email": "",
+                "en_name": "<redacted:en_name>",
+                "id": "<redacted:person-id>",
+                "name": "<redacted:person-name>"
+              }
+            ],
+            "SingleLinkMany": {
+              "link_record_ids": null
+            },
+            "SingleLinkOne": {
+              "link_record_ids": null
+            },
+            "多行文本": [
+              {
+                "text": "empty-links",
+                "type": "text"
+              }
+            ]
+          },
+          "record_id": "recvrivuozcodN"
+        },
+        {
+          "fields": {
+            "DuplexLink": {
+              "link_record_ids": [
+                "recvrftvdQu0a2"
+              ]
+            },
+            "ModifiedUser": [
+              {
+                "avatar_url": "<redacted:avatar_url>",
+                "email": "",
+                "en_name": "<redacted:en_name>",
+                "id": "<redacted:person-id>",
+                "name": "<redacted:person-name>"
+              }
+            ],
+            "ModifiedUser2": [
+              {
+                "avatar_url": "<redacted:avatar_url>",
+                "email": "",
+                "en_name": "<redacted:en_name>",
+                "id": "<redacted:person-id>",
+                "name": "<redacted:person-name>"
+              }
+            ],
+            "SingleLinkMany": {
+              "link_record_ids": [
+                "recvrftvdQu0a2"
+              ]
+            },
+            "SingleLinkOne": {
+              "link_record_ids": [
+                "recvrftvdQu0a2"
+              ]
+            },
+            "多行文本": [
+              {
+                "text": "one-link",
+                "type": "text"
+              }
+            ]
+          },
+          "record_id": "recvrhtjicR6ig"
+        },
+        {
+          "fields": {
+            "DuplexLink": {
+              "link_record_ids": [
+                "recvrftvdQu0a2",
+                "recvrzucbGOfCz"
+              ]
+            },
+            "ModifiedUser": [
+              {
+                "avatar_url": "<redacted:avatar_url>",
+                "email": "",
+                "en_name": "<redacted:en_name>",
+                "id": "<redacted:person-id>",
+                "name": "<redacted:person-name>"
+              }
+            ],
+            "ModifiedUser2": [
+              {
+                "avatar_url": "<redacted:avatar_url>",
+                "email": "",
+                "en_name": "<redacted:en_name>",
+                "id": "<redacted:person-id>",
+                "name": "<redacted:person-name>"
+              }
+            ],
+            "SingleLinkMany": {
+              "link_record_ids": [
+                "recvrftvdQu0a2",
+                "recvrzucbGOfCz"
+              ]
+            },
+            "SingleLinkOne": {
+              "link_record_ids": [
+                "recvrwoqiEOlwS"
+              ]
+            },
+            "多行文本": [
+              {
+                "text": "multi-link",
+                "type": "text"
+              }
+            ]
+          },
+          "record_id": "recvrjqwefdk15"
+        }
+      ],
+      "ref_rows": [
+        {
+          "fields": {
+            "RefNum": 10,
+            "p0zoo-Main-033103-DuplexLink": {
+              "link_record_ids": [
+                "recvrhtjicR6ig",
+                "recvrjqwefdk15"
+              ]
+            },
+            "多行文本": [
+              {
+                "text": "R1",
+                "type": "text"
+              }
+            ]
+          },
+          "record_id": "recvrftvdQu0a2"
+        },
+        {
+          "fields": {
+            "RefNum": 20,
+            "p0zoo-Main-033103-DuplexLink": {
+              "link_record_ids": [
+                "recvrjqwefdk15"
+              ]
+            },
+            "多行文本": [
+              {
+                "text": "R2",
+                "type": "text"
+              }
+            ]
+          },
+          "record_id": "recvrzucbGOfCz"
+        },
+        {
+          "fields": {
+            "RefNum": 30,
+            "p0zoo-Main-033103-DuplexLink": {
+              "link_record_ids": null
+            },
+            "多行文本": [
+              {
+                "text": "R3",
+                "type": "text"
+              }
+            ]
+          },
+          "record_id": "recvrwoqiEOlwS"
+        }
+      ],
+      "ref_record_ids": [
+        "recvrftvdQu0a2",
+        "recvrzucbGOfCz",
+        "recvrwoqiEOlwS"
+      ]
+    }
+  }
+}

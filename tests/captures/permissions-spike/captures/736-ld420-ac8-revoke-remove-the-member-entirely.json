@@ -1,0 +1,19 @@
+{
+  "n": 736,
+  "label": "LD420 ac8 REVOKE remove the member entirely",
+  "credential_pair": "WRITE",
+  "request": {
+    "method": "DELETE",
+    "path": "/open-apis/drive/v1/permissions/Example6b298ac6e2a188e1f09c/members/ou_exampleowner00000000000000000001?type=docx&member_type=openid",
+    "body": null,
+    "headers": [
+      "Authorization: Bearer <redacted>"
+    ]
+  },
+  "http_status": 200,
+  "response": {
+    "code": 0,
+    "data": {},
+    "msg": "Success"
+  }
+}

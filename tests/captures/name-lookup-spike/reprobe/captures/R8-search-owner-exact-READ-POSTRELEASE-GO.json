@@ -1,0 +1,76 @@
+{
+  "probe": "R8-search-owner-exact-READ-POSTRELEASE-GO",
+  "method": "POST",
+  "path": "/open-apis/directory/v1/employees/search",
+  "params": [
+    [
+      "employee_id_type",
+      "open_id"
+    ],
+    [
+      "department_id_type",
+      "open_department_id"
+    ]
+  ],
+  "body": {
+    "query": "Example User",
+    "page_request": {
+      "page_size": 10
+    },
+    "required_fields": [
+      "base_info"
+    ]
+  },
+  "http_status": 200,
+  "response_headers": {
+    "content-type": "application/json; charset=utf-8",
+    "x-tt-logid": "202607301342288BD90E89D33C26972A45",
+    "x-request-id": "202607301342288BD90E89D33C26972A45"
+  },
+  "response": {
+    "code": 0,
+    "data": {
+      "employees": [
+        {
+          "base_info": {
+            "email": "example.user@example.com",
+            "employee_id": "ou_exampleowner00000000000000000001",
+            "enterprise_email": "example.user@example.com",
+            "enterprise_email_aliases": [],
+            "name": {
+              "first_name": {
+                "default_value": "Example",
+                "i18n_value": {
+                  "en_us": "",
+                  "ja_jp": "",
+                  "zh_cn": ""
+                }
+              },
+              "last_name": {
+                "default_value": "User",
+                "i18n_value": {
+                  "en_us": "",
+                  "ja_jp": "",
+                  "zh_cn": ""
+                }
+              },
+              "name": {
+                "default_value": "Example User",
+                "i18n_value": {
+                  "en_us": "",
+                  "ja_jp": "",
+                  "zh_cn": ""
+                }
+              }
+            }
+          }
+        }
+      ],
+      "page_response": {
+        "has_more": false,
+        "page_token": "FP0/Example000000000000000000000000000000000000="
+      }
+    },
+    "msg": ""
+  }
+}

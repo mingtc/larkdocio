@@ -1,0 +1,24 @@
+{
+  "n": 4,
+  "label": "leg2 create version with NO name (is name required)",
+  "credential_pair": "WRITE",
+  "request": {
+    "method": "POST",
+    "path": "/open-apis/drive/v1/files/Example9668460258a2a652cfde/versions",
+    "body": {
+      "obj_type": "docx"
+    },
+    "headers": [
+      "Authorization: Bearer <redacted>"
+    ]
+  },
+  "http_status": 200,
+  "seconds": 0.127,
+  "response": {
+    "code": 252804105,
+    "error": {
+      "log_id": "20260811070812A3F9BEBAA3744D2EB1E6"
+    },
+    "msg": "Params error, param [name] is wrong."
+  }
+}

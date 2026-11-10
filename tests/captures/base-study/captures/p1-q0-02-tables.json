@@ -1,0 +1,31 @@
+{
+  "_probe": "q0-recon",
+  "_endpoint": "…/tables",
+  "_method": "GET",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": "success",
+  "_verdict": "OK",
+  "_note": "table list",
+  "response": {
+    "code": 0,
+    "data": {
+      "has_more": false,
+      "items": [
+        {
+          "name": "Table",
+          "revision": 25,
+          "table_id": "tblYtWUpf5q944Ao"
+        },
+        {
+          "name": "Table 2",
+          "revision": 25,
+          "table_id": "tblvHhs6KA9QYNCo"
+        }
+      ],
+      "page_token": "tblvHhs6KA9QYNCo",
+      "total": 2
+    },
+    "msg": "success"
+  }
+}

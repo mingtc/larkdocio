@@ -1,0 +1,37 @@
+{
+  "_probe": "ld497-02",
+  "_script": "dev/base-study/probes/probe_ld497_batch_mention_write.py",
+  "_endpoint": "POST /open-apis/bitable/v1/apps/{app_token}/tables/{table_id}/records/batch_create",
+  "_method": "one record whose (1, Text) cell is the consumer's own quoted mention segment array, on a self-provisioned disposable Base",
+  "_verdict": "0/1 shapes accepted on the batch create route — the doc-mention chip was REFUSED, the same 1254060 TextFieldConvFail the fourteen single-record spellings met.",
+  "_scope": "D-59: this label covers ONE route (POST …/records/batch_create), ONE value shape (the consumer's doc-mention chip), ONE field pair ((1, 'Text')), ONE tenant, on a disposable Base, on 2026-08-17. It carries NO control of its own — the bare-string control belongs to the ld416-01 run — and it says nothing about records/batch_update, about cell values seeded at table-creation time, or about any other field pair. Those stay UNMEASURED, not refused.",
+  "_annotation_note": "The _scope and _verdict fields below were added to the script AFTER the run and are ANALYSIS, not measurement — every measured field (_value_sent, _answer, _send_log, _sends) is exactly as the run wrote it, and the script now emits _scope and _verdict on any re-run. _disposable is measured EXCEPT two of its six keys: \"deleted\" and \"delete_code\" were added by hand after the run, read off the durable disposables ledger (larkdocio-DISPOSABLE-1786940208-75881 → deleted: True, last_code: 0) rather than emitted by the script itself, which builds _disposable with only folder_env/title/app_token/default_table_id_present. Run date 2026-08-17.",
+  "_value_sent": [
+    {
+      "type": "mention",
+      "mentionType": "Docx",
+      "token": "Example09c5f37ea54fdaa4a226",
+      "text": "Example Document Title",
+      "link": "https://…/docx/Example09c5f37ea54fdaa4a226#Example9475ce2dda1cd28747db"
+    }
+  ],
+  "_answer": "LarkAPIError: create records in table tbls2Z6hQ3hC1hwR failed: Code: 1254060, Msg: TextFieldConvFail The value cannot be converted to this text-shaped field. An Email cell reads back as a {link,text} object but only accepts a plain string on write, so what was read cannot be written back unchanged. Lark's own detail: Invalid request parameter: 'records[0].fields.Chip.fieldValue[map[link:https://…/docx/Example09c5f37ea54fdaa4a226#Example9475ce2dda1cd28747db mentionType:Docx text:Example Document Title token:Example09c5f37ea54fdaa4a226 type:mention]].fieldName.Chip'. Correct format : the value of 'Multiline' must be a string. Please check and modify accordingly.",
+  "_traceback_tail": "larkdocio.errors.LarkAPIError: create records in table tbls2Z6hQ3hC1hwR failed: Code: 1254060, Msg: TextFieldConvFail The value cannot be converted to this text-shaped field. An Email cell reads back as a {link,text} object but only accepts a plain string on write, so what was read cannot be written back unchanged. Lark's own detail: Invalid request parameter: 'records[0].fields.Chip.fieldValue[map[link:https://…/docx/Example09c5f37ea54fdaa4a226#Example9475ce2dda1cd28747db mentionType:Docx text:Example Document Title token:Example09c5f37ea54fdaa4a226 type:mention]].fieldName.Chip'. Correct format : the value of 'Multiline' must be a string. Please check and modify accordingly.",
+  "_sends": 4,
+  "_send_log": [
+    "1 POST /bitable/v1/apps (create the disposable)",
+    "2 POST /bitable/v1/apps/{a}/tables (one named (1, Text) column)",
+    "3 POST …/records/batch_create — THE PROBE",
+    "4 DELETE /drive/v1/files/{a}?type=bitable (the finally delete)"
+  ],
+  "_no_retries": true,
+  "_media_tokens_created": 0,
+  "_disposable": {
+    "folder_env": "LARKDOCIO_DISPOSABLES_FOLDER",
+    "title": "larkdocio-DISPOSABLE-1786940208-75881",
+    "app_token": "<redacted — a disposable, deleted in the finally below>",
+    "default_table_id_present": true,
+    "deleted": true,
+    "delete_code": 0
+  }
+}

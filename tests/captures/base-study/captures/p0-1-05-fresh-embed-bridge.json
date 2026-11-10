@@ -1,0 +1,83 @@
+{
+  "_probe": "p1",
+  "_endpoint": "bitable bridge on FRESH docx-born embed tokens",
+  "_method": "MIXED",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": null,
+  "_verdict": "OK",
+  "_note": "THE VERDICT INPUT: does a freshly docx-born embedded Base deep-read, or is it a zero-table husk like the zoo's 18?",
+  "response": {
+    "code": 0,
+    "data": {
+      "fresh_type18_embed": {
+        "compound": "Examplec8af798413375ff9bc09_tbloLtUSiQNhlkYX",
+        "head": "Examplec8af798413375ff9bc09",
+        "tail": "tbloLtUSiQNhlkYX",
+        "app_meta": {
+          "http": 200,
+          "code": 0,
+          "msg": "success",
+          "app": {
+            "app_token": "Examplec8af798413375ff9bc09",
+            "formula_type": 2,
+            "is_advanced": false,
+            "name": "Untitled bitable",
+            "revision": 1
+          }
+        },
+        "tables": {
+          "code": 0,
+          "n": 1,
+          "data_keys": [
+            "has_more",
+            "items",
+            "page_token",
+            "total"
+          ],
+          "items": [
+            {
+              "name": "tbloLtUSiQNhlkYX",
+              "revision": 0,
+              "table_id": "tbloLtUSiQNhlkYX"
+            }
+          ]
+        },
+        "tail_is_a_listed_table": true,
+        "fields_via_tail": {
+          "code": 0,
+          "msg": "success",
+          "n": 3,
+          "names": [
+            "Multiline",
+            "Multiline 1",
+            "Single option"
+          ]
+        },
+        "search_via_tail": {
+          "code": 0,
+          "msg": "success",
+          "n": 3
+        },
+        "drive_meta": {
+          "code": 0,
+          "meta": {
+            "create_time": "1785698916",
+            "doc_token": "Examplec8af798413375ff9bc09",
+            "doc_type": "bitable",
+            "latest_modify_time": "1785698916",
+            "latest_modify_user": "<redacted:person-id>",
+            "owner_id": "<redacted:person-id>",
+            "request_doc_info": {
+              "doc_token": "Examplec8af798413375ff9bc09",
+              "doc_type": "bitable"
+            },
+            "sec_label_name": "",
+            "title": "",
+            "url": ""
+          }
+        }
+      }
+    }
+  }
+}

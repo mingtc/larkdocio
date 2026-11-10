@@ -1,0 +1,29 @@
+{
+  "probe": "W2-batch-get-id-WRITE",
+  "method": "POST",
+  "path": "/open-apis/contact/v3/users/batch_get_id",
+  "params": [
+    [
+      "user_id_type",
+      "open_id"
+    ]
+  ],
+  "body": {
+    "emails": [
+      "example.user@example.com"
+    ]
+  },
+  "http_status": 200,
+  "response": {
+    "code": 0,
+    "data": {
+      "user_list": [
+        {
+          "email": "example.user@example.com",
+          "user_id": "ou_exampleowner00000000000000000001"
+        }
+      ]
+    },
+    "msg": "success"
+  }
+}

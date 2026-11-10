@@ -1,0 +1,64 @@
+{
+  "trial": {
+    "id": "L-tighten-1",
+    "doc": "L",
+    "shape": "tighten",
+    "arm": "A",
+    "rep": 1
+  },
+  "cli_version": "2.1.195 (Claude Code)",
+  "instruction": "Tighten this document: cut redundancy, shorten long sentences, and make the prose crisper throughout.",
+  "instruction_mentions_markers": false,
+  "meta": {
+    "model_requested": "sonnet",
+    "models_used": [
+      "claude-haiku-4-5-20251001",
+      "claude-sonnet-4-6"
+    ],
+    "duration_ms": 26530,
+    "cost_usd": 0.1261364,
+    "is_error": false,
+    "num_turns": 1
+  },
+  "fenced_output": false,
+  "classification": {
+    "source_marker_count": 26,
+    "output_marker_count": 26,
+    "per_marker": {
+      "l01": "preserved",
+      "l02": "preserved",
+      "l03": "preserved",
+      "l04": "preserved",
+      "l05": "preserved",
+      "l06": "preserved",
+      "l07": "preserved",
+      "l08": "preserved",
+      "l09": "preserved",
+      "l10": "preserved",
+      "l11": "preserved",
+      "l12": "preserved",
+      "l13": "preserved",
+      "l14": "preserved",
+      "l15": "preserved",
+      "l16": "preserved",
+      "l17": "preserved",
+      "l18": "preserved",
+      "l19": "preserved",
+      "l20": "preserved",
+      "l21": "preserved",
+      "l22": "preserved",
+      "l23": "preserved",
+      "l24": "preserved",
+      "l25": "preserved",
+      "l26": "preserved"
+    },
+    "counts": {
+      "preserved": 26
+    },
+    "invented_ids": [],
+    "mangled_forms": [],
+    "order_preserved": true,
+    "trial_clean": true
+  },
+  "edited_document": "# Sample project review \u2014 first stage\n\n<!-- lark:block:l01 -->\n## Summary\n\n<!-- lark:block:l02 -->\nThe reader work dominated stage 1, landed on time, and is now consumed by two consumer projects.\n\n<!-- lark:block:l03 -->\nRemaining risk is concentrated in the writer surface: the plan-gated apply engine still refuses several shapes consumers ask for regularly.\n\n<!-- lark:block:l04 -->\n## Reliability\n\n<!-- lark:block:l05 -->\nThree failed test runs, none in a release, all traced to the same missing field-level permission scope.\n\n<!-- lark:block:l06 -->\nThe follow-up made failures legible rather than widening any scope \u2014 a grant is a console action, not something the library may take.\n\n<!-- lark:block:l07 -->\n## Throughput\n\n<!-- lark:block:l08 -->\nCycle time improved once board moves became scripted, eliminating the drift class where folder and log disagreed on an issue's state.\n\n<!-- lark:block:l09 -->\nRemaining drag is review latency on larger tranches, where a single reviewer must hold a lot of context at once.\n\n<!-- lark:block:l10 -->\n## Consumers\n\n<!-- lark:block:l11 -->\nThe reference consumer vendors a built wheel and pins a local file requirement, so a release reaches it only when it chooses to refresh.\n\n<!-- lark:block:l12 -->\nThat has been a good trade: nothing ships by surprise, and the refresh step is where compatibility gets checked.\n\n<!-- lark:block:l13 -->\n## Resources\n\n<!-- lark:block:l14 -->\nDisk use was flat. The only new space went to the sandbox used for live write gates \u2014 small and torn down after each run.\n\n<!-- lark:block:l15 -->\nThe one avoidable cost was rework from a misdiagnosis that took roughly a week to resolve.\n\n<!-- lark:block:l16 -->\n## Second stage\n\n<!-- lark:block:l17 -->\nThe second stage is planned around round-trip editing \u2014 the capability consumers ask for most and cannot currently express.\n\n<!-- lark:block:l18 -->\nEverything else is sequenced behind it; a half-built round-trip would be worse than none.\n\n<!-- lark:block:l19 -->\n### Risks\n\n<!-- lark:block:l20 -->\n- Review latency on large tranches\n- A single reviewer holding all the context\n- The round-trip work slipping into the following stage\n\n<!-- lark:block:l21 -->\nOrdered by likelihood, not by how uncomfortable they are to discuss.\n\n<!-- lark:block:l22 -->\n### Numbers\n\n<!-- lark:block:l23 -->\n| Metric | Stage 1 | Target |\n| --- | --- | --- |\n| Failed runs | 3 | 0 |\n| Median cycle time | 4.1 days | 3 days |\n| Consumer refreshes | 6 | 6 |\n\n<!-- lark:block:l24 -->\nCycle time excludes two issues parked for a maintainer decision; holding time is not review time.\n\n<!-- lark:block:l25 -->\n### Decisions needed\n\n<!-- lark:block:l26 -->\nNeeded: whether the round-trip work ships behind a flag or as the default shape. That decision gates everything after it."
+}

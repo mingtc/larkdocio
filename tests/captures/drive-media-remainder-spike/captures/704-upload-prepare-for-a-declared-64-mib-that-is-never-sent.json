@@ -1,0 +1,29 @@
+{
+  "n": 704,
+  "probe": "01-chunked-upload",
+  "label": "upload_prepare for a DECLARED 64 MiB that is never sent",
+  "credential_pair": "WRITE",
+  "request": {
+    "method": "POST",
+    "path": "/open-apis/drive/v1/files/upload_prepare",
+    "body": {
+      "file_name": "ld437-declared-64mib.bin",
+      "parent_type": "explorer",
+      "parent_node": "Example6bd9cfa48a93d0f900d7",
+      "size": 67108864
+    },
+    "headers": [
+      "Authorization: Bearer <redacted>"
+    ]
+  },
+  "http_status": 200,
+  "response": {
+    "code": 0,
+    "data": {
+      "block_num": 16,
+      "block_size": 4194304,
+      "upload_id": "7673163772587970274"
+    },
+    "msg": "Success"
+  }
+}

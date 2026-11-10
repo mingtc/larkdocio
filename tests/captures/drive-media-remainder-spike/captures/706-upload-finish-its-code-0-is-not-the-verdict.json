@@ -1,0 +1,30 @@
+{
+  "n": 706,
+  "probe": "01-chunked-upload",
+  "label": "upload_finish — its code:0 is NOT the verdict",
+  "credential_pair": "WRITE",
+  "request": {
+    "method": "POST",
+    "path": "/open-apis/drive/v1/files/upload_finish",
+    "body": {
+      "upload_id": "7673163768917937897",
+      "block_num": 1
+    },
+    "headers": [
+      "Authorization: Bearer <redacted>"
+    ]
+  },
+  "http_status": 200,
+  "response": {
+    "code": 0,
+    "data": {
+      "extra": {
+        "node_token": "nodlgExample3314187bac32f88"
+      },
+      "file_token": "Example90686c06d9e09fc9abdc",
+      "url": "<REDACTED signed link: len=…, scheme=https, query_keys=[]>",
+      "version": "7673163778942308070"
+    },
+    "msg": "Success"
+  }
+}

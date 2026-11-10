@@ -1,0 +1,30 @@
+{
+  "issue": "LD-601",
+  "leg": "after",
+  "route": "r2",
+  "route_title": "docx document meta",
+  "endpoint": "/open-apis/docx/v1/documents/Examplebe2270e20bfe6e6fff4c",
+  "credential_pair": "write",
+  "shipped_call_site": "WriteClient.get_document (also docx_ledger.close_out's re-query seam)",
+  "subject_document_id": "Examplebe2270e20bfe6e6fff4c",
+  "disposables_folder_token": "Example0c60da6a89d790aee55d",
+  "sent": {
+    "method": "GET",
+    "path": "/open-apis/docx/v1/documents/Examplebe2270e20bfe6e6fff4c",
+    "body": null,
+    "params": null
+  },
+  "object_type_literal_sent": "n/a (the path names the object)",
+  "object_type_note": "the doc_type / obj_type literal is recorded per route because a wrong spelling returns code:0 with metas:[] — indistinguishable from a refusal unless failed_list is read",
+  "response": {
+    "code": 1770003,
+    "msg": "resource deleted",
+    "error": {
+      "log_id": "20260831180613D1732B44229B93FC0B51"
+    }
+  },
+  "failed_list": null,
+  "resolved_the_object": false,
+  "captured_at": "2026-08-31T18:06:14+0800",
+  "tenant_note": "one tenant, one document, one run — other tenants, regions and object types are unmeasured, not refuted"
+}

@@ -1,0 +1,282 @@
+{
+  "_probe": "ld339-01",
+  "_endpoint": "/open-apis/bitable/v1/apps/{a}/tables/{t}/fields/{f}",
+  "_method": "PUT with property.options — 7 arms on one disposable, 6 cells per column",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_verdict": "H2. An options-carrying update_field through the shipped client re-minted the ids (True) and left 0/6 cells resolving. The SAME change hand-written through the raw core WITH every option id on the wire preserved the ids = True, leaving 6/6.",
+  "_note": "LD-339 AC1. The four questions: (i) does an options-carrying update re-mint and orphan; (ii) H1 vs H2 — does a body that DOES carry the ids preserve them; (iii) does a byte-identical options array re-mint anyway; (iv) does MultiSelect behave as SingleSelect. Every arm is its own freshly-staged table so no arm can contaminate another. `cells_resolving_*` counts records whose Sel cell still holds a value.",
+  "_transport": "both — larkdocio.common.transport.CredentialedRawHttpClient (urllib) for the id-carrying bodies, and the shipped BaseSchemaClient for the arms that measure what a caller of THIS library gets. Paced 1.3 s.",
+  "arms": [
+    {
+      "arm": "control-name-only",
+      "ui_type": "SingleSelect",
+      "how": "shipped client, NO properties — the rename LD-319's recipe teaches",
+      "cells_resolving_before": 6,
+      "mutation": {
+        "transport": "shipped BaseSchemaClient.update_field",
+        "echoed_field_id": "fld9Q5qXBV",
+        "properties_passed": null
+      },
+      "option_ids_before": [
+        "opt6Qq6lMY",
+        "optz7IJrXM",
+        "opt3JLCF6t"
+      ],
+      "option_ids_after": [],
+      "ids_preserved": false,
+      "options_after": [],
+      "cells_resolving_after": 0,
+      "cells_orphaned": 6
+    },
+    {
+      "arm": "ours-recolour",
+      "ui_type": "SingleSelect",
+      "how": "shipped client; the caller SUPPLIED ids, build_property drops them",
+      "cells_resolving_before": 6,
+      "mutation": {
+        "transport": "shipped BaseSchemaClient.update_field",
+        "echoed_field_id": "fldbuF4UvU",
+        "properties_passed": "{\"options\": [{\"name\": \"Todo\", \"color\": 10, \"id\": \"optxsKklbB\"}, {\"name\": \"Doing\", \"color\": 7, \"id\": \"optGHvqSOe\"}, {\"name\": \"Done\", \"color\": 11, \"id\": \"optGLyslbU\"}]}"
+      },
+      "option_ids_before": [
+        "optxsKklbB",
+        "optGHvqSOe",
+        "optGLyslbU"
+      ],
+      "option_ids_after": [
+        "optuFuPNxO",
+        "optE4RlU4s",
+        "optZZ5z0ua"
+      ],
+      "ids_preserved": false,
+      "options_after": [
+        {
+          "color": 10,
+          "id": "optuFuPNxO",
+          "name": "Todo"
+        },
+        {
+          "color": 7,
+          "id": "optE4RlU4s",
+          "name": "Doing"
+        },
+        {
+          "color": 11,
+          "id": "optZZ5z0ua",
+          "name": "Done"
+        }
+      ],
+      "cells_resolving_after": 0,
+      "cells_orphaned": 6
+    },
+    {
+      "arm": "raw-recolour-with-ids",
+      "ui_type": "SingleSelect",
+      "how": "raw transport; option ids ARE on the wire",
+      "cells_resolving_before": 6,
+      "mutation": {
+        "transport": "raw",
+        "code": 0,
+        "msg": "success",
+        "sent_options": "[{\"name\": \"Todo\", \"color\": 10, \"id\": \"opthZWkhmq\"}, {\"name\": \"Doing\", \"color\": 7, \"id\": \"optFMoJKje\"}, {\"name\": \"Done\", \"color\": 11, \"id\": \"optl7aGz8K\"}]"
+      },
+      "option_ids_before": [
+        "opthZWkhmq",
+        "optFMoJKje",
+        "optl7aGz8K"
+      ],
+      "option_ids_after": [
+        "opthZWkhmq",
+        "optFMoJKje",
+        "optl7aGz8K"
+      ],
+      "ids_preserved": true,
+      "options_after": [
+        {
+          "color": 10,
+          "id": "opthZWkhmq",
+          "name": "Todo"
+        },
+        {
+          "color": 7,
+          "id": "optFMoJKje",
+          "name": "Doing"
+        },
+        {
+          "color": 11,
+          "id": "optl7aGz8K",
+          "name": "Done"
+        }
+      ],
+      "cells_resolving_after": 6,
+      "cells_orphaned": 0
+    },
+    {
+      "arm": "raw-identical-with-ids",
+      "ui_type": "SingleSelect",
+      "how": "raw transport; options byte-identical, ids included",
+      "cells_resolving_before": 6,
+      "mutation": {
+        "transport": "raw",
+        "code": 1254606,
+        "msg": "DataNotChange",
+        "sent_options": "[{\"id\": \"optWXlxnTU\", \"name\": \"Todo\", \"color\": 3}, {\"id\": \"optuA5i7Pj\", \"name\": \"Doing\", \"color\": 7}, {\"id\": \"optctup9xT\", \"name\": \"Done\", \"color\": 11}]"
+      },
+      "option_ids_before": [
+        "optWXlxnTU",
+        "optuA5i7Pj",
+        "optctup9xT"
+      ],
+      "option_ids_after": [
+        "optWXlxnTU",
+        "optuA5i7Pj",
+        "optctup9xT"
+      ],
+      "ids_preserved": true,
+      "options_after": [
+        {
+          "color": 3,
+          "id": "optWXlxnTU",
+          "name": "Todo"
+        },
+        {
+          "color": 7,
+          "id": "optuA5i7Pj",
+          "name": "Doing"
+        },
+        {
+          "color": 11,
+          "id": "optctup9xT",
+          "name": "Done"
+        }
+      ],
+      "cells_resolving_after": 6,
+      "cells_orphaned": 0
+    },
+    {
+      "arm": "ours-identical",
+      "ui_type": "SingleSelect",
+      "how": "shipped client; options identical apart from the ids it cannot send",
+      "cells_resolving_before": 6,
+      "mutation": {
+        "transport": "shipped BaseSchemaClient.update_field",
+        "echoed_field_id": "fldXG74nN0",
+        "properties_passed": "{\"options\": [{\"name\": \"Todo\", \"color\": 3}, {\"name\": \"Doing\", \"color\": 7}, {\"name\": \"Done\", \"color\": 11}]}"
+      },
+      "option_ids_before": [
+        "optKcDNXFL",
+        "opt1DOVrL3",
+        "optZfzFkXS"
+      ],
+      "option_ids_after": [
+        "optFoXmbBU",
+        "optw39kQWq",
+        "opttwRxq2I"
+      ],
+      "ids_preserved": false,
+      "options_after": [
+        {
+          "color": 3,
+          "id": "optFoXmbBU",
+          "name": "Todo"
+        },
+        {
+          "color": 7,
+          "id": "optw39kQWq",
+          "name": "Doing"
+        },
+        {
+          "color": 11,
+          "id": "opttwRxq2I",
+          "name": "Done"
+        }
+      ],
+      "cells_resolving_after": 0,
+      "cells_orphaned": 6
+    },
+    {
+      "arm": "multi-ours-recolour",
+      "ui_type": "MultiSelect",
+      "how": "shipped client, MultiSelect",
+      "cells_resolving_before": 6,
+      "mutation": {
+        "transport": "shipped BaseSchemaClient.update_field",
+        "echoed_field_id": "fldRgV3uNM",
+        "properties_passed": "{\"options\": [{\"name\": \"Todo\", \"color\": 10, \"id\": \"optf1Jah1n\"}, {\"name\": \"Doing\", \"color\": 7, \"id\": \"optZzr5VNy\"}, {\"name\": \"Done\", \"color\": 11, \"id\": \"optNWVEFxy\"}]}"
+      },
+      "option_ids_before": [
+        "optf1Jah1n",
+        "optZzr5VNy",
+        "optNWVEFxy"
+      ],
+      "option_ids_after": [
+        "optr55KeW1",
+        "optMWvdCB2",
+        "optNI2KaTr"
+      ],
+      "ids_preserved": false,
+      "options_after": [
+        {
+          "color": 10,
+          "id": "optr55KeW1",
+          "name": "Todo"
+        },
+        {
+          "color": 7,
+          "id": "optMWvdCB2",
+          "name": "Doing"
+        },
+        {
+          "color": 11,
+          "id": "optNI2KaTr",
+          "name": "Done"
+        }
+      ],
+      "cells_resolving_after": 0,
+      "cells_orphaned": 6
+    },
+    {
+      "arm": "multi-raw-recolour-with-ids",
+      "ui_type": "MultiSelect",
+      "how": "raw transport, MultiSelect; option ids ARE on the wire",
+      "cells_resolving_before": 6,
+      "mutation": {
+        "transport": "raw",
+        "code": 0,
+        "msg": "success",
+        "sent_options": "[{\"name\": \"Todo\", \"color\": 10, \"id\": \"optreNY8OU\"}, {\"name\": \"Doing\", \"color\": 7, \"id\": \"optwQejbxo\"}, {\"name\": \"Done\", \"color\": 11, \"id\": \"optn2lPdBm\"}]"
+      },
+      "option_ids_before": [
+        "optreNY8OU",
+        "optwQejbxo",
+        "optn2lPdBm"
+      ],
+      "option_ids_after": [
+        "optreNY8OU",
+        "optwQejbxo",
+        "optn2lPdBm"
+      ],
+      "ids_preserved": true,
+      "options_after": [
+        {
+          "color": 10,
+          "id": "optreNY8OU",
+          "name": "Todo"
+        },
+        {
+          "color": 7,
+          "id": "optwQejbxo",
+          "name": "Doing"
+        },
+        {
+          "color": 11,
+          "id": "optn2lPdBm",
+          "name": "Done"
+        }
+      ],
+      "cells_resolving_after": 6,
+      "cells_orphaned": 0
+    }
+  ]
+}

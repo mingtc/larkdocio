@@ -1,0 +1,29 @@
+{
+  "probe": "B5-mobile-leg",
+  "method": "POST",
+  "path": "/open-apis/contact/v3/users/batch_get_id",
+  "params": [
+    [
+      "user_id_type",
+      "open_id"
+    ]
+  ],
+  "body": {
+    "mobiles": [
+      "+10000000000"
+    ]
+  },
+  "http_status": 200,
+  "response": {
+    "code": 0,
+    "data": {
+      "user_list": [
+        {
+          "mobile": "+10000000000"
+        }
+      ]
+    },
+    "msg": "success"
+  },
+  "_sanitization": "recorded unredacted; this leg carries no email, only the synthetic unassignable +1-000 mobile, which is not a real identifier"
+}

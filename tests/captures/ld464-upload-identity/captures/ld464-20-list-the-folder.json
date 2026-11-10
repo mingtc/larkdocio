@@ -1,0 +1,109 @@
+{
+  "_probe": "20 folder listing",
+  "_endpoint": "/open-apis/drive/v1/files",
+  "_method": "GET",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": "success",
+  "_verdict": "OK",
+  "_note": "AC1: the identity fields the listing ACTUALLY carries, and how many children the repeated uploads produced",
+  "response": {
+    "code": 0,
+    "data": {
+      "files": [
+        {
+          "created_time": "1786745521",
+          "modified_time": "1786745524",
+          "name": "ld464-upload-1786745509.csv",
+          "owner_id": "<redacted:person-id>",
+          "parent_token": "Exampled91b2d6d4165e2437428",
+          "token": "Exampleebcbe51945ce81af9bf8",
+          "type": "file",
+          "url": "https://<redacted:tenant-host>.larksuite.com/file/Exampleebcbe51945ce81af9bf8"
+        },
+        {
+          "created_time": "1786745520",
+          "modified_time": "1786745520",
+          "name": "ld464-upload-1786745509.csv",
+          "owner_id": "<redacted:person-id>",
+          "parent_token": "Exampled91b2d6d4165e2437428",
+          "token": "Examplef90fd2c71f399be943e9",
+          "type": "file",
+          "url": "https://<redacted:tenant-host>.larksuite.com/file/Examplef90fd2c71f399be943e9"
+        },
+        {
+          "created_time": "1786745519",
+          "modified_time": "1786745519",
+          "name": "ld464-upload-1786745509.csv",
+          "owner_id": "<redacted:person-id>",
+          "parent_token": "Exampled91b2d6d4165e2437428",
+          "token": "Example44b83e775cbb7c766c26",
+          "type": "file",
+          "url": "https://<redacted:tenant-host>.larksuite.com/file/Example44b83e775cbb7c766c26"
+        },
+        {
+          "created_time": "1786745518",
+          "modified_time": "1786745518",
+          "name": "ld464-upload-1786745509.csv",
+          "owner_id": "<redacted:person-id>",
+          "parent_token": "Exampled91b2d6d4165e2437428",
+          "token": "Exampleeb1d3fc8abec864ada35",
+          "type": "file",
+          "url": "https://<redacted:tenant-host>.larksuite.com/file/Exampleeb1d3fc8abec864ada35"
+        },
+        {
+          "created_time": "1786745516",
+          "modified_time": "1786745517",
+          "name": "ld464-upload-1786745509.csv",
+          "owner_id": "<redacted:person-id>",
+          "parent_token": "Exampled91b2d6d4165e2437428",
+          "token": "Examplee77195312ae2b8a4f610",
+          "type": "file",
+          "url": "https://<redacted:tenant-host>.larksuite.com/file/Examplee77195312ae2b8a4f610"
+        },
+        {
+          "created_time": "1786745515",
+          "modified_time": "1786745515",
+          "name": "ld464-upload-1786745509.csv",
+          "owner_id": "<redacted:person-id>",
+          "parent_token": "Exampled91b2d6d4165e2437428",
+          "token": "Examplefac911a958d134756648",
+          "type": "file",
+          "url": "https://<redacted:tenant-host>.larksuite.com/file/Examplefac911a958d134756648"
+        },
+        {
+          "created_time": "1786745514",
+          "modified_time": "1786745514",
+          "name": "ld464-upload-1786745509.csv",
+          "owner_id": "<redacted:person-id>",
+          "parent_token": "Exampled91b2d6d4165e2437428",
+          "token": "Example0269476857c6e7b81e65",
+          "type": "file",
+          "url": "https://<redacted:tenant-host>.larksuite.com/file/Example0269476857c6e7b81e65"
+        },
+        {
+          "created_time": "1786745513",
+          "modified_time": "1786745513",
+          "name": "ld464-upload-1786745509.csv",
+          "owner_id": "<redacted:person-id>",
+          "parent_token": "Exampled91b2d6d4165e2437428",
+          "token": "Example3a955b6a79b91d420c67",
+          "type": "file",
+          "url": "https://<redacted:tenant-host>.larksuite.com/file/Example3a955b6a79b91d420c67"
+        },
+        {
+          "created_time": "1786745512",
+          "modified_time": "1786745512",
+          "name": "ld464-upload-1786745509.csv",
+          "owner_id": "<redacted:person-id>",
+          "parent_token": "Exampled91b2d6d4165e2437428",
+          "token": "Example3a682e96c4fbfa36f2db",
+          "type": "file",
+          "url": "https://<redacted:tenant-host>.larksuite.com/file/Example3a682e96c4fbfa36f2db"
+        }
+      ],
+      "has_more": false
+    },
+    "msg": "success"
+  }
+}

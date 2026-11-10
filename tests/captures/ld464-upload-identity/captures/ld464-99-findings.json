@@ -1,0 +1,135 @@
+{
+  "_probe": "LD-464 upload identity + gone-ness — the findings digest",
+  "_note": "every object named here was minted by this probe and swept above; no pre-existing object was written, read or named as a parent",
+  "_enumeration": [
+    "overwrite=true",
+    "duplicate_handling=overwrite",
+    "conflict_strategy=overwrite",
+    "mode=overwrite",
+    "upsert=true",
+    "?overwrite=true (query param)",
+    "upload_prepare body key overwrite:true"
+  ],
+  "findings": {
+    "02_03_duplicate_verdict": "SECOND_FILE_DISTINCT_TOKEN",
+    "02_03_first_eq_second": false,
+    "03_second_code": 0,
+    "10_11_upload_all_attempts": {
+      "overwrite=true": {
+        "code": 0,
+        "msg": "Success",
+        "token_is_new": true,
+        "token_equals_first": false
+      },
+      "duplicate_handling=overwrite": {
+        "code": 0,
+        "msg": "Success",
+        "token_is_new": true,
+        "token_equals_first": false
+      },
+      "conflict_strategy=overwrite": {
+        "code": 0,
+        "msg": "Success",
+        "token_is_new": true,
+        "token_equals_first": false
+      },
+      "mode=overwrite": {
+        "code": 0,
+        "msg": "Success",
+        "token_is_new": true,
+        "token_equals_first": false
+      },
+      "upsert=true": {
+        "code": 0,
+        "msg": "Success",
+        "token_is_new": true,
+        "token_equals_first": false
+      },
+      "?overwrite=true (query param)": {
+        "code": 0,
+        "msg": "Success",
+        "token_is_new": true,
+        "token_equals_first": false
+      }
+    },
+    "12_prepare_code": 0,
+    "12_prepare_data_keys": [
+      "block_num",
+      "block_size",
+      "upload_id"
+    ],
+    "14_finish_token_is_new": true,
+    "14_finish_token_equals_first": false,
+    "20_child_keys": [
+      "created_time",
+      "modified_time",
+      "name",
+      "owner_id",
+      "parent_token",
+      "token",
+      "type",
+      "url"
+    ],
+    "20_children_total": 9,
+    "20_children_with_the_probe_name": 9,
+    "20_listing_carries_size": false,
+    "21_meta_keys": [
+      "create_time",
+      "doc_token",
+      "doc_type",
+      "latest_modify_time",
+      "latest_modify_user",
+      "owner_id",
+      "request_doc_info",
+      "sec_label_name",
+      "title",
+      "url"
+    ],
+    "30_first_delete_code": 0,
+    "31_second_delete_code": 1061007,
+    "31_second_delete_msg": "file has been delete.",
+    "32_trashed_requery_code": 0,
+    "32_trashed_requery_returned_a_meta": true,
+    "33_trashed_token_still_listed": false,
+    "33_children_total_after": 8,
+    "90_sweep": [
+      {
+        "token_prefix": "Examplee",
+        "code": 0
+      },
+      {
+        "token_prefix": "Examplef",
+        "code": 0
+      },
+      {
+        "token_prefix": "Example4",
+        "code": 0
+      },
+      {
+        "token_prefix": "Examplee",
+        "code": 0
+      },
+      {
+        "token_prefix": "Examplee",
+        "code": 0
+      },
+      {
+        "token_prefix": "Examplef",
+        "code": 0
+      },
+      {
+        "token_prefix": "Example0",
+        "code": 0
+      },
+      {
+        "token_prefix": "Example3",
+        "code": 0
+      },
+      {
+        "token_prefix": "Exampled",
+        "code": 0,
+        "kind": "folder"
+      }
+    ]
+  }
+}

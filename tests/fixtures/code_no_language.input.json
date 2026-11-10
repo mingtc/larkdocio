@@ -1,0 +1,33 @@
+[
+  {
+    "block_id": "root",
+    "parent_id": "doc",
+    "block_type": 1,
+    "page": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Doc Title"
+          }
+        }
+      ]
+    },
+    "children": [
+      "cnl"
+    ]
+  },
+  {
+    "block_id": "cnl",
+    "parent_id": "root",
+    "block_type": 14,
+    "code": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "plain code"
+          }
+        }
+      ]
+    }
+  }
+]

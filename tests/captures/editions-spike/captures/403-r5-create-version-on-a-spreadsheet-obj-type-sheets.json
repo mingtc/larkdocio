@@ -1,0 +1,31 @@
+{
+  "n": 403,
+  "label": "r5 create version on a SPREADSHEET obj_type=sheets",
+  "credential_pair": "WRITE",
+  "request": {
+    "method": "POST",
+    "path": "/open-apis/drive/v1/files/Examplea1f244ad7022d85b5341/versions",
+    "body": {
+      "name": "LD-404 sheets",
+      "obj_type": "sheets"
+    },
+    "headers": [
+      "Authorization: Bearer <redacted>"
+    ]
+  },
+  "http_status": 400,
+  "response": {
+    "code": 99992402,
+    "msg": "field validation failed",
+    "error": {
+      "log_id": "20260811071454DCA8554DD8FD372E148B",
+      "field_violations": [
+        {
+          "field": "obj_type",
+          "value": "sheets",
+          "description": "obj_type is optional, options: [docx,sheet]"
+        }
+      ]
+    }
+  }
+}

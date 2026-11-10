@@ -1,0 +1,12 @@
+{
+  "_probe": "03 — the same GET against a freshly added tab that has NO filter: code 0, and `data` simply omits `sheet_filter_info`",
+  "request": {
+    "method": "GET",
+    "path": "/open-apis/sheets/v3/spreadsheets/{spreadsheet_token}/sheets/{sheet_id}/filter"
+  },
+  "response": {
+    "code": 0,
+    "data": {},
+    "msg": "success"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "output": {
+    "image_dir": "static",
+    "title_as_filename": true,
+    "use_html_tags": false,
+    "skip_img_download": false,
+    "download_attachments": false,
+    "resolve_mentions": true
+  }
+}

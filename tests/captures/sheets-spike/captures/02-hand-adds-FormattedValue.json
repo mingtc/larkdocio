@@ -1,0 +1,75 @@
+{
+  "code": 0,
+  "data": {
+    "revision": 36,
+    "spreadsheetToken": "SheetScratchExample00000001",
+    "valueRange": {
+      "majorDimension": "ROWS",
+      "range": "444a1c!A18:D24",
+      "revision": 36,
+      "values": [
+        [
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "row after an empty row",
+          null,
+          "B cell here is deliberately empty",
+          null
+        ],
+        [
+          "HAND-ADD: checkbox",
+          0,
+          "replace B cell by hand in Lark",
+          null
+        ],
+        [
+          "HAND-ADD: dropdown (single)",
+          "Single Option 1",
+          "replace B cell by hand in Lark",
+          null
+        ],
+        [
+          "HAND-ADD: dropdown (multi)",
+          "Multiple Option 1",
+          "replace B cell by hand in Lark",
+          null
+        ],
+        [
+          "HAND-ADD: @user mention",
+          {
+            "category": "at-user-block",
+            "en_name": "Example User",
+            "link": "https://avatar.example.invalid/photo.png",
+            "mentionNotify": false,
+            "mentionType": 0,
+            "name": "Example User",
+            "not_notify": false,
+            "text": "@Example User",
+            "type": "mention",
+            "userID": "ou_exampleowner00000000000000000001"
+          },
+          "replace B cell by hand in Lark",
+          null
+        ],
+        [
+          "HAND-ADD: doc-link mention",
+          {
+            "link": "https%3A%2F%2Fyour-domain.larksuite.com%2Fdocx%2FDocScratchExample0000000001",
+            "mentionNotify": false,
+            "mentionType": 22,
+            "text": "Larkdocio Scratch",
+            "token": "DocScratchExample0000000001",
+            "type": "mention"
+          },
+          "replace B cell by hand in Lark",
+          null
+        ]
+      ]
+    }
+  },
+  "msg": "success"
+}

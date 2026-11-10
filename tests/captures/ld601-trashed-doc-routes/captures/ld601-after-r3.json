@@ -1,0 +1,33 @@
+{
+  "issue": "LD-601",
+  "leg": "after",
+  "route": "r3",
+  "route_title": "the reader's own body route (root block children)",
+  "endpoint": "/open-apis/docx/v1/documents/Examplebe2270e20bfe6e6fff4c/blocks/Examplebe2270e20bfe6e6fff4c/children",
+  "credential_pair": "read",
+  "shipped_call_site": "read.Client.get_docx_content",
+  "subject_document_id": "Examplebe2270e20bfe6e6fff4c",
+  "disposables_folder_token": "Example0c60da6a89d790aee55d",
+  "sent": {
+    "method": "GET",
+    "path": "/open-apis/docx/v1/documents/Examplebe2270e20bfe6e6fff4c/blocks/Examplebe2270e20bfe6e6fff4c/children",
+    "body": null,
+    "params": {
+      "document_revision_id": -1,
+      "page_size": 500
+    }
+  },
+  "object_type_literal_sent": "n/a (the path names the object)",
+  "object_type_note": "the doc_type / obj_type literal is recorded per route because a wrong spelling returns code:0 with metas:[] — indistinguishable from a refusal unless failed_list is read",
+  "response": {
+    "code": 1770003,
+    "msg": "resource deleted",
+    "error": {
+      "log_id": "202608311806146821D19F2F55DCFF6F87"
+    }
+  },
+  "failed_list": null,
+  "resolved_the_object": false,
+  "captured_at": "2026-08-31T18:06:14+0800",
+  "tenant_note": "one tenant, one document, one run — other tenants, regions and object types are unmeasured, not refuted"
+}

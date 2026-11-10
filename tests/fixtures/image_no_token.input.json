@@ -1,0 +1,28 @@
+[
+  {
+    "block_id": "root",
+    "parent_id": "doc",
+    "block_type": 1,
+    "page": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Doc Title"
+          }
+        }
+      ]
+    },
+    "children": [
+      "imt"
+    ]
+  },
+  {
+    "block_id": "imt",
+    "parent_id": "root",
+    "block_type": 27,
+    "image": {
+      "width": 100,
+      "height": 50
+    }
+  }
+]

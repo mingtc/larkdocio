@@ -1,0 +1,29 @@
+{
+  "probe": "LD-382 AC7 — the shipped cheap route, live, on a disposable",
+  "target_policy": "harness-created disposable doc only; never the canary, never a real doc",
+  "observed": {
+    "document_id": "Examplec0bd60b24b8bb4039bdc",
+    "round_trip": {
+      "cheap_before": 2,
+      "content_before": 2,
+      "agreement_before": true,
+      "stable_across_reads": true,
+      "cheap_after": 3,
+      "content_after": 3,
+      "agreement_after": true,
+      "moved": true,
+      "moved_by": 1,
+      "blocks_before": 2,
+      "blocks_after": 3,
+      "cheap_seconds": 0.242,
+      "content_seconds": 0.253,
+      "credential_pair": "READ (the cheap route) / WRITE (create + edit + teardown only)"
+    }
+  },
+  "teardown": {
+    "document_id": "Examplec0bd60b24b8bb4039bdc",
+    "delete_code": 0,
+    "requery": "Failed to get docx document meta Examplec0bd60b24b8bb4039bdc: Code: 1770003, Msg: resource deleted",
+    "gone": true
+  }
+}

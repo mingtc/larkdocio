@@ -1,0 +1,219 @@
+{
+  "_probe": "p5",
+  "_endpoint": "DELETE mirror field / DELETE link-target table",
+  "_method": "DELETE",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": null,
+  "_verdict": "OK",
+  "_note": "the other three directions of link destruction: kill the MIRROR, and kill the whole link-TARGET TABLE",
+  "response": {
+    "code": 0,
+    "data": {
+      "mirror_field": [
+        {
+          "field_id": "fldQcxSpPQ",
+          "field_name": "p0cl-Main-034137-DLink",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "back_field_id": "fldQGje8b3",
+            "back_field_name": "DLink",
+            "multiple": true,
+            "table_id": "tblTocDQM07rh68h",
+            "table_name": "p0cl-Main-034137"
+          },
+          "type": 21,
+          "ui_type": "DuplexLink"
+        }
+      ],
+      "delete_mirror_in_ref": {
+        "code": 0,
+        "msg": "success",
+        "data": {
+          "deleted": true,
+          "field_id": "fldQcxSpPQ"
+        }
+      },
+      "main_fields_after_mirror_delete": [
+        {
+          "field_name": "多行文本",
+          "type": 1
+        },
+        {
+          "field_name": "Rating",
+          "type": 2
+        },
+        {
+          "field_name": "Progress",
+          "type": 2
+        },
+        {
+          "field_name": "Currency",
+          "type": 2
+        },
+        {
+          "field_name": "Barcode",
+          "type": 1
+        },
+        {
+          "field_name": "ModUser",
+          "type": 1004
+        },
+        {
+          "field_name": "AutoNum",
+          "type": 1005
+        },
+        {
+          "field_name": "SLink",
+          "type": 18
+        }
+      ],
+      "source_duplex_survived": false,
+      "main_rows_after_mirror_delete": [
+        {
+          "AutoNum": "1",
+          "Barcode": [
+            {
+              "text": "BC-9",
+              "type": "text"
+            }
+          ],
+          "Currency": 12.5,
+          "ModUser": [
+            {
+              "avatar_url": "<redacted:avatar_url>",
+              "email": "",
+              "en_name": "<redacted:en_name>",
+              "id": "<redacted:person-id>",
+              "name": "<redacted:person-name>"
+            }
+          ],
+          "Progress": 0.35,
+          "Rating": 4,
+          "SLink": {
+            "link_record_ids": [
+              "recvrsK0tN2SKV",
+              "recvrdA8aJyUmM"
+            ]
+          },
+          "多行文本": [
+            {
+              "text": "row",
+              "type": "text"
+            }
+          ]
+        }
+      ],
+      "delete_link_target_table": {
+        "code": 0,
+        "msg": "success"
+      },
+      "main_fields_after_target_table_delete": [
+        {
+          "field_name": "多行文本",
+          "type": 1,
+          "property": null
+        },
+        {
+          "field_name": "Rating",
+          "type": 2,
+          "property": {
+            "formatter": "0",
+            "max": 5,
+            "min": 0,
+            "rating": {
+              "symbol": "star"
+            }
+          }
+        },
+        {
+          "field_name": "Progress",
+          "type": 2,
+          "property": {
+            "formatter": "0%",
+            "max": 1,
+            "min": 0
+          }
+        },
+        {
+          "field_name": "Currency",
+          "type": 2,
+          "property": {
+            "currency_code": "SGD",
+            "formatter": "0.00"
+          }
+        },
+        {
+          "field_name": "Barcode",
+          "type": 1,
+          "property": {
+            "allowed_edit_modes": {
+              "manual": true,
+              "scan": true
+            }
+          }
+        },
+        {
+          "field_name": "ModUser",
+          "type": 1004,
+          "property": null
+        },
+        {
+          "field_name": "AutoNum",
+          "type": 1005,
+          "property": {
+            "auto_serial": {
+              "type": "auto_increment_number"
+            }
+          }
+        },
+        {
+          "field_name": "SLink",
+          "type": 18,
+          "property": {
+            "multiple": true,
+            "table_id": "tblsT2Ons4CcdJgY"
+          }
+        }
+      ],
+      "main_search_code_after_target_table_delete": 0,
+      "main_rows_after_target_table_delete": [
+        {
+          "AutoNum": "1",
+          "Barcode": [
+            {
+              "text": "BC-9",
+              "type": "text"
+            }
+          ],
+          "Currency": 12.5,
+          "ModUser": [
+            {
+              "avatar_url": "<redacted:avatar_url>",
+              "email": "",
+              "en_name": "<redacted:en_name>",
+              "id": "<redacted:person-id>",
+              "name": "<redacted:person-name>"
+            }
+          ],
+          "Progress": 0.35,
+          "Rating": 4,
+          "SLink": {
+            "link_record_ids": [
+              "recvrsK0tN2SKV",
+              "recvrdA8aJyUmM"
+            ]
+          },
+          "多行文本": [
+            {
+              "text": "row",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

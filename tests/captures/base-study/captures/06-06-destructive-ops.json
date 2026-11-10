@@ -1,0 +1,40 @@
+{
+  "_probe": "06",
+  "_endpoint": "DELETE field / record / table",
+  "_method": "DELETE",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": null,
+  "_verdict": "OK",
+  "_note": "what a destructive Base op returns, and whether the deletion is observable immediately (the write engine's blast radius)",
+  "response": {
+    "code": 0,
+    "data": {
+      "delete_field": {
+        "code": 0,
+        "msg": "success",
+        "data": {
+          "deleted": true,
+          "field_id": "fldYBoj5HS"
+        }
+      },
+      "delete_record": {
+        "code": 0,
+        "msg": "success",
+        "data": {
+          "deleted": true,
+          "record_id": "recvrymubKYG8P"
+        }
+      },
+      "delete_table": {
+        "code": 0,
+        "msg": "success",
+        "data": {}
+      },
+      "refetch_deleted_record": {
+        "code": 1254043,
+        "msg": "RecordIdNotFound"
+      }
+    }
+  }
+}

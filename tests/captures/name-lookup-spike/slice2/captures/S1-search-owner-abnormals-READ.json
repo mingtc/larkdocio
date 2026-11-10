@@ -1,0 +1,90 @@
+{
+  "probe": "S1-search-owner-abnormals-READ",
+  "issue": "LD-229",
+  "method": "POST",
+  "path": "/open-apis/directory/v1/employees/search",
+  "params": [
+    [
+      "employee_id_type",
+      "open_id"
+    ]
+  ],
+  "body": {
+    "query": "Example User",
+    "page_request": {
+      "page_size": 10
+    },
+    "required_fields": [
+      "base_info",
+      "work_info",
+      "personal_and_social_relationship",
+      "education_and_work_experience"
+    ],
+    "filter": {
+      "contain_resigned_employee": false
+    }
+  },
+  "http_status": 200,
+  "response_headers": {
+    "content-type": "application/json; charset=utf-8",
+    "x-tt-logid": "2026080212442634A5A9DCC44693050B51",
+    "x-request-id": "2026080212442634A5A9DCC44693050B51"
+  },
+  "response": {
+    "code": 0,
+    "data": {
+      "abnormals": [
+        {
+          "field_errors": {
+            "education_and_work_experience": 2003,
+            "personal_and_social_relationship": 2003
+          },
+          "id": "ou_exampleowner00000000000000000001",
+          "row_error": 0
+        }
+      ],
+      "employees": [
+        {
+          "base_info": {
+            "email": "example.user@example.com",
+            "employee_id": "ou_exampleowner00000000000000000001",
+            "enterprise_email": "example.user@example.com",
+            "enterprise_email_aliases": [],
+            "name": {
+              "first_name": {
+                "default_value": "Example",
+                "i18n_value": {
+                  "en_us": "",
+                  "ja_jp": "",
+                  "zh_cn": ""
+                }
+              },
+              "last_name": {
+                "default_value": "User",
+                "i18n_value": {
+                  "en_us": "",
+                  "ja_jp": "",
+                  "zh_cn": ""
+                }
+              },
+              "name": {
+                "default_value": "Example User",
+                "i18n_value": {
+                  "en_us": "",
+                  "ja_jp": "",
+                  "zh_cn": ""
+                }
+              }
+            }
+          },
+          "work_info": {}
+        }
+      ],
+      "page_response": {
+        "has_more": false,
+        "page_token": "FP0/Example000000000000000000000000000000000000="
+      }
+    },
+    "msg": ""
+  }
+}

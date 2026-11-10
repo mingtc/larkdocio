@@ -1,0 +1,39 @@
+{
+  "_probe": "04 parent listing",
+  "_endpoint": "/open-apis/drive/v1/files",
+  "_method": "GET",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": "success",
+  "_verdict": "OK",
+  "_note": "AC2: whether Lark de-duplicates, renames, or stores both names verbatim — the listing is the evidence",
+  "response": {
+    "code": 0,
+    "data": {
+      "files": [
+        {
+          "created_time": "1786731864",
+          "modified_time": "1786731864",
+          "name": "larkdocio-DISPOSABLE-ld467-dup-1786731860",
+          "owner_id": "<redacted:person-id>",
+          "parent_token": "Examplea30ee275a8562574ae13",
+          "token": "Examplee71ea02037eeb7c22b7e",
+          "type": "folder",
+          "url": "https://<redacted:tenant-host>.larksuite.com/drive/folder/Examplee71ea02037eeb7c22b7e"
+        },
+        {
+          "created_time": "1786731863",
+          "modified_time": "1786731863",
+          "name": "larkdocio-DISPOSABLE-ld467-dup-1786731860",
+          "owner_id": "<redacted:person-id>",
+          "parent_token": "Examplea30ee275a8562574ae13",
+          "token": "Example36c02f9a634bfdf5c710",
+          "type": "folder",
+          "url": "https://<redacted:tenant-host>.larksuite.com/drive/folder/Example36c02f9a634bfdf5c710"
+        }
+      ],
+      "has_more": false
+    },
+    "msg": "success"
+  }
+}

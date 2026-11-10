@@ -1,0 +1,15 @@
+{
+  "_probe": "05",
+  "_endpoint": "/open-apis/bitable/v1/apps/Example02154ddbd1fe2927e2e6",
+  "_method": "GET",
+  "_http_status": 200,
+  "_lark_code": 1002,
+  "_lark_msg": "note has been deleted",
+  "_verdict": "DENIED_OR_ERROR",
+  "_note": "re-fetch after delete — expect the 91402 NOTEXIST shape captured in probe 03",
+  "response": {
+    "code": 1002,
+    "msg": "note has been deleted",
+    "data": {}
+  }
+}

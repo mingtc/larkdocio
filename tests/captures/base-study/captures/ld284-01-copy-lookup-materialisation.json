@@ -1,0 +1,814 @@
+{
+  "_probe": "ld284-copy-lookup-materialisation",
+  "_question": "does a settled COPY carry its Lookup's CELLS, or only its schema? BASE.md register row 40 says schema-only; the dogfood clone and the ui-parity capture say populated. Same call, opposite outcomes.",
+  "_template_app_token": "BaseScratchExample000000001",
+  "_computed_columns_measured": [
+    "lookup"
+  ],
+  "_runs_planned": [
+    {
+      "label": "A-with-content",
+      "without_content": false,
+      "ladder": [
+        0,
+        3,
+        8,
+        15,
+        30,
+        60,
+        120
+      ],
+      "shipped_path_leg": true
+    },
+    {
+      "label": "B-with-content-replicate",
+      "without_content": false,
+      "ladder": [
+        0,
+        3,
+        8,
+        15,
+        30
+      ],
+      "shipped_path_leg": false
+    },
+    {
+      "label": "C-without-content",
+      "without_content": true,
+      "ladder": [
+        0,
+        30
+      ],
+      "shipped_path_leg": false
+    }
+  ],
+  "_tight_runs_planned": {
+    "labels": [
+      "D-tight-window",
+      "E-tight-window-replicate"
+    ],
+    "spacing_s": 1.5,
+    "attempts": 12
+  },
+  "_materialisation_window": {
+    "D-tight-window": 3.17,
+    "E-tight-window-replicate": 3.17
+  },
+  "runs": [
+    {
+      "label": "D-tight-window",
+      "without_content": false,
+      "app_token": "Example2f21f7a84aa542ed43f9",
+      "route": "larkdocio copy_app + settle + read_base (THE ARM'S OWN PATH)",
+      "ticks": [
+        {
+          "attempt": 1,
+          "seconds_after_settle_at_call": 0.0,
+          "seconds_after_settle_at_answer": 1.67,
+          "route": "read_base",
+          "lookup_value_types": [
+            null
+          ],
+          "shipped_reading": {
+            "tables": 2,
+            "columns": [
+              {
+                "table": "Table",
+                "field_name": "lookup",
+                "is_lookup": true,
+                "value_type": null,
+                "rolls_up_from_table": "tblRxebLZiE4lg5b"
+              },
+              {
+                "table": "Table",
+                "field_name": "stage?",
+                "is_lookup": false,
+                "value_type": null,
+                "rolls_up_from_table": null
+              }
+            ]
+          }
+        },
+        {
+          "attempt": 2,
+          "seconds_after_settle_at_call": 3.17,
+          "seconds_after_settle_at_answer": 4.74,
+          "route": "read_base",
+          "lookup_value_types": [
+            1
+          ],
+          "shipped_reading": {
+            "tables": 2,
+            "columns": [
+              {
+                "table": "Table",
+                "field_name": "lookup",
+                "is_lookup": true,
+                "value_type": 1,
+                "rolls_up_from_table": "tblRxebLZiE4lg5b"
+              },
+              {
+                "table": "Table",
+                "field_name": "stage?",
+                "is_lookup": false,
+                "value_type": null,
+                "rolls_up_from_table": null
+              }
+            ]
+          }
+        }
+      ],
+      "settle": {
+        "settled": true,
+        "attempts": 2,
+        "codes": [
+          1254036
+        ]
+      },
+      "materialised_at": {
+        "attempt": 2,
+        "seconds_after_settle_at_call": 3.17,
+        "seconds_after_settle_at_answer": 4.74,
+        "route": "read_base",
+        "lookup_value_types": [
+          1
+        ],
+        "shipped_reading": {
+          "tables": 2,
+          "columns": [
+            {
+              "table": "Table",
+              "field_name": "lookup",
+              "is_lookup": true,
+              "value_type": 1,
+              "rolls_up_from_table": "tblRxebLZiE4lg5b"
+            },
+            {
+              "table": "Table",
+              "field_name": "stage?",
+              "is_lookup": false,
+              "value_type": null,
+              "rolls_up_from_table": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "E-tight-window-replicate",
+      "without_content": false,
+      "app_token": "Examplef3039007854247624ef3",
+      "route": "larkdocio copy_app + settle + read_base (THE ARM'S OWN PATH)",
+      "ticks": [
+        {
+          "attempt": 1,
+          "seconds_after_settle_at_call": 0.0,
+          "seconds_after_settle_at_answer": 1.67,
+          "route": "read_base",
+          "lookup_value_types": [
+            null
+          ],
+          "shipped_reading": {
+            "tables": 2,
+            "columns": [
+              {
+                "table": "Table",
+                "field_name": "lookup",
+                "is_lookup": true,
+                "value_type": null,
+                "rolls_up_from_table": "tbl7v03QErMhqix0"
+              },
+              {
+                "table": "Table",
+                "field_name": "stage?",
+                "is_lookup": false,
+                "value_type": null,
+                "rolls_up_from_table": null
+              }
+            ]
+          }
+        },
+        {
+          "attempt": 2,
+          "seconds_after_settle_at_call": 3.17,
+          "seconds_after_settle_at_answer": 4.68,
+          "route": "read_base",
+          "lookup_value_types": [
+            1
+          ],
+          "shipped_reading": {
+            "tables": 2,
+            "columns": [
+              {
+                "table": "Table",
+                "field_name": "lookup",
+                "is_lookup": true,
+                "value_type": 1,
+                "rolls_up_from_table": "tbl7v03QErMhqix0"
+              },
+              {
+                "table": "Table",
+                "field_name": "stage?",
+                "is_lookup": false,
+                "value_type": null,
+                "rolls_up_from_table": null
+              }
+            ]
+          }
+        }
+      ],
+      "settle": {
+        "settled": true,
+        "attempts": 2,
+        "codes": [
+          1254036
+        ]
+      },
+      "materialised_at": {
+        "attempt": 2,
+        "seconds_after_settle_at_call": 3.17,
+        "seconds_after_settle_at_answer": 4.68,
+        "route": "read_base",
+        "lookup_value_types": [
+          1
+        ],
+        "shipped_reading": {
+          "tables": 2,
+          "columns": [
+            {
+              "table": "Table",
+              "field_name": "lookup",
+              "is_lookup": true,
+              "value_type": 1,
+              "rolls_up_from_table": "tbl7v03QErMhqix0"
+            },
+            {
+              "table": "Table",
+              "field_name": "stage?",
+              "is_lookup": false,
+              "value_type": null,
+              "rolls_up_from_table": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "A-with-content",
+      "without_content": false,
+      "app_token": "Examplecf2523f302aeadc5e6fb",
+      "ticks": [
+        {
+          "nominal_delay_s": 0,
+          "actual_seconds_after_settle": 2.73,
+          "seconds_after_copy_call": 3.33,
+          "route": "records/search",
+          "code": 0,
+          "reading": {
+            "rows": 6,
+            "columns": {
+              "lookup": {
+                "rows_with_a_cell": 6,
+                "wrapper_types": [
+                  1
+                ]
+              }
+            }
+          }
+        },
+        {
+          "nominal_delay_s": 0,
+          "actual_seconds_after_settle": 4.42,
+          "route": "GET records",
+          "code": 0,
+          "reading": {
+            "rows": 6,
+            "columns": {
+              "lookup": {
+                "rows_with_a_cell": 6,
+                "wrapper_types": []
+              }
+            }
+          }
+        },
+        {
+          "nominal_delay_s": 0,
+          "actual_seconds_after_settle": 4.42,
+          "route": "larkdocio.read_base (SHIPPED PATH)",
+          "shipped_reading": {
+            "tables": 2,
+            "columns": [
+              {
+                "table": "Table",
+                "field_name": "lookup",
+                "is_lookup": true,
+                "value_type": 1,
+                "rolls_up_from_table": "tblYdoajDVr4NmtI"
+              },
+              {
+                "table": "Table",
+                "field_name": "stage?",
+                "is_lookup": false,
+                "value_type": null,
+                "rolls_up_from_table": null
+              }
+            ]
+          }
+        },
+        {
+          "nominal_delay_s": 3,
+          "actual_seconds_after_settle": 6.39,
+          "seconds_after_copy_call": 6.99,
+          "route": "records/search",
+          "code": 0,
+          "reading": {
+            "rows": 6,
+            "columns": {
+              "lookup": {
+                "rows_with_a_cell": 6,
+                "wrapper_types": [
+                  1
+                ]
+              }
+            }
+          }
+        },
+        {
+          "nominal_delay_s": 8,
+          "actual_seconds_after_settle": 8.48,
+          "seconds_after_copy_call": 9.08,
+          "route": "records/search",
+          "code": 0,
+          "reading": {
+            "rows": 6,
+            "columns": {
+              "lookup": {
+                "rows_with_a_cell": 6,
+                "wrapper_types": [
+                  1
+                ]
+              }
+            }
+          }
+        },
+        {
+          "nominal_delay_s": 15,
+          "actual_seconds_after_settle": 15.49,
+          "seconds_after_copy_call": 16.09,
+          "route": "records/search",
+          "code": 0,
+          "reading": {
+            "rows": 6,
+            "columns": {
+              "lookup": {
+                "rows_with_a_cell": 6,
+                "wrapper_types": [
+                  1
+                ]
+              }
+            }
+          }
+        },
+        {
+          "nominal_delay_s": 30,
+          "actual_seconds_after_settle": 30.51,
+          "seconds_after_copy_call": 31.11,
+          "route": "records/search",
+          "code": 0,
+          "reading": {
+            "rows": 6,
+            "columns": {
+              "lookup": {
+                "rows_with_a_cell": 6,
+                "wrapper_types": [
+                  1
+                ]
+              }
+            }
+          }
+        },
+        {
+          "nominal_delay_s": 60,
+          "actual_seconds_after_settle": 60.59,
+          "seconds_after_copy_call": 61.19,
+          "route": "records/search",
+          "code": 0,
+          "reading": {
+            "rows": 6,
+            "columns": {
+              "lookup": {
+                "rows_with_a_cell": 6,
+                "wrapper_types": [
+                  1
+                ]
+              }
+            }
+          }
+        },
+        {
+          "nominal_delay_s": 120,
+          "actual_seconds_after_settle": 120.51,
+          "seconds_after_copy_call": 121.11,
+          "route": "records/search",
+          "code": 0,
+          "reading": {
+            "rows": 6,
+            "columns": {
+              "lookup": {
+                "rows_with_a_cell": 6,
+                "wrapper_types": [
+                  1
+                ]
+              }
+            }
+          }
+        },
+        {
+          "nominal_delay_s": 120,
+          "actual_seconds_after_settle": 120.51,
+          "route": "larkdocio.read_base (SHIPPED PATH)",
+          "shipped_reading": {
+            "tables": 2,
+            "columns": [
+              {
+                "table": "Table",
+                "field_name": "lookup",
+                "is_lookup": true,
+                "value_type": 1,
+                "rolls_up_from_table": "tblYdoajDVr4NmtI"
+              },
+              {
+                "table": "Table",
+                "field_name": "stage?",
+                "is_lookup": false,
+                "value_type": null,
+                "rolls_up_from_table": null
+              }
+            ]
+          }
+        }
+      ],
+      "settle": {
+        "settled": true,
+        "attempts": 1,
+        "codes": [],
+        "seconds": 0.6,
+        "final_code": 0,
+        "default_table_id": null,
+        "seconds_from_copy_call": 0.6
+      },
+      "table_id": "tbluWDosNxz1TySl",
+      "tables": [
+        "Table",
+        "Table 2"
+      ],
+      "specimen_record": {
+        "fields": {
+          "Email": [
+            {
+              "link": "<redacted:email>",
+              "text": "<redacted:email>",
+              "type": "url"
+            }
+          ],
+          "Text": [
+            {
+              "text": "Text 1",
+              "type": "text"
+            }
+          ],
+          "lookup": {
+            "type": 1,
+            "value": [
+              {
+                "text": "Text 2 Test Data 2",
+                "type": "text"
+              },
+              {
+                "text": ",",
+                "type": "text"
+              },
+              {
+                "text": "Text 2 Test Data 3",
+                "type": "text"
+              },
+              {
+                "text": ",",
+                "type": "text"
+              },
+              {
+                "text": "Text 2 Test Data 1",
+                "type": "text"
+              },
+              {
+                "text": ",",
+                "type": "text"
+              },
+              {
+                "text": "Text 2 Test Data 5",
+                "type": "text"
+              },
+              {
+                "text": ",",
+                "type": "text"
+              },
+              {
+                "text": "Text 2 Test Data 4",
+                "type": "text"
+              }
+            ]
+          }
+        },
+        "record_id": "rec88HpEvHGLV4"
+      }
+    },
+    {
+      "label": "B-with-content-replicate",
+      "without_content": false,
+      "app_token": "Examplecd97c62a198c3eeb9933",
+      "ticks": [
+        {
+          "nominal_delay_s": 0,
+          "actual_seconds_after_settle": 2.7,
+          "seconds_after_copy_call": 3.31,
+          "route": "records/search",
+          "code": 0,
+          "reading": {
+            "rows": 6,
+            "columns": {
+              "lookup": {
+                "rows_with_a_cell": 6,
+                "wrapper_types": [
+                  1
+                ]
+              }
+            }
+          }
+        },
+        {
+          "nominal_delay_s": 0,
+          "actual_seconds_after_settle": 4.66,
+          "route": "GET records",
+          "code": 0,
+          "reading": {
+            "rows": 6,
+            "columns": {
+              "lookup": {
+                "rows_with_a_cell": 6,
+                "wrapper_types": []
+              }
+            }
+          }
+        },
+        {
+          "nominal_delay_s": 3,
+          "actual_seconds_after_settle": 5.18,
+          "seconds_after_copy_call": 5.78,
+          "route": "records/search",
+          "code": 0,
+          "reading": {
+            "rows": 6,
+            "columns": {
+              "lookup": {
+                "rows_with_a_cell": 6,
+                "wrapper_types": [
+                  1
+                ]
+              }
+            }
+          }
+        },
+        {
+          "nominal_delay_s": 8,
+          "actual_seconds_after_settle": 8.46,
+          "seconds_after_copy_call": 9.07,
+          "route": "records/search",
+          "code": 0,
+          "reading": {
+            "rows": 6,
+            "columns": {
+              "lookup": {
+                "rows_with_a_cell": 6,
+                "wrapper_types": [
+                  1
+                ]
+              }
+            }
+          }
+        },
+        {
+          "nominal_delay_s": 15,
+          "actual_seconds_after_settle": 15.47,
+          "seconds_after_copy_call": 16.08,
+          "route": "records/search",
+          "code": 0,
+          "reading": {
+            "rows": 6,
+            "columns": {
+              "lookup": {
+                "rows_with_a_cell": 6,
+                "wrapper_types": [
+                  1
+                ]
+              }
+            }
+          }
+        },
+        {
+          "nominal_delay_s": 30,
+          "actual_seconds_after_settle": 30.47,
+          "seconds_after_copy_call": 31.07,
+          "route": "records/search",
+          "code": 0,
+          "reading": {
+            "rows": 6,
+            "columns": {
+              "lookup": {
+                "rows_with_a_cell": 6,
+                "wrapper_types": [
+                  1
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "settle": {
+        "settled": true,
+        "attempts": 1,
+        "codes": [],
+        "seconds": 0.61,
+        "final_code": 0,
+        "default_table_id": null,
+        "seconds_from_copy_call": 0.61
+      },
+      "table_id": "tbl62vh9NYGxQYJ1",
+      "tables": [
+        "Table",
+        "Table 2"
+      ],
+      "specimen_record": {
+        "fields": {
+          "Email": [
+            {
+              "link": "<redacted:email>",
+              "text": "<redacted:email>",
+              "type": "url"
+            }
+          ],
+          "Text": [
+            {
+              "text": "Text 1",
+              "type": "text"
+            }
+          ],
+          "lookup": {
+            "type": 1,
+            "value": [
+              {
+                "text": "Text 2 Test Data 2",
+                "type": "text"
+              },
+              {
+                "text": ",",
+                "type": "text"
+              },
+              {
+                "text": "Text 2 Test Data 3",
+                "type": "text"
+              },
+              {
+                "text": ",",
+                "type": "text"
+              },
+              {
+                "text": "Text 2 Test Data 1",
+                "type": "text"
+              },
+              {
+                "text": ",",
+                "type": "text"
+              },
+              {
+                "text": "Text 2 Test Data 5",
+                "type": "text"
+              },
+              {
+                "text": ",",
+                "type": "text"
+              },
+              {
+                "text": "Text 2 Test Data 4",
+                "type": "text"
+              }
+            ]
+          }
+        },
+        "record_id": "rec88HpEvHGLV4"
+      }
+    },
+    {
+      "label": "C-without-content",
+      "without_content": true,
+      "app_token": "Example2f915cc3afe4acc1297b",
+      "ticks": [
+        {
+          "nominal_delay_s": 0,
+          "actual_seconds_after_settle": 2.77,
+          "seconds_after_copy_call": 2.94,
+          "route": "records/search",
+          "code": 0,
+          "reading": {
+            "rows": 0,
+            "columns": {
+              "lookup": {
+                "rows_with_a_cell": 0,
+                "wrapper_types": []
+              }
+            }
+          }
+        },
+        {
+          "nominal_delay_s": 0,
+          "actual_seconds_after_settle": 4.06,
+          "route": "GET records",
+          "code": 0,
+          "reading": {
+            "rows": 0,
+            "columns": {
+              "lookup": {
+                "rows_with_a_cell": 0,
+                "wrapper_types": []
+              }
+            }
+          }
+        },
+        {
+          "nominal_delay_s": 30,
+          "actual_seconds_after_settle": 30.51,
+          "seconds_after_copy_call": 30.69,
+          "route": "records/search",
+          "code": 0,
+          "reading": {
+            "rows": 0,
+            "columns": {
+              "lookup": {
+                "rows_with_a_cell": 0,
+                "wrapper_types": []
+              }
+            }
+          }
+        }
+      ],
+      "settle": {
+        "settled": true,
+        "attempts": 1,
+        "codes": [],
+        "seconds": 0.18,
+        "final_code": 0,
+        "default_table_id": null,
+        "seconds_from_copy_call": 0.18
+      },
+      "table_id": "tblJ7Yr88JoDCvsy",
+      "tables": [
+        "Table",
+        "Table 2"
+      ],
+      "specimen_record": null
+    }
+  ],
+  "ledger": [
+    {
+      "app_token": "Example2f21f7a84aa542ed43f9",
+      "title": "larkdocio-DISPOSABLE-ld284-D-tight-window",
+      "deleted": true,
+      "last_code": 0
+    },
+    {
+      "app_token": "Examplef3039007854247624ef3",
+      "title": "larkdocio-DISPOSABLE-ld284-E-tight-window-replicate",
+      "deleted": true,
+      "last_code": 0
+    },
+    {
+      "app_token": "Examplecf2523f302aeadc5e6fb",
+      "title": "larkdocio-DISPOSABLE-ld284-A-with-content",
+      "deleted": true,
+      "last_code": 0
+    },
+    {
+      "app_token": "Examplecd97c62a198c3eeb9933",
+      "title": "larkdocio-DISPOSABLE-ld284-B-with-content-replicate",
+      "deleted": true,
+      "last_code": 0
+    },
+    {
+      "app_token": "Example2f915cc3afe4acc1297b",
+      "title": "larkdocio-DISPOSABLE-ld284-C-without-content",
+      "deleted": true,
+      "last_code": 0
+    }
+  ],
+  "unswept": [],
+  "calls": 36
+}

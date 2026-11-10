@@ -1,0 +1,164 @@
+{
+  "probe": "20-specimen-read",
+  "posture": "READ-ONLY on the maintainer-provided specimen doc; zero write helpers imported",
+  "file_token": "DocCommentZooExample0000001",
+  "started_at": "2026-07-29T10:14:14.325285+00:00",
+  "app_fingerprint_write": "ex9fa8801d8f",
+  "app_fingerprint_read": "ex9fa8801d8f",
+  "capture_complete": true,
+  "document_meta": {
+    "label": "specimen-document-meta",
+    "method": "GET",
+    "path": "/docx/v1/documents/DocCommentZooExample0000001",
+    "request_body": null,
+    "http_status": 200,
+    "code": 0,
+    "msg": "success",
+    "response": {
+      "code": 0,
+      "data": {
+        "document": {
+          "display_setting": {
+            "show_authors": true,
+            "show_comment_count": false,
+            "show_create_time": false,
+            "show_like_count": false,
+            "show_pv": false,
+            "show_related_matters": false,
+            "show_uv": false
+          },
+          "document_id": "DocCommentZooExample0000001",
+          "revision_id": 519,
+          "title": "Scratch Doc"
+        }
+      },
+      "msg": "success"
+    }
+  },
+  "revision_id": 519,
+  "block_list_pages": [
+    {
+      "http_status": 200,
+      "code": 0,
+      "msg": "success"
+    }
+  ],
+  "block_count": 282,
+  "root_child_count": 78,
+  "add_ons_block_ids": [
+    "Example3a5beaf6a136e401cc42"
+  ],
+  "specimens": {
+    "Example3a5beaf6a136e401cc42": {
+      "block_verbatim_from_list": {
+        "add_ons": {
+          "component_id": "",
+          "component_type_id": "blk_640017963d808005a21a6445",
+          "record": "{\"data\":\"\\nflowchart TD\\n    A[\\\"Operator\\u003cbr/\\u003eRuns the larkdocio download command\\\"] --\\u003e B[\\\"Resolve the URL\\u003cbr/\\u003eClassify the host and the token kind: Document\\\"]\\n    B --\\u003e C[\\\"Pick the reader:\\u003cbr/\\u003eDocx document\\\"]\\n\\n    C --\\u003e D[\\\"Step 1: Fetch metadata\\u003cbr/\\u003eIncludes title, revision id,\\u003cbr/\\u003eblock count, display settings,\\u003cbr/\\u003eand the parent folder and its space,\\u003cbr/\\u003echecked before any block is read\\\"]\\n\\n    D --\\u003e E[\\\"Step 2: List blocks\\u003cbr/\\u003eIncludes pagination and the child order\\\"]\\n\\n    E --\\u003e F[\\\"Step 3: Render all\\\"]\\n    F --\\u003e F1[\\\"Text \\u0026 Heading blocks\\u003cbr/\\u003eIncludes inline styles and links\\\"]\\n    F --\\u003e F2[\\\"Media blocks\\u003cbr/\\u003eDownload or skip each image\\u003cbr/\\u003eAsset folder: ./assets\\\"]\\n\\n    F1 --\\u003e G[\\\"Step 4: Write\\u003cbr/\\u003eWrite the Markdown file\\\"]\\n    F2 --\\u003e G\\n\\n    G --\\u003e H{\\\"Check result\\\"}\\n    H --\\u003e|Dry run requested| I[\\\"Summary of a dry run\\u003cbr/\\u003eShow the planned files without writing them\\\"]\\n\\n    H --\\u003e|Write files| J{\\\"Write outcome\\\"}\\n    J --\\u003e|Write failed| K[\\\"Errors from writing\\u003cbr/\\u003eShow the failing block and its error\\\"]\\n    J --\\u003e|Write succeeded| L[\\\"Done, all written\\u003cbr/\\u003eShow the written Markdown path\\\"]\\n\\n    classDef step fill:#E8F3FF,stroke:#2F80ED,stroke-width:1.5px,color:#1F2937;\\n    classDef decision fill:#FFF7E6,stroke:#F59E0B,stroke-width:1.5px,color:#1F2937;\\n\\n    class A,B,C,D,E,F,F1,F2,G,I,K,L step;\\n    class H,J decision;\\n\\n\",\"theme\":\"default\",\"view\":\"codeChart\"}"
+        },
+        "block_id": "Example3a5beaf6a136e401cc42",
+        "block_type": 40,
+        "parent_id": "DocCommentZooExample0000001"
+      },
+      "get_one_verbatim": {
+        "label": "get-one-Example3a5beaf6a136e401cc42",
+        "method": "GET",
+        "path": "/docx/v1/documents/DocCommentZooExample0000001/blocks/Example3a5beaf6a136e401cc42",
+        "request_body": null,
+        "http_status": 200,
+        "code": 0,
+        "msg": "success",
+        "response": {
+          "code": 0,
+          "data": {
+            "block": {
+              "add_ons": {
+                "component_id": "",
+                "component_type_id": "blk_640017963d808005a21a6445",
+                "record": "{\"data\":\"\\nflowchart TD\\n    A[\\\"Operator\\u003cbr/\\u003eRuns the larkdocio download command\\\"] --\\u003e B[\\\"Resolve the URL\\u003cbr/\\u003eClassify the host and the token kind: Document\\\"]\\n    B --\\u003e C[\\\"Pick the reader:\\u003cbr/\\u003eDocx document\\\"]\\n\\n    C --\\u003e D[\\\"Step 1: Fetch metadata\\u003cbr/\\u003eIncludes title, revision id,\\u003cbr/\\u003eblock count, display settings,\\u003cbr/\\u003eand the parent folder and its space,\\u003cbr/\\u003echecked before any block is read\\\"]\\n\\n    D --\\u003e E[\\\"Step 2: List blocks\\u003cbr/\\u003eIncludes pagination and the child order\\\"]\\n\\n    E --\\u003e F[\\\"Step 3: Render all\\\"]\\n    F --\\u003e F1[\\\"Text \\u0026 Heading blocks\\u003cbr/\\u003eIncludes inline styles and links\\\"]\\n    F --\\u003e F2[\\\"Media blocks\\u003cbr/\\u003eDownload or skip each image\\u003cbr/\\u003eAsset folder: ./assets\\\"]\\n\\n    F1 --\\u003e G[\\\"Step 4: Write\\u003cbr/\\u003eWrite the Markdown file\\\"]\\n    F2 --\\u003e G\\n\\n    G --\\u003e H{\\\"Check result\\\"}\\n    H --\\u003e|Dry run requested| I[\\\"Summary of a dry run\\u003cbr/\\u003eShow the planned files without writing them\\\"]\\n\\n    H --\\u003e|Write files| J{\\\"Write outcome\\\"}\\n    J --\\u003e|Write failed| K[\\\"Errors from writing\\u003cbr/\\u003eShow the failing block and its error\\\"]\\n    J --\\u003e|Write succeeded| L[\\\"Done, all written\\u003cbr/\\u003eShow the written Markdown path\\\"]\\n\\n    classDef step fill:#E8F3FF,stroke:#2F80ED,stroke-width:1.5px,color:#1F2937;\\n    classDef decision fill:#FFF7E6,stroke:#F59E0B,stroke-width:1.5px,color:#1F2937;\\n\\n    class A,B,C,D,E,F,F1,F2,G,I,K,L step;\\n    class H,J decision;\\n\\n\",\"theme\":\"default\",\"view\":\"codeChart\"}"
+              },
+              "block_id": "Example3a5beaf6a136e401cc42",
+              "block_type": 40,
+              "parent_id": "DocCommentZooExample0000001"
+            }
+          },
+          "msg": "success"
+        }
+      },
+      "get_one_matches_list": true,
+      "block_type": 40,
+      "parent_id": "DocCommentZooExample0000001",
+      "root_child_index": 67,
+      "add_ons_keys": [
+        "component_id",
+        "component_type_id",
+        "record"
+      ],
+      "add_ons_verbatim": {
+        "component_id": "",
+        "component_type_id": "blk_640017963d808005a21a6445",
+        "record": "{\"data\":\"\\nflowchart TD\\n    A[\\\"Operator\\u003cbr/\\u003eRuns the larkdocio download command\\\"] --\\u003e B[\\\"Resolve the URL\\u003cbr/\\u003eClassify the host and the token kind: Document\\\"]\\n    B --\\u003e C[\\\"Pick the reader:\\u003cbr/\\u003eDocx document\\\"]\\n\\n    C --\\u003e D[\\\"Step 1: Fetch metadata\\u003cbr/\\u003eIncludes title, revision id,\\u003cbr/\\u003eblock count, display settings,\\u003cbr/\\u003eand the parent folder and its space,\\u003cbr/\\u003echecked before any block is read\\\"]\\n\\n    D --\\u003e E[\\\"Step 2: List blocks\\u003cbr/\\u003eIncludes pagination and the child order\\\"]\\n\\n    E --\\u003e F[\\\"Step 3: Render all\\\"]\\n    F --\\u003e F1[\\\"Text \\u0026 Heading blocks\\u003cbr/\\u003eIncludes inline styles and links\\\"]\\n    F --\\u003e F2[\\\"Media blocks\\u003cbr/\\u003eDownload or skip each image\\u003cbr/\\u003eAsset folder: ./assets\\\"]\\n\\n    F1 --\\u003e G[\\\"Step 4: Write\\u003cbr/\\u003eWrite the Markdown file\\\"]\\n    F2 --\\u003e G\\n\\n    G --\\u003e H{\\\"Check result\\\"}\\n    H --\\u003e|Dry run requested| I[\\\"Summary of a dry run\\u003cbr/\\u003eShow the planned files without writing them\\\"]\\n\\n    H --\\u003e|Write files| J{\\\"Write outcome\\\"}\\n    J --\\u003e|Write failed| K[\\\"Errors from writing\\u003cbr/\\u003eShow the failing block and its error\\\"]\\n    J --\\u003e|Write succeeded| L[\\\"Done, all written\\u003cbr/\\u003eShow the written Markdown path\\\"]\\n\\n    classDef step fill:#E8F3FF,stroke:#2F80ED,stroke-width:1.5px,color:#1F2937;\\n    classDef decision fill:#FFF7E6,stroke:#F59E0B,stroke-width:1.5px,color:#1F2937;\\n\\n    class A,B,C,D,E,F,F1,F2,G,I,K,L step;\\n    class H,J decision;\\n\\n\",\"theme\":\"default\",\"view\":\"codeChart\"}"
+      },
+      "component_id": "",
+      "component_type_id": "blk_640017963d808005a21a6445",
+      "record_decoded": {
+        "data": "\nflowchart TD\n    A[\"Operator<br/>Runs the larkdocio download command\"] --> B[\"Resolve the URL<br/>Classify the host and the token kind: Document\"]\n    B --> C[\"Pick the reader:<br/>Docx document\"]\n\n    C --> D[\"Step 1: Fetch metadata<br/>Includes title, revision id,<br/>block count, display settings,<br/>and the parent folder and its space,<br/>checked before any block is read\"]\n\n    D --> E[\"Step 2: List blocks<br/>Includes pagination and the child order\"]\n\n    E --> F[\"Step 3: Render all\"]\n    F --> F1[\"Text & Heading blocks<br/>Includes inline styles and links\"]\n    F --> F2[\"Media blocks<br/>Download or skip each image<br/>Asset folder: ./assets\"]\n\n    F1 --> G[\"Step 4: Write<br/>Write the Markdown file\"]\n    F2 --> G\n\n    G --> H{\"Check result\"}\n    H -->|Dry run requested| I[\"Summary of a dry run<br/>Show the planned files without writing them\"]\n\n    H -->|Write files| J{\"Write outcome\"}\n    J -->|Write failed| K[\"Errors from writing<br/>Show the failing block and its error\"]\n    J -->|Write succeeded| L[\"Done, all written<br/>Show the written Markdown path\"]\n\n    classDef step fill:#E8F3FF,stroke:#2F80ED,stroke-width:1.5px,color:#1F2937;\n    classDef decision fill:#FFF7E6,stroke:#F59E0B,stroke-width:1.5px,color:#1F2937;\n\n    class A,B,C,D,E,F,F1,F2,G,I,K,L step;\n    class H,J decision;\n\n",
+        "theme": "default",
+        "view": "codeChart"
+      },
+      "record_decode_error": null,
+      "record_keys": [
+        "data",
+        "theme",
+        "view"
+      ],
+      "record_raw": "{\"data\":\"\\nflowchart TD\\n    A[\\\"Operator\\u003cbr/\\u003eRuns the larkdocio download command\\\"] --\\u003e B[\\\"Resolve the URL\\u003cbr/\\u003eClassify the host and the token kind: Document\\\"]\\n    B --\\u003e C[\\\"Pick the reader:\\u003cbr/\\u003eDocx document\\\"]\\n\\n    C --\\u003e D[\\\"Step 1: Fetch metadata\\u003cbr/\\u003eIncludes title, revision id,\\u003cbr/\\u003eblock count, display settings,\\u003cbr/\\u003eand the parent folder and its space,\\u003cbr/\\u003echecked before any block is read\\\"]\\n\\n    D --\\u003e E[\\\"Step 2: List blocks\\u003cbr/\\u003eIncludes pagination and the child order\\\"]\\n\\n    E --\\u003e F[\\\"Step 3: Render all\\\"]\\n    F --\\u003e F1[\\\"Text \\u0026 Heading blocks\\u003cbr/\\u003eIncludes inline styles and links\\\"]\\n    F --\\u003e F2[\\\"Media blocks\\u003cbr/\\u003eDownload or skip each image\\u003cbr/\\u003eAsset folder: ./assets\\\"]\\n\\n    F1 --\\u003e G[\\\"Step 4: Write\\u003cbr/\\u003eWrite the Markdown file\\\"]\\n    F2 --\\u003e G\\n\\n    G --\\u003e H{\\\"Check result\\\"}\\n    H --\\u003e|Dry run requested| I[\\\"Summary of a dry run\\u003cbr/\\u003eShow the planned files without writing them\\\"]\\n\\n    H --\\u003e|Write files| J{\\\"Write outcome\\\"}\\n    J --\\u003e|Write failed| K[\\\"Errors from writing\\u003cbr/\\u003eShow the failing block and its error\\\"]\\n    J --\\u003e|Write succeeded| L[\\\"Done, all written\\u003cbr/\\u003eShow the written Markdown path\\\"]\\n\\n    classDef step fill:#E8F3FF,stroke:#2F80ED,stroke-width:1.5px,color:#1F2937;\\n    classDef decision fill:#FFF7E6,stroke:#F59E0B,stroke-width:1.5px,color:#1F2937;\\n\\n    class A,B,C,D,E,F,F1,F2,G,I,K,L step;\\n    class H,J decision;\\n\\n\",\"theme\":\"default\",\"view\":\"codeChart\"}",
+      "looks_mermaid": true,
+      "component_type_id_matches_shipped_constant": true,
+      "mermaid_source_reader_would_extract": "\nflowchart TD\n    A[\"Operator<br/>Runs the larkdocio download command\"] --> B[\"Resolve the URL<br/>Classify the host and the token kind: Document\"]\n    B --> C[\"Pick the reader:<br/>Docx document\"]\n\n    C --> D[\"Step 1: Fetch metadata<br/>Includes title, revision id,<br/>block count, display settings,<br/>and the parent folder and its space,<br/>checked before any block is read\"]\n\n    D --> E[\"Step 2: List blocks<br/>Includes pagination and the child order\"]\n\n    E --> F[\"Step 3: Render all\"]\n    F --> F1[\"Text & Heading blocks<br/>Includes inline styles and links\"]\n    F --> F2[\"Media blocks<br/>Download or skip each image<br/>Asset folder: ./assets\"]\n\n    F1 --> G[\"Step 4: Write<br/>Write the Markdown file\"]\n    F2 --> G\n\n    G --> H{\"Check result\"}\n    H -->|Dry run requested| I[\"Summary of a dry run<br/>Show the planned files without writing them\"]\n\n    H -->|Write files| J{\"Write outcome\"}\n    J -->|Write failed| K[\"Errors from writing<br/>Show the failing block and its error\"]\n    J -->|Write succeeded| L[\"Done, all written<br/>Show the written Markdown path\"]\n\n    classDef step fill:#E8F3FF,stroke:#2F80ED,stroke-width:1.5px,color:#1F2937;\n    classDef decision fill:#FFF7E6,stroke:#F59E0B,stroke-width:1.5px,color:#1F2937;\n\n    class A,B,C,D,E,F,F1,F2,G,I,K,L step;\n    class H,J decision;\n\n",
+      "record_len": 1646,
+      "record_sha256_12": "daf20f4c9ade"
+    }
+  },
+  "ld161_baseline": {
+    "block_id": "Example3a5beaf6a136e401cc42",
+    "block_type": 40,
+    "component_type_id": "blk_640017963d808005a21a6445",
+    "record_len": 1646,
+    "record_sha256_12": "daf20f4c9ade",
+    "root_child_index": 67
+  },
+  "ld161_baseline_checks": {
+    "present": true,
+    "block_type": true,
+    "component_type_id": true,
+    "record_len": true,
+    "record_sha256_12": true,
+    "root_child_index": true
+  },
+  "ld161_baseline_observed": {
+    "block_type": 40,
+    "component_type_id": "blk_640017963d808005a21a6445",
+    "record_len": 1646,
+    "record_sha256_12": "daf20f4c9ade",
+    "root_child_index": 67
+  },
+  "baseline_match": true,
+  "synthesizability": {
+    "add_ons_fields": [
+      "component_id",
+      "component_type_id",
+      "record"
+    ],
+    "component_id_present": true,
+    "component_id_value": "",
+    "component_id_shape_note": "A per-instance id. Whether it is server-minted or client-supplied is exactly what probe 21 rows (a) vs (b) separate: (a) replays it verbatim, (b) drops it.",
+    "record_is_json_in_a_string": true,
+    "record_top_level_keys": [
+      "data",
+      "theme",
+      "view"
+    ]
+  },
+  "api_calls": 3
+}

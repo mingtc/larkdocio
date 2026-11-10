@@ -1,0 +1,26 @@
+{
+  "_probe": "LD-494 AC6 addendum — root-folder member READ, R2 — no type param at all (the 99992402 body calls type optional)",
+  "_method": "GET",
+  "_route_as_sent": "GET /open-apis/drive/v1/permissions/nodlgExampleee5c77c8ba65b63/members (no query params)",
+  "_target_token": "nodlgExampleee5c77c8ba65b63",
+  "_target_type": "folder",
+  "_http_status": 400,
+  "_lark_code": 99992402,
+  "_lark_msg": "field validation failed",
+  "_body_verbatim": {
+    "code": 99992402,
+    "msg": "field validation failed",
+    "error": {
+      "log_id": "202608170925545500D802639FFE6B499A",
+      "field_violations": [
+        {
+          "field": "type",
+          "description": "type is required"
+        }
+      ]
+    }
+  },
+  "_member_count": 0,
+  "_verdict": "ORACLE UNAVAILABLE — refused",
+  "_d59_scope": "One tenant, one app, 2026-08-17, tenant_access_token (the WRITE pair), this route, this spelling."
+}

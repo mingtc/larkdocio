@@ -1,0 +1,27 @@
+{
+  "_probe": "LD-494 AC6 addendum — root-folder member READ, R1 — type=folder (what the grant probe used as its oracle)",
+  "_method": "GET",
+  "_route_as_sent": "GET /open-apis/drive/v1/permissions/nodlgExampleee5c77c8ba65b63/members?type=folder",
+  "_target_token": "nodlgExampleee5c77c8ba65b63",
+  "_target_type": "folder",
+  "_http_status": 400,
+  "_lark_code": 99992402,
+  "_lark_msg": "field validation failed",
+  "_body_verbatim": {
+    "code": 99992402,
+    "msg": "field validation failed",
+    "error": {
+      "log_id": "202608170925535500D802639FFE6B48F8",
+      "field_violations": [
+        {
+          "field": "type",
+          "value": "folder",
+          "description": "type is optional, options: [doc,sheet,file,wiki,bitable,docx,mindnote,minutes,slides]"
+        }
+      ]
+    }
+  },
+  "_member_count": 0,
+  "_verdict": "ORACLE UNAVAILABLE — refused",
+  "_d59_scope": "One tenant, one app, 2026-08-17, tenant_access_token (the WRITE pair), this route, this spelling."
+}

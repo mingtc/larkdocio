@@ -1,0 +1,28 @@
+{
+  "probe": "P2-contact-batch-get-id-READ",
+  "method": "POST",
+  "path": "/open-apis/contact/v3/users/batch_get_id",
+  "params": [
+    [
+      "user_id_type",
+      "open_id"
+    ]
+  ],
+  "body": {
+    "emails": [
+      "nobody.does.not.exist@example.invalid"
+    ]
+  },
+  "http_status": 200,
+  "response": {
+    "code": 0,
+    "data": {
+      "user_list": [
+        {
+          "email": "nobody.does.not.exist@example.invalid"
+        }
+      ]
+    },
+    "msg": "success"
+  }
+}

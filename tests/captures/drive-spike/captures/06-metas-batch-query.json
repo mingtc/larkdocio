@@ -1,0 +1,63 @@
+{
+  "_probe": "06-metas-batch-query",
+  "_endpoint": "/open-apis/drive/v1/metas/batch_query",
+  "_method": "POST",
+  "_http_status": 200,
+  "_lark_code": 0,
+  "_lark_msg": "Success",
+  "_note": "type/title/mtime metadata for discovered children, on READ creds",
+  "_verdict": "OK",
+  "response": {
+    "code": 0,
+    "data": {
+      "metas": [
+        {
+          "create_time": "1785883704",
+          "doc_token": "Example4ca86657c7d92cd02405",
+          "doc_type": "bitable",
+          "latest_modify_time": "1785884932",
+          "latest_modify_user": "<redacted:person-id>",
+          "owner_id": "<redacted:person-id>",
+          "request_doc_info": {
+            "doc_token": "Example4ca86657c7d92cd02405",
+            "doc_type": "bitable"
+          },
+          "sec_label_name": "",
+          "title": "Example Dogfood Base 02",
+          "url": "https://<redacted:tenant-host>.larksuite.com/base/Example4ca86657c7d92cd02405"
+        },
+        {
+          "create_time": "1785882220",
+          "doc_token": "Exampleee097d6f267dba6ba1b9",
+          "doc_type": "bitable",
+          "latest_modify_time": "1785882448",
+          "latest_modify_user": "<redacted:person-id>",
+          "owner_id": "<redacted:person-id>",
+          "request_doc_info": {
+            "doc_token": "Exampleee097d6f267dba6ba1b9",
+            "doc_type": "bitable"
+          },
+          "sec_label_name": "",
+          "title": "Example Dogfood Base 03",
+          "url": "https://<redacted:tenant-host>.larksuite.com/base/Exampleee097d6f267dba6ba1b9"
+        },
+        {
+          "create_time": "1785886310",
+          "doc_token": "Examplea21e3e9b9a0a3982d137",
+          "doc_type": "bitable",
+          "latest_modify_time": "1785888054",
+          "latest_modify_user": "<redacted:person-id>",
+          "owner_id": "<redacted:person-id>",
+          "request_doc_info": {
+            "doc_token": "Examplea21e3e9b9a0a3982d137",
+            "doc_type": "bitable"
+          },
+          "sec_label_name": "Label A",
+          "title": "Example Dogfood Base 01",
+          "url": "https://<redacted:tenant-host>.larksuite.com/base/Examplea21e3e9b9a0a3982d137"
+        }
+      ]
+    },
+    "msg": "Success"
+  }
+}
