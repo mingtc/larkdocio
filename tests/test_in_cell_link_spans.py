@@ -68,7 +68,7 @@ def _sent_fill_element():
         "elements"][0]
 
 
-def metrics() -> NewBlock:
+def consumer_row() -> NewBlock:
     """The consumer's own row, as the typed shape authors it."""
     return NewBlock.table(
         [["Code", "Name", "Link"],
@@ -143,7 +143,7 @@ def test_ac1_the_plain_text_projection_of_a_rich_cell_is_its_anchor_text():
     """``table_cell_texts`` stays the plain-text projection every existing reader of a
     NewBlock uses (the preview, the refusal messages, the reconciler) — a rich cell adds a
     layer rather than replacing the field, exactly as ``spans`` does on a paragraph."""
-    assert table_cell_texts(metrics()) == (
+    assert table_cell_texts(consumer_row()) == (
         "Code", "Name", "Link", "EX-01", "Example Item", LABEL,
     )
 
@@ -156,7 +156,7 @@ def test_ac2_route_A_the_atomic_descendant_create_sends_the_captured_element():
     """The one-call ``descendant`` subtree — the element is the capture's own ``sent``."""
     from larkdocio.write.encode import table_subtree
 
-    encoded = encode_content((metrics(),))[0]
+    encoded = encode_content((consumer_row(),))[0]
     _table_id, descendants = table_subtree(encoded)
     linked = [d for d in descendants
               if d.get("text", {}).get("elements", [{}])[0].get(
@@ -210,7 +210,7 @@ def test_ac3_no_style_key_other_than_link_can_reach_a_cell():
     assert [f.name for f in dataclasses.fields(TextSpan)] == ["text", "link_url"]
 
     from larkdocio.write.encode import table_subtree
-    encoded = encode_content((metrics(),))[0]
+    encoded = encode_content((consumer_row(),))[0]
     _table_id, descendants = table_subtree(encoded)
     for descendant in descendants:
         for element in descendant.get("text", {}).get("elements", ()):
@@ -279,7 +279,7 @@ def test_ac3_a_cell_holding_something_that_is_neither_text_nor_spans_is_refused(
 # --------------------------------------------------------------------------- #
 
 def test_a_rich_cell_survives_the_to_dict_from_dict_round_trip():
-    block = metrics()
+    block = consumer_row()
     wire = block.to_dict()
     assert wire["rows"][1][2] == [{"text": LABEL, "link_url": URL}]
     assert json.loads(json.dumps(wire)) == wire
@@ -382,7 +382,7 @@ def test_a_rich_cell_survives_the_whole_REQUEST_record_too():
     from larkdocio.write.model import Anchor, InsertPosition, InsertRequest
 
     request = InsertRequest(reference=Anchor(quote="q"),
-                            position=InsertPosition.AFTER, content=(metrics(),))
+                            position=InsertPosition.AFTER, content=(consumer_row(),))
     wire = request.to_dict()
     assert wire["content"][0]["rows"][1][2] == [{"text": LABEL, "link_url": URL}]
     assert InsertRequest.from_dict(json.loads(json.dumps(wire))) == request

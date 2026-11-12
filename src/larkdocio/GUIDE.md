@@ -420,7 +420,7 @@ scripts/update_larkdocio.sh --check      # report-only: is a newer tag available
 **Before you re-pin, read the release notes — `larkdocio.release_notes()`.** That call
 returns `RELEASE_NOTES.md` straight out of the installed wheel, so it works from a plain
 `pip install` as well as a vendored one. The wheel's copy is a window of the newest releases;
-the `vendor/larkdocio-RELEASE_NOTES.md` drop, when you have it, is the full history. It is the filtered view of what changed *that affects you* —
+the `vendor/larkdocio-RELEASE_NOTES.md` drop, when you have it, holds every section from 1.14.0. It is the filtered view of what changed *that affects you* —
 public symbols and CLI flags, observable behavior changes, new or renamed refusals,
 credential and scope requirements, **every dependency add and pin move**, and known
 limitations — release by release. `larkdocio.changelog()` returns `CHANGELOG.md`, the project's

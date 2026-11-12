@@ -1,6 +1,6 @@
 """LD-704 AC5, LD-705, LD-707: the public tree carries nothing from a private pattern set.
 
-`D-121` (8), ruled 2026-11-01: larkdocio contains **no domain-specific items**. This guard keeps
+`D-121` (8): larkdocio contains **no domain-specific items**. This guard keeps
 the maintainers' private pattern set out of every file the public export carries, in any form a
 reader could recover: in any case, assembled from string pieces or reversed
 (:func:`domain_vocabulary.readable_forms`), wrapped across a line break or split by whitespace
@@ -104,7 +104,7 @@ def test_the_pattern_catches_every_shape_it_names(tmp_path):
 
 
 #: An invented stand-in pattern set: safe to publish, so the mechanism is proven here too.
-_STAND_IN = re.compile(r"(?i:\bzephyrs?\b|zephyr_|quartz[ _-]?zebra|石\s*英\s*斑\s*马)|KX-(?:\\d|\d)")
+_STAND_IN = re.compile(r"(?i:\bzephyrs?\b|zephyr_|quartz[ _-]?zebra|晴\s*天\s*散\s*步)|KX-(?:\\d|\d)")
 
 
 @pytest.mark.parametrize("line", [
@@ -115,15 +115,15 @@ _STAND_IN = re.compile(r"(?i:\bzephyrs?\b|zephyr_|quartz[ _-]?zebra|石\s*英\s*
     'LONG = " ".join(("quartz", "zebra"))',
     'LONG = "quartz_" "zebras"',
     "a zephyr_router and a Quartz-Zebra",
-    "我们 看到 石英 斑马",
+    "我们 喜欢 晴天 散步",
     r"re.compile(r'\bKX-\d+')",
     "a quartz\nzebra here",
     "# a quartz\n# zebra here",
     "// a quartz\n  // Zebra here",
     "a quartz\tzebra here",
     "a quartz   zebra here",
-    "使用 石英\n斑马",
-    "# 使用 石英\n# 斑马",
+    "适合 晴天\n散步",
+    "# 适合 晴天\n# 散步",
 ])
 def test_every_readable_form_of_a_term_is_caught(line, tmp_path):
     """The mechanism, on the invented stand-in: spelled, assembled from string pieces, reversed,

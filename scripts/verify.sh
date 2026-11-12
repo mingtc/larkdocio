@@ -65,8 +65,8 @@ cd "$REPO_ROOT"
 #     listed — membership is a judgment about what a test's subject IS (the inclusion rule
 #     above), and no static property of a test module distinguishes it: about a third of the test modules
 #     walk the tree (199 of 600, counted on or before 2026-09-18 — the oldest commit that
-#     records the figure; not re-derived since), so a code-derived population would be a long
-#     exclusion list (165 rows at that count). The marker
+#     records the figure, in the maintainers' history; not re-derived since), so a code-derived
+#     population would be a long exclusion list (165 rows at that count). The marker
 #     makes the judgment explicit and mechanically held; it does not make it automatic.
 #
 # The membership is READABLE HERE, without running anything — that is the point of a list

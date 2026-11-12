@@ -487,7 +487,7 @@ def notes_window_banner(resource: str, kept: Tuple[str, ...], dropped_below: str
         # window or point at a fuller copy that has nothing more in it.
         first = (
             f"**This copy carries every release this document records — {len(kept)} "
-            f"{_agreeing(len(kept), 'release')}, {span} — verbatim.** The same text is at "
+            f"{_agreeing(len(kept), 'release')}, {span} — verbatim.** The same entries are at "
             f"{NOTES_FULL_HISTORY[resource]}."
         )
         where = None

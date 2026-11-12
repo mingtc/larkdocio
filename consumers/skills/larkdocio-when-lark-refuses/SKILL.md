@@ -8,7 +8,7 @@ description: Use when a call was refused, denied, halted, rejected as stale, or 
 A refusal here is typed and deliberate: it names what it would not do, and why. Read the
 refusal first, then the section that owns that class of refusal.
 
-> **Version skew, both directions.** Copied from a `larkdocio` checkout, **1.52.0**, on **2026-11-01**. Pointer will not resolve? Your wheel is older — refresh it. Wheel newer than 1.52.0? This pack may be missing something added since — refresh anyway. Either way, run `scripts/update_larkdocio.sh`, then re-copy the pack with a fresh clone's `consumers/install-skills.sh`.
+> **Version skew, both directions.** Copied from a `larkdocio` checkout, **1.53.1**, on **2026-11-10**. Pointer will not resolve? Your wheel is older — refresh it. Wheel newer than 1.53.1? This pack may be missing something added since — refresh anyway. Either way, run `scripts/update_larkdocio.sh`, then re-copy the pack with a fresh clone's `consumers/install-skills.sh`.
 
 Start with the map of where refusals come from at all:
 

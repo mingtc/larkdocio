@@ -3,7 +3,7 @@ and the registration-seam scanner is pointed at a second package.
 
 **The defect this module closes.** ``larkdocio.write.ops.OPS`` is the ONE registration seam
 for the docx write engine — four generic dispatch chains read their behaviour off it — but the
-sentence that *maps the paths which write a customer's document* was hand-kept, and it went
+sentence that *maps the paths which write a caller's document* was hand-kept, and it went
 stale twice: ``write/apply.py``'s module docstring said **five** resolved-entry paths, last
 touched 2026-07-28, while ``comment-create``/``comment-remove`` landed 2026-07-30 and
 ``grow-table`` on 2026-08-25 — understated by three across two op additions for 35 days. This
@@ -20,7 +20,7 @@ narrative by ``entry.cell``). Three bases were defensible — 8 reachable implem
 ``len(OPS)`` = 7, or 6 excluding the comment ops — and the ruling took **eight**, because the
 claim the sentence makes is a *safety* claim (*every path carries its own live re-validation
 and emits exactly one apply-log record*) and the unit a safety claim about writing must count
-is **the implementation that touches the customer's document**, not the op kind that names it.
+is **the implementation that touches the caller's document**, not the op kind that names it.
 ``len(OPS)`` would certify a path it never counted; excluding the comment ops would place two
 genuinely writing paths outside a guarantee whose whole value is being exhaustive.
 

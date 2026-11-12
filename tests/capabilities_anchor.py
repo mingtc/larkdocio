@@ -413,8 +413,8 @@ RECUT = (
 
 # --- BEGIN GENERATED ANCHOR PIN ---
 ANCHOR_PIN = {
-    "@payload":                           (339662, "bf53d540c232bebbd5857bea16a0c3c373e0db086d0def3bc1023b39d941ed28"),
-    "docs":                               (27420, "59560ad24bcdc946d60460bd8f44194b0f07a28ce9bd4b0fb6c83590cbefea8e"),
+    "@payload":                           (339760, "b6273b3da329a2196061ccacaadf010db725345394292051c99f6e82147cc4d5"),
+    "docs":                               (27518, "6cb414c027ef1f8e78ea85fd7eff552f49a3a1bf6bd43c39fb88fe4bc5c7cab9"),
     "entry_points":                       (6853, "4041d528e418a3584f0a29530cd53dc13ab504c5abc294b4d5f6b46777053320"),
     "flags":                              (10475, "c386b91c7f49807bb66aac66a0df4d129bff82315c8fc873fbbfa252e0b7966c"),
     "safety_contracts":                   (36523, "af4a87cbac2dee765eeb01f53d6ecceee3af9c976ada8b31464e522a31f1394c"),

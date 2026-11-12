@@ -26,5 +26,5 @@
     },
     "msg": "success"
   },
-  "_sanitization": "recorded unredacted; in this public copy the owner's email is the placeholder example.user@example.com (tests/captures/README.md), and the synthetic example.invalid address and the synthetic unassignable +1-000 mobile are all either already committed (captures/P2, P6, W2) or not a real identifier"
+  "_sanitization": "recorded unredacted; in this public copy the owner's email is the placeholder example.user@example.com (tests/captures/README.md), and the synthetic example.invalid address and the synthetic unassignable +1-000 mobile are all either already committed (captures/P2; the mobile in batch-get-id/B5) or not a real identifier"
 }

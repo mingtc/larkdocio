@@ -27,7 +27,7 @@ apply implementation reachable through the* :data:`larkdocio.write.ops.OPS` *dis
 ``_apply_edit`` counts as its two leaves (narrative and table-cell). The registry holds
 **seven** op kinds, and counting those would undercount the dispatch by one and so certify a
 path it never counted; the two predicates above are a **safety** claim, and the unit a safety
-claim about writing must count is the implementation that touches the customer's document, not
+claim about writing must count is the implementation that touches the caller's document, not
 the op kind that names it. Excluding the two comment ops (six) would leave two genuinely
 writing paths outside a guarantee whose whole value is being exhaustive. **The number is not
 hand-kept**: it is derived by one helper, in the source repository rather than in the wheel —

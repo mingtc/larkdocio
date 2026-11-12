@@ -53,7 +53,7 @@ here — and, with a separate refusal, none in `CHANGELOG.md` — so these notes
 fall behind the tags.
 
 **Whose the date is.** A section's **date belongs to the cutter**, set at the cut, and it is
-the day the release was actually tagged. Until then the topmost section is **un-cut**: its
+the day the release was cut. Until then the topmost section is **un-cut**: its
 date is a **placeholder with no authority**, it may be days or weeks older than the newest
 work described beneath it, and **nothing landing into an un-cut section edits that date**.
 This is enforced rather than promised — the release tooling refuses to tag a section whose
@@ -66,8 +66,8 @@ consumer had to reconstruct dependency and behavior changes out of the internal 
 before 1.14.0 are recorded only in the maintainers' engineering log, which is not published.
 
 > **This copy carries a WINDOW of the newest 8 releases, not the whole history.** Everything
-> below this line is verbatim — 1.46.0 up to 1.53.0 — and the releases older than 1.46.0,
-> 1.45.0 and down, ship with the publishing repository instead of inside the wheel. That is
+> below this line is verbatim — 1.47.0 up to 1.53.1 — and the releases older than 1.47.0,
+> 1.46.0 and down, ship with the publishing repository instead of inside the wheel. That is
 > deliberate: the reader this copy exists for is deciding whether to re-pin, and a full
 > history costs them every release they can no longer act on before it reaches the one they
 > can.
@@ -79,6 +79,24 @@ before 1.14.0 are recorded only in the maintainers' engineering log, which is no
 > `larkdocio.release_notes(section=...)` refuses a release older than the window by name and
 > repeats those addresses; `larkdocio.release_notes_sections()` lists the 8 releases this copy
 > carries.
+
+## [1.53.1] — 2026-11-10
+
+### What a caller can observe
+
+- **Nothing a call does changed.** This release changes no code that ships in the wheel.
+- **The test suite passes at this version.** At 1.53.0, one test in a source checkout failed:
+  it pinned an example naming the release's own version, which a separate check refuses once
+  that version is the installed one. The example is version-neutral now.
+- **A correction to the 1.53.0 notes.** Their entry on the import-time warning record says the
+  test suite runs green on Python 3.11 through 3.14. At the 1.53.0 tag it did not, on any of
+  them: the one failure above was red on every interpreter. It is fixed in 1.53.1.
+- **The README's refresh example names a placeholder tag.** `scripts/update_larkdocio.sh
+  vX.Y.Z` stands for any release tag; substitute the one you want.
+
+### Upgrade & compatibility
+
+- No dependency was added, dropped or moved. Upgrading from 1.53.0 changes nothing you call.
 
 ## [1.53.0] — 2026-11-08
 
@@ -1091,49 +1109,4 @@ worked and is unchanged; what changed is the sentence you are given when it miss
   from that same row, so the preview's description of the cell is worded in terms of the cell
   itself. It resolves to the cell you designated and it is unique-or-refuse; only the disclosure
   is circular. Known, and left alone in this release.
-
-## [1.46.0] — 2026-09-03
-
-### New capabilities
-
-None.
-
-### Behavior changes you can observe
-
-- **The shipped setup walkthrough (`larkdocio.lark_setup()`) now tells you that an app's reach
-  is WIDER than the list of things you shared with it.** An app also inherits whatever is
-  visible to the whole tenant, and that cuts two ways, so the walkthrough states both.
-  The convenient way: before concluding you need per-person identity to reach something, check
-  whether the app can already read it. The way that matters more: *"what can this app read?"* is
-  not answerable from your share list — the honest answer is your shares plus anything visible
-  to the whole tenant — so an exposure audit taken from the share list alone under-counts
-  what the app can see. This is Lark's own permission model rather than a library feature or a
-  guarantee to build on; it is written scoped to one tenant, one app and one folder, observed
-  on one day, and a tenant that shares nothing that widely would see none of it. It is a
-  statement about **access**, not about scopes: no grant in the console decides which objects a
-  call may touch.
-- **And the walkthrough no longer contradicts itself further down.** The bullet about an app's
-  *availability* list said an app the whole tenant can see still reads nothing that has not
-  been shared onto it; it now reads *"…shared onto it (including tenant-wide
-  visibility)"*, so the section you meet later cannot hand you back the assumption the section
-  above just corrected.
-- **Nothing else a caller can observe moved** — no public symbol, CLI flag, refusal code or
-  return shape. The remainder of this release is the publishing repository's own cut tooling,
-  which now reads the remote back and reports what it measured rather than trusting the exit
-  code of a push.
-
-### Upgrade & compatibility
-
-- **No dependency moved and no pin moved** — nothing this release depends on changed, and the
-  wheel's requirements are byte-identical to 1.45.0's.
-- **Drop-in.** No call site needs an edit and nothing a consumer parses changed shape; the only
-  shipped text that moved is the setup walkthrough described above.
-
-### Known limitations
-
-- **The distribution branch is published as a single force-pushed commit, and the host has been
-  observed reverting a ref it accepted.** If a fresh
-  `git clone --branch dist --depth 1` hands you a wheel older than the tag you expected, that is
-  the shape to suspect: the tag is authoritative, and your refresh script's build-from-tag
-  path reproduces the same wheel from it.
 

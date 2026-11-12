@@ -15,7 +15,7 @@ block and leave the rest of it exactly as it stands, use a sub-span edit instead
 `larkdocio guide --section recipe-edit-part-of-a-paragraph-a-sub-span-edit`. Two invocations,
 because the edit happens between them — possibly in another process, possibly tomorrow.
 
-> **Version skew, both directions.** Copied from a `larkdocio` checkout, **1.52.0**, on **2026-11-01**. Pointer will not resolve? Your wheel is older — refresh it. Wheel newer than 1.52.0? This pack may be missing something added since — refresh anyway. Either way, run `scripts/update_larkdocio.sh`, then re-copy the pack with a fresh clone's `consumers/install-skills.sh`.
+> **Version skew, both directions.** Copied from a `larkdocio` checkout, **1.53.1**, on **2026-11-10**. Pointer will not resolve? Your wheel is older — refresh it. Wheel newer than 1.53.1? This pack may be missing something added since — refresh anyway. Either way, run `scripts/update_larkdocio.sh`, then re-copy the pack with a fresh clone's `consumers/install-skills.sh`.
 
 ```bash
 larkdocio roundtrip pull "<url>" -o ./edit/

@@ -96,12 +96,18 @@ some relations between the originals, such as which two fields carried the same 
   replaced names. Two documents that were already in the app's own Drive root when the probe
   ran are both `Example Pre-existing Document` (`drive-spike/02`). The project's three dogfood Bases in that
   root are `Example Dogfood Base 01` to `03` (`drive-spike/02`, `06`).
-- **Document content a person wrote** is replaced. `mermaid-gate-captures/20-*` and `21-*` carry
+- **The Mermaid document's content** is replaced. `mermaid-gate-captures/20-*` and `21-*` carry
   a flowchart this project wrote instead. It has the same nodes, edges, decisions, edge labels,
   `<br/>` / `&`, `classDef` and `class` lines, and the same 1,646-byte record as the hand-typed
   original. Every encoding of it was replaced together, along with its `record_sha256_12`: the
   decoded source, the Go-escaped record, the server's unescaped echo, and the error message that
-  quotes it. The server's verdict on each row is the one recorded for the original.
+  quotes it. The server's verdict on each row is the one recorded for the original. The
+  comment-zoo's comment text (`comments-probe-round2-captures/10-*`), typed by the maintainers,
+  is kept.
+- **The Base url-segment probe's link** (`base-study/ld416-01`) is replaced: its label is
+  `Example Link` and its URL `https://example.com/example-link` (scheme-less
+  `example.com/example-link` where the probe sent it that way), in what was sent and what was
+  read back.
 - **A downstream user's data**: their row in `ld517-in-cell-link` is a 1×2 table with no header
   row (`header_row: false`) holding `EX-01` and a link with a generic label, in both what was sent
   and what was read back. `base-study/ld497-01` names neither the consumer nor the date or

@@ -8,7 +8,7 @@ description: Use when a task involves a Lark or Feishu URL — a document, sprea
 This file routes. It carries no answers of its own: every answer already ships inside the
 installed wheel, and each row below is the address of one.
 
-> **Version skew, both directions.** Copied from a `larkdocio` checkout, **1.52.0**, on **2026-11-01**. Pointer will not resolve? Your wheel is older — refresh it. Wheel newer than 1.52.0? This pack may be missing something added since — refresh anyway. Either way, run `scripts/update_larkdocio.sh`, then re-copy the pack with a fresh clone's `consumers/install-skills.sh`.
+> **Version skew, both directions.** Copied from a `larkdocio` checkout, **1.53.1**, on **2026-11-10**. Pointer will not resolve? Your wheel is older — refresh it. Wheel newer than 1.53.1? This pack may be missing something added since — refresh anyway. Either way, run `scripts/update_larkdocio.sh`, then re-copy the pack with a fresh clone's `consumers/install-skills.sh`.
 
 ## Which router
 

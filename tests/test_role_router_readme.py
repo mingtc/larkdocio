@@ -586,7 +586,7 @@ _PINNED_REPETITIONS = (
         "same fence.",
     ),
     (
-        "scripts/update_larkdocio.sh v1.53.0", ("vendor-integrator",), _CONSUMING,
+        "scripts/update_larkdocio.sh vX.Y.Z", ("vendor-integrator",), _CONSUMING,
         "The specific-tag form: re-pinning to a named tag is the vendor-integrator's whole "
         "job, so the arm cannot omit it and point instead.",
     ),

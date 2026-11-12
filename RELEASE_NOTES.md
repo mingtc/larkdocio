@@ -53,7 +53,7 @@ here — and, with a separate refusal, none in `CHANGELOG.md` — so these notes
 fall behind the tags.
 
 **Whose the date is.** A section's **date belongs to the cutter**, set at the cut, and it is
-the day the release was actually tagged. Until then the topmost section is **un-cut**: its
+the day the release was cut. Until then the topmost section is **un-cut**: its
 date is a **placeholder with no authority**, it may be days or weeks older than the newest
 work described beneath it, and **nothing landing into an un-cut section edits that date**.
 This is enforced rather than promised — the release tooling refuses to tag a section whose
@@ -64,6 +64,24 @@ read the topmost section for **what** changed; read a **cut** section's date for
 **Where the history starts.** These notes begin at **1.14.0**, the span across which a
 consumer had to reconstruct dependency and behavior changes out of the internal log. Changes
 before 1.14.0 are recorded only in the maintainers' engineering log, which is not published.
+
+## [1.53.1] — 2026-11-10
+
+### What a caller can observe
+
+- **Nothing a call does changed.** This release changes no code that ships in the wheel.
+- **The test suite passes at this version.** At 1.53.0, one test in a source checkout failed:
+  it pinned an example naming the release's own version, which a separate check refuses once
+  that version is the installed one. The example is version-neutral now.
+- **A correction to the 1.53.0 notes.** Their entry on the import-time warning record says the
+  test suite runs green on Python 3.11 through 3.14. At the 1.53.0 tag it did not, on any of
+  them: the one failure above was red on every interpreter. It is fixed in 1.53.1.
+- **The README's refresh example names a placeholder tag.** `scripts/update_larkdocio.sh
+  vX.Y.Z` stands for any release tag; substitute the one you want.
+
+### Upgrade & compatibility
+
+- No dependency was added, dropped or moved. Upgrading from 1.53.0 changes nothing you call.
 
 ## [1.53.0] — 2026-11-08
 

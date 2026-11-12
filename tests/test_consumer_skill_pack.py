@@ -1184,3 +1184,39 @@ def test_the_pack_is_FREE_of_this_repository_s_internal_dialect():
     assert not report, (
         "internal dialect in the copyable skill pack:\n"
         + "\n".join(f"  {label}: [{name}] {matched!r}" for label, name, matched in report[:30]))
+
+
+@private_tree.kit
+def test_the_release_cut_RESTAMPS_the_checked_in_pack(tmp_path):
+    """LD-719 (P5): the installer restamps a COPY, but the checked-in pack kept the stamp last
+    typed, so a reader of the repository saw a release behind the tree. ``scripts/release.sh``
+    now runs the same substitution over ``consumers/skills/`` at the bump and commits it with
+    the bump. This runs that block of the script itself — cut out of ``release.sh`` between its
+    own comment header and its report line, never retyped here — against a copy of the pack."""
+    import datetime
+
+    script = (REPO_ROOT / "scripts" / "release.sh").read_text(encoding="utf-8")
+    helper = re.search(r"^bump_line\(\) \{.*?^\}$", script, re.S | re.M)
+    block = re.search(r"^# RESTAMP THE SKILL PACK AT THE CUT.*?^echo \"── restamped[^\n]*$",
+                      script, re.S | re.M)
+    assert helper and block, "release.sh no longer carries the skill-pack restamp at the cut"
+    assert '"${SKILL_ROUTERS[@]}"' in script.split(block.group(0), 1)[1].split("git commit", 1)[0], (
+        "release.sh restamps the pack but no longer stages the restamped routers with the bump")
+    root = tmp_path / "repo"
+    for label, text in routers().items():
+        target = root / label
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text(text, encoding="utf-8")
+    runner = tmp_path / "restamp.sh"
+    runner.write_text("set -euo pipefail\nNUM=9.8.7\nREPO_ROOT=\"$1\"\n" + helper.group(0) + "\n"
+                      + block.group(0) + "\n", encoding="utf-8")
+    result = subprocess.run(["bash", str(runner), str(root)],
+                            capture_output=True, text=True, check=False)
+    assert result.returncode == 0, result.stderr
+    days = {datetime.date.today().isoformat(),
+            datetime.datetime.now(datetime.timezone.utc).date().isoformat()}
+    for label in sorted(routers()):
+        banner = _banner_line((root / label).read_text(encoding="utf-8"))
+        assert banner is not None, label
+        assert "**9.8.7**" in banner and "newer than 9.8.7?" in banner, (label, banner)
+        assert any(f"**{day}**" in banner for day in days), (label, banner)

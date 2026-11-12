@@ -169,16 +169,24 @@ def _every_version_ever_cut() -> set:
 
 
 def test_ac3_the_fabricated_version_really_never_shipped():
-    """The evidence behind the derivation: **no** release this project ever cut carries a
-    non-zero patch, so any ``x.y.1`` spelling is a version it never released — while sitting
-    squarely inside the published 1.x range, which is exactly why a caller has no external cue
-    that a vouching refusal is wrong."""
+    """The evidence behind the derivation: **no** release this project cut OLDER than a
+    window carries a non-zero patch, so an ``x.y.1`` spelling below the window is a version it
+    never released — while sitting squarely inside the published 1.x range, which is exactly
+    why a caller has no external cue that a vouching refusal is wrong.
+
+    LD-718 narrowed the evidence, not the reason: the first patch release (inside both windows)
+    made "no release ever carries a non-zero patch" false, and the derivation only ever reads
+    BELOW the window, so that is where the evidence is now checked."""
     cut = _every_version_ever_cut()
     assert cut, "no release sections found — the derivation's evidence cannot be checked"
-    assert sorted(v for v in cut if not v.endswith(".0")) == [], (
-        "a release with a non-zero patch exists — the fabricated-version derivation must move"
-    )
     for name in _NAMES:
+        oldest = min(_window_versions(name), key=_version_tuple)
+        older_patches = sorted(v for v in cut if not v.endswith(".0")
+                               and _version_tuple(v) < _version_tuple(oldest))
+        assert older_patches == [], (
+            f"a release older than {name}'s window carries a non-zero patch "
+            f"({older_patches}) — the fabricated-version derivation must move"
+        )
         fabricated = _fabricated_out_of_window_version(name)
         assert fabricated not in cut
         for relative in ("CHANGELOG.md", "RELEASE_NOTES.md"):

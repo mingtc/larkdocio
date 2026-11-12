@@ -19,6 +19,20 @@ cut. The topmost section may be **un-cut**: changes land in it before the releas
 until then its date is a placeholder. The release tooling refuses to tag a section whose header date
 is earlier than the newest date written inside that same section.
 
+## [1.53.1] — 2026-11-10
+
+### Fixed
+
+- **The test suite passes at this version.** At 1.53.0 one test failed in a source checkout: it
+  pinned the README example `scripts/update_larkdocio.sh` with the release's own version, which
+  the suite's version-freeze check refuses once that version is the installed one. The example
+  and the README now use the placeholder `vX.Y.Z`, and the freeze check also refuses a literal
+  of the next version, so the same mistake fails before a release rather than after it.
+- **A correction to the 1.53.0 entry.** It says the test suite runs green on Python 3.11
+  through 3.14. At the 1.53.0 tag it did not, on any of them: the one failure above was red on
+  every interpreter. It is fixed in 1.53.1.
+- No product behaviour changed and no dependency moved.
+
 ## [1.53.0] — 2026-11-08
 
 ### Changed

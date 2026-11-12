@@ -8,7 +8,7 @@ description: Use when the contents of a Lark or Feishu document, spreadsheet, Ba
 Find the row, open the address. There is a shipped reader for each of these; a hand-rolled one
 will lose things the shipped one keeps.
 
-> **Version skew, both directions.** Copied from a `larkdocio` checkout, **1.52.0**, on **2026-11-01**. Pointer will not resolve? Your wheel is older — refresh it. Wheel newer than 1.52.0? This pack may be missing something added since — refresh anyway. Either way, run `scripts/update_larkdocio.sh`, then re-copy the pack with a fresh clone's `consumers/install-skills.sh`.
+> **Version skew, both directions.** Copied from a `larkdocio` checkout, **1.53.1**, on **2026-11-10**. Pointer will not resolve? Your wheel is older — refresh it. Wheel newer than 1.53.1? This pack may be missing something added since — refresh anyway. Either way, run `scripts/update_larkdocio.sh`, then re-copy the pack with a fresh clone's `consumers/install-skills.sh`.
 
 | What is behind the URL | Read this section first |
 |---|---|

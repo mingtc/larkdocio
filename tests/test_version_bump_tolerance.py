@@ -53,6 +53,7 @@ intended behaviour.
 """
 import ast
 import functools
+import os
 from pathlib import Path
 
 import pytest
@@ -268,22 +269,54 @@ def test_the_population_covers_BOTH_trees_and_neither_half_is_empty():
     assert not any(p in _RECURSIVE for p in _SRC), "the two halves must not overlap"
 
 
-@pytest.mark.parametrize(
-    "path", _POPULATION, ids=lambda p: str(p.relative_to(_REPO)))
-def test_no_module_FREEZES_the_currently_packaged_version_string(path):
-    packaged = _packaged()
+def _offenders(path, version):
+    """``[(literal, lineno)]`` in *path* that freeze *version* — the one definition both freeze
+    tests below apply, so "frozen" means the same thing for the packaged and the next version."""
     offenders = [
         (literal, lineno) for literal, lineno in _string_constants(path)
         # The heading form is the documented exception; a bare literal is not.
-        if packaged in literal and f"[{packaged}]" not in literal
+        if version in literal and f"[{version}]" not in literal
     ]
     # WATCHED (LD-671 AC2), checked before the exception list on purpose — a property that
     # holds is the answer, and _ALLOWED is the confession you make when none does.
     held = _names_held_against_the_packaged_version()
     offenders = [(literal, lineno) for literal, lineno in offenders
                  if not (_module_level_names_bound_at(path, literal, lineno) & held)]
-    offenders = [(literal, lineno) for literal, lineno in offenders
-                 if (path.name, literal) not in _ALLOWED]
+    return [(literal, lineno) for literal, lineno in offenders
+            if (path.name, literal) not in _ALLOWED]
+
+
+#: LD-718 AC2 — the environment variable ``scripts/release.sh`` exports around gate b, naming
+#: the version it is ABOUT to cut. The guard below cannot otherwise see it: the bump that makes
+#: the target "the packaged version" happens after every gate has run.
+RELEASE_TARGET_ENV = "LARKDOCIO_RELEASE_TARGET"
+
+
+def _next_versions(packaged):
+    """The versions the next cut could plausibly be: the next patch and the next minor, plus
+    the target ``release.sh`` names when it is cutting.
+
+    larkdocio's numbers carry no major/minor semantics (``tests/release_versions.py``), so the
+    two increments every cut so far has taken are checked at landing time, and anything else —
+    a skipped number, a first-part increment — is caught at gate b by the explicit target,
+    which no successor arithmetic can predict. The first-part increment is left to the target
+    on purpose: ``X+1.0.0`` is the usual synthetic "legitimate next cut" in the release-rule
+    tests, and checking it every day would refuse those until the day it is actually cut.
+    """
+    major, minor, patch = (int(part) for part in packaged.split("."))
+    candidates = {f"{major}.{minor}.{patch + 1}", f"{major}.{minor + 1}.0"}
+    target = os.environ.get(RELEASE_TARGET_ENV, "").strip().removeprefix("v")
+    if target:
+        candidates.add(target)
+    candidates.discard(packaged)
+    return sorted(candidates)
+
+
+@pytest.mark.parametrize(
+    "path", _POPULATION, ids=lambda p: str(p.relative_to(_REPO)))
+def test_no_module_FREEZES_the_currently_packaged_version_string(path):
+    packaged = _packaged()
+    offenders = _offenders(path, packaged)
     assert offenders == [], (
         f"{path.name} freezes the packaged version {packaged!r} at "
         f"{[lineno for _literal, lineno in offenders]}. THE RULE: release.sh gates BEFORE it "
@@ -298,3 +331,53 @@ def test_no_module_FREEZES_the_currently_packaged_version_string(path):
         f"it drifts something says so. Only if no property fits, add it to _ALLOWED with its "
         f"reason."
     )
+
+
+@pytest.mark.parametrize(
+    "path", _POPULATION, ids=lambda p: str(p.relative_to(_REPO)))
+def test_no_module_FREEZES_the_NEXT_version_string_either(path):
+    """LD-718 — the same rule, applied one cut EARLY.
+
+    The guard above is sound and still let v1.53.0 ship red: a README pin naming
+    ``v1.53.0`` matched no packaged version while every gate ran, and became the packaged
+    version only by the bump, after the last gate. A literal is a landmine for the cut that
+    makes it current, so it is refused while it is still the NEXT version — at landing time
+    for every plausible increment, and at ``release.sh``'s gate b for the exact target it
+    exports in :data:`RELEASE_TARGET_ENV`.
+    """
+    packaged = _packaged()
+    frozen = {version: [lineno for _literal, lineno in _offenders(path, version)]
+              for version in _next_versions(packaged)}
+    frozen = {version: lines for version, lines in frozen.items() if lines}
+    assert frozen == {}, (
+        f"{path.name} names a version the NEXT cut would make the packaged one "
+        f"(packaged is {packaged!r}): {frozen} (version: lines). Green today, red the moment "
+        f"that version is cut — the LD-718 shape. Use a placeholder (`vX.Y.Z`) or "
+        f"derive it from `larkdocio.__version__` at test time; the rule and its remedies are "
+        f"test_no_module_FREEZES_the_currently_packaged_version_string's message."
+    )
+
+
+def test_the_next_version_set_is_not_vacuous_and_honours_the_release_target(monkeypatch):
+    """The early arm's own non-vacuity: it checks something, never the packaged version (the
+    arm above owns that), and the target ``release.sh`` exports is in the set — with or
+    without the leading ``v`` the script accepts."""
+    packaged = _packaged()
+    monkeypatch.delenv(RELEASE_TARGET_ENV, raising=False)
+    plausible = _next_versions(packaged)
+    assert len(plausible) == 2 and packaged not in plausible, plausible
+    monkeypatch.setenv(RELEASE_TARGET_ENV, "v97.0.3")     # synthetic: a skipped number
+    assert "97.0.3" in _next_versions(packaged)
+
+
+def test_a_planted_NEXT_version_literal_is_refused(tmp_path):
+    """The red-watch, kept as a permanent arm: a module pinning the next patch version — the
+    exact LD-718 shape — is an offender for the early arm and not for the packaged one. The
+    literal is built at run time so this file does not plant it in itself."""
+    major, minor, patch = (int(part) for part in _packaged().split("."))
+    upcoming = f"{major}.{minor}.{patch + 1}"
+    module = tmp_path / "planted.py"
+    module.write_text(f'PIN = ("scripts/update_larkdocio.sh v{upcoming}",)\n', encoding="utf-8")
+    assert upcoming in _next_versions(_packaged())
+    assert _offenders(module, upcoming) == [(f"scripts/update_larkdocio.sh v{upcoming}", 1)]
+    assert _offenders(module, _packaged()) == []
