@@ -292,11 +292,10 @@ class PermissionRow:
 # --------------------------------------------------------------------------- #
 
 _SPIKE = "tests/captures/name-lookup-spike (in the source repository)"
-#: The name-lookup spike's own record of the captures the source repository does NOT carry
-#: (``P0``, ``P1``, ``P8``, ``P12``, ``R2``, ``R3``, ``R7``, the write-pair ``users/batch`` call):
-#: their bodies were retired, so each citation below states the measured fact itself and names
-#: this record as the provenance note it is (LD-703, round 5 V1).
-_SPIKE_RECORD = "dev/name-lookup-spike/reprobe/reprobe-verdict.md (in the dev repo)"
+#: Several of the name-lookup spike's recordings are not published (their bodies were retired),
+#: so each citation of one below states the measured fact itself and says the recording is
+#: unpublished rather than naming a file a reader cannot open.
+_UNPUBLISHED = "an unpublished recording of the name-lookup spike"
 
 #: ``(path_prefix, mode, scopes, reason_when_empty)``. ``mode`` is ``"read"`` / ``"write"``
 #: (the credential pair the call is made on) or ``"*"`` for a row that holds on both.
@@ -309,8 +308,8 @@ ENDPOINT_SCOPES: Tuple[Tuple[str, str, Tuple[Scope, ...], Optional[str]], ...] =
                 scope="docx:document:readonly",
                 verification="grant-verified",
                 evidence=(
-                    "the read credential block in .env.example and the credential doctrine in "
-                    "PROJECT.md (in the dev repo); behaviourally confirmed by the live reader "
+                    "the read credential block in .env.example and the read/write credential "
+                    "separation; behaviourally confirmed by the live reader "
                     "canary (pytest -m live), which downloads a real document twice"
                 ),
                 note="without it no document can be read at all",
@@ -376,8 +375,8 @@ ENDPOINT_SCOPES: Tuple[Tuple[str, str, Tuple[Scope, ...], Optional[str]], ...] =
                 scope="contact:contact.base:readonly",
                 verification="grant-verified",
                 evidence=(
-                    "capture R0 under " + _SPIKE + " (READ pair); the READ-pair capture P0 "
-                    "and the write-pair call are recorded only in " + _SPIKE_RECORD + ": "
+                    "capture R0 under " + _SPIKE + " (READ pair);"
+                    " a second READ-pair call and the write-pair call are unpublished recordings: "
                     "the directory call answered code 0 with populated name fields on BOTH "
                     "pairs, which is what establishes it on each"
                 ),
@@ -394,8 +393,9 @@ ENDPOINT_SCOPES: Tuple[Tuple[str, str, Tuple[Scope, ...], Optional[str]], ...] =
                 scope="contact:user.base:readonly",
                 verification="grant-verified",
                 evidence=(
-                    "the same READ-pair capture R0 under " + _SPIKE + "; capture P0 and "
-                    "the write-pair call are recorded only in " + _SPIKE_RECORD + " — the "
+                    "the same READ-pair capture R0 under " + _SPIKE + ";"
+                    " a second READ-pair call and the write-pair call are unpublished recordings "
+                    "— the "
                     "name fields came back populated on both, which is what proves the "
                     "field-level grant is held on each"
                 ),
@@ -508,8 +508,8 @@ ENDPOINT_SCOPES: Tuple[Tuple[str, str, Tuple[Scope, ...], Optional[str]], ...] =
             "answered code:0 on the write app's already-granted set for BOTH Base parent "
             "types (tests/captures/base-study/captures/p0-4-01-attachment-population.json, in the source "
             "repository) and, on the same already-granted set, for the docx image parent type "
-            "bound to a document's own image block (dev/media-spike/captures/105-, 122-, in "
-            "the dev repo). No denial has ever been captured on it. So the requirement is "
+            "bound to a document's own image block (an unpublished recording). No denial has ever "
+            "been captured on it. So the requirement is "
             "grant-observed-but-unnamed and deliberately not guessed — writing down a "
             "plausible drive scope string nobody has seen would read as an answer. What IS "
             "established, and is the reason this row exists separately from the bitable and "
@@ -526,7 +526,7 @@ ENDPOINT_SCOPES: Tuple[Tuple[str, str, Tuple[Scope, ...], Optional[str]], ...] =
             "the round trip. The download answered HTTP 200 with a body whose "
             "sha256 matched the upload's, on the already-granted set, for the Base "
             "attachment leg and for a docx-bound image token — both verified by hash with no "
-            "bytes inspected, both captures since retired from the dev repo (2026-09-18) — and "
+            "bytes inspected, both captures since retired (2026-09-18) — and "
             "named no scope in "
             "doing so. A THIRD call site now rides it, and it is the one that widens the "
             "warning rather than the requirement: an IN-CELL SHEET image whose token Lark "
@@ -602,14 +602,13 @@ ENDPOINT_SCOPES: Tuple[Tuple[str, str, Tuple[Scope, ...], Optional[str]], ...] =
             "non-observation without closing it: the drive spike made 17 live calls across two "
             "rounds on the READ pair — 5 in round 1 and 12 in round 2, every one answered code "
             "0, with ZERO denials — listing a real 35-node tree to 4 levels. Zero denials on "
-            "one tenant distinguishes nothing, and under the credential aliasing recorded in "
-            "PROJECT.md (in the dev repo; on the tenant these measurements were made on, the "
+            "one tenant distinguishes nothing, and under the credential aliasing (on the tenant "
+            "these measurements were made on, the "
             "READ and WRITE pairs named one app) a same-tenant success cannot attribute a "
             "scope at all. THE FILE-OBJECT DELETE is the same non-observation on a fourth "
             "token type: trashing a type=file object this library had just uploaded answered "
-            "code 0 on the WRITE pair "
-            "(dev/media-spike/captures/207-ac2-teardown-delete-the-uploaded-file.json, in the "
-            "dev repo), named no scope in doing so, and no denial has ever been captured on "
+            "code 0 on the WRITE pair (an unpublished recording), named no scope in doing so, and "
+            "no denial has ever been captured on "
             "it. It also carries the one measured EDGE this row's readers need: the delete is "
             "TRASH, NOT PURGE — after a successful delete the metadata route still resolves "
             "the token — so nothing here establishes the object's absence, and whether any "
@@ -651,8 +650,8 @@ ENDPOINT_SCOPES: Tuple[Tuple[str, str, Tuple[Scope, ...], Optional[str]], ...] =
             "requirement could be labelled from documentation alone is documented-unverified, "
             "and no scope string is carried here because none has ever been seen — a "
             "plausible-looking drive scope name nobody has observed would read as an answer. "
-            "Under the credential aliasing recorded in PROJECT.md (in the dev repo; on the "
-            "tenant these measurements were made on, the READ and WRITE pairs named one app) a "
+            "Under the credential aliasing (on the tenant these measurements were made on, the "
+            "READ and WRITE pairs named one app) a "
             "same-tenant success cannot attribute a scope at all, so the requirement is "
             "recorded unknown and deliberately not guessed"
         ),
@@ -671,7 +670,7 @@ ENDPOINT_SCOPES: Tuple[Tuple[str, str, Tuple[Scope, ...], Optional[str]], ...] =
             "repository). That establishes reach only: a requirement asserted from "
             "documentation alone would be documented-unverified at best, and no scope string "
             "is carried here because none has ever been seen. Under the credential aliasing "
-            "recorded in PROJECT.md (in the dev repo; on the tenant these measurements were "
+            "(on the tenant these measurements were "
             "made on, the READ and WRITE pairs named one app) a same-tenant success cannot "
             "attribute a scope at all, so the requirement is recorded unknown and deliberately "
             "not guessed"
@@ -689,11 +688,10 @@ ENDPOINT_SCOPES: Tuple[Tuple[str, str, Tuple[Scope, ...], Optional[str]], ...] =
         (
             "no scope string has ever been observed demanded for a single-shot file upload "
             "into a folder. It answered code:0 on the WRITE credential pair, uploading an html "
-            "into a folder the harness itself created "
-            "(dev/media-spike/captures/203-ac2-files-upload-all-parent-type-explorer-into-the-disposable-folder.json, "
-            "in the dev repo), and no denial has ever been captured on it. That establishes "
-            "REACH and attributes nothing: under the credential aliasing recorded in "
-            "PROJECT.md (in the dev repo; on the tenant these measurements were made on, the "
+            "into a folder the harness itself created (an unpublished recording), and no denial "
+            "has ever been captured on it. That establishes "
+            "REACH and attributes nothing: under the credential aliasing (on the tenant these "
+            "measurements were made on, the "
             "READ and WRITE pairs named one app) a same-tenant success cannot attribute a "
             "scope at all. So the requirement is documented-unverified with NO scope string "
             "carried, because a plausible-looking drive scope name nobody has seen would read "
@@ -723,8 +721,8 @@ ENDPOINT_SCOPES: Tuple[Tuple[str, str, Tuple[Scope, ...], Optional[str]], ...] =
             "(tests/captures/ld467-create-folder/captures/ld467-01-create-the-disposable-parent-under-the-bots-own-root.json "
             "and the ld467-02- / 03- duplicate pair, in the source repository), and no denial "
             "has ever been captured on it. That establishes REACH and attributes nothing: "
-            "under the credential aliasing recorded in PROJECT.md (in the dev repo; on the "
-            "tenant these measurements were made on, the READ and WRITE pairs named one app) a "
+            "under the credential aliasing (on the tenant these measurements were made on, the "
+            "READ and WRITE pairs named one app) a "
             "same-tenant success cannot attribute a scope at all, so the requirement is "
             "recorded UNKNOWN with NO scope string carried and is deliberately not guessed — a "
             "plausible-looking drive scope name nobody has seen would read as an answer. TWO "
@@ -752,8 +750,8 @@ ENDPOINT_SCOPES: Tuple[Tuple[str, str, Tuple[Scope, ...], Optional[str]], ...] =
             "file and for a DECLARED 64 MiB that was never sent "
             "(tests/captures/drive-media-remainder-spike/captures/703- and 704-, in the source "
             "repository) — and named no scope in doing so. That establishes REACH and "
-            "attributes nothing: under the credential aliasing recorded in PROJECT.md (in the "
-            "dev repo; on the tenant these measurements were made on, the READ and WRITE pairs "
+            "attributes nothing: under the credential aliasing (on the tenant these measurements "
+            "were made on, the READ and WRITE pairs "
             "named one app) a same-tenant success cannot attribute a scope at all. So the "
             "requirement is recorded unknown with NO scope string carried, because a "
             "plausible-looking drive scope name nobody has seen would read as an answer, and "
@@ -769,8 +767,9 @@ ENDPOINT_SCOPES: Tuple[Tuple[str, str, Tuple[Scope, ...], Optional[str]], ...] =
             "credential pair, with the optional Adler-32 checksum OMITTED, and it was accepted "
             "with code:0 (tests/captures/drive-media-remainder-spike/captures/705-, in the "
             "source repository). That establishes REACH on one part and attributes nothing — "
-            "under the credential aliasing recorded in PROJECT.md (in the dev repo) a "
-            "same-tenant success cannot attribute a scope at all — so the requirement is "
+            "under the credential aliasing on the measuring tenant (its READ and WRITE pairs "
+            "named one app) a same-tenant success cannot attribute a scope at all — so the "
+            "requirement is "
             "recorded unknown and deliberately not guessed"
         ),
     ),
@@ -783,8 +782,9 @@ ENDPOINT_SCOPES: Tuple[Tuple[str, str, Tuple[Scope, ...], Optional[str]], ...] =
             "(tests/captures/drive-media-remainder-spike/captures/706-, in the source "
             "repository), and that answer was an ACCEPTANCE rather than a verdict: only the "
             "re-download and its sha256 match made it a finding (707-). REACH is established "
-            "and nothing is attributed — under the credential aliasing recorded in PROJECT.md "
-            "(in the dev repo) a same-tenant success cannot attribute a scope at all — so the "
+            "and nothing is attributed — under the credential aliasing on the measuring tenant "
+            "(its READ and WRITE pairs named one app) a same-tenant success cannot attribute a "
+            "scope at all — so the "
             "requirement is recorded unknown and deliberately not guessed"
         ),
     ),
@@ -798,10 +798,8 @@ ENDPOINT_SCOPES: Tuple[Tuple[str, str, Tuple[Scope, ...], Optional[str]], ...] =
         (
             "no scope string has ever been observed demanded for downloading a file object's "
             "bytes. It answered with a body whose sha256 matched the upload's, on the WRITE "
-            "pair's already-granted set "
-            "(dev/media-spike/captures/206-ac2-byte-identity-drive-files-download-of-the-"
-            "uploaded-html.json, in the dev repo — verified by hash, with no bytes "
-            "inspected), and named no scope in doing so. The same honest gap as the upload "
+            "pair's already-granted set (an unpublished recording — verified by hash, with no "
+            "bytes inspected), and named no scope in doing so. The same honest gap as the upload "
             "row above, seen from the other end of the round trip, and recorded unknown "
             "rather than guessed"
         ),
@@ -821,8 +819,8 @@ ENDPOINT_SCOPES: Tuple[Tuple[str, str, Tuple[Scope, ...], Optional[str]], ...] =
             "in the source repository) and the create on the WRITE pair "
             "(02-leg0-leg2-create-version-write-pair-drive-v1-files-versions.json), with the "
             "READ pair reaching the create route too (that recording is not published). That "
-            "establishes REACH and attributes nothing: under the credential aliasing recorded "
-            "in PROJECT.md (in the dev repo; on the tenant these measurements were made on, "
+            "establishes REACH and attributes nothing: under the credential aliasing (on the "
+            "tenant these measurements were made on, "
             "the READ and WRITE pairs named one app) a same-tenant success cannot attribute a "
             "scope at all, and no denial has ever named one here. No scope string is carried "
             "because none has ever been seen — a plausible-looking drive scope name nobody has "
@@ -842,8 +840,8 @@ ENDPOINT_SCOPES: Tuple[Tuple[str, str, Tuple[Scope, ...], Optional[str]], ...] =
             "answered code 0 on the WRITE credential pair "
             "(tests/captures/editions-spike/captures/02-leg0-leg2-create-version-write-pair-drive-v1-files-versions.json, "
             "in the source repository) and, on the same route, on the READ pair (that "
-            "recording is not published) — which under the credential aliasing recorded in "
-            "PROJECT.md (in the dev repo; on the tenant these measurements were made on, the "
+            "recording is not published) — which under the credential aliasing (on the tenant "
+            "these measurements were made on, the "
             "READ and WRITE pairs named one app) distinguishes nothing at all. The write app "
             "does hold docx:document, but this is a drive/v1 endpoint and nothing here "
             "separates 'authorized by docx:document' from 'authorized by a drive scope the app "
@@ -868,8 +866,8 @@ ENDPOINT_SCOPES: Tuple[Tuple[str, str, Tuple[Scope, ...], Optional[str]], ...] =
             "in the source repository), reporting the owner of a document the app had just "
             "created. That establishes REACH and attributes nothing: a requirement labelled "
             "from documentation alone would be documented-unverified at best, no scope string "
-            "has ever been seen for it, and under the credential aliasing recorded in "
-            "PROJECT.md (in the dev repo; on the tenant these measurements were made on, the "
+            "has ever been seen for it, and under the credential aliasing (on the tenant these "
+            "measurements were made on, the "
             "READ and WRITE pairs named one app) a same-tenant success cannot attribute a "
             "scope at all — so the requirement is recorded unknown and deliberately not guessed"
         ),
@@ -894,7 +892,7 @@ ENDPOINT_SCOPES: Tuple[Tuple[str, str, Tuple[Scope, ...], Optional[str]], ...] =
             "would read as an answer. The write app does hold docx:document, but this is a "
             "drive/v1 endpoint and nothing here separates 'authorized by docx:document' from "
             "'authorized by a drive scope the app also holds'; and under the credential "
-            "aliasing recorded in PROJECT.md (in the dev repo; on the tenant these "
+            "aliasing (on the tenant these "
             "measurements were made on, the READ and WRITE pairs named one app) a same-tenant "
             "success cannot attribute a scope at all. So the requirement is recorded unknown "
             "and deliberately not guessed. NOTE the version: the member family is v1 — the v2 "
@@ -918,8 +916,8 @@ ENDPOINT_SCOPES: Tuple[Tuple[str, str, Tuple[Scope, ...], Optional[str]], ...] =
             "external_access_entity (715-). Neither names a scope, so neither establishes a "
             "requirement. A requirement asserted from documentation alone would be "
             "documented-unverified at best, and no scope string is carried here because none "
-            "has ever been seen; under the credential aliasing recorded in PROJECT.md (in the "
-            "dev repo; on the tenant these measurements were made on, the READ and WRITE pairs "
+            "has ever been seen; under the credential aliasing (on the tenant these measurements "
+            "were made on, the READ and WRITE pairs "
             "named one app) a same-tenant success cannot attribute a scope at all. The "
             "requirement is recorded unknown and deliberately not guessed"
         ),
@@ -1004,11 +1002,10 @@ ENDPOINT_SCOPES: Tuple[Tuple[str, str, Tuple[Scope, ...], Optional[str]], ...] =
                 scope="bitable:app:readonly",
                 verification="grant-verified",
                 evidence=(
-                    "the Base opener's scope table (dev/base-study-2026-08-03.md § 3, in the "
-                    "dev repo) records the family as EFFECTIVE on this tenant — every "
-                    "app-meta, tables, views, fields and records/search read answered code:0 "
-                    "across the committed captures tests/captures/base-study/captures/00-*, 01-* and "
-                    "p1-q0-*. Lark never "
+                    "the Base study's scope table records the family as EFFECTIVE on this tenant "
+                    "— every app-meta, tables, views, fields and records/search read answered "
+                    "code:0 across the committed captures tests/captures/base-study/captures/00-*, "
+                    "01-* and p1-q0-* (in the source repository). Lark never "
                     "echoed the string back (there was no denial to echo it), so this is "
                     "behavioural confirmation of a held grant, not a captured demand"
                 ),
@@ -1091,7 +1088,7 @@ OBSERVED_DENIALS: Tuple[Denial, ...] = (
         msg=("Access denied. One of the following scopes is required: "
              "[directory:employee:search]"),
         capture=_SPIKE + ": reprobe/captures/R1-search-owner-exact-READ.json; the first "
-                         "probe's capture P1 drew the same body, recorded in " + _SPIKE_RECORD,
+                         "probe drew the same body (" + _UNPUBLISHED + ")",
         # The app id segment is a PLACEHOLDER, not what Lark returned (LD-678): a console
         # link is per-app, so substitute your own application id. The capture cited above
         # holds the link exactly as Lark sent it.
@@ -1107,29 +1104,28 @@ OBSERVED_DENIALS: Tuple[Denial, ...] = (
         code=99991672,
         msg=("Access denied. One of the following scopes is required: "
              "[directory:employee:list]"),
-        capture=("captures P8 and R3 of the name-lookup spike, recorded in "
-                 + _SPIKE_RECORD),
+        capture="two calls, one per probe round — unpublished recordings of the name-lookup spike",
     ),
     Denial(
         scope="directory:employee:read",
         code=99991672,
         msg=("Access denied. One of the following scopes is required: "
              "[directory:employee:read]"),
-        capture="capture R2 of the name-lookup spike, recorded in " + _SPIKE_RECORD,
+        capture=_UNPUBLISHED,
     ),
     Denial(
         scope="contact:group:readonly",
         code=99991672,
         msg=("Access denied. One of the following scopes is required: "
              "[contact:group:readonly]"),
-        capture="capture P12 of the name-lookup spike, recorded in " + _SPIKE_RECORD,
+        capture=_UNPUBLISHED,
     ),
     Denial(
         scope="admin:app.info:readonly",
         code=99991672,
         msg=("Access denied. One of the following scopes is required: "
              "[admin:app.info:readonly, application:application:self_manage]"),
-        capture="capture R7 of the name-lookup spike, recorded in " + _SPIKE_RECORD,
+        capture=_UNPUBLISHED,
     ),
     # The same body names a SECOND scope, and it earns its own row: Lark demanded it, so it is
     # denial-verified evidence, and recording only the first left its string unknown to the
@@ -1139,7 +1135,7 @@ OBSERVED_DENIALS: Tuple[Denial, ...] = (
         code=99991672,
         msg=("Access denied. One of the following scopes is required: "
              "[admin:app.info:readonly, application:application:self_manage]"),
-        capture="capture R7 of the name-lookup spike, recorded in " + _SPIKE_RECORD,
+        capture=_UNPUBLISHED,
     ),
 )
 

@@ -10,7 +10,7 @@ could each come back one calendar day early, with nothing said.
 **The measurement this policy is derived from** — probe ``ld463-01-date-only-zone``, whose
 capture lives **in the source repository** and not in the wheel
 (``tests/captures/ld463-date-only/captures/ld463-01-date-only-zone.json``; its written verdict was retired
-from the dev repo on 2026-09-18, so the findings are stated here in full):
+on 2026-09-18, so the findings are stated here in full):
 
 * **Lark stores the ms-epoch verbatim** — ``stored_equals_sent`` for 21 of 21 records, across a
   month boundary, a year boundary and three midnight conventions. A stored Base date therefore

@@ -8,8 +8,7 @@ route spellings each answer the gateway's own non-JSON HTTP 404, the drive **ver
 ``obj_type=bitable`` outright, and the drive **statistics** family answers ``code 0`` with
 view-count telemetry and nothing about history. That is a measured refusal
 (:data:`RECORD_HISTORY_NOT_SERVED`), in the shape a negative claim has to take — what was tried,
-what came back, and what was **not** tried, because a claim's scope may not exceed its evidence's
-(``process/doctrine/negative-claims.md`` § A.1, in the dev repo).
+what came back, and what was **not** tried, because a claim's scope may not exceed its evidence's.
 
 **The nearest thing that IS served** is not history at all: ``automatic_fields=true`` on a plain
 record read answers who created or last touched the row and when
@@ -31,14 +30,14 @@ from larkdocio.common.citations import dev_repo
 
 #: **The measured refusal** (LD-404 § Leg 5). Quoted verbatim into the shipped guide; never
 #: re-typed. Authored once here so ``BASE.md`` (in the source repository) and the guide cannot drift
-#: against each other (D-16's ethic).
+#: against each other (one authoring, never two).
 RECORD_HISTORY_NOT_SERVED = dev_repo(
     "A BASE RECORD'S EDIT HISTORY IS NOT SERVED BY THE API: no route returns what changed on a "
     "record — only who last touched it, and that is a different call entirely (see THE NEAREST "
     "SERVED THING below). Measured against a Base this harness created, edited twice, then "
-    "independently re-queried after deletion (dev/editions-spike/findings.md § Leg 5, in the "
-    "dev repo; "
-    "tests/captures/editions-spike/captures/300-summary-leg-5-base-history.json, in the source repository). "
+    "independently re-queried after deletion "
+    "(tests/captures/editions-spike/captures/300-summary-leg-5-base-history.json, in the source "
+    "repository). "
     "TRIED — six record/table/app-scoped spellings, each answering the gateway's own non-JSON "
     "HTTP 404 \"404 page not found\": "
     "bitable/v1/apps/{app_token}/tables/{table_id}/records/{record_id}/history, "
@@ -63,7 +62,7 @@ NEAREST_SERVED_RECORD_TOUCH = dev_repo(
     "THE NEAREST SERVED THING IS WHO LAST TOUCHED A RECORD, NOT WHAT CHANGED. "
     "GET …/records/{record_id}?automatic_fields=true answers created_by, created_time, "
     "last_modified_by and last_modified_time "
-    "(measured on a live read; the capture was retired from the dev repo on 2026-09-18) — who "
+    "(measured on a live read; the capture was retired on 2026-09-18) — who "
     "created or last touched the row and when, never a diff "
     "of the row's own fields. The times arrive as epoch MILLISECONDS — a 13-digit int, e.g. "
     "1786403626000 — a DIFFERENT unit from the drive versions family's epoch-SECOND strings "

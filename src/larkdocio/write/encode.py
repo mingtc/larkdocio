@@ -104,7 +104,7 @@ TABLE_CELL_BLOCK_TYPE = 32
 #: ``create_children`` accepts — **9 per axis, measured** (LD-431). It is the whole root
 #: cause of the bug that earned this constant: 9×3 and 9×5 create and read back, 10×3 and
 #: 10×5 answer ``1770001 invalid param``, in one run on one disposable with the 9-row writes
-#: as the positive control (the table-row-boundary probe, § 1; its findings were retired from the dev repo on 2026-09-18).
+#: as the positive control (the table-row-boundary probe, § 1; its findings were retired on 2026-09-18).
 #: Cell count is not
 #: the variable — 9×5 = 45 cells lands where 10×3 = 30 cells does not.
 #:
@@ -233,7 +233,7 @@ def _span_elements(spans) -> List[dict]:
     A span carrying ``link_url`` emits ``text_element_style.link.url`` — **the URL
     verbatim**, byte for byte as the caller gave it. That is the measured shape: Lark stored
     exactly what was sent and read it back unchanged, for both the raw and the
-    percent-encoded spelling (media-spike captures 541 / 542, since retired from the dev repo on 2026-09-18),
+    percent-encoded spelling (media-spike captures 541 / 542, since retired on 2026-09-18),
     and the raw spelling is the one a click confirmed opens. The percent-encoded spelling is
     refused at construction (:class:`~larkdocio.write.model.TextSpan`), so nothing is encoded,
     normalised or re-spelled here.
@@ -256,7 +256,7 @@ def _span_elements(spans) -> List[dict]:
 #: routes: the create-time ``descendant`` body (:func:`table_subtree`) and the fill-time
 #: ``update_text_elements`` body
 #: (:func:`larkdocio.write.apply.build_span_elements_update`) both emit **these** elements,
-#: because Lark was measured to accept the identical shape on both (LD-619 / D-110).
+#: because Lark was measured to accept the identical shape on both (LD-619).
 span_elements = _span_elements
 
 
@@ -506,14 +506,14 @@ def encode_content(content) -> Tuple[EncodedChild, ...]:
 #: :data:`~larkdocio.write.client.MAX_DESCENDANTS_PER_CALL` is ``(1000 − 1) // 2 = 499``.
 #: The spike bisected exactly that boundary: 1×499 = 999 descendants ``code 0``, 1×500 = 1001
 #: descendants ``99992402`` with nothing created
-#: (the 2026-08-14 table-cell-creation spike, § 3b; its write-up was retired from the dev repo on 2026-09-18).
+#: (the 2026-08-14 table-cell-creation spike, § 3b; its write-up was retired on 2026-09-18).
 #:
 #: It is **not** an authoring cap — :data:`~larkdocio.write.model.MAX_TABLE_CELLS` (500) is,
 #: and it is larkdocio's own. This is a **route** boundary: a table at or under it is built
 #: atomically in one call, and a table over it (up to the authoring cap) takes the
 #: create-seed-grow-fill route exactly as it always has. Nothing is refused for being over it.
 #:
-#: **D-59 route scope** (inherited from the ceiling it is derived from): one tenant,
+#: **Route scope** (inherited from the ceiling it is derived from): one tenant,
 #: ``tenant_access_token``, docx v1, block type 31, on documents the spike created — not
 #: wiki-wrapped. ``user_access_token``, other tenants and wiki-wrapped documents are
 #: **unmeasured, not refuted**.
@@ -533,7 +533,7 @@ def table_descendants(cells: int) -> int:
     The table block itself, one type-32 cell per authored cell, and one type-2 text block
     inside each cell. **Measured, then derived**: the spike's 36×6 = 216-cell body carried 433
     descendants and its 50×10 = 500-cell body 1001, both of which this reproduces exactly
-    (the same spike, § 3a; retired from the dev repo on 2026-09-18). A cell with
+    (the same spike, § 3a; retired on 2026-09-18). A cell with
     **no** text child is not a cheaper spelling: Lark refuses that shape ``1770041 open schema
     mismatch``, so the ``2 ×`` is the platform's, not a choice this library makes.
     """

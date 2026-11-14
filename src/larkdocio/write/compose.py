@@ -119,7 +119,7 @@ NOT_EXPRESSIBLE_CONSTRUCTS: Dict[str, str] = {
     # Only the CONCLUSION has moved, twice. LD-434: an anchored link CAN be authored, as a
     # TYPED shape, so the refusal names it instead of leaving a caller stuck. LD-619: inside
     # a TABLE CELL the dialect itself now composes one, because Lark was measured to accept
-    # and store the run there on both write routes (D-110) and the reader already projects it
+    # and store the run there on both write routes (measured) and the reader already projects it
     # back as [label](url) — so the round-trip property this refusal protects is what ADMITS
     # that one position rather than what forbids it. The dialect stays closed everywhere else
     # on purpose, and the [url](url) autolink special case below is unchanged.
@@ -808,7 +808,7 @@ class _Compiler:
         **Everywhere else the link refusal is unchanged**, and so is every other inline
         construct in a cell: bold, italic, strikethrough and inline code in a cell are
         **unmeasured, not refuted**, and shipping them on the strength of the link result is
-        the evidence-borrowing D-106 forbade. A cell with no link composes to the same
+        evidence-borrowing, which is refused. A cell with no link composes to the same
         ``str`` it always did.
         """
         children = list(cell.children)

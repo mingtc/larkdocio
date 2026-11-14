@@ -63,8 +63,7 @@ CONTACTS_RATE_WINDOW_SECONDS = 60.0
 #: **The tier this is capped below could not be read, and that is recorded rather than
 #: papered over.** ``comments/client.py`` cites *"the documented 100-per-minute tier"* because
 #: that tier was readable. For ``directory/v1/employees/search`` it is not, and three
-#: independent attempts say so (``dev/name-lookup-spike/reprobe/reprobe-verdict.md`` §4.2, in
-#: the dev repo): the response headers carry **no** rate-limit fields at all (no
+#: independent attempts say so: the response headers carry **no** rate-limit fields at all (no
 #: ``x-ogw-ratelimit-*``, no ``x-ratelimit-*``, no ``retry-after`` — see ``response_headers``
 #: in every committed capture); the pinned SDK ships no tier metadata; and Lark's own
 #: documentation page serves a JavaScript shell rather than text. So this number is **not**

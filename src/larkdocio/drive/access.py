@@ -128,7 +128,7 @@ OWNER_IS_NOT_A_MEMBER = (
 )
 
 #: **The constructive fact behind the whole feature** — SUPERSEDED IN ITS CONCLUSION, not in
-#: its reason (LD-469; the rule is ``process/doctrine/supersession.md`` § A.1, in the dev repo).
+#: its reason (LD-469).
 #: LD-432 measured a freshly minted document's member list **empty** and concluded that of every
 #: fresh document. The measurement stands and is repeated below; the conclusion does not, because
 #: it was taken on a document created with **no folder**. Filing the document changes the answer,
@@ -158,7 +158,7 @@ CLIPBOARD_UNOBSERVABLE = (
     "proven by none of them; only a human's own attempt can close it."
 )
 
-#: **D-15 in one sentence**, and the distinction that makes it true.
+#: **The rule in one sentence**, and the distinction that makes it true.
 NOT_A_SCOPE_ESCALATION = (
     "THIS GRANTS A HUMAN ACCESS TO AN OBJECT THE BOT OWNS. It never widens, requests or "
     "escalates the APP's own scope: granting a person a member level on the app's own document "
@@ -192,8 +192,7 @@ GROUPS_UNMEASURED = (
 
 #: **The object types this surface addresses — SUPERSEDED IN PART by LD-456.**
 #:
-#: LD-432 shipped this row as *docx only*. Per the supersession doctrine (in the dev repo,
-#: ``process/doctrine/supersession.md`` § A.1) the
+#: LD-432 shipped this row as *docx only*. Per the supersession rule the
 #: **original reason is preserved verbatim inside the text below** and only the **conclusion**
 #: moves: that reason was *"every measurement was made with type=docx"* — a statement about the
 #: evidence, never a finding that another type would fail — and LD-456 made the missing
@@ -227,19 +226,17 @@ OBJECT_TYPES_MEASURED = (
 #: often holds (a wiki node, a folder); and it says *unmeasured*, never *impossible*.
 #:
 #: **The FOLDER clause is SUPERSEDED IN PART by LD-500.**
-#: Every path named below lives **in the dev repo** (the maintainers' private record), never
-#: in the wheel. Per the supersession doctrine
-#: (``process/doctrine/supersession.md`` § A.1) the **reason is preserved and only the
+#: Per the supersession rule the **reason is preserved and only the
 #: conclusion moves**: the reason — *an unmeasured type is refused locally rather than guessed
 #: onto the wire* — is untouched and still governs ``file``, ``wiki`` and every other value (see
 #: :data:`OBJECT_TYPES_MEASURED`). What moved is the conclusion about ``folder`` alone: the
 #: clause this replaces declared the container question wholly unasked here and claimed nothing
 #: about it. It is quoted verbatim exactly ONCE, in the guard that retired it —
-#: ``tests/test_drive_folder_grant_refutation.py``'s ``SUPERSEDED_CLAUSE``, which is also the
+#: ``tests/test_drive_folder_grant_refutation.py``'s ``SUPERSEDED_CLAUSE`` (in the source repository), which is also the
 #: census that reddens if it comes back anywhere in the shipped corpus. On 2026-08-17 the LD-494
 #: leg measured the grant and Lark **refused the write**
 #: (``tests/captures/ld494-app-space-census/captures/600-``..``602-``, read addendum ``620-``..``622-``).
-#: **The claim is bounded by a MISSING ORACLE** (``process/doctrine/negative-claims.md`` § A.1):
+#: **The claim is bounded by a MISSING ORACLE**:
 #: it is *Lark refused the write*, never *the grant did not store*, because this tenant has no
 #: folder member-read at all — the route's own ``type`` enum omits ``folder`` — so the read that
 #: would separate those two readings never existed. The two contradictory ``99992402`` bodies
@@ -329,7 +326,7 @@ MEMBER_FAMILY_IS_V1 = (
     "why the two halves of this surface sit on different API versions."
 )
 
-#: **AC5 / D-59 — why an accepted value may be read as a stored value on this route.**
+#: **AC5 — why an accepted value may be read as a stored value on this route.**
 THE_ROUTE_DOES_NOT_SWALLOW = (
     "THIS ROUTE DOES NOT SWALLOW, AND THAT GUARANTEE IS SCOPED TO THIS ROUTE. An INVENTED key "
     "sent to drive/v2/permissions/{token}/public was REFUSED with 1063001 rather than accepted "

@@ -8,8 +8,8 @@ walkthrough — the ten minutes before a first download). Every one of them is r
 **packaged resource** via ``importlib.resources`` — never a filesystem path — so it resolves
 identically from a source checkout and from an installed/vendored wheel where no ``src/`` tree
 exists. The sixth, ``blocks/BLOCK_TYPES.md``, is a **contributor** doc (how to add a block
-handler to this repo's registry) and deliberately has no accessor — its audience holds the dev
-repo, the same reasoned exclusion the front-door consumer corpus already makes for it.
+handler to this repo's registry) and deliberately has no accessor — its audience holds the source
+repository, the same reasoned exclusion the front-door consumer corpus already makes for it.
 
 **The rule this module exists to keep:** a document *written for a consumer* that the wheel
 carries but the public API cannot open is unreadable in practice. A consumer who installed
@@ -140,8 +140,7 @@ CHANGELOG_SECTION_LEVELS = (2,)
 #:   same count: the second largest, not the largest.
 #: * **The search is named rather than a "no longer gap exists anywhere" universal asserted**
 #:   (a negative universal dies with its enumeration): searched 2026-08-21 across
-#:   ``dev/dogfood/**``, ``dev/consumer-feedback/**`` and the ``progress/`` issues citing them
-#:   (all in the dev repo, among the maintainers' private records).
+#:   the maintainers' own records of consumer reports and the issues citing them.
 #:   A gap recorded outside that reach would move this number, which is why the reach is stated.
 #: * **The measured cadence over the 19 days to 2026-08-20 was 12 releases** (1.25.0 on
 #:   2026-08-01 through 1.37.0 on 2026-08-20) — about 0.63 releases a day. That is the representative
@@ -221,7 +220,7 @@ NOTES_FULL_HISTORY = {
 #: Where a release document's history continues BEFORE its own first entry, when it does —
 #: said in the banner whatever the window, because no copy of that document carries it. The
 #: changelog is the project's public changelog, which starts at the last release made before
-#: the project was public; the release notes reach further back (LD-691, D-121 (3)).
+#: the project was public; the release notes reach further back (LD-691).
 NOTES_OLDER_HISTORY = {
     CHANGELOG_RESOURCE: (
         "Releases older than this changelog's first entry are recorded per version in the "

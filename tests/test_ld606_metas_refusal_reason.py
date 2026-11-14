@@ -200,8 +200,11 @@ def test_ac8_the_added_sentences_carry_their_OWN_citations():
 
     for path in VIOLATION_CAPTURES:
         assert path in evidence
-        assert (REPO / path).is_file(), "the guarded evidence pointer must resolve"
-    assert "ui-parity-matrix-2026-08-03.md" in evidence, "the Base provenance is KEPT"
+        assert (REPO / path).is_file(), "the guarded evidence pointer must resolve"    # LD-720: the Base provenance is KEPT as the published capture; the private study document
+    # (ui-parity-matrix-2026-08-03.md) is no longer cited from shipped text.
+    assert "tests/captures/base-study/captures/p1-q2-01-button-sweep.json" in evidence, (
+        "the Base provenance is KEPT")
+    assert "ui-parity-matrix" not in evidence
 
 
 def test_ac8_the_live_vs_removed_identity_is_DERIVED_and_the_removed_leg_is_UNMEASURED():

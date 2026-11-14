@@ -84,7 +84,7 @@ name-length ceiling is **unmeasured** (nothing long was sent), a folder-count qu
 **unmeasured** (four folders in one parent, no warning field, no refusal — which establishes no
 absence of a limit), nesting deeper than one level below a created folder is **unmeasured**, and
 whether the call succeeds on READ credentials is **not answerable on the tenant these measurements were made on** (its
-READ and WRITE pairs named one app — PROJECT.md, in the dev repo, § Credential aliasing), so it is left open rather than manufactured. All of those are **unmeasured, not
+READ and WRITE pairs named one app), so it is left open rather than manufactured. All of those are **unmeasured, not
 refuted**.
 
 Scope requirements are authored only in :mod:`larkdocio.permissions`; nothing here restates one,
@@ -278,7 +278,7 @@ class DriveFoldersWriteClient(CredentialedRawHttpClient):
     **WRITE credentials only**, resolved through :func:`~larkdocio.common.auth.
     get_write_credentials`; nothing here consults, infers or falls back to the READ pair, and a
     denial is surfaced with Lark's own code and message rather than retried on another pair (the
-    credential doctrine in PROJECT.md, in the dev repo — and its § Credential aliasing: on this
+    read/write credential separation; on the measuring
     tenant the two pairs happen to be one app, which the code must keep treating as a
     coincidence).
 

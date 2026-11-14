@@ -710,8 +710,7 @@ FILTER_SHAPE_REGENERATE = (
 #: the projections themselves, not into a hand-kept sentence beside them, so a reader can never
 #: meet a capture path without being told first where those files live. The captures are
 #: ``tests/captures/…``, which every clone carries, so it is the SOURCE-repository label
-#: (``larkdocio.common.citations.SOURCE_REPO_LABEL``; LD-699 reserved "in the dev repo" for the
-#: maintainers' private record). The name is kept so the projections' call sites stay put.
+#: (``larkdocio.common.citations.SOURCE_REPO_LABEL``). The name is kept so the projections' call sites stay put.
 _DEV_REPO_LABEL = "in the source repository"
 
 #: The directory the captures sit in — a bare composition fragment, joined onto the filenames

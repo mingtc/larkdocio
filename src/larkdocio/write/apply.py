@@ -22,7 +22,7 @@ apply-log record:
   read → judge → delete sequence **is** the validation (every reply must be this
   application's own, decided before the first delete).
 
-**THE COUNTING BASIS IS DECLARED (D-115), so a second reading cannot start.** Eight is *every
+**THE COUNTING BASIS IS DECLARED, so a second reading cannot start.** Eight is *every
 apply implementation reachable through the* :data:`larkdocio.write.ops.OPS` *dispatch* —
 ``_apply_edit`` counts as its two leaves (narrative and table-cell). The registry holds
 **seven** op kinds, and counting those would undercount the dispatch by one and so certify a
@@ -38,7 +38,7 @@ op additions before that guard existed.
 **And re-validation is a PROPERTY, never a helper call.** Three of the eight satisfy it
 without :func:`_revalidated_or_stale`, as their bullets state; a census of *who calls the
 helper* over these produces a confident, wrong *"three write paths skip the staleness gate"*
-(the measured negative recorded in D-115 — all eight validate appropriately, and there is no
+(measured: all eight validate appropriately, and there is no
 safety gap). Read each path's bullet for its own answer.
 
 Every text-replacing path patches via the W0 :class:`~larkdocio.write.client.WriteClient`
@@ -528,7 +528,7 @@ def build_todo_done_update(done: bool) -> dict:
     ``insert_table_column`` and ``replace_image``.
 
     **The spelling and the field mask are CITED, not derived here.** Round 5 measured them on
-    a throwaway document — its verdict grid (§ 5 **M4**) was retired from the dev repo on 2026-09-18, so the
+    a throwaway document — its verdict grid (§ 5 **M4**) was retired on 2026-09-18, so the
     result is stated here (masks ``[1]`` / ``[2]`` / ``[3]`` swept, the probe deleted with its deletion
     independently verified): mask ``2`` moves ``done`` and leaves ``align``, ``folded``, the
     item's own text and the nested child's id / text / state untouched. Without it a caller
@@ -950,7 +950,7 @@ def _disposition_log_entry(entry, disposition, refusal: Refusal) -> ApplyLogEntr
 
 # --------------------------------------------------------------------------- #
 # ``_apply_edit``'s leaves — narrative (W1) and table-cell (W2). The count they used   #
-# to be introduced by is derived now, in the module docstring's declared basis (D-115). #
+# to be introduced by is derived now, in the module docstring's declared basis.         #
 # --------------------------------------------------------------------------- #
 
 def _apply_narrative(entry, client: WriteClient, document_id: str) -> ApplyLogEntry:
@@ -1199,7 +1199,7 @@ def _live_insertion_point(client: WriteClient, document_id: str, entry, block: d
     early per earlier same-parent insert at a lower index, and a same-batch delete shifted
     a later insert the other way. Refusals were empty, every apply-log entry said
     ``inserted`` with real created ids, and only a full read-back showed it (dogfood round
-    4; the measured capture was retired from the dev repo on 2026-09-18). Delete was immune the whole
+    4; the measured capture was retired on 2026-09-18). Delete was immune the whole
     time because it already read its index live — which is why the same consumer's
     20-request delete batches were clean.
 
@@ -1392,7 +1392,7 @@ def _insert_table_in_one_call(entry, client: WriteClient, document_id: str, enco
     half-grown, or grown and half-filled. There is no such state here. Lark either takes the
     subtree whole or takes none of it — every over-envelope refusal the spike provoked read
     back as **nothing created** (the 2026-08-14 table-cell-creation spike, §§ 3a/3b; its
-    write-up was retired from the dev repo on 2026-09-18) — and the cost collapses
+    write-up was retired on 2026-09-18) — and the cost collapses
     with it: a 6 × 36 = 216-cell grid measured
     **1 call / 0.82 s here against 463 calls / 158.41 s** through the pre-LD-481 fill (§ 3c).
 
@@ -1542,7 +1542,7 @@ def _grow_table_grid(client: WriteClient, document_id: str, table_block_id, grid
     update-block oneof; no new endpoint and no new scope).
 
     Measured on disposables the probes created and trashed (the table-row-boundary probe,
-    § 2 rows B1/E1/E2 and § 4; its findings were retired from the dev repo on 2026-09-18, so they are stated here):
+    § 2 rows B1/E1/E2 and § 4; its findings were retired on 2026-09-18, so they are stated here):
 
     * ``insert_table_row {"row_index": -1}`` **appends at the end** and leaves every
       pre-existing cell id untouched and in order — which is what lets the row-major cell
@@ -1550,7 +1550,7 @@ def _grow_table_grid(client: WriteClient, document_id: str, table_block_id, grid
     * the row axis grew to **200** with **no refusal at any row** — 200 was as far as
       LD-431's probe went, because it was then the
       :data:`~larkdocio.write.model.MAX_TABLE_CELLS` ceiling. That cap is now **500**
-      (LD-481, D-90: the fill is batched, so the number is anchored on Lark's measured
+      (LD-481: the fill is batched, so the number is anchored on Lark's measured
       one-call envelope rather than on our per-cell cost), so rows **201–500 are
       unmeasured, not refused** — no platform row cap has ever been found, and this note
       does not invent one;
@@ -1723,7 +1723,7 @@ def _fill_table_cells(client: WriteClient, document_id: str, table_block_id: str
     **The cost shape (LD-481).** This used to spend **two throttled calls per non-empty
     cell** — a ``get_block`` to find the cell's inner text block, then a ``_patch_block`` on
     it — which measured **463 write API calls / 158.41 s** for a 6×36 table's 216 cells, 93%
-    of them the fill (the same spike, § 3c; retired from the dev repo on 2026-09-18). Both halves are now batched
+    of them the fill (the same spike, § 3c; retired on 2026-09-18). Both halves are now batched
     against routes the same spike measured:
 
     * every cell's inner block id comes from **one paginated document block list**

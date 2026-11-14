@@ -378,8 +378,9 @@ def test_ac4_the_evidence_states_its_provenance_even_though_the_files_are_gone()
     scope in full so the negative claim does not exceed what is stated."""
     from larkdocio.common.citations import dev_repo_paths
 
-    evidence = _absence()["evidence"]
-    assert "retired from the dev repo on 2026-09-18" in evidence, evidence
+    evidence = _absence()["evidence"]    # LD-720 dropped "from the dev repo" — the shipped text no longer names the private record —
+    # and kept the fact that the evidence was retired, with its date.
+    assert "retired on 2026-09-18" in evidence, evidence
     assert "the eleven" in evidence and "UNMEASURED" in evidence
     assert not dev_repo_paths(evidence), "it cites a path — which one survived the prune?"
 
@@ -451,8 +452,8 @@ def test_the_router_note_ships_the_code_0_COPY_TRAP_where_a_consumer_would_fall_
 def test_the_no_move_note_states_its_provenance():
     """SUPERSEDED IN PART by LD-676 — same reason, new conclusion as the arm above: the router's
     no-move note must still account for its evidence, now by saying it was retired."""
-    router = guide(ROUTER_HEADING)
-    assert "retired from the dev repo on 2026-09-18" in router, "the measurement's provenance is not stated at all"
+    router = guide(ROUTER_HEADING)    # LD-720: "from the dev repo" dropped; the retirement and its date are still stated.
+    assert "retired on 2026-09-18" in router, "the measurement's provenance is not stated at all"
 
 
 def test_ac3_the_restructure_recipes_PREMISE_is_the_measurement_and_its_STEPS_are_UNTOUCHED():

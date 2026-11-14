@@ -1200,8 +1200,9 @@ def test_E2_the_1770040_row_records_the_LD501_finding_as_a_finding():
     note = ERROR_CODES[1770040]
     assert note.label == "no folder permission"
     assert note.denial_class == "object-acl"
-    assert note.verification == "wire-observed"
-    assert "001-ac4-denial-create-document.json" in note.evidence
+    assert note.verification == "wire-observed"    # LD-720: the recording is unpublished, so the row names the send rather than a file name a
+    # reader cannot open (it used to name 001-ac4-denial-create-document.json).
+    assert "create_document" in note.evidence and "unpublished recording" in note.evidence
     lowered = note.meaning.lower()
     assert "denial_from returns none" in lowered.replace("permissions.", "")
     assert "correctly" in lowered, "the row must say the None is right, not merely report it"
@@ -1214,8 +1215,8 @@ def test_E2_the_1770040_row_records_the_LD501_finding_as_a_finding():
 def test_E3_the_copy_route_pair_is_DISTINGUISHABLE_and_neither_row_over_claims():
     perm, absent = ERROR_CODES[1254701], ERROR_CODES[1254702]
     assert (perm.label, absent.label) == ("DriveNodePermNotAllow", "DriveNodeNotExist")
-    assert perm.denial_class == "object-acl" and absent.denial_class is None
-    assert "002-copy-app-unreachable-folder.json" in perm.evidence
+    assert perm.denial_class == "object-acl" and absent.denial_class is None    # LD-720: unpublished recording, named by the send (was 002-copy-app-unreachable-folder.json).
+    assert "copy route" in perm.evidence and "unpublished recording" in perm.evidence
     assert "ld387-01" in absent.evidence
     # D-59: each row states the reach of its own measurement.
     assert "one send" in perm.meaning and "2026-08-18" in perm.meaning

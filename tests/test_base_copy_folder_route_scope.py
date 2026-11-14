@@ -139,8 +139,9 @@ COUNTER_MEASUREMENT_ELEMENTS = [
     ("one tenant", "one tenant"),
     ("one app identity", "one app identity"),
     ("the token class", "tenant_access_token"),
-    ("one honest send", "one honest send"),
-    ("the capture", "001-ac4-denial-create-document.json"),
+    ("one honest send", "one honest send"),    # LD-720: the shipped text no longer names a recording a reader cannot open (it was
+    # 001-ac4-denial-create-document.json, unpublished); it says the recording is unpublished.
+    ("the capture", "an unpublished recording"),
 ]
 
 
@@ -687,8 +688,8 @@ THREE_OUTCOME_ELEMENTS = [
     ("the denial code", "1254701"),
     ("Lark's own denial message", "DriveNodePermNotAllow"),
     ("the not-found code", "1254702"),
-    ("the not-found message", "DriveNodeNotExist"),
-    ("the banked capture", "002-copy-app-unreachable-folder.json"),
+    ("the not-found message", "DriveNodeNotExist"),    # LD-720: was the unpublished 002-copy-app-unreachable-folder.json, named by file.
+    ("the banked capture", "an unpublished recording"),
     ("the send's date", "2026-08-18"),
     ("the one-send scope", "one send"),
     ("no retries", "no retries"),
@@ -860,8 +861,8 @@ def test_ld510_the_record_is_written_ONCE_and_NO_REGISTER_IS_BUILT_HERE():
     assert note is not None, "the register the record was written for does not carry 1254701"
     assert note.label == "DriveNodePermNotAllow", note.label
     assert note.denial_class == "object-acl", (
-        "1254701 is an OBJECT-ACL denial, not a scope denial — the distinction is the point")
-    assert "002-copy-app-unreachable-folder.json" in note.evidence, note.evidence
+        "1254701 is an OBJECT-ACL denial, not a scope denial — the distinction is the point")    # LD-720: the evidence names the send, not the unpublished file.
+    assert "copy route" in note.evidence and "unpublished recording" in note.evidence, note.evidence
 
     # Still LOOKUP-ONLY. The maintainer ruling is unchanged: no fourth generated matrix, no ERRORS.md,
     # and the register grew no projection of its own.

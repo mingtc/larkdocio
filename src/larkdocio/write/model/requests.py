@@ -203,8 +203,7 @@ MAX_CHILDREN_PER_CALL = 50
 #: The most cells one authored table may carry. **larkdocio's own documented authoring cap,
 #: not a discovered API ceiling** — and a SUPERSEDED one: the reason below is LD-135's,
 #: preserved word for word; only its conclusion moved (LD-481). The rule it moved under is
-#: the supersession doctrine — preserve the reason, replace only the conclusion — stated
-#: **in the dev repo** at ``process/doctrine/supersession.md`` § A.1.
+#: the supersession rule — preserve the reason, replace only the conclusion.
 #:
 #: **The historical reason (LD-135, verbatim).** Lark auto-provisions the cell grid
 #: from the table's ``row_size``/``column_size`` property, but each **non-empty** cell then
@@ -229,10 +228,10 @@ MAX_CHILDREN_PER_CALL = 50
 #: ``descendant`` route accepts **1000 descendants** and refuses 1001 — bisected at two
 #: shapes, 1×499 text cells = 999 descendants ``code 0`` and 1×500 = 1001 descendants
 #: ``99992402 field validation failed`` — i.e. **499 cells in one call**; the capture is kept
-#: in the 2026-08-14 table-cell-creation spike, § 3b, whose write-up was retired from the dev repo on 2026-09-18.
+#: in the 2026-08-14 table-cell-creation spike, § 3b, whose write-up was retired on 2026-09-18.
 #: 500 is that measured envelope rounded to the next hundred: it keeps the whole authored
 #: grid inside one platform-sized unit of work.
-#: **D-59 route scope for every number above:** one tenant, ``tenant_access_token``, docx v1,
+#: **Route scope for every number above** (a claim is exactly as wide as its evidence): one tenant, ``tenant_access_token``, docx v1,
 #: block type 31, on documents the spike created (not wiki-wrapped). ``user_access_token``,
 #: other tenants and wiki-wrapped documents are **unmeasured, not refuted**.
 #:
@@ -244,7 +243,7 @@ MAX_TABLE_CELLS = 500
 #: (LD-431). Growing a table past the create-time 9-column grid works column by column until
 #: the **101st**, which answers ``1770010 "too many table column"`` in Lark's own words; the
 #: 100th reads back ``column_size: 100`` — measured on a disposable the probe created and
-#: trashed (the table-row-boundary probe, § 4, probe 04; its findings were retired from the dev repo on 2026-09-18).
+#: trashed (the table-row-boundary probe, § 4, probe 04; its findings were retired on 2026-09-18).
 #: Under :data:`MAX_TABLE_CELLS` a grid
 #: can still *ask* for 101–200 columns at one row, and that window would fail **live**,
 #: mid-batch, in a half-written document — the failure this cap exists to move to compile
@@ -324,7 +323,7 @@ _NESTABLE_KINDS = (NewBlockKind.BULLET, NewBlockKind.ORDERED, NewBlockKind.TODO)
 #: :class:`TextSpan`, which is where an anchored link inside a table is authored. Lark accepts
 #: and stores that run on **both** write routes — measured: the capture is
 #: in the source repository (``tests/captures/ld517-in-cell-link/``) and the ruling
-#: (**D-110**) in the dev repo (``requirements/DECISIONS.md``).
+#: followed from it: the anchor ships on both routes.
 _SPANNABLE_KINDS = (
     NewBlockKind.PARAGRAPH,
     NewBlockKind.HEADING,
@@ -372,13 +371,13 @@ class TextSpan:
     this library has always created; a span **with** one encodes to
     ``text_element_style.link.url`` on the created ``text_run``, which is the shape Lark
     stored and read back verbatim in one call
-    (media-spike captures 541 / 542, since retired from the dev repo on 2026-09-18).
+    (media-spike captures 541 / 542, since retired on 2026-09-18).
 
     **THE URL IS AUTHORED VERBATIM, AND THAT SPELLING IS PINNED BY A CLICK.** Lark stores a
     link URL **exactly as sent** — the raw and the percent-encoded spellings were both
     accepted and both echoed back unchanged — so the server does not settle which one a
     caller should send. What settles it is a **human click** on the media spike's living
-    fixture (2026-08-12; the media spike's findings note recording it was retired from the dev repo on 2026-09-18): the
+    fixture (2026-08-12; the media spike's findings note recording it was retired on 2026-09-18): the
     **raw** spelling opens the file in a new tab, both link-wrapped and bare. So this library
     sends what it is given, unencoded, and **refuses a percent-encoded spelling** rather than
     silently normalising one — because the reader's own
@@ -697,7 +696,7 @@ class NewBlock:
                     f"NewBlock.spans holds TextSpan values, got "
                     f"{type(span).__name__}")
         if kind is NewBlockKind.TABLE:
-            # TRANSFORMED, never deleted (LD-619 / D-110). The REASON is the original and is
+            # TRANSFORMED, never deleted (LD-619). The REASON is the original and is
             # unchanged: a table's content lives in ROWS, so a span sequence hung on the
             # table BLOCK addresses nothing and would be a silent content drop. Only the
             # CONCLUSION moved — this used to be the whole answer to "can a table carry an
@@ -780,7 +779,7 @@ class NewBlock:
                 # is cheaper than discovering it mid-batch. Only the CONCLUSION moved: a
                 # cell may ALSO be a sequence of TextSpan, because Lark accepts and stores a
                 # link-carrying run inside a cell on both write routes (measured —
-                # in the source repository: tests/captures/ld517-in-cell-link/captures/001-in-cell-link-readback.json; ruled by D-110).
+                # in the source repository: tests/captures/ld517-in-cell-link/captures/001-in-cell-link-readback.json).
                 if not isinstance(cell, tuple) or not all(
                         isinstance(span, TextSpan) for span in cell):
                     raise ValueError(
@@ -958,7 +957,7 @@ class NewBlock:
         """A quote block (block type 15)."""
         return cls(kind=NewBlockKind.QUOTE, text=text)
 
-    # The in-cell LINK ANCHOR is LD-619, on LD-517's measurement, ruled by D-110. The
+    # The in-cell LINK ANCHOR is LD-619, on LD-517's measurement. The
     # docstring below states the capability and its scope without either reference: a
     # consumer has only the wheel, and an issue id resolves to nothing there.
     @classmethod

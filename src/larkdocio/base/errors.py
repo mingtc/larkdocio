@@ -1,10 +1,7 @@
 """larkdocio.base.errors — the Base error taxonomy, from the captured vocabulary (LD-247).
 
-**Every code here was observed on the wire.** The three probe packs are recorded
-`in the dev repo`, so the paths below are provenance rather than reading a caller can
-follow: `dev/base-study-2026-08-03.md`, `dev/base-study/p0-addendum-2026-08-03.md`,
-`dev/base-study/ui-parity-matrix-2026-08-03.md` — between them refused this library in 23
-distinct ways, and each one is written down with what a caller can actually *do* about it.
+**Every code here was observed on the wire.** The Base study's three probe packs
+between them refused this library in 23 distinct ways, and each one is written down with what a caller can actually *do* about it.
 Nothing is invented: a code nobody has seen is not in the table, and a code in the table
 that the table cannot explain would be a row with an empty ``meaning``, which the guard
 rejects.
@@ -294,7 +291,7 @@ class TableCreatedViewNotNamed(LarkAPIError):
       to reproduce (the echo case), because nothing is invented.
 
     **Nothing was deleted and nothing was retried.** Both are the ruling, not an accident of
-    implementation, and both are asserted structurally by the dev repo's own suite.
+    implementation, and both are asserted structurally by the project's own test suite.
     """
 
     def __init__(self, message, *, table_id=None, view_id=None, view_id_learned=False,

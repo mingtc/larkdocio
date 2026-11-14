@@ -5,7 +5,7 @@ pagination that runs to exhaustion, and ``POST …/records/search`` pinned as *t
 
 **The transport is SDK-typed, with a RAW fallback only where an SDK gap is actually
 hit.** ``lark_oapi.api.bitable.v1`` is already in the pinned SDK — no new dependency
-(CLAUDE.md § House rules, in the dev repo) — and it ships typed request builders and response models for all
+— and it ships typed request builders and response models for all
 five reads this client makes. **No gap was hit, so there is no raw path here at all**, and
 none is pre-declared: the rule is that a raw leg must be *justified by a gap
 actually encountered*, recorded with the specific shortfall that forced it. There is nothing
@@ -17,8 +17,7 @@ constructs so it stays that way until something genuinely forces the issue.
 through the **SDK's own deserializer** (``JSON.unmarshal(payload, SomeResponse)``) and hands
 the resulting typed object to an injected transport. So the tests exercise the same objects a live call produces,
 and an API drift — a renamed key, a changed nesting — reddens **at deserialization** rather
-than travelling on as a plausible-looking ``None`` (PROJECT.md § Quality bar, in the dev repo:
-fixtures pin real payload shapes).
+than travelling on as a plausible-looking ``None`` (fixtures pin real payload shapes).
 
 **Two traps, both pinned by tests, both cheap to get wrong.**
 
@@ -74,7 +73,7 @@ because that would be a probe by another name.
 
 **READ credentials only.** The pair is resolved through :mod:`larkdocio.common.auth`; the
 ``LARK_WRITE_APP_*`` pair is never consulted and is not named anywhere in this package.
-Binding rider from PROJECT.md § Credential aliasing (in the dev repo): on the tenant these
+Binding rider (credential aliasing): on the tenant these
 measurements were made on, the READ and WRITE pairs **named one app**, so the code keeps treating them as distinct and
 **no same-tenant probe here may be cited as proof of scope separation** — that claim needs a
 genuinely separate app.

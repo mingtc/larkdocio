@@ -7,7 +7,7 @@ client that fetches spreadsheet data safely, built on the shared core
 * **auth** — tenant-token via :func:`~larkdocio.common.transport.fetch_tenant_access_token`,
   resolved from the **READ** credential pair (:func:`~larkdocio.common.auth.get_read_credentials`
   — ``LARK_READ_APP_*`` → legacy fallback) and under the shared IPv4 pin. The write
-  credential path is **never** consulted (credential doctrine; PROJECT.md, in the dev repo).
+  credential path is **never** consulted (the read/write credential separation).
 * **throttle** — every read routes through :class:`~larkdocio.common.transport.RateLimiter`
   with a read cap **≪ Lark's 100/sec** ceiling (:data:`DEFAULT_MAX_READS_PER_SEC`),
   so the client is gentle and purposeful (spike Q5).

@@ -51,7 +51,7 @@ from larkdocio.common.citations import dev_repo
 _CAPTURES = "tests/captures/base-study/captures"
 
 #: The spike this whole surface rests on.
-HIERARCHY_EVIDENCE = dev_repo("dev/base-study/subitems-spike-2026-08-05.md")
+HIERARCHY_EVIDENCE = dev_repo(f"the subitems spike's captures, {_CAPTURES}/subitems-*")
 
 #: The per-pointer outcome vocabulary, **re-exported rather than re-spelled**. A parent
 #: pointer is a link, so what can be said about it is what

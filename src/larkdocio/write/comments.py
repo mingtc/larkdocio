@@ -14,7 +14,7 @@ quotes a **committed capture** rather than a recollection, because the sharp fai
 here is a success code that means nothing. The captures live in the source repository, so the paths
 below name the provenance of each finding rather than a document to open:
 
-* the 2026-07-29 comments probe, § Q1a (its write-up was retired from the dev repo on 2026-09-18) —
+* the 2026-07-29 comments probe, § Q1a (its write-up was retired on 2026-09-18) —
   anchored creation. Eighteen candidate
   ``create_v2`` routes are absent against a calibrated discriminator with two controls, and
   the v1 route that *does* exist **accepts** ``anchor`` / ``quote`` / ``is_whole:false``,

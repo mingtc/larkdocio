@@ -717,7 +717,7 @@ def _comparable_units(body: str) -> List[object]:
 
     Per unit, not per segment: :func:`_decoded_units` answers all-or-nothing because its
     two callers compare a whole block's text, but the RETURNED corpus is a document, and
-    one unreadable unit in it is not evidence about any other unit (LD-634 / ``D-116``).
+    one unreadable unit in it is not evidence about any other unit (LD-634).
     """
     units: List[object] = []
     for unit in _units(body):
@@ -885,8 +885,7 @@ def _source_block_texts(source: "_Scan") -> Dict[str, List[str]]:
     unmarked.
 
     **A block whose text cannot be decoded is OMITTED, not recorded as empty** — the same
-    reading of ``None`` stage 3 takes forty lines below, rather than a third one (LD-634 /
-    ``D-116``). An absent key is *"not comparable"*, which both readers already treat as no
+    reading of ``None`` stage 3 takes forty lines below, rather than a third one (LD-634). An absent key is *"not comparable"*, which both readers already treat as no
     evidence; recording it as ``[]`` said the block HAS no text, which is a different claim.
     The input makes this hard to hit at all — it is ``projection.markdown``, which
     larkdocio itself escaped, so a source segment that fails ``unescape_literals`` would

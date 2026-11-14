@@ -159,8 +159,7 @@ EPHEMERAL_ATTACHMENT_KEYS: Tuple[str, ...] = ("url", "tmp_url")
 #: :mod:`larkdocio.write.media`, the folder leg in :mod:`larkdocio.drive.files_write`, the
 #: guide's recipes and the machine-readable surface note). One authoring, because two
 #: paraphrases of a disclosure are two things that can drift into disagreeing about what was
-#: measured. The refusals are recorded at ``dev/media-spike/captures/518-`` and ``519-`` and
-#: the successful pair at ``516-``/``517-`` (in the dev repo).
+#: measured. The two refusals and the successful pair are unpublished recordings.
 #:
 #: **The scope widened from DOCX-BOUND to PARENT-BOUND** (LD-442, on the base-media parity
 #: spike): the same two refusals were measured on **Base-bound** tokens too — both spellings,
@@ -218,13 +217,12 @@ MEDIA_TOKEN_NOT_INDEPENDENTLY_SHAREABLE = (
 #: **What changed, and why the sentence is longer than it was.** This library used to say
 #: *"no verb purges drive media"* — a sentence about **larkdocio's** own surface, stated in the
 #: **platform's** voice with no attempt list behind it, which is the exact over-claim
-#: ``process/doctrine/negative-claims.md`` (in the dev repo) § A.1 forbids. The claim is now
+#: a negative claim must never make. The claim is now
 #: **measured**, and the enumeration is what makes it falsifiable: a reader can see the edge of
 #: the evidence and knows which spellings were never tried. The consequence for a caller is
 #: unchanged — **an upload is permanent before you send it** — but it is now provable rather
-#: than asserted. Evidence: ``dev/ld476-media-purge-probe/captures/`` (in the dev repo),
-#: envelopes ``300``–``330`` (the sheets path), ``610``–``642`` (the docx path) and ``900``
-#: (the positive control).
+#: than asserted. Evidence: the media-purge probe's envelopes (unpublished recordings) — the sheets
+#: path, the docx path and a positive control.
 NO_ROUTE_PURGES_DRIVE_MEDIA = (
     "NO ROUTE PURGES A DRIVE MEDIA TOKEN — MEASURED ON BOTH MEDIA PATHS, and this is a "
     "statement about Lark's open API rather than about what this library chose to ship. "
@@ -267,8 +265,7 @@ PERMALINK_IS_NOT_ACCESS = (
     _PERMALINK_IS_NOT_ACCESS_HEAD + MEDIA_TOKEN_NOT_INDEPENDENTLY_SHAREABLE)
 
 #: The drive family's captured not-found code (``1061003``, recorded in
-#: ``dev/base-study/p0-addendum-2026-08-03.md`` § 4's error vocabulary (in the dev repo) as
-#: *drive-file-not-found*
+#: the Base study's error vocabulary as *drive-file-not-found*
 #: and in the disposable harness as one of the teardown-lag codes). **A media-specific
 #: token-not-found answer has never been captured**, so this set is the drive family's own
 #: not-found code and nothing more; every other non-zero answer raises the generic

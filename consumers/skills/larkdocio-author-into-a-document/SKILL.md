@@ -9,7 +9,7 @@ Write the fragment in Markdown, compile it, preview the plan, apply it, then rea
 The dialect is fixed and narrower than Markdown generally; check it before composing anything
 long.
 
-> **Version skew, both directions.** Copied from a `larkdocio` checkout, **1.53.1**, on **2026-11-10**. Pointer will not resolve? Your wheel is older — refresh it. Wheel newer than 1.53.1? This pack may be missing something added since — refresh anyway. Either way, run `scripts/update_larkdocio.sh`, then re-copy the pack with a fresh clone's `consumers/install-skills.sh`.
+> **Version skew, both directions.** Copied from a `larkdocio` checkout, **1.53.2**, on **2026-11-14**. Pointer will not resolve? Your wheel is older — refresh it. Wheel newer than 1.53.2? This pack may be missing something added since — refresh anyway. Either way, run `scripts/update_larkdocio.sh`, then re-copy the pack with a fresh clone's `consumers/install-skills.sh`.
 
 ## Start here, in this order
 

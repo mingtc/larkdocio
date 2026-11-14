@@ -47,7 +47,6 @@ from larkdocio.errors import LarkConfigError
 from .cells import PAIRS as _READ_REGISTRY_PAIRS
 from .write_vocabulary import NON_WRITABLE_PAIRS
 
-_PARITY = "dev/base-study/ui-parity-matrix-2026-08-03.md"
 _CAPTURES = "tests/captures/base-study/captures"
 
 #: The 20 storage types the fields API will author, verbatim from ``error.field_violations``.
@@ -65,7 +64,6 @@ AUTHORABLE_UI_TYPES: Tuple[str, ...] = (
 
 #: Where the allow-list was established, for a reader who wants to check it.
 VOCABULARY_EVIDENCE = dev_repo(
-    f"{_PARITY} section 1.1 (both enums verbatim) · "
     f"{_CAPTURES}/p1-q2-01-button-sweep.json · "
     f"{_CAPTURES}/p1-q2-02-true-identity-retries.json"
 )

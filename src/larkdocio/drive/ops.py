@@ -325,7 +325,7 @@ OPS: Tuple[DriveOpDescriptor, ...] = (
 
 #: The **R1 enumeration** ops — the three this surface shipped first, and the set whose
 #: read-only claim was, and remains, true. Named so that claim can be **re-scoped rather than
-#: deleted** when a mutating op joins the registry (D-24: preserve the reason, supersede only
+#: deleted** when a mutating op joins the registry (the supersession rule: preserve the reason, supersede only
 #: the conclusion).
 ENUMERATION_OPS: Tuple[DriveOpDescriptor, ...] = tuple(
     descriptor for descriptor in OPS
@@ -363,7 +363,7 @@ def http_verbs() -> Tuple[str, ...]:
 def query_posts() -> Tuple[DriveOpDescriptor, ...]:
     """The ``POST`` ops that are declared **reads**.
 
-    **RE-SCOPED, not deleted (D-24).** The reason this set exists is unchanged — a documented
+    **RE-SCOPED, not deleted.** The reason this set exists is unchanged — a documented
     query POST must be visibly declared a read, or the registry classifies it as a write. What
     moved is only the count: R1 shipped exactly one (``folder_name``), and the document
     security-level leg is a **second** read on the very same endpoint, so the set is now two.
@@ -390,7 +390,7 @@ def mutating_ops(ops: Optional[Tuple[DriveOpDescriptor, ...]] = None
 def read_only(ops: Optional[Tuple[DriveOpDescriptor, ...]] = None) -> bool:
     """``True`` when no op in ``ops`` mutates — the read-only proof, mechanically.
 
-    **TRANSFORMED, not deleted (LD-409, D-24).** This answered for the whole registry while the
+    **TRANSFORMED, not deleted (LD-409).** This answered for the whole registry while the
     whole registry was R1's enumeration, and the reason it existed is unchanged: a read-only
     claim should be checkable rather than merely intended. What changed is only the
     **conclusion for the default argument** — ``create_version`` mutates, so ``read_only()``

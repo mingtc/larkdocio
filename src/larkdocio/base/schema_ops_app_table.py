@@ -88,7 +88,6 @@ from larkdocio.base.schema_ops import BaseSchemaOpDescriptor, SchemaOpFamily
 from larkdocio.common.citations import dev_repo
 
 _CAPTURES = "tests/captures/base-study/captures"
-_PARITY = "dev/base-study/ui-parity-matrix-2026-08-03.md"
 
 #: The family's name, used by the aggregator and quoted in the source repository's ``BASE.md``
 #: schema-ops table.
@@ -119,7 +118,7 @@ SCHEMA_OP_FAMILY = SchemaOpFamily(
             settles=False,
             read_back="GET …/apps/{a} re-reads with the new name",
             request_cls=UpdateAppRequest,
-            evidence=dev_repo(f"{_PARITY} § 4 · {_CAPTURES}/p1-q4-03-parity-sweep.json"),
+            evidence=dev_repo(f"{_CAPTURES}/p1-q4-03-parity-sweep.json"),
         ),
         BaseSchemaOpDescriptor(
             name="copy_app",
@@ -133,7 +132,7 @@ SCHEMA_OP_FAMILY = SchemaOpFamily(
             read_back=("GET …/apps/{new}/tables lists the copied tables — reachable only "
                        "AFTER the copy settles, never from the copy's own echo"),
             request_cls=CopyAppRequest,
-            evidence=dev_repo(f"{_PARITY} § 5 · {_CAPTURES}/p1-q4-02-copy.json"),
+            evidence=dev_repo(f"{_CAPTURES}/p1-q4-02-copy.json"),
         ),
         BaseSchemaOpDescriptor(
             name="create_table",
@@ -156,7 +155,7 @@ SCHEMA_OP_FAMILY = SchemaOpFamily(
             read_back=("GET …/apps/{a}/tables lists EVERY returned table_id in a SINGLE "
                        "read-back — one call, one verification"),
             request_cls=BatchCreateAppTableRequest,
-            evidence=dev_repo(f"{_PARITY} § 4 · {_CAPTURES}/p1-q4-03-parity-sweep.json"),
+            evidence=dev_repo(f"{_CAPTURES}/p1-q4-03-parity-sweep.json"),
         ),
         BaseSchemaOpDescriptor(
             name="rename_table",
@@ -167,7 +166,7 @@ SCHEMA_OP_FAMILY = SchemaOpFamily(
             settles=False,
             read_back="GET …/apps/{a}/tables shows the table under its new name",
             request_cls=PatchAppTableRequest,
-            evidence=dev_repo(f"{_PARITY} § 4 · {_CAPTURES}/p1-q4-03-parity-sweep.json"),
+            evidence=dev_repo(f"{_CAPTURES}/p1-q4-03-parity-sweep.json"),
         ),
     ),
 )

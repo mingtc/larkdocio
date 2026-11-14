@@ -84,7 +84,6 @@ from larkdocio.common.citations import dev_repo
 from larkdocio.common.staleness import REVISION_GUARD_ACTIVE, revision_guard_status
 
 _CAPTURES = "tests/captures/base-study/captures"
-_P0 = "dev/base-study/p0-addendum-2026-08-03.md"
 
 #: The family's name, used by the aggregator and quoted in the source repository's ``BASE.md``
 #: schema-ops table.

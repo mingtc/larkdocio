@@ -19,7 +19,7 @@ cut. The topmost section may be **un-cut**: changes land in it before the releas
 until then its date is a placeholder. The release tooling refuses to tag a section whose header date
 is earlier than the newest date written inside that same section.
 
-> **This copy carries every release this document records — 3 releases, 1.52.0 up to 1.53.1 —
+> **This copy carries every release this document records — 4 releases, 1.52.0 up to 1.53.2 —
 > verbatim.** The same entries are at `vendor/larkdocio-CHANGELOG.md`, which the consumer
 > refresh script drops beside the vendored wheel on every refresh, and the publishing
 > repository's own complete copy of this document at its root.
@@ -30,8 +30,28 @@ is earlier than the newest date written inside that same section.
 > the newest releases.
 >
 > `larkdocio.changelog(section=...)` refuses a release this copy does not carry by name and
-> says where to read it; `larkdocio.changelog_sections()` lists the 3 releases this copy
+> says where to read it; `larkdocio.changelog_sections()` lists the 4 releases this copy
 > carries.
+
+## [1.53.2] — 2026-11-14
+
+### Fixed
+
+- **Shipped text no longer cites the maintainers' private records.** Docstrings, comments,
+  packaged documents and `evidence` strings pointed at files in the maintainers' private working
+  repository, which neither the wheel nor this repository carries. Each pointer was dropped where
+  the sentence stood on its own; otherwise the fact is stated, a published recording is cited
+  instead (under `tests/captures/` in the source repository), or the text says the recording is
+  unpublished. No fact and
+  no behaviour changed. If you match an `evidence` string by exact text, re-check it.
+- **A correction to the 1.53.1 entry.** It says no product behaviour changed, which holds, but
+  the 1.53.1 release notes also said no code that ships in the wheel changed. One message string
+  in `guide.py` (shown by `changelog()`), one sentence of the shipped guide and one comment did
+  change.
+- **Release dates.** A section's date is the day the release was cut, and the public tag can
+  follow it: v1.53.0 and v1.53.1 were tagged here three days after their cut dates. From 1.53.2 on,
+  the public release commit and its tag carry the cut's time, in UTC (`+0000`).
+- No dependency moved.
 
 ## [1.53.1] — 2026-11-10
 

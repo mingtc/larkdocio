@@ -48,19 +48,11 @@ from typing import Dict, Optional, Tuple
 
 from larkdocio.common.citations import dev_repo
 
-# The Base study's three probe packs and their capture tree — the provenance for the rows LD-247
-# authored, moved here verbatim by LD-531 with their evidence pointers unchanged.
-_PARITY = "dev/base-study/ui-parity-matrix-2026-08-03.md"
-_P0 = "dev/base-study/p0-addendum-2026-08-03.md"
-_OPENER = "dev/base-study-2026-08-03.md"
+# The Base study's capture tree — the published provenance for the rows LD-247 authored. Where a
+# row's evidence was a recording the source repository does not publish, the evidence string says
+# so in words rather than naming a file a reader cannot open.
 _CAPTURES = "tests/captures/base-study/captures"
-_SPIKE = "dev/base-authoring-spike"
-# LD-493/LD-501/LD-510's caller-supplied-destination captures — the object-ACL measurements.
-_DESTINATION = "dev/ld493-caller-supplied-destination/captures"
-# The three packs the non-Base families' rows were measured in.
-_WRITE_SPIKE = "dev/write-spike/07-report.md"
-_SHEETS_MEDIA = "dev/sheets-media-spike/findings.md"
-_SPIKE_FINDINGS = "dev/base-authoring-spike/findings.md"
+_UNPUBLISHED = "an unpublished recording"
 # The docx removal-route probe's evidence tree (the ONE source of the shipped removal claim).
 _REMOVAL_ROUTES = "tests/captures/ld601-trashed-doc-routes/captures"
 #: LD-494's app-space census — the two ``99992402`` field-violation bodies (LD-606).
@@ -73,11 +65,8 @@ _LD467 = "tests/captures/ld467-create-folder/captures"
 _PERMISSIONS_SPIKE = "tests/captures/permissions-spike/captures"
 _PREFLIGHT_PROBE = "tests/captures/permissions-preflight-probe/captures"
 _SHEETS_WRITE_SPIKE = "tests/captures/sheets-write-spike/captures"
-# 90202's finding record is the 2026-07-28 seat-session report § F20 in the dev repo (LD-150).
-# It is NOT cited in the row's evidence string and must not be: the folder name and the section
-# label are both patterns tests/test_consumer_dialect_guard.py forbids in shipped text, and a
-# consumer holds only the wheel. The row cites the CAPTURE instead, which is the primary
-# evidence anyway; this comment is where the internal provenance lives.
+# 90202's row cites the CAPTURE, which is the primary evidence; the finding's written record is
+# not cited, because a consumer holds only the wheel.
 
 #: How firmly a CODE's reading is established. Ordered strongest-first, and deliberately
 #: overlapping :data:`larkdocio.permissions.VERIFICATION_LABELS` where the two speak about the
@@ -178,7 +167,7 @@ ERROR_CODES: Dict[int, ErrorCodeNote] = {
               "The Base has been deleted. Lark's DELETE is a TRASH, not a purge, so the "
               "drive metadata still resolves the title while the bitable API reports the app "
               "as gone — a token that reads here may still look alive elsewhere.",
-              dev_repo(f"{_OPENER} R2 · {_CAPTURES}/05-11-refetch-after-delete.json")),
+              dev_repo(f"{_CAPTURES}/05-11-refetch-after-delete.json")),
         _note(91402, "NOTEXIST",
               "No Base exists at this app_token. Check the token you extracted from the URL: "
               "a Base URL's token is the /base/<token> segment, not a table or view id.",
@@ -187,12 +176,12 @@ ERROR_CODES: Dict[int, ErrorCodeNote] = {
               "The drive file behind this Base cannot be addressed on its own. A docx-born "
               "embedded Base is owned by its parent document and is neither independently "
               "readable by file token nor independently deletable.",
-              dev_repo(f"{_P0} § 6 · {_CAPTURES}/p0-1-07-ledger.json")),
+              dev_repo(f"{_CAPTURES}/p0-1-07-ledger.json")),
         _note(1254036, "Bitable is copying, please try again later.",
               "The Base is still being copied. Copy is the one ASYNCHRONOUS Base operation "
               "found: the new app_token is returned before the copy exists, so a read must "
               "be retried rather than treated as a failure.",
-              dev_repo(f"{_PARITY} § 5 · {_CAPTURES}/p1-q4-02-copy.json")),
+              dev_repo(f"{_CAPTURES}/p1-q4-02-copy.json")),
         # ---- tables, records, views ----
         _note(1254004, "WrongTableId",
               "The table id is malformed. A Base table id looks like tbl…; passing a view id "
@@ -221,18 +210,17 @@ ERROR_CODES: Dict[int, ErrorCodeNote] = {
               "`property.hidden_fields` this code means the named column MAY NOT BE HIDDEN — "
               "\"the primary field cannot be set as a hidden type\" — so the fix is to drop "
               "that id, not to re-shape the body. Read the detail before assuming either.",
-              dev_repo(f"{_CAPTURES}/p1-q3-02-view-grouping.json · "
-                       f"{_SPIKE}/findings.md § B.6")),
+              dev_repo(f"{_CAPTURES}/p1-q3-02-view-grouping.json")),
         # ---- the search parameters, and the vocabulary asymmetry ----
         _note(1254016, "InvalidSort",
               "The sort parameter is invalid. `sort` is keyed by field NAME: a field_id is "
               "refused here, and so is a name no field carries.",
-              dev_repo(f"{_PARITY} § 4 · {_CAPTURES}/p1-q3-01-filter-sort.json")),
+              dev_repo(f"{_CAPTURES}/p1-q3-01-filter-sort.json")),
         _note(1254018, "InvalidFilter",
               "The filter parameter is invalid. The body names the offending field and its "
               "type; a Stage (type 24) field is refused outright, which is the only place in "
               "the API that admits type 24 exists in a value context.",
-              dev_repo(f"{_PARITY} § 4 · {_CAPTURES}/p1-q3-01-filter-sort.json")),
+              dev_repo(f"{_CAPTURES}/p1-q3-01-filter-sort.json")),
         _note(1254044, "FieldIdNotFound",
               "A field id in the body is not a field on this table. Measured on "
               "`PATCH …/views/{v}` with `property.hidden_fields`, where it is the proof that "
@@ -240,13 +228,12 @@ ERROR_CODES: Dict[int, ErrorCodeNote] = {
               "`group_info` answers code:0 and stores nothing. larkdocio RELAYS this instead "
               "of predicting it: a field list is a read of a moment, so a local check would "
               "buy a `list_fields` read and still race the answer.",
-              dev_repo(f"{_SPIKE}/findings.md § B.6 · "
-                       f"{_SPIKE}/captures/ld417-b-03-hidden-fields-persistence.json")),
+              f"measured live on PATCH …/views/{{v}} ({_UNPUBLISHED})"),
         _note(1254045, "FieldNameNotFound",
               "`field_names` is keyed by field NAME, not by field_id. Passing an fld… id here "
               "is a hard refusal — one of the few things on this endpoint that fails loudly "
               "instead of being silently ignored.",
-              dev_repo(f"{_PARITY} § 3 row 12 · {_CAPTURES}/p1-q1-02-stage-read-routes.json")),
+              dev_repo(f"{_CAPTURES}/p1-q1-02-stage-read-routes.json")),
         _note(99992402, "field validation failed",
               "A field failed the server's own validation, and the body says exactly how: "
               "`error.field_violations` names the offending field, the value sent, and the "
@@ -262,14 +249,14 @@ ERROR_CODES: Dict[int, ErrorCodeNote] = {
               "(the application's own root folder); this tree holds NO capture of this code "
               "against a removed one, so the live-versus-removed identity is unmeasured, not "
               "refuted.",
-              dev_repo(f"{_PARITY} § 1.1 · {_CAPTURES}/p1-q2-01-button-sweep.json · "
+              dev_repo(f"{_CAPTURES}/p1-q2-01-button-sweep.json · "
                        f"{_LD494}/620-root-members-read-r1.json · "
                        f"{_LD494}/621-root-members-read-r2.json")),
         _note(1254060, "TextFieldConvFail",
               "The value cannot be converted to this text-shaped field. An Email cell reads "
               "back as a {link,text} object but only accepts a plain string on write, so what "
               "was read cannot be written back unchanged.",
-              dev_repo(f"{_PARITY} § 2 · {_CAPTURES}/p1-q6-01-value-writes.json")),
+              dev_repo(f"{_CAPTURES}/p1-q6-01-value-writes.json")),
         _note(1254069, "AttachFieldConvFail",
               "The value cannot be converted to an attachment. An attachment cell takes an "
               "uploaded file_token, so the upload is a separate call that has to come first.",
@@ -285,25 +272,25 @@ ERROR_CODES: Dict[int, ErrorCodeNote] = {
               "false), so the roles family is unavailable. This is a PRODUCT FEATURE GATE: "
               "the Base's owner turns it on in the Base's own settings. It is not something "
               "any API call, and not something any Lark app credential, can change.",
-              dev_repo(f"{_PARITY} § 4 roles row · {_CAPTURES}/03-roles.json")),
+              dev_repo(f"{_CAPTURES}/03-roles.json")),
         _note(1254302, "RolePermNotAllow",
               "Advanced permissions cannot be enabled through the API at all — the other half "
               "of the roles gate. Only the Base's owner can turn the feature on, in the "
               "product.",
-              dev_repo(f"{_PARITY} § 4 · {_CAPTURES}/p1-q4-03-parity-sweep.json")),
+              dev_repo(f"{_CAPTURES}/p1-q4-03-parity-sweep.json")),
         # ---- neighbouring families a Base read can touch ----
         _note(1254050, "Source block is not found.",
               "The dashboard source block does not exist. A not-found, not a refusal — the "
               "verb is reachable and permitted, there is simply no such block.",
-              dev_repo(f"{_PARITY} § 4 · {_CAPTURES}/p1-q4-03-parity-sweep.json")),
+              dev_repo(f"{_CAPTURES}/p1-q4-03-parity-sweep.json")),
         _note(800074800, "WorkflowID is not a valid workflow ID",
               "No such workflow on this Base. Again a not-found rather than a refusal, so the "
               "workflow family is reachable once a real id exists.",
-              dev_repo(f"{_PARITY} § 4 · {_CAPTURES}/p1-q4-03-parity-sweep.json")),
+              dev_repo(f"{_CAPTURES}/p1-q4-03-parity-sweep.json")),
         _note(1069307, "not exist",
               "The drive comment target does not exist. A Base RECORD is not a commentable "
               "drive object — record-level comment routes do not exist at all.",
-              dev_repo(f"{_PARITY} § 4 comments rows · {_CAPTURES}/p1-q4-01-comments.json")),
+              dev_repo(f"{_CAPTURES}/p1-q4-01-comments.json")),
         _note(1770001, "invalid param",
               "The docx block request is invalid. Seen when authoring an embedded-Base block "
               "with a shape the document API does not accept.",
@@ -320,7 +307,7 @@ ERROR_CODES: Dict[int, ErrorCodeNote] = {
               "answer: the shared transport backs off on it, so a caller normally never sees "
               "one. Prefer batch_update, which counts as ONE per-document edit however many "
               "blocks it touches.",
-              dev_repo(f"{_WRITE_SPIKE} § Q3"),
+              f"measured live by the docx write feasibility spike ({_UNPUBLISHED})",
               verification="wire-observed"),
         # ---- the SCOPE denials: the application does not hold the permission ---- #
         _note(99991672, "Access denied. One of the following scopes is required:",
@@ -333,9 +320,8 @@ ERROR_CODES: Dict[int, ErrorCodeNote] = {
               "this library never requests one.",
               "captured repeatedly across two probe rounds — tests/captures/permissions-preflight-probe "
               "(captures Q1, Q2 and Q12) and tests/captures/name-lookup-spike (reprobe capture R1), "
-              "in the source repository; the spike's captures P1, P8, P12, R2, R3, R4, R5 and R7 drew the "
-              "same body and are recorded in dev/name-lookup-spike/reprobe/reprobe-verdict.md "
-              "(in the dev repo). The body carries permission_violations[].subject and "
+              "in the source repository; eight further calls of the spike drew the same body "
+              "(unpublished recordings). The body carries permission_violations[].subject and "
               "helps[].url",
               verification="denial-verified", denial_class="scope"),
         _note(41050, "",
@@ -368,7 +354,7 @@ ERROR_CODES: Dict[int, ErrorCodeNote] = {
               "tenant, one app identity, 2026-08-17, tenant_access_token, and the docx "
               "create_document route alone; every other route and object type is UNMEASURED "
               "rather than refuted.",
-              dev_repo(f"{_DESTINATION}/001-ac4-denial-create-document.json"),
+              f"one send on the docx create_document route ({_UNPUBLISHED})",
               verification="wire-observed", denial_class="object-acl"),
         _note(1254701, "DriveNodePermNotAllow",
               "The application is not on the target folder's access list, answered by the Base "
@@ -377,7 +363,7 @@ ERROR_CODES: Dict[int, ErrorCodeNote] = {
               "1254702, which is what a genuinely absent folder answers on this route. "
               "Scope of the measurement: one send, 2026-08-18, that one route, no retries; "
               "every other route is unmeasured rather than refuted.",
-              dev_repo(f"{_DESTINATION}/002-copy-app-unreachable-folder.json"),
+              f"one send on the Base copy route to an unreachable folder ({_UNPUBLISHED})",
               verification="wire-observed", denial_class="object-acl"),
         _note(1254702, "DriveNodeNotExist",
               "No drive node at this token — a NOT-FOUND, not a refusal, "
@@ -389,14 +375,14 @@ ERROR_CODES: Dict[int, ErrorCodeNote] = {
               "it had been seen on, and then overturned FOR that route when the route was "
               "re-measured. The original observation (probe ld387-01) is untouched; what it "
               "stopped doing is speaking for every route.",
-              dev_repo(f"{_SPIKE_FINDINGS} § ld387-01"),
+              dev_repo(f"{_CAPTURES}/ld387-01-copy-folder-token.json"),
               verification="wire-observed"),
         # ---- the SPREADSHEET / DRIVE-FILE gone-ness pair: two endpoints, one fact ---- #
         _note(1310249, "Path param :spreadsheet_token is deleted",
               "The spreadsheet token is trashed, as any SHEETS call against it answers. This "
               "is the CONFIRMATION code: reading a token you just deleted and getting this is "
               "how you prove the file is really gone, which a code:0 from the delete does not.",
-              dev_repo(_SHEETS_MEDIA)),
+              f"read back after a live spreadsheet delete ({_UNPUBLISHED})"),
         _note(1061007, "file has been delete.",
               "The DRIVE FILE delete answers this for a file that is already in the trash — a "
               "different endpoint from 1310249's, with its own number for the same fact, which "
@@ -406,7 +392,7 @@ ERROR_CODES: Dict[int, ErrorCodeNote] = {
               "FILE token. That is a fact about a file and does not generalise to the family — "
               "a trashed FOLDER token does the opposite, answering code:0 with metas: [] and "
               "failed_list [{code: 970005}].",
-              dev_repo(f"{_DESTINATION} § the object-ACL measurements")),
+              dev_repo("tests/captures/ld464-upload-identity/captures/ld464-31-delete-the-SAME-token-AGAIN.json")),
         _note(1770003, "resource deleted",
               "The DOCX endpoints answer this for a document that has been removed — the third "
               "number in the gone-ness family above, for a third endpoint. Two routes answer "

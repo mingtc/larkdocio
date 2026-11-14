@@ -295,8 +295,7 @@ def put_image_in_document(
       every one read back ``width: 2560, height: 2560, scale: 1``;
     * *captured, 2026-08-19, one image* — authored ``width=120, height=60``, read back
       ``width: 1, height: 1, scale: 1, align: 2`` — and the file uploaded was a **1x1** PNG
-      (the capture is in the dev repo, not in the wheel:
-      ``dev/ld506-in-cell-image/captures/002-in-cell-image-raw-payload.json``).
+      (an unpublished recording).
 
     The numbers disagree because the **files** disagree; both are consistent with the bind
     writing the file's own pixel dimensions, and neither sample isolates that mechanism from

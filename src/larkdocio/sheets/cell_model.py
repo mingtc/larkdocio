@@ -228,8 +228,8 @@ class EmbedImage:
 
     ``file_token`` is the **measured** handle: the bytes come back byte-identical from
     the drive media download route
-    ``drive/v1/medias/{file_token}/download`` (capture ``302-``, in the dev
-    repo). **The read never fetches
+    ``drive/v1/medias/{file_token}/download`` (an unpublished
+    recording). **The read never fetches
     them** — the token is surfaced, not resolved, and this module reaches no
     endpoint at all.
 

@@ -36,11 +36,10 @@ HISTORICAL_READ_CONTRACT = "historical-read-rides-the-measured-route"
 #: deliberately NOT exposed: one spelling for head, and it is the absence of a pin.
 HEAD = None
 
-#: Lark's answer to ``document_revision_id=0`` (capture ``206-``, in the dev repo) — mirrored, not invented.
+#: Lark's answer to ``document_revision_id=0`` (an unpublished recording) — mirrored, not invented.
 REVISION_ZERO_REFUSAL_CODE = 1770001
 
-#: Lark's answer to a negative or non-numeric ``document_revision_id`` (the edges table and
-#: capture ``208-`` in the dev repo, whose ``field_violations`` name the ``document_revision_id`` field).
+#: Lark's answer to a negative or non-numeric ``document_revision_id`` (an unpublished recording, whose ``field_violations`` name the ``document_revision_id`` field).
 REVISION_INVALID_REFUSAL_CODE = 99992402
 
 #: **TRAP (a).** Authored once, quoted verbatim into the docstring and the guide.
@@ -59,7 +58,8 @@ RAW_CONTENT_IGNORES_THE_PIN = dev_repo(
     "raw_content IGNORES THE PIN, so a historical read is never routed through it. Measured: "
     "raw_content with a numeric document_revision_id returned code 0 and HEAD's content, "
     "byte-identical to the plain head call (tests/captures/editions-spike/captures/16- vs 17-, in the "
-    "source repository), and the same route with an edition token did the same (116-, in the dev repo). larkdocio exposes no raw-content "
+    "source repository), and the same route with an edition token did the same (an unpublished "
+    "recording). larkdocio exposes no raw-content "
     "read at all, so the pin cannot reach one here; if you call that endpoint yourself, know "
     "that the parameter is accepted and discarded."
 )
@@ -89,12 +89,13 @@ EDITION_TO_CONTENT_UNAVAILABLE = dev_repo(
     "READING A DOCUMENT AT A NAMED EDITION IS NOT SERVED: no route maps an edition token to "
     "content, and none maps an edition to a revision. Measured 2026-08-11 against "
     "harness-created disposable documents on tenant_access_token "
-    "(dev/editions-spike/findings.md § Leg 4, in the dev repo). "
+    "(the editions spike, Leg 4; the capture numbers below are that spike's, and most of those "
+    "recordings are not published). "
     "TRIED — (1) GET one version: the version object carries no content, no url, no revision "
     "and no pointer of any kind (captures 12-, 122-); (2) blocks?document_revision_id=<version "
     "token> → 99992402, the parameter is an int; (3) blocks?edition_id= / ?version= / "
     "?version_id= / ?obj_edition_id= → code 0 but HEAD, silently ignored (112--115-); (4) "
-    "raw_content with a numeric pin and with edition_id → head (16-; 116- in the dev repo); (5) the meta route "
+    "raw_content with a numeric pin and with edition_id → head (16-; 116-); (5) the meta route "
     "with a numeric pin → head (19-); (6) the version token used as a docx document_id → "
     "99992402 on meta and 1770001 on blocks (20-, 21-); (7) the drive metas batch-query verb on the "
     "version token → failed_list [{code: 970005}], so it is not a file token (22-); (8) "
@@ -187,7 +188,7 @@ def check_revision_pin(value) -> int:
     Refused, each in Lark's own words because each was measured: ``0`` (``1770001 invalid
     param``), any other non-positive number (``99992402 field validation failed``), and
     anything that is not a real :class:`int` — a digit string, a float and a ``bool`` included
-    (``99992402``, capture ``208-``, in the dev repo). ``-1`` is Lark's head sentinel and is refused **by
+    (``99992402``, an unpublished recording). ``-1`` is Lark's head sentinel and is refused **by
     naming the spelling that works**: head is the absence of a pin.
 
     A ``bool`` is an ``int`` subclass in Python and is rejected on purpose: ``True`` would

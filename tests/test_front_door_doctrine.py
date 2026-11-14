@@ -1212,9 +1212,8 @@ SOURCE_CITATION_DEBT = {
     "src/larkdocio/capabilities/_gates.py": {"tests/test_capabilities.py"},
     "src/larkdocio/capabilities/_models.py": {"tests/test_release_notes_accessor.py"},
     "src/larkdocio/common/auth.py": {".env.example"},
-    "src/larkdocio/common/staleness.py": {"tests/test_staleness_core.py"},
-    "src/larkdocio/common/transport.py": {"dev/write-spike/07-report.md"},
-    "src/larkdocio/contacts/client.py": {"dev/name-lookup-spike/reprobe/reprobe-verdict.md"},
+    "src/larkdocio/common/staleness.py": {"tests/test_staleness_core.py"},    # LD-720 paid the two private-record rows that were here (common/transport.py and
+    # contacts/client.py): src/ no longer cites the maintainers' private records at all.
     "src/larkdocio/guide.py": {"tests/test_guide.py", "tests/test_release_notes_accessor.py"},
     "src/larkdocio/model/conservation.py": {"tests/test_opaque_marker_conservation.py"},
     "src/larkdocio/model/nodes.py": {"tests/test_parser_spine.py"},

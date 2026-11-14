@@ -19,6 +19,26 @@ cut. The topmost section may be **un-cut**: changes land in it before the releas
 until then its date is a placeholder. The release tooling refuses to tag a section whose header date
 is earlier than the newest date written inside that same section.
 
+## [1.53.2] — 2026-11-14
+
+### Fixed
+
+- **Shipped text no longer cites the maintainers' private records.** Docstrings, comments,
+  packaged documents and `evidence` strings pointed at files in the maintainers' private working
+  repository, which neither the wheel nor this repository carries. Each pointer was dropped where
+  the sentence stood on its own; otherwise the fact is stated, a published recording is cited
+  instead (under `tests/captures/` in the source repository), or the text says the recording is
+  unpublished. No fact and
+  no behaviour changed. If you match an `evidence` string by exact text, re-check it.
+- **A correction to the 1.53.1 entry.** It says no product behaviour changed, which holds, but
+  the 1.53.1 release notes also said no code that ships in the wheel changed. One message string
+  in `guide.py` (shown by `changelog()`), one sentence of the shipped guide and one comment did
+  change.
+- **Release dates.** A section's date is the day the release was cut, and the public tag can
+  follow it: v1.53.0 and v1.53.1 were tagged here three days after their cut dates. From 1.53.2 on,
+  the public release commit and its tag carry the cut's time, in UTC (`+0000`).
+- No dependency moved.
+
 ## [1.53.1] — 2026-11-10
 
 ### Fixed

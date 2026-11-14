@@ -74,8 +74,8 @@ class Anchor:
 
 # The row-0 reading of `column_header` is a ruling, not an accident: gating it on
 # TableNode.header_row was the alternative and was declined, because it would remove a
-# working way to repair a sentence in a header-less table (D-117, in the dev repo:
-# requirements/DECISIONS.md; the wording fix it ordered is LD-636).
+# working way to repair a sentence in a header-less table (the wording fix
+# it ordered is LD-636).
 @dataclass(frozen=True)
 class TableLocator:
     """Where a **table-cell** edit points — the table-cell anchor shape.

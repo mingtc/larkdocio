@@ -1,7 +1,7 @@
 """larkdocio.write.resolve — the anchor resolution engine (LD-066).
 
 The **one hard problem** the writeback spike surfaced is anchor resolution, not the
-API (``dev/write-spike/07-report.md`` § Q3b, in the dev repo): a verbatim quote is *not* a
+API: a verbatim quote is *not* a
 unique locator — on the live scratch doc one sentence matched **5** blocks and the value
 ``97.2%`` matched **6** — so "grep the quote and patch it" is ambiguous and unsafe.
 
@@ -158,7 +158,7 @@ WRITE_HOSTILE_NODE_TYPES: Tuple[type, ...] = (
 #   (`_outcome: ROUTE_DELETES_IMAGE_BLOCK`), 2026-08-19.
 #
 # So this tuple is the measured narrowing, and it is EXACTLY as wide as its evidence
-# (D-59, in the dev repo: requirements/DECISIONS.md): ONE type, because only one was
+# (a claim is as wide as its evidence): ONE type, because only one was
 # measured. Board
 # (43), iframe (26), Base embed (18), Sheet embed (30), Base named-view (53) and both
 # synced types (49/50) are UNMEASURED, NOT REFUTED — they keep refusing every op,
@@ -972,12 +972,12 @@ def _row_zero_labels(table: TableNode) -> str:
     ``detail`` is the actionable half. Cells are quoted so a label containing a comma or
     a delimiter stays unambiguous.
 
-    **They are row-0 cells, and only sometimes headers** (LD-636 / `D-117`). This used to
+    **They are row-0 cells, and only sometimes headers** (LD-636). This used to
     be ``_header_labels`` and the refusal used to present its output as *"its headers"* —
     which, for a table whose own ``header_row`` is ``False``, named **data** cells as
     headers inside the very list a consumer was handed so they would not have to re-read
     the document. ``column_header`` is *defined* as the text in row 0 and the resolver is
-    right to match it there (`D-117` Reading A, which declined gating it on ``header_row``
+    right to match it there (a ruling which declined gating it on ``header_row``
     because that would remove a working capability); so what is corrected is the **word**,
     not the lookup. :func:`_row_zero_disclosure` says which of the two this table is.
     """
@@ -997,7 +997,7 @@ def _row_zero_disclosure(table: TableNode) -> str:
     the right one: a header-ful table means the column names really are these, whereas a
     ``header_row=False`` table means the strings being offered are the first data row and
     the positional address (``column_index``) is the tool for that job. ``header_row`` is
-    read **here and only here** — for the wording. It does not, and per `D-117` must not,
+    read **here and only here** — for the wording. It does not, and by that ruling must not,
     gate what ``column_header`` resolves.
     """
     if table.header_row:
@@ -1940,7 +1940,7 @@ def _resolve_delete(request: DeleteRequest, root: Node) -> Union[ResolvedTarget,
       :func:`~larkdocio.write.media.put_image_in_document` hands back.
     * every **other** write-hostile type still refuses, on **delete too** — board / iframe /
       Base embed / Sheet embed / Base named-view / synced. They are **unmeasured, not
-      refuted** (D-59): nothing here says their delete fails, only that nobody has asked.
+      refuted**: nothing here says their delete fails, only that nobody has asked.
     """
     resolved = _resolve_anchor(request.target, root, skip_write_hostile=True)
     if isinstance(resolved, Refusal) or not _is_write_hostile(resolved.node):
@@ -2070,7 +2070,7 @@ def _live_basis_plain_text(node: Node) -> str:
       trivially hold, which is exactly why the id route works where a quote-anchored one
       could only ever refuse ``stale-anchor`` at write time. The **iframe** half is
       untouched and must not be widened by accident: an iframe is UNMEASURED, NOT REFUTED
-      (D-59) — it still refuses every op, delete included.
+      — it still refuses every op, delete included.
     """
     content = getattr(node, "content", None)
     if isinstance(content, str):

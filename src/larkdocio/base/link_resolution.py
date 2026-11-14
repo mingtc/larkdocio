@@ -58,8 +58,8 @@ product. Nothing here writes at all: the whole module reaches exactly two read m
 **Determinism is SAME-RUN, and the scoping is honest.** Two resolutions of an unchanged Base
 in one run are byte-identical — the ids are asked for in encounter order, never in set order.
 But resolution reads a **second table**, so a target record renamed between runs legitimately
-changes the output, exactly as the reader's live @mention resolution does
-(PROJECT.md, in the dev repo, § Quality bar). Cross-time byte-identity is **not** claimed and cannot be.
+changes the output, exactly as the reader's live @mention resolution does.
+Cross-time byte-identity is **not** claimed and cannot be.
 """
 from dataclasses import dataclass, field as _dataclass_field
 from typing import Dict, Mapping, Optional, Sequence, Tuple

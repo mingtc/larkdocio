@@ -1,52 +1,36 @@
 """larkdocio.common.citations — the ONE way this library cites a file it does not ship.
 
 Most of the refusals and loss previews in this library carry an ``evidence`` pointer: the
-recorded probe or capture that established the behaviour being described. Such a file is in
-the project's repository rather than in the installed package, and there are two kinds of it,
-each with its own label so the reader can tell them apart:
-
-* **"in the source repository"** (:data:`SOURCE_REPO_LABEL`) — a file every clone carries,
-  including a clone of the public repository (the ``Source`` URL in the package metadata). The
-  recorded API responses most evidence cites are of this kind: ``tests/captures/<probe>/…``,
-  with tenant values replaced. A reader holding a clone can open it.
-* **"in the dev repo"** (:data:`DEV_REPO_LABEL`) — a file in the maintainers' private working
-  repository: recordings and records under ``dev/``, ``progress/`` and ``requirements/``. The
-  public repository is a one-way export of the product without them, so this is a
-  **maintainer's provenance note**, not a file a reader of the public repository or the wheel
-  can open.
+recorded probe or capture that established the behaviour being described. Such a file is in the
+project's source repository rather than in the installed package: the recorded API responses
+under ``tests/captures/<probe>/…``, with tenant values replaced, which every clone carries,
+including a clone of the public repository (the ``Source`` URL in the package metadata). Such a
+citation wears :data:`SOURCE_REPO_LABEL`, **"in the source repository"**, so the reader knows the
+file is not in their install but can be opened in a clone.
 
 A citation printed bare reads, to the person holding the wheel, as a file they are supposed to
 open and cannot find. So a citation of a repository path is written **once**, here: call
-:func:`dev_repo` on the composed text and the right label is appended (the private one if any
-cited path is private); the fact stays, and the reader learns in the same breath whether the
-path is something to open or a provenance note::
+:func:`dev_repo` on the composed text and the label is appended; the fact stays, and the reader
+learns in the same breath where the path lives::
 
     dev_repo("captures/a.json")      # not a repository path — returned unchanged
     dev_repo("tests/captures/ld463-date-only/captures/ld463-01-date-only-zone.json")
                                      # '…ld463-01-date-only-zone.json (in the source repository)'
-    dev_repo("dev/editions-spike/findings.md")      # '…findings.md (in the dev repo)'
-    dev_repo(dev_repo("dev/editions-spike/findings.md"))   # idempotent
+    dev_repo(dev_repo("tests/captures/ld463-date-only/captures/ld463-01-date-only-zone.json"))
+                                     # idempotent
 
-**What the private label does and does not promise.** Because a reader cannot follow it, every
-sentence that carries one also **states the measured fact itself**, so the reader loses nothing
-by not following it. Inside the working repository the citation guard still resolves every
-labelled path in the shipped source and fails on one that dangles, and where a fact's evidence
-was retired the sentence says so and states the fact rather than pointing at nothing.
-
-The alternative, where a sentence reads perfectly well without the path, is simply to leave
-the path out: a citation nobody can follow adds nothing that the stated fact did not already
-carry. Both are correct; what is not correct is a bare, unexplained path — or one that
-leads nowhere.
-
-(LD-699 split the label in two. Until then "in the dev repo" covered both kinds, so the same
-four words meant "open it in your clone" and "you cannot open this".)
+**The maintainers' private records are never cited.** Evidence that exists only in the
+maintainers' own working records — which the public repository does not carry — is not named
+at all: the sentence states the measured fact itself and, where it matters, says the recording is
+unpublished. A citation nobody can follow adds nothing the stated fact did not already carry.
+:data:`DEV_REPO_LABEL` and :data:`PRIVATE_ROOTS` are kept only as the vocabulary a guard looks for
+when it holds this package free of such citations.
 """
 import re
 from typing import Optional
 
-#: The label for a path in the maintainers' PRIVATE record (``dev/``, ``progress/``,
-#: ``requirements/``): a provenance note, not a file a reader of the public repository can open.
-#: One phrase, never a synonym — a reader (and a guard) can predict it.
+#: The label that once marked a citation of the maintainers' PRIVATE record. The package no longer
+#: carries any such citation; the phrase is kept, defined once, so a guard can look for it.
 DEV_REPO_LABEL = "in the dev repo"
 
 #: The label for a path the source repository carries — public and private trees alike

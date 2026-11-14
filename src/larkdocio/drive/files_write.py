@@ -127,7 +127,7 @@ observed; the question stays open rather than being manufactured. All of those a
 with ``code:0``. Whatever enforces the relation, it is not the upload, which is why this
 module's verdict is the **read-back and the hash**, never the upload's own answer.
 """
-# LD-467 TRANSFORMED the folder-creation absence in the docstring above (D-24: preserve the
+# LD-467 TRANSFORMED the folder-creation absence in the docstring above (the supersession rule: preserve the
 # reason, supersede only the conclusion). The module-scoped claim — *no folder-creating call
 # anywhere in THIS MODULE* — is unchanged and still true; the library-wide half is superseded by
 # `larkdocio.drive.folders_write.DriveFoldersWriteClient.create_folder`, opened by the product

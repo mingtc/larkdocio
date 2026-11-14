@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "larkdocio"
-version = "1.53.1"
+version = "1.53.2"
 description = "Lark (Feishu) docs toolkit: docx→Markdown reader/writer, Sheets read/write, Base read + records/schema/attachments write, Drive folder read + versions/access/files/folders write, comments, contacts."
 readme = "README.md"
 requires-python = ">=3.11"

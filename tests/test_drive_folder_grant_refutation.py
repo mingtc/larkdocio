@@ -194,8 +194,9 @@ def test_ac3_the_module_records_the_SUPERSESSION_and_its_doctrine_in_the_SOURCE(
     """The issue id lives in the module's own comment, never in the shipped sentence — a
     consumer holds only the wheel, where an issue id resolves to nothing."""
     source = pathlib.Path(access.__file__).read_text(encoding="utf-8")
-    assert "LD-500" in source and "supersession" in source
-    assert "negative-claims" in source
+    assert "LD-500" in source and "supersession" in source    # LD-720: the comment no longer cites the private doctrine file by path; the bound it
+    # imposes is still stated in the source.
+    assert "MISSING ORACLE" in source
     assert "LD-500" not in OBJECT_TYPE_UNSUPPORTED
     assert "LD-494" not in OBJECT_TYPE_UNSUPPORTED
 

@@ -65,6 +65,33 @@ read the topmost section for **what** changed; read a **cut** section's date for
 consumer had to reconstruct dependency and behavior changes out of the internal log. Changes
 before 1.14.0 are recorded only in the maintainers' engineering log, which is not published.
 
+## [1.53.2] — 2026-11-14
+
+### What a caller can observe
+
+- **No pointer you cannot follow.** The `evidence` strings carried by refusals, loss previews,
+  error-code notes, permission rows and `capabilities()`, and the library's docstrings, comments
+  and packaged documents, used to point at files in the maintainers' private working repository,
+  which neither the wheel nor the public repository carries. Those pointers are gone. Where a
+  sentence stood on its own, the pointer was dropped; where it carried evidence, the fact is
+  stated, a published recording is cited instead (a `tests/captures/…` path, in the source
+  repository), or the text says the recording is unpublished. No fact
+  changed and nothing a call does changed. If you match an `evidence` string by exact text,
+  re-check it; the permissions section of the guide changed with them.
+- **A correction to the 1.53.1 notes.** They say "This release changes no code that ships in the
+  wheel." That was not exact. In 1.53.1 one message string in `guide.py` changed — the text
+  `changelog()` shows read "The same text is at" and now reads "The same entries are at" — one
+  sentence of the shipped guide changed (the release-notes drop "holds every section from
+  1.14.0"), and one comment changed. No behaviour changed.
+- **Release dates.** A section's date is the day the release was cut. The public tag can follow
+  the cut: v1.53.0 and v1.53.1 were tagged on the public repository three days after their cut
+  dates. From 1.53.2 on, the public release commit and its tag carry the cut's time, in UTC
+  (`+0000`), whenever they are pushed.
+
+### Upgrade & compatibility
+
+- No dependency was added, dropped or moved. Upgrading from 1.53.1 changes nothing you call.
+
 ## [1.53.1] — 2026-11-10
 
 ### What a caller can observe

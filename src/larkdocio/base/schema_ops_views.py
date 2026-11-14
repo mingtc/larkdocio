@@ -82,12 +82,8 @@ from larkdocio.base.view_filters import (
 from larkdocio.common.citations import dev_repo
 
 _CAPTURES = "tests/captures/base-study/captures"
-_P0 = "dev/base-study/p0-addendum-2026-08-03.md"
-_PARITY = "dev/base-study/ui-parity-matrix-2026-08-03.md"
-#: LD-417 leg B's own capture home, and the attribution pack that refuted the observability
-#: premise (the `is_hidden` per-view flag). Separate constants because they are a separate
-#: spike's evidence and must stay traceable to it.
-_HIDDEN_CAPTURES = "dev/base-authoring-spike/captures"
+#: The attribution pack that refuted the observability premise (the `is_hidden` per-view flag).
+#: A separate constant because it is a separate spike's evidence and must stay traceable to it.
 _ATTRIBUTION = "tests/captures/permissions-spike/captures"
 
 #: The family's name, used by the aggregator and quoted in the source repository's ``BASE.md``
@@ -181,7 +177,7 @@ SCHEMA_OP_FAMILY = SchemaOpFamily(
             settles=False,
             read_back="GET …/views lists the returned view_id under the name that was asked for",
             request_cls=CreateAppTableViewRequest,
-            evidence=dev_repo(f"{_CAPTURES}/p0-3-01-view-create-matrix.json · {_P0} § 3"),
+            evidence=dev_repo(f"{_CAPTURES}/p0-3-01-view-create-matrix.json"),
         ),
         BaseSchemaOpDescriptor(
             name="update_view",
@@ -199,11 +195,10 @@ SCHEMA_OP_FAMILY = SchemaOpFamily(
                        "back null, and so does an unrecognised key inside hierarchy_config, "
                        "which is why code:0 is not evidence on this route"),
             request_cls=PatchAppTableViewRequest,
-            evidence=(dev_repo(f"{_PARITY} § Seat addendum item 4 · "
-                      f"{_CAPTURES}/p0-3-02-view-patch.json · "
+            evidence=(dev_repo(f"{_CAPTURES}/p0-3-02-view-patch.json · "
                       f"{_CAPTURES}/p1-q3-02-view-grouping.json · "
                       f"{_CAPTURES}/subitems-b-05-hierarchy-config-patch-matrix.json · "
-                      f"{_HIDDEN_CAPTURES}/ld417-b-03-hidden-fields-persistence.json · "
+                      f"the hidden-fields persistence probe (an unpublished recording) · "
                       f"{_ATTRIBUTION} (is_hidden per view: 778-/787-/772-/788-)")),
         ),
         BaseSchemaOpDescriptor(
@@ -215,7 +210,7 @@ SCHEMA_OP_FAMILY = SchemaOpFamily(
             settles=False,
             read_back="GET …/views no longer lists the view_id",
             request_cls=DeleteAppTableViewRequest,
-            evidence=dev_repo(f"{_CAPTURES}/p0-3-05-view-delete.json · {_P0} § 3"),
+            evidence=dev_repo(f"{_CAPTURES}/p0-3-05-view-delete.json"),
         ),
     ),
 )

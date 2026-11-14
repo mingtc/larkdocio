@@ -13,6 +13,19 @@ The rule, one sentence: **a string a consumer can reach may name a maintainer-re
 while wearing ``larkdocio.common.citations.DEV_REPO_LABEL``** — normally by being composed
 through :func:`~larkdocio.common.citations.dev_repo`, the one formatter.
 
+> **SUPERSEDED IN PART 2026-11-14 by LD-720 — the conclusion moved; the reason above is upheld.**
+> The reason is unchanged: a citation a wheel-holder cannot follow reads as a next step and
+> dangles. What LD-720 found is that the LABEL was not enough once the repository went public —
+> a wheel user still met dozens of "(in the dev repo)" pointers into records nobody outside the
+> maintainers can open, and together they mapped out the private process. So the conclusion is
+> now: **nothing under ``src/larkdocio`` cites the maintainers' private record at all**, labelled
+> or not — no ``dev/`` / ``progress/`` / ``requirements/`` / ``process/`` / ``.claude/`` path, no
+> private root document, and no "in the dev repo" label (leg 6 reads every file, comments
+> included). The label rule still holds for the paths the source repository DOES carry
+> (``tests/captures/…`` must wear ``SOURCE_REPO_LABEL``). Every leg below kept its shape; each
+> one's offence widened from *private and unlabelled* to *private at all*. Tests and root
+> documents outside the wheel may keep labelled citations.
+
 Three legs, because a citation reaches a consumer three different ways:
 
 1. :func:`test_no_consumer_reaching_string_cites_an_unlabelled_dev_repo_path` — the shipped
@@ -59,6 +72,8 @@ from guard_kit import REPO_ROOT
 
 from larkdocio.common.citations import (
     DEV_REPO_LABEL,
+    PRIVATE_ROOTS,
+    is_private_path,
     REPO_LABELS,
     SOURCE_REPO_LABEL,
     is_labelled,
@@ -91,6 +106,23 @@ def _is_bare_path(text):
 def _snippet(text, path):
     start = max(0, text.find(path) - 60)
     return " ".join(text[start:text.find(path) + len(path) + 40].split())
+
+
+def _offending_path(text, *, label_excused=False):
+    """The first cited path that makes ``text`` an offence, or ``None``.
+
+    LD-720: a PRIVATE path (:func:`~larkdocio.common.citations.is_private_path`) offends whether
+    or not it is labelled — the label no longer excuses it. A path the source repository carries
+    offends only while unlabelled, and ``label_excused`` (a string routed through
+    :func:`dev_repo`) excuses only that.
+    """
+    paths = dev_repo_paths(text)
+    for path in paths:
+        if is_private_path(path):
+            return path
+    if paths and not label_excused and not is_labelled(text):
+        return paths[0]
+    return None
 
 
 # --------------------------------------------------------------------------- #
@@ -149,15 +181,17 @@ def _python_text_corpus():
 def test_no_consumer_reaching_string_cites_an_unlabelled_dev_repo_path():
     offenders = []
     for label, text in sorted(_python_text_corpus().items()):
-        if not cites_dev_repo(text) or is_labelled(text):
+        path = _offending_path(text)
+        if path is None:
             continue
-        if _is_bare_path(text):
+        if _is_bare_path(text) and not is_private_path(path):
             continue
-        offenders.append((label, _snippet(text, dev_repo_paths(text)[0])))
+        offenders.append((label, _snippet(text, path)))
     assert not offenders, (
-        f"{len(offenders)} consumer-reaching string(s) cite a path the wheel does not carry "
-        f"without the {DEV_REPO_LABEL!r} label — route them through "
-        f"larkdocio.common.citations.dev_repo(), or drop the path: {offenders[:8]}")
+        f"{len(offenders)} consumer-reaching string(s) cite a private-record path (never "
+        f"allowed, LD-720) or a source-repository path without {SOURCE_REPO_LABEL!r} — state "
+        f"the fact instead of the private path, or route a tests/captures path through "
+        f"larkdocio.common.citations.dev_repo(): {offenders[:8]}")
 
 
 # --------------------------------------------------------------------------- #
@@ -252,6 +286,8 @@ def _bare_private_constant_nodes(tree):
         value = node.value.value
         if not isinstance(value, str) or not _is_bare_path(value):
             continue
+        if any(is_private_path(p) for p in dev_repo_paths(value)):
+            continue  # LD-720: a private fragment is a citation in waiting, never excused
         if any(isinstance(t, ast.Name) and t.id.startswith("_") for t in node.targets):
             ids.add(id(node.value))
     return ids
@@ -263,21 +299,19 @@ def _source_offenders(source, rel):
     excused = _bare_private_constant_nodes(tree)
     found = []
 
-    def walk(node):
+    def walk(node, routed=False):
         if _formatted(node):
+            for child in ast.iter_child_nodes(node):
+                walk(child, routed=True)
             return
         rendered = _render(node, constants)
         if rendered is not None:
-            if (
-                cites_dev_repo(rendered)
-                and not is_labelled(rendered)
-                and id(node) not in excused
-            ):
-                found.append((f"{rel}:{node.lineno}", _snippet(rendered,
-                                                               dev_repo_paths(rendered)[0])))
+            path = _offending_path(rendered, label_excused=routed)
+            if path is not None and id(node) not in excused:
+                found.append((f"{rel}:{node.lineno}", _snippet(rendered, path)))
             return
         for child in ast.iter_child_nodes(node):
-            walk(child)
+            walk(child, routed)
 
     walk(tree)
     return found
@@ -288,8 +322,8 @@ def test_no_composed_source_string_cites_an_unlabelled_dev_repo_path(path):
     rel = path.relative_to(REPO_ROOT).as_posix()
     offenders = _source_offenders(path.read_text(encoding="utf-8"), rel)
     assert not offenders, (
-        f"{rel} composes {len(offenders)} citation(s) of a maintainer-repo path with no "
-        f"{DEV_REPO_LABEL!r} label: {offenders}")
+        f"{rel} composes {len(offenders)} citation(s) of a private-record path (never allowed, "
+        f"LD-720) or of a source-repository path with no {SOURCE_REPO_LABEL!r} label: {offenders}")
 
 
 # --------------------------------------------------------------------------- #
@@ -341,11 +375,13 @@ def test_no_public_registry_value_cites_an_unlabelled_dev_repo_path():
             _reachable_strings(getattr(module, name, None), f"{modname}.{name}",
                                strings, set())
             for label, text in strings:
-                if cites_dev_repo(text) and not is_labelled(text):
-                    offenders.append((label, _snippet(text, dev_repo_paths(text)[0])))
+                path = _offending_path(text)
+                if path is not None:
+                    offenders.append((label, _snippet(text, path)))
     assert not offenders, (
-        f"{len(offenders)} value(s) a consumer is handed name a maintainer-repo path with no "
-        f"{DEV_REPO_LABEL!r} label: {sorted(set(offenders))[:8]}")
+        f"{len(offenders)} value(s) a consumer is handed name a private-record path (never "
+        f"allowed, LD-720) or a source-repository path with no {SOURCE_REPO_LABEL!r} label: "
+        f"{sorted(set(offenders))[:8]}")
 
 
 # --------------------------------------------------------------------------- #
@@ -470,10 +506,13 @@ def _fake_tree(tmp_path, module_source):
 
 
 def test_a_LABELLED_citation_of_a_MISSING_path_fails_existence_and_passes_label(tmp_path):
-    source = f'MSG = "see dev/gone.md ({DEV_REPO_LABEL})"\n'
+    # LD-720: spelled with a SOURCE-repository path — a private path no longer passes the label
+    # leg at all (test_LD720_a_private_path_offends_even_LABELLED_and_even_through_the_formatter).
+    source = f'MSG = "see tests/captures/gone.json ({SOURCE_REPO_LABEL})"\n'
     repo, shipped = _fake_tree(tmp_path, source)
     assert not _source_offenders(source, "mod.py"), "the label leg should accept it"
-    assert dangling_citations(shipped, repo) == {("src/larkdocio/mod.py", "dev/gone.md")}
+    assert dangling_citations(shipped, repo) == {("src/larkdocio/mod.py",
+                                                   "tests/captures/gone.json")}
 
 
 def test_a_RESOLVING_path_with_NO_label_fails_label_and_passes_existence(tmp_path):
@@ -484,10 +523,12 @@ def test_a_RESOLVING_path_with_NO_label_fails_label_and_passes_existence(tmp_pat
 
 
 def test_routing_through_the_formatter_excuses_the_label_never_the_existence(tmp_path):
-    source = 'MSG = dev_repo("see dev/gone.md")\n'
+    # LD-720: a source-repository path, for the reason given in the arm above.
+    source = 'MSG = dev_repo("see tests/captures/gone.json")\n'
     repo, shipped = _fake_tree(tmp_path, source)
     assert not _source_offenders(source, "mod.py")
-    assert dangling_citations(shipped, repo) == {("src/larkdocio/mod.py", "dev/gone.md")}
+    assert dangling_citations(shipped, repo) == {("src/larkdocio/mod.py",
+                                                   "tests/captures/gone.json")}
 
 
 def test_the_parser_faithful_read_does_not_manufacture_misses(tmp_path):
@@ -565,14 +606,24 @@ def test_the_person_refusal_no_longer_routes_a_consumer_to_a_file_they_lack():
 
 LEAK = 'MSG = f"the probe that proved it is at {_CAPTURES}/x.json, read it"\n'
 FIXED = 'MSG = dev_repo(f"the probe that proved it is at {_CAPTURES}/x.json, read it")\n'
-PREAMBLE = '_CAPTURES = "dev/base-study/captures"\n'
+PREAMBLE = '_CAPTURES = "tests/captures/base-study/captures"\n'
+PRIVATE_PREAMBLE = '_CAPTURES = "dev/base-study/captures"\n'
 
 
 def test_the_source_leg_bites_on_a_newly_introduced_leak():
     assert _source_offenders(PREAMBLE + LEAK, "fake.py"), "the guard let a leak through"
     assert not _source_offenders(PREAMBLE + FIXED, "fake.py")
     assert not _source_offenders(
-        PREAMBLE + 'MSG = "…at dev/x.md (in the dev repo), recorded once"\n', "fake.py")
+        'MSG = "…at tests/captures/x/a.json (in the source repository), recorded once"\n',
+        "fake.py")
+
+
+def test_LD720_a_private_path_offends_even_LABELLED_and_even_through_the_formatter():
+    """SUPERSEDED IN PART by LD-720: until then each of these three was the FIXED form."""
+    assert _source_offenders(PRIVATE_PREAMBLE + FIXED, "fake.py")
+    assert _source_offenders(
+        'MSG = "…at dev/x.md (in the dev repo), recorded once"\n', "fake.py")
+    assert _source_offenders('MSG = dev_repo("see dev/editions-spike/findings.md")\n', "fake.py")
 
 
 def test_the_source_leg_still_bites_when_the_path_is_spelled_inline():
@@ -580,8 +631,11 @@ def test_the_source_leg_still_bites_when_the_path_is_spelled_inline():
     assert _source_offenders('raise X("recorded in progress/todo/notes.md")\n', "fake.py")
 
 
-def test_a_bare_private_fragment_is_excused_but_only_while_private():
-    assert not _source_offenders('_CAPTURES = "dev/base-study/captures"\n', "fake.py")
+def test_a_bare_fragment_is_excused_only_while_it_is_a_SOURCE_repository_path():
+    """SUPERSEDED IN PART by LD-720: a bare PRIVATE fragment used to be excused here (it was
+    judged where it was composed); a private path is now an offence wherever it stands."""
+    assert not _source_offenders('_CAPTURES = "tests/captures/base-study/captures"\n', "fake.py")
+    assert _source_offenders('_CAPTURES = "dev/base-study/captures"\n', "fake.py")
     assert _source_offenders('EVIDENCE = "dev/base-study/captures/x.json"\n', "fake.py")
 
 
@@ -624,13 +678,15 @@ _LABEL_REACH = 80
 
 
 def private_doc_misses(text):
-    """Each unlabelled mention of a private root document in ``text``, as a short snippet."""
+    """Each mention of a private root document in ``text``, as a short snippet.
+
+    SUPERSEDED IN PART by LD-720: a mention used to be excused by :data:`DEV_REPO_LABEL` within
+    :data:`_LABEL_REACH` characters after it. The label no longer excuses anything — the shipped
+    package names no private root document at all — so every mention is returned.
+    """
     flat = re.sub(r"[ \t]+", " ", _JOIN.sub(" ", text))
-    misses = []
-    for match in _PRIVATE_DOC.finditer(flat):
-        if DEV_REPO_LABEL not in flat[match.end():match.end() + _LABEL_REACH]:
-            misses.append(" ".join(flat[max(0, match.start() - 40):match.end() + 40].split()))
-    return misses
+    return [" ".join(flat[max(0, match.start() - 40):match.end() + 40].split())
+            for match in _PRIVATE_DOC.finditer(flat)]
 
 
 def test_no_shipped_file_cites_a_private_root_document_without_the_label():
@@ -641,15 +697,16 @@ def test_no_shipped_file_cites_a_private_root_document_without_the_label():
         for snippet in private_doc_misses(path.read_text(encoding="utf-8")):
             offenders.append((str(path.relative_to(REPO_ROOT)), snippet))
     assert not offenders, (
-        f"{len(offenders)} shipped mention(s) of a private root document without "
-        f"{DEV_REPO_LABEL!r}: {offenders[:8]}")
+        f"{len(offenders)} shipped mention(s) of a private root document (none is allowed since "
+        f"LD-720, labelled or not): {offenders[:8]}")
 
 
 def test_the_root_document_leg_bites_and_reads_across_a_line_break():
     assert private_doc_misses("see PROJECT.md § Quality bar")
     assert private_doc_misses("cites CLAUDE.md's house rules")
-    assert not private_doc_misses('"under PROJECT.md (in the "\n    "dev repo) the rule"')
-    assert not private_doc_misses("(PROJECT.md § Quality\nbar, in the dev repo)")
+    # LD-720: these two were the labelled, passing form; a label no longer excuses a mention.
+    assert private_doc_misses('"under PROJECT.md (in the "\n    "dev repo) the rule"')
+    assert private_doc_misses("(PROJECT.md § Quality\nbar, in the dev repo)")
     # A path that merely ends in the name, and a shipped document, are not this class.
     assert not private_doc_misses("requirements/DECISIONS.md and README.md")
 
@@ -665,3 +722,108 @@ def test_the_private_root_documents_are_exactly_what_the_export_withholds():
     for name in CITED_BY_BARE_NAME:
         assert any(not export.included(str(p.relative_to(REPO_ROOT)))
                    for p in REPO_ROOT.rglob(name) if ".venv" not in p.parts), name
+
+
+# --------------------------------------------------------------------------- #
+# Leg 6 — the WHOLE FILE: no private citation anywhere under src/ (LD-720)      #
+# --------------------------------------------------------------------------- #
+#
+# Legs 1-5 read strings, values and named documents. A wheel user who opens the installed
+# source also reads its comments and its packaged Markdown, and before LD-720 those carried
+# ``(in the dev repo)`` pointers by the dozen. This leg reads every file under ``src/larkdocio``
+# as text, comments included, and refuses the private label phrase and any path into the
+# maintainers' private record. Two narrow, reasoned exemptions, each to the LABEL PHRASE only
+# (never to a path):
+#
+# * ``common/citations.py`` DEFINES the phrase (:data:`DEV_REPO_LABEL`) so this guard and its
+#   siblings have one spelling to look for — a definition, not a citation;
+# * the packaged release history (``CHANGELOG.md`` / ``RELEASE_NOTES.md``): released sections
+#   keep their released wording, and the sections that mention the label describe it rather
+#   than use it.
+
+#: Every directory of the maintainers' private record, plus the agent configuration directory —
+#: :data:`~larkdocio.common.citations.PRIVATE_ROOTS` and the two the label rule never named.
+PRIVATE_DIRS = tuple(PRIVATE_ROOTS) + ("process", ".claude")
+_PRIVATE_DIR_PATH = re.compile(
+    r"(?<![\w./-])(?:%s)/[\w.{*-]" % "|".join(re.escape(d) for d in PRIVATE_DIRS))
+#: The label phrase, read across a line break, a comment marker or a string-concatenation seam.
+_LABEL_PHRASE = re.compile(r"\bdev(?:\s|[\"'#:*`])+repo\b", re.IGNORECASE)
+#: A private decision-record id (``D-115``). The decision register is private, so an id a wheel user
+#: cannot look up is a citation like a path (LD-720 QA bounce: 17 shipped in 1.53.2's first build).
+#: Bare ``LD-<n>`` issue ids are OUT of scope by seat ruling 2026-11-14 (the README explains that
+#: form and published test names carry them), so only the ``D-`` form is refused.
+_DECISION_ID = re.compile(r"(?<![\w-])D-\d{2,3}\b")
+_LABEL_EXEMPT = frozenset({
+    "src/larkdocio/common/citations.py",
+    "src/larkdocio/CHANGELOG.md",
+    "src/larkdocio/RELEASE_NOTES.md",
+})
+
+
+def private_citations_in(text, rel=""):
+    """``[(line, snippet)]`` for every private path and (unless exempt) every label phrase."""
+    flat = _JOIN.sub(" ", text)
+    hits = []
+    patterns = [_PRIVATE_DIR_PATH] + ([] if rel in _LABEL_EXEMPT
+                                      else [_LABEL_PHRASE, _DECISION_ID])
+    for pattern in patterns:
+        for match in pattern.finditer(flat):
+            hits.append(" ".join(flat[max(0, match.start() - 50):match.end() + 40].split()))
+    return hits
+
+
+def _shipped_files():
+    return sorted(p for p in SRC.rglob("*")
+                  if p.is_file() and p.suffix in (".py", ".md") and "__pycache__" not in p.parts)
+
+
+def test_no_shipped_file_cites_the_private_record_anywhere_comments_included():
+    files = _shipped_files()
+    assert len(files) > 100, len(files)
+    offenders = []
+    for path in files:
+        rel = path.relative_to(REPO_ROOT).as_posix()
+        for snippet in private_citations_in(path.read_text(encoding="utf-8"), rel):
+            offenders.append((rel, snippet))
+    assert not offenders, (
+        f"{len(offenders)} place(s) under src/larkdocio cite the maintainers' private record "
+        f"(LD-720: drop the citation where the sentence stands alone, otherwise state the fact "
+        f"or point at a published tests/captures/ file): {offenders[:10]}")
+
+
+def test_the_whole_file_leg_BITES_on_a_planted_citation(tmp_path):
+    """Proof of red: each spelling the sweep removed is caught when planted again."""
+    for planted in (
+        "# measured (capture 206-, in the dev repo)\n",
+        "# see dev/editions-spike/findings.md\n",
+        "#: per the rule in ``process/doctrine/supersession.md``\n",
+        "x = 1  # the board, progress/todo/\n",
+        '"recorded in the "\n    "dev repo) — not published"\n',
+        "# the agent settings under .claude/roles/\n",
+        "# recorded in D-199\n",
+        '"""the counting basis (D-115) is declared"""\n',
+    ):
+        assert private_citations_in(planted, "src/larkdocio/fake.py"), planted
+
+
+def test_the_whole_file_leg_is_SILENT_on_what_it_must_not_read_as_a_citation():
+    for clean in (
+        "# tests/captures/editions-spike/captures/205- (in the source repository)\n",
+        "path = '/dev/null'\n",
+        "# developer, devops, dev-only\n",
+        "x = 'sheet/v2/progress'\n",
+        "# LD-720 and the range A1:D10, LD-115\n",
+    ):
+        assert not private_citations_in(clean, "src/larkdocio/fake.py"), clean
+    # The exemptions cover the label phrase only — never a private path.
+    assert not private_citations_in('DEV_REPO_LABEL = "in the dev repo"\n',
+                                    "src/larkdocio/common/citations.py")
+    assert private_citations_in('X = "dev/x.md"\n', "src/larkdocio/common/citations.py")
+
+
+def test_the_exemptions_are_real_files_and_still_need_exempting():
+    """An exemption for a file that no longer carries the phrase is a stale waiver."""
+    for rel in sorted(_LABEL_EXEMPT):
+        text = (REPO_ROOT / rel).read_text(encoding="utf-8")
+        assert _LABEL_PHRASE.search(_JOIN.sub(" ", text)), (
+            f"{rel} no longer carries the label phrase — drop its exemption")

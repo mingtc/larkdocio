@@ -92,7 +92,7 @@ Markdown documents so a further *consumer* doc cannot ship unreadable-in-practic
 exactly that one named exclusion.)
 """
 
-__version__ = "1.53.1"
+__version__ = "1.53.2"
 
 # Exposed AFTER ``__version__`` so the capabilities module can read it during import
 # (it projects the version field off ``larkdocio.__version__``).

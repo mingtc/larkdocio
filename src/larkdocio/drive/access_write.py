@@ -349,8 +349,7 @@ class DriveAccessWriteClient(CredentialedRawHttpClient):
 
         The shipped ``resolve_colleague`` — never a second resolver — handed a contacts client
         built from the WRITE pair, which is the pair the measurement itself was made on
-        (a recording in the dev repo, not among the published
-        permissions-spike captures). No credential pair is mixed and none is fallen back to.
+        (an unpublished recording). No credential pair is mixed and none is fallen back to.
 
         Imported at module level rather than inside this method on purpose: the permission
         derivation walks a call site's own source, and a leg whose endpoint is reachable only

@@ -134,7 +134,7 @@ LIFECYCLE_OPS = ("create_spreadsheet", "delete_spreadsheet")
 #: in :meth:`SheetsWriteClient.create_spreadsheet`'s docstring and restated on the returned
 #: value as :attr:`CreatedSpreadsheet.capture_the_token`, so a caller reading a returned object
 #: — not the module — still meets it. Dogfood round 5 lost a workbook to exactly this (ranked
-#: major #8 in its digest, which was retired from the dev repo on 2026-09-18).
+#: major #8 in its digest, which was retired on 2026-09-18).
 CAPTURE_THE_TOKEN = (
     "capture the token: a create whose spreadsheet_token is dropped is an orphan by "
     "construction, because nothing else can name that workbook — and a workbook filed where no "

@@ -6,12 +6,10 @@ refuses**, requires a **mandatory dry-run** before any write, re-validates every
 anchor against the **live** block immediately before patching, and rebuilds runs
 **element by element** so no edit round-trips through lossy Markdown. It was built as
 four build stages (write-foundations → narrative-text apply → table-cell
-patches → insert/delete + style-preserving sub-span edits) and is complete — see
-`dev/roadmap-2026-07.md` (in the dev repo) for the tranche history. The engine
+patches → insert/delete + style-preserving sub-span edits) and is complete. The engine
 shipped across v1.6.0..v1.9.0; the release notes start at 1.14.0, so those
-versions are recorded only in the maintainers' records. The feasibility evidence
-this engine was built on lives under `dev/write-spike/`, also in the dev repo
-(see § "Design history").
+versions are recorded only in the maintainers' records, as is the feasibility evidence
+this engine was built on (see § "Design history").
 
 The read path (`larkdocio/read/`) is untouched by writes: reader Markdown stays
 byte-identical. The write path is deliberately separate — a separate package, a
@@ -1031,7 +1029,7 @@ diff is attributable to the edit alone, and every content edit must be **surgica
 family **restores** its disposable doc to a byte-identical baseline and best-effort trashes
 it in a `finally`, so nothing persists even on a mid-round-trip failure. Writes ride the
 shared throttle (≤3/sec, `99991400` backoff). (The read-only determinism half already ships
-as the `pytest -m live` canary; see PROJECT.md § "The binding QA gate" (in the dev repo).)
+as the `pytest -m live` canary.)
 
 ## Non-goals
 
@@ -1077,6 +1075,6 @@ as the `pytest -m live` canary; see PROJECT.md § "The binding QA gate" (in the 
 The feasibility evidence this engine was built on — the write-feasibility spike (run against
 an early scratch doc), including the sandwich demo (a patch between two mermaid blocks
 left both byte-identical), the full round-trip diff evidence, and the harness sketch
-(`to_write_elements` style-preserving rebuild) — is preserved as a historical record under
-`dev/write-spike/` (in the dev repo). It is the primary source; this README
+(`to_write_elements` style-preserving rebuild) — is preserved as a historical record in the maintainers' own
+records, which are not published. It is the primary source; this README
 documents the engine as shipped.

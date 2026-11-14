@@ -12,8 +12,7 @@ at all**, not even for an account holding full tenant administration: it cannot 
 trash cannot be listed, and ``delete`` there is a **trash, not a purge** — the object's metadata
 still resolves afterwards. An object put there is reachable only through a token somebody kept,
 so a stray is effectively permanent. The measurements, and the accumulation they explain, are
-captured under ``dev/ld476-media-purge-probe/captures/`` (in the dev repo) — ``330-…`` is the
-orphan that still resolves and ``999-summary.json`` the probe's own summary.
+unpublished recordings of the media-purge probe, including an orphan that still resolves.
 
 **One public value is NOT a destination:** :meth:`larkdocio.drive.client.DriveClient.root_folder_token`.
 It answers the token of the *application identity's own root* — the very space the paragraph

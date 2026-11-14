@@ -86,19 +86,26 @@ def corpus():
 # --------------------------------------------------------------------------- #
 
 def test_the_corpus_is_not_empty_and_the_label_is_really_in_it():
-    """The first way this guard could go quiet: nothing to read."""
+    """The first way this guard could go quiet: nothing to read.
+
+    **SUPERSEDED IN PART by LD-720.** The reason stands: a guard over an empty population passes
+    because it could not look. The conclusion moved: the shipped package no longer cites the
+    maintainers' private records at all (``tests/test_dev_repo_citations.py`` holds that), so the
+    label now survives in exactly two kinds of place — its one definition in
+    ``larkdocio.common.citations``, and the packaged release history, whose released sections
+    keep their wording. The population is asserted to be EXACTLY that, so a label that comes back
+    anywhere else reddens here as well; the detector's own non-vacuity no longer rests on a large
+    population but on the crafted arms below, which prove it fires and stays silent correctly.
+    (Until LD-720 this asserted more than ten files and more than thirty labels.)
+    """
     population = corpus()
-    assert len(population) > 10, sorted(population)
-    assert any(relative.endswith(".py") for relative in population)
-    assert any(relative.endswith(".md") for relative in population)
-    subjects = [subject
-                for relative, text in population.items()
-                for _offset, subject in fd.label_subjects(relative, text)]
-    assert len(subjects) > 30, f"only {len(subjects)} labels — has the label been reworded?"
-    named = [subject for subject in subjects if subject is not None]
-    assert len(named) > 20, (
-        f"only {len(named)} of {len(subjects)} labels name a file within the subject window — "
-        "the detector has stopped finding subjects, which would make its answer vacuous")
+    assert set(population) == {
+        "src/larkdocio/common/citations.py",
+        "src/larkdocio/CHANGELOG.md",
+        "src/larkdocio/RELEASE_NOTES.md",
+    }, sorted(population)
+    for relative in ("src/larkdocio/CHANGELOG.md", "src/larkdocio/RELEASE_NOTES.md"):
+        assert fd.DEV_REPO_LABEL in population[relative], relative
 
 
 def test_the_manifest_the_question_is_asked_of_is_the_real_one():

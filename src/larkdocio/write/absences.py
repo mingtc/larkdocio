@@ -138,8 +138,8 @@ _DOCX_NO_MOVE_ABSENCE = {
         "user_access_token; any other tenant; wiki-wrapped documents; any docx API version "
         "other than v1; the Lark web client's internal reorder API; any move spelling outside "
         "the eleven; and whether the descendant route deep-copies a SUBTREE (the block it "
-        "copied was a leaf). The verdict and the copy trap's captures were retired from the "
-        "dev repo on 2026-09-18, so the scope above is stated in full rather than cited."
+        "copied was a leaf). The verdict and the copy trap's captures were retired on "
+        "2026-09-18, so the scope above is stated in full rather than cited."
     ),
     "instead": (
         "guide(section=\"recipe-reorganise-a-document-there-is-no-move-so-a-reorder-is-"

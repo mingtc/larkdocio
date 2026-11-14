@@ -17,8 +17,8 @@ non-SDK endpoint here is a thin declaration.
 
 **READ credentials only.** :meth:`DriveClient.from_read_credentials` resolves the READ pair via
 :mod:`larkdocio.common.auth`; nothing in this package names, imports or falls back to the WRITE
-pair (the credential doctrine in PROJECT.md, in the dev repo — and its § Credential aliasing,
-which is why a same-tenant success proves nothing about scopes).
+pair (the read/write credential separation — and on the tenant these measurements were made
+on the two pairs named one app, which is why a same-tenant success proves nothing about scopes).
 
 **Throttled by construction, and the pace is EVIDENCE-ANCHORED rather than measured.** The two
 probe rounds made 17 live calls at **≥1.2 s spacing with no limit ever hit**, and 7 calls

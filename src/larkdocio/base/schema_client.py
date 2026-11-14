@@ -180,8 +180,8 @@ BASE_DRIVE_FILE_TYPE = "bitable"
 
 #: The Base's path on the Drive file family. There is **no bitable-native app delete**:
 #: ``DELETE /open-apis/bitable/v1/apps/{app_token}`` is answered below Lark's API layer with a
-#: non-JSON HTTP 404 and carries no code at all (capture ``ld466-02``, in the dev repo; not
-#: published), so it is not a route this library could call. A Base is a Drive file for deletion,
+#: non-JSON HTTP 404 and carries no code at all (an unpublished
+#: recording), so it is not a route this library could call. A Base is a Drive file for deletion,
 #: exactly as a spreadsheet is.
 _DRIVE_FILE_PATH = "/open-apis/drive/v1/files/:file_token"
 
@@ -525,9 +525,7 @@ class BaseSchemaClient(BaseViewOps):
         nothing. ``1254702`` from this route means the token is wrong.
         **The ``1254701`` half's scope.** Evidence covers exactly the route it was observed
         on and never a sibling route, so: measured 2026-08-18, one tenant, one app
-        identity, ``tenant_access_token``, this route, **one send, no retries**, capture (in the
-        dev repo)
-        ``dev/ld493-caller-supplied-destination/captures/002-copy-app-unreachable-folder.json``.
+        identity, ``tenant_access_token``, this route, **one send, no retries** (an unpublished recording).
         One send establishes that the codes come apart **here** — it is not a general mapping,
         and it says nothing about another route, another tenant, another region or a
         ``user_access_token``. **That answer is this endpoint's, not Lark's** — same rule — and a third
@@ -538,8 +536,7 @@ class BaseSchemaClient(BaseViewOps):
         ``1254702 DriveNodeNotExist`` a folder that does not exist draws. Its scope, on that same
         route-bounded rule:
         measured 2026-08-17, one tenant, one app identity, ``tenant_access_token``, one honest
-        send, capture (in the dev repo)
-        ``dev/ld493-caller-supplied-destination/captures/001-ac4-denial-create-document.json``.
+        send (an unpublished recording).
         So **which answer you get depends on the route**: do not carry this route's answer to
         another one. **The history rather than a gap:** this route's unreachable-folder case once
         shipped as *inferred rather than separately sent*, and its re-measurement stayed

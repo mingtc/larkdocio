@@ -9,8 +9,8 @@ routed through :class:`~larkdocio.common.transport.WriteTransport` so writes are
 (:class:`~larkdocio.errors.LarkAPIError` / :class:`LarkRateLimitError`) via
 :func:`~larkdocio.common.transport.raise_for_lark_code`.
 
-The write path is **raw ``urllib``** (the spike's write path,
-``dev/write-spike/07-report.md``, in the dev repo): the endpoint surface is the docx v1
+The write path is **raw ``urllib``** (the write feasibility spike's
+write path): the endpoint surface is the docx v1
 block API — create a document, create children, patch one block (``update_text_elements``),
 delete a child range — plus a Drive file-delete for teardown. The read SDK client
 in ``read/`` is untouched (the shared core's design note: SDK-for-reads,
@@ -175,23 +175,23 @@ _REVISION_Q = "document_revision_id=-1"
 #: deliberately not an inferred one** (LD-481). ``PATCH …/blocks/batch_update`` was probed on a
 #: disposable the spike created and trashed and answered ``code 0`` at **48**, 40 and 3 updates
 #: in one call, with all 48 read back (the 2026-08-14 table-cell-creation spike, § 3c; its
-#: write-up was retired from the dev repo on 2026-09-18). Larger batches are
+#: write-up was retired on 2026-09-18). Larger batches are
 #: **unmeasured, not refuted** — the number here is the largest one an actual capture supports,
-#: so the fill's arithmetic is anchored on evidence rather than on a round number. **D-59 route
+#: so the fill's arithmetic is anchored on evidence rather than on a round number. **Route
 #: scope:** one tenant, ``tenant_access_token``, docx v1, on documents the probe created (not
 #: wiki-wrapped).
 MAX_BATCH_UPDATES_PER_CALL = 48
 
 #: The most blocks one ``descendant`` call may carry — **a MEASURED Lark ceiling, bisected**
 #: (LD-482, on the LD-481 spike's own evidence). It is a count of **descendants**, not of bytes
-#: and not of cells: the same spike's § 3b (retired from the dev repo on 2026-09-18)
+#: and not of cells: the same spike's § 3b (retired on 2026-09-18)
 #: created a 1×499 text table = **999 descendants** ``code 0`` and read it back ``row_size 499``,
 #: while 1×500 = **1001 descendants** answered ``99992402 field validation failed`` with
 #: **nothing created**, and 6×83 = 997 passed where 6×84 = 1009 failed — two shapes, the same
 #: cut. A third shape failed at the same count for a *different* reason (1000 descendants of
 #: childless type-32 cells answer ``1770041 open schema mismatch``), which is why this number
 #: is the ceiling on the count and the cell shape is enforced separately.
-#: **D-59 route scope:** one tenant, ``tenant_access_token``, docx v1, block type 31, on
+#: **Route scope:** one tenant, ``tenant_access_token``, docx v1, block type 31, on
 #: documents the spike created (not wiki-wrapped). ``user_access_token``, other tenants and
 #: wiki-wrapped documents are **unmeasured, not refuted**.
 MAX_DESCENDANTS_PER_CALL = 1000
@@ -534,7 +534,7 @@ class WriteClient(CredentialedRawHttpClient):
         ``tenant_access_token``, docx v1, block type 31, on documents the probe created — not
         wiki-wrapped; ``user_access_token``, other tenants and wiki-wrapped documents are
         **unmeasured, not refuted**). The bisection (the 2026-08-14 table-cell-creation
-        spike, § 3b; its write-up was retired from the dev repo on 2026-09-18) ran at two shapes:
+        spike, § 3b; its write-up was retired on 2026-09-18) ran at two shapes:
         :data:`MAX_DESCENDANTS_PER_CALL` descendants pass and one more answers
         ``99992402 field validation failed`` with nothing created. See
         :data:`~larkdocio.write.encode.MAX_ONE_CALL_TABLE_CELLS` for what that is in cells.
@@ -561,7 +561,7 @@ class WriteClient(CredentialedRawHttpClient):
     # docstring corpus, where an issue id is internal dialect.
     #
     # LD-576, on the maintainer ruling in the 2026-08-25 round-5 fix-program handoff § 2.1 (that
-    # handoff was retired from the dev repo on 2026-09-18), ruling 3, quoted in full because
+    # handoff was retired on 2026-09-18), ruling 3, quoted in full because
     # a successor will be tempted to declare it instead:
     #
     #   "Fork 3 — FENCE patch_block. Do NOT declare it in capabilities(). The reasoning,

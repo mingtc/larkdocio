@@ -63,7 +63,6 @@ from larkdocio.common.citations import dev_repo
 from larkdocio.common.staleness import REVISION_GUARD_ACTIVE, revision_guard_status
 
 _CAPTURES = "tests/captures/base-study/captures"
-_PARITY = "dev/base-study/ui-parity-matrix-2026-08-03.md"
 
 #: The family's name, used by the aggregator and quoted in the source repository's ``BASE.md``
 #: schema-ops table.
@@ -100,8 +99,7 @@ SCHEMA_OP_FAMILY = SchemaOpFamily(
             settles=False,
             read_back=_READ_BACK,
             request_cls=UpdateAppTableFieldRequest,
-            evidence=dev_repo(f"{_CAPTURES}/p1-q2-02-true-identity-retries.json · "
-                              f"{_PARITY} § 1.1"),
+            evidence=dev_repo(f"{_CAPTURES}/p1-q2-02-true-identity-retries.json"),
         ),
         BaseSchemaOpDescriptor(
             name="convert_field",

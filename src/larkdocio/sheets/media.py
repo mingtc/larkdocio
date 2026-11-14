@@ -32,8 +32,8 @@ pointing at a drive media token whose bytes are byte-identical to what was sent.
    definition of that check in this library, reused rather than restated.
 
 **THE THREE DISCLOSURES, all measured** (the sheets-media spike's captures, in the
-source repository — this library's own source tree, not the wheel — except ``104-``, which is
-in the dev repo).
+source repository — this library's own source tree, not the wheel — except one control, which
+is an unpublished recording).
 
 * **The call mints its OWN media token.** The ``fileToken`` the cell reports is **not** a
   token any caller uploaded — this route has no upload leg — and it is unrelated to a token
@@ -112,7 +112,7 @@ here it binds to the **spreadsheet token** — **not a cell, not a sheet_id** �
 appears later, in the bind's ``range``. A developer carrying the docx shape across will reach
 for the tab or the anchor cell, and the endpoint will not tell them otherwise in any useful
 way. The invented-parent-type control (``sheet_banana_image`` → ``1061002 params error.``,
-capture ``104-``, in the dev repo) is what makes the accepted spelling real acceptance rather than an
+an unpublished recording) is what makes the accepted spelling real acceptance rather than an
 unfalsified call.
 
 **TRAP 2 — the upload's own ``code 0`` is NOT a bind.** A fresh ``float_images/query`` taken
@@ -414,7 +414,7 @@ def _the_anchor(file_token: str, spreadsheet_token: str, data: bytes) -> Uploade
 
 #: The ``parent_type`` the float-image upload **sends**. The one spelling measured for a
 #: spreadsheet (capture ``103-``); the invented ``sheet_banana_image`` control was refused
-#: (``104-``, in the dev repo), and every other spelling is unmeasured rather than refuted. It happens to be
+#: (an unpublished recording), and every other spelling is unmeasured rather than refuted. It happens to be
 #: the same string Lark reports as the *mount point* of an in-cell image's own token
 #: (:data:`IN_CELL_IMAGE_MOUNT_POINT`) — a measured coincidence, and two different facts:
 #: that one is **read** out of a link this library never sends, this one is **sent**.

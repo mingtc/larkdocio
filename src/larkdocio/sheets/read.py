@@ -51,7 +51,7 @@ _NON_SHEETS_READERS = {
 
 
 def _non_sheets_refusal(url_type: str, raw: str) -> str:
-    """The wrong-verb refusal, stated for free from the URL string alone (LD-397 / D-57)."""
+    """The wrong-verb refusal, stated for free from the URL string alone (LD-397)."""
     reader = _NON_SHEETS_READERS.get(url_type, "another surface")
     return (
         f"that is a {url_type} url, not a SHEETS url: {raw!r}. This verb walks a "

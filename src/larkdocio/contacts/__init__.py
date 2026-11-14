@@ -66,7 +66,7 @@ What the SERVER does, as OBSERVED
 Recorded from ~33 read-only probes run on 2026-08-02, on the READ credential pair, paced
 at 1.2 s. One of those probes survives, in the source repository, under
 ``tests/captures/name-lookup-spike/slice2/captures/``; the sanitized record of the full set was retired
-from the dev repo on 2026-09-18. **This
+on 2026-09-18. **This
 section is what the ENDPOINT does, not what this library does** — the exactly-one-or-refuse
 contract above is enforced client-side regardless of any of it.
 

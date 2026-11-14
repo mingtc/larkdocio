@@ -77,7 +77,6 @@ from larkdocio.common.citations import dev_repo
 from larkdocio.errors import LarkDocIOError
 
 _CAPTURES = "tests/captures/base-study/captures"
-_P0 = "dev/base-study/p0-addendum-2026-08-03.md"
 
 #: The attribute a read client publishes so a walk's **paging proof** can be read back off it:
 #: the page bodies the most recent cursor walk actually saw
@@ -739,8 +738,7 @@ def field_delete_loss(scan: AppScan, table_id: str, field_id: str) -> Dict:
         "invariant": LOSS_MUST_BE_ENUMERABLE,
         "evidence": [dev_repo(f"{_CAPTURES}/06-06-destructive-ops.json"),
                      dev_repo(f"{_CAPTURES}/p0-2-07-link-deletion-behaviour.json"),
-                     dev_repo(f"{_CAPTURES}/p0-5-02-symmetric-link-deletion.json"),
-                     dev_repo(f"{_P0} § 2")],
+                     dev_repo(f"{_CAPTURES}/p0-5-02-symmetric-link-deletion.json")],
     }
 
 
@@ -962,8 +960,7 @@ def table_delete_loss(scan: AppScan, table_ids: Sequence[str]) -> Dict:
         "trash": TRASH_NOT_PURGE,
         "invariant": LOSS_MUST_BE_ENUMERABLE,
         "evidence": [dev_repo(f"{_CAPTURES}/p0-5-02-symmetric-link-deletion.json"),
-                     dev_repo(f"{_CAPTURES}/06-06-destructive-ops.json"),
-                     dev_repo(f"{_P0} § 2")],
+                     dev_repo(f"{_CAPTURES}/06-06-destructive-ops.json")],
     }
 
 

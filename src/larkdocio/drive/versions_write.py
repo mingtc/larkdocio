@@ -69,8 +69,7 @@ class DriveVersionsWriteClient(CredentialedRawHttpClient):
     **WRITE credentials only**, resolved through :func:`~larkdocio.common.auth.
     get_write_credentials`; nothing here consults, infers or falls back to the READ pair, and
     a denial is surfaced with Lark's own code and message rather than retried on another pair
-    (the credential doctrine in PROJECT.md, in the dev repo — and its § Credential
-    aliasing — on the tenant these measurements were made on the two
+    (the read/write credential separation — on the tenant these measurements were made on the two
     pairs named one app, which the code must keep treating as a coincidence).
 
     Throttled by the same evidence-anchored limiter the enumeration client rides (one call per
@@ -163,8 +162,9 @@ class DriveVersionsWriteClient(CredentialedRawHttpClient):
         whole (capture ``105-``), so the true ceiling is **unmeasured**.
 
         **No quota is claimed:** 7 versions on one document, 4 of them back-to-back at roughly
-        2 calls/s, all ``code 0``, with no warning field and no rate refusal (captures ``106-``
-        – ``109-``; ``107-`` and ``108-`` are in the dev repo only). The honest words are *no quota disclosed* — never a claim that none
+        2 calls/s, all ``code 0``, with no warning field and no rate refusal (captures ``106-`` and
+        ``109-`` under ``tests/captures/editions-spike/captures/``, in the source repository; the
+        two between are unpublished). The honest words are *no quota disclosed* — never a claim that none
         exists.
 
         ``obj_type`` follows :func:`check_obj_type`: required, the two measured-refused values

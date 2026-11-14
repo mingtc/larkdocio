@@ -66,8 +66,8 @@ consumer had to reconstruct dependency and behavior changes out of the internal 
 before 1.14.0 are recorded only in the maintainers' engineering log, which is not published.
 
 > **This copy carries a WINDOW of the newest 8 releases, not the whole history.** Everything
-> below this line is verbatim — 1.47.0 up to 1.53.1 — and the releases older than 1.47.0,
-> 1.46.0 and down, ship with the publishing repository instead of inside the wheel. That is
+> below this line is verbatim — 1.48.0 up to 1.53.2 — and the releases older than 1.48.0,
+> 1.47.0 and down, ship with the publishing repository instead of inside the wheel. That is
 > deliberate: the reader this copy exists for is deciding whether to re-pin, and a full
 > history costs them every release they can no longer act on before it reaches the one they
 > can.
@@ -79,6 +79,33 @@ before 1.14.0 are recorded only in the maintainers' engineering log, which is no
 > `larkdocio.release_notes(section=...)` refuses a release older than the window by name and
 > repeats those addresses; `larkdocio.release_notes_sections()` lists the 8 releases this copy
 > carries.
+
+## [1.53.2] — 2026-11-14
+
+### What a caller can observe
+
+- **No pointer you cannot follow.** The `evidence` strings carried by refusals, loss previews,
+  error-code notes, permission rows and `capabilities()`, and the library's docstrings, comments
+  and packaged documents, used to point at files in the maintainers' private working repository,
+  which neither the wheel nor the public repository carries. Those pointers are gone. Where a
+  sentence stood on its own, the pointer was dropped; where it carried evidence, the fact is
+  stated, a published recording is cited instead (a `tests/captures/…` path, in the source
+  repository), or the text says the recording is unpublished. No fact
+  changed and nothing a call does changed. If you match an `evidence` string by exact text,
+  re-check it; the permissions section of the guide changed with them.
+- **A correction to the 1.53.1 notes.** They say "This release changes no code that ships in the
+  wheel." That was not exact. In 1.53.1 one message string in `guide.py` changed — the text
+  `changelog()` shows read "The same text is at" and now reads "The same entries are at" — one
+  sentence of the shipped guide changed (the release-notes drop "holds every section from
+  1.14.0"), and one comment changed. No behaviour changed.
+- **Release dates.** A section's date is the day the release was cut. The public tag can follow
+  the cut: v1.53.0 and v1.53.1 were tagged on the public repository three days after their cut
+  dates. From 1.53.2 on, the public release commit and its tag carry the cut's time, in UTC
+  (`+0000`), whenever they are pushed.
+
+### Upgrade & compatibility
+
+- No dependency was added, dropped or moved. Upgrading from 1.53.1 changes nothing you call.
 
 ## [1.53.1] — 2026-11-10
 
@@ -1016,97 +1043,4 @@ serialized by an earlier release still reads back identically.
   higher level.
 - Nothing else changed here. The library still never widens, requests or escalates a scope — it
   describes requirements and surfaces Lark's own denial body; a grant stays a Lark console action.
-
-## [1.47.0] — 2026-09-03
-
-### New capabilities
-
-None. Addressing a column of a header-less table by a verbatim quote of its row-0 text already
-worked and is unchanged; what changed is the sentence you are given when it misses.
-
-### Behavior changes you can observe
-
-- **A `column-not-found` refusal no longer claims that a table's first row holds headers when
-  the table says it does not — and it now tells you which of the two kinds of table it was
-  looking at.** `TableLocator`'s `column_header` means *the text in row 0*, and it never required
-  the table to have a header row; the refusal, however, presented row 0 as *"its headers"* for
-  every table. On a table whose own `header_row` is false, that named **data** cells as headers,
-  inside the very did-you-mean list that exists so you would not have to re-read the document.
-  The refusal detail is reworded, and the list of row-0 strings survives intact:
-
-  ```
-  before: no column header in table t9 contains 'Units'; its headers are ['Widgets', '1200']
-  after:  no cell in row 0 of table t9 contains 'Units' (column_header always matches row 0,
-          and this table declares header_row=False - so row 0 holds DATA, not headers; address
-          a column positionally with column_index); row 0 reads ['Widgets', '1200']
-  ```
-
-  Where row 0 really is the header row you are told so — *"column_header matches row 0, this
-  table's header row"* — because that is the fact that helps there. **What did not move:** the
-  refusal code is still `column-not-found`, resolution is still unique-or-refuse, and which cell
-  a locator resolves to is unchanged. Only the `detail` string differs. **If you match on that
-  string, re-read it** — `detail` is prose for a human and has never been a stable parsing
-  surface; the code is the field to branch on.
-- **A reconciliation that refuses because a marker was deleted now says so even when the
-  document also contains an escape it cannot decode.** When you delete a block's `<!-- lark:block:… -->`
-  marker but leave the block's text in place, the refusal is the narrow, actionable one:
-  `marker-dropped`, *"the block's own text came back with it"* — put the marker line back above
-  that text. That reading was being lost: **one** line elsewhere in the same stretch of Markdown
-  carrying a backslash escape the round trip cannot decode caused the whole stretch to be dropped
-  from the text the check compares against, and the identical edit was refused `marker-absent`
-  instead — *"the block and its content are both gone"*, which was false, and it pointed you at
-  content sitting in front of you. The undecodable text itself was never mentioned by any
-  refusal, so the thing actually blocking you was invisible. **Nothing was ever written on either
-  path** — both readings refuse and no request is compiled; what you lost was the reason you
-  could act on. Now each unit is decoded on its own: a unit that cannot be decoded no longer
-  removes its neighbours from the comparison, and it still matches nothing, so text that came
-  back **split** by something unreadable is not reported as having come back whole (that case
-  refuses `marker-absent`). **What did not move:** the stages still run in the same order, and
-  no refusal code, no field and no return shape changed. **What CAN move, and it is the same
-  correction seen from the other side:** if the deleted marker's text came back **split apart
-  by a whole stretch you cannot decode**, that stretch used to vanish from the comparison, the
-  two halves read as adjacent, and you were told `marker-dropped` — *"the block's own text came
-  back with it"* — on the strength of Markdown nothing could read. Today that document is
-  refused `marker-absent`, because text nobody can decode is not evidence your block's text
-  came back whole. Both of those refuse and **nothing is written on either**; what differs is
-  the reason you are handed. Those two document shapes are the ones we measured moving, side by
-  side against 1.46.0, and each is pinned by a regression test in the source tree; we did not
-  enumerate every possible document, which is one more reason to branch on the refusal **code**
-  and read `detail` as prose. Fix the marker, re-run, and an undecodable escape is then
-  reported on its own as `undecodable-text`.
-- **A refused plan preview over a long quote now returns in a tenth of a second instead of
-  seconds.** When a quote differs from the document only in whitespace, the refusal computes the
-  longest run of your quote's words that *is* verbatim in the document, so it can tell you where
-  the difference starts. That search was superlinear and it runs once per plan entry. Measured
-  end-to-end through `dry_run` with one space turned into a newline: **3.271 s → 0.105 s** for a
-  1200-word quote, **0.984 s → 0.043 s** at 800 words, and **2.513 s → 0.123 s** for one preview
-  of ten 500-word near-miss edits. **The fragment you are told is byte-for-byte the same string**
-  — this is a cheaper search for the same answer, never a cap or a truncation, which would have
-  changed what you are told. Nothing was written before or after; the whole cost was the
-  explanation, and a preview that feels hung is one you kill, losing the very detail it was
-  computing.
-
-### Upgrade & compatibility
-
-- **No dependency moved and no pin moved** — nothing this release depends on changed, and the
-  wheel's requirements are byte-identical to 1.46.0's.
-- **Drop-in, with one caveat worth reading.** Every public symbol, CLI flag, refusal code and
-  return shape is unchanged, so re-vendoring needs no call-site edit. The caveat: the `detail`
-  text of one refusal changed (above), so a test or a log matcher pinned to that wording needs
-  re-reading. Refusal codes are the stable contract; `detail` is not.
-
-### Known limitations
-
-- **`column_header` is deliberately *not* gated on a table's `header_row` flag.** It matches row
-  0 either way. That is a capability — it is how you address a column of a header-less table by
-  name — and gating it was considered and declined, because it would have removed a working way
-  to repair a sentence. The consequence to know: on a header-less table, `column_header` matches
-  a **data** cell, and if row 0's text is not unique across columns the locator refuses as
-  ambiguous rather than guessing. `column_index` is the positional address for that job, and the
-  refusal now names it.
-- **A row addressed by a row-0 cell describes itself.** If a `row_key` quote matches a cell in
-  row 0, the locator resolves row 0 — and the `column_label` the resolved cell reports is read
-  from that same row, so the preview's description of the cell is worded in terms of the cell
-  itself. It resolves to the cell you designated and it is unique-or-refuse; only the disclosure
-  is circular. Known, and left alone in this release.
 

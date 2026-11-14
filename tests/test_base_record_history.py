@@ -48,10 +48,11 @@ def test_the_refusal_is_never_a_bare_cannot():
 
 
 def test_the_refusal_cites_leg_5_evidence():
-    text = history.RECORD_HISTORY_NOT_SERVED
-    assert "dev/editions-spike/findings.md" in text and "Leg 5" in text
-    assert "300-summary-leg-5-base-history.json" in text
-    assert "in the dev repo" in text
+    text = history.RECORD_HISTORY_NOT_SERVED    # LD-720: the shipped text no longer cites the maintainers' private findings record (which
+    # carried "Leg 5"); it cites the published capture, labelled as a source-repository file.
+    assert "dev/editions-spike/findings.md" not in text and "in the dev repo" not in text
+    assert "tests/captures/editions-spike/captures/300-summary-leg-5-base-history.json" in text
+    assert "in the source repository" in text
 
 
 # --------------------------------------------------------------------------- #

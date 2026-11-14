@@ -474,7 +474,7 @@ DOCX_BLOCK_ANCHOR_MEASUREMENT = (
 #: Docx **named-edition** (`?edition_id=`) links are mintable, and the construction is now
 #: **clicked** — LD-419 landed the 2026-08-11 click that settled the query half, so the
 #: constant's old name (`…_CLICK_UNVERIFIED`) was renamed to match its body rather than
-#: contradict it. The disclosure's job is unchanged (D-24: preserve the reason, supersede only
+#: contradict it. The disclosure's job is unchanged (the supersession rule: preserve the reason, supersede only
 #: the conclusion): keep the claim scoped to what was observed on, which is now one client on
 #: one tenant on one day, with every other axis still named as unmeasured. Authored ONCE here;
 #: quoted verbatim into the function's docstring, the shipped guide and the release notes.

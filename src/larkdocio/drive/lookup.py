@@ -49,7 +49,7 @@ IDENTITY_THE_LISTING_AFFORDS: Tuple[str, ...] = (
 
 #: What **neither** route reports, so neither is offered and neither is implied. The metadata
 #: query (``metas/batch_query``, ``doc_type: file``) was measured alongside the listing and
-#: carries no size either (capture ``ld464-21``, in the dev repo; not published).
+#: carries no size either (an unpublished recording).
 IDENTITY_NOT_AFFORDED: Tuple[str, ...] = ("size", "checksum", "digest")
 
 #: **The one authoring of the duplicate-upload disclosure.** Quoted into the upload op's own

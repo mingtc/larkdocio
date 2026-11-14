@@ -157,8 +157,7 @@ MEASURED_MENTION_TYPES = ("Docx",)
 
 #: The ``mentionType`` values nobody has captured. They are **unmeasured, not refuted**, and
 #: they are named so a reader can see where the evidence stops — the disclose-the-unmeasured
-#: shape ``process/doctrine/negative-claims.md`` prescribes, in the dev repo, not in the
-#: wheel. Nothing branches on them:
+#: shape a negative claim must take. Nothing branches on them:
 #: :func:`render_segment` keys on the presence of a ``link``, so a chip of one of these kinds
 #: is rendered by the same rule the moment one arrives — what is unknown is what they carry,
 #: not what this library would do with it.
@@ -473,8 +472,7 @@ def _zone(name: Optional[str]):
 def _format_datetime(value, formatter: Optional[str], time_zone: Optional[str]) -> str:
     """A ms-epoch int → its ``date_formatter`` rendering in the app's ``time_zone``.
 
-    Never a function of the host's local clock, zone or locale (PROJECT.md, in the dev repo, § Quality bar →
-    Determinism): the three arguments are what it reads.
+    Never a function of the host's local clock, zone or locale (determinism): the three arguments are what it reads.
 
     **The one host fact it cannot avoid, stated because it used to be hidden**: turning a zone
     NAME into a zone needs a tz database, and where the host has none the rendering falls back

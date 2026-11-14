@@ -63,8 +63,8 @@ and which surfaces is read off the second list above rather than counted here (L
 a bare count in this file had already gone stale once). What *is* still true is the reason the docx reader in particular stays on
 it — rewriting that hardened SDK client onto ``urllib`` would risk reader-output
 drift and break its stubbed-SDK safety net for no benefit, while the writer and the
-SDK-absent v2 sheets endpoints genuinely need raw ``urllib`` (the feasibility spikes,
-in the dev repo: ``dev/write-spike/07-report.md`` / ``tests/captures/sheets-spike/``). So the
+SDK-absent v2 sheets endpoints genuinely need raw ``urllib`` (the feasibility spikes;
+``tests/captures/sheets-spike/`` in the source repository). So the
 shared non-transport primitives (auth / URL / IPv4) live in ``common`` too, while the
 docx read SDK client stays in ``read/`` — its class, its public ``lark_client``
 attribute and every request it builds; LD-534 shared the builder chain that
@@ -85,7 +85,7 @@ from larkdocio.common.errors import (
     api_error,
 )
 
-# Spike Q3 (dev/write-spike/07-report.md): per-app 3 writes/sec, per-document
+# The write feasibility spike measured: per-app 3 writes/sec, per-document
 # 3 edits/sec; overflow → HTTP 400 + code 99991400. The throttle ceiling is 3.
 DEFAULT_MAX_WRITES_PER_SEC = 3
 DEFAULT_MAX_RETRIES = 5
